@@ -23,5 +23,5 @@ The Markdown files in this repository are licensed under the Creative Commons By
 
 **Media Assets**
 
-- Solus Project logo is owned wholely by Solus Project.
+- Solus Project logo is owned wholly by Solus Project.
 - Non-logo assets are licensed under Creative Commons By-NC-SA 4.0 License. For the full text, view LICENSE-MD.txt. Solus Project is considered the sole rights holder of these works.
