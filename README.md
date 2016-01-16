@@ -6,13 +6,10 @@ This is the repository of the Solus Project's User Guide. Stumbled on this repo 
 
 TODO:
 
-[x] Convert User Guide to Markdown files.
-
-[ ] Create build system that aggregates Markdown files, swaps out our custom syntax for HTML, then use the HTML to generate PDFs.
-
-[ ] Actually document and create consistent custom Markdown syntaxes.
-
-[ ] Deliver Release 2 of User Guide
+- [x] Convert User Guide to Markdown files.
+- [ ] Create build system that aggregates Markdown files, swaps out our custom syntax for HTML, then use the HTML to generate PDFs.
+- [ ] Actually document and create consistent custom Markdown syntaxes.
+- [ ] Deliver Release 2 of User Guide
 
 ## Licenses ##
 
