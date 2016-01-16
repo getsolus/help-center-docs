@@ -99,7 +99,7 @@ sdb      8:64   1   7.5G  0 disk
 
 You will see one disk, in my case `/dev/sdb`, that is roughly the size of my USB Drive. Yours should be similar (difference being in size). Write this device down somewhere.
 
-Next, locate the downlaoded ISO. It will most likely be in your Downloads folder. In the event that it is, type: `cd ~/Downloads`
+Next, locate the downloaded ISO. It will most likely be in your Downloads folder. In the event that it is, type: `cd ~/Downloads`
 
 If it is **not** in your Downloads folder, use `cd` to navigate to the correct step.
 
