@@ -12,4 +12,4 @@ Sincerely,
 
 Solus Project Team
 
-![Heart Image](images/heart.png)
+![Heart Image](../images/heart.png)

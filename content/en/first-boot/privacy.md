@@ -2,7 +2,7 @@
 
 In this section, you have the option to disable Location Services. Location Services are used to determine your geographical location and are only used for specific applications.
 
-![Toggling location services](../images/first-boot/toggling-location-services.png)
+![Toggling location services](../../images/first-boot/toggling-location-services.png)
 
 ``` tinynote
 Solus Project does not store use any of the location information provided by the system.

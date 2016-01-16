@@ -1,4 +1,4 @@
-![Solus Logo](images/solus-project-logo.png)
+![Solus Logo](../images/solus-project-logo.png)
 
 # User Guide
 

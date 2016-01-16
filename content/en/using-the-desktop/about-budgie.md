@@ -9,7 +9,7 @@ Budgie has been tested and refined to ensure High Contrast theming works out-of-
 ### Budgie Menu
 
 ` special-formatting: image-float-left`
-![Budgie Menu](../images/using-the-desktop/budgie-menu.jpg)
+![Budgie Menu](../../images/using-the-desktop/budgie-menu.jpg)
 ` end-special-formatting`
 
 This menu enables quick access to your installed programs and offers category and compact views.
@@ -17,7 +17,7 @@ This menu enables quick access to your installed programs and offers category an
 ### Raven
 
 ` special-formatting: image-float-left`
-![Raven](../images/using-the-desktop/raven.jpg)
+![Raven](../../images/using-the-desktop/raven.jpg)
 ` end-special-formatting`
 
 Budgie ships with an applet, notification and customization center referred to as Raven. Raven enables you to:
@@ -44,7 +44,7 @@ Windows Key + N | Open Raven
 ### Budgie Settings
 
 ` special-formatting: image-float-left`
-![Budgie Settings](../images/using-the-desktop/raven-general.jpg)
+![Budgie Settings](../../images/using-the-desktop/raven-general.jpg)
 ` end-special-formatting`
 
 You can customize your Budgie desktop experience via Raven. Click the cog wheel icon when you have Raven open.
@@ -52,7 +52,7 @@ You can customize your Budgie desktop experience via Raven. Click the cog wheel 
 In the Budgie Settings “General” section, you can choose to use a global Dark theme, “widget” theme, and icon theming.
 
 ` special-formatting: image-float-left`
-![Budgie Settings - Panel](../images/using-the-desktop/raven-settings-panel.png)
+![Budgie Settings - Panel](../../images/using-the-desktop/raven-settings-panel.png)
 ` end-special-formatting`
 
 In the Budgie Settings “Panel” section, you can choose:

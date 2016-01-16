@@ -2,7 +2,7 @@
 
 We are now entering a password to secure our user account created in the previous step.
 
-![Set a password](../images/first-boot/set-password.png)
+![Set a password](../../images/first-boot/set-password.png)
 
 We recommend using a strong password that is:
 

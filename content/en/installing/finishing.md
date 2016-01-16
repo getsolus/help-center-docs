@@ -1,6 +1,6 @@
 ### Finishing
 
-![Finishing Install](../images/installing/finished.png)
+![Finishing Install](../../images/installing/finished.png)
 
 Upon getting to this screen, exit the Installer.
 
