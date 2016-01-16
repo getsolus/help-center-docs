@@ -2,7 +2,7 @@
 
 You can configure the settings of your mouse and/or touchpad by going to the Budgie Menu, opening the Settings app, then clicking the Mouse & Touchpad section. You will be presented with the following window.
 
-![Languages Overview](../../images/managing-your-system/mouse-and-touchpad-overview.png)
+![Mouse & Touchpad Overview](../../images/managing-your-system/mouse-and-touchpad-overview.png)
 
 In this window, you can set if you want your primary button (usually left click) to be left or right, speed of double-clicking, and individual pointer speeds for mouse and touchpad.
 
