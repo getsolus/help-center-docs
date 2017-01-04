@@ -1,27 +1,30 @@
-# User Guide #
+# Help Center Documentation
 
-This is the repository of the Solus Project's User Guide. Stumbled on this repo and have no idea what any of this is? Check out the [Solus Project](https://solus-project.com) and our Solus Operating System.
+This is the repository for Solus's future Help Center documentation as well as previous User Guide. This repository exists to help facilitate and encourage community contributions to improving our 
+documentation and enabling an easier user experience for everyone.
 
-## TODO ##
+Stumbled on this repo and have no idea what any of this is? Check out the [Solus](https://solus-project.com) operating system!
 
-TODO:
+## TODO
 
-- [x] Convert User Guide to Markdown files.
-- [ ] Create build system that aggregates Markdown files, swaps out our custom syntax for HTML, then use the HTML to generate PDFs.
-- [ ] Actually document and create consistent custom Markdown syntaxes.
-- [ ] Deliver Release 2 of User Guide
+*In order.*
 
-## Licenses ##
+- [ ] The current task is to migrate all documentation from the [Solus Wiki](https://wiki.solus-project.com).
+- [ ] Leveraging this repo in the creation of our Help Center.
+- [ ] Create a basic build system that aggregates specific Markdown files and assets to produce a User Guide. This will enable our User Guides to be generated whenever necessary, such as during the release 
+of a new ISO snapshot.
 
-**Build System**
+## Licenses
+
+### Build System
 
 Files relating to the parsing / build system are licensed under GPL-2.0. For the full text, view LICENSE.txt.
 
-**Markdown**
+### Markdown
 
 The Markdown files in this repository are licensed under the Creative Commons By-NC-SA 4.0 License. For the full text, view LICENSE-MD.txt. Solus Project is considered the sole rights holder of these works.
 
-**Media Assets**
+### Media Assets
 
-- Solus Project logo is owned wholly by Solus Project.
+- Solus logo copyright and licensing information is provided on our [Brand Guidelines page](https://solus-project.com/brand-guidelines).
 - Non-logo assets are licensed under Creative Commons By-NC-SA 4.0 License. For the full text, view LICENSE-MD.txt. Solus Project is considered the sole rights holder of these works.
