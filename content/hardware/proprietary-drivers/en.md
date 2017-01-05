@@ -1,4 +1,4 @@
-## Installing Proprietary Drivers
+## Proprietary Drivers
 
 Installing proprietary drivers may improve performance or certain features, however they are usually not necessary for normal daily usage.
 
