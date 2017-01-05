@@ -71,4 +71,4 @@ make
 
 You will be prompted to enter your password by sudo so dependencies may be downloaded and the necessary eopkg files may be generated.
 
-You may find other `common` commands [https://git.solus-project.com/common/about/](here).
+You may find other `common` commands [here](https://git.solus-project.com/common/about/).
