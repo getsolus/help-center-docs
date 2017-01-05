@@ -10,7 +10,7 @@ Multi-booting is when you have multiple operating systems on a single computing 
 
 ##### Unable to access other OSes
 
-There are instances where Solus or another operating system may be rendered inaccessible, such as system updates that result in an update Linux kernel. If you are using Solus as your primary operating system and no longer can access another operating system via GRUB (''or it simply doesn't show up in the menu'') then run `sudo update-grub` via Solus.
+There are instances where Solus or another operating system may be rendered inaccessible, such as system updates that result in an update Linux kernel. If you are using Solus as your primary operating system and no longer can access another operating system via GRUB (*or it simply doesn't show up in the menu*) then run `sudo update-grub` via Solus.
 
 ##### Unable to access Solus
 
