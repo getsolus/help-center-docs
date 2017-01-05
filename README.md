@@ -9,7 +9,7 @@ Stumbled on this repo and have no idea what any of this is? Check out the [Solus
 
 *In order.*
 
-- [ ] The current task is to migrate all documentation from the [Solus Wiki](https://wiki.solus-project.com).
+- [x] The current task is to migrate all documentation from the [Solus Wiki](https://wiki.solus-project.com).
 - [ ] Leveraging this repo in the creation of our Help Center.
 - [ ] Create a basic build system that aggregates specific Markdown files and assets to produce a User Guide. This will enable our User Guides to be generated whenever necessary, such as during the release 
 of a new ISO snapshot.
