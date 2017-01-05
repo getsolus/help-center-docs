@@ -15,13 +15,13 @@ You can further check by:
 
 1. Installing `libideviceactivation` via the Software Center or running `sudo eopkg install libideviceactivation`
 2. Rebooting.
-3. Running the following command: `sudo ideviceinfo -q com.apple.mobile.iTunes -k DBVersion` '''while your iOS device is plugged in'''.
+3. Running the following command: `sudo ideviceinfo -q com.apple.mobile.iTunes -k DBVersion` **while your iOS device is plugged in**.
 
-What this command does is queries the device to obtain the version of its database. If the version is '''greater than 4''', your device is not capable of synchronizing music and video. You may notice it appear in Files / Nautilus as 
+What this command does is queries the device to obtain the version of its database. If the version is **greater than 4**, your device is not capable of synchronizing music and video. You may notice it appear in Files / Nautilus as 
 "Documents of DeviceName", however this typically only provides a limited set of data from applications.
 
 ### Mounting in Nautilus 
 
 You can attempt mounting in Nautilus by first running `systemctl start usbmuxd` then `imount` (without sudo). If it's successful, it will show up as "DeviceName" and you'll have access to content such as music, photos, etc.
 
-'''Note:''' You may need to restart after installing libideviceactivation before imount works.
+**Note:** You may need to restart after installing libideviceactivation before imount works.
