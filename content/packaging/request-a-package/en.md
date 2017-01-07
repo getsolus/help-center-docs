@@ -7,10 +7,11 @@ Please provide as much of the following information as possible:
 
 - Name
 - Homepage
-- Why should this be included in the repository? If we already offer similar software in our repository **or third party**, please provide information on what your proposed software does that our existing offerings don't (''differentiators'').
+- Why should this be included in the repository? If we already offer similar software in our repository **or third party**, please provide information on what your proposed software does that our existing offerings don't (*differentiators*).
 - Is it Open Source (yes/no)
  - If yes: Set the Tags to have "Package Requests"
  - If no: Set the Tags to have "Third Party Repository"
+- How many users do you anticipate will use this software?
 - Link to source tarball/zip file
  - master.zip files **are not permitted**. We require versioned tarballs, for example: "1.2.3.tar.gz".
 
