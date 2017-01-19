@@ -6,7 +6,7 @@ We assume you already have a working knowledge of Linux based systems, and are a
 
 ### Supported targets  
 
-You may either build natively on your Solus installation using the `ypkg` tool directly, or or on supported distributions in a chroot environment via the `evobuild` tool. Please note that in order to use `evobuild` from other distributions, your 
+You may either build natively on your Solus installation using the `ypkg` tool directly, or or on supported distributions in a chroot environment via the `solbuild` tool. Please note that in order to use `solbuild` from other distributions, your
 kernel must support `overlayfs`, which must be enabled and loaded.
 
 ### Overview  

@@ -69,7 +69,7 @@ When submitting a change `package.yml`, it must be accompanied by its correspond
 
 When providing a new version of a package, or a fix, always ensure you increment the `release` number by 1. This ensures that users of your package are correctly updated to the latest version.
 
-Never submit a package without having first tested it, and ensuring it builds within `evobuild`, a clean chroot environment.
+Never submit a package without having first tested it, and ensuring it builds within `solbuild`, a clean chroot environment.
 
 ### Generating a Package.yml 
 
