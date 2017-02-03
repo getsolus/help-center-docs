@@ -1,4 +1,4 @@
-# Basics to eopkg
+# Basics to Package Management
 
 Solus uses the eopkg package management system to deliver software to the end-user.  
 Below are some basic commands for using eopkg.
@@ -87,5 +87,4 @@ For example:
 sudo eopkg search documents
 ```
 
-Notice that you don't need to search for a specific software name, although you can do that. We search 
-summaries and software names by default.
+Notice that you don't need to search for a specific software name, although you can do that. We search summaries and software names by default.
