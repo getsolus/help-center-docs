@@ -1,4 +1,4 @@
-## Managing your files
+# Managing your files
 
 ![Nautilus](images/nautilus.jpg)
 

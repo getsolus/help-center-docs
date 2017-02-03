@@ -1,9 +1,9 @@
-## Wireless Chipsets Compatibility
+# Wireless Chipsets Compatibility
 
 The following wireless chipsets have been tested and/or suggested to function correctly by our users. This list should not suggest that **only*- such devices listed below are compatible with Solus, as there may be devices not listed below that are in 
 fact compatible. If you have a device compatible with Solus not listed on this page, please get a hold of `JoshStrobl` [via IRC](/help-center/contributing/getting-involved/).
 
-### Atheros
+## Atheros
 
 - Atheros AR242x / AR542x
 - Atheros AR8161
@@ -15,7 +15,7 @@ fact compatible. If you have a device compatible with Solus not listed on this p
 - Atheros AR9485WB-EG
 - Atheros QCA9565 / AR9565
 
-### Broadcom
+## Broadcom
 
 - Broadcom BCM4312
 - Broadcom BCM4313
@@ -25,7 +25,7 @@ fact compatible. If you have a device compatible with Solus not listed on this p
 - Broadcom BCM4365
 - Broadcom BCM57785
 
-### Intel
+## Intel
 
 - Intel AC3160
 - Intel AC7265
@@ -39,7 +39,7 @@ fact compatible. If you have a device compatible with Solus not listed on this p
 - Intel Ultimate N WiFi Link 5300
 - Intel WiFi Link 5100
 
-### Realtek
+## Realtek
 
 - Realtek RTL8101E/RTL8102E
 - Realtek RTL8111/8168B
@@ -51,6 +51,6 @@ fact compatible. If you have a device compatible with Solus not listed on this p
 - Realtek RTL8192ce
 - Realtek RTL8723BE
 
-### Tenda
+## Tenda
 
 - Tenda W311U USB Adapter

@@ -1,11 +1,11 @@
-## Laptop Compatibility
+# Laptop Compatibility
 
 The following laptops have been tested and/or suggested to function correctly by our users. This list should not suggest that **only*- such devices listed below are compatible with Solus, as there may be devices not listed below that are in 
-fact compatible. If you have a device compatible with Solus not listed on this page, please get a hold of `JoshStrobl` [via IRC](/help-center/contributing/getting-involved/).
+fact compatible.
 
-## Models
+# Models
 
-### Acer
+## Acer
 
 - Acer Aspire 4830T
 - Acer Aspire 5750G
@@ -19,16 +19,16 @@ fact compatible. If you have a device compatible with Solus not listed on this p
 - Acer C710 Chromebook
 - Acer C720-2848 Chromebook
 
-### Alienware
+## Alienware
 
 - Alienware 14
 
-### Apple
+## Apple
 
 - Apple Macbook (late 2008)
 - Apple MacBookPro8 3
 
-### Asus
+## Asus
 
 - Asus EEE-PC 1011PX
 - Asus G750JZA
@@ -43,7 +43,7 @@ fact compatible. If you have a device compatible with Solus not listed on this p
 - Asus X550LD
 - Asus X551CAP
 
-### Dell
+## Dell
 
 - Dell Inspiron 1110
 - Dell Inspiron 15R N5010
@@ -62,11 +62,11 @@ fact compatible. If you have a device compatible with Solus not listed on this p
 - Dell Precision M6500
 - Dell Vostro 1700
 
-### Google
+## Google
 
 - Google Chromebook CR48
 
-### HP
+## HP
 
 - HP Compaq 6730B
 - HP Compaq Presario CQ61
@@ -84,7 +84,7 @@ fact compatible. If you have a device compatible with Solus not listed on this p
 - HP Pavilion x360 Convertible
 - HP Presario V6000
 
-### Lenovo
+## Lenovo
 
 - Lenovo 3000 V200
 - Lenovo B50-50
@@ -119,11 +119,11 @@ fact compatible. If you have a device compatible with Solus not listed on this p
 - Lenovo Yoga 2 11
 - Lenovo Z50-70
 
-### MSI
+## MSI
 
 - MSI GE70
 
-### Samsung
+## Samsung
 
 - Samsung NP270E5E-X02PL
 - Samsung NP300E4C-AD5BR
@@ -131,16 +131,16 @@ fact compatible. If you have a device compatible with Solus not listed on this p
 - Samsung NP900X3G
 - Samsung NP900X4C-AU05
 
-### Schenker
+## Schenker
 
 - Schenker XMG A506-VE
 
-### Sony
+## Sony
 
 - Sony VAIO S Series 13
 - Sony VAIO VPCEC3M1E
 
-### Toshiba
+## Toshiba
 
 - Toshiba Portege R930
 - Toshiba Qosmio X305

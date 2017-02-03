@@ -1,8 +1,8 @@
-## VirtualBox
+# VirtualBox
 
 [VirtualBox](https://virtualbox.org) is an x86 virtualization software package developed by Sun Microsystems.
 
-### Solus as Guest 
+## Solus as Guest 
 
 Make sure you have the necessary packages installed: 
 
@@ -25,7 +25,7 @@ Now, download the [Guest Additions](http://download.virtualbox.org/virtualbox/) 
 
 **Note:** For each kernel update you will need to rebuild the Virtualbox Modules. So simply remount the ISO and run the instructions again.
 
-# Solus as Host 
+## Solus as Host 
 
 Download the latest [VirtualBox Installer](https://www.virtualbox.org/wiki/Linux_Downloads) - [direct link](http://download.virtualbox.org/virtualbox/5.1.12/VirtualBox-5.1.12-112440-Linux_amd64.run) (5.1.12) right click link and Save As. 
 Now install the dependencies and VirtualBox like so:

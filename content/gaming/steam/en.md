@@ -1,8 +1,8 @@
-## Steam
+# Steam
 
 Steam is currently available via the Solus repository, as the `steam` package.
 
-### NVIDIA
+## NVIDIA
 
 For systems running NVIDIA graphics hardware, you will need to install the corresponding 32bit video driver for your card, listed below:
 

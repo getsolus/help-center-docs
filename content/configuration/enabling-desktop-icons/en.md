@@ -1,4 +1,4 @@
-## Enabling Desktop Icons
+# Enabling Desktop Icons
 
 You can enable desktop icons by opening Raven, clicking the cog wheel for Budgie Settings, then toggling Desktop Icons on under the Background section.
 

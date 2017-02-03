@@ -1,15 +1,15 @@
-## iOS Support
+# iOS Support
 
 Historically, iOS support on Linux has been quirky and typically done via partial implementations, such as [libimobiledevice](http://www.libimobiledevice.org/) and [libgpod](http://www.gtkpod.org/libgpod/). As software that Solus provides 
 leverages these implementations, it is likely that if you have an Apple device running an iOS version newer than 4.3.x, you will not be able to utilize it for the synchronizing of content such as music and video.
 
-### Checking Compatibility 
+## Checking Compatibility 
 
-#### Rhythmbox 
+### Rhythmbox 
 
 You can check if your device is capable of synchronization of content such as music and video by using the Rhythmbox music player. If your iOS device does not appear in the left sidepane, your device is likely not supported.
 
-#### Advanced 
+### Advanced 
 
 You can further check by:
 
@@ -20,7 +20,7 @@ You can further check by:
 What this command does is queries the device to obtain the version of its database. If the version is **greater than 4**, your device is not capable of synchronizing music and video. You may notice it appear in Files / Nautilus as 
 "Documents of DeviceName", however this typically only provides a limited set of data from applications.
 
-### Mounting in Nautilus 
+## Mounting in Nautilus 
 
 You can attempt mounting in Nautilus by first running `systemctl start usbmuxd` then `imount` (without sudo). If it's successful, it will show up as "DeviceName" and you'll have access to content such as music, photos, etc.
 

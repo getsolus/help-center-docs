@@ -1,4 +1,4 @@
-## Managing Users
+# Managing Users
 
 To add and remove users on your Solus system, go to the Budgie Menu, open the Settings app, then go to Users.
 
@@ -10,13 +10,13 @@ the system, then your account is an administrator by default.
 
 In the event it is correct, the Unlock button will change to Lock and the Add / Remove buttons will be clickable.
 
-### Adding a User
+## Adding a User
 
 To add a user, click the `+` button in the bottom left corner of the Users window. This will show the Add User window (shown below).
 
 ![Add User Dialog](images/add-user-dialog.png)
 
-### Removing a user
+## Removing a user
 
 To remove a user, select the user under the “Other Accounts” section and click the `-` button.
 

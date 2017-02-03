@@ -1,24 +1,24 @@
-## Modifying Grub
+# Modifying Grub
 
 In this document, we walk over several scenarios where you may need to access, modify, or repair GRUB.
 
-### Scenarios
+## Scenarios
 
-#### Multi-Booting
+### Multi-Booting
 
 Multi-booting is when you have multiple operating systems on a single computing device, such as a desktop or a laptop. Also referred to as "dual-booting" when only having two operating systems on the same computing device.
 
-##### Unable to access other OSes
+#### Unable to access other OSes
 
 There are instances where Solus or another operating system may be rendered inaccessible, such as system updates that result in an update Linux kernel. If you are using Solus as your primary operating system and no longer can access another operating system via GRUB (*or it simply doesn't show up in the menu*) then run `sudo update-grub` via Solus.
 
-##### Unable to access Solus
+#### Unable to access Solus
 
 If you are unable to access Solus after an update to it and you have multiple operating systems installed on your computing device, please go to the other operating systems and run `sudo update-grub`.
 
 If these other operating systems are **not** Linux-based, such as Windows, please defer to the Solus Update Issues section.
 
-#### Solus Update Issues
+### Solus Update Issues
 
 There are some circumstances in which updating Solus could fail to update its GRUB. These issues primarily affect individuals running the Unstable repos and rarely affect the majority of users, but in the event you are unable to access Solus and it "owns" GRUB, then you will need to use the "chroot" (change root) method via a Live ISO (preferably of Solus) to fix your host Solus install.
 

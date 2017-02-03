@@ -1,4 +1,4 @@
-## Heroes of Newerth
+# Heroes of Newerth
 
 First, install the latest version of HoN by downloading it and running "HoNClient.sh".
 
