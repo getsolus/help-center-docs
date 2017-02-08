@@ -2,7 +2,7 @@
 
 [Minecraft](https://minecraft.net) is a sandbox independent video game originally created by Swedish programmer Markus "Notch" Persson and later developed and published by the Swedish company Mojang.
 
-![Minecraft](images/minecraft.jpg)
+![Minecraft](images/help-center/gaming/minecraft/minecraft.jpg)
 
 ## Installation
 

@@ -66,17 +66,17 @@ To write the ISO, you will need:
 
 Upon opening Gnome MultiWriter, you will likely be shown a window similar to the one below, in the event your USB drive is already plugged in.
 
-![Gnome MultiWriter Start Copying](images/start.jpg)
+![Gnome MultiWriter Start Copying](images/help-center/installation/preparing-to-install/start.jpg)
 
 If your USB drive is not plugged, you will be prompted with an image indicating to plug it in.
 
 Next, click the Start Copying button, and you will be prompted to select the ISO. Choose the ISO you downloaded in the Getting the ISO section. The USB will automatically be written to.
 
-![Gnome MultiWriter Writing](images/writing.jpg)
+![Gnome MultiWriter Writing](images/help-center/installation/preparing-to-install/writing.jpg)
 
 Upon completion, you will be prompted will the following dialog and your USB is now ready for use.
 
-![Gnome MultiWriter Done](images/done.jpg)
+![Gnome MultiWriter Done](images/help-center/installation/preparing-to-install/done.jpg)
 
 ##### Command Line
 
@@ -128,7 +128,7 @@ This will write the contents of the ISO to the thumb drive so you can boot it an
 4. Untick all options except "Create a bootable disk using" and use the dropdown to select "DD Image".
 5. Click Start.
 
-![Rufus](images/rufus.jpg)
+![Rufus](images/help-center/installation/preparing-to-install/rufus.jpg)
 
 ---
 
