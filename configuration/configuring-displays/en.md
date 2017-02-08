@@ -4,11 +4,11 @@ You can configure your display(s) by going to the Budgie Menu, opening the Setti
 
 You will then be shown the following window.
 
-![Displays Overview](images/help-center/configuration/configuring-displays/displays-overview.jpg)
+![Displays Overview](imgs/help-center/configuration/configuring-displays/displays-overview.jpg)
 
 In this window, you can select individual displays to configure. Clicking on an item will show the following dialog.
 
-![Individual Display Settings](images/help-center/configuration/configuring-displays/individual-display-settings.jpg)
+![Individual Display Settings](imgs/help-center/configuration/configuring-displays/individual-display-settings.jpg)
 
 This window will enable you to select if you wish to use this monitor as the primary or secondary display, mirror it with another display, or turn it off.
 
@@ -16,4 +16,4 @@ It also gives you size and aspect ratio, ability to rotate the display, and abil
 
 Going back to the Displays section, you also have the option to arrange your displays. Click the “Arrange Combined Displays” to be presented with the following window.
 
-![Arrange Combined Displays](images/help-center/configuration/configuring-displays/arrange-displays.png)
+![Arrange Combined Displays](imgs/help-center/configuration/configuring-displays/arrange-displays.png)

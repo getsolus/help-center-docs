@@ -4,7 +4,7 @@ You can configure default applications by going to the Budgie Menu, opening Sett
 
 Upon entering the Details section, go to Default Applications.
 
-![Default Applications](images/help-center/configuration/configuring-default-applications/configuring-default-applications.jpg)
+![Default Applications](imgs/help-center/configuration/configuring-default-applications/configuring-default-applications.jpg)
 
 *Note: In the image above, we've changed the Music player and Video player.*
 
