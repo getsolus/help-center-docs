@@ -1,10 +1,13 @@
-## Packaging Practices
+---
+title: Packaging Practices
+---
+# Packaging Practices
 
 The primary goal of `ypkg` is ease of maintainence. In order to do so we ensure packages in the binary repository adhere to a strict set of conventions and practices.
 
 The next few sections will detail these.
 
-### Package naming 
+## Package naming
 
 The `ypkg` tool does not allow for custom subpackages or subpackage naming, and will enforce its own policy. This can be eased somewhat through the use of `patterns`, however the available subpackage names are limited.
 
@@ -15,7 +18,7 @@ We request you use (where possible) the upstream source name for your package. S
 Subpackages are fully automatic with `ypkg`, and are created based on file patterns. All subpackages automatically depend on the main package, to ensure correct operation. In the following explanations, `$lib` is used to refer to the host 
 library directory, i.e. `lib` or `lib64` (or `lib32` on `emul32` builds)
 
-#### The devel subpackage 
+### The devel subpackage
 
 This is invariably created for packages that provide libraries and development headers. The following rules will result in files being placed in a `devel` subpackage:
 
@@ -37,7 +40,7 @@ If this happens, simply override with `patterns` or set `libsplit` to “no”.
 **A note on static archives**: Unless it is absolutely unavoidable, you should disable static libraries within your build. This is usually fixed by adding `--disable-static` to your configure routine. If `*.a` files are shown in your packaging request, it will be 
 questioned, as they can pose a greater security risk if packages link against these static archives.
 
-#### The docs subpackage 
+### The docs subpackage
 
 Currently there is only one pattern which is forced into a `docs` subpackage:
 
@@ -47,7 +50,7 @@ Currently there is only one pattern which is forced into a `docs` subpackage:
 
 If required, you can use `patterns` to move other files into the `docs` subpackage, making it smaller.
 
-#### The 32bit subpackage 
+### The 32bit subpackage
 
 This subpackage is only generated during an `emul32` build. The folowing paths will automatically be placed into a `32bit` subpackage
 
@@ -59,11 +62,11 @@ This subpackage is only generated during an `emul32` build. The folowing paths w
 
 Note the same static archive rules apply to `32bit` packages. These packages aren’t as heavily split as we try to discourage their use, though they must be provided in some instances.
 
-#### The utils subpackage 
+### The utils subpackage
 
 This is not an automatic subpackage, you must use `patterns` to utilise it. It is provided for instances that it may not be suitable to have binaries present, i.e. for a library package.
 
-### Maintenance 
+## Maintenance
 
 When submitting a change `package.yml`, it must be accompanied by its corresponding `pspec_*.xml` file, which was generated at build time. This machine file allows the repository maintainers to evaluate the package condition.
 
@@ -71,7 +74,7 @@ When providing a new version of a package, or a fix, always ensure you increment
 
 Never submit a package without having first tested it, and ensuring it builds within `solbuild`, a clean chroot environment.
 
-### Generating a Package.yml 
+## Generating a Package.yml
 
 Making a package.yml file is not necessarily a manual process. In fact, [once you have common setup](/articles/packaging/building-a-package/en), you already have a script capable of generating a package.yml file based 
 on the source archive URL.
@@ -82,25 +85,30 @@ You can generate a package.yml by using `common/Scripts/yauto.py URL_TO_ARCHIVE`
 alias fetchYml="$HOME/repository/common/Scripts/yauto.py"
 ```
 
-### Patching / extra files 
+## Patching / extra files
 
 Files that may be required during the build can be accessed via the `$pkgfiles` variable. Note that you must store your files in the `./files` directory relative to your `package.yml`
 
-Both patches and extra files (such as systemd units) are stored in this directory. Note that if your patch is to address a **CVE**, you must use the following naming scheme:
+Both patches and extra files (such as systemd units) are stored in this directory. Note that if your patch is to address a **CVE**, you must use the following naming scheme: `./files/security/cve-xxxx-xxxx.patch`
 
-```./files/security/cve-xxxx-xxxx.patch```
-Where xxxx-xxxx is replaced with the full CVE ID. Complying with this simple rule ensures that we can know at any time the security status of packages when using tools such as `cve-check-tool`
+Where `xxxx-xxxx` is replaced with the full CVE ID. Complying with this simple rule ensures that we can know at any time the security status of packages when using tools such as `cve-check-tool`
 
-### Applying a patch 
+### Applying a patch
 
-It is common practice to apply the patch within the `setup` section of your build staging. We can achieve this using the `%patch` macro, and the `$pkgfiles` variable. In this example, the required file is located at `./files/0002-Sample-commit-2.patch`
+It is common practice to apply the patch within the `setup` section of your build staging. We can achieve this using the `%patch` macro, and the `$pkgfiles` variable. In this example, the required file is located 
+at `./files/0002-Sample-commit-2.patch`
 
-```%patch -p1 < $pkgfiles/0002-Sample-commit-2.patch```
+``` bash
+%patch -p1 < $pkgfiles/0002-Sample-commit-2.patch
+```
+
 Note you use the macro as you would normally use the patch command, however use of the macro ensures it performs a clean batch-mode patch.
 
 If you are using compressed patches, i.e. for the `bash` or `readline` packages, you can pipe the call through `zcat` or similar:
 
-```zcat $pkgfiles/bash43-032.gz | %patch -p0```
+``` bash
+zcat $pkgfiles/bash43-032.gz | %patch -p0
+```
 
 #### Handling multiple patches 
 
@@ -118,14 +126,16 @@ security/cve-xxxx-xxxx.patch -p4
 fix-silliness.patch
 ```
 
-### Installing extra files 
+## Installing extra files
 
-We recommend using patches where possible first, as they ensure correct maintainence and will be updated across package versions. If you must install extra files into the directory, please use the `install` command, ensuring you set the correct 
-permissions. Again, files are accessible from the `./files/` directory, relative to `package.yml`.
+We recommend using patches where possible first, as they ensure correct maintainence and will be updated across package versions. If you must install extra files into the directory, please use the `install` 
+command, ensuring you set the correct permissions. Again, files are accessible from the `./files/` directory, relative to `package.yml`.
 
 This is an example of installing a custom profile file, seen in the `bash` package:
 
-```install -m 0644 $pkgfiles/profile $installdir/etc/profile```
+``` bash
+install -m 0644 $pkgfiles/profile $installdir/etc/profile
+```
 
 ### Build dependencies 
 
@@ -135,14 +145,14 @@ Any package that is submitted to our repositories is always built in a clean chr
 
 This is achieved by populating the `builddeps` key with a list of build dependencies. We support two kinds of build dependencies: explicitly named, or `pkgconfig` dependencies.
 
-We prefer the use of `pkgconfig` dependencies. Most modern software will use the `pkg-config` tool (package configuration) to determine which files are required to build the current software. This may include compiler flags, library to link against and 
-where the package headers are located.
+We prefer the use of `pkgconfig` dependencies. Most modern software will use the `pkg-config` tool (package configuration) to determine which files are required to build the current software. This may include 
+compiler flags, library to link against and where the package headers are located.
 
-An obvious advantage to supporting `pkgconfig` dependencies is that there is a 1:1 mapping between the name requested by the build and the name used within the `package.yml`. Instead of trying to hunt down the package providing that dependency, 
-you simply list the same name. Any package in the repository will export information about the `.pc` files (for `pkg-config`) it contains, enabling you to use those as a build dependency.
+An obvious advantage to supporting `pkgconfig` dependencies is that there is a 1:1 mapping between the name requested by the build and the name used within the `package.yml`. Instead of trying to hunt down 
+the package providing that dependency, you simply list the same name. Any package in the repository will export information about the `.pc` files (for `pkg-config`) it contains, enabling you to use those as a build dependency.
 
-A secondary advantage is that this allows for easily switching or replacing a providing package. When no `pkgconfig` name is available (some packages do not provide these, or it doesn’t make sense for them to), you may use the explicit package name. Always 
-ensure you select the correct package, i.e. the `-devel` subpackage. This provides the necessary symlinks and headers to build packages.
+A secondary advantage is that this allows for easily switching or replacing a providing package. When no `pkgconfig` name is available (some packages do not provide these, or it doesn’t make sense for them to), you 
+may use the explicit package name. Always ensure you select the correct package, i.e. the `-devel` subpackage. This provides the necessary symlinks and headers to build packages.
 
 #### Using pkgconfig dependencies 
 
@@ -170,7 +180,7 @@ Provides: pkgconfig(gtk+-3.0) pkgconfig(gdk-3.0) pkgconfig(gdk-wayland-3.0) pkgc
 pkgconfig(gtk+-wayland-3.0) pkgconfig(gtk+-x11-3.0) 
 ```
 
-#### Using explict named dependencies 
+### Using explict named dependencies
 
 As may be obvious, simply list the package name. Note we discourage this when a `pkgconfig` dependency is available.
 
@@ -179,12 +189,13 @@ builddeps:
     - stk-devel
 ```
 
-### Runtime dependencies 
+## Runtime dependencies
 
-Runtime dependencies are extra packages that a package needs in order to function correctly. A common example of this is other libraries. Solus `eopkg` packages will automatically add any binary dependencies at runtime, so that you do not have to.
+Runtime dependencies are extra packages that a package needs in order to function correctly. A common example of this is other libraries. Solus `eopkg` packages will automatically add any binary dependencies at 
+runtime, so that you do not have to.
 
-All `devel` subpackages automatically depend on their parent package. On top of this, if they provide a `.pc` pkg-config file, we export this information, and automatically determine the packages this particular package would need to be able to 
-build against correctly. As such, the majority of dependencies for builds are automatically resolved.
+All `devel` subpackages automatically depend on their parent package. On top of this, if they provide a `.pc` pkg-config file, we export this information, and automatically determine the packages this particular 
+package would need to be able to build against correctly. As such, the majority of dependencies for builds are automatically resolved.
 
 In certain instances, binary dependencies aren’t enough. An example of this might be an extra Python package, or a font, something that is not accounted for by binary checks.
 
@@ -217,14 +228,14 @@ rundeps:
         - someotherpackage
 ```
 
-### Patterns 
+## Patterns
 
 In most instances, `ypkg` will assign the correct location for files, whether it be in the main `name` package, or a subpackage. However there may be instances where the default does not match the intended behaviour.
 
 In these instances it is possible to override the default assignment by way of patterns. These are simply a list of paths or globs to ensure a particular file, or set of files, end up in the desired location.
 
-The `patterns` key expects a `dict(s)` argument. The default key for each pattern is assumed to be the `name` of the package, so omitting the name would place files into the main package. The value should be a path or pattern you wish to match, 
-ensuring files go to a specific location.
+The `patterns` key expects a `dict(s)` argument. The default key for each pattern is assumed to be the `name` of the package, so omitting the name would place files into the main package. The value should be a 
+path or pattern you wish to match, ensuring files go to a specific location.
 
 In this example from libjpeg-turbo, we move all documentation into the `docs` subpackage:
 
@@ -241,12 +252,13 @@ patterns:
         - /usr/share/wayland
 ```
 
-### Replace / rename 
+## Replace / rename
 
-In some situations, it may be required to replace one package with another, or to rename an existing package. In these instances you should coordinate with a repository maintainer to ensure the replaced package is marked **Obsolete** within the index. 
-This will ensure correct upgrade paths for users.
+In some situations, it may be required to replace one package with another, or to rename an existing package. In these instances you should coordinate with a repository maintainer to ensure the replaced package is 
+marked **Obsolete** within the index. This will ensure correct upgrade paths for users.
 
-Note that to retire a package, you must also coordinate with a repository maintainer. An **Obsolete** package is removed by the package manager when the user upgrades. As such, correct upgrade paths need to be established.
+Note that to retire a package, you must also coordinate with a repository maintainer. An **Obsolete** package is removed by the package manager when the user upgrades. As such, correct upgrade paths need to be 
+established.
 
 The `replaces` ypkg key uses the `dict(s)` type, and the default key is assumed to be the current package `name`.
 
@@ -263,6 +275,7 @@ The `name` of this package is **geoclue**, and the new package names are now:
 - geoclue
 - geoclue-devel
 
-Given the `replaces` values above, **geoclue** now replaces **libgeoclue**, and **geoclue-devel** replaces **libgeoclue-devel**. This is entirely transparent to the user, with a seamless update replacing the old packages with the new renamed packages.
+Given the `replaces` values above, **geoclue** now replaces **libgeoclue**, and **geoclue-devel** replaces **libgeoclue-devel**. This is entirely transparent to the user, with a seamless update replacing the old 
+packages with the new renamed packages.
 
 The repository maintainer marked the old names as **Obsolete** in the index.
