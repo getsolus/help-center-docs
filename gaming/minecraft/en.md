@@ -19,7 +19,9 @@ sudo wget https://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.jar -O 
 
 Now we can create a desktop icon for it:
 
-`sudo gedit /usr/share/applications/minecraft.desktop`
+``` bash
+sudo gedit /usr/share/applications/minecraft.desktop
+```
 
 Paste in the following and save it:
 ```
@@ -39,6 +41,8 @@ Terminal=false
 
 Now run the following command to regenerate the Budgie menu.
 
-`sudo update-desktop-database`
+``` bash
+sudo update-desktop-database
+```
 
-You know have a Minecraft entry in Budgie's menu.
+You now have a Minecraft entry in Budgie's menu.
