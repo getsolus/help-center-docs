@@ -1,8 +1,8 @@
 # Preparing to installation
 
-## Getting the ISO
-
 The first step to installing Solus is acquiring the correct media. The Solus Project provides ISO images, which contain the contents of the Solus for installing.
+
+## Getting the ISO
 
 You can download a Solus ISO by going to our [Download page](https://solus-project.com/download).
 

@@ -1,5 +1,7 @@
 ## Building a Package
 
+This guide will walk you through setting up the file(s), tooling, and building your package.
+
 ### Setting up Packager file 
 
 In order to utilise the build system, you must first set up a configuration file that has your packager details.

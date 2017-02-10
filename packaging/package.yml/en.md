@@ -1,8 +1,10 @@
-## Package.yml
+# Package.yml
+
+All packages consist of a single build file, which provides all of the required metadata for the package manager, plus the build steps involved to produce a package. This follows the YAML specification.
 
 ### Format 
 
-All packages consist of a single build file, which provides all of the required metadata for the package manager, plus the build steps involved to produce a package. This follows the YAML specification, thus all `package.yml` files **must** be valid YAML.
+All `package.yml` files **must** be valid YAML.
 
 As can be seen in the example below, the file is organised into a key-&gt;value hierarchy. Some values may be required to be in a list format, whereas most are simple strings. The build step sections are all considered optional, however if you do not 
 perform *any* steps, then no package is generated. Each of these keys contains content that will be placed within a script and executed within a controlled environment to perform the package build. To all intents and purposes, they are bash scripts 

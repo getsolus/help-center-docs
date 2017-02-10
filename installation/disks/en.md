@@ -1,6 +1,6 @@
 # Disks
 
-Solus provides multiple ways you can install onto your system:
+Solus provides multiple ways you can install onto your system.
 
 1. Solus can take up the entire drive.
 2. You can install Solus next to your existing operating system, such as Windows. *If you have multiple operating systems 
