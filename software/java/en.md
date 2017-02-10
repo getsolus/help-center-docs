@@ -1,5 +1,7 @@
 # Java
 
+This article covers obtaining open source Java as well as Oracle Java.
+
 ## Installation
 
 If you are looking for OpenJDK or OpenJRE, install `openjdk-8` from the repository. The instructions below are for Oracle Java.
