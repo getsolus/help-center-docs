@@ -2,7 +2,7 @@
 
 You can configure your network settings such as wireless networking, by going to the Budgie Menu, opening Settings, then clicking Network.
 
-![Network Overview](imgs/help-center/configuration/configuring-network/network-overview.png)
+{{< altimg "network-overview.png" "help-center/configuration/configuring-network/" >}}
 
 To configure wireless, go to the Wi-Fi section. If your wireless is currently turned off, click the toggle button, leave the Network section, and go back in.
 
@@ -10,7 +10,7 @@ To configure wireless, go to the Wi-Fi section. If your wireless is currently tu
 
 Click the access point you wish to connect to.
 
-![Network Authentication](imgs/help-center/configuration/configuring-network/network-authentication.png)
+{{< altimg "network-authentication.png" "help-center/configuration/configuring-network/" >}}
 
 You may now be prompted to authenticate with the network. Type in your password and then click Connect.
 
@@ -20,6 +20,6 @@ If your password is correct, you will now be authenticated with the network.
 
 If you wish to connect to a hidden network, click “Connect to Hidden Network”. It will show the following dialog, where you type the SSID (name of the network) and type of security (if any).
 
-![Hidden Network](imgs/help-center/configuration/configuring-network/network-hidden.png)
+{{< altimg "network-hidden.png" "help-center/configuration/configuring-network/" >}}
 
 If the network is found and has a password, you will be prompted to authenticate with the network.

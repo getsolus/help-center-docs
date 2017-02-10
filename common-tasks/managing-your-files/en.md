@@ -2,4 +2,4 @@
 
 Solus provides software that enables you to store, organize, and view your files (such as documents, music, pictures, and videos).
 
-![Nautilus](imgs/help-center/common-tasks/managing-your-files/nautilus.jpg)
+{{< altimg "nautilus.jpg" "help-center/common-tasks/managing-your-files/" >}}

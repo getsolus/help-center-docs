@@ -4,7 +4,7 @@ Installing proprietary drivers may improve performance or certain features, howe
 
 You can enable proprietary Broadcom or NVIDIA drivers by going to the Budgie Menu and opening Hardware Drivers.
 
-![Doflicky](imgs/help-center/hardware/proprietary-drivers/doflicky.jpg)
+{{< altimg "doflicky.jpg" "help-center/hardware/proprietary-drivers/" >}}
 
 If there are proprietary drivers that can be installed, they will show up in the box below the description. You can click the item you wish to install and click Install. 
 

@@ -2,4 +2,4 @@
 
 You can install software ranging from Google Chrome to LibreOffice, as well as updating software, via our Software Center.
 
-![Software Center](imgs/help-center/common-tasks/installing-and-updating-software/solus-sc.jpg)
+{{< altimg "solus-sc.jpg" "help-center/common-tasks/installing-and-updating-software/" >}}

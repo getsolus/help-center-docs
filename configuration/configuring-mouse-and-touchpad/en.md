@@ -4,7 +4,7 @@ You can configure the settings of your mouse and/or touchpad by going to the Bud
 
 ## Mouse
 
-![Mouse Settings](imgs/help-center/configuration/configuring-mouse-and-touchpad/mouse-settings.jpg)
+{{< altimg "mouse-settings.jpg" "help-center/configuration/configuring-mouse-and-touchpad/" >}}
 
 For mice, you can set:
 
@@ -14,7 +14,7 @@ For mice, you can set:
 
 ## Touchpad
 
-![Touchpad Settings](imgs/help-center/configuration/configuring-mouse-and-touchpad/touchpad-settings.jpg)
+{{< altimg "touchpad-settings.jpg" "help-center/configuration/configuring-mouse-and-touchpad/" >}}
 
 For touchpads, you can set:
 

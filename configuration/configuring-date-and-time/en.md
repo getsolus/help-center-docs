@@ -1,6 +1,6 @@
 # Configuring Date and time
 
-![Date & Time in Gnome Control Center](imgs/help-center/configuration/configuring-date-and-time/configuring-date-and-time.jpg)
+{{< altimg "configuring-date-and-time.jpg" "help-center/configuration/configuring-date-and-time/" >}}
 
 You can configure the date and time of your system by going to the Budgie Menu, opening the Settings app then going to the Date & Time section.
 
