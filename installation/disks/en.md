@@ -1,3 +1,6 @@
+---
+title: Disks
+---
 # Disks
 
 Solus provides multiple ways you can install onto your system.

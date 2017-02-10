@@ -1,3 +1,6 @@
+---
+title: Managing Users
+---
 # Managing Users
 
 To add and remove users on your Solus system, go to the Budgie Menu, open the Settings app, then go to Users.

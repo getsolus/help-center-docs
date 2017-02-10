@@ -1,3 +1,6 @@
+---
+title: Preparing to installation
+---
 # Preparing to installation
 
 The first step to installing Solus is acquiring the correct media. The Solus Project provides ISO images, which contain the contents of the Solus for installing.

@@ -1,3 +1,6 @@
+---
+title: Modifying Grub
+---
 # Modifying Grub
 
 In this document, we walk over several scenarios where you may need to access, modify, or repair GRUB.

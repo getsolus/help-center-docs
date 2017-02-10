@@ -1,3 +1,6 @@
+---
+title: Steam
+---
 # Steam
 
 Steam is currently available via the Solus repository, as the `steam` package.

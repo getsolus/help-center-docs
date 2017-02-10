@@ -1,3 +1,6 @@
+---
+title: Third Party
+---
 # Third Party
 
 You can install or update Applications currently by using the instructions below from our 3rd Party Repository, these applications cannot be included in the primary repository due to licensing issues:

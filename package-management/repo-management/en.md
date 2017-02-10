@@ -1,4 +1,7 @@
-# Repository Management 
+---
+title: Repository Management
+---
+# Repository Management
 
 While Solus currently only provides two repositories, stable (shannon) and stable, our package manager does support actively using multiple repositories on your system. This 
 is useful if you are using a vendor-provided repository.

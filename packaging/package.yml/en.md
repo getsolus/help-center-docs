@@ -1,3 +1,6 @@
+---
+title: Package.yml
+---
 # Package.yml
 
 All packages consist of a single build file, which provides all of the required metadata for the package manager, plus the build steps involved to produce a package. This follows the YAML specification.
@@ -88,6 +91,9 @@ they are substituted within the script before execution.
 Macros are prefixed with `%`, and are substituted before your script is executed. Macros ending with `%` are used to provide directory names or build values, to the script.
 
 ``` bash
+---
+title: Run the configure macro with the given arguments
+---
 # Run the configure macro with the given arguments
 %configure --disable-static
 ```

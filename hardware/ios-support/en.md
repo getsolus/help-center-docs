@@ -1,3 +1,6 @@
+---
+title: iOS Support
+---
 # iOS Support
 
 Historically, iOS support on Linux has been quirky and typically done via partial implementations, such as [libimobiledevice](http://www.libimobiledevice.org/) and [libgpod](http://www.gtkpod.org/libgpod/). As software that Solus provides 

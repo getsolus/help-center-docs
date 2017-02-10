@@ -1,3 +1,6 @@
+---
+title: Vagrant
+---
 # Vagrant
 
 Vagrant is a tool for building complete development environments. You can use providers listed below with Vagrant, which itself is installable via the `vagrant` package.

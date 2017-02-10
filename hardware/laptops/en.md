@@ -1,8 +1,14 @@
+---
+title: Laptop Compatibility
+---
 # Laptop Compatibility
 
 The following laptops have been tested and/or suggested to function correctly by our users. This list should not suggest that **only*- such devices listed below are compatible with Solus, as there may be devices not listed below that are in 
 fact compatible.
 
+---
+title: Models
+---
 # Models
 
 ## Acer

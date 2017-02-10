@@ -1,3 +1,6 @@
+---
+title: Configuring Displays
+---
 # Configuring Displays
 
 You can configure your display(s) by going to the Budgie Menu, opening the Settings app, and clicking the Displays section.

@@ -1,3 +1,6 @@
+---
+title: Configuring Default Applications
+---
 # Configuring Default Applications
 
 You can configure default applications by going to the Budgie Menu, opening Settings app, and going to the Details section.

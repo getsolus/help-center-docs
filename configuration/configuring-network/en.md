@@ -1,3 +1,6 @@
+---
+title: Configuring Network
+---
 # Configuring Network
 
 You can configure your network settings such as wireless networking, by going to the Budgie Menu, opening Settings, then clicking Network.
