@@ -73,7 +73,7 @@ Never submit a package without having first tested it, and ensuring it builds wi
 
 ### Generating a Package.yml 
 
-Making a package.yml file is not necessarily a manual process. In fact, [once you have common setup](https://wiki.solus-project.com/Building_packages#Setting_up_common), you already have a script capable of generating a package.yml file based 
+Making a package.yml file is not necessarily a manual process. In fact, [once you have common setup](/articles/packaging/building-a-package/en), you already have a script capable of generating a package.yml file based 
 on the source archive URL.
 
 You can generate a package.yml by using `common/Scripts/yauto.py URL_TO_ARCHIVE`. We recommend creation an alias in your `.bashrc` or `.zshrc`, so you can access it wherever you are. For example:

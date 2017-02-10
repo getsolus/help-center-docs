@@ -8,4 +8,4 @@ You can use Docker as a provider for Vagrant. You can install Docker via the `do
 
 ## VirtualBox
 
-You can use VirtualBox as a provider by following the "Solus As Host" instructions [here](https://wiki.solus-project.com/VirtualBox).
+You can use VirtualBox as a provider by following the "Solus As Host" instructions [here](/articles/software/virtualbox/en).

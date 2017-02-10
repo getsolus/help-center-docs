@@ -1,7 +1,7 @@
 # Wireless Chipsets Compatibility
 
 The following wireless chipsets have been tested and/or suggested to function correctly by our users. This list should not suggest that **only*- such devices listed below are compatible with Solus, as there may be devices not listed below that are in 
-fact compatible. If you have a device compatible with Solus not listed on this page, please get a hold of `JoshStrobl` [via IRC](/help-center/contributing/getting-involved/).
+fact compatible.
 
 ## Atheros
 

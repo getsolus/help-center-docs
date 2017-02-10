@@ -4,7 +4,7 @@ The first step to installing Solus is acquiring the correct media. The Solus Pro
 
 ## Getting the ISO
 
-You can download a Solus ISO by going to our [Download page](https://solus-project.com/download).
+You can download a Solus ISO by going to our [Download page](/download).
 
 ---
 
