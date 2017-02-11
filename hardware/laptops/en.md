@@ -74,6 +74,7 @@ title: Models
 
 ## HP
 
+- HP 240 G3
 - HP Compaq 6730B
 - HP Compaq Presario CQ61
 - HP Compaq NC6400
@@ -93,6 +94,7 @@ title: Models
 ## Lenovo
 
 - Lenovo 3000 V200
+- Lenovo B41-80
 - Lenovo B50-50
 - Lenovo G50-80
 - Lenovo G510
