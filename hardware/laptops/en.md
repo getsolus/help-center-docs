@@ -93,6 +93,7 @@ title: Models
 ## Lenovo
 
 - Lenovo 3000 V200
+- Lenovo B41-80
 - Lenovo B50-50
 - Lenovo G50-80
 - Lenovo G510
