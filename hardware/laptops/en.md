@@ -74,6 +74,7 @@ title: Models
 
 ## HP
 
+- HP 240 G3
 - HP Compaq 6730B
 - HP Compaq Presario CQ61
 - HP Compaq NC6400
