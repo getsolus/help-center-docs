@@ -19,9 +19,16 @@ Extract JRE and move it to /opt:
 
 ```
 cd ~/Downloads
-tar xf jre-8u112-linux-x64.tar.gz
-sudo mv jre1.8.0_112 /opt/
-sudo ln -svf /opt/jre1.8.0_112/bin/java /usr/bin/java
+tar xf jre-8u121-linux-x64.tar.gz
+sudo mv jre1.8.0_121 /opt/
+sudo ln -svf /opt/jre1.8.0_121/bin/java /usr/bin/java
+```
+
+To enable Java in Firefox:
+
+```
+mkdir -p ~/.mozilla/plugins
+ln -s /opt/jre1.8.0_121/lib/amd64/libnpjp2.so ~/.mozilla/plugins/libnpjp2.so
 ```
 
 ## JDK
@@ -32,7 +39,14 @@ Extract JDK and move it to /opt:
 
 ```
 cd ~/Downloads
-tar xf jdk-8u112-linux-x64.tar.gz
-sudo mv jdk1.8.0_112 /opt/
-sudo ln -svf /opt/jdk1.8.0_112/bin/java /usr/bin/java
+tar xf jdk-8u121-linux-x64.tar.gz
+sudo mv jdk1.8.0_121 /opt/
+sudo ln -svf /opt/jdk1.8.0_121/bin/java /usr/bin/java
+```
+
+To enable Java in Firefox:
+
+```
+mkdir -p ~/.mozilla/plugins
+ln -s /opt/jdk1.8.0_121/jre/lib/amd64/libnpjp2.so ~/.mozilla/plugins/libnpjp2.so
 ```
