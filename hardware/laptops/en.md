@@ -147,6 +147,10 @@ fact compatible.
 - Sony VAIO S Series 13
 - Sony VAIO VPCEC3M1E
 
+### System 76
+
+- System 76 Gazelle Professional
+
 ### Toshiba
 
 - Toshiba Portege R930
