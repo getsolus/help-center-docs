@@ -15,29 +15,29 @@ You can download a Solus ISO by going to our [Download page](/download).
 
 There is a multitude of tools enable the writing of our ISO image to DVDs or USB thumb drives. Below, we break it apart across Linux and Windows.
 
-## Linux
+### Linux
 
-### DVD
+#### DVD
 
 We recommend using [Brasero](https://wiki.gnome.org/Apps/Brasero) for writing the ISO to a DVD.
 
-### USB
+#### USB
 
-#### Graphical Tool
+##### Graphical Tool
 
 We recommend using [Gnome Multi-Writer](https://wiki.gnome.org/Apps/MultiWriter). Please note that unetbootin will **not** work.
 
-#### Command-Line
+##### Command-Line
 
 For those comfortable with the command-line / terminal, we will walk you through using `dd`.
 
-## Windows
+### Windows
 
-## DVD
+#### DVD
 
 You can easily burn an ISO image to a DVD, on Windows 7 and newer, by using Window's built-in file manager (Explorer), right-clicking on the ISO image file, and clicking Burn disk image.
 
-## USB
+#### USB
 
 You can easily burn an ISO image to a USB by using graphical tool [Rufus](https://rufus.akeo.ie/).
 
