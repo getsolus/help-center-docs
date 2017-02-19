@@ -33,9 +33,11 @@ fact compatible.
 
 ### Asus
 
+- Asus EEE-PC 1001PX
 - Asus EEE-PC 1011PX
 - Asus G750JZA
 - Asus K53U
+- Asus K55VM
 - Asus M50VM
 - Asus N501JW
 - Asus N61JA
