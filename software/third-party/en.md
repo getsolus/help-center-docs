@@ -3,7 +3,9 @@ title: Third Party
 ---
 # Third Party
 
-You can install or update Applications currently by using the instructions below from our 3rd Party Repository, these applications cannot be included in the primary repository due to licensing issues:
+The following applications are provided via our 3rd Party Repository to facilitate the installation and usage of them. These applications cannot be included in the primary repository due to licensing issues.
+
+Alongside the following commands, you may also find some of these applications via the Third Party section on our Software Center.
 
 If these instructions fail to work please [file an issue](https://github.com/solus-project/3rd-Party). To upgrade once installed simply run the commands again. If there is a new version it will be installed.
 
