@@ -41,6 +41,7 @@ fact compatible.
 - Asus M50VM
 - Asus N501JW
 - Asus N61JA
+- Asus N61Jv
 - Asus UX305FA
 - Asus X200MA
 - Asus X201EV
@@ -66,6 +67,7 @@ fact compatible.
 - Dell Latitude E6530
 - Dell Precision M6500
 - Dell Vostro 1700
+- Dell XPS 15 9560
 
 ### Google
 
