@@ -13,8 +13,8 @@ This policy sets forth the criteria for a package to be accepted for inclusion i
  2-Distro Rule.
  - Projects with no tags/tarballs which lack traction, may be frozen until a suitable release is made. Tagging releases is an indicator for good release engineering practices.
  - Typically, we prefer **stable** tagged releases. However, this may be waived if:
-  - The software has significant traction (i.e. prerelease)
-  - A bug fix only exists beyond the latest stable release for a git source
+   - The software has significant traction (i.e. prerelease)
+   - A bug fix only exists beyond the latest stable release for a git source
 - Value Add:
  - A web wrapper which **adds value**, such as Discord, with the global push-to-talk shortcut, is eligible for inclusion.
  - A web page wrapper, that adds **no further value** other than “convenient desktop shortcut” or “tray icon”, is **NOT** eligible for inclusion. Web browsers already support desktop notifications.
