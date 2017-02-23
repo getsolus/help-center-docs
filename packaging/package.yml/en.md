@@ -111,6 +111,15 @@ Macro | Description
 **%apply_patches** | Applies all patches listed in the `series` file in `./files` folder.
 **%reconfigure** | Updates build scripts such as `./configure` and proceeds to run `%configure`.
 
+#### Haskell Actionable Macros
+
+Macro | Description
+---- | ----
+**%cabal_configure** | Runs cabal configure with prefix, libdir, etc. and ensures the necessary package.conf.d is copied to the correct location.
+**%cabal_build** | Runs cabal build with `%JOBS%`
+**%cabal_install** | Runs cabal copy to `$installdir`
+**%cabal_register** | Runs cabal regiter to generate a pkg-config for package and version, then installs the conf file.
+
 #### Meson Actionable Macros 
 
 Macro | Description
@@ -135,6 +144,13 @@ Macro | Description
 **%python_install** | Runs the install portion of a setup.py, to the appropriate root, using python2.
 **%python3_setup** | Runs the build portion of a setup.py using python3.
 **%python3_install** | Runs the install portion of a setup.py, to the appropriate root, using python3.
+
+#### Qt Actionable Macros
+
+Macro | Description
+---- | ----
+**%qmake** | Runs qmake for Qt5 with the appropriate make flags.
+**%qmake4** | Runs qmake for Qt4, as well as adding the necessary MOC, RCC, and UIC flags since those Qt4 executables end in -qt4.
 
 #### Variable Macros 
 
