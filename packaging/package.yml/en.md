@@ -118,7 +118,7 @@ Macro | Description
 **%cabal_configure** | Runs cabal configure with prefix, libdir, etc. and ensures the necessary package.conf.d is copied to the correct location.
 **%cabal_build** | Runs cabal build with `%JOBS%`
 **%cabal_install** | Runs cabal copy to `$installdir`
-**%cabal_register** | Runs cabal regiter to generate a pkg-config for package and version, then installs the conf file.
+**%cabal_register** | Runs cabal register to generate a pkg-config for package and version, then installs the conf file.
 
 #### Meson Actionable Macros 
 
