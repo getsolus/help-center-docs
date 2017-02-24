@@ -188,15 +188,15 @@ Variable | Description
 
 The `package.yml` file uses native YAML types, however for the sake of clarity an explanation of how they are used within the context of `ypkg` is provided below.
 
-### string 
+#### string 
 
 This is simply text, which does not need to be quoted.
 
-### integer 
+#### integer 
 
 Whole, positive number, used in the `release` field.
 
-### list 
+#### list 
 
 A YAML list (or array) can be expressed in multiple ways. A short array-notation would look like this:
 
@@ -210,7 +210,7 @@ They can also be expressed like this:
 - Third Value
 ```
 
-### dict 
+#### dict 
 
 Known as an associative array, this is key to value mapping. These are separated by a colon (`:`), the token on the left is taken to be a key, and the token on the right is the value.
 
@@ -218,7 +218,7 @@ Known as an associative array, this is key to value mapping. These are separated
 
 Note that each `ypkg key` in the YAML file is actually a dict.
 
-### dict(s) 
+#### dict(s) 
 
 This is a combination of the `list` type, the `dict` type and some assumptions. We primarily make use of this to express advanced information within the package. These permit you to provide no key, and a value only. 
 In this instance, the key is assumed to be the package `name`:
