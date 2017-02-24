@@ -156,6 +156,7 @@ Macro | Description
 
 Macro | Description
 ---- | ----
+**%ARCH%** | Indicates the current build architecture.
 **%CONFOPTS%** | Flags / options for configuration, such as `--prefix=/usr`. [Full List.](https://github.com/solus-project/ypkg/blob/master/ypkg2/rc.yml#L74)
 **%CFLAGS%** | cflags as set in `eopkg.conf`
 **%CXXFLAGS%** | cxxflags as set in `eopkg.conf`
