@@ -91,9 +91,6 @@ they are substituted within the script before execution.
 Macros are prefixed with `%`, and are substituted before your script is executed. Macros ending with `%` are used to provide directory names or build values, to the script.
 
 ``` bash
----
-title: Run the configure macro with the given arguments
----
 # Run the configure macro with the given arguments
 %configure --disable-static
 ```
