@@ -24,7 +24,8 @@ sudo gedit /usr/share/applications/minecraft.desktop
 ```
 
 Paste in the following and save it:
-```
+
+``` ini
 [Desktop Entry]
 Version=1.0
 Type=Application

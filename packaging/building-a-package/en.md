@@ -12,7 +12,7 @@ In order to utilise the build system, you must first set up a configuration file
 This file lives in the `.solus` folder of your home directory. You will need to create the `.solus` folder as well as the inner `packager` file. Inside the packager file, you need two keys, `Name` and `Email`. This is used when generating the machine 
 file so that the packager details are stored within the resulting binary package.
 
-``` conf
+``` ini
 Name=Your Name Here
 Email=your.email@address
 ```

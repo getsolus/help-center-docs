@@ -202,7 +202,7 @@ A YAML list (or array) can be expressed in multiple ways. A short array-notation
 
 They can also be expressed like this:
 
-```
+``` yaml
 - First Value
 - Second Value
 - Third Value
@@ -229,14 +229,14 @@ An explicit key, usually a sub-package name:
 
 A mix of both:
 
-```
+``` yaml
 - somevalue
 - somekey: another value
 ```
 
 The values may also be expressed in list form, still using the same default key logic:
 
-```
+``` yaml
 - [one,two, three]
 - somekey: [one,two, three]
 - key:

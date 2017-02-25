@@ -158,7 +158,7 @@ may use the explicit package name. Always ensure you select the correct package,
 
 In the `builddeps` list, simply use the `pkgconfig(name)` syntax. For example, to add gtk+-3.0 to the build dependencies, we would do the following:
 
-```
+``` yaml
 builddeps:
     - pkgconfig(gtk+-3.0)
 ```
@@ -184,7 +184,7 @@ pkgconfig(gtk+-wayland-3.0) pkgconfig(gtk+-x11-3.0)
 
 As may be obvious, simply list the package name. Note we discourage this when a `pkgconfig` dependency is available.
 
-```
+``` yaml
 builddeps:
     - stk-devel
 ```

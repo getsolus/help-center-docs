@@ -91,3 +91,13 @@ sudo eopkg search documents
 ```
 
 Notice that you don't need to search for a specific software name, although you can do that. We search summaries and software names by default.
+
+## Base Development Tools
+
+If you are wanting to compile software under Solus, we recommend installing our system.devel component by running the following:
+
+``` bash
+sudo eopkg install -c system.devel
+```
+
+This will provide items such as clang, gcc, make, a multitude of devel sub-packages, and more. Our system.devel is similar to packages on other operating systems, such as Debian's build-essentials.

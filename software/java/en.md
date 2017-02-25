@@ -17,7 +17,7 @@ Grab the Java Runtime Environment (JRE) as `.tar.gz` from the [Oracle Download P
 
 Extract JRE and move it to /opt:
 
-```
+``` bash
 cd ~/Downloads
 tar xf jre-8u121-linux-x64.tar.gz
 sudo mv jre1.8.0_121 /opt/
@@ -26,7 +26,7 @@ sudo ln -svf /opt/jre1.8.0_121/bin/java /usr/bin/java
 
 To enable Java in Firefox:
 
-```
+``` bash
 mkdir -p ~/.mozilla/plugins
 ln -s /opt/jre1.8.0_121/lib/amd64/libnpjp2.so ~/.mozilla/plugins/libnpjp2.so
 ```
@@ -37,7 +37,7 @@ Grab the Java Development Kit (JDK) as `.tar.gz` from the [Oracle Download Page]
 
 Extract JDK and move it to /opt:
 
-```
+``` bash
 cd ~/Downloads
 tar xf jdk-8u121-linux-x64.tar.gz
 sudo mv jdk1.8.0_121 /opt/
@@ -46,7 +46,7 @@ sudo ln -svf /opt/jdk1.8.0_121/bin/java /usr/bin/java
 
 To enable Java in Firefox:
 
-```
+``` bash
 mkdir -p ~/.mozilla/plugins
 ln -s /opt/jdk1.8.0_121/jre/lib/amd64/libnpjp2.so ~/.mozilla/plugins/libnpjp2.so
 ```

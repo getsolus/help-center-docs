@@ -38,7 +38,7 @@ There are some circumstances in which updating Solus could fail to update its GR
 4. Once found, replace the "sdX#" in the following command with the partition and mount to the target directory we created: `mount /dev/sdX# /target`
 5. Next we will mount several other directories:
 
-```
+``` bash
 mount --bind /proc /target/proc
 mount --bind /dev /target/dev
 mount --bind /sys /target/sys
