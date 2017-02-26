@@ -1,6 +1,6 @@
----
-title: Configuring Keyboard Layout
----
++++
+title = "Configuring Keyboard Layout"
++++
 # Configuring Keyboard Layout
 
 You can change your language by going to the Budgie Menu, opening Settings, then clicking Region and Language.

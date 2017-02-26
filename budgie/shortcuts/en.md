@@ -1,6 +1,6 @@
----
-title: Budgie Shortcuts
----
++++
+title = "Budgie Shortcuts"
++++
 # Budgie Shortcuts
 
 Budgie provides multiple shortcuts to make navigating around Budgie faster and easier.

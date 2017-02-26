@@ -1,6 +1,6 @@
----
-title: Repository Management
----
++++
+title = "Repository Management"
++++
 # Repository Management
 
 While Solus currently only provides two repositories, stable (shannon) and unstable, our package manager does support actively using multiple repositories on your system. This 

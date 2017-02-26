@@ -1,6 +1,6 @@
----
-title: Basics to Package Management
----
++++
+title = "Basics to Package Management"
++++
 # Basics to Package Management
 
 Solus uses the eopkg package management system to deliver software to the end-user.  

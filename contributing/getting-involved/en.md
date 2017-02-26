@@ -1,6 +1,6 @@
----
-title: Getting Involved
----
++++
+title = "Getting Involved"
++++
 # Getting Involved
 
 Solus is a big undertaking, and as such there are many ways in which your involvement can help us. Naturally, that means there are also many ways in which you can help out.

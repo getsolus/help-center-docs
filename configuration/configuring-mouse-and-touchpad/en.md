@@ -1,6 +1,6 @@
----
-title: Configuring Mouse and Touchpad
----
++++
+title = "Configuring Mouse and Touchpad"
++++
 # Configuring Mouse and Touchpad
 
 You can configure the settings of your mouse and/or touchpad by going to the Budgie Menu, opening the Settings app, then clicking the Mouse & Touchpad section. You will be either one of the following windows, depending on the device.

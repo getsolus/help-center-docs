@@ -1,6 +1,6 @@
----
-title: History and Software Rollback
----
++++
+title = "History and Software Rollback"
++++
 # History and Software Rollback
 
 Solus provides a history and rollback feature via its package manager, eopkg. This feature allows you to see when your repository was last 

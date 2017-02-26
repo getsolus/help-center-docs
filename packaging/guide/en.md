@@ -1,6 +1,6 @@
----
-title: Packaging Guide
----
++++
+title = "Packaging Guide"
++++
 # Packaging Guide
 
 This guide is aimed at those wishing to either maintain existing packages, or contribute packaging, to the Solus repositories.

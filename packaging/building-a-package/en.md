@@ -1,6 +1,6 @@
----
-title: Building a Package
----
++++
+title = "Building a Package"
++++
 # Building a Package
 
 This guide will walk you through setting up the file(s), tooling, and building your package.

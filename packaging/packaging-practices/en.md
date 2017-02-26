@@ -1,6 +1,6 @@
----
-title: Packaging Practices
----
++++
+title = "Packaging Practices"
++++
 # Packaging Practices
 
 The primary goal of `ypkg` is ease of maintenance. In order to do so we ensure packages in the binary repository adhere to a strict set of conventions and practices.

@@ -1,6 +1,6 @@
----
-title: Configuring Sound and Sound Devices
----
++++
+title = "Configuring Sound and Sound Devices"
++++
 # Configuring Sound and Sound Devices
 
 You can configure sound devices, change volume and enable / disable devices through two methods.

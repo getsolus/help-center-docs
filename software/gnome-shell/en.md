@@ -1,6 +1,6 @@
----
-title: Gnome Shell
----
++++
+title = "Gnome Shell"
++++
 # Gnome Shell
 
 Solus offers GNOME Shell as an alternative to the Budgie desktop environment. Below are installation instructions for installing GNOME Shell and necessary components:

@@ -1,6 +1,6 @@
----
-title: Third Party
----
++++
+title = "Third Party"
++++
 # Third Party
 
 The following applications are provided via our 3rd Party Repository to facilitate the installation and usage of them. These applications cannot be included in the primary repository due to licensing issues.

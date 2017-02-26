@@ -1,6 +1,6 @@
----
-title: Package.yml
----
++++
+title = "Package.yml"
++++
 # Package.yml
 
 All packages consist of a single build file, which provides all of the required metadata for the package manager, plus the build steps involved to produce a package. This follows the YAML specification.

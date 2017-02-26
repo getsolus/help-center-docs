@@ -1,6 +1,6 @@
----
-title: Requesting a Package
----
++++
+title = "Requesting a Package"
++++
 # Requesting A Package
 
 Packages are how users install Software in Solus, however if we are missing one you can let us know using our Task Tracker. 

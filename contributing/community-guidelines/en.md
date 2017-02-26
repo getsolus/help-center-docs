@@ -1,6 +1,6 @@
----
-title: Community Guidelines
----
++++
+title = "Community Guidelines"
++++
 # Community Guidelines
 
 The Solus Project enforces a set of community guidelines to maintain respect and professionalism, as well as a family-friendly environment.

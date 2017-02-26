@@ -1,6 +1,6 @@
----
-title: Package Inclusion Policy
----
++++
+title = "Package Inclusion Policy"
++++
 # Package Inclusion Policy
 
 This policy sets forth the criteria for a package to be accepted for inclusion into the Solus repositories.

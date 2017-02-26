@@ -1,6 +1,6 @@
----
-title: Wireless Chipsets Compatibility
----
++++
+title = "Wireless Chipsets Compatibility"
++++
 # Wireless Chipsets Compatibility
 
 The following wireless chipsets have been tested and/or suggested to function correctly by our users. This list should not suggest that **only*- such devices listed below are compatible with Solus, as there may be devices not listed below that are in 

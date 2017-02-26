@@ -1,6 +1,6 @@
----
-title: Changing Background
----
++++
+title = "Changing Background"
++++
 # Changing Background
 
 You can change your background by going to the Budgie Menu, opening Settings, then clicking Background.

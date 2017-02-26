@@ -1,6 +1,6 @@
----
-title: Java
----
++++
+title = "Java"
++++
 # Java
 
 This article covers obtaining open source Java as well as Oracle Java.

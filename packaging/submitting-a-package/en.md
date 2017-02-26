@@ -1,6 +1,6 @@
----
-title: Submitting the Package
----
++++
+title = "Submitting the Package"
++++
 # Submitting the Package
 
 This article will walk you through submitting a patch for a package for review and inclusion in the Solus repository.

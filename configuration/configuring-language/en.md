@@ -1,6 +1,6 @@
----
-title: Configuring Language
----
++++
+title = "Configuring Language"
++++
 # Configuring Language
 
 You can change your language by going to the Budgie Menu, opening Settings, then clicking Region and Language.
