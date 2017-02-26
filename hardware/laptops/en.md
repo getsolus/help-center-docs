@@ -136,6 +136,7 @@ below that are in fact compatible.
 
 - Samsung NP270E5E-X02PL
 - Samsung NP300E4C-AD5BR
+- Samsung NP355E5C
 - Samsung NP365E5C-S04US
 - Samsung NP900X3G
 - Samsung NP900X4C-AU05
@@ -160,6 +161,7 @@ below that are in fact compatible.
 - Toshiba Qosmio X875
 - Toshiba Satellite A660
 - Toshiba Satellite C50D-A-125
+- Toshiba Satellite C55D
 - Toshiba Satellite C640
 - Toshiba Satellite C665D
 - Toshiba Satellite L300D
