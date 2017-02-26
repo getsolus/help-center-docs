@@ -48,7 +48,7 @@ For example:
 sudo eopkg remove gnome-documents gnome-music
 ```
 
-### Get Information on Software
+## Get Information on Software
 
 You can get information on software, such as its description, version, installation size, and more, by using
 
