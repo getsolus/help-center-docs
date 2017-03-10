@@ -28,7 +28,7 @@ Now, download the [Guest Additions](http://download.virtualbox.org/virtualbox/) 
 
 **Note:** For each kernel update you will need to rebuild the Virtualbox Modules. So simply remount the ISO and run the instructions again.
 
-## Clipboard Sharing, Copy&Paste, Drag&Drop
+### Clipboard Sharing, Copy&Paste, Drag&Drop
 
 By default, the virtualbox modules for those virtualbox features are not loaded/enabled, therefore the features simply do not work if selected in the Guest.
 If you want that this features to work properly automatically, without starting the corresponding VBoxClient yourself, you can use xdg to autostart VBoxClient enabling the features.
@@ -97,13 +97,13 @@ X-KDE-autostart-after=panel
 
 ## Solus as Host
 
-Download the latest [VirtualBox Installer](https://www.virtualbox.org/wiki/Linux_Downloads) - [direct link](http://download.virtualbox.org/virtualbox/5.1.12/VirtualBox-5.1.14-112924-Linux_amd64.run) (5.1.14) right click link and Save As.
+Download the latest [VirtualBox Installer](https://www.virtualbox.org/wiki/Linux_Downloads) - [direct link](http://download.virtualbox.org/virtualbox/5.1.16/VirtualBox-5.1.16-113841-Linux_amd64.run) (5.1.16) right click link and Save As.
 Now install the dependencies and VirtualBox like so:
 
 ``` bash
 sudo eopkg it -c system.devel
 sudo eopkg it kernel-headers
-sudo sh ~/Downloads/VirtualBox-5.1.14-112924-Linux_amd64.run
+sudo sh ~/Downloads/VirtualBox-5.1.16-113841-Linux_amd64.run
 ```
 
 Replace version number of file with the one you download.
