@@ -13,6 +13,7 @@ This file lives in the `.solus` folder of your home directory. You will need to 
 file so that the packager details are stored within the resulting binary package.
 
 ``` ini
+[Packager]
 Name=Your Name Here
 Email=your.email@address
 ```
