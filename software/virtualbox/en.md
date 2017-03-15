@@ -11,7 +11,7 @@ Make sure you have the necessary packages installed:
 
 ``` bash
 sudo eopkg upgrade
-sudo eopkg install gcc make autoconf binutils kernel-headers xorg-server-devel isl isl-devel
+sudo eopkg install gcc make autoconf binutils kernel-headers xorg-server-devel
 ```
 
 Reboot your system first so that it's all up to date.
