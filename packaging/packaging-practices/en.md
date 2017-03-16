@@ -137,7 +137,7 @@ This is an example of installing a custom profile file, seen in the `bash` packa
 install -m 0644 $pkgfiles/profile $installdir/etc/profile
 ```
 
-### Build dependencies 
+## Build dependencies 
 
 Most software packages that you build will in one way or another, depend on another software package to provide specific functionality. This is usually achieved by using a library.
 
@@ -154,7 +154,7 @@ the package providing that dependency, you simply list the same name. Any packag
 A secondary advantage is that this allows for easily switching or replacing a providing package. When no `pkgconfig` name is available (some packages do not provide these, or it doesn’t make sense for them to), you 
 may use the explicit package name. Always ensure you select the correct package, i.e. the `-devel` subpackage. This provides the necessary symlinks and headers to build packages.
 
-#### Using pkgconfig dependencies 
+### Using pkgconfig dependencies 
 
 In the `builddeps` list, simply use the `pkgconfig(name)` syntax. For example, to add gtk+-3.0 to the build dependencies, we would do the following:
 
