@@ -122,8 +122,8 @@ Macro | Description
 Macro | Description
 ---- | ----
 **%meson_configure** | Runs meson with our CFLAGS and appropriate flags such as libdir.
-**%meson_build** | Runs ninja and passes our %JOBS% variable.
-**%meson_install** | Runs meson install and passed the appropriate DESTDIR and %JOBS% variable
+**%meson_build** | Runs ninja and passes our `%JOBS%` variable.
+**%meson_install** | Runs meson install and passed the appropriate `DESTDIR` and `%JOBS%` variable
 
 ### Perl Actionable Macros 
 
@@ -154,7 +154,7 @@ Macro | Description
 Macro | Description
 ---- | ----
 **%ARCH%** | Indicates the current build architecture.
-**%CONFOPTS%** | Flags / options for configuration, such as `--prefix=/usr`. [Full List.](https://github.com/solus-project/ypkg/blob/master/ypkg2/rc.yml#L74)
+**%CONFOPTS%** | Flags / options for configuration, such as `--prefix=/usr`. [Full List.](https://github.com/solus-project/ypkg/blob/master/ypkg2/rc.yml#L117)
 **%CFLAGS%** | cflags as set in `eopkg.conf`
 **%CXXFLAGS%** | cxxflags as set in `eopkg.conf`
 **%LDFLAGS%** | ldflags as set in `eopkg.conf`
@@ -171,7 +171,7 @@ A set of variables are exported in our build stages. These are used to provide c
 
 Variable | Description
 ---- | ----
-**$CFLAGS** | cflags as set in eopkg.conf
+**$CFLAGS** | cflags as set in `eopkg.conf`
 **$CXXFLAGS** | cxxflags as set in `eopkg.conf`
 **$LDFLAGS** | ldflags as set in `eopkg.conf`
 **$CC** | C compiler
