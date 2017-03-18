@@ -24,4 +24,8 @@ you are enabling Solus to install onto the entire disk.
 To create an EFI System Partition, open up GParted and create a FAT32 partition that is 512MB in size. Next, right-click on the partition and click 
 Manage Flags. On the Manage Flags section, enable the `boot` and `esp` flags.
 
-Note: Your disk is also required to be GPT formatted.
+**Notes:**
+
+- Your system must be booted using UEFI mode, as opposed to a "legacy mode".
+- Secure Boot needs to be disabled.
+- Your disk is required to be GPT formatted.
