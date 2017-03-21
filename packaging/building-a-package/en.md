@@ -62,8 +62,8 @@ Your folder should look something similar to this:
 | common/
 | your-package/
 | - Makefile
+| Makefile
 | Makefile.common
-| Makefile.toplevel
 | Makefile.iso
 ```
 
