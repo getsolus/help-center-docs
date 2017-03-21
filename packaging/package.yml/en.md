@@ -16,17 +16,16 @@ with a predefined environment.
 An example file follows:
 
 ``` yaml
-name        : nano
-version     : 2.5.1
-release     : 39
-source      :
+name       : nano
+version    : 2.5.1
+release    : 39
+source     :
     - http://www.nano-editor.org/dist/v2.5/nano-2.5.1.tar.gz : e06fca01bf183f4d531aa65a28dffc0e2d10185239909eb3de797023f3453bde
-license     :
-    - GPL-3.0
-component   : editor
-summary     : Small, friendly text editor inspired by Pico
-description : |
-    GNU nano is an easy-to-use text editor originally designed as a replacement for 
+license    : GPL-3.0
+component  : editor
+summary    : Small, friendly text editor inspired by Pico
+description: |
+    GNU nano is an easy-to-use text editor originally designed as a replacement for
     Pico, the ncurses-based editor from the non-free mailer package Pine.
 setup      : |
     %configure --enable-utf8 --docdir=/usr/share/doc/nano
