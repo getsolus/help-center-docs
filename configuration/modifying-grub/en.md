@@ -45,4 +45,4 @@ mount --bind /sys /target/sys
 ```
 
 6. Assuming all goes well, you should be able to do: `chroot /target`
-7. Once in the chroot, run `sudo update-grub`.
+7. Once in the chroot, run `sudo clr-boot-manager update`.
