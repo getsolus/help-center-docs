@@ -11,7 +11,7 @@ Make sure you have the necessary packages installed:
 
 ``` bash
 sudo eopkg upgrade
-sudo eopkg install gcc make autoconf binutils kernel-headers xorg-server-devel
+sudo eopkg install gcc make autoconf binutils linux-lts-headers xorg-server-devel
 ```
 
 Reboot your system first so that it's all up to date.
@@ -102,7 +102,7 @@ Now install the dependencies and VirtualBox like so:
 
 ``` bash
 sudo eopkg it -c system.devel
-sudo eopkg it kernel-headers
+sudo eopkg it linux-lts-headers
 sudo sh ~/Downloads/VirtualBox-5.1.16-113841-Linux_amd64.run
 ```
 
