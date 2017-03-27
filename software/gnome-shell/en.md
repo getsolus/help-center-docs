@@ -10,7 +10,7 @@ Solus offers GNOME Shell as an alternative to the Budgie desktop environment. Be
 Switch to TTY1 (Ctrl Alt F1) and login.
 
 ``` bash
-sudo eopkg install gdm gnome-shell gnome-shell-extensions
+sudo eopkg install gdm gnome-shell gnome-shell-extensions chrome-gnome-shell
 ```
 
 You must also disable lightdm and enable gdm
