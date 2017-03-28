@@ -45,16 +45,11 @@ Your output may look something similiar to:
 
 ``` bash
 Device       Size Type
-/dev/sda1    450M Windows recovery environment
-/dev/sda2     99M EFI System
-/dev/sda3     16M Microsoft reserved
-/dev/sda4  136.1G Microsoft basic data
-/dev/sda5    7.8G Linux swap
-/dev/sda6   78.6G Linux filesystem
-/dev/sda7    537M EFI System
+/dev/sda1    512M EFI System
+/dev/sda2  111.3G Linux filesystem
 ```
 
-Notice we have `/dev/sda7` as the Device with the `EFI System` type and roughly 500mb in size. This is the partition we will be mounting.
+Notice we have `/dev/sda1` as the Device with the `EFI System` type and roughly 500mb in size. This is the partition we will be mounting.
 
 With our ESP device known, let's go ahead and mount it, replacing `sdX#` in the case below with our partition.
 
