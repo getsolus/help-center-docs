@@ -35,7 +35,7 @@ Whether you're using GRUB or UEFI, you will need to mount your Solus root (`/`) 
 
 #### UEFI
 
-If your system uses UEFI as opposed to GRUB, you will also need to mount your EFI System Partition, otherwise referred to as ESP. If you followed our [UEFI guide](/articles/installation/disks) during installation of Solus, then in all likelihood your ESP will be about 500mb in size. If you're unsure of the partition, run the following, replacing X with the same letter during your mounting of your root file system, minus the number:
+If your system uses UEFI as opposed to GRUB, you will also need to mount your EFI System Partition, otherwise referred to as ESP. If you followed our [UEFI guide](/articles/installation/disks/en/) during installation of Solus, then in all likelihood your ESP will be about 500mb in size. If you're unsure of the partition, run the following, replacing X with the same letter during your mounting of your root file system, minus the number:
 
 ```bash
 fdisk -o Device,Size,Type -l /dev/sdX
