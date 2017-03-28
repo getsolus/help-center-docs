@@ -1,6 +1,6 @@
 +++
 title = "Boot Rescue"
-aliases = ["/articles/configuration/modifying-grub/"]
+aliases = ["/articles/configuration/modifying-grub/en/"]
 +++
 # Boot Rescue
 
