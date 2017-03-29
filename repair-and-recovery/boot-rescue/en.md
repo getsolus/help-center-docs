@@ -54,7 +54,7 @@ Notice we have `/dev/sda1` as the Device with the `EFI System` type and roughly 
 With our ESP device known, let's go ahead and mount it, replacing `sdX#` in the case below with our partition.
 
 ``` bash
-mount /dev/sdX# /target/boot/efi
+mount /dev/sdX# /target/boot
 ```
 
 ### Chrooting to your Solus system
