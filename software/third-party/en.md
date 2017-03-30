@@ -62,13 +62,6 @@ sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/solus-project/3r
 sudo eopkg it slack-desktop*.eopkg;sudo rm slack-desktop*.eopkg
 ```
 
-### Teamspeak 3
-
-``` bash
-sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/solus-project/3rd-party/master/network/im/teamspeak/pspec.xml
-sudo eopkg it teamspeak3*.eopkg;sudo rm teamspeak3*.eopkg
-```
-
 ### Viber
 
 ``` bash
