@@ -48,7 +48,7 @@ sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/solus-project/3r
 sudo eopkg it google-talkplugin*.eopkg;sudo rm google-talkplugin*.eopkg
 ```
 
-### Skype for Linux (Alpha)
+### Skype for Linux
 
 ``` bash
 sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/solus-project/3rd-party/master/network/im/skype/pspec.xml
