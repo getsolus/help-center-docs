@@ -67,9 +67,11 @@ Your folder should look something similar to this:
 | Makefile.iso
 ```
 
+You should now restart your system prior to building any packages.
+
 ## Building packages (Solus only)
 
-After setting up common, you can now build the package. Note that build dependencies and such will be installed locally (in the chroot environment).
+After setting up common and restarting your system, you can now build the package. Note that build dependencies and such will be installed locally (in the chroot environment).
 
 ``` bash
 make
