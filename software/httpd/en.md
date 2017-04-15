@@ -1,11 +1,11 @@
 +++
-title = "Apache (httpd)"
+title = "httpd (Apache)"
 +++
-# Apache (httpd) Web Server
+# httpd (Apache)
 
-Solus provides httpd for web developers to test locally before uploading their work. Below are installation instructions for installing httpd:
+Solus provides httpd (otherwise referred to as Apache) web server for web developers to test locally before uploading their work.
 
-## Install
+## Installation
 
 httpd can be installed either from the Software Center or via terminal:
 
@@ -13,12 +13,20 @@ httpd can be installed either from the Software Center or via terminal:
 sudo eopkg install httpd
 ```
 
-Configuration must be copied from /usr/share/defaults/httpd/httpd.conf into /etc/ and then edited to your liking. The default location for www documents in /var/www/
+## Usage
 
-Commands for managing the httpd via systemd systemctl:
+### Configuration and DocumentRoot
+
+As we supply a default vendor configuration in `/usr/share/defaults/httpd/`, to make modifications to httpd's configuration, you must first copy `/usr/share/defaults/httpd/httpd.conf` to `/etc/`, and make modifications to the file in `/etc/`
+
+By default, httpd's DocumentRoot is set to `/var/www/`, thus files you desire to be accessible via your httpd server must be copied to that location.
+
+### Management
+
+Managing httpd is done via systemd, using the following commands:
 
 ``` bash
-sudo systemctl enable httpd # enable on startup
-sudo systemctl start httpd # start the web server
-sudo systemctl stop httpd # stop the web server
+sudo systemctl enable httpd # Enable on startup
+sudo systemctl start httpd # Start the web server
+sudo systemctl stop httpd # Stop the web server
 ```
