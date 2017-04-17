@@ -109,7 +109,7 @@ If it is **not** in your Downloads folder, use `cd` to navigate to the correct s
 This is where we overwrite the contents of your USB drive so please ensure you identified the current drive in lsblk stage above. My command is below, however you may need to replace sdb with the drive we located above:
 
 ``` bash
-sudo dd if=Solus-2017.04.17.0.iso of=/dev/sdb bs=1M;sudo sync;sudo eject /dev/sdb
+sudo dd if=Solus-2017.04.18.0.iso of=/dev/sdb bs=1M;sudo sync;sudo eject /dev/sdb
 ```
 
 This will write the contents of the ISO to the thumb drive so you can boot it and also make sure the data is synchronised so you can eject the USB safely.
