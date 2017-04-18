@@ -9,5 +9,5 @@ Solus offers GNOME Shell as an alternative to the Budgie desktop environment. Be
 
 ``` bash
 sudo eopkg rm lightdm
-sudo eopkg install gdm gnome-shell gnome-shell-extensions
+sudo eopkg install gdm gnome-shell gnome-desktop-branding
 ```
