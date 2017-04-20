@@ -49,4 +49,4 @@ You can communicate with developers or others in the community by using one of t
 
 ## Translations
 
-Assistance is always welcome in translating Budgie Desktop to other languages, this is all done via our [Transifex](https://www.transifex.com/budgie-desktop/budgie-desktop/) page.
+Assistance is always welcome in translating [Budgie Desktop](https://www.transifex.com/budgie-desktop/budgie-desktop/) and other [Solus applications](https://www.transifex.com/solus-project/public/) to other languages.
