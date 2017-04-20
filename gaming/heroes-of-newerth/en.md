@@ -8,7 +8,7 @@ First, install the latest version of HoN by downloading it and running "HoNClien
 Assuming that you install to ~/HoN (default), you only need to run two commands:
 
 ``` bash
-sudo eopkg it gconf libgcrypt11
+sudo eopkg it gconf libgcrypt11 libglu
 ```
 
 That installs all of the dependencies that HoN needs.
