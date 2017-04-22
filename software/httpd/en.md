@@ -17,7 +17,7 @@ sudo eopkg install httpd
 
 ### Configuration and DocumentRoot
 
-As we supply a default vendor configuration in `/usr/share/defaults/httpd/`, to make modifications to httpd's configuration, you must first copy `/usr/share/defaults/httpd/httpd.conf` to `/etc/`, and make modifications to the file in `/etc/`
+As we supply a default vendor configuration in `/usr/share/defaults/httpd/`, to make modifications to httpd's configuration, you must first create the directory `/etc/httpd/conf.d/`, copy `/usr/share/defaults/httpd/httpd.conf` to `/etc/httpd/conf.d/httpd.conf`, and make modifications to the file in `/etc/httpd/`. If you modify the default vendor configuration instead it will be overwritten with the next update.
 
 By default, httpd's DocumentRoot is set to `/var/www/`, thus files you desire to be accessible via your httpd server must be copied to that location.
 
