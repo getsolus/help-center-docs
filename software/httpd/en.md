@@ -17,7 +17,11 @@ sudo eopkg install httpd
 
 ### Configuration and DocumentRoot
 
-As we supply a default vendor configuration in `/usr/share/defaults/httpd/`, to make modifications to httpd's configuration, you must first create the directory `/etc/httpd/conf.d/` and create your own *.conf files, which will overwrite the default configuration. If you modify the default vendor configuration instead it will be overwritten with the next update.
+Unlike most other operating systems, the httpd provided in Solus is [stateless](https://clearlinux.org/features/stateless), enabling us to provide out-of-the-box vendor configuration via `/usr/share/defaults/httpd/`, while still enabling the system administrator (*or a user with the appropriate permissions*) to override the vendor configuration via the system-wide configuration location, `/etc`.
+
+Therefore, to make modifications to httpd's configuration, you must first create the directories `/etc/httpd/conf.d/` and create your own *.conf files, which will override the vendor-provided configuration files. 
+
+**Note:** Modification of the **vendor** configuration files may result in your changes being overwritten during the next update to httpd.
 
 By default, httpd's DocumentRoot is set to `/var/www/`, thus files you desire to be accessible via your httpd server must be copied to that location.
 
