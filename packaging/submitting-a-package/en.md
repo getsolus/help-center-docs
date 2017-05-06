@@ -102,8 +102,12 @@ before, but this time run:
 git commit --amend
 ```
 
-This will amend your original changes, and you can submit the patch once more with `arc diff`. The web UI will
-automatically update with the latest patch, without having to create any new tasks. Once accepted, your patch
+This will amend your original changes, and you can submit the patch once more with `arc diff`.
+A new editor session will open, where you can provide details about the changes you've made between the last
+revision and the newly amended one. This comment will help reviewers to see what you've changed, to streamline
+the process of getting your patch into Solus.
+
+The web UI will automatically update with the latest patch, without having to create any new tasks. Once accepted, your patch
 will be merged, and a build will be issued.
 
 
