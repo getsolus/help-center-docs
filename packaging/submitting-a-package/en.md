@@ -5,14 +5,107 @@ title = "Submitting the Package"
 
 This article will walk you through submitting a patch for a package for review and inclusion in the Solus repository.
 
-When sending patches to include your package in our repo, note that we do not accept binary files. We will need the `package.yml`, the `pspec_*.xml`, the `Makefile`, any ABI files generated, as well as the 
-`files/` directory if applicable included within the patch. These patches are required to be [git format patches](https://git-scm.com/docs/git-format-patch) and submitted to the Patch Submissions Tag, in 
-Maniphest, on our [Developer Portal](https://dev.solus-project.com).
+When contributing patches to Solus, please note that we do not accept the upload of binary files (i.e. `.eopkg`).
+All repository packages are built by a dedicated build server, from the source files provided in your patch upload.
 
-To generate a patch, first ensure your package directory is a git repo by running `git init`. Next, use `git add filename` to add files, where filename is, for example, the package.yml. Next, do `git commit` and 
-write an appropriate commit message, such as "Initial commit of packagename".
+At minimum, your patch will include changes for the following:
 
-Once a git commit is made, use `git format-patch -n1` to create a .patch file.
+ * `package.yml`
+ * `pspec_*.xml`
+
+If any additional files were required for the build, then you must also include the `files/` directory.
+If you are creating a new package, you will also need to include a `Makefile` containing the following text:
+
+```
+include ../Makefile.common
+```
+
+Lastly, many package builds may result in the generation of an ABI report. These files start with `abi_*` and must also
+be included, as they allow simple tracking of changes to symbols and dependencies.
+
+For all patch submissions you must be using the `arcanist` utility to communicate with the [Solus Developer Portal](https://dev.solus-project.com/)
+
+## Setting up Arcanist
+
+In three easy steps, you can set up arcanist for the first time:
+
+```
+sudo eopkg it arcanist
+arc set-config default https://dev.solus-project.com
+arc install-certificate
+```
+
+On the third step you will be given a unique link to log into the Developer Portal, to create a `Conduit API Token`. This
+token will be used to allow the CLI `arc` utility to communicate with Phabricator.
+
+
+## Creating the patch
+
+For every file you change or add, you must let git know about them:
+
+```
+git add someFile
+```
+
+For files that must be removed, you must do so using git:
+
+```
+git rm someFile
+```
+
+Likewise, for renaming a file, you must do so via git:
+
+```
+git mv someFile someFileName2
+```
+
+Once you're happy with your change, and you have verified locally that it works by having first built and
+installed it, it's time to commit your changes.
+
+```
+git commit
+```
+
+Make sure you provide a meaningful summary and a separate body to your commit message. For more information
+on suitable commit messages, please check the [tooling central documentation](https://github.com/solus-project/tooling-central/blob/master/README.rst#using-git).
+
+If you want to link this patch to an issue on the Developer portal, simply mention it in your commit message:
+
+```
+The inclusion of <somepackage> fixes T1234
+```
+
+
+If you need a change to depend on another change, mention it in the commit message too:
+
+```
+Depends on D5
+```
+
+Now you have your git commit, it's time to send it to us for review. Using the CLI again, simply issue:
+
+```
+arc diff
+```
+
+A new editor session will open, where you can provide optional details. Note that the default reviewer will
+be assigned after you submit, so it is not necessary to specify anyone here. Once you're finished, save and
+exit the editor (`CTRL+O` + `CTRL+X` for nano), and the patch will then be uploaded. You'll be presented
+with the Differential URL, and a review will happen as soon as possible.
+
+## Fixing a patch that needs changes
+
+That's easy. Don't make a new commit, just make any relevant changes to your local tree, adding + removing as
+before, but this time run:
+
+```
+git commit --amend
+```
+
+This will amend your original changes, and you can submit the patch once more with `arc diff`. The web UI will
+automatically update with the latest patch, without having to create any new tasks. Once accepted, your patch
+will be merged, and a build will be issued.
+
 
 ## Maintainership
 
