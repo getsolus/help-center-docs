@@ -5,7 +5,7 @@ title = "Updating an Existing Package"
 
 This article will go over updating a package that is already in the Solus git repository.
 
-The instructions below assume you have cloned the package's repository using the http link provided on the respective git page, [for example nano](https://git.solus-project.com/packages/nano). The process for submitting an updated package is the same as if it is a new package. Follow the steps [here](/articles/packaging/submitting-a-package/en).
+The instructions below assume you have cloned the package's repository using the http link provided on the respective git page, [for example nano](https://dev.solus-project.com/source/nano/). The process for submitting an updated package is the same as if it is a new package. Follow the steps [here](/articles/packaging/submitting-a-package/en).
 
 ## Bumping a packaging
 
