@@ -93,7 +93,9 @@ be assigned after you submit, so it is not necessary to specify anyone here. Onc
 exit the editor (`CTRL+O` + `CTRL+X` for nano), and the patch will then be uploaded. You'll be presented
 with the Differential URL, and a review will happen as soon as possible.
 
-## Fixing a patch that needs changes
+## Updating a patch that needs changes
+
+### Updating files
 
 That's easy. Don't make a new commit, just make any relevant changes to your local tree, adding + removing as
 before, but this time run:
@@ -109,6 +111,15 @@ the process of getting your patch into Solus.
 
 The web UI will automatically update with the latest patch, without having to create any new tasks. Once accepted, your patch
 will be merged, and a build will be issued.
+
+### Updating Task Information
+
+If you forgot information such as a test plan, you can run resolve this by:
+
+1. Running `arc diff --edit`. This will open up an editor session, where you can edit the information.
+2. Next, you will see an editor session for updating the commit message. You can choose a new one or opt for the same one.
+
+After this editor session, the updated patch will be automatically uploaded, the web UI will automatically update, and no new tasks will be created.
 
 
 ## Maintainership
