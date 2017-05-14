@@ -29,7 +29,7 @@ For all patch submissions you must be using the `arcanist` utility to communicat
 
 In three easy steps, you can set up arcanist for the first time:
 
-```
+``` bash
 sudo eopkg it arcanist
 arc set-config default https://dev.solus-project.com
 arc install-certificate
@@ -41,68 +41,31 @@ token will be used to allow the CLI `arc` utility to communicate with Phabricato
 
 ## Creating the patch
 
-For every file you change or add, you must let git know about them:
+For every file you change or add, you must let git know about them: `git add someFile`
 
-```
-git add someFile
-```
+For files that must be removed, you must do so using git: `git rm someFile`
 
-For files that must be removed, you must do so using git:
-
-```
-git rm someFile
-```
-
-Likewise, for renaming a file, you must do so via git:
-
-```
-git mv someFile someFileName2
-```
+Likewise, for renaming a file, you must do so via git: `git mv someFile someFileName2`
 
 Once you're happy with your change, and you have verified locally that it works by having first built and
-installed it, it's time to commit your changes.
-
-```
-git commit
-```
+installed it, it's time to commit your changes with `git commit`.
 
 Make sure you provide a meaningful summary and a separate body to your commit message. For more information
 on suitable commit messages, please check the [tooling central documentation](https://github.com/solus-project/tooling-central/blob/master/README.rst#using-git).
 
-If you want to link this patch to an issue on the Developer portal, simply mention it in your commit message:
+- If you want to link this patch to an issue on the Developer portal, simply mention it in your commit message: `The inclusion of <somepackage> fixes T1234`
+- If you need a change to depend on another change, mention it in the commit message too: `Depends on D5`
 
-```
-The inclusion of <somepackage> fixes T1234
-```
+Now you have your git commit, it's time to send it to us for review. Using the CLI again, simply issue: `arc diff`
 
-
-If you need a change to depend on another change, mention it in the commit message too:
-
-```
-Depends on D5
-```
-
-Now you have your git commit, it's time to send it to us for review. Using the CLI again, simply issue:
-
-```
-arc diff
-```
-
-A new editor session will open, where you can provide optional details. Note that the default reviewer will
-be assigned after you submit, so it is not necessary to specify anyone here. Once you're finished, save and
-exit the editor (`CTRL+O` + `CTRL+X` for nano), and the patch will then be uploaded. You'll be presented
-with the Differential URL, and a review will happen as soon as possible.
+A new editor session will open, where you can provide optional details. Note that the default reviewer will be assigned after you submit, so it is not necessary to specify anyone here. Once you're finished, save and exit the editor (`CTRL+O` + `CTRL+X` for nano), and the patch will then be uploaded. You'll be presented with the Differential URL, and a review will happen as soon as possible.
 
 ## Updating a patch that needs changes
 
 ### Updating files
 
 That's easy. Don't make a new commit, just make any relevant changes to your local tree, adding + removing as
-before, but this time run:
-
-```
-git commit --amend
-```
+before, but this time run: `git commit --amend`
 
 This will amend your original changes, and you can submit the patch once more with `arc diff`.
 A new editor session will open, where you can provide details about the changes you've made between the last
