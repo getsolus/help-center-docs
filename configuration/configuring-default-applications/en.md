@@ -9,7 +9,7 @@ Upon entering the Details section, go to Default Applications.
 
 {{< altimg "configuring-default-applications.jpg" "help-center/configuration/configuring-default-applications/" >}}
 
-*Note: In the image above, we've changed the Music player and Video player.*
+*Note: In the image above, we've changed the Web browser and Photo viewer.*
 
 You can change default applications for:
 

@@ -11,11 +11,11 @@ You may view community guidelines [here](/articles/contributing/community-guidel
 
 ## Community Forums
 
-With so many new users joining, there are always more people needing help. A great way to help us out, would be to help out our users on the [Solus Project Forums](https://solus-project.com/forums/)
+With so many new users joining, there are always more people needing help. A great way to help us out, would be to help out our users on the [Solus Project Forums](https://solus-project.com/forums/).
 
 ## Improving Documentation
 
-Our Help Center improves when the documentation improves. If there is articles that you think would be valuable to add, get involved by submitting pull requests to our [Help Center Docs](https://github.com/solus-project/help-center-docs) repo!
+Our Help Center improves when the documentation improves. If there are articles that you think would be valuable to add, get involved by submitting pull requests to our [Help Center Docs](https://github.com/solus-project/help-center-docs) repo!
 
 ## IRC
 
