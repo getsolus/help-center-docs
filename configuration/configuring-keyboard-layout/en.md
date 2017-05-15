@@ -19,6 +19,6 @@ After choosing the keyboard layout, click Done. You will be brought back to the 
 
 {{< altimg "region-and-languages-newlang.jpg" "help-center/configuration/configuring-keyboard-layout/" >}}
 
-You can remove a keyboard layout by click on one of the items, for instance Swedish, then clicking the `-` button.
+You can remove a keyboard layout by clicking on one of the items, for instance Swedish, then clicking the `-` button.
 
-If you wish to use multiple keyboard layouts, you can switch to them by using: `Windows key + Space` or by adding the Keyboard Layout Indicator applet to your Budgie panel.
+If you wish to use multiple keyboard layouts, you can switch between them by using: `Windows key + Space` or by adding the Keyboard Layout Indicator applet to your Budgie panel.

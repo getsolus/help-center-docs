@@ -26,12 +26,12 @@ Now, download the [Guest Additions](http://download.virtualbox.org/virtualbox/) 
  sudo reboot
 ```
 
-**Note:** For each kernel update you will need to rebuild the Virtualbox Modules. So simply remount the ISO and run the instructions again.
+**Note:** For each kernel update you will need to rebuild the VirtualBox Modules. So simply remount the ISO and run the instructions again.
 
 ### Clipboard Sharing, Copy&Paste, Drag&Drop
 
-By default, the virtualbox modules for those virtualbox features are not loaded/enabled, therefore the features simply do not work if selected in the Guest.
-If you want that this features to work properly automatically, without starting the corresponding VBoxClient yourself, you can use xdg to autostart VBoxClient enabling the features.
+By default, the VirtualBox modules for those VirtualBox features are not loaded/enabled, therefore the features simply do not work if selected in the Guest.
+If you want that these features do work properly automatically, without starting the corresponding VBoxClient yourself, you can use xdg to autostart VBoxClient thus enabling the features.
 
 /usr/bin/VBoxClient-all:
 ``` bash
@@ -106,4 +106,4 @@ sudo eopkg it linux-lts-headers
 sudo sh ~/Downloads/VirtualBox-5.1.22-115126-Linux_amd64.run
 ```
 
-Replace version number of file with the one you download.
+Replace the version number of the file with the one you downloaded.
