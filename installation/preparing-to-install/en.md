@@ -153,7 +153,7 @@ This will write the contents of the ISO to the thumb drive so you can boot it an
 
 #### DVD
 
-Since OS X El Capitan (10.11), the easiest way to burn a DVD is - 
+Since OS X El Capitan (10.11), the easiest way to burn a DVD is:
 
 1. Insert your DVD and open Finder.
 2. Right click on the ISO image.
@@ -170,7 +170,7 @@ Since OS X El Capitan (10.11), the easiest way to burn a DVD is -
 2. Click on “Select image” and then select the ISO and click “Open”.
 3. Etcher will automatically select your USB drive. If it has selected the wrong one, click “Change” and select the correct one.
 4. Click “Flash!”.
-5. You may be prompted for your macOS user password. 
+5. You may be prompted for your macOS user password.
 
 {{< altimg "mac-etcher.jpg" "help-center/installation/preparing-to-install/" >}}
 
@@ -206,13 +206,13 @@ You should see output similar to this -
 
 From this output, we can see the USB drive is listed as - `/dev/disk1 (external, physical)`.  In this example, the IDENTIFIER is `disk1`.  Please note, your USB drive may have a different identifier.  You should be able to tell which is your USB drive by checking the name and size.
 
-3. macOS usually auto-mounts USB drives so you’ll need to unmount it first before proceeding.  Use the following command and replace `IDENTIFIER` with the correct identifier we found in step 2.  
+3. macOS usually auto-mounts USB drives so you’ll need to unmount it first before proceeding.  Use the following command and replace `IDENTIFIER` with the correct identifier we found in step 2.
 
 ``` bash
 diskutil unmountDisk /dev/IDENTIFIER
 ```
 
-4. Now navigate to the folder that has the downloaded ISO.  This could be your Mac’s Downloads folder.  The following command will get you there -
+4. Now navigate to the folder that has the downloaded ISO.  This could be your Mac’s Downloads folder.  The following command will get you there:
 
 ``` bash
 cd ~/Downloads
@@ -238,4 +238,4 @@ Now it is time to restart your computer to boot the DVD or USB. Most computers w
 
 This is usually accessible by pressing `F9` or `F12` while your computer is booting. On some devices it may also be `ESC`.
 
-Macs will boot to the "Startup Manager" by holding down the Option (Alt) key. The DVD or USB drive will most likely show up as "EFI Boot".  
+Macs will boot to the "Startup Manager" by holding down the Option (Alt) key. The DVD or USB drive will most likely show up as "EFI Boot".

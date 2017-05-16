@@ -20,8 +20,7 @@ You can further check by:
 2. Rebooting.
 3. Running the following command: `sudo ideviceinfo -q com.apple.mobile.iTunes -k DBVersion` **while your iOS device is plugged in**.
 
-What this command does is query the device to obtain the version of its database. If the version is **greater than 4**, your device is not capable of synchronizing music and video. You may notice it appear in Files / Nautilus as 
-"Documents of DeviceName", however this typically only provides a limited set of data from applications.
+What this command does is query the device to obtain the version of its database. If the version is **greater than 4**, your device is not capable of synchronizing music and video. You may notice it appear in Files / Nautilus as "Documents of DeviceName", however this typically only provides a limited set of data from applications.
 
 ## Mounting in Nautilus 
 

@@ -1,7 +1,7 @@
 +++
 title = "Configuring Date and Time"
 +++
-# Configuring Date and time
+# Configuring Date and Time
 
 You can configure the date and time of your system by going to the Budgie Menu, opening the Settings app and then going to the Date & Time section.
 
