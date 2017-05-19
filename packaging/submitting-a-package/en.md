@@ -80,7 +80,7 @@ will be merged, and a build will be issued.
 If you forgot information such as a test plan, you can run resolve this by:
 
 1. Running `arc diff --edit`. This will open up an editor session, where you can edit the information.
-2. Next, you will see an editor session for updating the commit message. You can choose a new one or opt for the same one.
+2. Next, you will see an editor session for providing a message indicating the change, for example "Added a test plan."
 
 After this editor session, the updated patch will be automatically uploaded, the web UI will automatically update, and no new tasks will be created.
 

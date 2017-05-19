@@ -181,13 +181,13 @@ You may see a message stating “The disk you inserted was not readable by this 
 ##### Command Line
 
 1. First, insert the USB drive into your computer and open Terminal (found in Applications/Utilities).
-2. You need to identify your USB drive by listing your storage devices with the following command -
+2. You need to identify your USB drive by listing your storage devices with the following command:
 
 ``` bash
 diskutil list
 ```
 
-You should see output similar to this -
+You should see output similar to this:
 
 ``` bash
 /dev/disk0 (internal, physical):

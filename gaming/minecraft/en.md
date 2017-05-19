@@ -40,10 +40,10 @@ StartupNotify=false
 Terminal=false
 ```
 
-Now run the following command to regenerate the Budgie menu.
+### Budgie
+
+If you are using Budgie, it may be necessary to update the entries in Budgie Menu. You can do so with:
 
 ``` bash
 sudo update-desktop-database
 ```
-
-You now have a Minecraft entry in Budgie's menu.
