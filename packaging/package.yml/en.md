@@ -65,7 +65,8 @@ Key Name | Type | Description
 **autodep** | `bool` | Set to `no` to disable automatic binary dependency resolution at build time
 **emul32** | `bool` | Set to `yes` to enable an `-m32` build (32-bit libs)
 **libsplit** | `bool` | Set to `no` to disable splitting of libraries into `devel` sub-packages
-**rundeps** | `dict(s)` | Specify further runtime dependencies for the packages
+**builddeps** | `dict(s)` | Specify build dependencies for the package. You can learn more [here](/articles/packaging/packaging-practices/en/#build-dependencies).
+**rundeps** | `dict(s)` | Specify further runtime dependencies for the packages. You can learn more [here](/articles/packaging/packaging-practices/en/#runtime-dependencies).
 **replaces** | `dict(s)` | Replace one package with another, used when renaming or deprecating packages for clean upgrade paths
 **patterns** | `dict(s)` | Allows fine grained control over file placement within the package or sub-packages. Useful for packages that are development only (i.e. `/usr/bin` files)
 
