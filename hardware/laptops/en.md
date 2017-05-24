@@ -3,13 +3,12 @@ title = "Laptop Compatibility"
 +++
 # Laptop Compatibility
 
-The following laptops have been tested and/or suggested to function correctly by our users. This list should not suggest that *only* such devices listed below are compatible with Solus, as there may be devices not listed 
-below that are in fact compatible.
+The following laptops have been reported to function correctly by community members. This list should not suggest that *only*  devices listed below are compatible with Solus, as there may be devices not listed that are in fact compatible.
 
 ## Models
 
-### Acer
-
+<details>
+<summary>**Acer**</summary>
 - Acer Aspire 4830T
 - Acer Aspire 5750G
 - Acer Aspire 7551
@@ -21,18 +20,21 @@ below that are in fact compatible.
 - Acer Aspire V5-121
 - Acer C710 Chromebook
 - Acer C720-2848 Chromebook
+</details>
 
-### Alienware
-
+<details>
+<summary>**Alienware**</summary>
 - Alienware 14
+</details>
 
-### Apple
-
+<details>
+<summary>**Apple**</summary>
 - Apple Macbook (late 2008)
 - Apple MacBookPro8 3
+</details>
 
-### Asus
-
+<details>
+<summary>**Asus**</summary>
 - Asus EEE-PC 1001PX
 - Asus EEE-PC 1011PX
 - Asus G750JZA
@@ -48,9 +50,10 @@ below that are in fact compatible.
 - Asus X55
 - Asus X550LD
 - Asus X551CAP
+</details>
 
-### Dell
-
+<details>
+<summary>**Dell**</summary>
 - Dell Inspiron 1110
 - Dell Inspiron 14 3452
 - Dell Inspiron 15R N5010
@@ -69,13 +72,15 @@ below that are in fact compatible.
 - Dell Precision M6500
 - Dell Vostro 1700
 - Dell XPS 15 9560
+</details>
 
-### Google
-
+<details>
+<summary>**Google**</summary>
 - Google Chromebook CR48
+</details>
 
-### HP
-
+<details>
+<summary>**HP**</summary>
 - HP 240 G3
 - HP Compaq 6730B
 - HP Compaq Presario CQ61
@@ -92,9 +97,10 @@ below that are in fact compatible.
 - HP Pavilion DV7
 - HP Pavilion x360 Convertible
 - HP Presario V6000
+</details>
 
-### Lenovo
-
+<details>
+<summary>**Lenovo**</summary>
 - Lenovo 3000 V200
 - Lenovo B41-80
 - Lenovo B50-50
@@ -128,35 +134,41 @@ below that are in fact compatible.
 - Lenovo ThinkPad X61
 - Lenovo Yoga 2 11
 - Lenovo Z50-70
+</details>
 
-### MSI
-
+<details>
+<summary>**MSI**</summary>
 - MSI GE70
+</details>
 
-### Samsung
-
+<details>
+<summary>**Samsung**</summary>
 - Samsung NP270E5E-X02PL
 - Samsung NP300E4C-AD5BR
 - Samsung NP355E5C
 - Samsung NP365E5C-S04US
 - Samsung NP900X3G
 - Samsung NP900X4C-AU05
+</details>
 
-### Schenker
-
+<details>
+<summary>**Schenker**</summary>
 - Schenker XMG A506-VE
+</details>
 
-### Sony
-
+<details>
+<summary>**Sony**</summary>
 - Sony VAIO S Series 13
 - Sony VAIO VPCEC3M1E
+</details>
 
-### System 76
-
+<details>
+<summary>**System 76**</summary>
 - System 76 Gazelle Professional
+</details>
 
-### Toshiba
-
+<details>
+<summary>**Toshiba**</summary>
 - Toshiba Portege R930
 - Toshiba Qosmio X305
 - Toshiba Qosmio X875
@@ -170,3 +182,4 @@ below that are in fact compatible.
 - Toshiba Satellite L850-B218
 - Toshiba Satellite L855D
 - Toshiba Tecra A11
+</details>
