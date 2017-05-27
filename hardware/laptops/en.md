@@ -92,6 +92,7 @@ below that are in fact compatible.
 - HP Pavilion DV7
 - HP Pavilion x360 Convertible
 - HP Presario V6000
+- HP ProBook 6450b
 
 ### Lenovo
 
