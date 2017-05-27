@@ -18,12 +18,15 @@ An example file follows:
 ``` yaml
 name       : nano
 version    : 2.5.1
+# Release has nothing to do with upstream. It's just to know whether the package manager should upgrade so we can downgrade a version and increment release so that the package manager downgrades users if there are issues with a particular version.
 release    : 39
 source     :
     - http://www.nano-editor.org/dist/v2.5/nano-2.5.1.tar.gz : e06fca01bf183f4d531aa65a28dffc0e2d10185239909eb3de797023f3453bde
 license    : GPL-3.0
 component  : editor
 summary    : Small, friendly text editor inspired by Pico
+builddeps  :
+    - ncurses-devel
 description: |
     GNU nano is an easy-to-use text editor originally designed as a replacement for
     Pico, the ncurses-based editor from the non-free mailer package Pine.
