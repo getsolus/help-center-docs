@@ -81,6 +81,7 @@ below that are in fact compatible.
 - HP Compaq Presario CQ61
 - HP Compaq NC6400
 - HP EliteBook 8440P
+- HP EliteBook 8460p
 - HP EliteBook 8740w
 - HP EliteBook 8760w
 - HP Envy TS M6
