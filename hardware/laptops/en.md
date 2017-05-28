@@ -122,11 +122,13 @@ below that are in fact compatible.
 - Lenovo ThinkPad T430
 - Lenovo ThinkPad T440
 - Lenovo ThinkPad T440s
+- Lenovo ThinkPad T560
 - Lenovo ThinkPad W520 4270CTO
 - Lenovo ThinkPad X1 Carbon 3rd
 - Lenovo ThinkPad X200T
 - Lenovo ThinkPad X201
 - Lenovo ThinkPad X220
+- Lenovo ThinkPad X230
 - Lenovo ThinkPad X61
 - Lenovo Yoga 2 11
 - Lenovo Z50-70
