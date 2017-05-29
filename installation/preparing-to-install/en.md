@@ -171,17 +171,17 @@ Since OS X El Capitan (10.11), the easiest way to burn a DVD is:
 3. Etcher will automatically select your USB drive. If it has selected the wrong one, click “Change” and select the correct one.
 4. Click “Flash!”.
 5. You may be prompted for your macOS user password.
+6. Once Etcher has finished it is safe to remove the USB drive.
 
 {{< altimg "mac-etcher.jpg" "help-center/installation/preparing-to-install/" >}}
-
-6. Once Etcher has finished it is safe to remove the USB drive.
 
 You may see a message stating “The disk you inserted was not readable by this computer.” once Etcher finishes, this can be ignored.
 
 ##### Command Line
 
-1. First, insert the USB drive into your computer and open Terminal (found in Applications/Utilities).
-2. You need to identify your USB drive by listing your storage devices with the following command:
+First, insert the USB drive into your computer and open Terminal (found in Applications/Utilities).
+
+Now you'll need to identify your USB drive by listing your storage devices with the following command:
 
 ``` bash
 diskutil list
@@ -206,25 +206,27 @@ You should see output similar to this:
 
 From this output, we can see the USB drive is listed as - `/dev/disk1 (external, physical)`.  In this example, the IDENTIFIER is `disk1`.  Please note, your USB drive may have a different identifier.  You should be able to tell which is your USB drive by checking the name and size.
 
-3. macOS usually auto-mounts USB drives so you’ll need to unmount it first before proceeding.  Use the following command and replace `IDENTIFIER` with the correct identifier we found in step 2.
+macOS usually auto-mounts USB drives so you’ll need to unmount it first before proceeding.  Use the following command and replace `IDENTIFIER` with the correct identifier we found in the `diskutil list` step.
 
 ``` bash
 diskutil unmountDisk /dev/IDENTIFIER
 ```
 
-4. Now navigate to the folder that has the downloaded ISO.  This could be your Mac’s Downloads folder.  The following command will get you there:
+Now navigate to the folder that has the downloaded ISO.  This could be your Mac’s Downloads folder.  The following command will get you there:
 
 ``` bash
 cd ~/Downloads
 ```
 
-5. **This step is dangerous.  Using the wrong drive identifier could result in data loss.**  We will use the `dd` command to write the contents of the ISO to the thumb drive.  Replace `IDENTIFIER` in the command below with your drive identifier from step 2.  Note the extra `r` before the identifier (i.e `rdisk1`).  This is for raw mode, which along with bs=1m, makes the transfer faster.
+**This step is dangerous.  Using the wrong drive identifier could result in data loss.**  
+
+We will use the `dd` command to write the contents of the ISO to the thumb drive.  Replace `IDENTIFIER` in the command below with your drive identifier.  Note the extra `r` before the identifier (i.e `rdisk1`).  This is for raw mode, which along with bs=1m, makes the transfer faster.
 
 ``` bash
 sudo dd if=Solus-2017.04.18.0-Budgie.iso of=/dev/rIDENTIFIER bs=1m
 ```
 
-6. Be patient!  After a few minutes you’ll receive a message saying how much data was transferred.  You can now safely eject the usb drive.
+Be patient!  After a few minutes you’ll receive a message saying how much data was transferred.  You can now safely eject the usb drive.
 
 ``` bash
 diskutil eject /dev/IDENTIFIER
