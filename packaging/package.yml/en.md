@@ -5,12 +5,12 @@ title = "Package.yml"
 
 All packages consist of a single build file, which provides all of the required metadata for the package manager, plus the build steps involved to produce a package. This follows the YAML specification.
 
-## Format 
+## Format
 
 All `package.yml` files **must** be valid YAML.
 
-As can be seen in the example below, the file is organised into a key-&gt;value hierarchy. Some values may be required to be in a list format, whereas most are simple strings. The build step sections are all considered optional, however if you do not 
-perform *any* steps, then no package is generated. Each of these keys contains content that will be placed within a script and executed within a controlled environment to perform the package build. To all intents and purposes, they are bash scripts 
+As can be seen in the example below, the file is organised into a key-&gt;value hierarchy. Some values may be required to be in a list format, whereas most are simple strings. The build step sections are all considered optional, however if you do not
+perform *any* steps, then no package is generated. Each of these keys contains content that will be placed within a script and executed within a controlled environment to perform the package build. To all intents and purposes, they are bash scripts
 with a predefined environment.
 
 An example file follows:
@@ -25,8 +25,9 @@ source     :
 license    : GPL-3.0
 component  : editor
 summary    : Small, friendly text editor inspired by Pico
-builddeps  :
-    - ncurses-devel
+# The following would be possible, but is not necessary because that dependency is already implicitly available through system.devel. Please read more on builddeps in the packaging practices article.
+# builddeps  :
+#     - pkgconfig(ncursesw)
 description: |
     GNU nano is an easy-to-use text editor originally designed as a replacement for
     Pico, the ncurses-based editor from the non-free mailer package Pine.
@@ -40,13 +41,13 @@ install    : |
     install -D -m 00644 $pkgfiles/nanorc $installdir/etc/nanorc
 ```
 
-## Keys 
+## Keys
 
 Not all fields in `package.yml` are mandatory, but a small selection are. They are listed below. Note that `string(s)` indicates that it is possible to use a `list` of strings, or one single `string`
 
 `dict` refers to a `key : value` split in YAML, and `dict(s)` refers to a list of `dict`s
 
-### Mandatory Keys 
+### Mandatory Keys
 
 Key Name | Type | Description
 ---- | ---- | ----
@@ -59,7 +60,7 @@ Key Name | Type | Description
 **summary** | `string` | Brief package summary, or display name
 **description** | `string` | More extensive description of the software, usually taken from the vendor website
 
-### Optional, supported keys 
+### Optional, supported keys
 
 Key Name | Type | Description
 ---- | ---- | ----
@@ -73,7 +74,7 @@ Key Name | Type | Description
 **replaces** | `dict(s)` | Replace one package with another, used when renaming or deprecating packages for clean upgrade paths
 **patterns** | `dict(s)` | Allows fine grained control over file placement within the package or sub-packages. Useful for packages that are development only (i.e. `/usr/bin` files)
 
-### Build step keys, optional 
+### Build step keys, optional
 
 Note that each step in itself is optional, however all can be used. The value of each of these keys is merged into a build script that is executed for each stage of the build.
 
@@ -84,12 +85,12 @@ Step Name | Description
 **install** | This is where you should install the files into the final packaging directory, i.e. `make install`
 **check** | There is where tests / checking should occur, i.e. `make check`
 
-## Macros 
+## Macros
 
-To further assist in packaging, a number of macros are available. These are simply shorthand ways to perform a normal build operation. They also ensure that the resulting package is consistent. These macros are only available in our build steps, as 
+To further assist in packaging, a number of macros are available. These are simply shorthand ways to perform a normal build operation. They also ensure that the resulting package is consistent. These macros are only available in our build steps, as
 they are substituted within the script before execution.
 
-### Usage 
+### Usage
 
 Macros are prefixed with `%`, and are substituted before your script is executed. Macros ending with `%` are used to provide directory names or build values, to the script.
 
@@ -98,7 +99,7 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 %configure --disable-static
 ```
 
-### Actionable Macros 
+### Actionable Macros
 
 Macro | Description
 ---- | ----
@@ -120,7 +121,7 @@ Macro | Description
 **%cabal_install** | Runs cabal copy to `$installdir`
 **%cabal_register** | Runs cabal register to generate a pkg-config for package and version, then installs the conf file.
 
-### Meson Actionable Macros 
+### Meson Actionable Macros
 
 Macro | Description
 ---- | ----
@@ -128,7 +129,7 @@ Macro | Description
 **%meson_build** | Runs ninja and passes our `%JOBS%` variable.
 **%meson_install** | Runs meson install and passed the appropriate `DESTDIR` and `%JOBS%` variable
 
-### Perl Actionable Macros 
+### Perl Actionable Macros
 
 Macro | Description
 ---- | ----
@@ -136,7 +137,7 @@ Macro | Description
 **%perl_build** | Runs Perl build scripts or attempts `%make`.
 **%perl_install** | Runs Perl install scripts or attempts `%make_install`.
 
-### Python Actionable Macros 
+### Python Actionable Macros
 
 Macro | Description
 ---- | ----
@@ -152,7 +153,7 @@ Macro | Description
 **%qmake** | Runs qmake for Qt5 with the appropriate make flags.
 **%qmake4** | Runs qmake for Qt4, as well as adding the necessary MOC, RCC, and UIC flags since those Qt4 executables end in -qt4.
 
-### Variable Macros 
+### Variable Macros
 
 Macro | Description
 ---- | ----
@@ -168,7 +169,7 @@ Macro | Description
 **%libdir%** | The distribution’s default library directory, i.e. `/usr/lib64` (Alters for `emul32`)
 **%workdir%** | Hard-coded work directory (source tree)
 
-## Variables 
+## Variables
 
 A set of variables are exported in our build stages. These are used to provide context and structure to the scripts.
 
@@ -185,19 +186,19 @@ Variable | Description
 **$pkgfiles** | Refers to the `./files` directory relative to the `package.yml` file
 **$sources** | Refers to the directory where your source files are stored e.g. `$sources/nano.tar.gz`
 
-## Types 
+## Types
 
 The `package.yml` file uses native YAML types, however for the sake of clarity an explanation of how they are used within the context of `ypkg` is provided below.
 
-### string 
+### string
 
 This is simply text, which does not need to be quoted.
 
-### integer 
+### integer
 
 Whole, positive number, used in the `release` field.
 
-### list 
+### list
 
 A YAML list (or array) can be expressed in multiple ways. A short array-notation would look like this:
 
@@ -211,7 +212,7 @@ They can also be expressed like this:
 - Third Value
 ```
 
-### dict 
+### dict
 
 Known as an associative array, this is key to value mapping. These are separated by a colon (`:`), the token on the left is taken to be a key, and the token on the right is the value.
 
@@ -219,9 +220,9 @@ Known as an associative array, this is key to value mapping. These are separated
 
 Note that each `ypkg key` in the YAML file is actually a dict.
 
-### dict(s) 
+### dict(s)
 
-This is a combination of the `list` type, the `dict` type and some assumptions. We primarily make use of this to express advanced information within the package. These permit you to provide no key, and a value only. 
+This is a combination of the `list` type, the `dict` type and some assumptions. We primarily make use of this to express advanced information within the package. These permit you to provide no key, and a value only.
 In this instance, the key is assumed to be the package `name`:
 
 `- some value`
