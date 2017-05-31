@@ -93,6 +93,8 @@ Both patches and extra files (such as systemd units) are stored in this director
 
 Where `xxxx-xxxx` is replaced with the full CVE ID. Complying with this simple rule ensures that we can know at any time the security status of packages when using tools such as `cve-check-tool`
 
+Solus tooling allows the use of `./files/security/cve-xxxx-xxxx.nopatch` (which isn't applied in the build) to indicate that a CVE has been validated as not applicable to the Solus package. This can be because another patch resolves this CVE, or there is a false positive via `cve-check-tool`. The contents of the file can describe why it doesn't apply without requiring a patch (i.e. Resolved by cve-xxxx-xxxx.patch).
+
 ### Applying a patch
 
 It is common practice to apply the patch within the `setup` section of your build staging. We can achieve this using the `%patch` macro, and the `$pkgfiles` variable. In this example, the required file is located 
