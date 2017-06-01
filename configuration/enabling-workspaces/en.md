@@ -39,13 +39,13 @@ GNOME Tweak Tool, available in the Software Center.
 Once installed, open Tweak Tool and click on the Workspaces entry in the main panel to change the number of available
 workspaces.
 
-<video src="/vids/GNOME-Workspace-Switch.mp4" autoplay="autoplay" loop="loop" width="740" height="416"></video>
+{{< altimg "tweak-workspaces.jpg" "help-center/configuration/enabling-workspaces/" >}}
 
 ## GNOME
 
 GNOME enables the switching of workspaces via the Workspace Switcher on the right side of the Activities Overview screen. Application windows can be dragged from the Activities Overview to a workspace, whether it is empty / new, or one that already has windows in it.
 
-{{< altimg "workspace-switcher-gnome.jpg" "help-center/configuration/enabling-workspaces/" >}}
+<video src="/vids/GNOME-Workspace-Switch.mp4" autoplay="autoplay" loop="loop" width="740" height="416"></video>
 
 ### Keyboard Shortcuts
 
