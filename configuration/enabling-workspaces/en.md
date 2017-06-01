@@ -39,7 +39,7 @@ GNOME Tweak Tool, available in the Software Center.
 Once installed, open Tweak Tool and click on the Workspaces entry in the main panel to change the number of available
 workspaces.
 
-{{< altimg "tweak-workspaces.jpg" "help-center/configuration/enabling-workspaces/" >}}
+<video src="/vids/GNOME-Workspace-Switch.mp4" autoplay="autoplay" loop="loop" width="740" height="416"></video>
 
 ## GNOME
 
