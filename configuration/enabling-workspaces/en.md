@@ -9,7 +9,7 @@ Each of the supported desktop environments in Solus provide support for workspac
 
 Budgie enables the switching of workspaces via the Workspace Switcher. You can enable workspaces in Budgie by adding the Workspace Switcher applet to Raven.
 
-Open Raven using the shortcut `Windows Key + A` or use your mouse to open Raven in the far right of the main Budgie panel.
+Open Raven using the shortcut `Super + A` or use your mouse to open Raven in the far right of the main Budgie panel.
 
 Click the Raven settings 'cog' icon {{< altimg "raven-settings-cog.jpg" "help-center/configuration/enabling-workspaces/" >}}
 

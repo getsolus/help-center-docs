@@ -21,4 +21,4 @@ After choosing the keyboard layout, click Done. You will be brought back to the 
 
 You can remove a keyboard layout by clicking on one of the items, for instance Swedish, then clicking the `-` button.
 
-If you wish to use multiple keyboard layouts, you can switch between them by using: `Windows key + Space` or by adding the Keyboard Layout Indicator applet to your Budgie panel.
+If you wish to use multiple keyboard layouts, you can switch between them by using: `Super + Space` or by adding the Keyboard Layout Indicator applet to your Budgie panel.
