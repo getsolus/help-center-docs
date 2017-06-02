@@ -5,7 +5,7 @@ title = "Package Inclusion Policy"
 
 This policy sets forth the criteria for a package to be accepted for inclusion into the Solus repositories.
 
-- 2-Distro Rule:
+- 2-Distro Waiver:
  - If the software appears in Debian and/or Ubuntu, Fedora, and openSUSE, in the **currently active, core** repositories, the maintainer is permitted to waive some entry requirements (This does not apply to software license,  legality or known-insecure software. Additionally this cannot be used to bypass the server rules.). PPAs, OBS projects outside of the **openSUSE**: namespace, or Arch Linux, do **NOT** add any weight to a request.
 - Software Age:
  - DOA (dead-on-arrival) packages are generally rejected from Solus. However, they may be included at the discretion of the project, if they provide unique functionality. In addition, this software **MUST** comply with the 
