@@ -19,6 +19,8 @@ You will be presented with the following window. This window provides you with t
 
 If you wish to change how the time is displayed in the top panel, left click on the time and click "Preferences".  You can now show the date, seconds or use 24 hour time.
 
+{{< altimg "/2017/04/Budgie_ClockApplet.jpg" >}}
+
 ## GNOME
 
 To change the date and time settings in GNOME, you can open the Applications Overlay using the keyboard shortcut `Super + A` or by clicking the applications icon in the dock and then finding and clicking on "Date & Time".
