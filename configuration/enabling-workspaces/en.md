@@ -54,3 +54,45 @@ GNOME provides a variety of keyboard shortcuts for workspaces.
 To view these shortcuts open the Keyboard application and scroll to the Navigation section.
 
 {{< altimg "workspace-shortcuts-gcc.jpg" "help-center/configuration/enabling-workspaces/" >}}
+
+## MATE
+
+In MATE, workspaces are enabled by default.  You can move between workspaces by using the keyboard shortcuts `Ctrl + Alt + Left` and `Ctrl + Alt + Right`.
+
+{{< altimg "mate-workspace-switching.jpg" "help-center/configuration/enabling-workspaces/" >}}
+
+To send an application to a different workspace, right click on the applications titlebar and then use the "Move to Another Workspace" option or "Move to Workspace Right".
+
+{{< altimg "mate-workspace-titlebar-right-click.jpg" "help-center/configuration/enabling-workspaces/" >}}
+
+One of the easiest ways to view and manage your workspaces is by using the Workspace Switcher.  Right click inside the bottom panel and then click on "+ Add to Panel...".
+
+{{< altimg "mate-bottom-panel-right-click.jpg" "help-center/configuration/enabling-workspaces/" >}}
+
+Towards the bottom of the list you will find the Workspace Switcher.  Click on it and then finish by clicking "+ Add".  
+
+{{< altimg "mate-workspace-switch-add-to-panel" "help-center/configuration/enabling-workspaces/" >}}
+
+You should now be able to see 4 slightly darker boxes to the left of your MATE system tray in the bottom panel.  The workspace you are currently viewing will be highlighted in blue.
+
+{{< altimg "mate-workspace-switcher.jpg" "help-center/configuration/enabling-workspaces/" >}}
+
+In addition to using keyboard shortcuts, you will now be able to switch workspaces by clicking on them in the bottom panel.  You can also drag one workspace onto another in the bottom panel which will move the current active application to the new workspace.
+
+### Keyboard Shortcuts
+
+MATE provides a variety of keyboard shortcuts for workspaces.  By default, the keyboard shortcuts for switching directly to a certain workspace are disabled.
+
+To enable these and to also view all other available shortcuts open the Brisk Menu and click on "Preferences" and then on "Keyboard Shortcuts".  The workspace shortcuts are listed under Windows Management.
+
+{{< altimg "mate-workspace-keyboard-shortcuts.jpg" "help-center/configuration/enabling-workspaces/" >}}
+
+### Workspaces Configuration
+
+By default, MATE provides you with 4 workspaces.  If you would like to have more, less or change their names you must first add the Workspace Switcher to your bottom panel, as detailed above.  You'll then be able to right click on the Workspace Switcher and select "Preferences".
+
+{{< altimg "mate-workspace-switcher-right-click.jpg" "help-center/configuration/enabling-workspaces/" >}}
+
+Use the plus and minus icons to add or remove workspaces.  You can rename workspaces by double clicking on the current names and typing in an alternative.  Click "X Close" once you are happy with your changes.
+
+{{< altimg "mate-workspace-switcher-preferences.jpg" "help-center/configuration/enabling-workspaces/" >}}
