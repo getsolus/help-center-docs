@@ -3,20 +3,40 @@ title = "Configuring Language"
 +++
 # Configuring Language
 
-You can change your language by going to the Budgie Menu, opening Settings, then clicking Region and Language.
+The language that Solus uses can be changed with ease to suit your needs.
 
-You will now be shown the following dialog.
+## Budgie
+
+You can change your language in Budgie by opening the Budgie Menu and then clicking on "Region and Language" in the System Settings category.
+
+You will now be shown the following window.  This window allows you to change your language, formatting for dates and times and the language of your keyboard.
 
 {{< altimg "region-and-languages.jpg" "help-center/configuration/configuring-language/" >}}
 
-In this dialog, click Language. The following dialog will appear.
+Start by clicking "Language". This brings up a selection of languages to chose from.
 
 {{< altimg "selecting-language.png" "help-center/configuration/configuring-language/" >}}
 
-Here, you can select the language you wish your system to use. If it does not appear in this list, click the ⋮ button.
-
-You will come across the following dialog where you can type your language.
+If your language does not appear in the list, click the ⋮ button at the bottom (three vertical dots) to show all the available languages.  You can use the search box to go directly to your choice or scroll down the list.
 
 {{< altimg "selecting-language-search.png" "help-center/configuration/configuring-language/" >}}
 
-Select the language from the list and click Done. You **may** need to logout and login to your computer for it to take affect.
+Once you have selected the language you wish to use, click "Done". You *may* need to logout and login to your computer for it to take affect.
+
+## GNOME
+
+With GNOME, open the Overlay using the `Super` button on your keyboard or by clicking the applications icon in the dock and then find and click on "Region and Language".
+
+You will now be shown the following window.  This window allows you to change your language, formatting for dates and times and the language of your keyboard.
+
+{{< altimg "region-and-languages.jpg" "help-center/configuration/configuring-language/" >}}
+
+Start by clicking "Language". This brings up a selection of languages to chose from.
+
+{{< altimg "selecting-language.png" "help-center/configuration/configuring-language/" >}}
+
+If your language does not appear in the list, click the ⋮ button at the bottom (three vertical dots) to show all the available languages.  You can use the search box to go directly to your choice or scroll down the list.
+
+{{< altimg "selecting-language-search.png" "help-center/configuration/configuring-language/" >}}
+
+Once you have selected the language you wish to use, click "Done". You *may* need to logout and login to your computer for it to take affect.
