@@ -41,7 +41,7 @@ Upon clicking to remove the user, you will be given the option to keep their fil
 
 To add and remove users with GNOME, you can click on the icons in the far right of the top panel.  Click on your name and then on "Account Setting".
 
-{{< altimg "gnome-top-panel-right-click.jpg" "help-center/configuration/configuring-displays/" >}}
+{{< altimg "gnome-top-panel-right-click.jpg" "help-center/configuration/managing-users/" >}}
 
 Alternatively, you can open the Overlay using the `Super` button on your keyboard or by clicking the applications icon in the dock and then finding and clicking on "Users".
 

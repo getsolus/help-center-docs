@@ -25,6 +25,15 @@ be included, as they allow simple tracking of changes to symbols and dependencie
 
 For all patch submissions you must be using the `arcanist` utility to communicate with the [Solus Developer Portal](https://dev.solus-project.com/)
 
+## Prior to Patch Submission
+
+Prior to submitting a patch, please ensure you are checking the following:
+
+- There is not an existing patch already provided by others.
+- If you are submitting a patch for the inclusion of software in the repo, that the package your patch pertains to has a corresponding package request that is **accepted for inclusion** or is a dependency of a package that has been accepted into the repository.
+
+Please **refrain from submitting a patch** for a package that is yet to be accepted for inclusion by a member of the Triage Team. We welcome you to politely reach out via the package request task or [IRC](/articles/contributing/getting-involved/en) if you deem the review of the request to be time-sensitive in nature.
+
 ## Setting up Arcanist
 
 In three easy steps, you can set up arcanist for the first time:
@@ -37,7 +46,6 @@ arc install-certificate
 
 On the third step you will be given a unique link to log into the Developer Portal, to create a `Conduit API Token`. This
 token will be used to allow the CLI `arc` utility to communicate with Phabricator.
-
 
 ## Creating the patch
 
@@ -83,7 +91,6 @@ If you forgot information such as a test plan, you can run resolve this by:
 2. Next, you will see an editor session for providing a message indicating the change, for example "Added a test plan."
 
 After this editor session, the updated patch will be automatically uploaded, the web UI will automatically update, and no new tasks will be created.
-
 
 ## Maintainership
 
