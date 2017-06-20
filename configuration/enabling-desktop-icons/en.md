@@ -17,7 +17,7 @@ You may now add things to your Desktop.  This can be done by dragging an item on
 
 ## GNOME
 
-In GNOME, you can enable desktop items by opening the Applications Overlay using the keyboard shortcut `Super + A` or by clicking the Applications icon in the dock and then search for and open "Tweak Tool".  You can then toggle them on and off by clicking "Icons on Desktop" under the Desktop section.
+In GNOME, you can enable desktop items by opening the Overlay using the `Super` button on your keyboard or by clicking the Applications icon in the dock and then search for and open "Tweak Tool".  You can then toggle them on and off by clicking "Icons on Desktop" under the Desktop section.
 
 {{< altimg "gnome-tweak-tool-desktop.jpg" "help-center/configuration/enabling-desktop-icons/" >}}
 

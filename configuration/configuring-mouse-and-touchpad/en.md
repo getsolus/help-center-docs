@@ -3,7 +3,7 @@ title = "Configuring Mouse and Touchpad"
 +++
 # Configuring Mouse and Touchpad
 
-Change your mouse and touchpad settings to suit your taste by using the many options detailed in this guide.
+Change your mouse and touchpad settings to suit your taste.
 
 ## Budgie
 
@@ -37,7 +37,7 @@ You can test your settings by clicking the "Test Your Settings" button in the to
 
 ## GNOME
 
-With GNOME, open the Applications Overlay using the keyboard shortcut `Super + A` or by clicking the applications icon in the dock and then find and click on "Mouse and Touchpad". You will see either settings for your mouse or trackpad, depending on the device.
+With GNOME, open the Overlay using the `Super` button on your keyboard or by clicking the applications icon in the dock and then find and click on "Mouse and Touchpad". You will see either settings for your mouse or trackpad, depending on the device.
 
 ### Mouse
 

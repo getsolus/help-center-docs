@@ -3,7 +3,7 @@ title = "Configuring Default Applications"
 +++
 # Configuring Default Applications
 
-Easily change your default web browser, e-mail client, video player, and more by following the steps detailed below.
+Easily change your default web browser, e-mail client, video player, and more.
 
 It is also possible to specify which application a certain file type will use when opening.
 
@@ -27,7 +27,7 @@ Next, select the application you wish to use from the list.  You may need to cli
 
 ## GNOME
 
-With GNOME, you will need to open the Applications Overlay using the keyboard shortcut `Super + A` or by clicking the applications icon in the dock and then finding and clicking on "Details".
+With GNOME, you will need to open the Overlay using the `Super` button on your keyboard or by clicking the applications icon in the dock and then finding and clicking on "Details".
 
 Upon entering the Details section, click on "Default Applications" and then use the drop down boxes to select a different default application for each category.  For most categories, you will need to have installed alternative applications before you can change the default settings.  For instance, if you wish to change the default video player from GNOME MPV to VLC then you must first install VLC (available in the Software Center).
 

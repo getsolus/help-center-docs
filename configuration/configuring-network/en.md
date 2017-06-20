@@ -37,7 +37,7 @@ Easily change network settings with GNOME by left or right clicking on the syste
 
 {{< altimg "gnome-top-panel-network-click.jpg" "help-center/configuration/configuring-network/" >}}
 
-Alternatively, you can open the Applications Overlay using the keyboard shortcut `Super + A` or by clicking the applications icon in the dock and then finding and clicking on "Network".
+Alternatively, you can open the Overlay using the `Super` button on your keyboard or by clicking the applications icon in the dock and then finding and clicking on "Network".
 
 ### Non-Hidden Network
 

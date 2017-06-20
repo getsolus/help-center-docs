@@ -23,7 +23,7 @@ If you wish to change how the time is displayed in the top panel, left click on 
 
 ## GNOME
 
-To change the date and time settings in GNOME, you can open the Applications Overlay using the keyboard shortcut `Super + A` or by clicking the applications icon in the dock and then finding and clicking on "Date & Time".
+To change the date and time settings in GNOME, you can open the Overlay using the `Super` button on your keyboard or by clicking the applications icon in the dock and then finding and clicking on "Date & Time".
 
 You will be presented with the following window. This window provides you with the ability to enable / disable automatic date & time, automatic time zone changing, and the time format.  You will need to click on "Unlock" and input your user password before changes can be made.
 

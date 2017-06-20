@@ -13,7 +13,7 @@ To add and remove users with Budgie, start by opening the Budgie Menu and then c
 
 To manage your own or other accounts, you first need to authenticate. Click the "Unlock" button in the top right corner and type your password. Note that you are required to be an administrator. If you're the only user on the system, then your account is an administrator by default.
 
-In the event it is correct, the "Unlock" button will change to "Add User..."
+In the event the password provided is correct, the "Unlock" button will change to "Add User..."
 
 ### Adding a User
 
@@ -27,7 +27,7 @@ This will open the Add User window (shown below).
 
 Fill in the required items and then finish adding the new user by clicking "Add" in the top right corner.
 
-### Removing a user
+### Removing a User
 
 To remove a user, open the Users window and then click on the user you wish to remove.  Now click on the red "Remove User..." button in the bottom right corner.
 
@@ -43,13 +43,13 @@ To add and remove users with GNOME, you can click on the icons in the far right 
 
 {{< altimg "gnome-top-panel-right-click.jpg" "help-center/configuration/configuring-displays/" >}}
 
-Alternatively, you can open the Applications Overlay using the keyboard shortcut `Super + A` or by clicking the applications icon in the dock and then finding and clicking on "Users".
+Alternatively, you can open the Overlay using the `Super` button on your keyboard or by clicking the applications icon in the dock and then finding and clicking on "Users".
 
 {{< altimg "single-user-settings.jpg" "help-center/configuration/managing-users/" >}}
 
 To manage your own or other accounts, you first need to authenticate. Click the "Unlock" button in the top right corner and type your password. Note that you are required to be an administrator. If you're the only user on the system, then your account is an administrator by default.
 
-In the event it is correct, the "Unlock" button will change to "Add User..."
+In the event the password provided is correct, the "Unlock" button will change to "Add User..."
 
 ### Adding a User
 
@@ -63,7 +63,7 @@ This will open the Add User window (shown below).
 
 Fill in the required items and then finish adding the new user by clicking "Add" in the top right corner.
 
-### Removing a user
+### Removing a User
 
 To remove a user, open the Users window and then click on the user you wish to remove.  Now click on the red "Remove User..." button in the bottom right corner.
 
@@ -87,7 +87,7 @@ To add a user, click the "+ Add" button underneath the list of users.  You will 
 
 Fill in the required items and then finish adding the new user by clicking "OK" in the bottom right corner.
 
-### Removing a user
+### Removing a User
 
 To remove a user, open the User Settings window and then click on the user you wish to remove.  Now click on the "- Delete" button underneath the list of users.
 

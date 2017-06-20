@@ -3,7 +3,7 @@ title = "Configuring Displays"
 +++
 # Configuring Displays
 
-With Solus it is easy to configure your display and setup how multiple displays will work together.
+With Solus it is easy to configure your display and set up how multiple displays will work together.
 
 ## Budgie
 
@@ -31,7 +31,7 @@ In GNOME, You can configure your display(s) simply by right clicking anywhere on
 
 {{< altimg "gnome-display-right-click.jpg" "help-center/configuration/configuring-displays/" >}}
 
-Alternatively, you can open the Applications Overlay using the keyboard shortcut `Super + A` or by clicking the applications icon in the dock and then finding and clicking on "Displays".
+Alternatively, you can open the Overlay using the `Super` button on your keyboard or by clicking the applications icon in the dock and then finding and clicking on "Displays".
 
 You will then be shown the following window.
 

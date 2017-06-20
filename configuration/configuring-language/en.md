@@ -3,7 +3,7 @@ title = "Configuring Language"
 +++
 # Configuring Language
 
-It is easy to change the language that was selected during the installation of Solus.
+The language that Solus uses can be changed with ease to suit your needs.
 
 ## Budgie
 
@@ -21,11 +21,11 @@ If your language does not appear in the list, click the ⋮ button at the bottom
 
 {{< altimg "selecting-language-search.png" "help-center/configuration/configuring-language/" >}}
 
-Once you have selected the language you wish to use, click "Done". You **may** need to logout and login to your computer for it to take affect.
+Once you have selected the language you wish to use, click "Done". You *may* need to logout and login to your computer for it to take affect.
 
 ## GNOME
 
-With GNOME, open the Applications Overlay using the keyboard shortcut `Super + A` or by clicking the applications icon in the dock and then find and click on "Region and Language".
+With GNOME, open the Overlay using the `Super` button on your keyboard or by clicking the applications icon in the dock and then find and click on "Region and Language".
 
 You will now be shown the following window.  This window allows you to change your language, formatting for dates and times and the language of your keyboard.
 
@@ -39,4 +39,4 @@ If your language does not appear in the list, click the ⋮ button at the bottom
 
 {{< altimg "selecting-language-search.png" "help-center/configuration/configuring-language/" >}}
 
-Once you have selected the language you wish to use, click "Done". You **may** need to logout and login to your computer for it to take affect.
+Once you have selected the language you wish to use, click "Done". You *may* need to logout and login to your computer for it to take affect.
