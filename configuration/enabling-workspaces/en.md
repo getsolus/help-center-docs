@@ -71,7 +71,7 @@ One of the easiest ways to view and manage your workspaces is by using the Works
 
 Towards the bottom of the list you will find the Workspace Switcher.  Click on it and then finish by clicking "+ Add".  
 
-{{< altimg "mate-workspace-switch-add-to-panel" "help-center/configuration/enabling-workspaces/" >}}
+{{< altimg "mate-workspace-switch-add-to-panel.jpg" "help-center/configuration/enabling-workspaces/" >}}
 
 You should now be able to see 4 slightly darker boxes to the left of your MATE system tray in the bottom panel.  The workspace you are currently viewing will be highlighted in blue.
 
