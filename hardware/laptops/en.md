@@ -53,11 +53,11 @@ below that are in fact compatible.
 
 - Dell Inspiron 1110
 - Dell Inspiron 14 3452
+- Dell Inspiron 15 7579
 - Dell Inspiron 15R N5010
 - Dell Inspiron 15R N5110
 - Dell Inspiron 5050
 - Dell Inspiron 7548
-- Dell Inspiron 15 7579
 - Dell Latitude D830
 - Dell Latitude E4310
 - Dell Latitude E5440
