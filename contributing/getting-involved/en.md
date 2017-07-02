@@ -22,6 +22,7 @@ Our Help Center improves when the documentation improves. If there are articles 
 [Internet Relay Chat](https://en.wikipedia.org/wiki/Internet_Relay_Chat) is a great way to discuss issues and development with the community, and project developers. It's also a great place for getting support, but remember due 
 to timezone differences there might not always be people present to answer your query immediately. You can access IRC using free clients like Hexchat and Quassel! *Note that web IRC clients are not permitted..*
 
+You will find the following Solus channels on the [freenode](https://freenode.net/) network:
 - [#Solus](irc://chat.freenode.net/#Solus) - Support channel.
 - [#Solus-Chat](irc://chat.freenode.net/#Solus-Chat) - Off-topic channel.
 - [#Solus-Dev](irc://chat.freenode.net/#Solus-Dev) - Development-related discussions.
