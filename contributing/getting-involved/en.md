@@ -20,7 +20,7 @@ Our Help Center improves when the documentation improves. If there are articles 
 ## IRC
 
 [Internet Relay Chat](https://en.wikipedia.org/wiki/Internet_Relay_Chat) is a great way to discuss issues and development with the community, and project developers. It's also a great place for getting support, but remember due 
-to timezone differences there might not always be people present to answer your query immediately. You can access IRC using free clients like Hexchat and Quassel! *Note that web IRC clients are not permitted..*
+to timezone differences there might not always be people present to answer your query immediately. You can access IRC using free clients like Hexchat (preinstalled on Solus) and Quassel! *Note that web IRC clients are not permitted..*
 
 You will find the following Solus channels on the [freenode](https://freenode.net/) network:
 - [#Solus](irc://chat.freenode.net/#Solus) - Support channel.
