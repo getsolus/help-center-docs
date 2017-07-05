@@ -72,6 +72,10 @@ below that are in fact compatible.
 - Dell Vostro 1700
 - Dell XPS 15 9560
 
+### Fujitsu
+
+- Fujitsu Lifebook T900
+
 ### Google
 
 - Google Chromebook CR48
