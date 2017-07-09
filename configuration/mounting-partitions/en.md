@@ -17,6 +17,8 @@ Solus can automatically mount your internal partitions on startup.
 
 On next startup, your internal partition should be automatically mounted and be displayed in your file manager.
 
+{{< altimg "gear-icons.png" "help-center/configuration/mounting-partitions/" >}}
+
 {{< altimg "mount-options.png" "help-center/configuration/mounting-partitions/" >}}
 
 ## GNOME
@@ -30,5 +32,7 @@ On next startup, your internal partition should be automatically mounted and be 
 7. Define a display name and finish the procedure. 
 
 On next startup, your internal partition should be automatically mounted and be displayed in your file manager.
+
+{{< altimg "gear-icons.png" "help-center/configuration/mounting-partitions/" >}}
 
 {{< altimg "mount-options.png" "help-center/configuration/mounting-partitions/" >}}
