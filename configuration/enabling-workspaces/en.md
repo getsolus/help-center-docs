@@ -33,10 +33,10 @@ To view these shortcuts open the Keyboard application and scroll to the Navigati
 
 ### Workspaces Configuration
 
-There are 4 workspaces available in Budgie by default. If you would like to change this, you will need to install the
-GNOME Tweak Tool, available in the Software Center.
+There are 4 workspaces available in Budgie by default. If you would like to change this you will need GNOME Tweak Tool
+which should be preinstalled, if not it is available in the Software Center.
 
-Once installed, open Tweak Tool and click on the Workspaces entry in the main panel to change the number of available
+Open Tweak Tool and click on the Workspaces entry in the main panel to change the number of available
 workspaces.
 
 {{< altimg "tweak-workspaces.jpg" "help-center/configuration/enabling-workspaces/" >}}
