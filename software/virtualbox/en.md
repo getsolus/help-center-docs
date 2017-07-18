@@ -97,13 +97,13 @@ X-KDE-autostart-after=panel
 
 ## Solus as Host
 
-Download the latest [VirtualBox Installer](https://www.virtualbox.org/wiki/Linux_Downloads) - [direct link](http://download.virtualbox.org/virtualbox/5.1.22/VirtualBox-5.1.22-115126-Linux_amd64.run) (5.1.22) right click link and Save As.
+Download the latest [VirtualBox Installer](https://www.virtualbox.org/wiki/Linux_Downloads) - [direct link](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Linux_amd64.run) (5.1.24) right click link and Save As.
 Now install the dependencies and VirtualBox like so:
 
 ``` bash
 sudo eopkg it -c system.devel
 sudo eopkg it linux-lts-headers
-sudo sh ~/Downloads/VirtualBox-5.1.22-115126-Linux_amd64.run
+sudo sh ~/Downloads/VirtualBox-5.1.24-117012-Linux_amd64.run
 ```
 
 Replace the version number of the file with the one you downloaded.
