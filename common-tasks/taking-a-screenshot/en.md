@@ -13,17 +13,23 @@ To take a screenshot in Budgie, the user has the option of using the Screenshot 
 
 ### Screenshot Widget
 
-The Screenshot Widget needs to be installed and added to your panel before it can be used.  Start by opening the Software Center and then search for `budgie-screenshot-applet`.  Click the "Install" button and input your user password to authenticate the installation.
+If you do not already have the Screenshot Widget icon in your top panel, it will need to be installed and added to your panel before it can be used.  Start by opening the Software Center and then search for `budgie-screenshot-applet`.  Click the "Install" button and input your user password to authenticate the installation.
 
 {{< altimg "budgie-software-center-screenshot-applet.jpg" "help-center/common-tasks/taking-a-screenshot/" >}}
 
-To add the Screenshot Widget to your panel, open Raven, either by clicking on its icon in the far right of the system tray or using the keyboard shortcut `Super + A`. Now click the Raven settings cog icon.
+To add the Screenshot Widget to your panel, open the Budgie Menu and then click on "Budgie Desktop Settings" in the System Tools category. Alternatively, you can access the Budgie Desktop Settings by opening Raven (`Super + A`) and clicking on the settings icon at the bottom of Raven.
 
-{{< altimg "raven-settings-cog.jpg" "help-center/configuration/enabling-workspaces/" >}}
+Once you have opened Budgie Settings, click on the panel you wish to edit in the left-hand menu.
 
-Click the "Panel" button, then in the Applets section, click the `+` button.
+{{< altimg "budgie-desktop-settings-top-panel.jpg" "help-center/common-tasks/taking-a-screenshot/" >}}
 
-Find the Screenshot Widget entry and select it. Click the `+` button at the top of the panel. This will add the Screenshot Widget to the center section.  By left clicking on the icon, you will be given the option to take a screenshot of the whole screen, a single window or a specific area.
+In the Applets section, click the `+` button.
+
+Scroll down the list to find the Screenshot Widget entry, select it, and then click the "Add applet" button at the top of the panel. Note, you can double click on an entry to add it instantly without having to click the "Add applet" button. 
+
+{{< altimg "budgie-screenshot-applet-add.jpg" "help-center/common-tasks/taking-a-screenshot/" >}}
+
+This will have added the Screenshot Widget to the center section.  By left clicking on the icon, you will be given the option to take a screenshot of the whole screen, a single window or a specific area.
 
 {{< altimg "budgie-screenshot-applet.jpg" "help-center/common-tasks/taking-a-screenshot/" >}}
 

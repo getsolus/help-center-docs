@@ -31,13 +31,19 @@ If you wish to use multiple keyboard layouts, you can switch between them by usi
 
 ### Keyboard Layout Indicator
 
-To add the Keyboard Layout Indicator to your panel, open Raven, either by clicking on its icon in the far right of the system tray or using the keyboard shortcut `Super + A`. Now click the Raven settings cog icon.
+To add the Keyboard Layout Indicator to your panel, open the Budgie Menu and then click on "Budgie Desktop Settings" in the System Tools category. Alternatively, you can access the Budgie Desktop Settings by opening Raven (`Super + A`) and clicking on the settings icon at the bottom of Raven.
 
-{{< altimg "raven-settings-cog.jpg" "help-center/configuration/enabling-workspaces/" >}}
+Once you have opened Budgie Settings, click on the panel you wish to edit in the left-hand menu.
 
-Click the "Panel" button, then in the Applets section, click the `+` button.
+{{< altimg "budgie-desktop-settings-top-panel.jpg" "help-center/common-tasks/taking-a-screenshot/" >}}
 
-Find the Keyboard Layout Indicator entry and select it. Click the `+` button at the top of the panel. This will add the Keyboard Layout Indicator to the center section, as shown below.
+In the Applets section, click the `+` button.
+
+Scroll down the list to find the Keyboard Layout Indicator entry, select it, and then click the "Add applet" button at the top of the panel. Note, you can double click on an entry to add it instantly without having to click the "Add applet" button. 
+
+{{< altimg "budgie-keyboard-layout-applet-add.jpg" "help-center/configuration/configuring-keyboard-layout/" >}}
+
+This will have added the Keyboard Layout Indicator to the center section, as shown below.
 
 {{< altimg "budgie-keyboard-layout-applet.jpg" "help-center/configuration/configuring-keyboard-layout/" >}}
 
