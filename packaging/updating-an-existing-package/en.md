@@ -15,7 +15,7 @@ This can be achieved by doing `make bump`, which increments the release number b
 
 ## Updating a package
 
-To update the package to a newer version, use the `yupdate` too. This tool is located at `/usr/share/ypkg/yupdate.py` and while you can use it directly, we generally recommend setting an alias via your `.bashrc`, `.zshrc`, etc.
+To update the package to a newer version, use the `yupdate` tool. This tool is located at `/usr/share/ypkg/yupdate.py` and while you can use it directly, we generally recommend setting an alias via your `.bashrc`, `.zshrc`, etc.
 
 ``` bash
 alias updatePackage='/usr/share/ypkg/yupdate.py'
