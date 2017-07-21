@@ -7,19 +7,21 @@ Each of the supported desktop environments in Solus provide support for workspac
 
 ## Budgie
 
-Budgie enables the switching of workspaces via the Workspace Switcher. You can enable workspaces in Budgie by adding the Workspace Switcher applet to Raven.
+Budgie enables the switching of workspaces via the Workspace Switcher. You can enable workspaces in Budgie by adding the Workspace Switcher applet to your panel.
 
-Open Raven using the shortcut `Super + A` or use your mouse to open Raven in the far right of the main Budgie panel.
+To add the Workspace Switcher to your panel, open the Budgie Menu and then click on "Budgie Desktop Settings" in the System Tools category. Alternatively, you can access the Budgie Desktop Settings by opening Raven (`Super + A`) and clicking on the settings icon at the bottom of Raven.
 
-Click the Raven settings 'cog' icon {{< altimg "raven-settings-cog.jpg" "help-center/configuration/enabling-workspaces/" >}}
+Once you have opened Budgie Settings, click on the panel you wish to edit in the left-hand menu.
 
-Click the Panel button, then in the Applets section, click the '+' button.
+{{< altimg "budgie-desktop-settings-top-panel.jpg" "help-center/common-tasks/taking-a-screenshot/" >}}
 
-Find the Workspace Switcher entry and select it. Click the '+' button at the top of the panel. This will add the Workspace Switcher to the center section, as shown below.
+In the Applets section, click the `+` button.
 
-{{< altimg "budgie-workspace-applet.jpg" "help-center/configuration/enabling-workspaces/" >}}
+Scroll down the list to find the Workspace Switcher entry, select it, and then click the "Add applet" button at the top of the panel. Note, you can double click on an entry to add it instantly without having to click the "Add applet" button. 
 
-You should now see your workspaces available in the main Budgie panel.
+{{< altimg "budgie-workspace-switcher-add.jpg" "help-center/configuration/enabling-workspaces/" >}}
+
+This will have added the Workspace Switcher to the center section and you should now see your workspaces available in the main Budgie panel, as shown below.
 
 {{< altimg "budgie-workspaces.jpg" "help-center/configuration/enabling-workspaces/" >}}
 
@@ -33,13 +35,17 @@ To view these shortcuts open the Keyboard application and scroll to the Navigati
 
 ### Workspaces Configuration
 
-There are 4 workspaces available in Budgie by default. If you would like to change this, you will need to install the
-GNOME Tweak Tool, available in the Software Center.
+There are 4 workspaces available in Budgie by default. You can add more workspaces by using the `+` button that appears when you put your cursor over the Workspace Switcher.
 
-Once installed, open Tweak Tool and click on the Workspaces entry in the main panel to change the number of available
-workspaces.
+{{< altimg "budgie-workspace-switcher-plus.jpg" "help-center/configuration/enabling-workspaces/" >}}
 
-{{< altimg "tweak-workspaces.jpg" "help-center/configuration/enabling-workspaces/" >}}
+To remove or rename a workspace, right click on the workspace you wish to edit in the Workspace Switcher and then select the option you wish to use.
+
+{{< altimg "budgie-workspace-switcher-right-click.jpg" "help-center/configuration/enabling-workspaces/" >}}
+
+You can move applications between workspaces and change if an application will always be visible or only visible on a certain workspace by right clicking on the applications icon in the panel, whilst the application is open, and selecting one of the various workspace options.
+
+{{< altimg "budgie-top-panel-icon-right-click.jpg" "help-center/configuration/enabling-workspaces/" >}}
 
 ## GNOME
 
