@@ -1,5 +1,6 @@
 +++
 title = "Configuring Mouse and Touchpad"
+lastmod = "2017-07-22T16:28:23+03:00"
 +++
 # Configuring Mouse and Touchpad
 

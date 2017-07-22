@@ -1,5 +1,6 @@
 +++
 title = "Installing and updating software"
+lastmod = "2017-07-22T16:28:23+03:00"
 +++
 # Installing and updating software
 
