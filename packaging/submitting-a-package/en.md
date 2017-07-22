@@ -10,8 +10,8 @@ All repository packages are built by a dedicated build server, from the source f
 
 At minimum, your patch will include changes for the following:
 
- * `package.yml`
- * `pspec_*.xml`
+- `package.yml`
+- `pspec_*.xml`
 
 If any additional files were required for the build, then you must also include the `files/` directory.
 If you are creating a new package, you will also need to include a `Makefile` containing the following text:
@@ -49,11 +49,21 @@ token will be used to allow the CLI `arc` utility to communicate with Phabricato
 
 ## Creating the patch
 
+### Manipulating files with Git
+
+#### Adding files
+
 For every file you change or add, you must let git know about them: `git add someFile`
+
+#### Removing files
 
 For files that must be removed, you must do so using git: `git rm someFile`
 
+#### Renaming
+
 Likewise, for renaming a file, you must do so via git: `git mv someFile someFileName2`
+
+### Commit
 
 Once you're happy with your change, and you have verified locally that it works by having first built and
 installed it, it's time to commit your changes with `git commit`.
@@ -64,6 +74,8 @@ on suitable commit messages, please check the [tooling central documentation](ht
 - If you want to link this patch to an issue on the Developer portal, simply mention it in your commit message: `The inclusion of <somepackage> fixes T1234`
 - If you need a change to depend on another change, mention it in the commit message too: `Depends on D5`
 
+### Submitting for Review
+
 Now you have your git commit, it's time to send it to us for review. Using the CLI again, simply issue: `arc diff`
 
 A new editor session will open, where you can provide optional details. Note that the default reviewer will be assigned after you submit, so it is not necessary to specify anyone here. Once you're finished, save and exit the editor (`CTRL+O` + `CTRL+X` for nano), and the patch will then be uploaded. You'll be presented with the Differential URL, and a review will happen as soon as possible.
@@ -72,16 +84,19 @@ A new editor session will open, where you can provide optional details. Note tha
 
 ### Updating files
 
-That's easy. Don't make a new commit, just make any relevant changes to your local tree, adding + removing as
-before, but this time run: `git commit --amend`
+That's easy. **Don't make a new commit**, just make any relevant changes to your local tree, adding + removing as before, but this time run: `git commit --amend`.
 
 This will amend your original changes, and you can submit the patch once more with `arc diff`.
-A new editor session will open, where you can provide details about the changes you've made between the last
-revision and the newly amended one. This comment will help reviewers to see what you've changed, to streamline
-the process of getting your patch into Solus.
 
-The web UI will automatically update with the latest patch, without having to create any new tasks. Once accepted, your patch
-will be merged, and a build will be issued.
+A new editor session will open, where you can provide details about the changes you've made between the last revision and the newly amended one. This comment will help reviewers to see what you've changed, to streamline the process of getting your patch into Solus.
+
+The web UI will automatically update with the latest patch, without having to create any new tasks. Once accepted, your patch will be merged, and a build will be issued.
+
+**Notes:**
+
+- If you have already created a new commit, run `git rebase -i HEAD~2` to squash the commits, change the commit message to the same commit message as the original, removing any suggested commit message from git itself.
+- If you are concerned with `arc diff` creating a new Differential, you can run `arc diff --update DXXXXX`, changing `XXXXX` to the number assign to your initial Differential.
+  - If you have created a new Differential already, you can abandon it and update your previous differential by choosing the Add Action section below the web-based patch GUI, then choose "Abandon Revision", then click Submit.
 
 ### Updating Task Information
 
@@ -94,8 +109,7 @@ After this editor session, the updated patch will be automatically uploaded, the
 
 ## Maintainership
 
-Submission directly to a repository is only possible for maintainers. As a maintainer you may freely push to your package(s) and initiate builds for them, which will be pushed to the unstable repository. You can watch 
-builds [here](https://build.solus-project.com/).
+Submission directly to a repository is only possible for maintainers. As a maintainer you may freely push to your package(s) and initiate builds for them, which will be pushed to the unstable repository. You can watch builds [here](https://build.solus-project.com/)
 
 Pushing changes is not possible unless you have maintainer access. The same is also true of `make publish`.
 
