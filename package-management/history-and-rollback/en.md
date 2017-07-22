@@ -1,6 +1,6 @@
 +++
 title = "History and Software Rollback"
-lastmod = "2017-07-22T16:28:23+03:00"
+lastmod = "2017-07-22T15:18:34+03:00"
 +++
 # History and Software Rollback
 

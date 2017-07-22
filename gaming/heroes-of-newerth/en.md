@@ -1,6 +1,6 @@
 +++
 title = "Heroes of Newerth"
-lastmod = "2017-07-22T16:28:23+03:00"
+lastmod = "2017-04-20T20:13:48+03:00"
 +++
 # Heroes of Newerth
 
