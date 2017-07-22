@@ -8,8 +8,7 @@ This policy sets forth the criteria for a package to be accepted for inclusion i
 - 2-Distro Waiver:
  - If the software appears in Debian and/or Ubuntu, Fedora, and openSUSE, in the **currently active, core** repositories, the maintainer is permitted to waive some entry requirements (This does not apply to software license,  legality or known-insecure software. Additionally this cannot be used to bypass the server rules.). PPAs, OBS projects outside of the **openSUSE**: namespace, or Arch Linux, do **NOT** add any weight to a request.
 - Software Age:
- - DOA (dead-on-arrival) packages are generally rejected from Solus. However, they may be included at the discretion of the project, if they provide unique functionality. In addition, this software **MUST** comply with the 
- 2-Distro Rule.
+ - DOA (dead-on-arrival) packages are generally rejected from Solus. However, they may be included at the discretion of the project, if they provide unique functionality. In addition, this software **MUST** comply with the  2-Distro Waiver.
  - Projects with no tags/tarballs which lack traction, may be frozen until a suitable release is made. Tagging releases is an indicator for good release engineering practices.
  - Typically, we prefer **stable** tagged releases. However, this may be waived if:
      - The software has significant traction (i.e. prerelease)
