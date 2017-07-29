@@ -8,7 +8,7 @@ This article will go over updating a package that is already in the Solus git re
 
 The instructions below assume you have cloned the package's repository using the http link provided on the respective git page, [for example nano](https://dev.solus-project.com/source/nano/). The process for submitting an updated package is the same as if it is a new package. Follow the steps [here](/articles/packaging/submitting-a-package/en).
 
-## Bumping a packaging
+## Bumping a package
 
 Bumping a package is typically done when rebuilding against a changed dependency, such as `imagemagick` needing to be rebuilt if `libwebp` changes. Additionally, it is done if changes are being made to the package, such as additional new dependencies or other modifications.
 
