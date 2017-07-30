@@ -7,35 +7,35 @@ Manage the applications that you want to automatically run when starting Solus.
 
 ## Budgie
 
-To configure your startup applications in Budgie, open the Budgie Menu and then click on "Tweak Tool" in the Utilities category. If you don't have the "Tweak Tool" listed, search for `GNOME Tweak Tool` in the Software Center and install it.
+You can configure your startup applications in the Budgie Desktop Settings. Open the Budgie Menu and then click on "Budgie Desktop Settings" in the System Tools category. Alternatively, you can access the Budgie Desktop Settings by opening Raven (`Super + A`) and clicking on the settings icon at the bottom of Raven.
 
-Next, click on "Startup Applications" in the left-hand menu.
+Once you have opened Budgie Settings, click on "Autostart" in the left-hand menu.
 
-{{< altimg "startup-applications.jpg" "help-center/configuration/configuring-startup-applications/" >}}
+{{< altimg "budgie-autostart.jpg" "help-center/configuration/configuring-startup-applications/" >}}
 
-By default, the list of startup applications will be empty on a freshly installed copy of Solus. To add an application, click on the `+` button to load a list of your installed applications.
+By default, the list of startup applications will be empty on a freshly installed copy of Solus. To add an application, click on the `+` button and then on "Add application" to load a list of your installed applications.
 
-{{< altimg "startup-applications-list.jpg" "help-center/configuration/configuring-startup-applications/" >}}
+{{< altimg "budgie-autostart-list.jpg" "help-center/configuration/configuring-startup-applications/" >}}
 
 Find the application you are looking for by scrolling the list or by using the search icon at the top of the window. Once you have found the application, click on it and then finish by clicking the "Add" button.
 
-{{< altimg "startup-applications-added.jpg" "help-center/configuration/configuring-startup-applications/" >}}
+{{< altimg "budgie-autostart-added.jpg" "help-center/configuration/configuring-startup-applications/" >}}
 
-Your application will have been added to the startup list and it will automatically run the next time you start Solus. If you wish to remove an application from your startup list, simply click the "Remove" button next to the application you wish to stop running automatically.
+Your application will have been added to the startup list and it will automatically run the next time you start Solus. If you wish to remove an application from your startup list, simply click the `-` button next to the application you wish to stop running automatically.
 
 ## GNOME
 
 Using GNOME, configure your startup applications by opening the Overlay using the `Super` button on your keyboard or by clicking the applications icon in the dock and then find and click on "Tweak Tool". Next, click on "Startup Applications" in the left-hand menu.
 
-{{< altimg "startup-applications.jpg" "help-center/configuration/configuring-startup-applications/" >}}
+{{< altimg "gnome-startup-applications.jpg" "help-center/configuration/configuring-startup-applications/" >}}
 
 By default, the list of startup applications will be empty on a freshly installed copy of Solus. To add an application, click on the `+` button to load a list of your installed applications.
 
-{{< altimg "startup-applications-list.jpg" "help-center/configuration/configuring-startup-applications/" >}}
+{{< altimg "gnome-startup-applications-list.jpg" "help-center/configuration/configuring-startup-applications/" >}}
 
 Find the application you are looking for by scrolling the list or by using the search icon at the top of the window. Once you have found the application, click on it and then finish by clicking the "Add" button.
 
-{{< altimg "startup-applications-added.jpg" "help-center/configuration/configuring-startup-applications/" >}}
+{{< altimg "gnome-startup-applications-added.jpg" "help-center/configuration/configuring-startup-applications/" >}}
 
 Your application will have been added to the startup list and it will automatically run the next time you start Solus. If you wish to remove an application from your startup list, simply click the "Remove" button next to the application you wish to stop running automatically.
 
