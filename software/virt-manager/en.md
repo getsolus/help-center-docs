@@ -1,3 +1,7 @@
++++
+title = "Virtual Machine Manager"
+lastmod = "2017-08-09T16:16:58+01:00"
++++
 # virt-manager
 
 [virt-manager](https://virt-manager.org/) The virt-manager application is a desktop user interface for managing virtual machines through libvirt.
