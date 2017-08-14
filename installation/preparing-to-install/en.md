@@ -126,7 +126,7 @@ If it is **not** in your Downloads folder, use `cd` to navigate to the correct s
 This is where we overwrite the contents of your USB drive so please ensure you identified the current drive in the `lsblk` stage above. My command is below, however you may need to replace `sdb` with the drive we located above:
 
 ``` bash
-sudo dd if=Solus-2017.04.18.0.iso of=/dev/sdb bs=1M;sudo sync;sudo eject /dev/sdb
+sudo dd if=Solus-3-Budgie.iso of=/dev/sdb bs=1M;sudo sync;sudo eject /dev/sdb
 ```
 
 This will write the contents of the ISO to the thumb drive so you can boot it and also make sure the data is synchronised so you can eject the USB safely.
@@ -158,7 +158,7 @@ Since OS X El Capitan (10.11), the easiest way to burn a DVD is:
 
 1. Insert your DVD and open Finder.
 2. Right click on the ISO image.
-3. Click on “Burn Disk Image ‘Solus-2017.04.18.0-Budgie.iso’ to Disc…”
+3. Click on “Burn Disk Image ‘Solus-3-Budgie.iso’ to Disc…”
 4. Then click “Burn”.
 
 {{< altimg "mac-burn-dvd.jpg" "help-center/installation/preparing-to-install/" >}}
@@ -224,7 +224,7 @@ cd ~/Downloads
 We will use the `dd` command to write the contents of the ISO to the thumb drive.  Replace `IDENTIFIER` in the command below with your drive identifier.  Note the extra `r` before the identifier (i.e `rdisk1`).  This is for raw mode, which along with bs=1m, makes the transfer faster.
 
 ``` bash
-sudo dd if=Solus-2017.04.18.0-Budgie.iso of=/dev/rIDENTIFIER bs=1m
+sudo dd if=Solus-3-Budgie.iso of=/dev/rIDENTIFIER bs=1m
 ```
 
 Be patient!  After a few minutes you’ll receive a message saying how much data was transferred.  You can now safely eject the usb drive.
