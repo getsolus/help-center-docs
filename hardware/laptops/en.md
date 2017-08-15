@@ -27,6 +27,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 ### Alienware
 
 - Alienware 14
+- Alienware 17 R3
 
 ### Apple
 
