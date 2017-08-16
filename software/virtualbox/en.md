@@ -6,14 +6,43 @@ lastmod = "2017-07-22T15:17:22+03:00"
 
 [VirtualBox](https://virtualbox.org) is an x86 virtualization software package developed by Sun Microsystems.
 
+## Install kernel headers
+
+For using VirtualBox in either guest or host mode, it is important that you install the correct headers for your kernel,
+as Solus support both a `current` and `lts` kernel.
+
+If you aren't sure which kernel you
+are running, run the following in terminal:
+
+``` bash
+uname -r
+```
+
+You will either have a `.current` or `.lts` suffix. Example: `4.12.7-11.current`
+
+If you have an lts kernel, install the lts headers:
+
+``` bash
+sudo eopkg install linux-lts-headers
+```
+
+If you have a current kernel, installing the current headers:
+
+``` bash
+sudo eopkg install linux-current-headers
+```
+
+Now proceed for setting up Solus as Guest or Host.
+
 ## Solus as Guest
 
-Make sure you have the necessary packages installed:
+Make sure you have the necessary core packages installed:
 
 ``` bash
 sudo eopkg upgrade
-sudo eopkg install gcc make autoconf binutils linux-lts-headers xorg-server-devel
+sudo eopkg install gcc make autoconf binutils xorg-server-devel
 ```
+
 
 Reboot your system first so that it's all up to date.
 
@@ -98,13 +127,12 @@ X-KDE-autostart-after=panel
 
 ## Solus as Host
 
-Download the latest [VirtualBox Installer](https://www.virtualbox.org/wiki/Linux_Downloads) - [direct link](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Linux_amd64.run) (5.1.24) right click link and Save As.
+Download the latest [VirtualBox Installer](https://www.virtualbox.org/wiki/Linux_Downloads) - [direct link](http://download.virtualbox.org/virtualbox/5.1.26/VirtualBox-5.1.26-117224-Linux_amd64.run) (5.1.26) right click link and Save As.
 Now install the dependencies and VirtualBox like so:
 
 ``` bash
 sudo eopkg it -c system.devel
-sudo eopkg it linux-lts-headers
-sudo sh ~/Downloads/VirtualBox-5.1.24-117012-Linux_amd64.run
+sudo sh ~/Downloads/VirtualBox-5.1.26-117224-Linux_amd64.run
 ```
 
 Replace the version number of the file with the one you downloaded.
