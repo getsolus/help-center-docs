@@ -135,4 +135,4 @@ sudo eopkg it -c system.devel
 sudo sh ~/Downloads/VirtualBox-5.1.26-117224-Linux_amd64.run
 ```
 
-Replace the version number of the file with the one you downloaded.
+Replace the version number of the file with the one you downloaded and replace `linux-lts-headers` with `linux-current-headers` if you are running Solus 3
