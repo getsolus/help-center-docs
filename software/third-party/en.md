@@ -280,6 +280,13 @@ sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/solus-project/3r
 sudo eopkg it pycharm*.eopkg;sudo rm pycharm*.eopkg
 ```
 
+### Rider
+
+``` bash
+sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/solus-project/3rd-party/master/programming/rider/pspec.xml
+sudo eopkg it rider*.eopkg;sudo rm rider*.eopkg
+```
+
 ### RubyMine
 
 ``` bash
