@@ -27,7 +27,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 ### Alienware
 
 - Alienware 14
-- Alienware 17 R3
+solus- Alienware 17 R3
 
 ### Apple
 
@@ -39,6 +39,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Asus EEE-PC 1001PX
 - Asus EEE-PC 1011PX
 - Asus G750JZA
+- Asus K401UQK
 - Asus K53U
 - Asus K55VM
 - Asus M50VM
