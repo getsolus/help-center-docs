@@ -133,8 +133,10 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Lenovo ThinkPad T440
 - Lenovo ThinkPad T440s
 - Lenovo ThinkPad T560
+- Lenovo ThinkPad T570
 - Lenovo ThinkPad W520 4270CTO
-- Lenovo ThinkPad X1 Carbon 3rd
+- Lenovo ThinkPad X1 Carbon 3rd Edition
+- Lenovo ThinkPad X1 Carbon 4th Edition
 - Lenovo ThinkPad X200T
 - Lenovo ThinkPad X201
 - Lenovo ThinkPad X220
