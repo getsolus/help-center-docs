@@ -4,6 +4,8 @@ lastmod = "2017-09-22T20:12:14+03:00"
 +++
 # Boot Management
 
+This article will walk you through various ways of managing the booting of your system.
+
 ## Bring up the boot menu with no timeout set?
 
 By default, EFI installs will not show the boot menu and boot directly into Solus. By hitting space bar (repeatedly) during boot, the boot menu will appear (it may take a couple of goes to get the timing right).

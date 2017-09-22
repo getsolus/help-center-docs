@@ -2,7 +2,6 @@
 title = "Printer Compatibility"
 lastmod = "2017-09-22T20:09:00+03:00"
 +++
-
 # Printer Compatibility
 
 The following printers have been tested and/or suggested to function correctly by our users.

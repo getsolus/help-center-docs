@@ -4,6 +4,8 @@ lastmod = "2017-09-22T20:13:14+03:00"
 +++
 # Installation Issues
 
+This article covers various issues that you may come across during installation of Solus.
+
 ## Can't install in EFI mode
 
 The live ISO will attempt to install Solus by the same method it was booted. If it is unable to install the boot loader to the ESP, then it is likely booted in legacy mode. Ensure that the ISO has been created via a [supported method](/articles/installation/preparing-to-install/en/) and that an EFI boot is selected from the boot options.
