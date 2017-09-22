@@ -1,4 +1,8 @@
-# Boot management
++++
+title = "Boot Management"
+lastmod = "2017-09-22T20:12:14+03:00"
++++
+# Boot Management
 
 ## Bring up the boot menu with no timeout set?
 

@@ -1,10 +1,14 @@
-# General troubleshooting
++++
+title = "General Troubleshooting"
+lastmod = "2017-09-22T20:10:14+03:00"
++++
+# General Troubleshooting
 
 This guide provides some basic troubleshooting instructions for when you have an issue in Solus. Before reporting bugs, it is important to validate your Solus installation doesn't suffer from missing files or disk corruption. Also ensuring the system is fully up to date as the bug may have already been fixed.
 
 First of all performa a full system update `sudo eopkg up` (or via the Software Center). Then validate that packages are installed correctly and aren't missing files: (run this once, it will take some time and may not show much output)
 
-```
+``` bash
 sudo eopkg check | grep Broken | awk '{print $4}' | xargs sudo eopkg it --reinstall
 ```
 
@@ -32,7 +36,7 @@ To run database recovery, run `sudo eopkg rdb` in the terminal and then updates 
 
 ### Reverting updates
 
-If booting into the previous kernel doesn't solve the issue, there may be an issue with the package updates. It is possible to [revert the updates](https://solus-project.com/articles/package-management/history-and-rollback/en/) (this would also confirm that the issue is in the selected updates).
+If booting into the previous kernel doesn't solve the issue, there may be an issue with the package updates. It is possible to [revert the updates](/articles/package-management/history-and-rollback/en/) (this would also confirm that the issue is in the selected updates).
 
 ## Boot Failure
 
@@ -42,11 +46,11 @@ If Solus partially boots, you can generally get to a TTY using `Ctrl+Alt+F2` to 
 
 A common cause of not being able to boot is due to installing the nvidia drivers, but not booting into the latest kernel (the only kernel which has the drivers installed). Also ensure you have the correct driver version installed for your kernel. You can check if you have booted into the latest kernel by comparing the installed package with the booted kernel (instructions for both kernels)
 
-```
+``` bash
 eopkg info linux-lts | head -n2; uname -a
 ```
 
-```
+``` bash
 eopkg info linux-current | head -n2; uname -a
 ```
 
@@ -56,17 +60,17 @@ If the kernel version and release don't match from lines 2 and 3 of the output, 
 
  - Another possibility is that the `ESP` has run out of space so the kernel cannot be copied over to it. You can debug why this isn't happening via `sudo CBM_DEBUG=1 clr-boot-manager update`. This will output all information on the process, where it may be failing, or that it is working correctly.
 
-If these two steps fail, you can't revert the installation of the drivers via [History and Rollback](https://solus-project.com/articles/package-management/history-and-rollback/en/)
+If these two steps fail, you can't revert the installation of the drivers via [History and Rollback](/articles/package-management/history-and-rollback/en/)
 
 ### No Solus boot loader
 
-If the Solus boot loader is not functioning (this has been known to be broken by the odd update of a certain OS), the boot loader can be recreated via [Boot Rescue](https://solus-project.com/articles/repair-and-recovery/boot-rescue/en/)
+If the Solus boot loader is not functioning (this has been known to be broken by the odd update of a certain OS), the boot loader can be recreated via [Boot Rescue](/articles/troubleshooting/boot-rescue/en/)
 
 ## Long boot time
 
 There are a number of factors that can contribute to a long boot time. The boot up messages can be viewed to look for any timeouts by looking at the timestamped journal.
 
-```
+``` bash
 sudo journalctl -b
 ```
 
@@ -79,5 +83,3 @@ If information about a device changes (UUID or mount path `/dev/sda`), this can 
 `cat /proc/cmdline` will show what parameters the kernel has booted with.
 
 If the devices don't match up with what's listed in `ls /dev/disk/*/*` then it will cause a 90s timeout while it waits to see if it can be found. To fix this, you will need to remove the reference to the UUID or device path that no longer exists, or correct it to the new UUID label.
-
-

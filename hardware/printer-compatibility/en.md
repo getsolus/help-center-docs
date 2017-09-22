@@ -1,6 +1,6 @@
 +++
 title = "Printer Compatibility"
-lastmod = "2017-09-22T18:30:00+01:00"
+lastmod = "2017-09-22T20:09:00+03:00"
 +++
 
 # Printer Compatibility
@@ -11,12 +11,16 @@ This list should not suggest that *only* such devices listed below are compatibl
 
 In order to install your printer you will have to open `Printer Configuration` from Gnome Settings and click on `Add a Printer`.  
 The following dialogs will guide you to choose the appropriate driver for your device
+
 ## Models
 
 ### Epson
-*Some Epson printers will only work if you install the `epson-inkjet-printer-escpr` package.*
+
+**Some Epson printers will only work if you install the `epson-inkjet-printer-escpr` package.**
+
 - Epson SX-125
 - Epson XP-540
 
 ### HP
-*If you own an HP printer you should install the `hplip` package in order to get your device working.*
+
+**If you own an HP printer you should install the `hplip` package in order to get your device working.**

@@ -1,8 +1,12 @@
++++
+title = "Installation Issues"
+lastmod = "2017-09-22T20:13:14+03:00"
++++
 # Installation Issues
 
 ## Can't install in EFI mode
 
-The live ISO will attempt to install Solus by the same method it was booted. If it is unable to install the boot loader to the ESP, then it is likely booted in legacy mode. Ensure that the ISO has been created via a [supported method](https://solus-project.com/articles/installation/preparing-to-install/en/) and that an EFI boot is selected from the boot options.
+The live ISO will attempt to install Solus by the same method it was booted. If it is unable to install the boot loader to the ESP, then it is likely booted in legacy mode. Ensure that the ISO has been created via a [supported method](/articles/installation/preparing-to-install/en/) and that an EFI boot is selected from the boot options.
 
 You can check whether the Solus ISO has booted in EFI mode by checking the for the existence of `ls /sys/firmware/efi` (if it's not found, then it's booted in legacy mode).
 
@@ -16,4 +20,4 @@ Legacy installations on Solus use the Grub boot loader on an MBR disk. Only one 
 
 ### EFI
 
-EFI allows for multiple boot loaders to be installed, which means you can boot the Solus boot loader directly. To ensure you are booting Solus you need to boot `Linux Boot Manager` from the EFI options. Common keys for bringing up a boot menu or the options during boot are hitting `Esc/F2/F9/F10/F11/F12` during boot (this differs per motherboard). If a boot loader for another OS is not listed in the menu, then it is not correctly registered (and therefore not installed correctly). You can make the Solus boot menu appear via [Displaying the Solus boot menu on boot](https://solus-project.com/articles/troubleshooting/boot-management/en/) which should be able to boot windows (as it's registered with UEFI properly) as well as Solus, but not other systems.
+EFI allows for multiple boot loaders to be installed, which means you can boot the Solus boot loader directly. To ensure you are booting Solus you need to boot `Linux Boot Manager` from the EFI options. Common keys for bringing up a boot menu or the options during boot are hitting `Esc/F2/F9/F10/F11/F12` during boot (this differs per motherboard). If a boot loader for another OS is not listed in the menu, then it is not correctly registered (and therefore not installed correctly). You can make the Solus boot menu appear via [Displaying the Solus boot menu on boot](/articles/troubleshooting/boot-management/en/) which should be able to boot windows (as it's registered with UEFI properly) as well as Solus, but not other systems.
