@@ -1,6 +1,6 @@
 +++
 title = "Budgie Shortcuts"
-lastmod = "2017-07-22T15:12:27+03:00"
+lastmod = "2017-09-23T13:45:00+01:00"
 +++
 # Budgie Shortcuts
 
