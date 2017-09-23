@@ -56,7 +56,7 @@ eopkg info linux-current | head -n2; uname -a
 
 If the kernel version and release don't match from lines 2 and 3 of the output, then you aren't booting into the latest kernel and this is the likely cause of X not loading (particularly if you just installed the drivers). A couple of common reasons are:
 
- - On a grub machine, a common cause for not booting the latest kernel is due to Solus not being the boot loader on the MBR. Make sure you are booting via the Solus boot loader (if possible), or update grub on the distro that own the boot loader, see [Legacy/BIOS installation](Link Above).
+ - On a grub machine, a common cause for not booting the latest kernel is due to Solus not being the boot loader on the MBR. Make sure you are booting via the Solus boot loader (if possible), or update grub on the distro that own the boot loader, see [Legacy/BIOS installation](/articles/troubleshooting/installation-issues/en/#legacy-bios-installation).
 
  - Another possibility is that the `ESP` has run out of space so the kernel cannot be copied over to it. You can debug why this isn't happening via `sudo CBM_DEBUG=1 clr-boot-manager update`. This will output all information on the process, where it may be failing, or that it is working correctly.
 
