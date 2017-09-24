@@ -65,6 +65,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Dell Latitude D830
 - Dell Latitude E4310
 - Dell Latitude E5440
+- Dell Latitude E6230
 - Dell Latitude E6320
 - Dell Latitude E6410
 - Dell Latitude E6410
