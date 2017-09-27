@@ -1,6 +1,6 @@
 +++
 title = "Package.yml"
-lastmod = "2017-07-08T17:51:19+03:00"
+lastmod = "2017-09-27T15:32:14+03:00"
 +++
 # Package.yml
 
@@ -155,15 +155,17 @@ Macro | Description
 Macro | Description
 ---- | ----
 **%ARCH%** | Indicates the current build architecture.
-**%CONFOPTS%** | Flags / options for configuration, such as `--prefix=/usr`. [Full List.](https://github.com/solus-project/ypkg/blob/master/ypkg2/rc.yml#L127-L130)
-**%CFLAGS%** | cflags as set in `eopkg.conf`
-**%CXXFLAGS%** | cxxflags as set in `eopkg.conf`
-**%LDFLAGS%** | ldflags as set in `eopkg.conf`
 **%CC%** | C compiler
+**%CFLAGS%** | cflags as set in `eopkg.conf`
+**%CONFOPTS%** | Flags / options for configuration, such as `--prefix=/usr`. [Full List.](https://github.com/solus-project/ypkg/blob/master/ypkg2/rc.yml#L127-L130)
 **%CXX%** | C++ compiler
+**%CXXFLAGS%** | cxxflags as set in `eopkg.conf`
 **%JOBS%** | jobs, as set in `eopkg.conf`
+**%LDFLAGS%** | ldflags as set in `eopkg.conf`
+**%YJOBS%** | Job count without `-j` as set in `eopkg.conf`
 **%installroot%** | Hard-coded install directory
 **%libdir%** | The distribution’s default library directory, i.e. `/usr/lib64` (Alters for `emul32`)
+**%version%** | Version of the package, as specified in the version key.
 **%workdir%** | Hard-coded work directory (source tree)
 
 ## Variables 
