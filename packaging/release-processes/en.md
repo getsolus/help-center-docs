@@ -1,8 +1,8 @@
 +++
-title = "Release processes"
-lastmod = "2017-10-06T16:07:27+01:00"
+title = "Release Processes"
+lastmod = "2017-10-06T18:36:27+01:00"
 +++
-# Release processess
+# Release Processes
 
 This post is intended as both information to users, and guidelines for developers and contributors of Solus. Solus employs a formal architecture to enable the curated rolling release model, which is made possible through the use of ferryd, solbuild and a split-repository model.
 
