@@ -10,6 +10,28 @@ The first step to installing Solus is acquiring the correct media. The Solus Pro
 
 You can download a Solus ISO by going to our [Download page](/download).
 
+## Verifying the ISO
+
+### Linux and Mac
+Download the relevant Solus ISO SHA256SUMS: File, Signed File and Public Key from the [Download page](/download).
+
+**Note:** it is advisable that the files are all placed in the same folder.
+
+#### Import the public key
+```bash
+gpg --import <Public Key>.gpg
+```
+
+#### Verify SHA256SUMS file signature
+```bash
+gpg --verify <Signed File>.sign <File>.sha256sum
+```
+
+#### Verify ISO
+```bash
+sha256sum -c Solus-3-Budgie.sha256sum | grep OK
+```
+
 ---
 
 ## Getting the Right Tool
