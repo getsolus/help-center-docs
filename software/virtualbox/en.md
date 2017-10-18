@@ -1,6 +1,6 @@
 +++
 title = "VirtualBox"
-lastmod = "2017-09-22T20:12:22+03:00"
+lastmod = "2017-10-18T06:18:00+03:00"
 +++
 # VirtualBox
 
@@ -93,12 +93,12 @@ sudo usermod -aG vboxsf `whoami`
 ```
 ## Solus as Host
 
-Download the latest [VirtualBox Installer](https://www.virtualbox.org/wiki/Linux_Downloads) - [direct link](http://download.virtualbox.org/virtualbox/5.1.28/VirtualBox-5.1.28-117968-Linux_amd64.run) (5.1.28) right click link and Save As.
+Download the latest [VirtualBox Installer](https://www.virtualbox.org/wiki/Linux_Downloads) - [direct link](http://download.virtualbox.org/virtualbox/5.1.30/VirtualBox-5.1.30-118389-Linux_amd64.run) (5.1.30) right click link and Save As.
 Now install the dependencies and VirtualBox like so:
 
 ``` bash
 sudo eopkg it -c system.devel
-sudo sh ~/Downloads/VirtualBox-5.1.28-117968-Linux_amd64.run
+sudo sh ~/Downloads/VirtualBox-5.1.30-118389-Linux_amd64.run
 ```
 
 Replace the version number of the file with the one you downloaded.
