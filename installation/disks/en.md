@@ -1,6 +1,6 @@
 +++
 title = "Disks"
-lastmod = "2017-07-22T15:15:08+03:00"
+lastmod = "2017-10-22T19:02:00+02:00"
 +++
 # Disks
 
@@ -10,6 +10,7 @@ Solus provides multiple ways you can install onto your system.
 2. You can install Solus next to your existing operating system, such as Windows. *If you have multiple operating systems 
 installed, we will choose the largest option.*
 3. You can manually configure your system. This is only recommend for advanced users which may desire to have a dedicated `/home` partition. Note that if you manually configure your system, you will need to restart the Installer for those changes to apply appropriately.
+**Note:** Legacy (BIOS) must use MBR partition table while Unified EFI (UEFI) must use GPT partition table.
 
 Alongside these options, we also provide the ability to use full-disk encryption. For the obvious reason of it being full-disk, this 
 assumes you are installing Solus onto the entire drive.
@@ -22,6 +23,7 @@ To create an EFI System Partition, open up GParted and create a FAT32 partition 
 
 **Notes:**
 
-- Your system must be booted using UEFI mode, as opposed to a "legacy mode".
+- Your system must be booted using Unified EFI (UEFI) mode, as opposed to a "legacy (BIOS) mode".
 - Secure Boot needs to be disabled.
 - Your disk is required to be GPT formatted.
+- If cannot see your SSD drive, set the SATA configuration to AHCI.

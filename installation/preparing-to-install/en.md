@@ -1,6 +1,6 @@
 +++
 title = "Preparing to Install"
-lastmod = "2017-06-01T13:45:24+03:00"
+lastmod = "2017-11-19T19:00:23+03:00"
 +++
 # Preparing to install
 
@@ -119,7 +119,7 @@ You will see one disk, in my case `/dev/sdb`, that is roughly the size of my USB
 
 Next, locate the downloaded ISO. It will most likely be in your Downloads folder. In the event that it is, type: `cd ~/Downloads`
 
-If it is **not** in your Downloads folder, use `cd` to navigate to the correct step.
+If it is **not** in your Downloads folder, use `cd` to navigate to the correct directory.
 
 **Dangerous Below**
 
