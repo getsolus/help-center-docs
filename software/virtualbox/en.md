@@ -1,6 +1,6 @@
 +++
 title = "VirtualBox"
-lastmod = "2017-11-09T15:30:00+01:00"
+lastmod = "2017-11-22T19:03:00+02:00"
 +++
 # VirtualBox
 
@@ -25,6 +25,11 @@ VirtualBox is available in the Software Center, select the package that matches 
 virtualbox | virtualbox-current
 ----- | -----
 VirtualBox modules for the **linux-lts** kernel | VirtualBox modules for the **linux-current** kernel
+
+### Troubleshooting
+If the wrong VirtualBox package was installed, the following error will pop up when starting a virtual machine. Please check the instructions just above to install the correct package for your kernel.
+
+{{< altimg "vbox-kernel.png" "help-center/software/virtualbox/" >}}
 
 ## Solus as Guest
 
