@@ -15,14 +15,14 @@ Bu dosya ev dizininizin `.solus` klasöründe bulunur. `.solus` klasörünü ve 
 ``` ini
 [Packager]
 Name= Adınız
-Email= e-Posta Adresiniz
+Email= E-posta adresiniz
 ```
 
 ## Solbuild kullanımı
 
 `Solbuild` aracı başlangıçta bir temel imajla başlatılmalıdır. Bundan sonra yapılan tüm derlemeler bunu bir temel olarak kullanacak ve derlemeler için zaman ve disk alanı kazanmak için geçici bir yer paylaşımı kökü oluşturacaktır.
 
-### solbuild başlatılıyor
+### Solbuild başlatılıyor
 
 Önce system.devel bileşenini çağırarak kurun: `sudo eopkg it -c system.devel`
 
@@ -32,7 +32,7 @@ Sonra, solbuild'i `sudo solbuild init` vasıtasıyla başlatmanız gerekir
 
 İmajı indirirken ve hazırlarken biraz zaman alacaktır. Kökünü yarı düzenli olarak güncellemek iyi bir fikirdir, aksi takdirde güncellemeler her yapı üzerine uygulanacaktır.
 
-### solbuild güncelleniyor
+### Solbuild güncelleniyor
 
 Temel imajı güncel tutmak iyi bir fikirdir; temel imajdaki paketler için tekrar tekrar güncellemeleri indirmenize gerek kalmadan inşa sürelerinin kısalmasına yardımcı olur ve kesinlikle kurulum ihtiyaçlarınıza göre de paketleri indirmeniz gerekir. 
 
