@@ -10,26 +10,23 @@ Bu kılavuz size dosya (lar), araç oluşturma ve paket oluşturma konularında 
 
 Yapım sistemini kullanmak için öncelikle paketleyici ayrıntılarınızı içeren bir yapılandırma dosyası oluşturmalısınız.
 
-Bu dosya ev dizininizin `.solus` klasöründe bulunur.
-`.solus` klasörünü ve `packager` dosyasını oluşturmanız gerekecektir.
-Paketleyici dosyasının içinde, `Name` ve `Email` olmak üzere iki tanıma ihtiyacınız var.
-Bu tanımlar, paketleyici ayrıntılarının elde edilen ikili paketin içinde saklanması için makine dosyası üretilirken kullanılır.
+Bu dosya ev dizininizin `.solus` klasöründe bulunur. `.solus` klasörünü ve `packager` dosyasını oluşturmanız gerekecektir. Paketleyici dosyasının içinde, `Name` ve `Email` olmak üzere iki tanıma ihtiyacınız var. Bu tanımlar, paketleyici ayrıntılarının elde edilen ikili paketin içinde saklanması için makine dosyası üretilirken kullanılır.
 
 ``` ini
 [Packager]
-Name=Your Name Here
-Email=your.email@address
+Name= Adınız
+Email= e-Posta Adresiniz
 ```
 
-## Using solbuild
+## Solbuild kullanımı
 
-The `solbuild` tool must first be initialized with a base image. All builds thereafter will use this as a base, and construct a temporary overlay root to save on time and disk space in builds.
+`Solbuild` aracı başlangıçta bir temel imajla başlatılmalıdır. Bundan sonra yapılan tüm derlemeler bunu bir temel olarak kullanacak ve derlemeler için zaman ve disk alanı kazanmak için geçici bir yer paylaşımı kökü oluşturacaktır.
 
-### Initializing solbuild
+### solbuild başlatılıyor
 
-First, install the system.devel component by calling: `sudo eopkg it -c system.devel`
+Önce system.devel bileşenini çağırarak kurun: `sudo eopkg it -c system.devel`
 
-Next, install solbuild itself with `sudo eopkg it solbuild`. If you are building against unstable, also install `solbuild-config-unstable`.
+Sonra, kendisini `sudo eopkg it solbuild` ile kurun. Eğer `unstable` repoya dayalı inşa ediyorsanız, ayrıca `solbuild-config-unstable` ı kurun.
 
 Next, you need to initialize solbuild via `sudo solbuild init`
 
