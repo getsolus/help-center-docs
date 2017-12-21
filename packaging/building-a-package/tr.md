@@ -26,11 +26,11 @@ Email= e-Posta Adresiniz
 
 Önce system.devel bileşenini çağırarak kurun: `sudo eopkg it -c system.devel`
 
-Sonra, kendisini `sudo eopkg it solbuild` ile kurun. Eğer `unstable` repoya dayalı inşa ediyorsanız, ayrıca `solbuild-config-unstable` ı kurun.
+Sonra, kendisini `sudo eopkg it solbuild` ile kurun. Eğer `unstable` repoya dayalı bir yapı inşa ediyorsanız, ayrıca `solbuild-config-unstable` ı kurun.
 
-Next, you need to initialize solbuild via `sudo solbuild init`
+Sonra, solbuild'i `sudo solbuild init` vasıtasıyla başlatmanız gerekir
 
-This will take some time as it downloads and prepares the image. It is a good idea to update the root on a semi-regular basis, otherwise the updates will be applied on every build.
+İmajı indirirken ve hazırlarken biraz zaman alacaktır. Kökünü yarı düzenli olarak güncellemek iyi bir fikirdir, aksi takdirde güncellemeler her yapı üzerine uygulanacaktır.
 
 ### Updating solbuild
 
