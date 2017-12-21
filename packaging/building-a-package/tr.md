@@ -22,7 +22,7 @@ Email= e-Posta Adresiniz
 
 `Solbuild` aracı başlangıçta bir temel imajla başlatılmalıdır. Bundan sonra yapılan tüm derlemeler bunu bir temel olarak kullanacak ve derlemeler için zaman ve disk alanı kazanmak için geçici bir yer paylaşımı kökü oluşturacaktır.
 
-### solbuild başlatılıyor
+### solbuild başlatma
 
 Önce system.devel bileşenini çağırarak kurun: `sudo eopkg it -c system.devel`
 
@@ -32,7 +32,7 @@ Sonra, solbuild'i `sudo solbuild init` vasıtasıyla başlatmanız gerekir
 
 İmajı indirirken ve hazırlarken biraz zaman alacaktır. Kökünü yarı düzenli olarak güncellemek iyi bir fikirdir, aksi takdirde güncellemeler her yapı üzerine uygulanacaktır.
 
-### Solbuild güncelleniyor
+### solbuild güncelleme
 
 Temel imajı güncel tutmak iyi bir fikirdir; temel imajdaki paketler için tekrar tekrar güncellemeler indirmenize gerek kalmadan inşa sürelerinin kısalmasına yardımcı olur ve kurulum ihtiyaçlarınıza göre paketleri indirmeniz kesinlikle gerekir. 
 
@@ -40,7 +40,7 @@ Solbuild'i güncellemek için şunu çalıştırın: `sudo solbuild update`
 
 ## Ortak ayarlamalar
 
-Sonra paketleri daha kolay yönetmenizi, kurmanızı, kontrol etmenizi ve yayınlamanızı sağlayan bir dizi make komut seti olan `common` ile ortak ayarlarlamalar yapılmalıdır.
+Sonra, paketleri daha kolay yönetmenizi, kurmanızı, kontrol etmenizi ve yayınlamanızı sağlayan bir dizi make komut seti olan `common` ile ortak ayarlarlamalar yapılmalıdır.
 
 `git clone https://dev.solus-project.com/source/common.git` yaparak ortak depoyu git ile kopyalamalısınız. Aynı dizinde, oluşturduğunuz paketler için alt klasörlere sahip olacaksınız
 
@@ -80,4 +80,4 @@ Diğer "ortak" komutları [burada] (https://dev.solus-project.com/source/common/
 
 Başarılı bir yapıya kavuştuğunuzda, çıkan `.eopkg` dosyaları, `pspec_*.xml` makine dosyası (şu anda `pspec_x86_64.xml`) ile birlikte geçerli dizine taşınacaktır.
 
-Her şeyin uygun yerlerde olduğundan emin olmak için, üretilen eopkg dosyalarınızın içeriğini kontrol etmenizi öneririz. Bunu `eopkg ls dosya_adı.eopkg` kullanarak yapabilirsiniz.
+Her şeyin uygun yerlerde olduğundan emin olmak için, üretilen eopkg dosyalarınızın içeriğini kontrol etmenizi öneririz. Bunu `eopkg ls paket_adı.eopkg` kullanarak yapabilirsiniz.
