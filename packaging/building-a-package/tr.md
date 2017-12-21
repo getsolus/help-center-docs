@@ -40,7 +40,7 @@ Solbuild'i güncellemek için şunu çalıştırın: `sudo solbuild update`
 
 ## Ortak ayarlamalar
 
-Sonra paketleri daha kolay yönetmenizi, kurmanızı, kontrol etmenizi ve yayınlamanızı sağlayan bir dizi make komut seti olan `common` ile ortak ayarlarlamalar yapılması gerekir.
+Sonra paketleri daha kolay yönetmenizi, kurmanızı, kontrol etmenizi ve yayınlamanızı sağlayan bir dizi make komut seti olan `common` ile ortak ayarlarlamalar yapılmalıdır.
 
 `git clone https://dev.solus-project.com/source/common.git` yaparak ortak depoyu git ile kopyalamalısınız. Aynı dizinde, oluşturduğunuz paketler için alt klasörlere sahip olacaksınız
 
@@ -51,12 +51,11 @@ ln -sv common/Makefile.common .
 ln -sv common/Makefile.toplevel Makefile
 ln -sv common/Makefile.iso .
 ```
+Sonra, oluşturduğunuz **paket** **klasörünün** içinde şunu çalıştırın: `echo" include ../Makefile.common "> Makefile`
 
-Next, inside the **folder** of the **package** you are building, run: `echo "include ../Makefile.common" > Makefile`
+Bu, `make` komutlarını paket klasöründen çağırmanızı sağlayacaktır.
 
-This will enable you to call `make` commands from inside the package folder.
-
-Your folder should look something similar to this:
+Klasörünüz şuna benzer bir şey olmalı:
 
 ```
 | common/
@@ -67,17 +66,18 @@ Your folder should look something similar to this:
 | Makefile.iso
 ```
 
-## Building packages (Solus only)
+## Paketlerin İnşaası (Solus için)
 
-After setting up common, you can now build the package. Note that build dependencies and such will be installed locally (in the chroot environment).
+Ortak ayarlamaları yaptıktan sonra şimdi paketi inşa edebilirsiniz. İnşa bağımlılıklarının ve benzerlerinin yerel olarak (chroot ortamında) kurulacağına dikkat edin.
 
 ``` bash
 make
 ```
 
-You will be prompted to enter your password by sudo so dependencies may be downloaded and the necessary eopkg files may be generated.
+Parolanızı sudo ile girmeniz istenir, böylece bağımlılıklar indirilebilir ve gerekli eopkg dosyaları oluşturulabilir.
 
-You may find other `common` commands [here](https://dev.solus-project.com/source/common/browse/master/about/).
+Diğer "ortak" komutları [burada] (https://dev.solus-project.com/source/common/browse/master/about/) bulabilirsiniz.
 
-Once you’ve achieved a successful build, the resulting `.eopkg` files will be moved to the current directory, along with the machine file, `pspec_*.xml` (currently `pspec_x86_64.xml`). We recommending checking the contents of your 
-generated eopkg file(s) to ensure everything is located in the appropriate locations. You can do this by using `lseopkg file_name.eopkg`.
+Başarılı bir yapıya kavuştuğunuzda, çıkan `.eopkg` dosyaları, `pspec_*.xml` makine dosyası (şu anda `pspec_x86_64.xml`) ile birlikte geçerli dizine taşınacaktır.
+
+Her şeyin uygun yerlerde olduğundan emin olmak için, üretilen eopkg dosyalarınızın içeriğini kontrol etmenizi öneririz. Bunu `eopkg ls dosya_adı.eopkg` kullanarak yapabilirsiniz.
