@@ -1,17 +1,19 @@
 +++
-title = "Building a Package"
+title = "Bir Paket Oluşturma"
 lastmod = "2017-05-14T10:49:10+03:00"
 +++
-# Building a Package
+# Bir Paket Oluşturma
 
-This guide will walk you through setting up the file(s), tooling, and building your package.
+Bu kılavuz size dosya (lar), araç oluşturma ve paket oluşturma konularında size yol gösterecektir.
 
-## Setting up Packager file
+## Paketleyici dosyasını ayarlama
 
-In order to utilise the build system, you must first set up a configuration file that has your packager details.
+Yapım sistemini kullanmak için öncelikle paketleyici ayrıntılarınızı içeren bir yapılandırma dosyası oluşturmalısınız.
 
-This file lives in the `.solus` folder of your home directory. You will need to create the `.solus` folder as well as the inner `packager` file. Inside the packager file, you need two keys, `Name` and `Email`. This is used when generating the machine 
-file so that the packager details are stored within the resulting binary package.
+Bu dosya ev dizininizin `.solus` klasöründe bulunur.
+`.solus` klasörünü ve `packager` dosyasını oluşturmanız gerekecektir.
+Paketleyici dosyasının içinde, `Name` ve `Email` olmak üzere iki tanıma ihtiyacınız var.
+Bu tanımlar, paketleyici ayrıntılarının elde edilen ikili paketin içinde saklanması için makine dosyası üretilirken kullanılır.
 
 ``` ini
 [Packager]
