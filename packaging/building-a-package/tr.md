@@ -32,19 +32,19 @@ Sonra, solbuild'i `sudo solbuild init` vasıtasıyla başlatmanız gerekir
 
 İmajı indirirken ve hazırlarken biraz zaman alacaktır. Kökünü yarı düzenli olarak güncellemek iyi bir fikirdir, aksi takdirde güncellemeler her yapı üzerine uygulanacaktır.
 
-### Updating solbuild
+### Solbuild güncelleniyor
 
-It is a good idea to keep the base image updated. It will help reduce build times by not having to repeatedly download updates to packages in the base image, and will strictly need to pull down the packages your build needs.
+Temel imajı güncel tutmak iyi bir fikirdir; temel imajdaki paketler için tekrar tekrar güncellemeler indirmenize gerek kalmadan inşa sürelerinin kısalmasına yardımcı olur ve kurulum ihtiyaçlarınıza göre paketleri indirmeniz kesinlikle gerekir. 
 
-To update solbuild, run: `sudo solbuild update`
+Solbuild'i güncellemek için şunu çalıştırın: `sudo solbuild update`
 
-## Setting up common
+## Ortak ayarlamalar
 
-Next you need to set up `common`, a set of make scripts that enables you to more easily manage, build, check, and publish packages.
+Sonra paketleri daha kolay yönetmenizi, kurmanızı, kontrol etmenizi ve yayınlamanızı sağlayan bir dizi make komut seti olan `common` ile ortak ayarlarlamalar yapılması gerekir.
 
-You need to clone the common repository with git `sudo eopkg it git` by doing `git clone https://dev.solus-project.com/source/common.git` in the same directory you will have sub-folders for packages you are building.
+`git clone https://dev.solus-project.com/source/common.git` yaparak ortak depoyu git ile kopyalamalısınız. Aynı dizinde, oluşturduğunuz paketler için alt klasörlere sahip olacaksınız
 
-Next you need to set up symlinks. Do this from the same directory you executed the `git` command:
+Ardından, sembolik bağları kurmanız gerekir. Bunu `git` komutunu çalıştırdığınız dizinden yapın:
 
 ``` bash
 ln -sv common/Makefile.common .
