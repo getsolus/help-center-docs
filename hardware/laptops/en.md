@@ -1,6 +1,6 @@
 +++
 title = "Laptop Compatibility"
-lastmod = "2017-11-02T03:28:55+02:00"
+lastmod = "2017-12-28T21:23:00+03:00"
 +++
 # Laptop Compatibility
 
@@ -136,6 +136,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Lenovo ThinkPad T430
 - Lenovo ThinkPad T440
 - Lenovo ThinkPad T440s
+- Lenovo ThinkPad T470
 - Lenovo ThinkPad T560
 - Lenovo ThinkPad T570
 - Lenovo ThinkPad W520 4270CTO
