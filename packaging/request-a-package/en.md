@@ -4,9 +4,9 @@ lastmod = "2017-07-22T15:05:49+03:00"
 +++
 # Requesting A Package
 
-Packages are how users install Software in Solus, however if we are missing one you can let us know using our Task Tracker. 
+Packages are how users install Software in Solus. If we are missing one you can let us know using our Task Tracker. In order for a package to be accepted, it must be accepted as per the https://solus-project.com/articles/packaging/package-inclusion-policy/en/.
 
-**Please look to see if a bug has been filed for the software or library you require**. If there isn't an existing request, you can use the template below for requesting packages to be added to the Solus Package Repository or Third Party Repository.
+Before submitting a new task, **please look to see if a bug has been filed for the software or library you require**. If there isn't an existing request, you can use the template below for requesting packages to be added to the Solus Package Repository or Third Party Repository.
 
 Please provide as much of the following information as possible:
 
