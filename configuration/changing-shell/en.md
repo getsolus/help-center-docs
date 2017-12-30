@@ -1,6 +1,6 @@
 +++
 title = "Changing Shell"
-lastmod = "2017-05-25T18:19:11+03:00"
+lastmod = "2017-12-30T18:25:00+03:00"
 +++
 # Changing Shell
 
