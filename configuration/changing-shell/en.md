@@ -10,7 +10,7 @@ Solus makes available other shells via our repository, with a full list availabl
 
 - Dash
 - [Fish](https://fishshell.com/)
-- [Zsh](http://zsh.sourceforge.net/)
+- [Zsh](http://www.zsh.org/)
 
 ## Installation
 
