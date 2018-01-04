@@ -1,6 +1,6 @@
 +++
 title = "Java"
-lastmod = "2017-07-18T20:01:16+03:00"
+lastmod = "2018-01-04T06:24:56+03:00"
 +++
 # Java
 
@@ -20,34 +20,34 @@ Extract JRE and move it to /opt:
 
 ``` bash
 cd ~/Downloads
-tar xf jre-8u131-linux-x64.tar.gz
-sudo mv jre1.8.0_131 /opt/
-sudo ln -svf /opt/jre1.8.0_131/bin/java /usr/bin/java
+tar xf jre-8u152-linux-x64.tar.gz
+sudo mv jre1.8.0_152 /opt/
+sudo ln -svf /opt/jre1.8.0_152/bin/java /usr/bin/java
 ```
 
 To enable Java in Firefox:
 
 ``` bash
 mkdir -p ~/.mozilla/plugins
-ln -s /opt/jre1.8.0_131/lib/amd64/libnpjp2.so ~/.mozilla/plugins/libnpjp2.so
+ln -s /opt/jre1.8.0_152/lib/amd64/libnpjp2.so ~/.mozilla/plugins/libnpjp2.so
 ```
 
 ## JDK
 
-Grab the Java Development Kit (JDK) as `.tar.gz` from the [Oracle Download Page](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+Grab the Java Development Kit (JDK) as `.tar.gz` from the [Oracle Download Page](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133152.html).
 
 Extract JDK and move it to /opt:
 
 ``` bash
 cd ~/Downloads
-tar xf jdk-8u131-linux-x64.tar.gz
-sudo mv jdk1.8.0_131 /opt/
-sudo ln -svf /opt/jdk1.8.0_131/bin/java /usr/bin/java
+tar xf jdk-8u152-linux-x64.tar.gz
+sudo mv jdk1.8.0_152 /opt/
+sudo ln -svf /opt/jdk1.8.0_152/bin/java /usr/bin/java
 ```
 
 To enable Java in Firefox:
 
 ``` bash
 mkdir -p ~/.mozilla/plugins
-ln -s /opt/jdk1.8.0_131/jre/lib/amd64/libnpjp2.so ~/.mozilla/plugins/libnpjp2.so
+ln -s /opt/jdk1.8.0_152/jre/lib/amd64/libnpjp2.so ~/.mozilla/plugins/libnpjp2.so
 ```
