@@ -1,6 +1,6 @@
 +++
 title = "Wireless Chipsets Compatibility"
-lastmod = "2017-12-28T21:24:00+03:00"
+lastmod = "2018-01-06T02:09:20+03:00"
 +++
 # Wireless Chipsets Compatibility
 
@@ -39,7 +39,7 @@ This list should not suggest that *only*- such devices listed below are compatib
 - Intel Centrino Advanced-N 6235
 - Intel Centrino Ultimate-N 6300
 - Intel Centrino Wireless-N 2230
-- Intel Corporation Wireless 8265 / 8275 [8086:24fd] (rev 78)
+- Intel Corporation Wireless 8265 / 8275 `[8086:24fd] (rev 78)`
 - Intel PRO/Wireless 3945ABG
 - Intel PRO/Wireless 4965 AG or AGN
 - Intel Ultimate N WiFi Link 5300
