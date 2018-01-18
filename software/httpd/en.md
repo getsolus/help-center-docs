@@ -26,6 +26,29 @@ Therefore, to make modifications to httpd's configuration, you must first create
 
 By default, httpd's DocumentRoot is set to `/var/www/`, thus files you desire to be accessible via your httpd server must be copied to that location.
 
+### PHP Support
+
+To get PHP working, install it from the Software Center or via terminal:
+
+``` bash
+sudo eopkg install php
+```
+
+Because PHP is loaded via FPM and FastCGI and not via an Apache module, to enable PHP you must create a new file, `/etc/httpd/conf.d/php.conf`, with the following lines:
+
+```
+LoadModule proxy_module lib64/httpd/mod_proxy.so
+LoadModule proxy_fcgi_module lib64/httpd/mod_proxy_fcgi.so
+<FilesMatch \.php$>
+SetHandler "proxy:fcgi://127.0.0.1:9000"
+</FilesMatch>
+<IfModule dir_module>
+DirectoryIndex index.php index.html
+</IfModule>
+```
+
+[More info here](https://solus-project.com/forums/viewtopic.php?f=11&t=7440&p=21756#p21756).
+
 ### Management
 
 Managing httpd is done via systemd, using the following commands:
