@@ -1,6 +1,6 @@
 +++
 title = "httpd (Apache)"
-lastmod = "2017-04-23T18:37:45+03:00"
+lastmod = "2018-01-19T16:14:40+03:00"
 +++
 # httpd (Apache)
 
@@ -47,7 +47,11 @@ DirectoryIndex index.php index.html
 </IfModule>
 ```
 
-[More info here](https://solus-project.com/forums/viewtopic.php?f=11&t=7440&p=21756#p21756).
+Now, to load the changes, run:
+
+```bash
+sudo systemctl restart httpd && sudo systemctl restart php-fpm
+```
 
 ### Management
 
