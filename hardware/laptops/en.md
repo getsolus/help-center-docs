@@ -28,7 +28,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 ### Alienware
 
 - Alienware 14
-- Alienware 17 R3
+- Alienware 17 R3 (See [T4960](https://dev.solus-project.com/T4960#99235) to fix sleep and [this](https://askubuntu.com/questions/725265/sound-only-out-of-internal-speakers-never-headphones-alienware-laptop-ubuntu/806747#806747) to fix headphones.)
 
 ### Apple
 
