@@ -1,6 +1,6 @@
 +++
 title = "VirtualBox"
-lastmod = "2017-12-16T20:35:00+02:00"
+lastmod = "2018-02-24T22:30:00+02:00"
 +++
 # VirtualBox
 
@@ -71,7 +71,7 @@ sudo eopkg install linux-current-headers
 Make sure you have the necessary packages installed
 
 ``` bash
-sudo eopkg install gcc make autoconf binutils xorg-server-devel
+sudo eopkg install gcc make autoconf binutils xorg-server-devel libelf-devel
 ```
 
 Reboot the virtual machine.
