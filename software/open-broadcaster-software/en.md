@@ -2,7 +2,6 @@
 title = "Open Broadcaster Software"
 lastmod = "2018-03-03T14:41:12+02:00"
 +++
-
 # Open Broadcaster Software
 
 This article covers the installation of OBS Studio as well as the use of third-party plugins.
