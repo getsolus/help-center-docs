@@ -4,13 +4,28 @@ This is the repository for Solus's Help Center documentation. This repository ex
 
 Stumbled on this repo and have no idea what any of this is? Check out the [Solus](https://solus-project.com) operating system!
 
-## TODO
+## Contributing
 
-*In order.*
+### Updating an Article
 
-- [x] The current task is to migrate all documentation from the [Solus Wiki](https://wiki.solus-project.com).
-- [x] Leveraging this repo in the creation of our Help Center.
-- [ ] Create a basic build system that aggregates specific Markdown files and assets to produce a User Guide. This will enable our User Guides to be generated whenever necessary, such as during the release of a new ISO snapshot.
+When updating an article, remember to update the `lastmod` key / value in the TOML header. You can get the ISO 8601 formatted string by doing:
+
+``` bash
+date --iso-8601=seconds
+```
+
+A TOML header is indicated by the following example contents at the top of a file:
+
+```
++++
+title = "Example File"
+lastmod = "2018-03-03T14:41:12+02:00"
++++
+```
+
+### Multi-Lingual Documents
+
+Note that multi-lingual documents are not yet supported on our Help Center. When it does, we'll be happy to accept non-English language documents.
 
 ## Licenses
 
