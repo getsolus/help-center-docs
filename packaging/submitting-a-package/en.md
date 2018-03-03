@@ -79,7 +79,7 @@ on suitable commit messages, please check the [tooling central documentation](ht
 
 Now you have your git commit, it's time to send it to us for review. Using the CLI again, simply issue: `arc diff`
 
-A new editor session will open, where you can provide optional details. Note that the default reviewer will be assigned after you submit, so it is not necessary to specify anyone here. Once you're finished, save and exit the editor (`CTRL+O` + `CTRL+X` for nano), and the patch will then be uploaded. You'll be presented with the Differential URL, and a review will happen as soon as possible.
+A new editor session will open, where you can provide additional details. Note that the default reviewer will be assigned after you submit, so it is not necessary to specify anyone here. If you are updating an existing package, please be sure to include a summarized changelog (or a link to the changelog provided upstream) and a test plan indicating that you've installed and run the package. Once you're finished, save and exit the editor (`CTRL+O` + `CTRL+X` for nano), and the patch will then be uploaded. You'll be presented with the Differential URL, and a review will happen as soon as possible.
 
 ## Updating a patch that needs changes
 
