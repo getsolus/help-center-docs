@@ -1,6 +1,6 @@
 +++
 title = "Laptop Compatibility"
-lastmod = "2018-02-26T11:36:37+02:00"
+lastmod = "2018-03-03T13:18:00+01:00"
 +++
 # Laptop Compatibility
 
@@ -85,6 +85,10 @@ This list should not suggest that *only* such devices listed below are compatibl
 
 - Fujitsu Lifebook T900
 
+### Gigabyte
+
+- Gigabyte Aero 14K
+
 ### Google
 
 - Google Chromebook CR48
@@ -108,6 +112,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 - HP Pavilion DV7
 - HP Pavilion x360 Convertible
 - HP Presario V6000
+- HP Probook 6360b
 - HP ProBook 6450b
 
 ### Lenovo
