@@ -1,6 +1,6 @@
 +++
 title = "Laptop Compatibility"
-lastmod = "2018-03-03T13:18:00+01:00"
+lastmod = "2018-03-08T16:00:57+01:00"
 +++
 # Laptop Compatibility
 
@@ -24,6 +24,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Acer Aspire V5-121
 - Acer C710 Chromebook
 - Acer C720-2848 Chromebook
+- Acer TravelMate X349-G2-M
 
 ### Alienware
 
