@@ -143,6 +143,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Lenovo ThinkPad T440
 - Lenovo ThinkPad T440s
 - Lenovo ThinkPad T470
+- Lenovo ThinkPad T470s
 - Lenovo ThinkPad T560
 - Lenovo ThinkPad T570
 - Lenovo ThinkPad W520 4270CTO
