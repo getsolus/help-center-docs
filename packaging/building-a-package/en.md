@@ -43,7 +43,7 @@ To update solbuild, run: `sudo solbuild update`
 
 Next you need to set up `common`, a set of make scripts that enables you to more easily manage, build, check, and publish packages.
 
-You need to clone the common repository with git `sudo eopkg it git` by doing `git clone https://dev.solus-project.com/source/common.git` in the same directory you will have sub-folders for packages you are building.
+You need to clone the common repository with git by doing `git clone https://dev.solus-project.com/source/common.git` in the same directory you will have sub-folders for packages you are building.
 
 Next you need to set up symlinks. Do this from the same directory you executed the `git` command:
 
