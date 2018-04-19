@@ -1,12 +1,12 @@
 +++
 title = "Package.yml"
-lastmod = "2017-09-27T15:32:14+03:00"
+lastmod = "2018-04-01T20:31:14+02:00"
 +++
 # Package.yml
 
 All packages consist of a single build file, which provides all of the required metadata for the package manager, plus the build steps involved to produce a package. This follows the YAML specification.
 
-## Format 
+## Format
 
 All `package.yml` files **must** be valid YAML.
 
@@ -18,33 +18,37 @@ An example file follows:
 
 ``` yaml
 name       : nano
-version    : 2.5.1
-release    : 39
+version    : 2.9.5
+release    : 96
 source     :
-    - http://www.nano-editor.org/dist/v2.5/nano-2.5.1.tar.gz : e06fca01bf183f4d531aa65a28dffc0e2d10185239909eb3de797023f3453bde
-license    : GPL-3.0
-component  : editor
+    - https://www.nano-editor.org/dist/v2.9/nano-2.9.5.tar.xz : 7b8d181cb57f42fa86a380bb9ad46abab859b60383607f731b65a9077f4b4e19
+license    : GPL-3.0-or-later
 summary    : Small, friendly text editor inspired by Pico
+component  : system.devel
 description: |
-    GNU nano is an easy-to-use text editor originally designed as a replacement for
-    Pico, the ncurses-based editor from the non-free mailer package Pine.
+    GNU nano is an easy-to-use text editor originally designed as a replacement for Pico, the ncurses-based editor from the non-free mailer package Pine (itself now available under the Apache License as Alpine).
 setup      : |
-    %configure --enable-utf8 --docdir=/usr/share/doc/nano
+    %patch -p1 < $pkgfiles/0001-Use-a-stateless-configuration.patch
+    %reconfigure --enable-utf8 --docdir=/usr/share/doc/nano
 build      : |
     %make
 install    : |
     %make_install
-    # TODO: Convert to stateless
-    install -D -m 00644 $pkgfiles/nanorc $installdir/etc/nanorc
+    install -D -m 00644 $pkgfiles/nanorc $installdir/usr/share/defaults/nano/nanorc
+    install -D -m 00644 $pkgfiles/git.nanorc $installdir/usr/share/nano/git.nanorc
+    # https://github.com/scopatz/nanorc
+    for rcFile in $pkgfiles/nanorc-extras/*.nanorc; do
+        install -m 00644 $rcFile $installdir/usr/share/nano
+    done
 ```
 
-## Keys 
+## Keys
 
 Not all fields in `package.yml` are mandatory, but a small selection are. They are listed below. Note that `string(s)` indicates that it is possible to use a `list` of strings, or one single `string`
 
 `dict` refers to a `key : value` split in YAML, and `dict(s)` refers to a list of `dict`s
 
-### Mandatory Keys 
+### Mandatory Keys
 
 Key Name | Type | Description
 ---- | ---- | ----
@@ -57,7 +61,7 @@ Key Name | Type | Description
 **summary** | `string` | Brief package summary, or display name
 **description** | `string` | More extensive description of the software, usually taken from the vendor website
 
-### Optional, supported keys 
+### Optional, supported keys
 
 Key Name | Type | Description
 ---- | ---- | ----
@@ -71,7 +75,7 @@ Key Name | Type | Description
 **replaces** | `dict(s)` | Replace one package with another, used when renaming or deprecating packages for clean upgrade paths
 **patterns** | `dict(s)` | Allows fine grained control over file placement within the package or sub-packages. Useful for packages that are development only (i.e. `/usr/bin` files)
 
-### Build step keys, optional 
+### Build step keys, optional
 
 Note that each step in itself is optional, however all can be used. The value of each of these keys is merged into a build script that is executed for each stage of the build.
 
@@ -82,12 +86,11 @@ Step Name | Description
 **install** | This is where you should install the files into the final packaging directory, i.e. `make install`
 **check** | There is where tests / checking should occur, i.e. `make check`
 
-## Macros 
+## Macros
 
-To further assist in packaging, a number of macros are available. These are simply shorthand ways to perform a normal build operation. They also ensure that the resulting package is consistent. These macros are only available in our build steps, as 
-they are substituted within the script before execution.
+To further assist in packaging, a number of macros are available. These are simply shorthand ways to perform a normal build operation. They also ensure that the resulting package is consistent. These macros are only available in our build steps, as they are substituted within the script before execution.
 
-### Usage 
+### Usage
 
 Macros are prefixed with `%`, and are substituted before your script is executed. Macros ending with `%` are used to provide directory names or build values, to the script.
 
@@ -96,12 +99,13 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 %configure --disable-static
 ```
 
-### Actionable Macros 
+### Actionable Macros
 
 Macro | Description
 ---- | ----
 **%autogen** | Runs autogen with our `%CONFOPTS%` to create a configure script then proceeds to run `%configure`.
-**%cmake** | Configure cmake project with the distribution specific options, such as prefix and release type
+**%cmake** | Configure cmake project with the distribution specific options, such as prefix and release type.
+**%cmake_ninja** | Configure cmake project with ninja so it can be used with `%meson_build`, `%meson_install` and `%meson_check` macros.
 **%configure** | Runs `./configure` with our `%CONFOPTS%` variable macro.
 **%make** | Runs the `make` command with the job count specified in `eopkg.conf`
 **%make_install** | Perform a `make install`, using the `DESTDIR` variant. Should work for the vast majority of packages.
@@ -118,15 +122,16 @@ Macro | Description
 **%cabal_install** | Runs cabal copy to `$installdir`
 **%cabal_register** | Runs cabal register to generate a pkg-config for package and version, then installs the conf file.
 
-### Meson Actionable Macros 
+### Meson Actionable Macros
 
 Macro | Description
 ---- | ----
 **%meson_configure** | Runs meson with our CFLAGS and appropriate flags such as libdir.
-**%meson_build** | Runs ninja and passes our `%JOBS%` variable.
-**%meson_install** | Runs meson install and passed the appropriate `DESTDIR` and `%JOBS%` variable
+**%ninja_build** | Runs ninja and passes our `%JOBS%` variable. This macro obsoletes *%meson_build*.
+**%ninja_install** | Runs meson install and passed the appropriate `DESTDIR` and `%JOBS%` variable. This macro obsoletes *%meson_install*.
+**%ninja_check** | Runs ninja test and passes our `%JOBS%` variable. This macro obsoletes *%meson_check*.
 
-### Perl Actionable Macros 
+### Perl Actionable Macros
 
 Macro | Description
 ---- | ----
@@ -134,7 +139,7 @@ Macro | Description
 **%perl_build** | Runs Perl build scripts or attempts `%make`.
 **%perl_install** | Runs Perl install scripts or attempts `%make_install`.
 
-### Python Actionable Macros 
+### Python Actionable Macros
 
 Macro | Description
 ---- | ----
@@ -143,6 +148,19 @@ Macro | Description
 **%python3_setup** | Runs the build portion of a setup.py using python3.
 **%python3_install** | Runs the install portion of a setup.py, to the appropriate root, using python3.
 
+### Ruby Actionable Macros
+Macro | Description
+---- | ----
+**%gem_build** | Runs gem build.
+**%gem_install** | Runs gem install with the appropriate parameters.
+
+### Waf Actionale Macros
+Macro | Description
+---- | ----
+**%waf_configure** | Runs waf configure with prefix.
+**%waf_build** | Runs waf and passes our `%JOBS%` variable.
+**%waf_install** | Runs waf install and passed the appropriate `destdir` and `%JOBS%` variable
+
 ### Qt Actionable Macros
 
 Macro | Description
@@ -150,25 +168,27 @@ Macro | Description
 **%qmake** | Runs qmake for Qt5 with the appropriate make flags.
 **%qmake4** | Runs qmake for Qt4, as well as adding the necessary MOC, RCC, and UIC flags since those Qt4 executables end in -qt4.
 
-### Variable Macros 
+### Variable Macros
 
 Macro | Description
 ---- | ----
 **%ARCH%** | Indicates the current build architecture.
 **%CC%** | C compiler
 **%CFLAGS%** | cflags as set in `eopkg.conf`
-**%CONFOPTS%** | Flags / options for configuration, such as `--prefix=/usr`. [Full List.](https://github.com/solus-project/ypkg/blob/master/ypkg2/rc.yml#L127-L130)
+**%CONFOPTS%** | Flags / options for configuration, such as `--mandir=/usr/share/man`. [Full List.](https://github.com/solus-project/ypkg/blob/master/ypkg2/rc.yml#L217)
 **%CXX%** | C++ compiler
 **%CXXFLAGS%** | cxxflags as set in `eopkg.conf`
+**%installroot%** | Hard-coded install directory
 **%JOBS%** | jobs, as set in `eopkg.conf`
 **%LDFLAGS%** | ldflags as set in `eopkg.conf`
-**%YJOBS%** | Job count without `-j` as set in `eopkg.conf`
-**%installroot%** | Hard-coded install directory
 **%libdir%** | The distribution’s default library directory, i.e. `/usr/lib64` (Alters for `emul32`)
+**%LIBSUFFIX%** | Library suffix (either 32 for 32-bit or 64 for 64-bit)
+**%PREFIX%** | Hard-coded prefix `/usr`
 **%version%** | Version of the package, as specified in the version key.
 **%workdir%** | Hard-coded work directory (source tree)
+**%YJOBS%** | Job count without `-j` as set in `eopkg.conf`
 
-## Variables 
+## Variables
 
 A set of variables are exported in our build stages. These are used to provide context and structure to the scripts.
 
@@ -185,19 +205,19 @@ Variable | Description
 **$pkgfiles** | Refers to the `./files` directory relative to the `package.yml` file
 **$sources** | Refers to the directory where your source files are stored e.g. `$sources/nano.tar.gz`
 
-## Types 
+## Types
 
 The `package.yml` file uses native YAML types, however for the sake of clarity an explanation of how they are used within the context of `ypkg` is provided below.
 
-### string 
+### string
 
 This is simply text, which does not need to be quoted.
 
-### integer 
+### integer
 
 Whole, positive number, used in the `release` field.
 
-### list 
+### list
 
 A YAML list (or array) can be expressed in multiple ways. A short array-notation would look like this:
 
@@ -211,7 +231,7 @@ They can also be expressed like this:
 - Third Value
 ```
 
-### dict 
+### dict
 
 Known as an associative array, this is key to value mapping. These are separated by a colon (`:`), the token on the left is taken to be a key, and the token on the right is the value.
 
@@ -219,7 +239,7 @@ Known as an associative array, this is key to value mapping. These are separated
 
 Note that each `ypkg key` in the YAML file is actually a dict.
 
-### dict(s) 
+### dict(s)
 
 This is a combination of the `list` type, the `dict` type and some assumptions. We primarily make use of this to express advanced information within the package. These permit you to provide no key, and a value only. 
 In this instance, the key is assumed to be the package `name`:
