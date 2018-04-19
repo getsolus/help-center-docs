@@ -2,7 +2,6 @@
 title = "Working with Documents"
 lastmod = "2018-04-19T18:17:27+03:00"
 +++
-
 # Working with Documents
 
 Solus comes pre-installed with [LibreOffice](https://libreoffice.org), an office suite that is capable of replacing Microsoft<sup>TM</sup> Office for the most common tasks.
