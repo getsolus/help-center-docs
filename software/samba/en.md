@@ -1,6 +1,6 @@
 +++
 title = "Samba file sharing"
-lastmod = "2018-04-01T12:00:00+02:00"
+lastmod = "2018-04-20T13:40:00+02:00"
 aliases = ["/articles/software/samba/en/"]
 +++
 
