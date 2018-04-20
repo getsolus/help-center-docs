@@ -1,6 +1,6 @@
 +++
 title = "Laptop Compatibility"
-lastmod = "2018-03-08T16:00:57+01:00"
+lastmod = "2018-04-16T22:21:49+02:00"
 +++
 # Laptop Compatibility
 
@@ -12,6 +12,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 
 ### Acer
 
+- Acer Aspire 1825PTZ
 - Acer Aspire 4830T
 - Acer Aspire 5750G
 - Acer Aspire 7551
@@ -53,6 +54,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Asus UX305FA
 - Asus X200MA
 - Asus X201EV
+- Asus X540L
 - Asus X55
 - Asus X550LD
 - Asus X551CAP

@@ -1,12 +1,35 @@
 +++
 title = "VirtualBox"
-lastmod = "2018-02-24T22:30:00+02:00"
+lastmod = "2018-04-19T19:30:00+02:00"
 +++
 # VirtualBox
 
-[VirtualBox](https://virtualbox.org) is an x86 virtualization software package developed by Oracle.
+[VirtualBox](https://virtualbox.org) is an x86 and x86_64 virtualization software package developed by Oracle.
 
-## Determine which kernel you are using
+
+## Before you start
+
+This section applies to new installations for both **Host** and **Guest**.
+
+### Remove prior installation
+
+It is important to uninstall any version of VirtualBox (or VirtualBox Guest Additions) that **was not** installed from the Software Center or there will be conflicts that will prevent the application to work.
+This can usually be done by executing the following command from a terminal:
+
+
+``` bash
+sudo /opt/VirtualBox/uninstall.sh
+```
+
+### Update your system
+
+Ensure your system is up-to-date. This is very important because VirtualBox installs some kernel modules and the application will not work if your kernel is outdated.
+
+``` bash
+sudo eopkg upgrade
+```
+
+### Determine which kernel you are using
 
 Solus support both a `current` and `lts` kernel. It is important to install the version that corresponds to your kernel.
 
@@ -16,7 +39,8 @@ If you aren't sure which kernel you are running, run the following in terminal:
 uname -r
 ```
 
-You will either have a `.current` or `.lts` suffix. Examples: `4.13.12-32.current` or `4.9.61-57.lts`
+You will either have a `.current` or `.lts` suffix. Examples: `4.15.15-63.current` or `4.9.92-85.lts`
+
 
 ## Solus as Host
 
@@ -24,9 +48,9 @@ VirtualBox is available in the Software Center, select the package that matches 
 
 virtualbox | virtualbox-current
 ----- | -----
-VirtualBox modules for the **linux-lts** kernel | VirtualBox modules for the **linux-current** kernel
+VirtualBox Host modules for the **linux-lts** kernel | VirtualBox Host modules for the **linux-current** kernel
 
-You **must** reboot your computer before running VirtualBox for the first time
+You **must** reboot your computer before running VirtualBox for the first time.
 
 ### Troubleshooting
 
@@ -37,73 +61,24 @@ The Error `Kernel driver not installed (rc=-1908)` may occur if
 - The computer was not restarted before launching VirtualBox for the first time
 - The computer is not booted on the latest kernel. Make sure to apply the updates from the Software Center and restart your machine.
 - The wrong VirtualBox package was installed. Please check the instructions just above to install the correct package for your kernel.
-- VirtualBox was manually installed and it conflicts with the version installed from the Solus Repository. The below commands usually help solving this last problem.
+- VirtualBox was manually installed and it conflicts with the version installed from the Solus Repository.
 
-``` bash
-sudo /opt/VirtualBox/uninstall.sh
-eopkg li | grep virtualbox | awk '{print $1}' | xargs sudo eopkg it --reinstall
-sudo reboot
-```
 
 ## Solus as Guest
 
-### Preparing your system
-Before you start, ensure your all packages are up-to-date on the virtual machine
+VirtualBox Guest Additions are available in the Software Center, select the package that matches kernel version on the Solus virtual machine.
 
-``` bash
-sudo eopkg upgrade
-```
+virtualbox-guest | virtualbox-guest-current
+----- | -----
+VirtualBox Guest modules for the **linux-lts** kernel | VirtualBox Guest modules for the **linux-current** kernel
 
-For using VirtualBox, it is important to install the correct headers for your kernel
+You **must** reboot your virtual machine to load the newly installed modules
 
-If you have a **lts** kernel, install the lts headers
 
-``` bash
-sudo eopkg install linux-lts-headers
-```
-
-If you have a **current** kernel, installing the current headers
-
-``` bash
-sudo eopkg install linux-current-headers
-```
-
-Make sure you have the necessary packages installed
-
-``` bash
-sudo eopkg install gcc make autoconf binutils xorg-server-devel libelf-devel
-```
-
-Reboot the virtual machine.
-
-### Install the Guest Additions
-Now install the **Guest Additions** : from the VirtualBox menu `Devices` -> `Insert Guest Additions CD image...`
-
-On the guest Machine, open `Files` and click on the optical drive icon (CD name starts with VBOXADDITIONS) then click on the `Run Software` button and follow the on screen instructions.
-
-{{< altimg "autorun.png" "help-center/software/virtualbox/" >}}
-
-**Note:** For each kernel update you will need to rebuild the VirtualBox Modules. So simply remount the ISO and run the instructions again.
-
-### Virtual machine settings
-Here is a brief overview on some options you may want to set (you can only do it when your virtual machine is not running).
-
-Select your guest machine and click on the Settings icon.
-
-#### Clipboard Sharing,  Drag & Drop
-By default, Clipboard Sharing and Drag'n'Drop are disabled, you can change this in `General` -> `Advanced`
-
-{{< altimg "vbox-clipboard.png" "help-center/software/virtualbox/" >}}
-
-#### Number of CPU
-Virtual machines are created with only 1 CPU. You can change this in
-`System` -> `Processor`
-
-#### 3D Acceleration
-For better performances, it is strongly recommended to enable 3D Acceleration in `Display` -> `Screen`
+## Extra configuration
 
 #### USB Controller
-If you have installed the [extension pack](https://www.virtualbox.org/manual/ch01.html#intro-installing) and your hardware supports it, you set the USB Controller to USB 2.0 or 3.0,  in `USB`
+If you want to use USB 2.0 or 3.0 in your virtual machine (and your hardware supports it), you have to install the [extension pack](https://www.virtualbox.org/manual/ch01.html#intro-installing).
 
 Note: Access to USB is granted by the user group `vboxusers` on the **Host** operating system. You can add yourself to this group with the following command
 
@@ -112,12 +87,13 @@ sudo usermod -aG vboxusers `whoami`
 ```
 
 #### Shared Folders
-You can share folders from the Host to the Guest in `Shared Folders`
+Share folders let you access files from the host system from within a guest machine.
 
-**Note:** auto-mounted shared folders are mounted into the `/media` directory, along with the prefix `sf_`. For example, the shared folder `myfiles` would be mounted to `/media/sf_myfiles`. Access to auto-mounted shared folders is only granted to the user group `vboxsf` on the Guest operating system.
+**Note:** auto-mounted shared folders are mounted into the `/media` directory, along with the prefix `sf_`. For example, the shared folder `myfiles` would be mounted to `/media/sf_myfiles`. 
+
+Access to the shared folders is only granted to the user group `vboxsf` on the **Guest** operating system.
 
 Execute these commands to set the permissions and add yourself to the group
 ``` bash
-sudo chmod 755 /media
 sudo usermod -aG vboxsf `whoami`
 ```

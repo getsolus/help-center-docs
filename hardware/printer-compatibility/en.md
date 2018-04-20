@@ -1,6 +1,6 @@
 +++
 title = "Printer Compatibility"
-lastmod = "2017-09-22T20:09:00+03:00"
+lastmod = "2018-04-16T22:21:49+02:00"
 +++
 # Printer Compatibility
 
@@ -12,6 +12,10 @@ In order to install your printer you will have to open `Printer Configuration` f
 The following dialogs will guide you to choose the appropriate driver for your device
 
 ## Models
+
+### Brother
+
+- Brother MFC-L2740DW
 
 ### Epson
 

@@ -1,6 +1,6 @@
 +++
 title = "Building a Package"
-lastmod = "2017-05-14T10:49:10+03:00"
+lastmod = "2018-03-19T15:38:22+02:00"
 +++
 # Building a Package
 
@@ -43,7 +43,7 @@ To update solbuild, run: `sudo solbuild update`
 
 Next you need to set up `common`, a set of make scripts that enables you to more easily manage, build, check, and publish packages.
 
-You need to clone the common repository with git `sudo eopkg it git` by doing `git clone https://dev.solus-project.com/source/common.git` in the same directory you will have sub-folders for packages you are building.
+You need to clone the common repository with git by doing `git clone https://dev.solus-project.com/source/common.git` in the same directory you will have sub-folders for packages you are building.
 
 Next you need to set up symlinks. Do this from the same directory you executed the `git` command:
 
