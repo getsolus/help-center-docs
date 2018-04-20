@@ -1,6 +1,6 @@
 +++
 title = "Samba file sharing"
-lastmod = "2018-04-20T13:40:00+02:00"
+lastmod = "2018-04-20T14:12:00+02:00"
 +++
 
 # Samba file sharing
@@ -9,56 +9,54 @@ Samba is the standard Windows interoperability suite of programs for Linux and U
 
 ## Overview
 
-To enable convenient file-sharing on Solus, we maintain a solus-specific Samba configuration that supports samba usershare functionality out-of-the-box.
+To enable convenient file-sharing on Solus, we maintain a Solus-specific Samba configuration that supports Samba usershare functionality out-of-the-box.
 
 ### A brief introduction to the Samba usershare functionality
 
-In order to support user-managed (as opposed to system-managed) shares, Samba provides the so-called usershare functionality, where users can define network shares without touching the traditional samba configuration file.
+In order to support user-managed (as opposed to system-managed) shares, Samba provides the so-called *usershare* functionality, where users can define network shares without touching the traditional Samba configuration file.
 
 ### GUI - configuring shares via nautilus-share
 
-The default solus-configuration was written with the nautilus-share file manager plugin in mind.
+The default Solus configuration was written with the `nautilus-share` file manager plugin in mind. This plugin allows the user to share folders in an easy and convenient way.
 
-This nautils file manager plugin allows the user to share folders in an easy and convenient way.
+All the user needs to do is to install the `nautilus-share` package from the Software Center and enable the relevant Samba services.
 
-All the user needs to do is to install the nautilus-share package from the Software Center and enable the relevant samba services.
-
-``` 
-    sudo eopkg install nautilus-share
-    sudo systemctl enable --now smb
+``` bash
+sudo eopkg install nautilus-share
+sudo systemctl enable --now smb
 ```
 
 In order for the nautilus-share plugin to be loaded, the user will need to log out of the current desktop session and log back in to a new desktop session, at which point the nautilus-share plugin will be loaded and ready for use.
 
 ### CLI - using the net usershare command
 
-Excerpt from the ```man smb.conf``` manual page:
+Excerpt from the `man smb.conf` manual page:
 
 ```
-    net usershare add sharename path [comment] [acl] [guest_ok=[y|n]]
-        To create or modify (overwrite) a user defined share.
+net usershare add sharename path [comment] [acl] [guest_ok=[y|n]]
+    To create or modify (overwrite) a user defined share.
 
-    net usershare delete sharename
-        To delete a user defined share.
+net usershare delete sharename
+    To delete a user defined share.
 
-    net usershare list wildcard-sharename
-        To list user defined shares.
+net usershare list wildcard-sharename
+    To list user defined shares.
 
-    net usershare info wildcard-sharename
-        To print information about user defined shares.
+net usershare info wildcard-sharename
+    To print information about user defined shares.
 ```
 
 ## Adding system shares via /etc/samba/smb.conf
 
-The default solus-managed configuration is written such that it will attempt to include any configuration directives present in ```/etc/samba/smb.conf```.
+The default Solus-managed configuration is written such that it will attempt to include any configuration directives present in `/etc/samba/smb.conf`.
 
-By default, the solus-managed configuration enables $HOME shares and is configured to participate in the WORKGROUP windows workgroup.
+By default, the Solus-managed configuration enables $HOME shares and is configured to participate in the WORKGROUP windows workgroup.
 
-**CAUTION:** *From this point on, it is assumed that the user is familiar with the samba documentation, including ```man smb.conf``` and that the user has a basic understanding of Linux filesystem permissions.*
+**CAUTION:** *From this point on, it is assumed that the user is familiar with the Samba documentation, including `man smb.conf` and that the user has a basic understanding of Linux filesystem permissions.*
 
-### Example -- anynomous, read-write share outside of $HOME
+### Example -- anonymous, read-write share outside of $HOME
 
-```
+``` ini
 # Contents of /etc/samba/smb.conf
 #   if ^^ exists, it is automatically loaded by the solus-controlled default config
 #   residing in /usr/share/defaults/smb.conf 
@@ -80,17 +78,17 @@ read only = No
 # share config end   
 ```
 
-After adding a system-managed share like in the above example, run ```sudo testparm``` to check that the newly included share does not contain syntax errors. Check out ```man testparm``` for more information about the ```testparm``` utility.
+After adding a system-managed share like in the above example, run `sudo testparm` to check that the newly included share does not contain syntax errors. Check out `man testparm` for more information about the `testparm` utility.
 
-In the above case, it is assumed that the user has chosen a suitable method for making ```/mnt/someshare``` writeable by guest users.
+In the above case, it is assumed that the user has chosen a suitable method for making `/mnt/someshare` writeable by guest users.
 
-## Full manual control of samba (recommended only for experienced samba admins)
+## Full manual control of Samba (recommended only for experienced Samba admins)
 
-Full manual control of samba can be achieved by bypassing the default solus samba configuration.
+Full manual control of Samba can be achieved by bypassing the default Solus Samba configuration.
 
-In the samba manual page (```man 8 samba```), it is shown how the compiled-in default config file can be overridden by specifying the ```--configfile=<somepath>``` flag during invocation of samba.
+In the Samba manual page (`man 8 Samba`), it is shown how the compiled-in default config file can be overridden by specifying the `--configfile=<somepath>` flag during invocation of Samba.
 
-To use the traditional ```/etc/samba/smb.conf``` configuration file exclusively (thus bypassing the solus configuration), edit the ```/etc/sysconfig/samba``` file to look like so:
+To use the traditional `/etc/samba/smb.conf` configuration file exclusively (thus bypassing the solus configuration), edit the `/etc/sysconfig/samba` file to look like so:
 
 ```
 ## Path:           Network/Samba
