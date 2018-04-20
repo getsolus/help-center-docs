@@ -2,6 +2,7 @@
 title = "Samba File Sharing"
 lastmod = "2018-04-27T19:40:00+02:00"
 +++
+
 # Samba file sharing
 
 Samba is the standard Windows interoperability suite of programs for Linux and Unix. Among other things, it allows Linux and Windows users to share files via the Common Internet File System (CIFS) protocol.
@@ -157,3 +158,4 @@ NMBDOPTIONS="--configfile=/etc/samba/smb.conf"
 ## ServiceRestart: winbind
 WINBINDOPTIONS=""
 ```
+
