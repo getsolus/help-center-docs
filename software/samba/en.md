@@ -1,6 +1,6 @@
 +++
 title = "Samba file sharing"
-lastmod = "2018-04-20T14:12:00+02:00"
+lastmod = "2018-04-20T14:20:00+02:00"
 +++
 
 # Samba file sharing
@@ -86,7 +86,7 @@ In the above case, it is assumed that the user has chosen a suitable method for 
 
 Full manual control of Samba can be achieved by bypassing the default Solus Samba configuration.
 
-In the Samba manual page (`man 8 Samba`), it is shown how the compiled-in default config file can be overridden by specifying the `--configfile=<somepath>` flag during invocation of Samba.
+In the Samba manual page (`man 8 samba`), it is shown how the compiled-in default config file can be overridden by specifying the `--configfile=<somepath>` flag during invocation of Samba.
 
 To use the traditional `/etc/samba/smb.conf` configuration file exclusively (thus bypassing the solus configuration), edit the `/etc/sysconfig/samba` file to look like so:
 
