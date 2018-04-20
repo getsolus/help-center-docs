@@ -1,6 +1,6 @@
 +++
-title = "Samba file sharing"
-lastmod = "2018-04-20T15:25:16+03:00"
+title = "Samba File Sharing"
+lastmod = "2018-04-20T15:33:09+03:00"
 +++
 # Samba file sharing
 
@@ -57,7 +57,7 @@ By default, the Solus-managed configuration enables $HOME shares and is configur
 
 ``` ini
 # Contents of /etc/samba/smb.conf
-#   if ^^ exists, it is automatically loaded by the solus-controlled default config
+#   if ^^ exists, it is automatically loaded by the Solus-controlled default config
 #   residing in /usr/share/defaults/smb.conf 
 # 
 # Create a "//servername/someshare" share where anonymous users have read and write access
