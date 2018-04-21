@@ -1,6 +1,6 @@
 +++
 title = "Samba File Sharing"
-lastmod = "2018-04-20T22:20:16+02:00"
+lastmod = "2018-04-21T12:33:00+02:00"
 +++
 # Samba file sharing
 
@@ -25,7 +25,7 @@ sudo eopkg install nautilus-share
 sudo systemctl enable --now smb
 ```
 
-In order for the `nautilus-share`/`caja-share` plugins to be loaded, the user will need to log out of the current desktop session and log back in to a new desktop session, at which point the selected plugin will be ready for use.
+In order for the `nautilus-share`/`caja-share` plugins to be loaded, the user will need to log out of the current desktop session and log back in to a new desktop session, at which point the plugin in question will be ready for use.
 
 Simply right-clicking a folder will now show an option to share it.
 
@@ -47,13 +47,19 @@ net usershare info wildcard-sharename
     To print information about user defined shares.
 ```
 
-## Adding system shares via /etc/samba/smb.conf
-
-The default Solus-managed configuration is written such that it will attempt to include any configuration directives present in `/etc/samba/smb.conf`.
-
-By default, the Solus-managed configuration enables *$HOME* shares and is configured to participate in the WORKGROUP windows workgroup.
+## Adding custom configuration parameters via `/etc/samba/smb.conf`
 
 **CAUTION:** *From this point on, it is assumed that the user is familiar with the Samba documentation, including `man smb.conf`, and that the user has a basic understanding of Linux filesystem permissions.*
+
+The default Solus-managed configuration (which lives in `/usr/share/defaults/samba/smb.conf` and will be overwritten on each samba package update) is written such that it will attempt to include any configuration parameters present in `/etc/samba/smb.conf`.
+  
+Hence, any persistent user-managed parameters should be added to `/etc/samba/smb.conf` which will *never* be overwritten by the system package manager.
+
+In addition, the Solus-controlled Samba configuration is written such that it is possible to override its default parameters simply by assigning a new value to the parameter in question in `/etc/samba/smb.conf`. From a technical perspective, any parameters added without a `[shared resource]` header will considered part of the `[global]` configuration section.
+
+This way, it becomes possible to reset Samba to Solus working defaults simply by deleting or renaming  `/etc/samba/smb.conf`.
+
+By default, the Solus-managed configuration enables *$HOME* shares (`[homes]` section) and is configured to participate in the WORKGROUP Windows workgroup.
 
 ### Example -- anonymous, read-write share outside of *$HOME*
 
@@ -64,8 +70,8 @@ By default, the Solus-managed configuration enables *$HOME* shares and is config
 # 
 # Create a "//servername/someshare" share where anonymous users have read and write access
 #
-# ';' denotes a comment, which is typically used for config statements
-[other]
+# ';' also denotes a comment (typically used for configuration parameters)
+[someshare]
 path = /mnt/someshare
 # allow anonymous access
 guest ok = Yes
@@ -79,13 +85,13 @@ read only = No
 # share config end   
 ```
 
-After adding a system-managed share like in the above example, run `sudo testparm` to check that the newly included share does not contain syntax errors. Check out `man testparm` for more information about the `testparm` utility.
+After adding a `[someshare]` section like in the above example, run `sudo testparm` to check that the newly included share does not contain syntax errors. Check out `man testparm` for more information about the `testparm` utility.
 
 In the above case, it is assumed that the user has chosen a suitable method for making `/mnt/someshare` writeable by guest users.
 
 ## Full manual control of Samba (recommended only for experienced Samba admins)
 
-Full manual control of Samba can be achieved by bypassing the default Solus Samba configuration.
+Full manual control of Samba can be achieved by completely bypassing the default Solus Samba configuration.
 
 In the Samba manual page (`man 8 samba`), it is shown how the compiled-in default config file can be overridden by specifying the `--configfile=<somepath>` flag during invocation of Samba.
 
