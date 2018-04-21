@@ -16,7 +16,7 @@ In order to support user-managed (as opposed to system-managed) shares, Samba pr
 
 ### GUI - configuring shares via nautilus-share/caja-share
 
-The default Solus configuration was written with the `nautilus-share` (GNOME/Budige) and `caja-share` (MATE) file manager plugins in mind. These plugins allows the user to share folders in an easy and convenient way.
+The default Solus configuration was written with the `nautilus-share` (GNOME/Budgie) and `caja-share` (MATE) file manager plugins in mind. These plugins allows the user to share folders in an easy and convenient way.
 
 All the user needs to do is to install either the `nautilus-share` or `caja-extensions` package from the Software Center and enable the relevant Samba services.
 
