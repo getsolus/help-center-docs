@@ -1,6 +1,6 @@
 +++
 title = "Samba File Sharing"
-lastmod = "2018-04-21T12:37:00+02:00"
+lastmod = "2018-04-24T18:58:00+02:00"
 +++
 # Samba file sharing
 
