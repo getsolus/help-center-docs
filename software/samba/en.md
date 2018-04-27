@@ -1,6 +1,6 @@
 +++
 title = "Samba File Sharing"
-lastmod = "2018-04-24T18:58:00+02:00"
+lastmod = "2018-04-27T19:40:00+02:00"
 +++
 # Samba file sharing
 
@@ -47,11 +47,34 @@ net usershare info wildcard-sharename
     To print information about user defined shares.
 ```
 
+## Enabling Samba authentication for named users
+
+Should the user `some_user` wish to access e.g. the *$HOME* directory via Samba, it is necessary to activate the `some_user` Samba login account.
+
+Note that the `some_user` Samba ccount account is separate from the `some_user` Linux user account, but they share the same *$HOME* directory.
+
+``` bash
+# Add the some_user account to the Samba login db
+sudo smbpasswd -a some_user
+# Activate some_user in the Samba login db
+sudo smbpasswd -e some_user
+# Try to log in to a running Samba instance as some_user and list shares
+smbclient -U some_user -L localhost
+```
+
+See `man smbpasswd` for more details.
+
+### Debugging Samba authentication issues
+
+To help debug authentication issues, the Solus Samba configuration is set up with relatively verbose logging when it comes to authentication.
+
+The Samba log files live in `/var/log/samba/`.
+
 ## Adding custom configuration parameters via `/etc/samba/smb.conf`
 
 **CAUTION:** *From this point on, it is assumed that the user is familiar with the Samba documentation, including `man smb.conf`, and that the user has a basic understanding of Linux filesystem permissions.*
 
-The default Solus-managed configuration (which lives in `/usr/share/defaults/samba/smb.conf` and will be overwritten on each samba package update) is written such that it will attempt to include any configuration parameters present in `/etc/samba/smb.conf`.
+The default Solus-managed configuration (which lives in `/usr/share/defaults/samba/smb.conf` and will be overwritten on each Samba package update) is written such that it will attempt to include any configuration parameters present in `/etc/samba/smb.conf`.
   
 Hence, any persistent user-managed parameters should be added to `/etc/samba/smb.conf` which will *never* be overwritten by the system package manager.
 
@@ -64,13 +87,16 @@ By default, the Solus-managed configuration enables *$HOME* shares (`[homes]` se
 ### Example -- anonymous, read-write share outside of *$HOME*
 
 ``` ini
-# Contents of /etc/samba/smb.conf
-#   if ^^ exists, it is automatically loaded by the Solus-controlled default config
-#   residing in /usr/share/defaults/samba/smb.conf 
+# Contents of /etc/samba/smb.conf:
+#
+# If /etc/samba/smb.conf exists, it is automatically loaded by the Solus-
+# controlled default config residing in /usr/share/defaults/samba/smb.conf 
 # 
-# Create a "//servername/someshare" share where anonymous users have read and write access
+# The following configuration creates a "//servername/someshare" share where
+# anonymous users have read and write access.
 #
 # ';' also denotes a comment (typically used for configuration parameters)
+#
 [someshare]
 path = /mnt/someshare
 # allow anonymous access
@@ -84,10 +110,24 @@ read only = No
 ;hosts allow = 127.0.0.1 192.168.1.0/24
 # share config end   
 ```
+In the above example, it is assumed that the user has chosen a suitable method for making `/mnt/someshare` writeable by guest users.
 
 After adding a `[someshare]` section like in the above example, run `sudo testparm` to check that the newly included share does not contain syntax errors. Check out `man testparm` for more information about the `testparm` utility.
 
-In the above case, it is assumed that the user has chosen a suitable method for making `/mnt/someshare` writeable by guest users.
+If testparm didn't spot any problems, restart Samba with `sudo systemctl restart smb`, which will activate the new configuration.
+
+### Links to the official Samba documentation
+
+Apart from the aforementioned `man smb.conf`, wiki.samba.org is your friend, specifically:
+
+[https://wiki.samba.org/index.php/Setting_up_a_Share_Using_POSIX_ACLs]
+
+and
+
+[https://wiki.samba.org/index.php/Setting_up_Samba_as_a_Standalone_Server]
+
+The default Solus Samba configuration is patterned on the above.
+
 
 ## Full manual control of Samba (recommended only for experienced Samba admins)
 
