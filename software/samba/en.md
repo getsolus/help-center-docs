@@ -1,17 +1,44 @@
 +++
 title = "Samba File Sharing"
-lastmod = "2018-04-27T19:40:00+02:00"
+lastmod = "2018-05-05T12:31:00+02:00"
 +++
 
 # Samba file sharing
 
 Samba is the standard Windows interoperability suite of programs for Linux and Unix. Among other things, it allows Linux and Windows users to share files via the Common Internet File System (CIFS) protocol.
 
-## Overview
+## Samba on Solus
 
-To enable convenient file-sharing on Solus, we maintain a Solus-specific Samba configuration that supports Samba usershare functionality out-of-the-box.
+To enable convenient file-sharing on Solus, we maintain a Solus-specific Samba configuration that out-of-the-box:
 
-### A brief introduction to the Samba usershare functionality
+- Supports Samba usershare functionality
+- Allows access only from RFC 1918 private network addresses
+- Disables sharing of printers via Samba (you should use IPP via CUPS instead)
+- Is set up as a standalone server which participates in the default MS Windows workgroup named WORKGROUP
+- Enables sharing of $HOME folders (manual user account activation needed)
+
+### How to start/stop Samba
+
+Please note that Samba does NOT run on system boot by default. It needs to be manually started/configured to start automatically:
+
+``` bash
+# Start Samba manually
+sudo systemctl start nmb smb
+
+# Configure Samba to start automatically on each boot
+sudo systemctl enable --now nmb smb
+
+# Check whether Samba is running
+sudo systemctl status nmb smb
+
+# Stop Samba manually
+sudo systemctl stop nmb smb
+
+# Configure Samba to not start automatically on each boot
+sudo systemctl disable nmb smb
+```
+ 
+## A brief introduction to the Samba usershare functionality
 
 In order to support user-managed (as opposed to system-managed) shares, Samba provides the so-called *usershare* functionality, where users can define network shares without touching the traditional Samba configuration file.
 
@@ -23,7 +50,6 @@ All the user needs to do is to install either the `caja-extensions` package (whi
 
 ``` bash
 sudo eopkg install nautilus-share
-sudo systemctl enable --now smb
 ```
 
 In order to load the newly installed file manager plugin, the user will need to log out of the current desktop session and log back in to a new desktop session, at which point the plugin in question will be ready for use.
@@ -48,26 +74,34 @@ net usershare info wildcard-sharename
     To print information about user defined shares.
 ```
 
-## Enabling Samba authentication for named users
+## Managing Samba authentication for named users
 
 Should the user `some_user` wish to access e.g. the *$HOME* directory via Samba, it is necessary to activate the `some_user` Samba login account.
 
-Note that the `some_user` Samba ccount account is separate from the `some_user` Linux user account, but they share the same *$HOME* directory.
+Note that the `some_user` Samba account is separate from the `some_user` Linux user account, but they share the same *$HOME* directory.
 
 ``` bash
 # Add the some_user account to the Samba login db
 sudo smbpasswd -a some_user
+
 # Activate some_user in the Samba login db
 sudo smbpasswd -e some_user
+
 # Try to log in to a running Samba instance as some_user and list shares
 smbclient -U some_user -L localhost
+
+# Disable some_user in the Samba login db
+sudo smbpasswd -d some_user
+
+# Remove some_user from the Samba login db
+sudo smbpasswd -x some_user
 ```
 
 See `man smbpasswd` for more details.
 
 ### Debugging Samba authentication issues
 
-To help debug authentication issues, the Solus Samba configuration is set up with relatively verbose logging when it comes to authentication.
+To help debug authentication issues, the Solus Samba configuration is by default set up with relatively verbose logging when it comes to authentication.
 
 The Samba log files live in `/var/log/samba/`.
 
@@ -82,8 +116,6 @@ Hence, any persistent user-managed parameters should be added to `/etc/samba/smb
 In addition, the Solus-controlled Samba configuration is written such that it is possible to override its default parameters simply by assigning a new value to the parameter in question in `/etc/samba/smb.conf`. From a technical perspective, any parameters added without a `[shared resource]` header will considered part of the `[global]` configuration section.
 
 This way, it becomes possible to reset Samba to Solus working defaults simply by deleting or renaming  `/etc/samba/smb.conf`.
-
-By default, the Solus-managed configuration enables *$HOME* shares (`[homes]` section) and is configured to participate in the WORKGROUP Windows workgroup.
 
 ### Example -- anonymous, read-write share outside of *$HOME*
 
@@ -103,7 +135,7 @@ path = /mnt/someshare
 # allow anonymous access
 guest ok = Yes
 # ONLY allow anonymous access (don't allow both guest and system user access)
-guest only = Yes
+;guest only = Yes
 # allow write access
 read only = No
 # This is an example of how to limit access to the share to known IPs
@@ -158,4 +190,3 @@ NMBDOPTIONS="--configfile=/etc/samba/smb.conf"
 ## ServiceRestart: winbind
 WINBINDOPTIONS=""
 ```
-
