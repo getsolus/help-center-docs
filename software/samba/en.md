@@ -2,7 +2,6 @@
 title = "Samba File Sharing"
 lastmod = "2018-05-05T12:31:00+02:00"
 +++
-
 # Samba file sharing
 
 Samba is the standard Windows interoperability suite of programs for Linux and Unix. Among other things, it allows Linux and Windows users to share files via the Common Internet File System (CIFS) protocol.
