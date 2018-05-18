@@ -24,7 +24,7 @@ Please note that Samba does NOT run on system boot by default. It needs to be ma
 # Start Samba manually
 sudo systemctl start nmb smb
 
-# Configure Samba to start automatically on each boot and start it now
+# Configure Samba to start automatically on each boot and immediately start the services
 sudo systemctl enable --now nmb smb
 
 # Check whether Samba is running
@@ -33,7 +33,7 @@ sudo systemctl status nmb smb
 # Stop Samba manually
 sudo systemctl stop nmb smb
 
-# Configure Samba to not start automatically on each boot and stop it now
+# Configure Samba to not start automatically on each boot and immediately stop the services
 sudo systemctl disable --now nmb smb
 ```
 
