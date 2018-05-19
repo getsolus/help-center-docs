@@ -45,13 +45,16 @@ In order to support user-managed (as opposed to system-managed) shares, Samba pr
 
 ### GUI - configuring shares via file manager plugins
 
-The default Solus configuration was written with the `nautilus-share` (Budgie/GNOME) and `caja-share` (MATE) file manager plugins in mind. These plugins allow the user to share folders in an easy and convenient way.
+The default Solus configuration was written with the `nautilus-share` (Budgie/GNOME), `kdenetwork-filesharing` (KDE) and `caja-share` (MATE) file manager plugins in mind. These plugins allow the user to share folders in an easy and convenient way.
 
-All the user needs to do is to install either the `caja-extensions` package (which includes the `caja-share` plugin) or the `nautilus-share` package from the Software Center and enable the relevant Samba services. 
+All the user needs to do is to install either the `caja-extensions` package (which includes the `caja-share` plugin), the `kdenetwork-filesharing` package or the `nautilus-share` package from the Software Center and enable the relevant Samba services. 
 
 ``` bash
 # Budgie/GNOME
 sudo eopkg install nautilus-share
+
+# KDE
+sudo eopkg install kdenetwork-filesharing
 
 # MATE
 sudo eopkg install caja-extensions
@@ -59,7 +62,7 @@ sudo eopkg install caja-extensions
 
 In order to load the newly installed file manager plugin, the user will need to log out of the current desktop session and log back in to a new desktop session, at which point the plugin in question will be ready for use.
 
-Simply right-clicking a folder will now show an option to share it.
+Simply right-clicking a folder and clicking *properties* will now show an option to share it.
 
 ### CLI - using the net usershare command
 
