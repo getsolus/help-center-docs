@@ -1,6 +1,6 @@
 +++
 title = "Samba File Sharing"
-lastmod = "2018-05-12T13:30:00+02:00"
+lastmod = "2018-05-19T15:07:07+03:00"
 +++
 # Samba file sharing
 
@@ -161,11 +161,8 @@ If *testparm* didn't spot any problems, restart Samba with `sudo systemctl resta
 
 Apart from the aforementioned `man smb.conf`, wiki.samba.org is your friend, specifically:
 
-[https://wiki.samba.org/index.php/Setting_up_a_Share_Using_POSIX_ACLs]
-
-and
-
-[https://wiki.samba.org/index.php/Setting_up_Samba_as_a_Standalone_Server]
+- https://wiki.samba.org/index.php/Setting_up_a_Share_Using_POSIX_ACLs
+- https://wiki.samba.org/index.php/Setting_up_Samba_as_a_Standalone_Server
 
 The default Solus Samba configuration is patterned on the above.
 
