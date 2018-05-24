@@ -1,6 +1,6 @@
 +++
 title = "Printer Compatibility"
-lastmod = "2018-04-16T22:21:49+02:00"
+lastmod = "2018-05-24T23:03:10+02:00"
 +++
 # Printer Compatibility
 
@@ -15,7 +15,17 @@ The following dialogs will guide you to choose the appropriate driver for your d
 
 ### Brother
 
+- Brother DCP-1510
+- Brother DCP-7060D
+- Brother HL-1210W
+- Brother HL-2220
+- Brother HL-L2315DW
+- Brother MFC-L2700DW
 - Brother MFC-L2740DW
+- Brother MFC-J480DW
+
+**For newer Brother scanners you have to install the `brscan4` package.**
+
 
 ### Epson
 
@@ -27,3 +37,4 @@ The following dialogs will guide you to choose the appropriate driver for your d
 ### HP
 
 **If you own an HP printer you should install the `hplip` package in order to get your device working.**
+
