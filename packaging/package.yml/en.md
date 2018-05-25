@@ -1,6 +1,6 @@
 +++
 title = "Package.yml"
-lastmod = "2018-04-19T19:31:14+02:00"
+lastmod = "2018-05-25T06:52:28+02:00"
 +++
 # Package.yml
 
@@ -70,6 +70,7 @@ Key Name | Type | Description
 **autodep** | `bool` | Set to `no` to disable automatic binary dependency resolution at build time
 **emul32** | `bool` | Set to `yes` to enable an `-m32` build (32-bit libs)
 **libsplit** | `bool` | Set to `no` to disable splitting of libraries into `devel` sub-packages
+**optimize** | `list` | Specify preset keys to modify compiler and linker flags during build. You can learn more [here](here](/articles/packaging/package.yml/en/#optimize-values).
 **builddeps** | `list` | Specify build dependencies for the package. You can learn more [here](/articles/packaging/packaging-practices/en/#build-dependencies).
 **rundeps** | `dict(s)` | Specify further runtime dependencies for the packages. You can learn more [here](/articles/packaging/packaging-practices/en/#runtime-dependencies).
 **replaces** | `dict(s)` | Replace one package with another, used when renaming or deprecating packages for clean upgrade paths
@@ -85,6 +86,20 @@ Step Name | Description
 **build** | Use this step to run the build portion, i.e. `make`
 **install** | This is where you should install the files into the final packaging directory, i.e. `make install`
 **check** | There is where tests / checking should occur, i.e. `make check`
+
+## Optimize values
+
+One or more optimize values can be specified in a list with the optimize key in the `package.yml` file. Several values can override or conflict with each other and should be used only where they provide a performance benefit, or fix a bug in the package or build.
+
+Optimize Value | Description
+---- | ----
+**speed** | Optimise the package for performance `-O3` plus other flags.
+**size** | Optimize the package build to minimize size `-Os`. Not supported with clang.
+**no-bind-now** | Configure the package to disable certain flags, where RELRO is unsupported.
+**no-symbolic** | Disable `-Wl,-Bsymbolic-functions` linker flag.
+**unroll-loops** | Enable `-funroll-loops`. Use this sparingly, only when it provides proven benefit.
+**thin-lto** | Enable Thin Link Time Optimization `-flto=thin` with the `ld.gold` linker.
+**lto** | Enable Link Time Optimization `-flto`.
 
 ## Macros
 
@@ -145,8 +160,10 @@ Macro | Description
 ---- | ----
 **%python_setup** | Runs the build portion of a setup.py using python2.
 **%python_install** | Runs the install portion of a setup.py, to the appropriate root, using python2.
+**%python_compile** | Compiles `*.py` files using python2. This is only useful where the build doesn't compile them already (indicated by availability of `*.pyc` files).
 **%python3_setup** | Runs the build portion of a setup.py using python3.
 **%python3_install** | Runs the install portion of a setup.py, to the appropriate root, using python3.
+**%python3_compile** | Compiles `*.py` files using python3. This is only useful where the build doesn't compile them already (indicated by availability of `*.pyc` files).
 
 ### Ruby Actionable Macros
 
@@ -161,6 +178,7 @@ Macro | Description
 ---- | ----
 **%qmake** | Runs qmake for Qt5 with the appropriate make flags.
 **%qmake4** | Runs qmake for Qt4, as well as adding the necessary MOC, RCC, and UIC flags since those Qt4 executables end in -qt4.
+**%qml_cache** | Compiles `*.qml` files into `*.qmlc` so they are compiled ahead of time.
 
 ### Waf Actionable Macros
 
