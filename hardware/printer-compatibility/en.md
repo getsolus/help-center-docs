@@ -1,6 +1,6 @@
 +++
 title = "Printer Compatibility"
-lastmod = "2018-06-03T19:56:54+02:00"
+lastmod = "2018-06-18T23:59:13+02:00"
 +++
 # Printer Compatibility
 
@@ -21,14 +21,14 @@ The following dialogs will guide you to choose the appropriate driver for your d
 - Brother HL-1210W
 - Brother HL-2220
 - Brother HL-L2315DW
-- Brother MFV-J220
+- Brother MFC-J220
 - Brother MFC-L2700DW
 - Brother MFC-L2740DW
 - Brother MFC-J480DW
 
 **For newer Brother scanners you have to install the `brscan4` package.**
 
-**Should your printer not be on this list you can request your Printer here [Link](https://dev.solus-project.com/T83)**
+Should your printer not be on this list you can request your Printer here for inclusion [Link](https://dev.solus-project.com/T83)
 
 ### Epson
 
