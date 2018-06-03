@@ -1,6 +1,6 @@
 +++
 title = "Printer Compatibility"
-lastmod = "2018-06-03T19:55:10+02:00"
+lastmod = "2018-06-03T19:56:54+02:00"
 +++
 # Printer Compatibility
 
@@ -28,7 +28,7 @@ The following dialogs will guide you to choose the appropriate driver for your d
 
 **For newer Brother scanners you have to install the `brscan4` package.**
 
-**Should your printer not be on this list you can request your Printer here [Link](https://dev.solus-project.com/T83)
+**Should your printer not be on this list you can request your Printer here [Link](https://dev.solus-project.com/T83)**
 
 ### Epson
 
