@@ -1,6 +1,6 @@
 +++
 title = "Packaging Practices"
-lastmod = "2017-06-01T13:45:24+03:00"
+lastmod = "2018-06-18T20:37:47+03:00"
 +++
 # Packaging Practices
 
@@ -16,8 +16,16 @@ We request you use (where possible) the upstream source name for your package. S
 
 `pkgname-$subpackage`
 
-Subpackages are fully automatic with `ypkg`, and are created based on file patterns. All subpackages automatically depend on the main package, to ensure correct operation. In the following explanations, `$lib` is used to refer to the host 
-library directory, i.e. `lib` or `lib64` (or `lib32` on `emul32` builds)
+Subpackages are fully automatic with `ypkg`, and are created based on file patterns. All subpackages automatically depend on the main package, to ensure correct operation. In the following explanations, `$lib` is used to refer to the host library directory, i.e. `lib` or `lib64` (or `lib32` on `emul32` builds).
+
+For the libraries / packages of the following programming languages, you should typically use the following template for it.
+
+Language | Prefix | Example
+---- | ---- | ----
+Haskell | `haskell-` | `text-binary` would be `haskell-text-binary`
+Perl | `perl-` | `algorithm-diff` would be `perl-algorithm-diff`
+Python | `python-` | `wikipedia` would be `python-wikipedia` **even if only Python3 is enabled**
+Ruby | `ruby-` | `gssapi` would be `ruby-gssapi`
 
 ### The devel subpackage
 
@@ -85,6 +93,12 @@ You can generate a package.yml by using `common/Scripts/yauto.py URL_TO_ARCHIVE`
 ``` bash
 alias fetchYml="$HOME/repository/common/Scripts/yauto.py"
 ```
+
+## Licenses
+
+All new packages or updates to packages should abide by the [SPDX 3.x](https://spdx.org/licenses/) definitions, with the following policy:
+
+- `-only` licenses, such as `GPL-2.0-only`, should **only be declared** as such when the upstream explicitly states "only", otherwise it should always be `-or-later`.
 
 ## Patching / extra files
 
