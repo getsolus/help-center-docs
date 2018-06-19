@@ -1,13 +1,16 @@
 +++
 title = "Package Inclusion Policy"
-lastmod = "2017-07-22T15:06:14+03:00"
+lastmod = "2018-06-19T19:40:55+03:00"
 +++
 # Package Inclusion Policy
+
+## Criteria
 
 This policy sets forth the criteria for a package to be accepted for inclusion into the Solus repositories.
 
 - 2-Distro Waiver:
- - If the software appears in Debian and/or Ubuntu, Fedora, and openSUSE, in the **currently active, core** repositories, the maintainer is permitted to waive some entry requirements (This does not apply to software license,  legality or known-insecure software. Additionally this cannot be used to bypass the server rules.). PPAs, OBS projects outside of the **openSUSE**: namespace, or Arch Linux, do **NOT** add any weight to a request.
+ - If the software appears in Debian and/or Ubuntu, Fedora, and openSUSE, in the **currently active, core** repositories, team members are permitted to waive **some** entry requirements. PPAs, OBS projects outside of the **openSUSE**: namespace, or Arch Linux, do **NOT** add any weight to a request.
+ - The waiver shall only be used by team members to permit entry of software that would otherwise not be permitted. It shall not be (ab)used in conjunction with package requests to forcibly add new software to the repositories that otherwise has no relation or value-add to Solus and the project goals. Under no circumstances does the waiver apply where such package is not explicitly (re-)distributable, is known to be insecure, of questionable legal status / is used for obvious illegal purposes, or bypasses our server rule.
 - Software Age:
  - DOA (dead-on-arrival) packages are generally rejected from Solus. However, they may be included at the discretion of the project, if they provide unique functionality. In addition, this software **MUST** comply with the  2-Distro Waiver.
  - Projects with no tags/tarballs which lack traction, may be frozen until a suitable release is made. Tagging releases is an indicator for good release engineering practices.
@@ -21,7 +24,7 @@ This policy sets forth the criteria for a package to be accepted for inclusion i
  - Likewise, when a new package offers a better alternative to an **existing** package, we should look to replace the old one with the new one, to ensure the repository is always deduplicating.
 - Explicitly Redistributable:
  - Software under a free software or open source software license, or license text which explicitly states that it is **permissible** to redistribute the software.
- - For anything that cannot be redistributed by Solus, there is the possibility for them to be provided as a Flatpak, for Third Party repository inclusion. These items should then fetch only at installation time, and not contain non distributable components.
+ - For anything that cannot be redistributed by Solus, there is the possibility for them to be provided as a Flatpak, for Third Party repository inclusion, however the Solus project is not. These items should then fetch only at installation time, and not contain non distributable components.
  - Solus supports both VCS (currently only git, this will expand) and traditional software sources (such as tarballs) for packages, equally.
  - Unless **absolutely unavoidable**, the sources for a package should be source, and not **binary, prebuilt** sources. Exceptions may be made in rare cases, such as stage1 bootstrap for a compiler, or requires custom components otherwise impossible to provide in Solus (patched libraries, etc.)
 - Server software:
@@ -31,3 +34,7 @@ This policy sets forth the criteria for a package to be accepted for inclusion i
 - Stack Complexity:
  - Certain requests may tick all the boxes, but introduce a level of complexity or require a level of engagement not possible to balance for the packaging team. Under certain situations, a request will be frozen until it has a dedicated maintainer.
  - This extends to requests for full desktop environments. However, this does not extend to minor components like drop-in window managers or panels separate of a dependent stack (i.e. Awesome WM, tint2, etc.)
+
+## Rejection
+
+Solus team members reserve the right to permanently reject a package request without the need for further discussion once the rejection is issued. The limited time of contributors should be considered and respected, instead of dragging out and 'necromancing' old issues in a vain attempt to force inclusion of previously rejected software. In the event of any policy change, existing/expired package requests will NOT be reevaluated under new criteria as this would lead to an exponential growth in work upon every policy change, and is physically impossible to handle for a project of *any* size.
