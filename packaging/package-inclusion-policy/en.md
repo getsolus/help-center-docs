@@ -4,9 +4,9 @@ lastmod = "2018-06-19T19:40:55+03:00"
 +++
 # Package Inclusion Policy
 
-## Criteria
+This policy sets forth the criteria for a package to be accepted for inclusion into the Solus repositories or rejected.
 
-This policy sets forth the criteria for a package to be accepted for inclusion into the Solus repositories.
+## Criteria
 
 - 2-Distro Waiver:
  - If the software appears in Debian and/or Ubuntu, Fedora, and openSUSE, in the **currently active, core** repositories, team members are permitted to waive **some** entry requirements. PPAs, OBS projects outside of the **openSUSE**: namespace, or Arch Linux, do **NOT** add any weight to a request.
