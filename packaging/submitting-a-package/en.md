@@ -1,6 +1,6 @@
 +++
 title = "Submitting the Package"
-lastmod = "2018-03-03T03:28:16-05:00"
+lastmod = "2018-06-21T21:07:46+03:00"
 +++
 # Submitting the Package
 
@@ -33,7 +33,10 @@ Prior to submitting a patch, please ensure you are checking the following:
 - There is not an existing patch already provided by others.
 - If you are submitting a patch for the inclusion of software in the repo, that the package your patch pertains to has a corresponding package request that is **accepted for inclusion** or is a dependency of a package that has been accepted into the repository.
 
-Please **refrain from submitting a patch** for a package that is yet to be accepted for inclusion by a member of the Triage Team. We welcome you to politely reach out via the package request task or [IRC](/articles/contributing/getting-involved/en) if you deem the review of the request to be time-sensitive in nature.
+Please refrain from submitting a patch for the following instances:
+
+- For a package that is yet to be accepted for inclusion by a member of the Triage Team. We welcome you to politely reach out via the package request task or [IRC](/articles/contributing/getting-involved/en) if you deem the review of the request to be time-sensitive in nature.
+- If your patch is a Work In Progress / WIP. Completed patches or patches which have a request for comments are accepted, however for request for comments please ensure your patch title contains `[RFC]`. WIP patches just clutter Differential and make patch review by the team more time consuming and introduces unnecessary work.
 
 ## Setting up Arcanist
 
