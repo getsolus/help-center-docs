@@ -1,6 +1,6 @@
 +++
 title = "Requesting a Package"
-lastmod = "2018-06-25T16:28:23+02:00"
+lastmod = "2018-06-25T16:32:44+02:00"
 +++
 
 # Requesting A New Package
@@ -24,6 +24,7 @@ Please provide as much of the following information as possible:
 Please put this information into a Bug Report (create via "Create Task") on our Developer Portal via the Maniphest section on https://dev.solus-project.com/
 
 
+
 # Requesting A Package Update 
 
 Packages are normaly regularly updated through the package Maintainers, however if we are missing a package update you can let us know using our Task Tracker.
@@ -36,12 +37,7 @@ Please provide the following information:
 - Short explenation text
   - Changelog
 - Link to source tarball/zip file
-<<<<<<< HEAD
   - master.zip files **are not permitted**. We require versioned tarballs, for example: "1.2.3.tar.gz".
 - Use the tag **Software** for tagging your update request
-=======
- - master.zip files **are not permitted**. We require versioned tarballs, for example: "1.2.3.tar.gz".
-- Use the tag *Software*
->>>>>>> 70ae7c3aad3a7f1aaa95ce03b767ba2257b54082
 
 Please put this information into a Bug Report (create via "Create Task") on our Developer Portal via the Maniphest section on https://dev.solus-project.com/
