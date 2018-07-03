@@ -1,6 +1,6 @@
 +++
 title = "Requesting a Package Update"
-lastmod = "2018-07-03T15:21:06+02:00"
+lastmod = "date --iso-8601=seconds"
 +++
 # Requesting A Package Update 
 
@@ -10,10 +10,11 @@ Packages updates are typically provided by community or dedicated package mainta
 
 Please provide the following information:
 
-- Title of Task: Update $packagename to $version. Example: 'Update nano to 2.9.7'
+- Title of Task: 'Update $packagename to $version' Example: `Update nano to 2.9.7`
 - Description: Explanation as to the value-add of updating this package. 
 - Link to source tarball/zip file
 - master.zip files **are not permitted**. We require versioned tarballs, for example: "1.2.3.tar.gz".
 - Use the tag **Software** for tagging your update request
 
 Please put this information into a new [task](https://dev.solus-project.com/maniphest/task/edit/form/1/)
+
