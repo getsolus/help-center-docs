@@ -1,6 +1,6 @@
 +++
 title = "Requesting a Package Update"
-lastmod = "2018-07-03T15:35:05+02:00"
+lastmod = "2018-07-03T16:10:32+02:00"
 +++
 # Requesting A Package Update 
 
@@ -12,8 +12,7 @@ If there isn't an existing request, you can use the template below for requestin
 
 Please provide the following information:
 
-- Title of Task: `Update $packagename to $version` 
-  Example: `Update nano to 2.9.7`
+- Title of Task: `Update $packagename to $version`  Example: `Update nano to 2.9.7`
 - Description: Explanation as to the value-add of updating this package. 
 - Link to source tarball/zip file
 - master.zip files **are not permitted**. We require versioned tarballs, for example: "1.2.3.tar.gz".
