@@ -1,6 +1,6 @@
 +++
 title = "Package.yml"
-lastmod = "2018-05-25T06:52:28+02:00"
+lastmod = "2018-07-03T12:32:00+02:00"
 +++
 # Package.yml
 
@@ -70,7 +70,7 @@ Key Name | Type | Description
 **autodep** | `bool` | Set to `no` to disable automatic binary dependency resolution at build time
 **emul32** | `bool` | Set to `yes` to enable an `-m32` build (32-bit libs)
 **libsplit** | `bool` | Set to `no` to disable splitting of libraries into `devel` sub-packages
-**optimize** | `list` | Specify preset keys to modify compiler and linker flags during build. You can learn more [here](here](/articles/packaging/package.yml/en/#optimize-values).
+**optimize** | `list` | Specify preset keys to modify compiler and linker flags during build. You can learn more [here](/articles/packaging/package.yml/en/#optimize-values).
 **builddeps** | `list` | Specify build dependencies for the package. You can learn more [here](/articles/packaging/packaging-practices/en/#build-dependencies).
 **rundeps** | `dict(s)` | Specify further runtime dependencies for the packages. You can learn more [here](/articles/packaging/packaging-practices/en/#runtime-dependencies).
 **replaces** | `dict(s)` | Replace one package with another, used when renaming or deprecating packages for clean upgrade paths
