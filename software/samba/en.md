@@ -1,10 +1,10 @@
 +++
 title = "Samba File Sharing"
-lastmod = "2018-07-4T13:37:00+02:00"
+lastmod = "2018-07-4T16:09:00+02:00"
 +++
 # Samba file sharing
 
-Samba is the standard Windows interoperability suite of programs for Linux and Unix. Among other things, it allows Linux and Windows users to share files via the Common Internet File System (CIFS) protocol.
+Samba is the standard Windows interoperability suite of programs for Linux and Unix. Among other things, it allows Linux, macOS and Windows users to share files via the Server Message Block (SMB) protocol.
 
 ## Samba on Solus
 
