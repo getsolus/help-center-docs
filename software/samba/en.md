@@ -19,7 +19,7 @@ To enable convenient file-sharing on Solus, we maintain a Solus-specific Samba c
 
 As of Samba 4.7.x, Solus disables the old, deprecated and insecure original SMB1/CIFS protocol by default.
 
-For more information on this choice, please visit http://aka.ms/stopusingsmb1
+For more information on this choice, please read [this post regarding SMB1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/).
 
 ### How to start/stop Samba
 
@@ -174,7 +174,7 @@ The default Solus Samba configuration is patterned on the above.
 
 ## Enabling legacy SMB1/CIFS protocol support
 
-**CAUTION:** *Note that enabling SMB1/CIFS is* _**NOT**_ *recommended unless the security implications of doing so are properly understood.*
+**CAUTION:** Enabling SMB1/CIFS is **not** recommended unless the security implications of doing so are properly understood.
 
 Enabling legacy SMB1/CIFS protocol support is as simple as adding (some or all of) the following configuration parameters to `/etc/samba/smb.conf`
 
@@ -202,9 +202,6 @@ Enabling legacy SMB1/CIFS protocol support is as simple as adding (some or all o
     # Allow access to shares on this Samba instance ONLY via SMB1
     server max protocol = NT1
 ```
-
-
-As previously mentioned, please visit http://aka.ms/stopusingsmb1 for more information on the security implications of enabling SMB1.
 
 Additionally, the user can choose to enable the *nmb.service*, which is a server that understands and can reply to NetBIOS over IP name service requests, like those produced by SMB/CIFS clients such as Windows 95/98/ME, Windows NT, Windows 2000, Windows XP and LanManager clients. It also participates in the browsing protocols which make up the Windows "Network Neighborhood" view.
 
