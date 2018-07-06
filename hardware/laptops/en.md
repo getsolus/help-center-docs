@@ -1,6 +1,6 @@
 +++
 title = "Laptop Compatibility"
-lastmod = "2018-04-16T22:21:49+02:00"
+lastmod = "2018-07-06T14:48:00+01:00"
 +++
 # Laptop Compatibility
 
@@ -83,6 +83,10 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Dell Precision 7520
 - Dell Vostro 1700
 - Dell XPS 15 9560
+
+### eMachines
+
+- eMachines E728
 
 ### Fujitsu
 

@@ -1,6 +1,6 @@
 +++
 title = "Wireless Chipsets Compatibility"
-lastmod = "2018-01-06T02:09:20+03:00"
+lastmod = "2018-07-06T14:54:00+01:00"
 +++
 # Wireless Chipsets Compatibility
 
@@ -11,6 +11,7 @@ This list should not suggest that *only*- such devices listed below are compatib
 ## Atheros
 
 - Atheros AR242x / AR542x
+- Atheros AR5B97
 - Atheros AR8161
 - Atheros AR9285
 - Atheros AR9287
