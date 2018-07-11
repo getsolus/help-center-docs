@@ -1,6 +1,6 @@
 +++
 title = "Boot Management"
-lastmod = "2017-09-22T20:12:14+03:00"
+lastmod = "2018-07-11T14:13:22+02:00"
 +++
 # Boot Management
 
@@ -27,6 +27,9 @@ The following command will set the timeout of the boot loader so that it appears
 ```
 sudo clr-boot-manager set-timeout 5 && sudo clr-boot-manager update
 ```
+
+Should you be using grub please do the following: Open `/etc/default/grub` as root with your choice of editor, find the option `GRUB_TIMEOUT=X` set `X` to a value you wish (X=seconds). Update grub with the command `update-grub`
+
 
 ## Installing an alternative kernel
 
