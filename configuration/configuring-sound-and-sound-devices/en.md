@@ -1,6 +1,6 @@
 +++
 title = "Configuring Sound and Sound Devices"
-lastmod = "2017-07-08T17:51:19+03:00"
+lastmod = "2018-07-12T12:08:05+02:00"
 +++
 # Configuring Sound and Sound Devices
 
@@ -18,9 +18,9 @@ You can access sound settings via the Sound applet in Raven, the Notification an
 
 {{< altimg "raven-sound-applet.jpg" "help-center/configuration/configuring-sound-and-sound-devices/" >}}
 
-You can access further sound settings, including individual application volume controls, and a simple speaker test by opening the Budgie Menu and then clicking on "Sound" in the System Settings category.
+You can access further sound settings, including individual application volume controls, and a simple speaker test by opening the Settings Menu and then clicking on "Sound" in the System Settings category.
 
-{{< altimg "sound-settings.jpg" "help-center/configuration/configuring-sound-and-sound-devices/" >}}
+{{< altimg "budgie-sound-settings.jpg" "help-center/configuration/configuring-sound-and-sound-devices/" >}}
 
 ## GNOME
 
