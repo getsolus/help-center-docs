@@ -1,6 +1,6 @@
 +++
 title = "Repository Management"
-lastmod = "2017-07-22T15:15:45+03:00"
+lastmod = "2018-07-19T08:40:00+01:00"
 +++
 # Repository Management
 
@@ -17,7 +17,7 @@ sudo eopkg add-repo Name Url
 For example:
 
 ``` bash
-sudo eopkg add-repo Example http://example.com/repo/eopkg-index.xml.gz
+sudo eopkg add-repo Example https://example.com/repo/eopkg-index.xml.gz
 ```
 
 **Note:** This does not enable the repository.

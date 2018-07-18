@@ -1,6 +1,6 @@
 +++
 title = "Java"
-lastmod = "2018-01-04T06:24:56+03:00"
+lastmod = "2018-07-19T08:40:00+01:00"
 +++
 # Java
 
@@ -14,7 +14,7 @@ You can set up Java by following the instructions below:
 
 ## JRE
 
-Grab the Java Runtime Environment (JRE) as `.tar.gz` from the [Oracle Download Page](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html).
+Grab the Java Runtime Environment (JRE) as `.tar.gz` from the [Oracle Download Page](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html).
 
 Extract JRE and move it to /opt:
 
