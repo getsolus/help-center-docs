@@ -1,6 +1,6 @@
 +++
 title = "Wireless Chipsets Compatibility"
-lastmod = "2018-07-06T14:54:00+01:00"
+lastmod = "2018-07-19T09:11:00+01:00"
 +++
 # Wireless Chipsets Compatibility
 
@@ -45,6 +45,10 @@ This list should not suggest that *only*- such devices listed below are compatib
 - Intel PRO/Wireless 4965 AG or AGN
 - Intel Ultimate N WiFi Link 5300
 - Intel WiFi Link 5100
+
+## Ralink
+
+- Ralink RT5390
 
 ## Realtek
 
