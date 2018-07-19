@@ -1,10 +1,10 @@
 +++
 title = "iOS Support"
-lastmod = "2017-05-16T16:50:16+03:00"
+lastmod = "2018-07-19T08:40:00+01:00"
 +++
 # iOS Support
 
-Historically, iOS support on Linux has been quirky and typically done via partial implementations, such as [libimobiledevice](http://www.libimobiledevice.org/) and [libgpod](http://www.gtkpod.org/libgpod/). As software that Solus provides 
+Historically, iOS support on Linux has been quirky and typically done via partial implementations, such as [libimobiledevice](https://www.libimobiledevice.org/) and [libgpod](http://www.gtkpod.org/libgpod/). As software that Solus provides 
 leverages these implementations, it is likely that if you have an Apple device running an iOS version newer than 4.3.x, you will not be able to utilize it for the synchronizing of content such as music and video.
 
 ## Checking Compatibility 

@@ -1,6 +1,6 @@
 +++
 title = "Package.yml"
-lastmod = "2018-07-03T12:32:00+02:00"
+lastmod = "2018-07-19T08:40:00+01:00"
 +++
 # Package.yml
 
@@ -55,7 +55,7 @@ Key Name | Type | Description
 **name** | `string` | The name of the package. This is also used as the base of all sub-package names. Unless unavoidable, this should match the upstream name
 **version** | `string` | The version of the currently packaged software. This is taken from the tarball in most cases.
 **release** | `integer` | Specifies the current release number. Updates in the package number are based on this `release` number, *not* the `version` number. As such, to release an update to users, this number must be incremented by one.
-**license** | `string(s)` | Valid upstream license(s). Try to ensure these use [SPDX identifiers](http://spdx.org/licenses/).
+**license** | `string(s)` | Valid upstream license(s). Try to ensure these use [SPDX identifiers](https://spdx.org/licenses/).
 **source** | `dict(s)` | Upstream source location (i.e. tarball), with the valid `sha256sum` as a value
 **component** | `string` | Component / group of packages this package belongs to. Check available components via `eopkg lc`
 **summary** | `string` | Brief package summary, or display name
