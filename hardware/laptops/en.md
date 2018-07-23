@@ -1,6 +1,6 @@
 +++
 title = "Laptop Compatibility"
-lastmod = "2018-07-06T14:48:00+01:00"
+lastmod = "2018-07-23T17:02:48+02:00"
 +++
 # Laptop Compatibility
 
@@ -52,6 +52,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Asus N61Jv
 - Asus Pro50SR
 - Asus UX305FA
+- Asus UX310UA
 - Asus X200MA
 - Asus X201EV
 - Asus X540L
