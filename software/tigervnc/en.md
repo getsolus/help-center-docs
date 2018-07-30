@@ -1,11 +1,13 @@
 +++
 title = "Tigervnc"
-lastmod = "2018-07-30T16:28:41+02:00"
+lastmod = "2018-07-30T16:38:18+02:00"
 +++
 #TigerVNC
+
 TigerVNC is a high-performance implementation of the VNC protocol, which allows you to control/view desktops remotely over the internet.
 
 ##Installation
+
 TigerVNC can be installed either from the Software Center or via terminal
 
 ``` bash
@@ -16,9 +18,18 @@ sudo eopkg install tigervnc
 
 ###Initial setup of vncserver
 
-For the initial setup of vncserver for TigerVNC you have to open a terminal and run `vncserver`, in this setup you will be asked for setting up a **password** and if you'd like to setup a **view-only mode**, please do it accordingly your desire.
+For the initial setup of vncserver for TigerVNC you have to open a terminal and run 
 
-After the initial setup you have to stop the vncserver process, for this please type inside the terminal `vncserver -kill :1`
+``` bash
+vncserver
+```
+While this setup you will be asked for setting up a **password** and if you'd like to setup a **view-only mode**, please do it accordingly your desire.
+
+After the initial setup you have to stop the vncserver process, for this please type inside the terminal 
+
+``` bash
+vncserver -kill :1
+```
 
 ###Configuration for your desktops
 
@@ -64,6 +75,6 @@ mate-session &
 mate-panel &
 ```
 
-###èöasma
+###Plasma
 
 Plasma desktop is not supported at the moment
