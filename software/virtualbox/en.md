@@ -1,6 +1,6 @@
 +++
 title = "VirtualBox"
-lastmod = "2018-04-19T19:30:00+02:00"
+lastmod = "2018-04-27T17:30:00+02:00"
 +++
 # VirtualBox
 
@@ -83,7 +83,7 @@ If you want to use USB 2.0 or 3.0 in your virtual machine (and your hardware sup
 Note: Access to USB is granted by the user group `vboxusers` on the **Host** operating system. You can add yourself to this group with the following command
 
 ``` bash
-sudo usermod -aG vboxusers `whoami`
+sudo gpasswd -a $USER vboxusers
 ```
 
 #### Shared Folders
@@ -95,5 +95,5 @@ Access to the shared folders is only granted to the user group `vboxsf` on the *
 
 Execute these commands to set the permissions and add yourself to the group
 ``` bash
-sudo usermod -aG vboxsf `whoami`
+sudo gpasswd -a $USER vboxsf
 ```
