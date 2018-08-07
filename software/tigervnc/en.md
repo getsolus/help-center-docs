@@ -77,4 +77,4 @@ mate-panel &
 
 ###Plasma
 
-Plasma desktop is not supported at the moment
+Plasma desktop is not supported at the moment. Please use the software `x11vnc` for vncserver support on Plasma.
