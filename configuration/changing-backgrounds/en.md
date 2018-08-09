@@ -1,6 +1,6 @@
 +++
 title = "Changing Background"
-lastmod = "2017-06-05T14:57:51+03:00"
+lastmod = "2018-07-11T23:40:10+02:00"
 +++
 # Changing Background
 
@@ -12,15 +12,15 @@ To change the desktop background in Budgie, simply right click anywhere on the d
 
 {{< altimg "budgie-background-right-click.jpg" "help-center/configuration/changing-backgrounds/" >}}
 
-Alternatively, you can open the Budgie Menu and then click "Background" in the System Settings category.
+Alternatively, you can open the Settings Menu and then click "Background" in the System Settings category.
 
 You will have two options, Background and Lock Screen. Click "Background".
 
-{{< altimg "background-section.jpg" "help-center/configuration/changing-backgrounds/" >}}
+{{< altimg "budgie-background-section.jpg" "help-center/configuration/changing-backgrounds/" >}}
 
 In this section, you can choose between Solus wallpapers, pictures in your Pictures folder, or solid colors. After choosing, click "Select".
 
-{{< altimg "background-selection.jpg" "help-center/configuration/changing-backgrounds/" >}}
+{{< altimg "budgie-background-selection.jpg" "help-center/configuration/changing-backgrounds/" >}}
 
 ## GNOME
 
