@@ -66,7 +66,6 @@ You **must** reboot your virtual machine to load the newly installed modules
 
 ## Extra configuration
 
-
 #### USB Controller
 If you want to use USB 2.0 or 3.0 in your virtual machine (and your hardware supports it), you have to install the [extension pack](https://www.virtualbox.org/manual/ch01.html#intro-installing).
 
