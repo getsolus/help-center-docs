@@ -26,11 +26,11 @@ sudo rm /opt/minecraft/Minecraft.tar.gz
 
 #### Now we can create a desktop icon for it:
 
-On Solus Budgie or Gnome:
+On Solus Budgie or GNOME:
 ``` bash
 sudo gedit /usr/share/applications/minecraft.desktop
 ```
-On Solus Mate:
+On Solus MATE:
 ``` bash
 sudo pluma /usr/share/applications/minecraft.desktop
 ```
