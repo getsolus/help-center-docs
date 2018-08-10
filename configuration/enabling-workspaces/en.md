@@ -1,6 +1,6 @@
 +++
 title = "Enabling Workspaces"
-lastmod = "2017-07-08T17:51:19+03:00"
+lastmod = "2018-08-10T16:37:03+02:00"
 +++
 # Enabling Workspaces
 
@@ -19,7 +19,7 @@ Alternatively, you can open the Budgie Menu and then click "Bottom Panel" in the
 {{< altimg "budgie-panel-menu.jpg" "help-center/configuration/enabling-workspaces/" >}}
 
 
-Fine `Add applet` and click the `+` button. This will open menu to choose different applets, scroll down until you find `Workspace Switcher`, select it and click `Add Applet`
+Find `Add applet` and click the `+` button. This will open menu to choose different applets, scroll down until you find `Workspace Switcher`, select it and click `Add Applet`
 
 {{< altimg "budgie-workspace-applet.jpg" "help-center/configuration/enabling-workspaces/" >}}
 
@@ -37,7 +37,7 @@ To view these shortcuts open the Keyboard application and scroll to the Navigati
 
 ### Workspaces Configuration
 
-There are 4 workspaces available in Budgie by default. For adding an new Workspace, you have to click on the `+` button. 
+There are 4 workspaces available in Budgie by default. For adding an new Workspace, click on the `+` button. 
 
 If you wish to remove or rename your workspace, right click on the desired workspace and select rename or remove. 
 
