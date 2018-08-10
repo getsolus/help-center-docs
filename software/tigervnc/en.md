@@ -1,24 +1,24 @@
 +++
 title = "Tigervnc"
-lastmod = "2018-07-30T16:38:18+02:00"
+lastmod = "2018-08-10T17:47:06+02:00 "
 +++
-#TigerVNC
+# TigerVNC
 
 TigerVNC is a high-performance implementation of the VNC protocol, which allows you to control/view desktops remotely over the internet.
 
-##Installation
+## Installation
 
-TigerVNC can be installed either from the Software Center or via terminal
+TigerVNC can be installed either from the Software Center or via terminal. The terminal command to run it is:
 
 ``` bash
 sudo eopkg install tigervnc
 ```
 
-##Usage 
+## Usage 
 
-###Initial setup of vncserver
+### Initial setup of vncserver
 
-For the initial setup of vncserver for TigerVNC you have to open a terminal and run 
+For the initial setup of vncserver for TigerVNC you have to open a terminal and run: 
 
 ``` bash
 vncserver
@@ -31,11 +31,11 @@ After the initial setup you have to stop the vncserver process, for this please 
 vncserver -kill :1
 ```
 
-###Configuration for your desktops
+### Configuration for your desktops
 
 Every Desktop needs a different Setup, you find the vncserver config under`$HOME/.vnc/xstartup` open the file with your desired editor and change bash script inside the file with the following information for your Desktop.
 
-###Budgie
+### Budgie
 
 ``` bash
 #!/bin/bash
@@ -48,7 +48,7 @@ budgie-wm &
 budgie-panel &
 ```
 
-###Gnome Shell
+### GNOME
 
 ``` bash
 #!/bin/bash
@@ -63,7 +63,7 @@ gnome-settings-daemon &
 metacity &
 nautilus &
 ```
-###MATE
+### MATE
 
 ``` bash
 #!/bin/bash
@@ -75,6 +75,6 @@ mate-session &
 mate-panel &
 ```
 
-###Plasma
+### Plasma
 
 Plasma desktop is not supported at the moment. Please use the software `x11vnc` for vncserver support on Plasma.
