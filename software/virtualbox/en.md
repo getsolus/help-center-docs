@@ -1,4 +1,4 @@
-get i   +++
++++
 title = "VirtualBox"
 lastmod = "2018-08-10T16:54:07+02:00"
 +++
@@ -67,17 +67,6 @@ You **must** reboot your virtual machine to load the newly installed modules
 ## Extra configuration
 
 
-## Troubleshooting
-
-{{< altimg "vbox-kernel.png" "help-center/software/virtualbox/" >}}
-
-The Error `Kernel driver not installed (rc=-1908)` may occur if
-
-- The computer was not restarted before launching VirtualBox for the first time
-- The computer is not booted on the latest kernel. Make sure to apply the updates from the Software Center and restart your machine.
-- The wrong VirtualBox package was installed. Please check the instructions just above to install the correct package for your kernel.
-- VirtualBox was manually installed and it conflicts with the version installed from the Solus Repository.
-
 #### USB Controller
 If you want to use USB 2.0 or 3.0 in your virtual machine (and your hardware supports it), you have to install the [extension pack](https://www.virtualbox.org/manual/ch01.html#intro-installing).
 
@@ -98,3 +87,14 @@ Execute these commands to set the permissions and add yourself to the group
 ``` bash
 sudo usermod -aG vboxsf `whoami`
 ```
+
+## Troubleshooting
+
+{{< altimg "vbox-kernel.png" "help-center/software/virtualbox/" >}}
+
+The Error `Kernel driver not installed (rc=-1908)` may occur if
+
+- The computer was not restarted before launching VirtualBox for the first time
+- The computer is not booted on the latest kernel. Make sure to apply the updates from the Software Center and restart your machine.
+- The wrong VirtualBox package was installed. Please check the instructions just above to install the correct package for your kernel.
+- VirtualBox was manually installed and it conflicts with the version installed from the Solus Repository.
