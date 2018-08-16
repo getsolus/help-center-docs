@@ -1,6 +1,6 @@
 +++
 title = "Powerline Shell Prompt"
-lastmod = "2017-05-14T10:49:10+03:00"
+lastmod = "2018-08-16T22:15:40+02:00"
 +++
 # Powerline Shell Prompt
 
@@ -20,5 +20,5 @@ sudo eopkg it powerline powerline-fonts
 Note: this is setup per-user.
 
 ``` bash
-echo "source /usr/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh" >> ~/.bashrc
+echo "source /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh" >> ~/.bashrc
 ```
