@@ -1,9 +1,10 @@
 +++
 title = "Managing your files"
-lastmod = "2018-07-28T10:07:30+02:00"
+lastmod = "2018-08-24T13:16:45+03:00"
 +++
 # Managing your files
 
+You can manage your files with a multitude of file managers available on Solus.
 
 ## Budgie and GNOME
 
