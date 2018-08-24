@@ -1,6 +1,6 @@
 +++
 title = "Tigervnc"
-lastmod = "2018-08-10T17:47:06+02:00 "
+lastmod = "2018-08-10T17:47:06+02:00"
 +++
 # TigerVNC
 
