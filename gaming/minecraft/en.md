@@ -1,6 +1,6 @@
 +++
 title = "Minecraft"
-lastmod = "2017-05-19T13:19:32+03:00"
+lastmod = "2018-07-24T16:22:21+02:00"
 +++
 # Minecraft
 
@@ -10,18 +10,29 @@ lastmod = "2017-05-19T13:19:32+03:00"
 
 ## Installation
 
-Install Java and Minecraft:
+Install Java and download Minecraft:
 
 ``` bash
 sudo eopkg it openjdk-8
 sudo mkdir -p /opt/minecraft
-sudo wget https://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.jar -O /opt/minecraft/Minecraft.jar
+sudo wget https://launcher.mojang.com/download/Minecraft.tar.gz -O /opt/minecraft
 ```
 
-Now we can create a desktop icon for it:
+Extract files and remove old archive:
+``` bash
+sudo tar xvf /opt/minecraft/Minecraft.tar.gz --strip=1 -C /opt/minecraft/
+sudo rm /opt/minecraft/Minecraft.tar.gz
+```
 
+#### Now we can create a desktop icon for it:
+
+On Solus Budgie or GNOME:
 ``` bash
 sudo gedit /usr/share/applications/minecraft.desktop
+```
+On Solus MATE:
+``` bash
+sudo pluma /usr/share/applications/minecraft.desktop
 ```
 
 Paste in the following and save it:
@@ -33,7 +44,7 @@ Type=Application
 Name=Minecraft
 Comment=Minecraft Launcher
 Icon=minecraft
-Exec=java -jar Minecraft.jar
+Exec=/opt/minecraft/minecraft-launcher.sh
 Path=/opt/minecraft/
 NoDisplay=false
 Categories=Game;

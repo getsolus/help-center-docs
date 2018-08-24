@@ -1,6 +1,6 @@
 +++
 title = "VirtualBox"
-lastmod = "2018-04-27T17:30:00+02:00"
+lastmod = "2018-08-10T16:54:07+02:00"
 +++
 # VirtualBox
 
@@ -52,17 +52,6 @@ VirtualBox Host modules for the **linux-lts** kernel | VirtualBox Host modules f
 
 You **must** reboot your computer before running VirtualBox for the first time.
 
-### Troubleshooting
-
-{{< altimg "vbox-kernel.png" "help-center/software/virtualbox/" >}}
-
-The Error `Kernel driver not installed (rc=-1908)` may occur if
-
-- The computer was not restarted before launching VirtualBox for the first time
-- The computer is not booted on the latest kernel. Make sure to apply the updates from the Software Center and restart your machine.
-- The wrong VirtualBox package was installed. Please check the instructions just above to install the correct package for your kernel.
-- VirtualBox was manually installed and it conflicts with the version installed from the Solus Repository.
-
 
 ## Solus as Guest
 
@@ -97,3 +86,14 @@ Execute these commands to set the permissions and add yourself to the group
 ``` bash
 sudo gpasswd -a $USER vboxsf
 ```
+
+## Troubleshooting
+
+{{< altimg "vbox-kernel.png" "help-center/software/virtualbox/" >}}
+
+The Error `Kernel driver not installed (rc=-1908)` may occur if
+
+- The computer was not restarted before launching VirtualBox for the first time
+- The computer is not booted on the latest kernel. Make sure to apply the updates from the Software Center and restart your machine.
+- The wrong VirtualBox package was installed. Please check the instructions just above to install the correct package for your kernel.
+- VirtualBox was manually installed and it conflicts with the version installed from the Solus Repository.

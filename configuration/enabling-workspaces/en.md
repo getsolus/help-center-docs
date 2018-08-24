@@ -1,6 +1,6 @@
 +++
 title = "Enabling Workspaces"
-lastmod = "2017-07-08T17:51:19+03:00"
+lastmod = "2018-08-10T16:37:03+02:00"
 +++
 # Enabling Workspaces
 
@@ -12,11 +12,14 @@ Budgie enables the switching of workspaces via the Workspace Switcher. You can e
 
 Open Raven using the shortcut `Super + A` or use your mouse to open Raven in the far right of the main Budgie panel.
 
-Click the Raven settings 'cog' icon {{< altimg "raven-settings-cog.jpg" "help-center/configuration/enabling-workspaces/" >}}
+Click the Raven settings 'cog' icon {{< altimg "raven-settings-cog.jpg" "help-center/configuration/enabling-workspaces/" >}} 
 
-Click the Panel button, then in the Applets section, click the '+' button.
+Alternatively, you can open the Budgie Menu and then click "Bottom Panel" in the System Settings category.
 
-Find the Workspace Switcher entry and select it. Click the '+' button at the top of the panel. This will add the Workspace Switcher to the center section, as shown below.
+{{< altimg "budgie-panel-menu.jpg" "help-center/configuration/enabling-workspaces/" >}}
+
+
+Find `Add applet` and click the `+` button. This will open menu to choose different applets, scroll down until you find `Workspace Switcher`, select it and click `Add Applet`
 
 {{< altimg "budgie-workspace-applet.jpg" "help-center/configuration/enabling-workspaces/" >}}
 
@@ -30,17 +33,15 @@ Budgie provides a variety of keyboard shortcuts for workspaces.
 
 To view these shortcuts open the Keyboard application and scroll to the Navigation section.
 
-{{< altimg "workspace-shortcuts-gcc.jpg" "help-center/configuration/enabling-workspaces/" >}}
+{{< altimg "budgie-workspace-shortcuts-gcc.jpg" "help-center/configuration/enabling-workspaces/" >}}
 
 ### Workspaces Configuration
 
-There are 4 workspaces available in Budgie by default. If you would like to change this, you will need to install the
-GNOME Tweak Tool, available in the Software Center.
+There are 4 workspaces available in Budgie by default. For adding an new Workspace, click on the `+` button. 
 
-Once installed, open Tweak Tool and click on the Workspaces entry in the main panel to change the number of available
-workspaces.
+If you wish to remove or rename your workspace, right click on the desired workspace and select rename or remove. 
 
-{{< altimg "tweak-workspaces.jpg" "help-center/configuration/enabling-workspaces/" >}}
+{{< altimg "budgie-workspace-remove.jpg" "help-center/configuration/enabling-workspaces/" >}}
 
 ## GNOME
 

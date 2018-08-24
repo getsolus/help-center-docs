@@ -1,6 +1,6 @@
 +++
 title = "Configuring Date and Time"
-lastmod = "2017-06-20T19:16:24+03:00"
+lastmod = "2018-07-12T00:13:58+02:00"
 +++
 # Configuring Date and Time
 
@@ -8,19 +8,19 @@ With Solus it is easy to change the date and time of your system and how it is d
 
 ## Budgie
 
-In Budgie, the easiest way to access the date and time settings is by left clicking on the time in the top panel and clicking on "Time and date settings".  
+In Budgie, the easiest way to access the date and time settings is by left clicking on the time in the bottom panel and clicking on "Time and date settings".
 
 {{< altimg "budgie-time-and-date-right-click.jpg" "help-center/configuration/configuring-date-and-time/" >}}
 
-Alternatively, you can open the Budgie Menu and then click on "Date & Time" in the System Settings section.
+Alternatively, you can open the Settings Menu and then click on "Details" and then "Date & Time" in the System Settings section.
 
-You will be presented with the following window. This window provides you with the ability to enable / disable automatic date & time, automatic time zone changing, and the time format.  You will need to click on "Unlock" and input your user password before changes can be made.
+You will be presented with the following window. This window provides you with the ability to enable / disable automatic date & time, automatic time zone changing, and the time format.
 
-{{< altimg "configuring-date-and-time.jpg" "help-center/configuration/configuring-date-and-time/" >}}
+{{< altimg "budgie-configuring-date-and-time.jpg" "help-center/configuration/configuring-date-and-time/" >}}
 
-If you wish to change how the time is displayed in the top panel, left click on the time and click "Preferences".  You can now show the date, seconds or use 24 hour time.
+If you wish to change how the time is displayed in the bottom panel, left click on the time and click "Preferences".  You can now show the date, seconds or use 24 hour time.
 
-{{< altimg "/2017/04/Budgie_ClockApplet.jpg" >}}
+{{< altimg "budgie-ClockApplet.jpg" "help-center/configuration/configuring-date-and-time/" >}}
 
 ## GNOME
 

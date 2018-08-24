@@ -1,6 +1,6 @@
 +++
 title = "Getting Involved"
-lastmod = "2018-07-19T08:40:00+01:00"
+lastmod = "2018-08-24T13:25:30+03:00"
 +++
 # Getting Involved
 
@@ -35,6 +35,7 @@ Alongside the forums, you can communicate with developers or others in the commu
 - [Facebook](https://www.facebook.com/get.solus)
 - [Google+ Page](https://plus.google.com/u/0/+Solus-Project)
 - [Google+ Community](https://plus.google.com/communities/104830131595272878110)
+- [Mastodon](https://mastodon.cloud/@SolusProject)
 - [Reddit](https://www.reddit.com/r/SolusProject/) 
 - [Twitter](https://twitter.com/solusproject)
 

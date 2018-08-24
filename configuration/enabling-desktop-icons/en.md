@@ -1,6 +1,6 @@
 +++
 title = "Enabling Desktop Icons"
-lastmod = "2017-06-20T19:16:24+03:00"
+lastmod = "2018-07-13T16:13:38+02:00"
 +++
 # Enabling Desktop Icons
 
@@ -8,9 +8,11 @@ You can enable or disable desktop icons easily depending on your personal prefer
 
 ## Budgie
 
-With Budgie, start by opening Raven, either by clicking on its icon in the far right of the system tray or using the keyboard shortcut `Super + A`.  Next, click the cog icon for Budgie Settings and then toggle "Desktop Icons" on under the Background section.
+With Budgie, start by opening Raven, either by clicking on its icon in the far right of the system tray or using the keyboard shortcut `Super + A`.  Next, click the cog icon for Budgie Settings.
 
-{{< altimg "raven-desktop-icons.jpg" "help-center/configuration/enabling-desktop-icons/" >}}
+Alternatively, you can open the Budgie Menu and then click "Desktop" in the System Settings category.
+
+{{< altimg "budgie-desktop-icons.jpg" "help-center/configuration/enabling-desktop-icons/" >}}
 
 You may now add things to your Desktop.  This can be done by dragging an item onto the Desktop or by right clicking an icon and selecting Copy to / Move to Desktop.  Alternatively, open the Budgie Menu and click on "Files" and then move the files you want to the Desktop folder (as shown in the image below).  Please note, the Desktop folder is not visible in "Files" until you've enabled the Desktop icons.
 
