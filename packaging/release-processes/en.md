@@ -1,6 +1,5 @@
 +++
 title = "Release Processes"
-lastmod = "2017-10-06T18:36:27+01:00"
 lastmod = "2018-08-28T12:17:05+03:00"
 +++
 # Release Processes
