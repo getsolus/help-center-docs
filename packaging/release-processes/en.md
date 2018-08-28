@@ -1,6 +1,7 @@
 +++
 title = "Release Processes"
 lastmod = "2017-10-06T18:36:27+01:00"
+lastmod = "2018-08-28T12:17:05+03:00"
 +++
 # Release Processes
 
@@ -16,7 +17,7 @@ Solus installations always default to the `shannon` repository, making shannon t
 
 ## Weekly Sync - Every Friday
 
-At minimum there shall be one sync per week - this will always on a Friday. As a result, users are never more than a few days away from unstable. This allows packagers to make deeper changes to Solus and still have time to stabilise the repository before releasing changes on the Friday.
+At minimum there shall be one sync per week - this will always be on a Friday. As a result, users are never more than a few days away from unstable. This allows packagers to make deeper changes to Solus and still have time to stabilise the repository before releasing changes on the Friday.
 
 Given the high volume of changes within Solus in any sync window, the Friday sync should be viewed more as a release than a simple sync. All developers and contributors should try their best to ensure that their changes do not introduce regressions, and that existing update paths are **always respected**.
 
