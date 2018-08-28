@@ -1,6 +1,6 @@
 +++
 title = "Printer Compatibility"
-lastmod = "2018-06-25T22:56:38+02:00"
+lastmod = "2018-08-05T13:05:55+02:00"
 +++
 # Printer Compatibility
 
@@ -15,14 +15,14 @@ The following dialogs will guide you to choose the appropriate driver for your d
 
 ### Brother
 
-- Brother DCP-1510
+- Brother DCP-1510 (and DCP-1512)
 - Brother DCP-7010
 - Brother DCP-7060D
-- Brother HL-1210W
+- Brother HL-1210W (and HL-1212W)
 - Brother HL-2220
 - Brother HL-L2315DW
 - Brother MFC-J220
-- Brother MFC-L2700DW
+- Brother MFC-L2700DW (and MFC-L2703DW)
 - Brother MFC-L2740DW
 - Brother MFC-J480DW
 
@@ -30,13 +30,21 @@ The following dialogs will guide you to choose the appropriate driver for your d
 
 Should your printer not be on this list you can request your Printer here for inclusion [here](https://dev.solus-project.com/T83)
 
+### Canon
+
+Some Canon printers requires you to install the `canon-ufriilt-common` package.
+
+### Dymo
+
+DYMO label makers & printers need the `dymo-cups-drivers` package to be installed.
+
 ### Epson
 
-**Some Epson printers will only work if you install the `epson-inkjet-printer-escpr` package.**
+Some Epson printers will only work if you install the `epson-inkjet-printer-escpr` package.
 
 - Epson SX-125
 - Epson XP-540
 
 ### HP
 
-**If you own an HP printer you should install the `hplip` package in order to get your device working.**
+If you own an HP printer you should install the `hplip` package in order to get your device working.
