@@ -1,6 +1,6 @@
 +++
 title = "Printer Compatibility"
-lastmod = "2018-08-05T13:05:55+02:00"
+lastmod = "2018-08-28T12:14:57+03:00"
 +++
 # Printer Compatibility
 
@@ -15,14 +15,17 @@ The following dialogs will guide you to choose the appropriate driver for your d
 
 ### Brother
 
-- Brother DCP-1510 (and DCP-1512)
+- Brother DCP-1510
+- Brother DCP-1512
 - Brother DCP-7010
 - Brother DCP-7060D
-- Brother HL-1210W (and HL-1212W)
+- Brother HL-1210W
+- Brother HL-1212W
 - Brother HL-2220
 - Brother HL-L2315DW
 - Brother MFC-J220
-- Brother MFC-L2700DW (and MFC-L2703DW)
+- Brother MFC-L2700DW
+- Brother MFC-L2703DW
 - Brother MFC-L2740DW
 - Brother MFC-J480DW
 
