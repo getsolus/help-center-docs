@@ -1,6 +1,6 @@
 +++
 title = "Minecraft"
-lastmod = "2018-07-24T16:22:21+02:00"
+lastmod = "2018-08-28T02:59:48+02:00"
 +++
 # Minecraft
 
@@ -15,7 +15,7 @@ Install Java and download Minecraft:
 ``` bash
 sudo eopkg it openjdk-8
 sudo mkdir -p /opt/minecraft
-sudo wget https://launcher.mojang.com/download/Minecraft.tar.gz -O /opt/minecraft
+sudo wget https://launcher.mojang.com/download/Minecraft.tar.gz -O /opt/minecraft/Minecraft.tar.gz
 ```
 
 Extract files and remove old archive:
