@@ -1,6 +1,6 @@
 +++
 title = "Powerline Shell Prompt"
-lastmod = "2018-08-16T22:15:40+02:00"
+lastmod = "2018-09-03T23:19:59+02:00"
 +++
 # Powerline Shell Prompt
 
@@ -14,11 +14,44 @@ fonts ([powerline-fonts](https://dev.solus-project.com/source/powerline-fonts/))
 ``` bash
 sudo eopkg it powerline powerline-fonts
 ```
+To get powerline working inside your terminal, you need to add the following commands to the `.bashrc` inside your `$HOME` directory.
 
-## Shell Setup 
+## Shell prompts
 
-Note: this is setup per-user.
+The Powerline daemon is not running automatically by any of the bindings. It is advised to add
 
 ``` bash
-echo "source /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh" >> ~/.bashrc
+powerline-daemon -q
 ```
+before any other powerline-related code in the shell configuration file
+
+## Bash prompt
+
+Since without powerline daemon bash bindings are very slow PS2 (continuation) and PS3 (select) prompts are not set up. Thus it is advised to use
+
+``` bash
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+source /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+```
+
+## Zsh prompt
+
+``` bash
+source /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+```
+
+## Fish prompt
+
+``` bash
+source /usr/lib/python3.6/site-packages/powerline/bindings/fish/powerline-setup.fish
+```
+
+## Busybox and dash prompt
+
+``` bash
+source /usr/lib/python3.6/site-packages/powerline/bindings/shell/powerline.sh
+```
+
+Read more about powerline inside the Docs [Link](https://powerline.readthedocs.io/en/master/usage/shell-prompts.html#)
