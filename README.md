@@ -2,7 +2,7 @@
 
 This is the repository for Solus's Help Center documentation. This repository exists to help facilitate and encourage community contributions to improving our documentation and enabling an easier user experience for everyone.
 
-Stumbled on this repo and have no idea what any of this is? Check out the [Solus](https://solus-project.com) operating system!
+Stumbled on this repo and have no idea what any of this is? Check out the [Solus](https://getsol.us) operating system!
 
 ## Contributing
 
@@ -39,5 +39,5 @@ The Markdown files in this repository are licensed under the Creative Commons By
 
 ### Media Assets
 
-- Solus logo copyright and licensing information is provided on our [Brand Guidelines page](https://solus-project.com/branding).
+- Solus logo copyright and licensing information is provided on our [Brand Guidelines page](https://getsol.us/branding).
 - Non-logo assets are licensed under Creative Commons By-NC-SA 4.0 License. For the full text, view LICENSE-MD.txt. Solus Project is considered the sole rights holder of these works.

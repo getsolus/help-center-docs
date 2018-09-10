@@ -31,7 +31,7 @@ The following dialogs will guide you to choose the appropriate driver for your d
 
 **For newer Brother scanners you have to install the `brscan4` package.**
 
-Should your printer not be on this list you can request your Printer here for inclusion [here](https://dev.solus-project.com/T83)
+Should your printer not be on this list you can request your Printer here for inclusion [here](https://dev.getsol.us/T83)
 
 ### Canon
 

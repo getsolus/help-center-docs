@@ -20,4 +20,4 @@ Please provide as much of the following information as possible:
 - Link to source tarball/zip file
  - master.zip files **are not permitted**. We require versioned tarballs, for example: "1.2.3.tar.gz".
 
-Please put this information into a Bug Report (create via "Create Task") on our Developer Portal via the Maniphest section on https://dev.solus-project.com/
+Please put this information into a Bug Report (create via "Create Task") on our Developer Portal via the Maniphest section on https://dev.getsol.us/

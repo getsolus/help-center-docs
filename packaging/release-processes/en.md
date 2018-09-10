@@ -36,7 +36,7 @@ Large stack upgrades should begin as closely to the last Friday sync as possible
 
 If you are pushing changes that affect the core Solus installations, you can trivially test these by both updating your own installation, as well as producing test ISOs from unstable. Producing an ISO first to verify a stack change is usually preferable as an initial canary test.
 
-To build any of the Solus ISOs from git, simply clone the relevant image from the [Dev Portal](https://dev.solus-project.com/) and run `make`. Do note that branded Solus ISOs should not be distributed as they would infer the images had passed QA - the distribution of unstable ISOs would reflect badly on the project.
+To build any of the Solus ISOs from git, simply clone the relevant image from the [Dev Portal](https://dev.getsol.us/) and run `make`. Do note that branded Solus ISOs should not be distributed as they would infer the images had passed QA - the distribution of unstable ISOs would reflect badly on the project.
 
 Choose the relevant image (`budgie`, `gnome`, `plasma`, `mate`) and substitute `TEST_ISO` below to begin building the ISO.
 
@@ -47,7 +47,7 @@ Choose the relevant image (`budgie`, `gnome`, `plasma`, `mate`) and substitute `
     sudo eopkg it syslinux libisoburn squashfs-tools
 
     # Clone an ISO repo
-    git clone https://dev.solus-project.com/source/solus-image-$TEST_ISO.git
+    git clone https://dev.getsol.us/source/solus-image-$TEST_ISO.git
     pushd solus-image-$TEST_ISO
 
     # Build the ISO. You must have the `common/` tree set up per the Packaging introduction.

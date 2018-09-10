@@ -43,7 +43,7 @@ To update solbuild, run: `sudo solbuild update`
 
 Next you need to set up `common`, a set of make scripts that enables you to more easily manage, build, check, and publish packages.
 
-You need to clone the common repository with git by doing `git clone https://dev.solus-project.com/source/common.git` in the same directory you will have sub-folders for packages you are building.
+You need to clone the common repository with git by doing `git clone https://dev.getsol.us/source/common.git` in the same directory you will have sub-folders for packages you are building.
 
 Next you need to set up symlinks. Do this from the same directory you executed the `git` command:
 
@@ -78,7 +78,7 @@ make
 
 You will be prompted to enter your password by sudo so dependencies may be downloaded and the necessary eopkg files may be generated.
 
-You may find other `common` commands [here](https://dev.solus-project.com/source/common/browse/master/about/).
+You may find other `common` commands [here](https://dev.getsol.us/source/common/browse/master/about/).
 
 Once you’ve achieved a successful build, the resulting `.eopkg` files will be moved to the current directory, along with the machine file, `pspec_*.xml` (currently `pspec_x86_64.xml`). We recommending checking the contents of your 
 generated eopkg file(s) to ensure everything is located in the appropriate locations. You can do this by using `lseopkg file_name.eopkg`.

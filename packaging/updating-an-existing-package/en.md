@@ -6,7 +6,7 @@ lastmod = "2018-03-21T20:41:00+01:00"
 
 This article will go over updating a package that is already in the Solus git repository.
 
-The instructions below assume you have cloned the package's repository using the https link provided on the respective git page, [for example nano](https://dev.solus-project.com/source/nano/). The process for submitting an updated package is the same as if it is a new package. Follow the steps [here](/articles/packaging/submitting-a-package/en).
+The instructions below assume you have cloned the package's repository using the https link provided on the respective git page, [for example nano](https://dev.getsol.us/source/nano/). The process for submitting an updated package is the same as if it is a new package. Follow the steps [here](/articles/packaging/submitting-a-package/en).
 
 ## Bumping a package
 

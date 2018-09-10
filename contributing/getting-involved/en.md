@@ -14,7 +14,7 @@ The Solus Project enforces a set of community guidelines to maintain respect and
 
 ### Community Forums
 
-With so many new users joining, there are always more people needing help. A great way to help us out, would be to help out our users on the [Solus Project Forums](https://solus-project.com/forums/).
+With so many new users joining, there are always more people needing help. A great way to help us out, would be to help out our users on the [Solus Project Forums](https://getsol.us/forums/).
 
 ### IRC
 
@@ -52,7 +52,7 @@ and contribute to the community by packaging software. If you're interested in l
 
 We're always looking to improve our systems, especially when they're not functioning as expected. By reporting bugs, you improve the system not only for you, but for all Solus Project users.
 
-- [Developer Portal](https://dev.solus-project.com)
+- [Developer Portal](https://dev.getsol.us)
 
 ## Translations
 

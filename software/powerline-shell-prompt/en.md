@@ -8,8 +8,8 @@ lastmod = "2018-08-16T22:15:40+02:00"
 
 ## Installation 
 
-Powerline has two components, the plugin system itself ([powerline](https://dev.solus-project.com/source/powerline/)) and the 
-fonts ([powerline-fonts](https://dev.solus-project.com/source/powerline-fonts/)). Both are available in the Software Center or via eopkg in a terminal:
+Powerline has two components, the plugin system itself ([powerline](https://dev.getsol.us/source/powerline/)) and the 
+fonts ([powerline-fonts](https://dev.getsol.us/source/powerline-fonts/)). Both are available in the Software Center or via eopkg in a terminal:
 
 ``` bash
 sudo eopkg it powerline powerline-fonts

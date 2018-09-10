@@ -24,7 +24,7 @@ include ../Makefile.common
 Lastly, many package builds may result in the generation of an ABI report. These files start with `abi_*` and must also
 be included, as they allow simple tracking of changes to symbols and dependencies.
 
-For all patch submissions you must be using the `arcanist` utility to communicate with the [Solus Developer Portal](https://dev.solus-project.com/)
+For all patch submissions you must be using the `arcanist` utility to communicate with the [Solus Developer Portal](https://dev.getsol.us/)
 
 ## Prior to Patch Submission
 
@@ -44,7 +44,7 @@ In three easy steps, you can set up arcanist for the first time:
 
 ``` bash
 sudo eopkg it arcanist
-arc set-config default https://dev.solus-project.com
+arc set-config default https://dev.getsol.us
 arc install-certificate
 ```
 
@@ -113,7 +113,7 @@ After this editor session, the updated patch will be automatically uploaded, the
 
 ## Maintainership
 
-Submission directly to a repository is only possible for maintainers. As a maintainer you may freely push to your package(s) and initiate builds for them, which will be pushed to the unstable repository. You can watch builds [here](https://build.solus-project.com/)
+Submission directly to a repository is only possible for maintainers. As a maintainer you may freely push to your package(s) and initiate builds for them, which will be pushed to the unstable repository. You can watch builds [here](https://build.getsol.us/)
 
 Pushing changes is not possible unless you have maintainer access. The same is also true of `make publish`.
 
