@@ -1,6 +1,6 @@
 +++
 title = "Laptop Compatibility"
-lastmod = "2018-07-06T14:48:00+01:00"
+lastmod = "2018-09-14T21:32:00+02:00"
 +++
 # Laptop Compatibility
 
@@ -36,36 +36,37 @@ This list should not suggest that *only* such devices listed below are compatibl
 ### Apple
 
 - Apple Macbook (late 2008)
-- Apple MacBookPro8 3
+- Apple MacBookPro8,3
 
 ### Asus
 
 - Asus EEE-PC 1001PX
 - Asus EEE-PC 1011PX
-- Asus G750JZA
-- Asus K401UQK
 - Asus K53U
 - Asus K55VM
+- Asus K401UQK
 - Asus M50VM
-- Asus N501JW
 - Asus N61JA
 - Asus N61Jv
+- Asus N501JW
 - Asus Pro50SR
-- Asus UX305FA
+- Asus ROG G750JZA
+- Asus X55
 - Asus X200MA
 - Asus X201EV
 - Asus X540L
-- Asus X55
 - Asus X550LD
 - Asus X551CAP
+- Asus ZenBook UX31A
+- Asus ZenBook UX305FA
 
 ### Dell
 
-- Dell Inspiron 1110
 - Dell Inspiron 14 3452
 - Dell Inspiron 15 7579
 - Dell Inspiron 15R N5010
 - Dell Inspiron 15R N5110
+- Dell Inspiron 1110
 - Dell Inspiron 5050
 - Dell Inspiron 7548
 - Dell Latitude D830
@@ -75,12 +76,11 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Dell Latitude E6230
 - Dell Latitude E6320
 - Dell Latitude E6410
-- Dell Latitude E6410
 - Dell Latitude E6420
 - Dell Latitude E6430
 - Dell Latitude E6530
-- Dell Precision M6500
 - Dell Precision 7520
+- Dell Precision M6500
 - Dell Vostro 1700
 - Dell XPS 15 9560
 
@@ -104,19 +104,19 @@ This list should not suggest that *only* such devices listed below are compatibl
 
 - HP 240 G3
 - HP Compaq 6730B
-- HP Compaq Presario CQ61
 - HP Compaq NC6400
+- HP Compaq Presario CQ61
 - HP EliteBook 8440P
 - HP EliteBook 8460p
 - HP EliteBook 8740w
 - HP EliteBook 8760w
 - HP Envy TS M6
 - HP Pavilion 15-E042SO
-- HP Pavilion DV2700
 - HP Pavilion DV6
 - HP Pavilion DV6Z-6c00
 - HP Pavilion DV6Z-6100
 - HP Pavilion DV7
+- HP Pavilion DV2700
 - HP Pavilion x360 Convertible
 - HP Presario V6000
 - HP Probook 6360b
@@ -132,7 +132,6 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Lenovo IdeaPad S400U
 - Lenovo IdeaPad U310 Touch
 - Lenovo IdeaPad Z370
-- Lenovo IdeaPad Z585
 - Lenovo IdeaPad Z585
 - Lenovo ThinkPad E450
 - Lenovo ThinkPad E550
@@ -156,11 +155,11 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Lenovo ThinkPad W520 4270CTO
 - Lenovo ThinkPad X1 Carbon 3rd Edition
 - Lenovo ThinkPad X1 Carbon 4th Edition
+- Lenovo ThinkPad X61
 - Lenovo ThinkPad X200T
 - Lenovo ThinkPad X201
 - Lenovo ThinkPad X220
 - Lenovo ThinkPad X230
-- Lenovo ThinkPad X61
 - Lenovo Yoga 2 11
 - Lenovo Z50-70
 
