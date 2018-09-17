@@ -1,6 +1,6 @@
 +++
 title = "Moving to GetSolus"
-lastmod = "2018-09-10T21:35:07+03:00"
+lastmod = "2018-09-18T00:34:38+03:00"
 +++
 # Moving to GetSolus
 
@@ -21,6 +21,23 @@ Next, you will need to install the certificate. This will also prompt you to mak
 ``` bash
 arc install-certificate
 ```
+
+## Solbuild Images
+
+We have issued a new solbuild update as well as new solbuild images which set a new images URI to a `getsol.us` address. While performing a normal solbuild up will provide the necessary upgrade to the pisi package in the image to point to our new repositories, the new solbuild images have a modified set of packages, with a multitude of packages being demoted from `system.base` and `system.devel` components since our last update to the images. These packages would not otherwise be removed and therefore builds against an image locally may not be reflective of the set of packages that are defined on the builder's solbuild.
+
+To perform this upgrade, first ensure you have performed the latest updates to your system and have package release 23 of `solbuild`. This has a new image clearing flag that we'll be utilizing in the instructions below.
+
+Regardless of whether we're using the `main` image (uses the shannon repo and generally not recommended for most package builds) or `unstable`, you first need to clear your caches, including images (using our new `--images` / `-i` flag on `delete-cache` / `dc`).
+
+``` bash
+sudo solbuild dc -ai
+```
+
+Finally we must re-initialize our solbuild images:
+
+- For main profile (not recommended, uses shannon repo rather than unstable) run: `sudo solbuild init -p main-x86_64`
+- For unstable profile (recommended, uses unstable repo to ensure latest changes to packages are applied) run: `sudo solbuild init -p unstable-x86_64`
 
 ## Updating Repo URIs
 
