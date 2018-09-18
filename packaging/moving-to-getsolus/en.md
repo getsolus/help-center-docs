@@ -1,6 +1,6 @@
 +++
 title = "Moving to GetSolus"
-lastmod = "2018-09-18T00:34:38+03:00"
+lastmod = "2018-09-18T05:04:31+03:00"
 +++
 # Moving to GetSolus
 
@@ -24,7 +24,7 @@ arc install-certificate
 
 ## Solbuild Images
 
-We have issued a new solbuild update as well as new solbuild images which set a new images URI to a `getsol.us` address. While performing a normal solbuild up will provide the necessary upgrade to the pisi package in the image to point to our new repositories, the new solbuild images have a modified set of packages, with a multitude of packages being demoted from `system.base` and `system.devel` components since our last update to the images. These packages would not otherwise be removed and therefore builds against an image locally may not be reflective of the set of packages that are defined on the builder's solbuild.
+We have issued a new solbuild release (1.4.3) as well as new solbuild images which set a new images URI to a `getsol.us` address. While performing a normal solbuild up will provide the necessary upgrade to the pisi package in the image to point to our new repositories, the new solbuild images have a modified set of packages, with a multitude of packages being demoted from `system.base` and `system.devel` components since our last update to the images. These packages would not otherwise be removed and therefore builds against an image locally may not be reflective of the set of packages that are defined on the builder's solbuild.
 
 To perform this upgrade, first ensure you have performed the latest updates to your system and have package release 23 of `solbuild`. This has a new image clearing flag that we'll be utilizing in the instructions below.
 
