@@ -1,6 +1,6 @@
 +++
 title = "Getting Involved"
-lastmod = "2018-08-24T13:25:30+03:00"
+lastmod = "2018-09-20T20:48:15+03:00"
 +++
 # Getting Involved
 
@@ -46,7 +46,7 @@ Our Help Center improves when the documentation improves. If there are articles 
 ## Packaging
 
 There may be software you wish to have on your system that is currently not available in the repository. While you are more than welcome to submit a bug and wait for someone else to package the software you want, you can also improve 
-and contribute to the community by packaging software. If you're interested in learning to package software, feel free to visit our documentation [here](/articles/packaging/guide/en/).
+and contribute to the community by packaging software. If you're interested in learning to package software, feel free to visit our documentation [here](/articles/packaging/).
 
 ## Report Bugs
 
