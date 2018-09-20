@@ -1,6 +1,6 @@
 +++
 title = "Third Party"
-lastmod = "2017-04-13T17:39:14+03:00"
+lastmod = "2018-09-20T09:39:05+00:00"
 +++
 # Third Party
 
@@ -298,6 +298,13 @@ sudo eopkg it rubymine*.eopkg;sudo rm rubymine*.eopkg
 
 ``` bash
 sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/solus-project/3rd-party/master/programming/sublime-text-3/pspec.xml
+sudo eopkg it sublime*.eopkg;sudo rm sublime*.eopkg
+```
+
+### Sublime Merge
+
+``` bash
+sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/solus-project/3rd-party/master/programming/sublime-merge/pspec.xml
 sudo eopkg it sublime*.eopkg;sudo rm sublime*.eopkg
 ```
 
