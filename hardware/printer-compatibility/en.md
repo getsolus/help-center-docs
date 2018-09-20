@@ -1,6 +1,6 @@
 +++
 title = "Printer Compatibility"
-lastmod = "2018-08-28T12:14:57+03:00"
+lastmod = "2018-09-20T13:45:35+02:00"
 +++
 # Printer Compatibility
 
@@ -17,6 +17,7 @@ The following dialogs will guide you to choose the appropriate driver for your d
 
 - Brother DCP-1510
 - Brother DCP-1512
+- Brother DCP-1610W
 - Brother DCP-7010
 - Brother DCP-7060D
 - Brother HL-1210W
@@ -44,9 +45,6 @@ DYMO label makers & printers need the `dymo-cups-drivers` package to be installe
 ### Epson
 
 Some Epson printers will only work if you install the `epson-inkjet-printer-escpr` package.
-
-- Epson SX-125
-- Epson XP-540
 
 ### HP
 
