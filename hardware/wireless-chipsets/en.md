@@ -1,6 +1,6 @@
 +++
 title = "Wireless Chipsets Compatibility"
-lastmod = "2018-07-19T09:11:00+01:00"
+lastmod = "2018-09-21T15:35:00+02:00"
 +++
 # Wireless Chipsets Compatibility
 
@@ -10,14 +10,15 @@ This list should not suggest that *only*- such devices listed below are compatib
 
 ## Atheros
 
-- Atheros AR242x / AR542x
 - Atheros AR5B97
+- Atheros AR242x
+- Atheros AR542x
+- Atheros AR928X
 - Atheros AR8161
 - Atheros AR9285
 - Atheros AR9287
-- Atheros AR928X
 - Atheros AR9462
-- Atheros AR9485 
+- Atheros AR9485
 - Atheros AR9485WB-EG
 - Atheros QCA9565 / AR9565
 
@@ -40,11 +41,11 @@ This list should not suggest that *only*- such devices listed below are compatib
 - Intel Centrino Advanced-N 6235
 - Intel Centrino Ultimate-N 6300
 - Intel Centrino Wireless-N 2230
-- Intel Corporation Wireless 8265 / 8275 `[8086:24fd] (rev 78)`
 - Intel PRO/Wireless 3945ABG
 - Intel PRO/Wireless 4965 AG or AGN
 - Intel Ultimate N WiFi Link 5300
 - Intel WiFi Link 5100
+- Intel Wireless 8265 / 8275
 
 ## Ralink
 
