@@ -1,6 +1,6 @@
 +++
 title = "Laptop Compatibility"
-lastmod = "2018-09-14T21:32:00+02:00"
+lastmod = "2018-09-25T19:25:55+03:00"
 +++
 # Laptop Compatibility
 
@@ -42,19 +42,26 @@ This list should not suggest that *only* such devices listed below are compatibl
 
 - Asus EEE-PC 1001PX
 - Asus EEE-PC 1011PX
+- Asus K401UQK
 - Asus K53U
 - Asus K55VM
 - Asus K401UQK
 - Asus M50VM
-- Asus N61JA
-- Asus N61Jv
 - Asus N501JW
 - Asus Pro50SR
 - Asus ROG G750JZA
-- Asus X55
+- Asus VivoBook 15 K505ZA
+ - Must use BIOS revision 306 and `linux-current` for functional touchpad.
+- Asus VivoBook 15 X505ZA
+ - Must use BIOS revision 306 and `linux-current` for functional touchpad.
+- Asus VivoBook 15 X505ZA-BQ171T
+ - Must use BIOS revision 306 and `linux-current` for functional touchpad.
+- Asus VivoBook Pro N61JA
+- Asus VivoBook Pro N61Jv
 - Asus X200MA
 - Asus X201EV
 - Asus X540L
+- Asus X55
 - Asus X550LD
 - Asus X551CAP
 - Asus ZenBook UX31A
