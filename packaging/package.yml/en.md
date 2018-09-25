@@ -1,6 +1,6 @@
 +++
 title = "Package.yml"
-lastmod = "2018-07-19T08:40:00+01:00"
+lastmod = "2018-09-25T00:57:00+01:00"
 +++
 # Package.yml
 
@@ -75,6 +75,7 @@ Key Name | Type | Description
 **rundeps** | `dict(s)` | Specify further runtime dependencies for the packages. You can learn more [here](/articles/packaging/packaging-practices/en/#runtime-dependencies).
 **replaces** | `dict(s)` | Replace one package with another, used when renaming or deprecating packages for clean upgrade paths
 **patterns** | `dict(s)` | Allows fine grained control over file placement within the package or sub-packages. Useful for packages that are development only (i.e. `/usr/bin` files)
+**environment** | `unicode` | Specify code that will be exported to all build steps of the build (i.e. exporting variables for the entire build).
 
 ### Build step keys, optional
 
@@ -85,7 +86,9 @@ Step Name | Description
 **setup** | Performed after the source extraction. This is the correct place to perform any `configure` routine, or to `patch` the sources.
 **build** | Use this step to run the build portion, i.e. `make`
 **install** | This is where you should install the files into the final packaging directory, i.e. `make install`
-**check** | There is where tests / checking should occur, i.e. `make check`
+**check** | This is where tests / checking should occur, i.e. `make check`
+**profile** | This is where profiling tests should be specified. `ypkg` will handle setting flags to generate profiling data and using that data for an optimized build.
+
 
 ## Optimize values
 
@@ -98,7 +101,9 @@ Optimize Value | Description
 **no-bind-now** | Configure the package to disable certain flags, where RELRO is unsupported.
 **no-symbolic** | Disable `-Wl,-Bsymbolic-functions` linker flag.
 **unroll-loops** | Enable `-funroll-loops`. Use this sparingly, only when it provides proven benefit.
-**thin-lto** | Enable Thin Link Time Optimization `-flto=thin` with the `ld.gold` linker.
+**runpath** | Enable `-Wl,--enable-new-dtags` to make linker use RUNPATH's instead of RPATH's.
+**avx256** | Disables `-mprefer-vector-width=128` in avx2 builds.
+**thin-lto** | Enable Thin Link Time Optimization `-flto=thin` with a supported linker.
 **lto** | Enable Link Time Optimization `-flto`.
 
 ## Macros
