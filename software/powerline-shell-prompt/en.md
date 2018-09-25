@@ -25,8 +25,6 @@ powerline-daemon -q
 ```
 ### Bash 
 
-Since without powerline daemon bash bindings are very slow PS2 (continuation) and PS3 (select) prompts are not set up. Thus it is advised to use
-
 ``` bash
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
