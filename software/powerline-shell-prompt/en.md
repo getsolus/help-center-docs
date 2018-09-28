@@ -1,6 +1,6 @@
 +++
 title = "Powerline Shell Prompt"
-lastmod = "2018-08-16T22:15:40+02:00"
+lastmod = "2018-09-25T15:55:50+02:00"
 +++
 # Powerline Shell Prompt
 
@@ -14,11 +14,40 @@ fonts ([powerline-fonts](https://dev.getsol.us/source/powerline-fonts/)). Both a
 ``` bash
 sudo eopkg it powerline powerline-fonts
 ```
+To get powerline working inside your terminal, you need to add the following commands to the `.bashrc` inside your `$HOME` directory.
 
-## Shell Setup 
+## Shell Prompts
 
-Note: this is setup per-user.
+The Powerline daemon is not running automatically by any of the bindings. It is advised to add the following before any other powerline-related code in the shell configuration file
 
 ``` bash
-echo "source /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh" >> ~/.bashrc
+powerline-daemon -q
 ```
+### Bash 
+
+``` bash
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+source /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+```
+
+### Busybox and dash 
+
+``` bash
+source /usr/lib/python3.6/site-packages/powerline/bindings/shell/powerline.sh
+```
+
+### Fish 
+
+``` bash
+source /usr/lib/python3.6/site-packages/powerline/bindings/fish/powerline-setup.fish
+```
+
+### Zsh 
+
+``` bash
+source /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+```
+
+Read more about powerline inside the Docs [Link](https://powerline.readthedocs.io/en/master/usage/shell-prompts.html#)
