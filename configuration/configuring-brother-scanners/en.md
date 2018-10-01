@@ -2,7 +2,6 @@
 title = "Configuring Brother Scanners"
 lastmod = "2018-09-25T15:50:44+02:00"
 +++
-
 # Configuring Brother Scanners
 
 You can connect your Brother scanner via USB or LAN to be able to scan
