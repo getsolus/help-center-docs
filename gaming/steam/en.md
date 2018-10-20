@@ -1,6 +1,6 @@
 +++
 title = "Steam"
-lastmod = "2017-04-13T17:39:14+03:00"
+lastmod = "2018-10-20T13:39:48+03:00"
 +++
 # Steam
 
@@ -12,4 +12,3 @@ For systems running NVIDIA graphics hardware, you will need to install the corre
 
 - Current Gen: `nvidia-glx-driver-32bit`
 - 340: `nvidia-340-glx-driver-32bit`
-- 304: `nvidia-304-glx-driver-32bit`
