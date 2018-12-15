@@ -1,7 +1,6 @@
 +++
 title = "Desktop Environments"
 lastmod = "2018-08-10T19:28:54+02:00"
-aliases = ["/articles/software/gnome-shell/en/"]
 +++
 # Desktop Environments
 
