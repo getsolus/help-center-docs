@@ -1,6 +1,6 @@
 +++
 title = "Preparing to Install"
-lastmod = "2018-09-20T20:48:15+03:00"
+lastmod = "2018-12-22T18:08:47+01:00"
 +++
 # Preparing to install
 
@@ -14,21 +14,39 @@ You can download a Solus ISO by going to our [Download page](/download).
 
 ### Linux and Mac
 
-Download the relevant Solus ISO SHA256SUMS: File, Signed File and Public Key from the [Download page](/download).
+Download the relevant Solus ISO SHA256SUMS: File and Signed File from the [Download page](/download).
 
-**Note:** It is advisable that the files are all placed in the same folder.
+#### Obtain the Public Key
 
-#### Import the Public Key
+The public GPG key can be obtained from the [Download page](/download). Afterwards it can be imported with
 
 ```bash
 gpg --import <Public Key>.gpg
 ```
+
+However, it is generally advisable to obtain the key from a separate server. The reason for this is that if the Solus website was ever compromised, an attacker replacing the Solus ISO with their own tampered version could easily also replace the key with their own. The below example locates and imports the key from the SKS keyservers (type the key number when prompted to import it).
+
+```bash
+gpg --keyserver hkp://pool.sks-keyservers.net --search-keys A2BE5892
+```
+
+**Note:** It is advisable that the files are all placed in the same folder.
 
 #### Verify SHA256SUMS file signature
 
 ```bash
 gpg --verify <Signed File>.sign <File>.sha256sum
 ```
+
+Unless you explicitly marked the key as ultimately trusted in your GPG store, you will see a warning.
+
+gpg: Signature made Mon 29 Oct 2018 03:45:39 PM CET using RSA key ID A2BE5892
+gpg: Good signature from "Joshua Strobl (Personal) <joshua@stroblindustries.com>"
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 96B4 A029 1094 A86A 2B7E  3367 DD67 2FE9 A2BE 5892
+
+This is safe to ingore.
 
 #### Verify ISO
 
