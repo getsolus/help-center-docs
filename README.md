@@ -23,6 +23,18 @@ lastmod = "2018-03-03T14:41:12+02:00"
 +++
 ```
 
+You can also run the `update-lastmod.sh` script (located in the root of the repository) to automatically update the timestamp for a particular file
+
+```
+./update-lastmod.sh installation/disks/en.md
+```
+
+or for all markdown files that are currently modified in your working directory
+
+```
+./update-lastmod.sh
+```
+
 ### Multi-Lingual Documents
 
 Note that multi-lingual documents are not yet supported on our Help Center. When it does, we'll be happy to accept non-English language documents.
