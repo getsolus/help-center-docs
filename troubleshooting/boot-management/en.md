@@ -1,6 +1,6 @@
 +++
 title = "Boot Management"
-lastmod = "2018-10-20T13:39:48+03:00"
+lastmod = "2018-12-24T20:22:22+01:00"
 +++
 # Boot Management
 
@@ -46,3 +46,24 @@ By default from `Solus 3`, the ISO ships with the `linux-current` kernel. The se
 ### Change the default kernel branch to boot
 
 After successfully booting into a kernel from the `current` or `lts` branches running `sudo clr-boot-manager update` will make the booted kernel branch the default boot option going forward.
+
+## Setting the keyboard layout for the Linux console
+
+If your harddrive is encrypted, the kernel will asked for a password on boot via its console. Depending on your locale and password you may want to change the console's keyboard layout in order to be able to perform input correctly. To do so, specify your desired keymap in `/etc/kernel/cmdline.d/50_keymap.conf` (if the file doesn't exist, create it)
+
+```
+vconsole.keymap=de
+```
+
+Afterwards run
+
+```
+sudo clr-boot-manager update
+```
+
+For a list of all available keymaps see
+
+```
+localectl list-keymaps
+```
+
