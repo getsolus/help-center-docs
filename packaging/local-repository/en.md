@@ -1,6 +1,6 @@
 +++
 title = "Packaging Using a Local Repository"
-lastmod = "2017-04-13T17:39:14+03:00"
+lastmod = "2019-01-20T18:47:00+01:00"
 +++
 # Packaging Using a Local Repository
 
@@ -18,7 +18,7 @@ You will also need to ensure that your common directory is fully up to date. Run
 
 ## Utilising the local repository
 
-Solbuild has had support for local repos since its creation. Improvements have been made to make it simple for contributors to test fixes out of the repo without having to wait for each patch to be merged. To include `.eopkg` files within a build, they need to be copied to the local repo directory `/var/lib/solbuild/local`
+Solbuild has had support for local repos since its creation. Improvements have been made to make it simple for contributors to test fixes out of the repo without having to wait for each patch to be merged. To include `.eopkg` files within a build, they need to be copied to the local repo directory `/var/lib/solbuild/local`. Note that you will need both the regular package and the `-devel` package if you want to build another package against them using `pkgconfig()` in the `package.yml file`.
 
 With the `.eopkg` files now present in the local repo, we can make use of them in solbuild by running `make local` rather than `make`. This will index the local repository and prioritise their use over what is available in the Solus unstable repository.
 
