@@ -1,6 +1,6 @@
 +++
 title = "Requesting a Package Update"
-lastmod = "2018-07-03T17:19:38+03:00"
+lastmod = "2019-02-09T19:51:40+01:00"
 +++
 # Requesting A Package Update 
 
@@ -16,7 +16,7 @@ Please provide the following information:
  - Example: `Update nano to 2.9.7`
 - Description: Explanation as to the value-add of updating this package. 
 - Link to source tarball/zip file
-- master.zip files **are not permitted**. We require versioned tarballs, for example: "1.2.3.tar.gz".
+ - master.zip files **are not permitted**. We require versioned tarballs, for example: "1.2.3.tar.gz".
 - Use the tag **Software** for tagging your update request
 
 Please put this information into a new [task](https://dev.getsol.us/maniphest/task/edit/form/1/)
