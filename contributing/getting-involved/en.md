@@ -56,4 +56,4 @@ We're always looking to improve our systems, especially when they're not functio
 
 ## Translations
 
-Assistance is always welcome in translating [Budgie Desktop](https://www.transifex.com/budgie-desktop/budgie-desktop/) and other [Solus applications](https://www.transifex.com/solus-project/public/) to other languages.
+Assistance is always welcome in translating our projects [to other languages](https://translate.getsol.us)!
