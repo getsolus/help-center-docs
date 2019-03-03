@@ -1,6 +1,6 @@
 +++
 title = "Laptop Compatibility"
-lastmod = "2018-09-25T19:25:55+03:00"
+lastmod = "2019-03-03T00:45:52+05:30"
 +++
 # Laptop Compatibility
 
@@ -18,6 +18,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Acer Aspire 7551
 - Acer Aspire E5-473-370Z
 - Acer Aspire E5-573G
+- Acer Aspire E5-575G
 - Acer Aspire ES 15 (ES1-572-5025)
 - Acer Aspire ES 17 (ES1-731G-P1MC)
 - Acer Aspire V3-112P
