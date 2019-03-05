@@ -1,6 +1,6 @@
 +++
 title = "Community Guidelines"
-lastmod = "2019-02-12T00:36:35+02:00"
+lastmod = "2019-03-05T00:36:35+02:00"
 +++
 # Community Guidelines
 
@@ -83,4 +83,4 @@ The Solus team reserves the rights to:
 
 - Close or lock tasks on a temporary or permanent basis
 - Disable the account of individuals which violate either general guidelines or “Development / Issue Trackers”-specific guidelines.
-- Make any finalized decisions in the interest of the project, continuation of our vision / objectives for the project or various software which we development or support.
+- Make any finalized decisions in the interest of the project, continuation of our vision / objectives for the project or various software which we develop or support.
