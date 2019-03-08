@@ -1,6 +1,6 @@
 +++
 title = "Printer Compatibility"
-lastmod = "2018-09-20T13:45:35+02:00"
+lastmod = "2019-03-08T00:47:57+01:00"
 +++
 # Printer Compatibility
 
@@ -15,20 +15,30 @@ The following dialogs will guide you to choose the appropriate driver for your d
 
 ### Brother
 
+- Brother DCP-135C
 - Brother DCP-1510
 - Brother DCP-1512
 - Brother DCP-1610W
 - Brother DCP-7010
 - Brother DCP-7060D
+- Brother DCP-L2520DW
 - Brother HL-1210W
 - Brother HL-1212W
 - Brother HL-2220
 - Brother HL-L2315DW
+- Brother HL-L2320D
+- Brother HL-L2360D
+- Brother HL-L2375DW
+- Brother MFC-1910W
+- Brother MFC-440CN
+- Brother MFC-9130CW
+- Brother MFC-9330CDW
 - Brother MFC-J220
+- Brother MFC-J480DW
 - Brother MFC-L2700DW
 - Brother MFC-L2703DW
 - Brother MFC-L2740DW
-- Brother MFC-J480DW
+
 
 **For newer Brother scanners you have to install the `brscan4` package.**
 
