@@ -1,6 +1,6 @@
 +++
 title = "Disks"
-lastmod = "2017-10-22T19:02:00+02:00"
+lastmod = "2018-12-23T13:32:25+01:00"
 +++
 # Disks
 
@@ -26,4 +26,4 @@ To create an EFI System Partition, open up GParted and create a FAT32 partition 
 - Your system must be booted using Unified EFI (UEFI) mode, as opposed to a "legacy (BIOS) mode".
 - Secure Boot needs to be disabled.
 - Your disk is required to be GPT formatted.
-- If cannot see your SSD drive, set the SATA configuration to AHCI.
+- If you cannot see your SSD drive, set the SATA configuration to AHCI.
