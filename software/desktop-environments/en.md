@@ -1,6 +1,6 @@
 +++
 title = "Desktop Environments"
-lastmod = "2018-08-10T19:28:54+02:00"
+lastmod = "2019-03-17T22:06:34+02:00"
 +++
 # Desktop Environments
 
@@ -20,7 +20,7 @@ Solus offers a GNOME Shell experience that ships out-of-the-box with a variety o
 
 ``` bash
 sudo eopkg rm lightdm
-sudo eopkg install gdm gnome-shell gnome-desktop-branding
+sudo eopkg install gdm gnome-shell gnome-desktop-branding-fortitude
 ```
 
 ## MATE
