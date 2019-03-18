@@ -1,6 +1,6 @@
 +++
 title = "Minecraft"
-lastmod = "2018-08-28T02:59:48+02:00"
+lastmod = "2019-03-18T01:36:02+01:00"
 +++
 # Minecraft
 
@@ -44,7 +44,7 @@ Type=Application
 Name=Minecraft
 Comment=Minecraft Launcher
 Icon=minecraft
-Exec=/opt/minecraft/minecraft-launcher.sh
+Exec=/opt/minecraft/minecraft-launcher
 Path=/opt/minecraft/
 NoDisplay=false
 Categories=Game;
