@@ -1,6 +1,6 @@
 +++
 title = "Changing Shell"
-lastmod = "2019-02-19T09:45:00+01:00"
+lastmod = "2019-03-19T19:58:14+01:00"
 +++
 # Changing Shell
 
@@ -10,7 +10,7 @@ Solus makes available other shells via our repository, with a full list availabl
 
 - Dash
 - [Fish](https://fishshell.com/)
-- [Zsh](https://zsh.sourceforge.net/)
+- [Zsh](http://zsh.sourceforge.net/)
 
 ## Installation
 
