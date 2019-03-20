@@ -1,6 +1,6 @@
 +++
 title = "Third Party"
-lastmod = "2018-10-25T18:21:27+02:00"
+lastmod = "2019-03-19T19:12:05+01:00"
 +++
 # Third Party
 
@@ -213,13 +213,6 @@ sudo eopkg it pomodoneapp*.eopkg;sudo rm pomodoneapp*.eopkg
 ``` bash
 sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/office/scrivener/pspec.xml
 sudo eopkg it scrivener*.eopkg;sudo rm scrivener*.eopkg
-```
-
-### WPS Office
-
-``` bash
-sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/office/wps-office/pspec.xml
-sudo eopkg it wps-office*.eopkg;sudo rm wps-office*.eopkg
 ```
 
 ## Programming
