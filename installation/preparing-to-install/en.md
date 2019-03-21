@@ -1,6 +1,6 @@
 +++
 title = "Preparing to Install"
-lastmod = "2019-03-17T22:06:34+02:00"
+lastmod = "2019-03-21T19:53:50+01:00"
 +++
 # Preparing to install
 
@@ -33,7 +33,7 @@ gpg --verify <Signed File>.sign <File>.sha256sum
 #### Verify ISO
 
 ```bash
-sha256sum -c Solus-4.0-Budgie.sha256sum | grep OK
+sha256sum -c Solus-4.0-Budgie.iso.sha256sum | grep OK
 ```
 
 ---
