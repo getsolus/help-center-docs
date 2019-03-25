@@ -1,6 +1,6 @@
 +++
 title = "Boot Rescue"
-lastmod = "2017-09-22T20:08:14+03:00"
+lastmod = "2019-03-26T19:52:54+01:00"
 +++
 # Boot Rescue
 
@@ -78,4 +78,4 @@ Once in the chroot, run the following command, which will generate the necessary
 sudo clr-boot-manager update
 ```
 
-After this, you should exit your chroot with `exit` then reboot your system. In the event you are still unable to access Solus, please [contact us](/help-center/contact/).
+After this, you should exit your chroot with `exit` then reboot your system. In the event you are still unable to access Solus, please [contact us](/articles/contributing/getting-involved/en).
