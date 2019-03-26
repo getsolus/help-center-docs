@@ -1,6 +1,6 @@
 +++
 title = "Vagrant"
-lastmod = "2017-04-13T17:39:14+03:00"
+lastmod = "2019-03-25T20:15:12+01:00"
 +++
 # Vagrant
 
@@ -12,4 +12,4 @@ You can use Docker as a provider for Vagrant. You can install Docker via the `do
 
 ## VirtualBox
 
-You can use VirtualBox as a provider by following the "Solus As Host" instructions [here](/articles/software/virtualbox/en).
+You can use VirtualBox as a provider by following the "Solus As Host" instructions [here](/articles/software/virtualbox/en#solus-as-host).
