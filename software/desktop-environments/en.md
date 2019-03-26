@@ -1,6 +1,6 @@
 +++
 title = "Desktop Environments"
-lastmod = "2019-03-17T22:06:34+02:00"
+lastmod = "2019-03-25T19:53:20+01:00"
 +++
 # Desktop Environments
 
@@ -25,7 +25,7 @@ sudo eopkg install gdm gnome-shell gnome-desktop-branding-fortitude
 
 ## MATE
 
-Solus offers the MATE desktop environment / experience, tailored to advanced users and older hardware, as well as shipping with our modern menu called [Brisk Menu](https://github.com/solus-project/brisk-menu). If you have installed either our Budgie or GNOME editions, you can try out and install MATE by running the following command:
+Solus offers the MATE desktop environment / experience, tailored to advanced users and older hardware, as well as shipping with our modern menu called [Brisk Menu](https://github.com/getsolus/brisk-menu). If you have installed either our Budgie or GNOME editions, you can try out and install MATE by running the following command:
 
 ``` bash
 sudo eopkg install -c desktop.mate
