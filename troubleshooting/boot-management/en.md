@@ -1,6 +1,6 @@
 +++
 title = "Boot Management"
-lastmod = "2018-10-20T13:39:48+03:00"
+lastmod = "2019-03-26T20:05:33+01:00"
 +++
 # Boot Management
 
@@ -38,6 +38,7 @@ By default from `Solus 3`, the ISO ships with the `linux-current` kernel. The se
 |broadcom-sta            |broadcom-sta-current            |
 |linux-lts-headers       |linux-current-headers           |
 |nvidia-340-glx-driver   |nvidia-340-glx-driver-current   |
+|nvidia-390-glx-driver   |nvidia-390-glx-driver-current   |
 |nvidia-glx-driver       |nvidia-glx-driver-current       |
 |razer-drivers           |razer-drivers-current           |
 |v4l2loopback            |v4l2loopback-current            |
