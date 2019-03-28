@@ -1,6 +1,6 @@
 +++
 title = "Community Guidelines"
-lastmod = "2019-03-05T00:36:35+02:00"
+lastmod = "2019-03-28T15:09:45+01:00"
 +++
 # Community Guidelines
 
@@ -13,7 +13,7 @@ Our guidelines apply to all services offered or used by the project, in addition
 The guidelines laid out in this section apply to all services offered or used by the project, such as (but not limited to):
 
 - Our Development Tracker
-- Any and all forums or organized communities, e.g. our Forums, Google+ Community or sub-reddit
+- Any and all forums or organized communities, e.g. our Forums or sub-reddit
 - IRC or any other officially supported means of communicating with the project and community members in real-time
 - Postings to social media pages / properties owned or used by the project.
 
