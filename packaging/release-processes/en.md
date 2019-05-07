@@ -1,6 +1,6 @@
 +++
 title = "Release Processes"
-lastmod = "2018-08-28T12:17:05+03:00"
+lastmod = "2019-05-08T00:32:10+03:00"
 +++
 # Release Processes
 
@@ -31,26 +31,4 @@ Deprecated packages will remove themselves from the users systems as the first o
 ## Major stack changes
 
 Large stack upgrades should begin as closely to the last Friday sync as possible, to ensure there is plenty of time for the work to be completed, integrated, and tested for regressions.
-
-## Test, test, test!
-
-If you are pushing changes that affect the core Solus installations, you can trivially test these by both updating your own installation, as well as producing test ISOs from unstable. Producing an ISO first to verify a stack change is usually preferable as an initial canary test.
-
-To build any of the Solus ISOs from git, simply clone the relevant image from the [Dev Portal](https://dev.getsol.us/) and run `make`. Do note that branded Solus ISOs should not be distributed as they would infer the images had passed QA - the distribution of unstable ISOs would reflect badly on the project.
-
-Choose the relevant image (`budgie`, `gnome`, `plasma`, `mate`) and substitute `TEST_ISO` below to begin building the ISO.
-
-```bash
-    export TEST_ISO="budgie"
-
-    # Ensure you have the correct ISO build dependencies
-    sudo eopkg it syslinux libisoburn squashfs-tools
-
-    # Clone an ISO repo
-    git clone https://dev.getsol.us/source/solus-image-$TEST_ISO.git
-    pushd solus-image-$TEST_ISO
-
-    # Build the ISO. You must have the `common/` tree set up per the Packaging introduction.
-    make
-```
 
