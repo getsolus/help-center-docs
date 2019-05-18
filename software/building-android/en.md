@@ -34,6 +34,11 @@ Now we'll need to install the rest of the required build dependencies.
 sudo eopkg it curl-devel git gnupg gperf libgcc-32bit libxslt-devel lzop ncurses-32bit-devel ncurses-devel readline-32bit-devel rsync schedtool sdl1-devel squashfs-tools unzip wxwidgets-devel zip zlib-32bit-devel
 ```
 
+Not a build dependency, but you'll definitely want ADB and Fastboot capabilities if you're developing for AOSP.
+``` bash
+sudo eopkg it android-tools
+```
+
 ### Installing the `repo` Tool
 
 `repo` is a tool from Google to manage multiple git repositories. We'll need to install it to download the Android source code.
@@ -121,6 +126,18 @@ export CCACHE_COMPRESS=1
 ```
 
 *After making changes to your `~/.bashrc` file, remember to run `source ~/.bashrc` for changes to take effect.*
+
+### ADB udev rules
+To allow ADB to work properly with most Android devices, udev rules need to be set up. M0Rf30 has compiled a comprehensive list of them so we'll use his [here](https://raw.githubusercontent.com/M0Rf30/android-udev-rules/master/51-android.rules).
+Create the file "51-android.rules" within /etc/udev/rules.d/ and copy the udev rules from the link above into it. If you don't feel comfortable pasting hundreds of udev lines at random you can sort through the list and find what pertains specifically to your device.
+Be sure to set the permissions for the file once you're done with:
+``` bash
+sudo chmod 644 /etc/udev/rules.d/51-android.rules && sudo chown root /etc/udev/rules.d/51-android.rules
+```
+Reload the udev rules by executing:
+``` bash
+sudo usysconf run -f
+```
 
 ## More Information
 
