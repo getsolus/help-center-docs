@@ -103,6 +103,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 ### Gigabyte
 
 - Gigabyte Aero 14K
+- Gigabyte Sabre 15
 
 ### Google
 
