@@ -1,6 +1,6 @@
 +++
 title = "Building a Package"
-lastmod = "2018-03-19T15:38:22+02:00"
+lastmod = "2019-06-03T15:30:58+09:30"
 +++
 # Building a Package
 
@@ -77,8 +77,6 @@ make
 ```
 
 You will be prompted to enter your password by sudo so dependencies may be downloaded and the necessary eopkg files may be generated.
-
-You may find other `common` commands [here](https://dev.getsol.us/source/common/browse/master/about/).
 
 Once you’ve achieved a successful build, the resulting `.eopkg` files will be moved to the current directory, along with the machine file, `pspec_*.xml` (currently `pspec_x86_64.xml`). We recommending checking the contents of your 
 generated eopkg file(s) to ensure everything is located in the appropriate locations. You can do this by using `lseopkg file_name.eopkg`.
