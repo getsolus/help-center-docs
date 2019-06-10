@@ -1,6 +1,6 @@
 +++
 title = "Packaging Practices"
-lastmod = "2018-06-18T20:37:47+03:00"
+lastmod = "2019-06-10T14:40:16+02:00"
 +++
 # Packaging Practices
 
