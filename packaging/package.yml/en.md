@@ -1,6 +1,6 @@
 +++
 title = "Package.yml"
-lastmod = "2018-09-25T00:57:00+01:00"
+lastmod = "2018-10-29T18:23:00+01:00"
 +++
 # Package.yml
 
@@ -165,9 +165,11 @@ Macro | Description
 ---- | ----
 **%python_setup** | Runs the build portion of a setup.py using python2.
 **%python_install** | Runs the install portion of a setup.py, to the appropriate root, using python2.
+**%python_test** | Without argument, runs the test portion of setup.py. With a `.py` script, execute the script with python2. With something else execute the command "as it is". ([More info](https://github.com/getsolus/ypkg/pull/1))
 **%python_compile** | Compiles `*.py` files using python2. This is only useful where the build doesn't compile them already (indicated by availability of `*.pyc` files).
 **%python3_setup** | Runs the build portion of a setup.py using python3.
 **%python3_install** | Runs the install portion of a setup.py, to the appropriate root, using python3.
+**%python3_test** | Without argument, runs the test portion of setup.py. With a `.py` script, execute the script with python3. With something else execute the command "as it is". ([More info](https://github.com/getsolus/ypkg/pull/1))
 **%python3_compile** | Compiles `*.py` files using python3. This is only useful where the build doesn't compile them already (indicated by availability of `*.pyc` files).
 
 ### Ruby Actionable Macros
