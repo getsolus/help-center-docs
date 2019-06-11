@@ -1,5 +1,6 @@
 +++
 title = "Building Android"
+lastmod = "2019-06-12T01:15:41+03:00"
 +++
 # Building Android™ on Solus
 
