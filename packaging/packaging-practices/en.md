@@ -1,6 +1,6 @@
 +++
 title = "Packaging Practices"
-lastmod = "2018-06-18T20:37:47+03:00"
+lastmod = "2019-06-10T14:40:16+02:00"
 +++
 # Packaging Practices
 
@@ -195,6 +195,12 @@ In output:
 ``` bash
 Provides: pkgconfig(gtk+-3.0) pkgconfig(gdk-3.0) pkgconfig(gdk-wayland-3.0) pkgconfig(gail-3.0) pkgconfig(gdk-x11-3.0) pkgconfig(gtk+-unix-print-3.0)
 pkgconfig(gtk+-wayland-3.0) pkgconfig(gtk+-x11-3.0) 
+```
+
+If you want to do a reverse process and figure out what package is part of pkgconfig you can use:
+
+```
+common/Scripts/epcsearch.py NAME
 ```
 
 ### Using explict named dependencies
