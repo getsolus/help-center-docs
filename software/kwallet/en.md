@@ -40,7 +40,7 @@ After creating this file, you will need to make it executable:
 
 `chmod a+x ~/.config/autostart-scripts/ssh-add.sh`
 
-## Re-log in to test your changes
+## Re-log to test your changes
 
 After logging out and back in, you should now be prompted by the KDE Wallet to input your SSH key passphrases.
 
