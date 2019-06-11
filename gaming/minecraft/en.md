@@ -1,6 +1,6 @@
 +++
 title = "Minecraft"
-lastmod = "2019-03-18T01:36:02+01:00"
+lastmod = "2019-04-30T23:31:12+02:00"
 +++
 # Minecraft
 
@@ -10,10 +10,10 @@ lastmod = "2019-03-18T01:36:02+01:00"
 
 ## Installation
 
-Install Java and download Minecraft:
+Install dependencies and download Minecraft:
 
 ``` bash
-sudo eopkg it openjdk-8
+sudo eopkg it openjdk-8 gconf
 sudo mkdir -p /opt/minecraft
 sudo wget https://launcher.mojang.com/download/Minecraft.tar.gz -O /opt/minecraft/Minecraft.tar.gz
 ```
