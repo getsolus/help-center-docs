@@ -2,7 +2,7 @@
 title = "KDE Wallet and SSH keys"
 lastmod = "2019-03-16T14:50:00+01:00"
 +++
-# Using KDE Wallet to manage SSH key passphrases on Solus KDE Plasma Desktop
+# KDE Wallet and SSH keys
 
 In KDE Plasma, the KDE Wallet is responsible for securely storing and supplying user credentials to the various KDE applications that request them.
 
@@ -26,7 +26,9 @@ On the Solus KDE Plasma Desktop spin, `ksshaskpass` is installed out of the box 
 
 The contents of `~/.config/autostart-scripts/ssh-add.sh` should reflect the SSH keys you want to manage using the KDE Wallet.
 
-### Example `.config/autostart-scripts/ssh-add.sh` contents
+### Example
+
+Below is an example of the contents of `.config/autostart-scripts/ssh-add.sh`:
 
 ```
 #!/bin/ssh
@@ -36,9 +38,9 @@ ssh-add $HOME/.ssh/id_rsa $HOME/.ssh/solus_id_rsa </dev/null
 
 After creating this file, you will need to make it executable:
 
-`$ chmod a+x ~/.config/autostart-scripts/ssh-add.sh`
+`chmod a+x ~/.config/autostart-scripts/ssh-add.sh`
 
-## Log out and log back in to test your changes
+## Re-log in to test your changes
 
 After logging out and back in, you should now be prompted by the KDE Wallet to input your SSH key passphrases.
 
