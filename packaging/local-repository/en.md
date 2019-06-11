@@ -13,6 +13,7 @@ We assume you have worked through the [packaging](/articles/packaging/building-a
 ``` bash
 sudo eopkg install solbuild-config-local-unstable
 ```
+
 You will also need to ensure that your common directory is fully up to date. Run `git pull` from within the common directory to receive the latest updates.
 
 ## Utilising the local repository
@@ -44,7 +45,7 @@ Before packages from the local solbuild repository can be resolved, an eopkg ind
 
 As mentioned earlier, the local solbuild repo installed by the `solbuild-config-local-unstable` package lives in `/var/lib/solbuild/local`.
 
-To generate or refresh the eopkg index in `/var/lib/solbuild/local`, simply run: 
+To generate or refresh the eopkg index in `/var/lib/solbuild/local`, simply run:
 
 `sudo eopkg index --skip-signing /var/lib/solbuild/local/`
 
