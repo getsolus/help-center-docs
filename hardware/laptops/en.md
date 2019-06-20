@@ -1,6 +1,6 @@
 +++
 title = "Laptop Compatibility"
-lastmod = "2019-03-03T00:45:52+05:30"
+lastmod = "2019-06-20T11:42+08:00"
 +++
 # Laptop Compatibility
 
@@ -110,6 +110,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 
 ### HP
 
+- HP 15-db0076AX
 - HP 240 G3
 - HP Compaq 6730B
 - HP Compaq NC6400
