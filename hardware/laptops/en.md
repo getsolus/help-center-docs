@@ -1,6 +1,6 @@
 +++
 title = "Laptop Compatibility"
-lastmod = "2019-06-20T11:42+08:00"
+lastmod = "2019-06-22T09:31:53+08:00"
 +++
 # Laptop Compatibility
 
