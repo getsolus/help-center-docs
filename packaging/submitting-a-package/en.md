@@ -1,6 +1,6 @@
 +++
 title = "Submitting the Package"
-lastmod = "2018-12-29T00:54:53+01:00"
+lastmod = "2019-07-18T18:07:18+02:00"
 +++
 # Submitting the Package
 
@@ -54,6 +54,10 @@ token will be used to allow the CLI `arc` utility to communicate with Phabricato
 ## Creating the patch
 
 ### Manipulating files with Git
+
+### Initializing the repository
+
+First you need to initialize the repository with: `git init`
 
 #### Adding files
 
