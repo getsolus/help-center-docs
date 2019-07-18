@@ -76,6 +76,7 @@ Key Name | Type | Description
 **replaces** | `dict(s)` | Replace one package with another, used when renaming or deprecating packages for clean upgrade paths
 **patterns** | `dict(s)` | Allows fine grained control over file placement within the package or sub-packages. Useful for packages that are development only (i.e. `/usr/bin` files)
 **environment** | `unicode` | Specify code that will be exported to all build steps of the build (i.e. exporting variables for the entire build).
+**homepage** | `string` | Provides a link to the package's hompage in the software center.
 
 ### Build step keys, optional
 
