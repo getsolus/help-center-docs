@@ -30,7 +30,7 @@ sudo clr-boot-manager set-timeout 5 && sudo clr-boot-manager update
 
 ## Installing an alternative kernel
 
-By default from `Solus 4`, the ISO ships with the `linux-current` kernel. The separate kernel branches can be added by installing the `linux-lts` or `linux-current` packages. Note that each kernel has separate module packages, so if you use these kernel modules, you'll need to install the one related to the kernel you are adding.
+By default, the Solus utilizes our linux-current kernel. The separate kernel branches can be added by installing the `linux-lts` or `linux-current` packages. Note that each kernel has separate module packages, so if you use these kernel modules, you'll need to install the one related to the kernel you are adding.
 
 |linux-lts               |linux-current                   |
 |------------------------|--------------------------------|
