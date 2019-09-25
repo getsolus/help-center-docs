@@ -1,6 +1,6 @@
 +++
 title = "Wireless Chipsets Compatibility"
-lastmod = "2018-09-21T15:35:00+02:00"
+lastmod = "2019-09-25T18:54:00+02:00"
 +++
 # Wireless Chipsets Compatibility
 
@@ -32,6 +32,10 @@ This list should not suggest that *only*- such devices listed below are compatib
 - Broadcom BCM4365
 - Broadcom BCM57785
 
+## Netgear
+
+- Netgear WPN111
+
 ## Intel
 
 - Intel AC3160
@@ -59,6 +63,7 @@ This list should not suggest that *only*- such devices listed below are compatib
 - Realtek RTL8179
 - Realtek RTL8187SE
 - Realtek RTL8188CE
+- Realtek RTL8188CUS
 - Realtek RTL8191SEvB
 - Realtek RTL8192ce
 - Realtek RTL8723BE
