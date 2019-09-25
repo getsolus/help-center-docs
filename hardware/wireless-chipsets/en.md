@@ -1,6 +1,6 @@
 +++
 title = "Wireless Chipsets Compatibility"
-lastmod = "2018-09-21T15:35:00+02:00"
+lastmod = "2019-09-25T19:35:09+02:00"
 +++
 # Wireless Chipsets Compatibility
 
@@ -46,6 +46,7 @@ This list should not suggest that *only*- such devices listed below are compatib
 - Intel Ultimate N WiFi Link 5300
 - Intel WiFi Link 5100
 - Intel Wireless 8265 / 8275
+- Intel Corporation Wireless 7265
 
 ## Ralink
 
