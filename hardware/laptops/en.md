@@ -1,6 +1,6 @@
 +++
 title = "Laptop Compatibility"
-lastmod = "2019-03-03T00:45:52+05:30"
+lastmod = "2019-09-25T19:29:44+02:00"
 +++
 # Laptop Compatibility
 
@@ -118,6 +118,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 - HP EliteBook 8460p
 - HP EliteBook 8740w
 - HP EliteBook 8760w
+- HP EliteBook 820 G2
 - HP Envy TS M6
 - HP Pavilion 15-E042SO
 - HP Pavilion DV6
