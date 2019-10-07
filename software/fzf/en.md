@@ -29,6 +29,7 @@ FZF_COMPLETION_FILE=/usr/share/zsh/site-functions/_fzf
 ```
 
 ## Key Bindings
+
 `fzf` can use specific [key bindings](https://github.com/junegunn/fzf#key-bindings-for-command-line) to trigger a search over a list of files, command history and directories and paste the result onto the command-line.
 To enable these key bindings, add the following lines to the shell configuration file depending on the shell you use. This will be `~/.bashrc`, `~/.config/fish/config.fish`, or `~/.zshrc`.
 ### Bash
