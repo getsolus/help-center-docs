@@ -13,18 +13,16 @@ The fzf project consists of the following components: an `fzf` executable, an `f
 sudo eopkg it fzf
 ```
 
-The shell extensions are not enabled by default after the `fzf` package is installed. The procedures to enable these features are described below.
+The shell extensions are not enabled by default after the `fzf` package is installed. The procedures to enable these features are described below.For more tips and examples on the usage of `fzf`, visit its [github](https://github.com/junegunn/fzf) and [wiki](https://github.com/junegunn/fzf/wiki/examples) pages.
 
 ## Fuzzy Auto-Completion
 
-[Fuzzy completion](https://github.com/junegunn/fzf#fuzzy-completion-for-bash-and-zsh) for files and directories can be triggered by a trigger sequence (`**` by default) followed by the `TAB` key for `bash` and `zsh`. To enable this feature, add the following lines to the shell configuration file
-
+[Fuzzy completion](https://github.com/junegunn/fzf#fuzzy-completion-for-bash-and-zsh) for files and directories can be triggered by a trigger sequence (`**` by default) followed by the `TAB` key for `bash` and `zsh`. To enable this feature, add the following lines to the shell configuration file depending on the shell you use (`~/.bashrc` for `bash` and `~/.zshrc` for `zsh`).
 ### Bash
 ``` bash
 FZF_COMPLETION_FILE=/usr/share/bash-completion/completions/fzf
 [[ -f $FZF_COMPLETION_FILE ]] && source $FZF_COMPLETION_FILE
 ```
-
 ### Zsh
 ``` bash
 FZF_COMPLETION_FILE=/usr/share/zsh/site-functions/_fzf
@@ -33,24 +31,19 @@ FZF_COMPLETION_FILE=/usr/share/zsh/site-functions/_fzf
 
 ## Key Bindings
 `fzf` can use specific [key bindings](https://github.com/junegunn/fzf#key-bindings-for-command-line) to trigger a search over a list of files, command history and directories and paste the result onto the command-line.
-To enable these key bindings, add the following lines to the shell configuration file
-
+To enable these key bindings, add the following lines to the shell configuration file depending on the shell you use. This will be `~/.bashrc`, `~/.config/fish/config.fish`, or `~/.zshrc`.
 ### Bash
 ``` bash
 FZF_KEYBINDING_FILE=/usr/share/fzf/key-bindings.bash
 [[ -f $FZF_KEYBINDING_FILE ]] && source $FZF_KEYBINDING_FILE
 ```
-
-### Zsh
-``` bash
-FZF_KEYBINDING_FILE=/usr/share/fzf/key-bindings.zsh
-[[ -f $FZF_KEYBINDING_FILE ]] && source $FZF_KEYBINDING_FILE
-```
-
 ### Fish
 ``` bash
 FZF_KEYBINDING_FILE=/usr/share/fzf/key-bindings.fish
 [ -f $FZF_KEYBINDING_FILE ] && source $FZF_KEYBINDING_FILE
 ```
-
-More tips and examples on the usage of `fzf` can be found on its [github](https://github.com/junegunn/fzf) and [wiki](https://github.com/junegunn/fzf/wiki/examples) pages.
+### Zsh
+``` bash
+FZF_KEYBINDING_FILE=/usr/share/fzf/key-bindings.zsh
+[[ -f $FZF_KEYBINDING_FILE ]] && source $FZF_KEYBINDING_FILE
+```
