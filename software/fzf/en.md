@@ -8,12 +8,11 @@ lastmod = "2019-10-07T15:55:50+02:00"
 ## Installation 
 
 The fzf project consists of the following components: an `fzf` executable, an `fzf-tmux` script for launching fzf in a tmux pane, shell extensions (including key bindings and command-line fuzzy auto-completion), and a vim/Neovim plugin file. They are all available in the `fzf` package in the Software Center or via eopkg in a terminal:
-
 ``` bash
 sudo eopkg it fzf
 ```
 
-The shell extensions are not enabled by default after the `fzf` package is installed. The procedures to enable these features are described below.For more tips and examples on the usage of `fzf`, visit its [github](https://github.com/junegunn/fzf) and [wiki](https://github.com/junegunn/fzf/wiki/examples) pages.
+The shell extensions are not enabled by default after the `fzf` package is installed. The procedures to enable these features are described below. For more tips and examples on the usage of `fzf`, visit its [github](https://github.com/junegunn/fzf) and [wiki](https://github.com/junegunn/fzf/wiki/examples) pages.
 
 ## Fuzzy Auto-Completion
 
