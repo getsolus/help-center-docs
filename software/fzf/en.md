@@ -30,19 +30,30 @@ FZF_COMPLETION_FILE=/usr/share/zsh/site-functions/_fzf
 
 ## Key Bindings
 
-`fzf` can use specific [key bindings](https://github.com/junegunn/fzf#key-bindings-for-command-line) to trigger a search over a list of files, command history and directories and paste the result onto the command-line.
-To enable these key bindings, add the following lines to the shell configuration file depending on the shell you use. This will be `~/.bashrc`, `~/.config/fish/config.fish`, or `~/.zshrc`.
+`fzf` can use specific [key bindings](https://github.com/junegunn/fzf#key-bindings-for-command-line) to trigger a search over a list of files, command history and directories and paste the result onto the command-line. Follow these steps to set up the key bindings for your favorite shell.
 ### Bash
+Add the following content to `~/.bashrc`
 ``` bash
 FZF_KEYBINDING_FILE=/usr/share/fzf/key-bindings.bash
 [[ -f $FZF_KEYBINDING_FILE ]] && source $FZF_KEYBINDING_FILE
 ```
 ### Fish
+First create the following directory if it does not already exist
+```bash
+mkdir -p $HOME/.config/fish/functions
+```
+`cd` into this directory and make a file `fish_user_key_bindings.fish` with the following content
 ``` bash
-FZF_KEYBINDING_FILE=/usr/share/fzf/key-bindings.fish
-[ -f $FZF_KEYBINDING_FILE ] && source $FZF_KEYBINDING_FILE
+function fish_user_key_bindings
+  fzf_key_bindings
+end
+```
+Then create the following symlink
+``` bash
+ln -s /usr/share/fzf/key-bindings.fish $HOME/.config/fish/functions/fzf_key_bindings.fish
 ```
 ### Zsh
+Add the following content to `~/.zshrc`
 ``` bash
 FZF_KEYBINDING_FILE=/usr/share/fzf/key-bindings.zsh
 [[ -f $FZF_KEYBINDING_FILE ]] && source $FZF_KEYBINDING_FILE
