@@ -1,6 +1,6 @@
 +++
 title = "Laptop Compatibility"
-lastmod = "2019-03-03T00:45:52+05:30"
+lastmod = "2019-10-23T11:45:06+02:00"
 +++
 # Laptop Compatibility
 
@@ -141,6 +141,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Lenovo IdeaPad U310 Touch
 - Lenovo IdeaPad Z370
 - Lenovo IdeaPad Z585
+- Lenovo ThinkPad 13
 - Lenovo ThinkPad E450
 - Lenovo ThinkPad E550
 - Lenovo ThinkPad Edge E545
@@ -158,6 +159,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Lenovo ThinkPad T440s
 - Lenovo ThinkPad T470
 - Lenovo ThinkPad T470s
+- Lenovo ThinkPad T490s
 - Lenovo ThinkPad T560
 - Lenovo ThinkPad T570
 - Lenovo ThinkPad W520 4270CTO
@@ -168,6 +170,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Lenovo ThinkPad X201
 - Lenovo ThinkPad X220
 - Lenovo ThinkPad X230
+- Lenovo ThinkPad X280
 - Lenovo Yoga 2 11
 - Lenovo Z50-70
 
