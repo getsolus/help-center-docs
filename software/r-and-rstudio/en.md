@@ -1,8 +1,14 @@
 +++
 title = "R and Rstudio"
-lastmod = "2019-11-01T22:33:41-04:00"
+lastmod = "2019-11-02T10:57:20-04:00"
 +++
-# Downloading R
+
+# R and Rstudio
+
+Covers the basics of how to install R and Rstudio on Solus and also covers how to install required dependencies for installing additional CRAN libraries.
+
+
+## Downloading R
 
 It is recommended to download R before downloading Rstudio. This can be accomplished easily in any of three ways.
 **NOTE:** Both R and Rstudio are available natively on Solus thanks to their amazing maintainers, it is not necessary to go to either softwares' respective website.
@@ -12,7 +18,7 @@ It is recommended to download R before downloading Rstudio. This can be accompli
 - The third option for install is to open your terminal and enter the command ```sudo eopkg it r```
 
 
-# Downloading Rstudio
+## Downloading Rstudio
 
 The first step in setting up Rstudio is to download and install it. This can be accomplished in the same ways as R in the prior step.
 
@@ -21,7 +27,7 @@ The first step in setting up Rstudio is to download and install it. This can be 
 - The third option for install is to open your terminal and enter the command ```sudo eopkg it rstudio```
 
 
-## How to use ```install.package()``` on Solus
+### How to use ```install.package()``` on Solus
 
 Unless you are only going to use base R functions, you will need to make use of ```install.package()``` within R to install additional libraries. To use this function within R you need to install certain development packages which vary depending on the library you are trying to enable within R.
 
@@ -37,7 +43,7 @@ There two main solus packages that will include many of the dependencies require
 
  If when you try to install a CRAN library with ```install.package()``` from within R and you are presented with an error that says ```...exited with non zero exit status``` this is most likely because one of the required dependencies, *which will be listed within the R console detailing the error*, is contained within a Solus devel package you have not yet installed.
 
- ### Additional Discovered Dependencies
+ #### Additional Discovered Dependencies
 
  This section should be edited to help future users to know what Solus devel packages are needed to install additional, more specialized CRAN packages.
 
