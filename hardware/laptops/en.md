@@ -72,6 +72,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 
 - Dell Inspiron 14 3452
 - Dell Inspiron 15 7579
+- Dell Inspiron 15R 5521
 - Dell Inspiron 15R N5010
 - Dell Inspiron 15R N5110
 - Dell Inspiron 1110
