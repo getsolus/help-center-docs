@@ -31,7 +31,7 @@ sudo eopkg it -c system.devel
 Now we'll need to install the rest of the required build dependencies.
 
 ``` bash
-sudo eopkg it curl-devel git gnupg gperf libgcc-32bit libxslt-devel lzop ncurses-32bit-devel ncurses-devel readline-32bit-devel rsync schedtool sdl1-devel squashfs-tools unzip vim wxwidgets-devel zip zlib-32bit-devel
+sudo eopkg it curl-devel git gnupg gperf libgcc-32bit libxslt-devel lzop ncurses-32bit-devel ncurses-devel readline-32bit-devel rsync schedtool sdl1-devel squashfs-tools unzip vboot-utils vim wxwidgets-devel zip zlib-32bit-devel
 ```
 
 Not a build dependency, but you'll definitely want ADB and Fastboot capabilities if you're developing for AOSP.
