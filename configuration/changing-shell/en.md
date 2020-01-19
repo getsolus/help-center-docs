@@ -1,6 +1,6 @@
 +++
 title = "Changing Shell"
-lastmod = "2019-03-19T19:58:14+01:00"
+lastmod = "2020-01-19T22:04:34+01:00"
 +++
 # Changing Shell
 
@@ -19,12 +19,12 @@ In order to use a shell different from Bash, you may need to install the respect
 Example:
 
 ``` bash
-sudo eopkg install fish
+sudo eopkg install zsh
 ```
 
 ## Switching
 
-To switch to another shell, first install the appropriate package, followed by the command `chsh` (change shell) with `sudo` to change the shell for your user session. Lastly you need to log out and back in again for the change to take effect.
+To switch to another shell, first install the appropriate package, followed by the command `chsh` (change shell) with `sudo` to change the shell for your user session, using the path provided in `/usr/share/defaults/etc/shells`. Lastly you need to log out and back in again for the change to take effect.
 
 Example:
 
