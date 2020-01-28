@@ -98,6 +98,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 
 ### Fujitsu
 
+- Fujitsu Lifebook A531
 - Fujitsu Lifebook T900
 
 ### Gigabyte
