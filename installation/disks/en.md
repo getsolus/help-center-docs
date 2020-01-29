@@ -1,6 +1,6 @@
 +++
 title = "Disks"
-lastmod = "2018-12-23T13:32:25+01:00"
+lastmod = "2020-01-28T21:21:43-05:00"
 +++
 # Disks
 
@@ -8,8 +8,10 @@ Solus provides multiple ways you can install onto your system.
 
 1. Solus can take up the entire drive.
 2. You can install Solus next to your existing operating system, such as Windows. *If you have multiple operating systems 
-installed, we will choose the largest option.*
-3. You can manually configure your system. This is only recommend for advanced users which may desire to have a dedicated `/home` partition. Note that if you manually configure your system, you will need to restart the Installer for those changes to apply appropriately.
+installed, we will choose the largest option.*  
+3. With advanced install options, Solus can install with LVM (Logical Volume Management)  for simpler resizing and altercation of created partions, and encryption for the LVM, in which you must enter a password at boot time to unlock the disk and access the operating system and your files.
+**Note:**These options can only be used when erasing all content on disk.
+4. You can manually configure your system. This is only recommend for advanced users which may desire to have a dedicated `/home` partition. Note that if you manually configure your system, you will need to restart the Installer for those changes to apply appropriately.
 **Note:** Legacy (BIOS) must use MBR partition table while Unified EFI (UEFI) must use GPT partition table.
 
 Alongside these options, we also provide the ability to use full-disk encryption. For the obvious reason of it being full-disk, this 
