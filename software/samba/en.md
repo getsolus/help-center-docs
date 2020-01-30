@@ -16,7 +16,7 @@ To enable convenient file-sharing on Solus, we maintain a Solus-specific Samba c
 - Advertises itself via *Avahi* aka *Apple Bonjour* / *mDNS* / *zeroconf* for macOS compatibility
 - Advertises itself via *wsdd* aka *Web Services Discovery Daemon* for Windows 7+ compatibility
 - Disables sharing of printers via Samba (use IPP via CUPS instead)
-- Allows access only from IPv4 RFC 1918 private and RFC 4291 IPv6 link-local non-routable addresses
+- Allows access only from IPv4 and IPv6 private and link-local (non-internet-routable) addresses
 
 As of Samba 4.7.x, Solus disables the old, deprecated and insecure original SMB1/CIFS protocol by default.
 
@@ -46,7 +46,9 @@ sudo systemctl stop smb
 sudo systemctl disable --now smb
 ```
 
-### How to start the Web Service Discovery Daemon to enable Windows 7+ Network discovery
+### Enabling Windows 7+ network discovery support on Solus
+
+The Web Services Discovery protocol is used by Windows 7+ clients to discover shares on other computers.  Solus now includes a service named *wsdd* which provides support for the Web Services Discovery protocol.
 
 When restarting wsdd, it may be necessary to also restart Samba.
 
@@ -72,9 +74,9 @@ sudo systemctl disable --now wsdd
 
 For more details on managing services on Solus with *systemctl*, see `man systemctl` which is part of the systemd system and service manager.
 
-### How to access a Solus Samba instance via IPv6
+### Accessing Solus Samba via IPv6
 
-In order to access a running Solus Samba server instance via IPv6, first ensure that all relevant hosts (including the Samba host) are configured to use an IPv6 link-local address.
+In order to access a running Solus Samba server instance via IPv6, first verify that all relevant hosts (including the Samba host) are configured with an IPv6 link-local address.
 
 This can be verified in a terminal:
 
@@ -91,7 +93,7 @@ $ ip addr
 
 In the above example, the name of the relevant network device is `enp2s0`.  Note how the line starting with `inet6` contains an IPv6 address which begins with fe80:: and contains `scope link`.
 
-Ensure that Samba has been started on the host and then query the running local Samba instance with the following command, using the IPv6 addr and interface as show by the output of `ip addr`:
+Ensure that Samba has been started on the host and then query the running local Samba instance with the following command, using the IPv6 address and interface as show by the output of `ip addr`:
 
 ``` bash
 $ smbclient -N -L //fe80::d555:a50f:1aea:c944%enp2s0
