@@ -46,9 +46,9 @@ sudo systemctl stop smb
 sudo systemctl disable --now smb
 ```
 
-### Enabling Windows 7+ network discovery support on Solus
+### Enabling Windows 7+ network discovery support
 
-The Web Services Discovery protocol is used by Windows 7+ clients to discover shares on other computers.  Solus now includes a service named *wsdd* which provides support for the Web Services Discovery protocol.
+The Web Services Discovery protocol is used by Windows 7+ clients to discover shares on other computers.  Solus now includes the *wsdd* service which provides support for the Web Services Discovery protocol.
 
 When restarting wsdd, it may be necessary to also restart Samba.
 
