@@ -74,7 +74,7 @@ sudo systemctl disable --now wsdd
 
 For more details on managing services on Solus with *systemctl*, see `man systemctl` which is part of the systemd system and service manager.
 
-### Accessing Solus Samba via IPv6
+### Accessing Samba via IPv6
 
 In order to access a running Solus Samba server instance via IPv6, first verify that all relevant hosts (including the Samba host) are configured with an IPv6 link-local address.
 
