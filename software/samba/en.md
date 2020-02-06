@@ -1,6 +1,6 @@
 +++
 title = "Samba File Sharing"
-lastmod = "2020-01-28T18:39:00+01:00"
+lastmod = "2020-02-06T19:35:00+01:00"
 +++
 # Samba file sharing
 
@@ -80,7 +80,7 @@ In order to access a running Solus Samba server instance via IPv6, first verify 
 
 This can be verified in a terminal:
 
-``` bash
+```
 $ ip addr
 
 2: enp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
@@ -95,7 +95,7 @@ In the above example, the name of the relevant network device is `enp2s0`.  Note
 
 Ensure that Samba has been started on the host and then query the running local Samba instance with the following command, using the IPv6 address and interface as show by the output of `ip addr`:
 
-``` bash
+```
 $ smbclient -N -L //fe80::d555:a50f:1aea:c944%enp2s0
 ```
 
@@ -114,7 +114,6 @@ fe80::d555:a50f:1aea:c944%enp2s0 is an IPv6 address -- no workgroup available
 ```
 
 Make sure to change the IPv6 address and interface name (`fe80::d555:a50f:1aea:c944` and `enp2s0` respectively in the above example) to the real address and interface name of the Samba host in question.
-
 
 ## A brief introduction to the Samba usershare functionality
 
@@ -190,7 +189,6 @@ To help debug authentication issues, the Solus Samba configuration is by default
 
 The Samba log files live in the `/var/log/samba/` directory.
 
-
 ## Adding custom configuration parameters via `/etc/samba/smb.conf`
 
 **CAUTION:** *From this point on, it is assumed that the user is familiar with the Samba documentation, including `man smb.conf`, and that the user has a basic understanding of Linux filesystem permissions.*
@@ -245,7 +243,6 @@ Apart from the aforementioned `man smb.conf`, wiki.samba.org is your friend, spe
 
 The default Solus Samba configuration is patterned on the above.
 
-
 ## Enabling legacy SMB1/CIFS protocol support
 
 **CAUTION:** Enabling SMB1/CIFS is **not** recommended unless the security implications of doing so are properly understood.
@@ -279,7 +276,7 @@ Enabling legacy SMB1/CIFS protocol support is as simple as adding (some or all o
 
 Additionally, the user can choose to enable the *nmb.service*, which is a server that understands and can reply to NetBIOS over IP name service requests, like those produced by SMB/CIFS clients such as Windows 95/98/ME, Windows NT, Windows 2000, Windows XP and LanManager clients. It also participates in the browsing protocols which make up the Windows "Network Neighborhood" view.
 
-```
+``` bash
 # Start nmb.service manually
 sudo systemctl start nmb
 
@@ -298,7 +295,6 @@ sudo systemctl disable --now nmb
 
 For more details on the *nmb.service*, see `man nmbd`.
 
-
 ## Full manual control of Samba (recommended only for experienced Samba admins)
 
 Full manual control of Samba can be achieved by completely bypassing the default Solus Samba configuration.
@@ -307,7 +303,7 @@ In the *smbd* manual page (`man 8 smbd`), it is shown how the compiled-in defaul
 
 To use the traditional `/etc/samba/smb.conf` configuration file exclusively (thus bypassing the Solus configuration), edit the `/etc/sysconfig/samba` file to look like so:
 
-```
+``` bash
 ## Path:           Network/Samba
 ## Description:    Samba process options
 ## Type:           string
