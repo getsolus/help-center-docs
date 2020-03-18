@@ -1,6 +1,6 @@
 +++
 title = "Samba File Sharing"
-lastmod = "2020-02-06T19:35:00+01:00"
+lastmod = "2020-03-18T08:50:00+01:00"
 +++
 # Samba file sharing
 
@@ -21,6 +21,8 @@ To enable convenient file-sharing on Solus, we maintain a Solus-specific Samba c
 As of Samba 4.7.x, Solus disables the old, deprecated and insecure original SMB1/CIFS protocol by default.
 
 For more information on this choice, please read [this post regarding SMB1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/).
+
+As of Samba 4.11.x, the SMB1/CIFS protocol is officially deprecated upstream and may stop functioning.
 
 ### How to start/stop Samba
 
@@ -243,11 +245,11 @@ Apart from the aforementioned `man smb.conf`, wiki.samba.org is your friend, spe
 
 The default Solus Samba configuration is patterned on the above.
 
-## Enabling legacy SMB1/CIFS protocol support
+## Enabling insecure and deprecated legacy SMB1/CIFS protocol support
 
-**CAUTION:** Enabling SMB1/CIFS is **not** recommended unless the security implications of doing so are properly understood.
+**WARNING:** Enabling SMB1/CIFS is **not** recommended. As of Samba 4.11.x SMB1 is deprecated by upstream.
 
-Enabling legacy SMB1/CIFS protocol support is as simple as adding (some or all of) the following configuration parameters to `/etc/samba/smb.conf`
+Provided that the security implications are understood, enabling legacy SMB1/CIFS protocol support is as simple as adding (some or all of) the following configuration parameters to `/etc/samba/smb.conf`
 
 ``` ini
 # Contents of /etc/samba/smb.conf:
