@@ -12,7 +12,7 @@ To enable convenient file-sharing on Solus, we maintain a Solus-specific Samba c
 
 - Supports Samba usershare functionality
 - Enables sharing of *$HOME* folders (manual user account activation needed)
-- Is set up as a standalone server using the SMB2.10 protocol and up (>= Windows 7)
+- Is set up as a standalone server using the SMB2.0.2 protocol and up (>= Windows Vista/Server 2008)
 - Advertises itself via *Avahi* aka *Apple Bonjour* / *mDNS* / *zeroconf* for macOS compatibility
 - Advertises itself via *wsdd* aka *Web Services Discovery Daemon* for Windows 7+ compatibility
 - Disables sharing of printers via Samba (use IPP via CUPS instead)
@@ -22,7 +22,7 @@ As of Samba 4.7.x, Solus disables the old, deprecated and insecure original SMB1
 
 For more information on this choice, please read [this post regarding SMB1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/).
 
-As of Samba 4.11.x, the SMB1/CIFS protocol is officially deprecated upstream and may stop functioning.
+As of Samba 4.11.x, the SMB1/CIFS protocol is officially deprecated upstream.
 
 ### How to start/stop Samba
 
@@ -244,58 +244,6 @@ Apart from the aforementioned `man smb.conf`, wiki.samba.org is your friend, spe
 - https://wiki.samba.org/index.php/Setting_up_Samba_as_a_Standalone_Server
 
 The default Solus Samba configuration is patterned on the above.
-
-## Enabling insecure and deprecated legacy SMB1/CIFS protocol support
-
-**WARNING:** Enabling SMB1/CIFS is **not** recommended. As of Samba 4.11.x SMB1 is deprecated by upstream.
-
-Provided that the security implications are understood, enabling legacy SMB1/CIFS protocol support is as simple as adding (some or all of) the following configuration parameters to `/etc/samba/smb.conf`
-
-``` ini
-# Contents of /etc/samba/smb.conf:
-#
-# If /etc/samba/smb.conf exists, it is automatically loaded by the Solus-
-# controlled default config residing in /usr/share/defaults/samba/smb.conf 
-# 
-# The following configuration re-enables the deprecated, insecure SMB1 protocol 
-#
-# ';' also denotes a comment (typically used for configuration parameters)
-#
-    # Allow access to SMB1 shares on other servers
-    client ipc min protocol = NT1
-    client min protocol = NT1
-    
-    # Allow access to shares on other servers ONLY via SMB1
-    client ipc max protocol = NT1
-    client max protocol = NT1
-    
-    # Allow access to shares on this Samba instance via SMB1
-    server min protocol = NT1
-    
-    # Allow access to shares on this Samba instance ONLY via SMB1
-    server max protocol = NT1
-```
-
-Additionally, the user can choose to enable the *nmb.service*, which is a server that understands and can reply to NetBIOS over IP name service requests, like those produced by SMB/CIFS clients such as Windows 95/98/ME, Windows NT, Windows 2000, Windows XP and LanManager clients. It also participates in the browsing protocols which make up the Windows "Network Neighborhood" view.
-
-``` bash
-# Start nmb.service manually
-sudo systemctl start nmb
-
-# Configure nmb.service to start automatically on each boot and immediately start the service
-sudo systemctl enable --now nmb
-
-# Check whether nmb.service is running
-sudo systemctl status nmb
-
-# Stop nmb.service manually
-sudo systemctl stop nmb
-
-# Configure nmb.service to not start automatically on each boot and immediately stop the service
-sudo systemctl disable --now nmb
-```
-
-For more details on the *nmb.service*, see `man nmbd`.
 
 ## Full manual control of Samba (recommended only for experienced Samba admins)
 
