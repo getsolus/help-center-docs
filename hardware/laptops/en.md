@@ -1,6 +1,6 @@
 +++
 title = "Laptop Compatibility"
-lastmod = "2019-10-23T11:45:06+02:00"
+lastmod = "2020-01-28T23:00:46+00:00"
 +++
 # Laptop Compatibility
 
@@ -98,6 +98,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 
 ### Fujitsu
 
+- Fujitsu Lifebook A531
 - Fujitsu Lifebook T900
 
 ### Gigabyte
