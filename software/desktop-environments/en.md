@@ -1,6 +1,6 @@
 +++
 title = "Desktop Environments"
-lastmod = "2019-03-25T19:53:20+01:00"
+lastmod = "2020-04-01T19:44:25-04:00"
 +++
 # Desktop Environments
 
@@ -33,7 +33,7 @@ sudo eopkg install -c desktop.mate
 
 ## Plasma
 
-Solus will offer the KDE Plasma desktop environment / experience in the next coming release. Plasma is a powerful and highly customizable desktop environment built with Qt and the KDE framework. It is recommend to use the ISO but until then, you can try it right now by running the following command:
+Solus offers the KDE Plasma desktop environment / experience, which is a powerful and highly customizable desktop environment built with Qt and the KDE framework. KDE Plasma can be installed by running the following command:
 
 ``` bash
 sudo eopkg install -c desktop.kde.core
