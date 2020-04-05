@@ -1,6 +1,6 @@
 +++
 title = "Boot Rescue"
-lastmod = "2020-02-06T20:31:49+02:00"
+lastmod = "2020-04-05T15:58:32+04:00"
 +++
 # Boot Rescue
 
