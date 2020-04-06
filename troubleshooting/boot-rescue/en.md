@@ -1,6 +1,6 @@
 +++
 title = "Boot Rescue"
-lastmod = "2020-02-06T20:31:49+02:00"
+lastmod = "2020-04-05T15:58:32+04:00"
 +++
 # Boot Rescue
 
@@ -95,7 +95,7 @@ In the event you had an incomplete upgrade, try the following commands:
 
 1. `sudo eopkg up`
 2. `sudo eopkg check | grep Broken | awk '{print $4}' | xargs sudo eopkg it --reinstall`
-3. Try reverting the latest package transaction (this should only be done if the first two steps, followed by the "Re-run System-Wide Configuration Triggers", failed to produce a successful bootup). See [our documentation on history and rollback](articles/package-management/history-and-rollback/en/) for more information, followed by re-applying your updates by running `sudo eopkg up`.
+3. Try reverting the latest package transaction (this should only be done if the first two steps, followed by the "Re-run System-Wide Configuration Triggers", failed to produce a successful bootup). See [our documentation on history and rollback](/articles/package-management/history-and-rollback/en) for more information, followed by re-applying your updates by running `sudo eopkg up`.
 
 ### Re-run System-Wide Configuration Triggers
 
