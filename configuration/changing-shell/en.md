@@ -28,16 +28,9 @@ To switch to another shell, first install the appropriate package, followed by t
 
 Example:
 
-For Zsh
+- For Zsh: ``` chsh -s /bin/zsh ```
 
-``` bash
-chsh -s /bin/zsh
-```
-For Fish
-
-``` bash
-chsh -s /usr/bin/fish
-```
+- For Fish: ``` chsh -s /bin/fish ```
 
 ## Troubleshooting
 
