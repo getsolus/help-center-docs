@@ -1,6 +1,6 @@
 +++
 title = "Boot Rescue"
-lastmod = "2020-02-06T20:31:49+02:00"
+lastmod = "2020-04-10T10:39:18+03:00"
 +++
 # Boot Rescue
 
@@ -37,9 +37,28 @@ Whether you're using GRUB or UEFI, you will need to mount your Solus root (`/`) 
 
 If you use LUKS-based encryption, the process will involve decrypting your LUKS partition and mounting it to the correct location. To do this, note the sda / sdb device from step #3 and follow the steps below:
 
-1. Decrypt the drive by running `cryptsetup luksOpen /dev/sdX# decrypted`, replacing `X#` with the partition from step #3, and enter your password when prompted
+1. Decrypt the drive by running `cryptsetup luksOpen /dev/sdX# decrypted`, replacing `X#` with the partition from step #3, and enter your password when prompted.
 2. Double check the output of `lsblk`. You should now see under "decrypted" `SolusSystem-Swap` and `SolusSystem-Root`.
 3. Mount `SolusSystem-Root` by running `mount /dev/mapper/SolusSystem-Root /target`
+
+Your lsblk output should be similar to the one listed below:
+
+``` bash
+NAME                   MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINT
+loop0                    7:0    0   1.3G  1 loop  /run/initramfs/squashfs
+loop1                    7:1    0   6.2G  1 loop  /run/rootfsbase
+loop2                    7:2    0   6.2G  1 loop  
+└─live-base            253:0    0   6.2G  1 dm    
+sda                      8:0    0 238.5G  0 disk  
+├─sda1                   8:1    0 488.3M  0 part  
+└─sda2                   8:2    0   238G  0 part  
+  └─decrypted          253:1    0   238G  0 crypt 
+    ├─SolusSystem-Swap 253:2    0   3.7G  0 lvm   
+    └─SolusSystem-Root 253:3    0 234.3G  0 lvm   
+sdb                      8:16   1   7.3G  0 disk  
+├─sdb1                   8:17   1   1.4G  0 part  /run/initramfs/live
+└─sdb2                   8:18   1    40M  0 part
+```
 
 #### UEFI
 
@@ -95,7 +114,7 @@ In the event you had an incomplete upgrade, try the following commands:
 
 1. `sudo eopkg up`
 2. `sudo eopkg check | grep Broken | awk '{print $4}' | xargs sudo eopkg it --reinstall`
-3. Try reverting the latest package transaction (this should only be done if the first two steps, followed by the "Re-run System-Wide Configuration Triggers", failed to produce a successful bootup). See [our documentation on history and rollback](articles/package-management/history-and-rollback/en/) for more information, followed by re-applying your updates by running `sudo eopkg up`.
+3. Try reverting the latest package transaction (this should only be done if the first two steps, followed by the "Re-run System-Wide Configuration Triggers", failed to produce a successful bootup). See [our documentation on history and rollback](/articles/package-management/history-and-rollback/en) for more information, followed by re-applying your updates by running `sudo eopkg up`.
 
 ### Re-run System-Wide Configuration Triggers
 
