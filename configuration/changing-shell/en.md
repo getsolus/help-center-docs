@@ -1,6 +1,6 @@
 +++
 title = "Changing Shell"
-lastmod = "2020-01-28T16:32:17-05:00"
+lastmod = "2020-04-06T12:28:54-04:00"
 +++
 # Changing Shell
 
@@ -28,31 +28,16 @@ To switch to another shell, first install the appropriate package, followed by t
 
 Example:
 
-For Zsh
+- For Zsh: ``` chsh -s /bin/zsh ```
 
-``` bash
-chsh -s /bin/zsh
-```
-For Fish
-
-``` bash
-chsh -s /usr/bin/fish
-```
+- For Fish: ``` chsh -s /bin/fish ```
 
 ## Troubleshooting
 
-If the defualt shell is not changed, you must add the shell to `/etc/shells` via the command `sh` with `sudo`.
+If the default shell is not changed, you must add the shell to `/etc/shells` via the command `sh` with `sudo`.
 
 Example:
 
-For Zsh
+- For Zsh: ``` echo "/bin/zsh" | sudo tee -a /etc/shells ```
 
-``` bash
-echo "/bin/zsh" | sudo tee -a /etc/shells
-```
-
-For Fish
-
-``` bash
-echo "/usr/bin/fish" | sudo tee -a /etc/shells
-```
+- For Fish: ``` echo "/usr/bin/fish" | sudo tee -a /etc/shells ```
