@@ -37,9 +37,11 @@ Whether you're using GRUB or UEFI, you will need to mount your Solus root (`/`) 
 
 If you use LUKS-based encryption, the process will involve decrypting your LUKS partition and mounting it to the correct location. To do this, note the sda / sdb device from step #3 and follow the steps below:
 
-1. Decrypt the drive by running `cryptsetup luksOpen /dev/sdX# decrypted`, replacing `X#` with the partition from step #3, and enter your password when prompted
+1. Decrypt the drive by running `cryptsetup luksOpen /dev/sdX# decrypted`, replacing `X#` with the partition from step #3, and enter your password when prompted.
 2. Double check the output of `lsblk`. You should now see under "decrypted" `SolusSystem-Swap` and `SolusSystem-Root`.
 3. Mount `SolusSystem-Root` by running `mount /dev/mapper/SolusSystem-Root /target`
+
+Your lsblk output should be similar to the one listed below:
 
 ``` bash
 NAME                   MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINT
