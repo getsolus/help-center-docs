@@ -1,6 +1,6 @@
 +++
 title = "Boot Rescue"
-lastmod = "2020-04-05T15:58:32+04:00"
+lastmod = "2020-04-10T10:39:18+03:00"
 +++
 # Boot Rescue
 
@@ -40,6 +40,23 @@ If you use LUKS-based encryption, the process will involve decrypting your LUKS 
 1. Decrypt the drive by running `cryptsetup luksOpen /dev/sdX# decrypted`, replacing `X#` with the partition from step #3, and enter your password when prompted
 2. Double check the output of `lsblk`. You should now see under "decrypted" `SolusSystem-Swap` and `SolusSystem-Root`.
 3. Mount `SolusSystem-Root` by running `mount /dev/mapper/SolusSystem-Root /target`
+
+``` bash
+NAME                   MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINT
+loop0                    7:0    0   1.3G  1 loop  /run/initramfs/squashfs
+loop1                    7:1    0   6.2G  1 loop  /run/rootfsbase
+loop2                    7:2    0   6.2G  1 loop  
+└─live-base            253:0    0   6.2G  1 dm    
+sda                      8:0    0 238.5G  0 disk  
+├─sda1                   8:1    0 488.3M  0 part  
+└─sda2                   8:2    0   238G  0 part  
+  └─decrypted          253:1    0   238G  0 crypt 
+    ├─SolusSystem-Swap 253:2    0   3.7G  0 lvm   
+    └─SolusSystem-Root 253:3    0 234.3G  0 lvm   
+sdb                      8:16   1   7.3G  0 disk  
+├─sdb1                   8:17   1   1.4G  0 part  /run/initramfs/live
+└─sdb2                   8:18   1    40M  0 part
+```
 
 #### UEFI
 
