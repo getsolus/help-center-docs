@@ -48,6 +48,13 @@ Should your printer not be on this list you can request your Printer here for in
 
 Some Canon printers requires you to install the `canon-ufriilt-common` package.
 
+### Dell
+#### Dell E310dw
+- Get the official Dell driver package: https://downloads.dell.com/FOLDER03004762M/1/Printer_E310dw_Driver_Dell_A00_LINUX.zip
+- Follow the steps of https://github.com/jtrefke/dell-e310dw-cups-printer-driver/blob/master/PKGBUILD
+
+NOTE: This requires 32bit functionality. As I'm not exactly sure what is needed (I assume only glibc), I installed Steam to get 32bit support.
+
 ### Dymo
 
 DYMO label makers & printers need the `dymo-cups-drivers` package to be installed.
