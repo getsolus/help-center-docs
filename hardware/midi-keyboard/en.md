@@ -1,6 +1,6 @@
 +++
 title = "Using USB connected MIDI Keyboards"
-lastmod = "2019-04-14T11:20:00+01:00"
+lastmod = "2019-07-14T21:49:00+02:00"
 +++
 # Using USB connected MIDI Keyboards
 
@@ -8,24 +8,19 @@ These instructions will guide you through how to set up and use a USB-connected 
 
 ## Installing required software
 
-First we'll need to install `qsynth` and `qjackctl` using the following command:
+We will need to install three packages in order to use the keyboard:
+
+1. `qsynth` - A frontend for fluidsynth
+2. `qjackctl` - A controller for the JACK audio server
+3. `fluid-soundfont` - An open source soundfont to use with fluidsynth
 
 ``` bash
-sudo eopkg it qsynth qjackctl
+sudo eopkg it qsynth qjackctl fluid-soundfont
 ```
 
-Then we want to install a soundfont in order to get sounds and instruments that play when you press the keys on the keyboard.
+## Setting up the soundfont in qsynth
 
-``` bash
-mkdir -p $HOME/soundfonts
-wget http://http.debian.net/debian/pool/main/f/fluid-soundfont/fluid-soundfont_3.1.orig.tar.gz -O $HOME/soundfonts/fluid-soundfont.tar.gz
-cd $HOME/soundfonts && tar xvf fluid-soundfont.tar.gz fluid-soundfont-3.1/FluidR3_GM.sf2 --strip=1
-rm fluid-soundfont.tar.gz
-```
-
-## Setting up the soundfonts in qsynth
-
-In order to use the soundfonts we need to open up `qsynth` and set the soundfont `FluidR3_GM.sf2` (or any other soundfont) to be used. You do this by pressing `Setup...` and navigating to `Soundfonts`. In there you just click open and select your soundfont (should be placed in `~/soundfonts/`).
+In order to use the soundfont, we need to open up `qsynth` and set the soundfont. For the purposes of this article, it would be `FluidR3.sf2`, however any other soundfont should work fine too. You set the soundfont by clicking on `Setup...` and navigating to `Soundfonts`. There you just need click `Open...` and navigate to the soundfont of your liking. The soundfont that we will be using will be placed in `/usr/share/sounds/sf2/` by default.
 
 {{< altimg "qsynth-soundfont.jpg" "help-center/hardware/midi-keyboard/" >}}
 

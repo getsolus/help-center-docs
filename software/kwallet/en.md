@@ -1,6 +1,6 @@
 +++
 title = "KDE Wallet and SSH keys"
-lastmod = "2019-03-16T14:50:00+01:00"
+lastmod = "2019-09-17T55:50:00+02:00"
 +++
 # KDE Wallet and SSH keys
 
@@ -31,7 +31,7 @@ The contents of `~/.config/autostart-scripts/ssh-add.sh` should reflect the SSH 
 Below is an example of the contents of `.config/autostart-scripts/ssh-add.sh`:
 
 ```
-#!/bin/ssh
+#!/bin/sh
 
 ssh-add $HOME/.ssh/id_rsa $HOME/.ssh/solus_id_rsa </dev/null
 ```

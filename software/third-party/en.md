@@ -1,6 +1,6 @@
 +++
 title = "Third Party"
-lastmod = "2019-03-19T19:12:05+01:00"
+lastmod = "2019-07-14T19:08:50+02:00"
 +++
 # Third Party
 
@@ -222,13 +222,6 @@ sudo eopkg it scrivener*.eopkg;sudo rm scrivener*.eopkg
 ``` bash
 sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/programming/android-studio/pspec.xml
 sudo eopkg it android-studio*.eopkg;sudo rm android-studio*.eopkg
-```
-
-### Android Tools
-
-``` bash
-sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/programming/tools/android-tools/pspec.xml
-sudo eopkg it android-tools*.eopkg;sudo rm android-tools*.eopkg
 ```
 
 ### CLion

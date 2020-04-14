@@ -1,6 +1,6 @@
 +++
 title = "Boot Rescue"
-lastmod = "2019-03-26T19:52:54+01:00"
+lastmod = "2020-04-10T10:39:18+03:00"
 +++
 # Boot Rescue
 
@@ -32,6 +32,33 @@ Whether you're using GRUB or UEFI, you will need to mount your Solus root (`/`) 
 2. Next we make a directory where we will mount our local Solus system: `mkdir /target`
 3. Now, using `lsblk`, determine the `/dev/sdX#` partition of the Solus system. We recommend checking the size of the partition listed and if it matches the size of your Solus install, use that. It will likely be something along the lines of `/dev/sdb#` or `/dev/sda#`.
 4. Once found, replace the "sdX#" in the following command with the partition and mount to the target directory we created: `mount /dev/sdX# /target`
+
+#### Encrypted Systems
+
+If you use LUKS-based encryption, the process will involve decrypting your LUKS partition and mounting it to the correct location. To do this, note the sda / sdb device from step #3 and follow the steps below:
+
+1. Decrypt the drive by running `cryptsetup luksOpen /dev/sdX# decrypted`, replacing `X#` with the partition from step #3, and enter your password when prompted.
+2. Double check the output of `lsblk`. You should now see under "decrypted" `SolusSystem-Swap` and `SolusSystem-Root`.
+3. Mount `SolusSystem-Root` by running `mount /dev/mapper/SolusSystem-Root /target`
+
+Your lsblk output should be similar to the one listed below:
+
+``` bash
+NAME                   MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINT
+loop0                    7:0    0   1.3G  1 loop  /run/initramfs/squashfs
+loop1                    7:1    0   6.2G  1 loop  /run/rootfsbase
+loop2                    7:2    0   6.2G  1 loop  
+└─live-base            253:0    0   6.2G  1 dm    
+sda                      8:0    0 238.5G  0 disk  
+├─sda1                   8:1    0 488.3M  0 part  
+└─sda2                   8:2    0   238G  0 part  
+  └─decrypted          253:1    0   238G  0 crypt 
+    ├─SolusSystem-Swap 253:2    0   3.7G  0 lvm   
+    └─SolusSystem-Root 253:3    0 234.3G  0 lvm   
+sdb                      8:16   1   7.3G  0 disk  
+├─sdb1                   8:17   1   1.4G  0 part  /run/initramfs/live
+└─sdb2                   8:18   1    40M  0 part
+```
 
 #### UEFI
 
@@ -70,12 +97,31 @@ mount --bind /dev /target/dev
 mount --bind /sys /target/sys
 ```
 
-Assuming all goes well, you should now be able to chroot into your Solus system by doing `chroot /target`
+Assuming all goes well, you should now be able to chroot into your Solus system by doing `chroot /target`.
 
-Once in the chroot, run the following command, which will generate the necessary GRUB configuration files, EFI loader files, etc.
+### Networking
+
+To validate a working network connection (assuming a network connection is available in your live image), you can run `ping google.com` in the chrooted environment. If you get responses from `google.com`, you have a successful connection to the Internet. If you do not, try the following:
+
+1. Exit the chroot by typing `exit`
+2. Run `cp /etc/resolv.conf /target/etc/`
+3. Chroot back into `/target` by running `chroot /target` again.
+4. Retry networking.
+
+### Repairing Packages
+
+In the event you had an incomplete upgrade, try the following commands:
+
+1. `sudo eopkg up`
+2. `sudo eopkg check | grep Broken | awk '{print $4}' | xargs sudo eopkg it --reinstall`
+3. Try reverting the latest package transaction (this should only be done if the first two steps, followed by the "Re-run System-Wide Configuration Triggers", failed to produce a successful bootup). See [our documentation on history and rollback](/articles/package-management/history-and-rollback/en) for more information, followed by re-applying your updates by running `sudo eopkg up`.
+
+### Re-run System-Wide Configuration Triggers
+
+In the chroot environment, run the following command which will perform various configuration triggers to update your icon cache, update GRUB and EFI configuration, re-compile settings, and more.
 
 ```
-sudo clr-boot-manager update
+sudo usysconf run -f
 ```
 
 After this, you should exit your chroot with `exit` then reboot your system. In the event you are still unable to access Solus, please [contact us](/articles/contributing/getting-involved/en).

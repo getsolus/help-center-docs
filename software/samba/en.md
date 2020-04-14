@@ -1,6 +1,6 @@
 +++
 title = "Samba File Sharing"
-lastmod = "2018-07-04T16:09:00+02:00"
+lastmod = "2020-03-18T08:50:00+01:00"
 +++
 # Samba file sharing
 
@@ -12,14 +12,17 @@ To enable convenient file-sharing on Solus, we maintain a Solus-specific Samba c
 
 - Supports Samba usershare functionality
 - Enables sharing of *$HOME* folders (manual user account activation needed)
-- Is set up as a standalone server using the SMB2.10 protocol and up (>= Win 7)
-- Advertises itself via *Avahi* aka *Apple Bonjour* / *mDNS* / *zeroconf*
+- Is set up as a standalone server using the SMB2.0.2 protocol and up (>= Windows Vista/Server 2008)
+- Advertises itself via *Avahi* aka *Apple Bonjour* / *mDNS* / *zeroconf* for macOS compatibility
+- Advertises itself via *wsdd* aka *Web Services Discovery Daemon* for Windows 7+ compatibility
 - Disables sharing of printers via Samba (use IPP via CUPS instead)
-- Allows access only from RFC 1918 private network addresses
+- Allows access only from IPv4 and IPv6 private and link-local (non-internet-routable) addresses
 
 As of Samba 4.7.x, Solus disables the old, deprecated and insecure original SMB1/CIFS protocol by default.
 
 For more information on this choice, please read [this post regarding SMB1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/).
+
+As of Samba 4.11.x, the SMB1/CIFS protocol is officially deprecated upstream.
 
 ### How to start/stop Samba
 
@@ -35,6 +38,9 @@ sudo systemctl enable --now smb
 # Check whether Samba is running
 sudo systemctl status smb
 
+# Restart Samba manually
+sudo systemctl restart smb
+
 # Stop Samba manually
 sudo systemctl stop smb
 
@@ -42,7 +48,74 @@ sudo systemctl stop smb
 sudo systemctl disable --now smb
 ```
 
+### Enabling Windows 7+ network discovery support
+
+The Web Services Discovery protocol is used by Windows 7+ clients to discover shares on other computers.  Solus now includes the *wsdd* service which provides support for the Web Services Discovery protocol.
+
+When restarting wsdd, it may be necessary to also restart Samba.
+
+``` bash
+# Start wsdd manually (depends on the smb service)
+sudo systemctl start wsdd
+
+# Configure wsdd to start automatically on each boot and immediately start the service
+sudo systemctl enable --now wsdd 
+
+# Check whether wsdd is running
+sudo systemctl status wsdd
+
+# Restart wsdd and Samba
+sudo systemctl restart wsdd smb
+
+# Stop wsdd manually
+sudo systemctl stop wsdd
+
+# Configure wsdd to not start automatically on each boot and immediately stop the service
+sudo systemctl disable --now wsdd
+```
+
 For more details on managing services on Solus with *systemctl*, see `man systemctl` which is part of the systemd system and service manager.
+
+### Accessing Samba via IPv6
+
+In order to access a running Solus Samba server instance via IPv6, first verify that all relevant hosts (including the Samba host) are configured with an IPv6 link-local address.
+
+This can be verified in a terminal:
+
+```
+$ ip addr
+
+2: enp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 14:da:e9:10:f9:c7 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.147.233/24 brd 192.168.147.255 scope global dynamic noprefixroute enp2s0
+       valid_lft 5066sec preferred_lft 5066sec
+    inet6 fe80::d555:a50f:1aea:c944/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+```
+
+In the above example, the name of the relevant network device is `enp2s0`.  Note how the line starting with `inet6` contains an IPv6 address which begins with fe80:: and contains `scope link`.
+
+Ensure that Samba has been started on the host and then query the running local Samba instance with the following command, using the IPv6 address and interface as show by the output of `ip addr`:
+
+```
+$ smbclient -N -L //fe80::d555:a50f:1aea:c944%enp2s0
+```
+
+The output might look something like this:
+
+```
+Unable to initialize messaging context
+Anonymous login successful
+
+        Sharename       Type      Comment
+        ---------       ----      -------
+        eopkgs          Disk      
+        IPC$            IPC       IPC Service (Samba server (version: 4.10.11, protocol: SMB3_11))
+        Public          Disk      
+fe80::d555:a50f:1aea:c944%enp2s0 is an IPv6 address -- no workgroup available
+```
+
+Make sure to change the IPv6 address and interface name (`fe80::d555:a50f:1aea:c944` and `enp2s0` respectively in the above example) to the real address and interface name of the Samba host in question.
 
 ## A brief introduction to the Samba usershare functionality
 
@@ -172,58 +245,6 @@ Apart from the aforementioned `man smb.conf`, wiki.samba.org is your friend, spe
 
 The default Solus Samba configuration is patterned on the above.
 
-## Enabling legacy SMB1/CIFS protocol support
-
-**CAUTION:** Enabling SMB1/CIFS is **not** recommended unless the security implications of doing so are properly understood.
-
-Enabling legacy SMB1/CIFS protocol support is as simple as adding (some or all of) the following configuration parameters to `/etc/samba/smb.conf`
-
-``` ini
-# Contents of /etc/samba/smb.conf:
-#
-# If /etc/samba/smb.conf exists, it is automatically loaded by the Solus-
-# controlled default config residing in /usr/share/defaults/samba/smb.conf 
-# 
-# The following configuration re-enables the deprecated, insecure SMB1 protocol 
-#
-# ';' also denotes a comment (typically used for configuration parameters)
-#
-    # Allow access to SMB1 shares on other servers
-    client ipc min protocol = NT1
-    client min protocol = NT1
-    
-    # Allow access to shares on other servers ONLY via SMB1
-    client ipc max protocol = NT1
-    client max protocol = NT1
-    
-    # Allow access to shares on this Samba instance via SMB1
-    server min protocol = NT1
-    
-    # Allow access to shares on this Samba instance ONLY via SMB1
-    server max protocol = NT1
-```
-
-Additionally, the user can choose to enable the *nmb.service*, which is a server that understands and can reply to NetBIOS over IP name service requests, like those produced by SMB/CIFS clients such as Windows 95/98/ME, Windows NT, Windows 2000, Windows XP and LanManager clients. It also participates in the browsing protocols which make up the Windows "Network Neighborhood" view.
-
-```
-# Start nmb.service manually
-sudo systemctl start nmb
-
-# Configure nmb.service to start automatically on each boot and immediately start the service
-sudo systemctl enable --now nmb
-
-# Check whether nmb.service is running
-sudo systemctl status nmb
-
-# Stop nmb.service manually
-sudo systemctl stop nmb
-
-# Configure nmb.service to not start automatically on each boot and immediately stop the service
-sudo systemctl disable --now nmb
-```
-
-For more details on the *nmb.service*, see `man nmbd`.
-
 ## Full manual control of Samba (recommended only for experienced Samba admins)
 
 Full manual control of Samba can be achieved by completely bypassing the default Solus Samba configuration.
@@ -232,7 +253,7 @@ In the *smbd* manual page (`man 8 smbd`), it is shown how the compiled-in defaul
 
 To use the traditional `/etc/samba/smb.conf` configuration file exclusively (thus bypassing the Solus configuration), edit the `/etc/sysconfig/samba` file to look like so:
 
-```
+``` bash
 ## Path:           Network/Samba
 ## Description:    Samba process options
 ## Type:           string
