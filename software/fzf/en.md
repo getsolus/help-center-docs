@@ -41,7 +41,7 @@ FZF_COMPLETION_FILE=/usr/share/zsh/site-functions/_fzf
 
 ### Bash
 
-Add the following content to `~/.bashrc`
+Add the following content to `~/.bashrc`:
 
 ``` bash
 FZF_KEYBINDING_FILE=/usr/share/fzf/key-bindings.bash
@@ -50,13 +50,13 @@ FZF_KEYBINDING_FILE=/usr/share/fzf/key-bindings.bash
 
 ### Fish
 
-First create the following directory if it does not already exist
+First create the following directory if it does not already exist:
 
 ``` bash
 mkdir -p $HOME/.config/fish/functions
 ```
 
-`cd` into this directory and make a file `fish_user_key_bindings.fish` with the following content
+`cd` into this directory and make a file `fish_user_key_bindings.fish` with the following content:
 
 ``` bash
 function fish_user_key_bindings
@@ -64,7 +64,7 @@ function fish_user_key_bindings
 end
 ```
 
-Then create the following symlink
+Then create the following symlink:
 
 ``` bash
 ln -s /usr/share/fzf/key-bindings.fish $HOME/.config/fish/functions/fzf_key_bindings.fish
@@ -72,7 +72,7 @@ ln -s /usr/share/fzf/key-bindings.fish $HOME/.config/fish/functions/fzf_key_bind
 
 ### Zsh
 
-Add the following content to `~/.zshrc`
+Add the following content to `~/.zshrc`:
 
 ``` bash
 FZF_KEYBINDING_FILE=/usr/share/fzf/key-bindings.zsh
