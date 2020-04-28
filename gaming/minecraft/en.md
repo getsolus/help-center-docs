@@ -19,15 +19,12 @@ wget https://launcher.mojang.com/download/Minecraft.deb
 
 Extract files and remove old archive:
 ``` bash
-ar xf Minecraft.deb
+sudo ar xf Minecraft.deb
 sudo tar xf data.tar.xz -C /
-rm control.tar.gz data.tar.xz debian-binary Minecraft.deb
+sudo rm control.tar.gz data.tar.xz debian-binary Minecraft.deb
 ```
 
-### Budgie
-
-If you are using Budgie, it may be necessary to update the entries in Budgie Menu. You can do so with:
-
+Integrate the files into your system
 ``` bash
-sudo update-desktop-database
+sudo usysconf run icon-caches desktop-files -f
 ```
