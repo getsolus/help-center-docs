@@ -1,6 +1,6 @@
 +++
 title = "Changing Shell"
-lastmod = "2020-04-10T15:10:59-04:00"
+lastmod = "2020-05-04T17:58:17+02:00"
 +++
 # Changing Shell
 
@@ -24,7 +24,7 @@ sudo eopkg install fish
 
 ## Switching
 
-To switch to another shell, first install the appropriate package, followed by the command `chsh` (change shell) with `sudo` to change the shell for your user session. Lastly you need to log out and back in again for the change to take effect.
+To switch to another shell, first install the appropriate package, followed by the command `chsh` (change shell) with `sudo` to change the shell for your user session, using the path provided in `/usr/share/defaults/etc/shells`. Lastly you need to log out and back in again for the change to take effect.
 
 Example:
 
