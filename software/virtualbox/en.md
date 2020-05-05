@@ -1,6 +1,6 @@
 +++
 title = "VirtualBox"
-lastmod = "2018-08-28T12:12:24+03:00"
+lastmod = "2020-05-05T21:46:24+03:00"
 +++
 # VirtualBox
 
@@ -57,9 +57,9 @@ You **must** reboot your computer before running VirtualBox for the first time.
 
 VirtualBox Guest Additions are available in the Software Center, select the package that matches kernel version on the Solus virtual machine.
 
-virtualbox-guest | virtualbox-guest-current
+virtualbox-guest | virtualbox-guest-common
 ----- | -----
-VirtualBox Guest modules for the **linux-lts** kernel | VirtualBox Guest modules for the **linux-current** kernel
+VirtualBox Guest modules for the **linux-lts** kernel | Install this package if the **linux-current** kernel is used
 
 You **must** reboot your virtual machine to load the newly installed modules
 
