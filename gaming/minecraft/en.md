@@ -1,6 +1,6 @@
 +++
 title = "Minecraft"
-lastmod = "2020-04-27T20:35:51+02:00"
+lastmod = "2020-05-16T14:02:01+02:00"
 +++
 # Minecraft
 
@@ -17,14 +17,22 @@ sudo eopkg it openjdk-8 gconf binutils
 wget https://launcher.mojang.com/download/Minecraft.deb
 ```
 
+Create a usr/bin symlink for your openjdk-8 install:
+
+``` bash
+sudo ln -sf /usr/lib64/openjdk-8/bin/java /usr/bin/java
+```
+
 Extract files and remove old archive:
+
 ``` bash
 sudo ar xf Minecraft.deb
 sudo tar xf data.tar.xz -C /
 sudo rm control.tar.gz data.tar.xz debian-binary Minecraft.deb
 ```
 
-Integrate the files into your system
+Integrate the files into your system:
+
 ``` bash
-sudo usysconf run icon-caches desktop-files -f
+sudo usysconf run -f
 ```
