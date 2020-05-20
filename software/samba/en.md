@@ -139,6 +139,7 @@ sudo eopkg install caja-extensions
 ```
 
 In order to load the newly installed file manager plugin, the user will need to log out of the current desktop session and log back in to a new desktop session, at which point the plugin in question will be ready for use.  To enable shares from any drive and folder on your System you will need add the following parameter to /etc/samba/smb.conf:
+
 ```
 usershare owner only = false
 ```
