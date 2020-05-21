@@ -45,7 +45,7 @@ On Solus Plasma:
 kate /usr/share/applications/minecraft-launcher.desktop
 ```
 
-#### Now edit inside the desktop file the Exec path to the following
+Now edit inside the desktop file the Exec path to the following
 
 ``` bash
 Exec=env JAVA_HOME=/usr/lib64/openjdk-8 /opt/minecraft-launcher/minecraft-launcher
