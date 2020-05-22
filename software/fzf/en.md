@@ -1,8 +1,7 @@
 +++
 title = "fzf"
-lastmod = "2019-10-07T15:55:50+02:00"
+lastmod = "2020-05-22T10:33:13+03:00"
 +++
-
 # fzf
 
 [fzf](https://github.com/junegunn/fzf) is a general-purpose command-line fuzzy finder. It can be used as an interactive Unix filter with any list: files, command history, processes, hostnames, bookmarks, git commits, etc.
