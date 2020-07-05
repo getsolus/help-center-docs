@@ -1,10 +1,12 @@
 +++
 title = "Desktop Environments"
-lastmod = "2020-04-01T19:44:25-04:00"
+lastmod = "2020-05-20T21:05:00+02:00"
 +++
 # Desktop Environments
 
-Solus offers a [multitude of desktop environments](/solus/experiences/), ranging from the feature-rich and modern Budgie to the traditional MATE experience. It is recommended to use the ISO for a specific desktop environment but it is possible to install them afterwards if you wish to do try one out.  
+Solus offers a [multitude of desktop environments](/solus/experiences/), ranging from the feature-rich and modern Budgie to the traditional MATE experience. It is recommended to use the ISO for a specific desktop environment but it is possible to install them afterwards if you wish to do try one out.
+
+WARNING: Do NOT attempt to install ANY other desktop environments next to KDE Plasma Desktop. This scenario is NOT supported and you will be told so in no uncertain terms if asking for support.
 
 ## Budgie
 
@@ -29,14 +31,6 @@ Solus offers the MATE desktop environment / experience, tailored to advanced use
 
 ``` bash
 sudo eopkg install -c desktop.mate
-```
-
-## Plasma
-
-Solus offers the KDE Plasma desktop environment / experience, which is a powerful and highly customizable desktop environment built with Qt and the KDE framework. KDE Plasma can be installed by running the following command:
-
-``` bash
-sudo eopkg install -c desktop.kde.core
 ```
 
 ## i3
