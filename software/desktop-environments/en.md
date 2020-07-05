@@ -13,6 +13,7 @@ WARNING: Do NOT attempt to install ANY other desktop environments next to KDE Pl
 The flagship desktop environment / experience of Solus is Budgie. If you have installed either our MATE or GNOME editions, you can try out and install Budgie by running the following command:
 
 ``` bash
+# Do NOT attempt to do this if you are running the KDE Plasma Desktop version of Solus!
 sudo eopkg install -c desktop.budgie
 ```
 
@@ -21,6 +22,7 @@ sudo eopkg install -c desktop.budgie
 Solus offers a GNOME Shell experience that ships out-of-the-box with a variety of extensions. If you have installed either our Budgie or MATE editions, you can try out and install GNOME Shell by running the following commands:
 
 ``` bash
+# Do NOT attempt to do this if you are running the KDE Plasma Desktop version of Solus!
 sudo eopkg rm lightdm
 sudo eopkg install gdm gnome-shell gnome-desktop-branding-fortitude
 ```
@@ -30,6 +32,7 @@ sudo eopkg install gdm gnome-shell gnome-desktop-branding-fortitude
 Solus offers the MATE desktop environment / experience, tailored to advanced users and older hardware, as well as shipping with our modern menu called [Brisk Menu](https://github.com/getsolus/brisk-menu). If you have installed either our Budgie or GNOME editions, you can try out and install MATE by running the following command:
 
 ``` bash
+# Do NOT attempt to do this if you are running the KDE Plasma Desktop version of Solus!
 sudo eopkg install -c desktop.mate
 ```
 
@@ -38,6 +41,7 @@ sudo eopkg install -c desktop.mate
 Solus offers i3 as a tiling window manager. Users wanting to try i3 can install it by running the following command:
 
 ``` bash
+# Do NOT attempt to do this if you are running the KDE Plasma Desktop version of Solus!
 sudo eopkg install i3
 ```
 
