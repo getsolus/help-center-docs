@@ -1,6 +1,6 @@
 +++
 title = "Samba File Sharing"
-lastmod = "2020-03-18T08:50:00+01:00"
+lastmod = "2020-05-18T09:22:33-05:00"
 +++
 # Samba file sharing
 
@@ -138,9 +138,14 @@ sudo eopkg install kdenetwork-filesharing
 sudo eopkg install caja-extensions
 ```
 
-In order to load the newly installed file manager plugin, the user will need to log out of the current desktop session and log back in to a new desktop session, at which point the plugin in question will be ready for use.
+In order to load the newly installed file manager plugin, the user will need to log out of the current desktop session and log back in to a new desktop session, at which point the plugin in question will be ready for use.  To enable shares from any drive and folder on your System you will need add the following parameter to /etc/samba/smb.conf:
 
-Simply right-clicking a folder and clicking *properties* will now show an option to share it.
+```
+usershare owner only = false
+```
+
+Afterwards simply right-clicking a folder and clicking *properties* will now show an option to share it, as well as whether to allow Read/Write permissions to your users or guest access.
+
 
 ### CLI - using the net usershare command
 
