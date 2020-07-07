@@ -1,6 +1,6 @@
 +++
 title = "Getting Involved"
-lastmod = "2019-03-28T15:09:45+01:00"
+lastmod = "2020-07-07T18:02:07+03:00"
 +++
 # Getting Involved
 
@@ -33,7 +33,7 @@ You will find the following Solus channels on the [freenode](https://freenode.ne
 Alongside the forums, you can communicate with developers or others in the community by using one of the following websites:
 
 - [Facebook](https://www.facebook.com/get.solus)
-- [Mastodon](https://mastodon.cloud/@SolusProject)
+- [Mastodon](https://fosstodon.org/@Solus)
 - [Reddit](https://www.reddit.com/r/SolusProject/) 
 - [Twitter](https://twitter.com/solusproject)
 
