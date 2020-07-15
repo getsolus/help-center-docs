@@ -1,43 +1,33 @@
 +++
 title = "Java"
-lastmod = "2019-03-26T19:50:48+01:00"
+lastmod = "2020-07-12T14:15:25-04:00"
 +++
 # Java
 
-This article covers obtaining open source Java as well as Oracle Java.
+This article covers obtaining open source Java (otherwise known as OpenJDK). In this article, two abbreviations will be used to refer to components of the Java software suite:
 
-## Installation
+- JRE (Java Runtime Environment)
+- JDK (Java Development Kit)
 
-If you are looking for OpenJDK or OpenJRE, install `openjdk-8` from the repository. The instructions below are for Oracle Java.
+## Installing OpenJDK
 
-You can set up Java by following the instructions below:
+Solus currently offers two Java versions in the repository, and these versions can be installed alongside one another. For ease of maintenance, Solus only includes LTS versions of OpenJDK. Those who require the absolute newest version of the JDK, or other non-LTS versions, should look to other methods of installation (such as [sdkman](https://sdkman.io/)).
 
-## JRE
+### OpenJDK 11
 
-Grab the latest Java Runtime Environment (JRE) as `.tar.gz` from the [Oracle Download Page](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html).
+OpenJDK 11 is included in the repository as `openjdk-11`. It includes the JRE, the JDK, and OpenJFX, all in one package. The majority of Java packages in Solus currently use OpenJDK 11, and this is the recommended version if you need Java but aren't sure which version you should install. If the software you use doesn't work with OpenJDK 11, you should use OpenJDK 8 instead.
 
-Extract JRE and move it to /opt:
+Once `openjdk-11` is installed, you'll be able to find all of its components at `/usr/lib64/openjdk-11`. This is the path you should set `JAVA_HOME` to for use with Java software not packaged by Solus if you want them to use JDK 11.
 
-``` bash
-cd ~/Downloads
-tar xf jre-8u*-linux-x64.tar.gz
-sudo mkdir -p /opt
-sudo rm -rf /opt/jre1.8.0_*
-sudo mv jre1.8.0_* /opt/
-sudo ln -svf /opt/jre1.8.0_*/bin/java /usr/bin/java
-```
+### OpenJDK 8
 
-## JDK
+OpenJDK 8 is included in the repository as `openjdk-8` for the JRE and JDK, and `openjfx-8` for the implementation of JavaFX. Once it's installed, its components can be found at `/usr/lib64/openjdk-8`. This is the path you should set `JAVA_HOME` to for use with Java software not packaged by Solus if you want them to use JDK 8.
 
-Grab the latest Java Development Kit (JDK) as `.tar.gz` from the [Oracle Download Page](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+## Running Java Applications
 
-Extract JDK and move it to /opt:
+Once a Java version has been installed, you might notice that running jar files in the terminal via `java -jar foo.jar` doesn't work. This is because Solus uses a stateless configuration for its Java packages so as to avoid conflicts between different installed versions, and thus there is no `java` command on the `PATH` by default. To amend this, there are multiple possible solutions, each of which should be used for certain scenarios.
 
-``` bash
-cd ~/Downloads
-tar xf jdk-8u*-linux-x64.tar.gz
-sudo mkdir -p /opt
-sudo rm -rf /opt/jdk1.8.0_*
-sudo mv jdk1.8.0_* /opt/
-sudo ln -svf /opt/jdk1.8.0_*/bin/java /usr/bin/java
-```
+- Create a .desktop file and specify `env JAVA_HOME=/path/to/jdk` in `Exec` (best for GUIs)
+- Create a script that sets `JAVA_HOME` before running the application
+- Symlink the `java` executable from within `/path/to/jdk/bin` into `/usr/bin`
+- Add `/path/to/jdk/bin` to your PATH
