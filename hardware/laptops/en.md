@@ -1,6 +1,6 @@
 +++
 title = "Laptop Compatibility"
-lastmod = "2020-01-28T23:00:46+00:00"
+lastmod = "2020-07-25T18:00:00+00:00"
 +++
 # Laptop Compatibility
 
@@ -16,6 +16,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Acer Aspire 4830T
 - Acer Aspire 5750G
 - Acer Aspire 7551
+- Acer Aspire E1-571
 - Acer Aspire E5-473-370Z
 - Acer Aspire E5-573G
 - Acer Aspire E5-575G
@@ -26,6 +27,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Acer Aspire V5-121
 - Acer C710 Chromebook
 - Acer C720-2848 Chromebook
+- Acer Swift 3
 - Acer TravelMate X349-G2-M
 
 ### Alienware
@@ -130,6 +132,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 - HP Presario V6000
 - HP Probook 6360b
 - HP ProBook 6450b
+- HP Stream 14
 
 ### Lenovo
 
@@ -161,6 +164,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Lenovo ThinkPad T470
 - Lenovo ThinkPad T470s
 - Lenovo ThinkPad T490s
+- Lenovo ThinkPad T495s
 - Lenovo ThinkPad T560
 - Lenovo ThinkPad T570
 - Lenovo ThinkPad W520 4270CTO
