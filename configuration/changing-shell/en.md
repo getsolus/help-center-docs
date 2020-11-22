@@ -1,6 +1,6 @@
 +++
 title = "Changing Shell"
-lastmod = "2020-04-10T15:10:59-04:00"
+lastmod = "2020-11-05T15:10:59-04:00"
 +++
 # Changing Shell
 
@@ -28,9 +28,9 @@ To switch to another shell, first install the appropriate package, followed by t
 
 Example:
 
-- For Zsh: `chsh -s /bin/zsh`
+- For Zsh: `sudo chsh -s /bin/zsh`
 
-- For Fish: `chsh -s /bin/fish`
+- For Fish: `sudo chsh -s /usr/bin/fish`
 
 ## Troubleshooting
 
