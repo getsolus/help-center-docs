@@ -1,6 +1,6 @@
 +++
 title = "Changing Shell"
-lastmod = "2020-11-05T15:10:59-04:00"
+lastmod = "2020-11-29T12:32:57+01:00"
 +++
 # Changing Shell
 
@@ -22,19 +22,27 @@ Example:
 sudo eopkg install fish
 ```
 
-## Switching
-
-To switch to another shell, first install the appropriate package, followed by the command `chsh` (change shell) with `sudo` to change the shell for your user session. Lastly you need to log out and back in again for the change to take effect.
+After installing the package, you must add the shell binary path to `/etc/shells` via the command `sh` with `sudo` to be able to use it.
 
 Example:
 
-- For Zsh: `sudo chsh -s /bin/zsh`
+- For Zsh: `echo "/bin/zsh" | sudo tee -a /etc/shells`
 
-- For Fish: `sudo chsh -s /usr/bin/fish`
+- For Fish: `echo "/usr/bin/fish" | sudo tee -a /etc/shells`
+
+## Switching
+
+To switch to another shell, first install the appropriate package and register its path into `/etc/shells`, followed by the command `chsh` (change shell) with `sudo` to change the shell for your user session. Lastly you need to log out and back in again for the change to take effect.
+
+Example:
+
+- For Zsh: `sudo chsh -s /bin/zsh myusername`
+
+- For Fish: `sudo chsh -s /usr/bin/fish myusername`
 
 ## Troubleshooting
 
-If the default shell is not changed, you must add the shell to `/etc/shells` via the command `sh` with `sudo`.
+If the default shell is not changed, check if the shell path appears in the file `/etc/shells`, if not, you can add it via the command `sh` with `sudo`.
 
 Example:
 
