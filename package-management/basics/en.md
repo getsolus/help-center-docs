@@ -1,6 +1,6 @@
 +++
 title = "Basics to Package Management"
-lastmod = "2017-02-26T23:30:09+02:00"
+lastmod = "2020-12-23T13:03:32+11:00"
 +++
 # Basics to Package Management
 
@@ -71,7 +71,9 @@ You can update your system by using:
 sudo eopkg upgrade
 ```
 
-If you want to **only** update a specific piece of software on your system, you can specify is like below:
+Please note partial updates are not supported, they are a common cause of breakages. You should always upgrade every package.
+
+However if you want to **only** update a specific piece of software on your system, you can specify what package like the following example:
 
 ``` bash
 sudo eopkg upgrade firefox
