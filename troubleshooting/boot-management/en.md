@@ -1,6 +1,6 @@
 +++
 title = "Boot Management"
-lastmod = "2019-09-09T14:50:00+01:00"
+lastmod = "2020-12-13T17:27:43+07:00"
 +++
 # Boot Management
 
@@ -12,10 +12,10 @@ By default, EFI installs will not show the boot menu and boot directly into Solu
 
 ## Appending kernel parameters to Solus boot
 
-Kernel parameters can be appended to boot via creating a file for `clr-boot-manager` to use when updating kernels. For example, to add `nomodeset` to boot options, you would create the file `/etc/kernel/cmdline` (as sudo):
+Kernel parameters can be appended to boot via creating a file for `clr-boot-manager` to use when updating kernels. For example, to add `nomodeset` to boot options, you would create a file in `/etc/kernel/cmdline.d` (as sudo):
 
 ```
-echo 'nomodeset' | sudo tee /etc/kernel/cmdline
+echo 'nomodeset' | sudo tee /etc/kernel/cmdline.d/40_nomodeset.conf
 ```
 
 The settings should be on one line with a space between them. You will need to run `sudo clr-boot-manager update` for the options to be appended to boot.
