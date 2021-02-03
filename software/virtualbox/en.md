@@ -1,6 +1,6 @@
 +++
 title = "VirtualBox"
-lastmod = "2020-05-05T21:46:24+03:00"
+lastmod = "2021-02-03T10:20:48+02:00"
 +++
 # VirtualBox
 
@@ -39,7 +39,7 @@ If you aren't sure which kernel you are running, run the following in terminal:
 uname -r
 ```
 
-You will either have a `.current` or `.lts` suffix. Examples: `4.15.15-63.current` or `4.9.92-85.lts`
+You will either have a `.current` or `.lts` suffix. Examples: `5.10.12-171.current` or `4.14.218.lts`
 
 
 ## Solus as Host
