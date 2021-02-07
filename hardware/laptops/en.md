@@ -198,6 +198,9 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Sony VAIO S Series 13
 - Sony VAIO VPCEC3M1E
 
+### Star Labs
+Star LabTop Mk IV (960GB/16GB)
+
 ### System 76
 
 - System 76 Gazelle Professional
