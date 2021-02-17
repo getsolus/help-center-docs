@@ -12,9 +12,9 @@ Remember that Solus is not a server operating system: any usage outside local te
 
 caddy is available in the `caddy` package. It can be installed from the [Software Center](/articles/common-tasks/installing-and-updating-software/en/) or via terminal:
 
-    ```bash
-    sudo eopkg install caddy
-    ```
+``` bash
+sudo eopkg install caddy
+```
 
 ## Usage
 
@@ -28,10 +28,10 @@ caddy can use any valid configuration by reloading it via the cli. For automatic
 
 Basic caddy management is done via `systemd` and the cli, using the following commands:
 
-    ```bash
-    sudo systemctl enable --now caddy # To enable nginx on startup and run it immediately.
-    caddy reload --config /etc/caddy/Caddyfile # To reload caddy with an specified configuration.
-    sudo systemctl stop caddy   # To stop caddy.
-    ```
+``` bash
+sudo systemctl enable --now caddy # To enable nginx on startup and run it immediately.
+caddy reload --config /etc/caddy/Caddyfile # To reload caddy with an specified configuration.
+sudo systemctl stop caddy   # To stop caddy.
+```
 
-More details about `systemctl` are available [at this address](https://www.freedesktop.org/software/systemd/man/systemctl.html). 
+More details about `systemctl` are available [at this address](https://www.freedesktop.org/software/systemd/man/systemctl.html).
