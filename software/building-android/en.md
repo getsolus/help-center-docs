@@ -1,6 +1,6 @@
 +++
 title = "Building Android"
-lastmod = "2019-06-12T01:15:41+03:00"
+lastmod = "2021-04-17T15:09:28+05:30"
 +++
 # Building Android™ on Solus
 
@@ -31,7 +31,7 @@ sudo eopkg it -c system.devel
 Now we'll need to install the rest of the required build dependencies.
 
 ``` bash
-sudo eopkg it curl-devel git gnupg gperf libgcc-32bit libxslt-devel lzop ncurses-32bit-devel ncurses-devel readline-32bit-devel rsync schedtool sdl1-devel squashfs-tools unzip wxwidgets-devel zip zlib-32bit-devel
+sudo eopkg it curl-devel dejavu-fonts-ttf git gnupg gperf libgcc-32bit libxslt-devel lzop ncurses-32bit-devel ncurses-devel readline-32bit-devel rsync schedtool sdl1-devel squashfs-tools unzip wxwidgets-devel zip zlib-32bit-devel
 ```
 
 ### Installing the `repo` Tool
