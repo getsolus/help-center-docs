@@ -1,6 +1,6 @@
 +++
 title = "PostgreSQL server"
-lastmod = "2021-02-13T14:39:37+01:00"
+lastmod = "2021-04-27T00:19:34+03:00"
 +++
 
 # PostgreSQL server
@@ -37,60 +37,60 @@ Because PostgreSQL is included as a single package, the only way to perform a ma
 
 01. If you have already updated PostgreSQL, downgrade PostgreSQL back to 10.14:
 
-    ```
-    sudo eopkg it https://mirrors.rit.edu/solus/packages/shannon/p/postgresql/postgresql-10.14-25-1-x86_64.eopkg
-    ```
+```
+sudo eopkg it https://mirrors.rit.edu/solus/packages/shannon/p/postgresql/postgresql-10.14-25-1-x86_64.eopkg
+```
 
 02. (Re)start PostgreSQL:
 
-    ```
-    sudo systemctl restart postgresql
-    ```
+```
+sudo systemctl restart postgresql
+```
 
 03. Create a backup of all current data:
 
-    ```
-    sudo -u postgres pg_dumpall -f /tmp/backup.sql
-    ```
+```
+sudo -u postgres pg_dumpall -f /tmp/backup.sql
+```
 
-    The location of the backup may be one of your choosing, but keep in mind that the `postgres` user needs to have write permissions on the given location.
+The location of the backup may be one of your choosing, but keep in mind that the `postgres` user needs to have write permissions on the given location.
 
 04. Stop PostgreSQL:
 
-    ```
-    sudo systemctl stop postgresql
-    ```
+```
+sudo systemctl stop postgresql
+```
 
 05. Rename the old data directory. This directory contains the old configuration and the original database, but requires significant disk space.
 
-    ```
-    sudo mv /var/db/pgsql/data /var/db/pgsql/data.old
-    ```
+```
+sudo mv /var/db/pgsql/data /var/db/pgsql/data.old
+```
 
 06. Create a new data directory:
 
-    ```
-    sudo mkdir /var/db/pgsql/data
-    sudo chown postgres: /var/db/pgsql/data
-    ```
+```
+sudo mkdir /var/db/pgsql/data
+sudo chown postgres: /var/db/pgsql/data
+```
 
 07. Upgrade PostgreSQL:
 
-    ```
-    sudo eopkg upgrade
-    ```
+```
+sudo eopkg upgrade
+```
 
 08. Start PostgreSQL:
 
-    ```
-    sudo systemctl start postgresql
-    ```
+```
+sudo systemctl start postgresql
+```
 
 09. Restore the data:
 
-    ```
-    sudo -u postgres psql < /tmp/backup.sql
-    ```
+```
+sudo -u postgres psql < /tmp/backup.sql
+```
 
 10. (optional) Update the configuration files in `/var/db/pgsql/data` based on the configuration in `/var/db/pgsql/data.old`. Restart PostgreSQL afterwards.
 
@@ -98,6 +98,6 @@ Because PostgreSQL is included as a single package, the only way to perform a ma
 
 12. Remove the backup and data dump:
 
-    ```
-    sudo rm -r /var/db/pgsql/data.old /tmp/backup.sql
-    ```
+```
+sudo rm -r /var/db/pgsql/data.old /tmp/backup.sql
+```
