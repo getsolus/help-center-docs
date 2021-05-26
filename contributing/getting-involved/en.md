@@ -21,12 +21,12 @@ With so many new users joining, there are always more people needing help. A gre
 [Internet Relay Chat](https://en.wikipedia.org/wiki/Internet_Relay_Chat) is a great way to discuss issues and development with the community, and project developers. It's also a great place for getting support, but remember due 
 to timezone differences there might not always be people present to answer your query immediately. You can access IRC using free clients like Hexchat (preinstalled on Solus) and Quassel! *Note that web IRC clients are not permitted..*
 
-You will find the following Solus channels on the [freenode](https://freenode.net/) network:
+You will find the following Solus channels on the [Libera Chat](https://libera.chat/) IRC network:
 
-- [#Solus](irc://chat.freenode.net/#Solus) - Support channel.
-- [#Solus-Chat](irc://chat.freenode.net/#Solus-Chat) - Off-topic channel.
-- [#Solus-Dev](irc://chat.freenode.net/#Solus-Dev) - Development-related discussions.
-- [#Solus-LiveStream](irc://chat.freenode.net/#Solus-LiveStream) - Channel used for discussion during Hackfests and other official Solus live streams.
+- [#Solus](irc://irc.libera.chat/#Solus) - Support channel.
+- [#Solus-Chat](irc://irc.libera.chat/#Solus-Chat) - Off-topic channel.
+- [#Solus-Dev](irc://irc.libera.chat/#Solus-Dev) - Development-related discussions.
+- [#Solus-LiveStream](irc://irc.libera.chat/#Solus-LiveStream) - Channel used for discussion during Hackfests and other official Solus live streams.
 
 ### Social Media
 
