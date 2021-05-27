@@ -1,6 +1,6 @@
 +++
 title = "Desktop Environments"
-lastmod = "2020-05-20T21:05:00+02:00"
+lastmod = "2021-05-28T00:00:00+03:00"
 +++
 # Desktop Environments
 
@@ -47,4 +47,35 @@ sudo eopkg install i3
 
 If you want to use i3 with support for GNOME Settings Daemon and other GNOME functionality, follow the instructions for installation of GNOME Shell, then choose GNOME+i3 at the login screen to use it.
 
+## BSPWM
+
+``` bash
+sudo eopkg install bspwm
+```
+
+## Xmonad
+
+``` bash
+sudo eopkg install xmonad
+```
+
+## Sway
+
+
+``` bash
+sudo eopkg install sway
+```
+
 For more information about tiling window managers, click [here](https://en.wikipedia.org/wiki/Tiling_window_manager).
+
+## Fluxbox
+
+``` bash
+sudo eopkg install fluxbox
+```
+
+## Openbox
+
+``` bash
+sudo eopkg install openbox
+```
