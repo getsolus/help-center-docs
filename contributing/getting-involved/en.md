@@ -38,7 +38,7 @@ Alongside the forums, you can communicate with developers or others in the commu
 
 ## Funding
 
-Solus is funded though our [Open Collective](https://opencollective.com/getsolus), with our fiscal host being the non-profit 501(c)3 organization [Open Source Collective](https://www.oscollective.org/). This funding enables / will enable us to:
+Solus is funded through our [Open Collective](https://opencollective.com/getsolus), with our fiscal host being the non-profit 501(c)3 organization [Open Source Collective](https://www.oscollective.org/). This funding enables / will enable us to:
 
 1. Offset virtual and physical infrastructure / hardware, ranging from datacenter co-location to providing repository mirrors and hardware upgrades for faster builds.
 2. Enable part-time and eventually full-time development by one or more developers (e.g. myself and Bryan).
