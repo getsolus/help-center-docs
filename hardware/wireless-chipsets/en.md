@@ -1,6 +1,6 @@
 +++
 title = "Wireless Chipsets Compatibility"
-lastmod = "2021-06-08T16:29:00+02:00"
+lastmod = "2021-06-09T01:10:00+02:00"
 +++
 # Wireless Chipsets Compatibility
 
@@ -68,7 +68,7 @@ This list should not suggest that *only*- such devices listed below are compatib
 - Realtek RTL8192ce
 - Realtek RTL8723BE
 - Realtek RTL8723DE
-- Realtek RTL8821CD 
+- Realtek RTL8821CD
 
 ## Tenda
 
