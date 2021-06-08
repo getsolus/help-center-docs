@@ -67,6 +67,8 @@ This list should not suggest that *only*- such devices listed below are compatib
 - Realtek RTL8191SEvB
 - Realtek RTL8192ce
 - Realtek RTL8723BE
+- Realtek RTL8723DE
+- Realtek RTL8821CD
 
 ## Tenda
 
