@@ -31,7 +31,12 @@ sudo eopkg it -c system.devel
 Now we'll need to install the rest of the required build dependencies.
 
 ``` bash
-sudo eopkg it curl-devel git gnupg gperf libgcc-32bit libxslt-devel lzop ncurses-32bit-devel ncurses-devel readline-32bit-devel rsync schedtool sdl1-devel squashfs-tools unzip wxwidgets-devel zip zlib-32bit-devel
+sudo eopkg it curl-devel git gnupg gperf libgcc-32bit libxslt-devel lzop ncurses-32bit-devel ncurses-devel readline-32bit-devel rsync schedtool sdl1-devel squashfs-tools unzip vboot-utils vim wxwidgets-devel zip zlib-32bit-devel
+```
+
+Not a build dependency, but you'll definitely want ADB and Fastboot capabilities if you're developing for AOSP.
+``` bash
+sudo eopkg it android-tools
 ```
 
 ### Installing the `repo` Tool
@@ -88,39 +93,17 @@ lunch full-eng
 make -j`nproc`
 ```
 
-## Tips & Tricks
-
-There are a number of quality of life improvements you can do to improve your experience of building Android.
-
-### Using ccache to Speed Up Subsequent Builds
-
-ccache will cache compiler files after the initial compile to speed up subsequent builds, for building any large project more than once it's a must enable.
-
-In your `~/.bashrc` file add the following to specify to use ccache.
-
+### ADB udev rules
+To allow ADB to work properly with most Android devices, udev rules need to be set up. M0Rf30 has compiled a comprehensive list of them so we'll use his [here](https://raw.githubusercontent.com/M0Rf30/android-udev-rules/master/51-android.rules).
+Create the file "51-android.rules" within /etc/udev/rules.d/ and copy the udev rules from the link above into it. If you don't feel comfortable pasting hundreds of udev lines at random you can sort through the list and find what pertains specifically to your device.
+Be sure to set the permissions for the file once you're done with:
 ``` bash
-export USE_CCACHE=1
+sudo chmod 644 /etc/udev/rules.d/51-android.rules && sudo chown root /etc/udev/rules.d/51-android.rules
 ```
-
-You'll also need to specific the max amount of disk space you want ccache to use, where `10G` corresponds to 10GB.
-
+Reload the udev rules by executing:
 ``` bash
-prebuilts/misc/linux-x86/ccache/ccache -M 10G
+sudo usysconf run -f
 ```
-
-Additionally you can specify which directory you want the ccache to reside, this can be helpful if you have an additional disk drive. Normally ccache resides at `~/.ccache`.
-
-``` bash
-export CCACHE_DIR=/<path_of_your_choice>/.ccache 
-```
-
-If you're struggling for disk space you can turn on ccache compression to increase the number of files it can cache for a very minor performance penalty. Paste the following into your `~/.bashrc` file to enable.
-
-``` bash
-export CCACHE_COMPRESS=1
-```
-
-*After making changes to your `~/.bashrc` file, remember to run `source ~/.bashrc` for changes to take effect.*
 
 ## More Information
 
