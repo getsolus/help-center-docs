@@ -1,6 +1,6 @@
 +++
 title = "Budgie Shortcuts"
-lastmod = "2017-09-23T13:45:00+01:00"
+lastmod = "2021-06-29T02:40:00+03:00"
 +++
 # Budgie Shortcuts
 
@@ -16,4 +16,4 @@ Super (*also Super + S*) | Open Budgie Menu
 Super + A | Open Applets section of Raven
 Super + L | Lock the screen
 Super + N | Open Notifications section of Raven
-Super + Space | Switch keyboard layouts
+Super + Space (*also Alt + Shift*) | Switch keyboard layouts
