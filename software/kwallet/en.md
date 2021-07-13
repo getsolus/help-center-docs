@@ -31,17 +31,17 @@ The contents of `~/.config/autostart-scripts/ssh-add.sh` should reflect the SSH 
 Below is an example of the contents of `.config/autostart-scripts/ssh-add.sh`:
 
 ```
-#!/bin/bash
+#!/bin/sh
 
-ssh-add ssh-add -q < /dev/null
+ssh-add -q < /dev/null
 ```
 
 Tip: The above ssh-add.sh script will only add the default key `~/.ssh/id_rsa`. Assuming you have different keys named key1, key2 etc you need to change the above script to
 
 ```
-#!/bin/bash
+#!/bin/sh
 
-ssh-add ssh-add ~/.ssh/key1  ~/.ssh/key2 < /dev/null
+ssh-add ~/.ssh/key1  ~/.ssh/key2 < /dev/null
 ```
 
 You also have to set the `SSK_ASKPASS` environment variable to ksshaskpass. For this you have to create the autostart script file and make it executable:
@@ -49,7 +49,7 @@ You also have to set the `SSK_ASKPASS` environment variable to ksshaskpass. For 
 Below is an example of the contents of `.config/plasma-workspace/env/askpass.sh`:
 
 ```
-#!/bin/bash
+#!/bin/sh
 
 export SSH_ASKPASS='/usr/bin/ksshaskpass'
 ```
@@ -57,7 +57,7 @@ export SSH_ASKPASS='/usr/bin/ksshaskpass'
 
 After creating this file, you will need to make it executable:
 
-`chmod +x ~/.config/plasma-workspace/env/askpass.sh`
+`chmod a+x ~/.config/plasma-workspace/env/askpass.sh`
 
 ## Re-log to test your changes
 
