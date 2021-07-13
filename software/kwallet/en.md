@@ -1,6 +1,6 @@
 +++
 title = "KDE Wallet and SSH keys"
-lastmod = "2019-09-17T55:50:00+02:00"
+lastmod = "2021-07-12T17:38:26+02:00"
 +++
 # KDE Wallet and SSH keys
 
@@ -33,12 +33,31 @@ Below is an example of the contents of `.config/autostart-scripts/ssh-add.sh`:
 ```
 #!/bin/sh
 
-ssh-add $HOME/.ssh/id_rsa $HOME/.ssh/solus_id_rsa </dev/null
+ssh-add -q < /dev/null
 ```
+
+Tip: The above ssh-add.sh script will only add the default key `~/.ssh/id_rsa`. Assuming you have different keys named key1, key2 etc you need to change the above script to
+
+```
+#!/bin/sh
+
+ssh-add ~/.ssh/key1  ~/.ssh/key2 < /dev/null
+```
+
+You also have to set the `SSK_ASKPASS` environment variable to ksshaskpass. For this you have to create the autostart script file and make it executable:
+
+Below is an example of the contents of `.config/plasma-workspace/env/askpass.sh`:
+
+```
+#!/bin/sh
+
+export SSH_ASKPASS='/usr/bin/ksshaskpass'
+```
+
 
 After creating this file, you will need to make it executable:
 
-`chmod a+x ~/.config/autostart-scripts/ssh-add.sh`
+`chmod a+x ~/.config/plasma-workspace/env/askpass.sh`
 
 ## Re-log to test your changes
 
