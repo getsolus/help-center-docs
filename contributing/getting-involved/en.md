@@ -54,7 +54,7 @@ We're always looking to improve our systems, especially when they're not functio
 Most bug reports should be filed here.
 
 - [Solus Github Repos](https://github.com/getsolus)
-Certain parts of Solus, such as the Budgie Desktop, have repos on github. Check here to see if the system in question is listed.
+Certain parts of Solus, such as the Budgie Desktop, have repos on github. Check here to see if the system in question is listed. If so, file the bug in the appropriate repo.
 
 ## Translations
 
