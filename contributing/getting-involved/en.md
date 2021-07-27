@@ -1,6 +1,6 @@
 +++
 title = "Getting Involved"
-lastmod = "2020-07-07T18:02:07+03:00"
+lastmod = "2021-07-27T18:05:50-05:00"
 +++
 # Getting Involved
 
@@ -18,7 +18,7 @@ With so many new users joining, there are always more people needing help. A gre
 
 ### IRC
 
-[Internet Relay Chat](https://en.wikipedia.org/wiki/Internet_Relay_Chat) is a great way to discuss issues and development with the community, and project developers. It's also a great place for getting support, but remember due 
+[Internet Relay Chat](https://en.wikipedia.org/wiki/Internet_Relay_Chat) is a great way to discuss issues and development with the community, and project developers. It's also a great place for getting support, but remember due
 to timezone differences there might not always be people present to answer your query immediately. You can access IRC using free clients like Hexchat (preinstalled on Solus) and Quassel! *Note that web IRC clients are not permitted..*
 
 You will find the following Solus channels on the [freenode](https://freenode.net/) network:
@@ -34,7 +34,7 @@ Alongside the forums, you can communicate with developers or others in the commu
 
 - [Facebook](https://www.facebook.com/get.solus)
 - [Mastodon](https://fosstodon.org/@Solus)
-- [Reddit](https://www.reddit.com/r/SolusProject/) 
+- [Reddit](https://www.reddit.com/r/SolusProject/)
 - [Twitter](https://twitter.com/solusproject)
 
 ## Improving Documentation
@@ -43,7 +43,7 @@ Our Help Center improves when the documentation improves. If there are articles 
 
 ## Packaging
 
-There may be software you wish to have on your system that is currently not available in the repository. While you are more than welcome to submit a bug and wait for someone else to package the software you want, you can also improve 
+There may be software you wish to have on your system that is currently not available in the repository. While you are more than welcome to submit a bug and wait for someone else to package the software you want, you can also improve
 and contribute to the community by packaging software. If you're interested in learning to package software, feel free to visit our documentation [here](/articles/packaging/).
 
 ## Report Bugs
@@ -51,6 +51,10 @@ and contribute to the community by packaging software. If you're interested in l
 We're always looking to improve our systems, especially when they're not functioning as expected. By reporting bugs, you improve the system not only for you, but for all Solus Project users.
 
 - [Developer Portal](https://dev.getsol.us)
+Most bug reports should be filed here.
+
+- [Solus Github Repos](https://github.com/getsolus)
+Certain parts of Solus, such as the Budgie Desktop, have repos on github. Check here to see if the system in question is listed.
 
 ## Translations
 
