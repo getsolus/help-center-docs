@@ -1,6 +1,6 @@
 +++
 title = "Third Party"
-lastmod = "2019-07-14T19:08:50+02:00"
+lastmod = "2021-01-14T01:48:54+01:00"
 +++
 # Third Party
 
@@ -71,24 +71,6 @@ sudo eopkg it viber*.eopkg;sudo rm *.eopkg
 ```
 
 ## Multimedia
-
-### Adobe Flash Player (NPAPI)
-
-The NPAPI version of Adobe Flash Player is typically used with Firefox.
-
-``` bash
-sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/multimedia/video/flash-player-npapi/pspec.xml
-sudo eopkg it flash-player-npapi*.eopkg;sudo rm flash-player-npapi*.eopkg
-```
-
-### Adobe Flash Player (PPAPI)
-
-The PPAPI version of Adobe Flash Player is typically used with Vivaldi. Chrome provides its own Flash.
-
-``` bash
-sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/multimedia/video/flash-player-ppapi/pspec.xml
-sudo eopkg it flash-player-ppapi*.eopkg;sudo rm flash-player-ppapi*.eopkg
-```
 
 ### Bitwig Studio
 
