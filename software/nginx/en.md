@@ -20,9 +20,9 @@ sudo eopkg install nginx
 
 ### Configuration
 
-nginx, as many other packages in the Solus repository, is [stateless](https://clearlinux.org/features/stateless). That means the package gets installed with a vendored configuration out-of-the-box which can be customized, or even overridden, by a privileged user.
+nginx, as many other packages in the Solus repository, is [stateless](https://clearlinux.org/features/stateless). That means the package gets installed with a vendored configuration out-of-the-box which can be customized, or even overridden, by a privileged user. The default location for nginx config files is in `/usr/share/defaults/nginx/`
 
-nginx on Solus is designed to read users' configuration files from `/etc/nginx/conf.d/` and `/etc/nginx/sites-enabled`. It is possible to manually create these directories and put personal files in there to customize nginx's behavior. To revert back to the original settings, just delete `/etc/nginx/`.
+nginx on Solus is designed to read users' configuration files from `/etc/nginx/conf.d/` and `/etc/nginx/sites-enabled`. You may copy the default config files from `/usr/share/defaults/nginx/` and modify them to suit your needs. It is also possible to manually create these directories and put personal files in there to customize nginx's behavior. To revert back to the original settings, just delete `/etc/nginx/`.
 
 ### Management
 
@@ -33,4 +33,4 @@ sudo systemctl enable --now nginx # To enable nginx on startup and run it immedi
 sudo systemctl stop nginx   # To stop nginx.
 ```
 
-More details about `systemctl` are available [at this address](https://www.freedesktop.org/software/systemd/man/systemctl.html). 
+More details about `systemctl` are available [at this address](https://www.freedesktop.org/software/systemd/man/systemctl.html).
