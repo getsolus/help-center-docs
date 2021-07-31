@@ -1,6 +1,6 @@
 +++
-title = "Tigervnc"
-lastmod = "2018-08-10T17:47:06+02:00"
+title = "TigerVNC"
+lastmod = "2021-07-30T21:39:38-05:00"
 +++
 # TigerVNC
 
@@ -14,28 +14,28 @@ TigerVNC can be installed either from the Software Center or via terminal. The t
 sudo eopkg install tigervnc
 ```
 
-## Usage 
+## Usage
 
 ### Initial setup of vncserver
 
-For the initial setup of vncserver for TigerVNC you have to open a terminal and run: 
+For the initial setup of vncserver for TigerVNC, open a terminal and run:
 
 ``` bash
 vncserver
 ```
-While this setup you will be asked for setting up a **password** and if you'd like to setup a **view-only mode**, please do it accordingly your desire.
+You will be asked to provide a **password**, and if you'd like, a separate **view-only mode password** (optional). Enter these values according to your preference.
 
-After the initial setup you have to stop the vncserver process, for this please type inside the terminal 
+After the initial setup you have to stop the vncserver process so you can edit the configuration file. Please type inside the terminal:
 
 ``` bash
 vncserver -kill :1
 ```
 
-### Configuration for your desktops
+### Configuration for your desktop environment
 
-Every Desktop needs a different Setup, you find the vncserver config under`$HOME/.vnc/xstartup` open the file with your desired editor and change bash script inside the file with the following information for your Desktop.
+Every desktop environment needs a different setup. You will find the vncserver config file under `$HOME/.vnc/xstartup`. Open the file with your desired editor. Add the following information. You don't have to add lines that are already there. Leave the rest of the contents of the file as-is.
 
-### Budgie
+#### Budgie
 
 ``` bash
 #!/bin/bash
@@ -48,7 +48,7 @@ budgie-wm &
 budgie-panel &
 ```
 
-### GNOME
+#### GNOME
 
 ``` bash
 #!/bin/bash
@@ -63,7 +63,7 @@ gnome-settings-daemon &
 metacity &
 nautilus &
 ```
-### MATE
+#### MATE
 
 ``` bash
 #!/bin/bash
@@ -75,6 +75,18 @@ mate-session &
 mate-panel &
 ```
 
-### Plasma
+#### Plasma
 
-Plasma desktop is not supported at the moment. Please use the software `x11vnc` for vncserver support on Plasma.
+Plasma desktop is not supported at the moment. Please use the software `x11vnc` for VNC server support on Plasma.
+
+### Restart and connect to vncserver
+
+To start the VNC server again, please type this in a terminal:
+
+``` bash
+vncserver -kill :1
+```
+
+To connect to the VNC server, enter the IP address or hostname, and the default port of 5901 in your VNC client (for instance, Remmina). Example:
+
+192.123.123.21:5901
