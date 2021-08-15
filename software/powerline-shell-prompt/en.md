@@ -1,6 +1,6 @@
 +++
 title = "Powerline Shell Prompt"
-lastmod = "2020-02-05T22:20:41+01:00"
+lastmod = "2021-08-14T19:00:41+01:00"
 +++
 # Powerline Shell Prompt
 
@@ -29,25 +29,25 @@ powerline-daemon -q
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
-source /usr/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh
+source /usr/lib/python3.9/site-packages/powerline/bindings/bash/powerline.sh
 ```
 
 ### Busybox and dash 
 
 ``` bash
-source /usr/lib/python3.7/site-packages/powerline/bindings/shell/powerline.sh
+source /usr/lib/python3.9/site-packages/powerline/bindings/shell/powerline.sh
 ```
 
 ### Fish 
 
 ``` bash
-source /usr/lib/python3.7/site-packages/powerline/bindings/fish/powerline-setup.fish
+source /usr/lib/python3.9/site-packages/powerline/bindings/fish/powerline-setup.fish
 ```
 
 ### Zsh 
 
 ``` bash
-source /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+source /usr/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
 ```
 
 Read more about powerline inside the Docs [Link](https://powerline.readthedocs.io/en/master/usage/shell-prompts.html#)
