@@ -1,6 +1,6 @@
 +++
 title = "Third Party"
-lastmod = "2021-01-14T01:48:54+01:00"
+lastmod = "2021-09-06T22:57:50+02:00"
 +++
 # Third Party
 
@@ -84,13 +84,6 @@ sudo eopkg it bitwig-studio*.eopkg;sudo rm bitwig-studio*.eopkg
 ``` bash
 sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/multimedia/music/ocenaudio/pspec.xml
 sudo eopkg it ocenaudio*.eopkg;sudo rm ocenaudio*.eopkg
-```
-
-### Pixeluvo
-
-``` bash
-sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/multimedia/graphics/pixeluvo/pspec.xml
-sudo eopkg it pixeluvo*.eopkg;sudo rm pixeluvo*.eopkg
 ```
 
 ### Plex Media Server
