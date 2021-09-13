@@ -37,7 +37,7 @@ Name=ssh-add
 Type=Application
 ```
 
-Tip: The above ssh-add.sh script will only add the default key `~/.ssh/id_rsa`. Assuming you have different keys named key1, key2 etc you need to change the above script to
+Tip: The above ssh-add.desktop file will only add the default key `~/.ssh/id_rsa`. Assuming you have different keys named key1, key2 etc you need to change the above desktop file to
 
 ```
 [Desktop Entry]
