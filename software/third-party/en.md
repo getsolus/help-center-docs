@@ -1,6 +1,6 @@
 +++
 title = "Third Party"
-lastmod = "2021-09-06T22:57:50+02:00"
+lastmod = "2021-09-14T20:38:59+02:00"
 +++
 # Third Party
 
@@ -255,10 +255,10 @@ sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-par
 sudo eopkg it rubymine*.eopkg;sudo rm rubymine*.eopkg
 ```
 
-### Sublime Text 3
+### Sublime Text
 
 ``` bash
-sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/programming/sublime-text-3/pspec.xml
+sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/programming/sublime-text/pspec.xml
 sudo eopkg it sublime*.eopkg;sudo rm sublime*.eopkg
 ```
 
