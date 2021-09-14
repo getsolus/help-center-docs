@@ -1,6 +1,6 @@
 +++
 title = "KDE Wallet and SSH keys"
-lastmod = "2019-09-17T55:50:00+02:00"
+lastmod = "2021-09-12T17:34:00+02:00"
 +++
 # KDE Wallet and SSH keys
 
@@ -22,23 +22,29 @@ The `SSH_ASKPASS` environment variable tells the SSH subsystem which application
 
 On the Solus KDE Plasma Desktop spin, `ksshaskpass` is installed out of the box and `SSH_ASKPASS` is set to `ksshaskpass` in the file `/usr/share/xdg/plasma-workspace/env/50-solus-defaults.sh` by default.
 
-## Create `~/.config/autostart-scripts/ssh-add.sh` 
+## Create `~/.config/autostart/ssh-add.desktop`
 
-The contents of `~/.config/autostart-scripts/ssh-add.sh` should reflect the SSH keys you want to manage using the KDE Wallet.
+The contents of `~/.config/autostart/ssh-add.desktop` should reflect the SSH keys you want to manage using the KDE Wallet.
 
 ### Example
 
-Below is an example of the contents of `.config/autostart-scripts/ssh-add.sh`:
+Below is an example of the contents of `~/.config/autostart/ssh-add.desktop`:
 
 ```
-#!/bin/sh
-
-ssh-add $HOME/.ssh/id_rsa $HOME/.ssh/solus_id_rsa </dev/null
+[Desktop Entry]
+Exec=ssh-add -q
+Name=ssh-add
+Type=Application
 ```
 
-After creating this file, you will need to make it executable:
+Tip: The above ssh-add.desktop file will only add the default key `~/.ssh/id_rsa`. Assuming you have different keys named key1, key2 etc you need to change the above desktop file to
 
-`chmod a+x ~/.config/autostart-scripts/ssh-add.sh`
+```
+[Desktop Entry]
+Exec=ssh-add -q ~/.ssh/key1 ~/.ssh/key2 ~/.ssh/key3
+Name=ssh-add
+Type=Application
+```
 
 ## Re-log to test your changes
 
