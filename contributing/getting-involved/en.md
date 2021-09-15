@@ -1,6 +1,6 @@
 +++
 title = "Getting Involved"
-lastmod = "2021-07-27T18:05:50-05:00"
+lastmod = "2021-09-14T21:32:07-05:00"
 +++
 # Getting Involved
 
