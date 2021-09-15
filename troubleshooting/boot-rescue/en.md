@@ -1,6 +1,6 @@
 +++
 title = "Boot Rescue"
-lastmod = "2020-04-10T10:39:18+03:00"
+lastmod = "2021-08-31T10:02:15-03:00"
 +++
 # Boot Rescue
 
@@ -125,3 +125,24 @@ sudo usysconf run -f
 ```
 
 After this, you should exit your chroot with `exit` then reboot your system. In the event you are still unable to access Solus, please [contact us](/articles/contributing/getting-involved/en).
+
+### Unmounting your system
+
+In case further partition modifications are required, there's a series of steps that must be followed.
+
+If you are still chrooted you have to exit the chroot environment by pressing `Ctrl` + `D`.
+
+Then proceed with unmounting the filesystem.
+
+``` bash
+umount -R /target
+```
+
+In case of having a LUKS-based encryption you'll have to deactivate your logical volumes plus volume groups and then close your LUKS partition.
+
+``` bash
+lvchange -a n /dev/SolusSystem/Swap # `-a n` means `active: no`
+lvchange -a n /dev/SolusSystem/Root
+vgchange -a n SolusSystem
+cryptsetup luksClose decrypted
+```

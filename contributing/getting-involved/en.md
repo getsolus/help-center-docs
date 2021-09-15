@@ -41,7 +41,7 @@ Alongside the forums, you can communicate with developers or others in the commu
 Solus is funded through our [Open Collective](https://opencollective.com/getsolus), with our fiscal host being the non-profit 501(c)3 organization [Open Source Collective](https://www.oscollective.org/). This funding enables / will enable us to:
 
 1. Offset virtual and physical infrastructure / hardware, ranging from datacenter co-location to providing repository mirrors and hardware upgrades for faster builds.
-2. Enable part-time and eventually full-time development by one or more developers (e.g. myself and Bryan).
+2. Enable part-time and eventually full-time development by one or more developers (e.g. myself and Beatrice).
 3. Subsidize or pay in full necessary hardware for the Solus team and active contributors.
 4. Provide opportunities to finance specific approved works, such as various features, fixes, or rewrites that the Team would want to be done in a timely manner, by individuals in the our community that are well-known for high-quality contributions. These opportunities would be provided on a case-by-case basis with direct communication and engagement between all the Team and individual.
 

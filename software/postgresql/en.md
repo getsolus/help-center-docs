@@ -2,7 +2,6 @@
 title = "PostgreSQL server"
 lastmod = "2021-04-27T00:19:34+03:00"
 +++
-
 # PostgreSQL server
 
 [PostgreSQL](https://www.postgresql.org/) is an open source object-relational database system. The `postgresql` package in Solus includes the PostgreSQL library, client and server.
