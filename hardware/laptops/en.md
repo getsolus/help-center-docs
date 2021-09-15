@@ -1,6 +1,6 @@
 +++
 title = "Laptop Compatibility"
-lastmod = "2021-02-10T22:57:03+07:00"
+lastmod = "2021-09-15T20:39:21+02:00"
 +++
 # Laptop Compatibility
 
@@ -139,6 +139,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Lenovo B50-50
 - Lenovo G50-80
 - Lenovo G510
+- Lenovo IdeaPad S145-15API
 - Lenovo IdeaPad S400U
 - Lenovo IdeaPad U310 Touch
 - Lenovo IdeaPad Z370
