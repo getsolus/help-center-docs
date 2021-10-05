@@ -1,6 +1,6 @@
 +++
 title = "Open Broadcaster Software"
-lastmod = "2018-03-03T14:41:12+02:00"
+lastmod = "2021-09-17T10:58:31-04:00"
 +++
 # Open Broadcaster Software
 
@@ -13,6 +13,22 @@ To install OBS Studio, either open up the Software Center and type `obs-studio` 
 ``` bash
 sudo eopkg install obs-studio
 ```
+## Virtual Camera
+
+OBS includes a virtual webcam device which can be used to send your OBS stream to video conferencing programs. In order to use this on Solus, you must first install from our repository a separate kernel module that is responsible for creating the necessary "loopback" device. There are two versions of this software available in the repository, you must choose the version that corresponds to the kernel you have installed.
+
+To find out which kernel is installed, run:
+
+```bash
+uname -r
+```
+This should return a version which ends in `.current` or `.lts`.
+
+- If you are running the "current" kernel, install `v4l2loopback-current`: `sudo eopkg install v4l2loopback-current`
+- If you are running the "lts" kernel, install `v4l2loopback`: `sudo eopkg install v4l2loopback`
+
+Once v4l2loopback is installed, reboot your computer. Next time you start OBS, it will prompt you for your password to set up v4l2loopback. After that, the virtual camera should be available as a webcam in other programs.
+
 
 ## Plugins
 
