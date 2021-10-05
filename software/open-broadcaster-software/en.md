@@ -15,23 +15,17 @@ sudo eopkg install obs-studio
 ```
 ## Virtual Camera
 
-OBS includes a virtual webcam device which can be used to send your OBS stream to video conferencing programs. In order to use this on Solus, you must install `v4l2loopback`. There are two versions of `v4l2loopback` available in the repository, and you must choose the version that corresponds to the kernel you have installed.
+OBS includes a virtual webcam device which can be used to send your OBS stream to video conferencing programs. In order to use this on Solus, you must first install from our repository a separate kernel module that is responsible for creating the necessary "loopback" device. There are two versions of this software available in the repository, you must choose the version that corresponds to the kernel you have installed.
 
 To find out which kernel is installed, run:
 
 ```bash
 uname -r
 ```
-This should return a version which ends in `.current` or `.lts`. If you are running the "current" kernel, install `v4l2loopback-current`:
+This should return a version which ends in `.current` or `.lts`.
 
-```bash
-sudo eopkg install v4l2loopback-current
-```
-or, if you are running the "lts" kernel, install `v4l2loopback`:
-
-```bash
-sudo eopkg install v4l2loopback
-```
+- If you are running the "current" kernel, install `v4l2loopback-current`: `sudo eopkg install v4l2loopback-current`
+- If you are running the "lts" kernel, install `v4l2loopback`: `sudo eopkg install v4l2loopback`
 
 Once v4l2loopback is installed, reboot your computer. Next time you start OBS, it will prompt you for your password to set up v4l2loopback. After that, the virtual camera should be available as a webcam in other programs.
 
