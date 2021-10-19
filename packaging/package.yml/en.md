@@ -1,6 +1,6 @@
 +++
 title = "Package.yml"
-lastmod = "2021-02-24T15:17:14+02:00"
+lastmod = "2021-10-21T19:58:16+01:00"
 +++
 # Package.yml
 
@@ -166,8 +166,8 @@ Macro | Description
 **%python_install** | Runs the install portion of a setup.py, to the appropriate root, using python2.
 **%python_test** | Without argument, runs the test portion of setup.py. With a `.py` script, execute the script with python2. With something else execute the command "as it is". ([More info](https://github.com/getsolus/ypkg/pull/1))
 **%python_compile** | Compiles `*.py` files using python2. This is only useful where the build doesn't compile them already (indicated by availability of `*.pyc` files).
-**%python3_setup** | Runs the build portion of a setup.py using python3.
-**%python3_install** | Runs the install portion of a setup.py, to the appropriate root, using python3.
+**%python3_setup** | Runs `setup.py build` if a setup.py file is found. Otherwise, it assumes the package respects [PEP 517](https://www.python.org/dev/peps/pep-0517/) and creates a wheel file ready for installation from the pyproject.toml or setup.cfg recipe.
+**%python3_install** | Runs `setup.py install` to the appropriate root if a setup.py file is found. Otherwise, it assumes the package respects [PEP 517](https://www.python.org/dev/peps/pep-0517/) and installs the previously generated wheel file created from `%python3_setup`.
 **%python3_test** | Without argument, runs the test portion of setup.py. With a `.py` script, execute the script with python3. With something else execute the command "as it is". ([More info](https://github.com/getsolus/ypkg/pull/1))
 **%python3_compile** | Compiles `*.py` files using python3. This is only useful where the build doesn't compile them already (indicated by availability of `*.pyc` files).
 
