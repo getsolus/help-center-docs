@@ -1,6 +1,6 @@
 +++
 title = "Minecraft"
-lastmod = "2020-05-21T22:18:52+02:00"
+lastmod = "2021-10-24T23:21:25+02:00"
 +++
 # Minecraft
 
@@ -48,7 +48,7 @@ kate /usr/share/applications/minecraft-launcher.desktop
 Now edit inside the desktop file the Exec path to the following
 
 ``` bash
-Exec=env JAVA_HOME=/usr/lib64/openjdk-8 /opt/minecraft-launcher/minecraft-launcher
+Exec=env JAVA_HOME=/usr/lib64/openjdk-8 /usr/bin/minecraft-launcher
 ```
 
 #### Integration the installed files into your system:
