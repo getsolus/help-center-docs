@@ -22,7 +22,7 @@ This package will also install the `xrdp` and `xorgxrdp` packages.
 The following file needs to be created, if it doesn't already exist, with the following contents.
 
 ```bash
-❯ cat /etc/X11/Xwrapper.config
+cat /etc/X11/Xwrapper.config
 
 allowed_users=anybody
 ```
