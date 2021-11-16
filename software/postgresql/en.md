@@ -1,6 +1,6 @@
 +++
 title = "PostgreSQL server"
-lastmod = "2021-04-27T00:19:34+03:00"
+lastmod = "2021-11-14T11:59:19+01:00"
 +++
 # PostgreSQL server
 
@@ -30,14 +30,14 @@ sudo -u postgres psql
 
 Note that all local connections are trusted and can access all databases by default. This can be changed in `/var/db/pgsql/data/pg_hba.conf`, see the [PostgreSQL documentation](https://www.postgresql.org/docs/13/auth-pg-hba-conf.html) for more details.
 
-## Updating from 10.14 to 13.2
+## Updating from 13.4 to 14.1
 
-Because PostgreSQL is included as a single package, the only way to perform a major upgrade of PostgreSQL is via a backup/restore. The procedure below describes the upgrade process as it applies to Solus. See the [PostgreSQL documentation](https://www.postgresql.org/docs/13/upgrading.html#UPGRADING-VIA-PGDUMPALL) for more details.
+Because PostgreSQL is included as a single package, the only way to perform a major upgrade of PostgreSQL is via a backup/restore. The procedure below describes the upgrade process as it applies to Solus. See the [PostgreSQL documentation](https://www.postgresql.org/docs/14/upgrading.html#UPGRADING-VIA-PGDUMPALL) for more details.
 
-01. If you have already updated PostgreSQL, downgrade PostgreSQL back to 10.14:
+01. If you have already updated PostgreSQL, downgrade PostgreSQL back to 13.4:
 
 ```
-sudo eopkg it https://mirrors.rit.edu/solus/packages/shannon/p/postgresql/postgresql-10.14-25-1-x86_64.eopkg
+sudo eopkg it https://mirrors.rit.edu/solus/packages/shannon/p/postgresql/postgresql-13.4-30-1-x86_64.eopkg
 ```
 
 02. (Re)start PostgreSQL:
