@@ -1,6 +1,6 @@
 +++
 title = "Third Party"
-lastmod = "2021-09-06T22:57:50+02:00"
+lastmod = "2021-12-19T23:23:25+01:00"
 +++
 # Third Party
 
@@ -174,13 +174,6 @@ sudo eopkg it mscorefonts*.eopkg;sudo rm mscorefonts*.eopkg
 ``` bash
 sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/office/moneydance/pspec.xml
 sudo eopkg it moneydance*.eopkg;sudo rm moneydance*.eopkg
-```
-
-### PomoDoneApp
-
-``` bash
-sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/office/pomodoneapp/pspec.xml
-sudo eopkg it pomodoneapp*.eopkg;sudo rm pomodoneapp*.eopkg
 ```
 
 ### Scrivener
