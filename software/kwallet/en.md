@@ -1,6 +1,6 @@
 +++
 title = "KDE Wallet and SSH keys"
-lastmod = "2021-09-12T17:34:00+02:00"
+lastmod = "2022-04-20T22:48:01+02:00"
 +++
 # KDE Wallet and SSH keys
 
@@ -55,3 +55,12 @@ After logging out and back in, you should now be prompted by the KDE Wallet to i
 KDE Wallet supports automatically unlocking your SSH key passphrases on login.
 
 For this to work, your KDE Wallet password needs to be identical to your login password.
+
+## troubleshooting
+
+ssh key doesn't get triggered, you can force this manually by running these two commands, the first one is to check if ssh-agent is running the second to force the addition.
+
+```
+env ssh-agent -s
+SSH_ASKPASS=/usr/bin/ksshaskpass ssh-add < /dev/null
+```
