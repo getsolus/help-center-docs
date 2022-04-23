@@ -58,9 +58,8 @@ For this to work, your KDE Wallet password needs to be identical to your login p
 
 ## troubleshooting
 
-ssh key doesn't get triggered, you can force this manually by running these two commands, the first one is to check if ssh-agent is running the second to force the addition.
+ssh key doesn't get triggered, you can force this manually by running this command.
 
 ```
-env ssh-agent -s
 SSH_ASKPASS=/usr/bin/ksshaskpass ssh-add < /dev/null
 ```
