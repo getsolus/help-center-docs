@@ -46,6 +46,16 @@ Name=ssh-add
 Type=Application
 ```
 
+### Set correct permissions
+
+After you created your file inside the autostart folder you have to give it the correct permissions
+
+```
+chmod 700 ~/.config/autostart/ssh-add.desktop
+```
+
+with this the file should appear inside the autostart settings
+
 ## Re-log to test your changes
 
 After logging out and back in, you should now be prompted by the KDE Wallet to input your SSH key passphrases.
