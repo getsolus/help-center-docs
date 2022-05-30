@@ -1,6 +1,6 @@
 +++
 title = "Boot Management"
-lastmod = "2021-10-25T18:43:28+02:00"
+lastmod = "2022-05-29T18:16:18+02:00"
 +++
 # Boot Management
 
@@ -38,12 +38,14 @@ By default, Solus utilizes our linux-current kernel. The separate kernel branche
 |broadcom-sta            |broadcom-sta-current            |
 |linux-lts-headers       |linux-current-headers           |
 |nvidia-390-glx-driver   |nvidia-390-glx-driver-current   |
+|nvidia-470-glx-driver   |nvidia-470-glx-driver-current   |
 |nvidia-beta-driver      |nvidia-beta-driver-current      |
 |nvidia-developer-driver |nvidia-developer-driver-current |
 |nvidia-glx-driver       |nvidia-glx-driver-current       |
 |openrazer               |openrazer-current               |
 |v4l2loopback            |v4l2loopback-current            |
 |vhba-module             |vhba-module-current             |
+|virtualbox              |virtualbox-current              |
 
 ### Change the default kernel branch to boot
 
