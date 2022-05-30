@@ -1,6 +1,6 @@
 +++
 title = "KDE Wallet and SSH keys"
-lastmod = "2021-09-12T17:34:00+02:00"
+lastmod = "2022-04-20T22:48:01+02:00"
 +++
 # KDE Wallet and SSH keys
 
@@ -46,6 +46,16 @@ Name=ssh-add
 Type=Application
 ```
 
+### Set correct permissions
+
+After you created your file inside the autostart folder you have to give it the correct permissions
+
+```
+chmod 700 ~/.config/autostart/ssh-add.desktop
+```
+
+with this the file should appear inside the autostart settings
+
 ## Re-log to test your changes
 
 After logging out and back in, you should now be prompted by the KDE Wallet to input your SSH key passphrases.
@@ -55,3 +65,11 @@ After logging out and back in, you should now be prompted by the KDE Wallet to i
 KDE Wallet supports automatically unlocking your SSH key passphrases on login.
 
 For this to work, your KDE Wallet password needs to be identical to your login password.
+
+## troubleshooting
+
+ssh key doesn't get triggered, you can force this manually by running this command.
+
+```
+SSH_ASKPASS=/usr/bin/ksshaskpass ssh-add < /dev/null
+```
