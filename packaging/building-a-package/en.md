@@ -1,6 +1,6 @@
 +++
 title = "Building a Package"
-lastmod = "2019-06-03T15:30:58+09:30"
+lastmod = "2022-07-14T13:35:37+02:00"
 +++
 # Building a Package
 
@@ -10,7 +10,7 @@ This guide will walk you through setting up the file(s), tooling, and building y
 
 In order to utilise the build system, you must first set up a configuration file that has your packager details.
 
-This file lives in the `.solus` folder of your home directory. You will need to create the `.solus` folder as well as the inner `packager` file. Inside the packager file, you need two keys, `Name` and `Email`. This is used when generating the machine 
+This file lives in the `.solus` or `.config/solus` folder of your home directory. You will need to create the `.solus` folder as well as the inner `packager` file. Inside the packager file, you need two keys, `Name` and `Email`. This is used when generating the machine 
 file so that the packager details are stored within the resulting binary package.
 
 ``` ini
