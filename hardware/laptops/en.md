@@ -1,6 +1,6 @@
 +++
 title = "Laptop Compatibility"
-lastmod = "2021-09-15T20:39:21+02:00"
+lastmod = "2022-09-13T19:49:21+01:00"
 +++
 # Laptop Compatibility
 
@@ -51,6 +51,7 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Asus N501JW
 - Asus Pro50SR
 - Asus ROG G750JZA
+- Asus ROG Strix SCAR GL703GM
 - Asus VivoBook 15 K505ZA
  - Must use BIOS revision 306 and `linux-current` for functional touchpad.
 - Asus VivoBook 15 X505ZA
