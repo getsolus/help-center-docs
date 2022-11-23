@@ -8,33 +8,33 @@ Mange local SSL/TLS Certificate Authority (CA) certificates with any of the desk
 
 ## Public vs. Local Certificates
 
-Public SSL certiicates are included in Solus system packages and are regularly updated with normal package updates.
+Public SSL certificates are included in Solus system packages and are regularly updated with normal package updates.
 
-There are many reasons you may want to install a custom, self-signed, or certificate provided by your local systems administrator.
+There are many reasons you may want to install a certificate that is custom, self-signed, or provided by your local systems administrator.
 
 The topic of SSL and TLS certificates for protecting network resources is a deep and complex topic. Many great resources are publicly available for fundamental usage and workflows. This article will describe the default utilities and NSS database location in Solus.
 
 ## Basic Requirements
 
-This article assumes basic familirarity with using the command line. 
+This article assumes basic familiarity with using the command line. 
 
 A web browser and desktop environment like Budgie can be very useful in testing a certificate served for a network resource.
 
-The creation and validation of a certiicate is outside the scope of this article and you must already have a signed certiicate. 
+The creation and validation of a certificate is outside the scope of this article and you must already have a signed certificate. 
 
-Although not strictly required, normal certificate usage is in the context of some network, and often the public internet. 
+These instructions assume usage for secure network connections on the internet or corporate networks, but may also be used for e-mail signing or other  
 
 {{< altimg "network-overview.jpg" "help-center/configuration/configuring-network/" >}}
 
-WARNING: You must trust the source of any certificate to be installed. Using an insucure or otherwise comprimised certificate is a critical security risk.
+WARNING: You must trust the source of any certificate to be installed. Using an insecure or otherwise compromised certificate is a critical security risk.
 
 ## The NSS Database
 
-Solus utilizes Network Security Service(NSS) for managing digital certificates. Each system user account will have a user NSS databse located at `$HOME/.pki/nssdb`.   
+Solus utilizes Network Security Service(NSS) for managing digital certificates. Each system user account will have a user NSS database located at `$HOME/.pki/nssdb`.   
 
 The `certutil` utility is installed by default and can be verified with `which certutil`. We will be operating on the logged in users' NSSDB, without need for Root permissions. A summary of options can be shown with `--syntax`, and `-H` will show a complete list of option descriptions.
 
-### List Databse Entities
+### List Database Entities
 
 `$ certutil -d sql:$HOME/.pki/nssdb -L`
 
@@ -86,7 +86,7 @@ certutil: certificate is invalid: Certificate key usage inadequate for attempted
 
 ### Using a Certificate
 
-Some client applications will need to be restarted to use the new CA certiicate. Valid SSL or TLS host/service certificates including a signnature with by the newly installed CA/Root certiicate can now be validated and inspected. Web browsers provide utilities for certificate inspection, often with a status icon in the URL bar. 
+Some client applications will need to be restarted to use the new CA certificate. Valid SSL or TLS host/service certificates including a signature with by the newly installed CA/Root certificate can now be validated and inspected. Web browsers provide utilities for certificate inspection, often with a status icon in the URL bar. 
 
 A command line method of inspecting a certificate: `curl https://protected.resource.uri -vI --stderr -`
 
@@ -112,7 +112,7 @@ Read the certutil help documentation for more details on the available types of 
 
 ### Self-signed Certificate Alternatives
 
-If your goal is to simply conform with modern browser security standards for local resources, for example in a home lab, free certificate services are publicly available that can integrate with many services that will greatly simplify the cetificate mangement process. No matter what certificate management  method is used, there are tradeoffs that must be considered and great caution is recommended before presenting resources to untrusted networks like the internet. Issues like expired certificates have impacted major internet services, and can prevent access to critical services or resources. 
+If your goal is to simply conform with modern browser security standards for local resources, for example in a home lab, free certificate services are publicly available that can integrate with many services that will greatly simplify the certificate management process. No matter what certificate management  method is used, there are trade offs that must be considered and great caution is recommended before presenting resources to unsafe networks like the internet. Issues like expired certificates have impacted major internet services, and can prevent access to critical services or resources. 
 
 ### Installing CA Certificates in the Browser
 
