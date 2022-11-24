@@ -22,7 +22,7 @@ A web browser and desktop environment like Budgie can be very useful in testing 
 
 The creation and validation of a certificate is outside the scope of this article and you must already have a signed certificate. 
 
-These instructions assume usage for secure network connections on the internet or corporate networks, but may also be used for e-mail signing or other  
+These instructions assume usage for secure network connections on the internet or corporate networks, but may also be used for other purposes like signing e-mail.   
 
 {{< altimg "network-overview.jpg" "help-center/configuration/configuring-network/" >}}
 
