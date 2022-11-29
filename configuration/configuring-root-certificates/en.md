@@ -4,7 +4,7 @@ lastmod = "2022-06-10T14:22:00-06:00"
 +++
 # Configuring Root Certificates
 
-Mange local SSL/TLS Certificate Authority (CA) certificates with any of the desktop environments supported by Solus.
+Manage local SSL/TLS Certificate Authority (CA) certificates with any of the desktop environments supported by Solus.
 
 ## Public vs. Local Certificates
 
@@ -32,7 +32,7 @@ WARNING: You must trust the source of any certificate to be installed. Using an 
 
 Solus utilizes Network Security Service(NSS) for managing digital certificates. Each system user account will have a user NSS database located at `$HOME/.pki/nssdb`.   
 
-The `certutil` utility is installed by default and can be verified with `which certutil`. We will be operating on the logged in users' NSSDB, without need for Root permissions. A summary of options can be shown with `--syntax`, and `-H` will show a complete list of option descriptions.
+The `certutil` utility is installed by default and can be verified with `which certutil`. We will be operating on the logged-in user's NSSDB, without need for Root permissions. A summary of options can be shown with `--syntax`, and `-H` will show a complete list of option descriptions.
 
 ### List Database Entities
 
@@ -86,7 +86,7 @@ certutil: certificate is invalid: Certificate key usage inadequate for attempted
 
 ### Using a Certificate
 
-Some client applications will need to be restarted to use the new CA certificate. Valid SSL or TLS host/service certificates including a signature with by the newly installed CA/Root certificate can now be validated and inspected. Web browsers provide utilities for certificate inspection, often with a status icon in the URL bar. 
+Some client applications will need to be restarted to use the new CA certificate. Valid SSL or TLS host/service certificates including a signature with the newly installed CA/Root certificate can now be validated and inspected. Web browsers provide utilities for certificate inspection, often with a status icon in the URL bar. 
 
 A command line method of inspecting a certificate: `curl https://protected.resource.uri -vI --stderr -`
 
@@ -106,14 +106,14 @@ Certificate Nickname                                         Trust Attributes
 
 ### Certificate Types
 
-SSL/TLS and SSH certificates are separate and unique concepts with distinct use-cases. This article did not provide details on hosting or serving network resources with a non-public certificate, as most implementations are service dependent (eg: Apache vs MongoDB) and are generally independent from the Solus' Public/Private Key Infrastructure (PKI).
+SSL/TLS and SSH certificates are separate and unique concepts with distinct use-cases. This article did not provide details on hosting or serving network resources with a non-public certificate, as most implementations are service dependent (eg: Apache vs MongoDB) and are generally independent from Solus' Public/Private Key Infrastructure (PKI).
 
 Read the certutil help documentation for more details on the available types of certificates that can be managed this way.
 
 ### Self-signed Certificate Alternatives
 
-If your goal is to simply conform with modern browser security standards for local resources, for example in a home lab, free certificate services are publicly available that can integrate with many services that will greatly simplify the certificate management process. No matter what certificate management  method is used, there are trade offs that must be considered and great caution is recommended before presenting resources to unsafe networks like the internet. Issues like expired certificates have impacted major internet services, and can prevent access to critical services or resources. 
+If your goal is to simply conform with modern browser security standards for local resources, for example in a home lab, free certificate services are publicly available that can integrate with many services that will greatly simplify the certificate management process. No matter what certificate management method is used, there are trade-offs that must be considered and great caution is recommended before presenting resources to unsafe networks like the internet. Issues like expired certificates have impacted major internet services, and can prevent access to critical services or resources. 
 
 ### Installing CA Certificates in the Browser
 
-It may be possible to install a CA cert into a web browser directly. This will not allow other clients access to the certificate and many types of certificates can not be installed this way and will result in a confusing message like "This certificate is already installed as a certificate authority", although no certificate has been installed.
+It may be possible to install a CA certificate into a web browser directly. This will not allow other clients access to the certificate and many types of certificates can not be installed this way and will result in a confusing message like "This certificate is already installed as a certificate authority", although no certificate has been installed.
