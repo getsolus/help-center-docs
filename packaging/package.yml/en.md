@@ -1,6 +1,6 @@
 +++
 title = "Package.yml"
-lastmod = "2021-02-24T15:17:14+02:00"
+lastmod = "2022-08-11T23:50:06+02:00"
 +++
 # Package.yml
 
@@ -201,7 +201,7 @@ Macro | Description
 **%ARCH%** | Indicates the current build architecture.
 **%CC%** | C compiler
 **%CFLAGS%** | cflags as set in `eopkg.conf`
-**%CONFOPTS%** | Flags / options for configuration, such as `--prefix=%PREFIX%`. [Full List.](https://github.com/getsolus/ypkg/blob/master/ypkg2/rc.yml#L327-L329)
+**%CONFOPTS%** | Flags / options for configuration, such as `--prefix=%PREFIX%`. [Full List.](https://github.com/getsolus/ypkg/blob/master/ypkg2/rc.yml#L376-L378)
 **%CXX%** | C++ compiler
 **%CXXFLAGS%** | cxxflags as set in `eopkg.conf`
 **%JOBS%** | jobs, as set in `eopkg.conf`
