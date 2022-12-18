@@ -1,6 +1,6 @@
 +++
 title = "Third Party"
-lastmod = "2021-09-06T22:57:50+02:00"
+lastmod = "2022-06-16T19:15:04+02:00"
 +++
 # Third Party
 
@@ -40,13 +40,6 @@ sudo eopkg it google-chrome-*.eopkg;sudo rm google-chrome-*.eopkg
 ``` bash
 sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/network/im/franz/pspec.xml
 sudo eopkg it franz*.eopkg;sudo rm franz*.eopkg
-```
-
-### Google Talk Browser Plugin
-
-``` bash
-sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/network/im/google-talkplugin/pspec.xml
-sudo eopkg it google-talkplugin*.eopkg;sudo rm google-talkplugin*.eopkg
 ```
 
 ### Skype for Linux
