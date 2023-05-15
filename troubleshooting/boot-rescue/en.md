@@ -1,6 +1,6 @@
 +++
 title = "Boot Rescue"
-lastmod = "2021-08-31T10:02:15-03:00"
+lastmod = "2023-05-15T13:54:21-05:00"
 +++
 # Boot Rescue
 
@@ -68,7 +68,7 @@ If your system uses UEFI as opposed to GRUB, you will also need to mount your EF
 fdisk -o Device,Size,Type -l /dev/sdX
 ```
 
-Your output may look something similiar to:
+Your output may look something similar to:
 
 ``` bash
 Device       Size Type
