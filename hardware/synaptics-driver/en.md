@@ -1,6 +1,6 @@
 +++
 title = "How to use the synaptics driver for your TouchPad"
-lastmod = "2021-12-17T14:09:04+00:00"
+lastmod = "2023-05-15T13:48:28-05:00"
 +++
 
 # How to use the synaptics driver for your TouchPad
@@ -9,7 +9,7 @@ This article describes how to use the the synaptics driver instead of the defaul
 
 Note that synaptics driver will only be used for your touchpad and libinput will be used for all other input devices.
 
-Note also that the synaptics driver is in maintainance mode and libinput is the preferred driver and also sees active development.
+Note also that the synaptics driver is in maintenance mode and libinput is the preferred driver and also sees active development.
 
 To get started open up a terminal and install the synaptics driver.
 ```

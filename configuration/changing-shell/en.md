@@ -1,6 +1,6 @@
 +++
 title = "Changing Shell"
-lastmod = "2021-09-14T20:51:46+02:00"
+lastmod = "2023-05-15T13:48:28-05:00"
 +++
 # Changing Shell
 
@@ -14,7 +14,7 @@ Solus makes available other shells via our repository, with a full list availabl
 
 ## Installation
 
-In order to use a shell different from Bash, you may need to install the respective package for the shell to be able to work. You will find thoses packages in the Software-Center within the *System utilities* category, or via the command-line with `sudo eopkg install <Name of the Shell>`.
+In order to use a shell different from Bash, you may need to install the respective package for the shell to be able to work. You will find those packages in the Software-Center within the *System utilities* category, or via the command-line with `sudo eopkg install <Name of the Shell>`.
 
 Example:
 

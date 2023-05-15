@@ -1,6 +1,6 @@
 +++
 title = "Packaging Practices"
-lastmod = "2019-06-10T14:40:16+02:00"
+lastmod = "2023-05-15T13:54:21-05:00"
 +++
 # Packaging Practices
 
@@ -61,7 +61,7 @@ If required, you can use `patterns` to move other files into the `docs` subpacka
 
 ### The 32bit subpackage
 
-This subpackage is only generated during an `emul32` build. The folowing paths will automatically be placed into a `32bit` subpackage
+This subpackage is only generated during an `emul32` build. The following paths will automatically be placed into a `32bit` subpackage
 
 ```
 /usr/lib32/lib*.so
@@ -145,7 +145,7 @@ fix-silliness.patch
 
 ## Installing extra files
 
-We recommend using patches where possible first, as they ensure correct maintainence and will be updated across package versions. If you must install extra files into the directory, please use the `install` 
+We recommend using patches where possible first, as they ensure correct maintenance and will be updated across package versions. If you must install extra files into the directory, please use the `install` 
 command, ensuring you set the correct permissions. Again, files are accessible from the `./files/` directory, relative to `package.yml`.
 
 This is an example of installing a custom profile file, seen in the `bash` package:
@@ -203,7 +203,7 @@ If you want to do a reverse process and figure out what package is part of pkgco
 common/Scripts/epcsearch.py NAME
 ```
 
-### Using explict named dependencies
+### Using explicit named dependencies
 
 As may be obvious, simply list the package name. Note we discourage this when a `pkgconfig` dependency is available.
 
