@@ -15,17 +15,18 @@ The Solus Project enforces a set of community guidelines to maintain respect and
 ### Community Forums
 
 With so many new users joining, there are always more people needing help. A great way to help us out, would be to help out our users on the [Solus Project Forums](https://discuss.getsol.us).
-### IRC
 
-[Internet Relay Chat](https://en.wikipedia.org/wiki/Internet_Relay_Chat) is a great way to discuss issues and development with the community, and project developers. It's also a great place for getting support, but remember due
-to timezone differences there might not always be people present to answer your query immediately. You can access IRC using free clients like Hexchat (preinstalled on Solus) and Quassel! *Note that web IRC clients are not permitted..*
+### Matrix (chat)
 
-You will find the following Solus channels on the [Libera Chat](https://libera.chat/) IRC network:
+[Matrix](https://en.wikipedia.org/wiki/Matrix_(protocol)) is a great way to discuss issues and development with the community, and project developers in real-time. It's also a great place for getting support, but remember due
+to timezone differences there might not always be people there to answer your question immediately. You can access Matrix using a client like [Element Web](https://app.element.io/), or many [others](https://matrix.org/clients/). You will need a Matrix account.
 
-- [#Solus](irc://irc.libera.chat/#Solus) - Support channel.
-- [#Solus-Chat](irc://irc.libera.chat/#Solus-Chat) - Off-topic channel.
-- [#Solus-Dev](irc://irc.libera.chat/#Solus-Dev) - Development-related discussions.
-- [#Solus-LiveStream](irc://irc.libera.chat/#Solus-LiveStream) - Channel used for discussion during Hackfests and other official Solus live streams.
+You will find the following Solus rooms on the `matrix.org` homeserver:
+
+- [#solus-support:matrix.org](https://matrix.to/#/#solus-support:matrix.org) Support room
+- [#solus-off-topic:matrix.org](https://matrix.to/#/#solus-off-topic:matrix.org) Off-topic room
+- [#solus-development:matrix.org](https://matrix.to/#/#solus-development:matrix.org) Development-related room
+- [#solus:matrix.org](https://matrix.to/#/#solus:matrix.org) **Matrix Space containing all rooms**
 
 ### Social Media
 

@@ -1,6 +1,6 @@
 +++
 title = "Submitting the Package"
-lastmod = "2018-12-29T00:54:53+01:00"
+lastmod = "2023-05-17T18:12:03-05:00"
 +++
 # Submitting the Package
 
@@ -35,7 +35,7 @@ Prior to submitting a patch, please ensure you are checking the following:
 
 Please refrain from submitting a patch for the following instances:
 
-- For a package that is yet to be accepted for inclusion by a member of the Triage Team. We welcome you to politely reach out via the package request task or [IRC](/articles/contributing/getting-involved/en) if you deem the review of the request to be time-sensitive in nature.
+- For a package that is yet to be accepted for inclusion by a member of the Triage Team. We welcome you to politely reach out via the package request task or [Matrix](/articles/contributing/getting-involved/en) if you deem the review of the request to be time-sensitive in nature.
 - If your patch is a Work In Progress / WIP. Completed patches or patches which have a request for comments are accepted, however for request for comments please ensure your patch title contains `[RFC]`. WIP patches just clutter Differential and make patch review by the team more time consuming and introduces unnecessary work.
 
 ## Setting up Arcanist
@@ -120,6 +120,6 @@ Pushing changes is not possible unless you have maintainer access. The same is a
 To request maintainer rights for a repository, it is expected that some level of contribution/maintenance has already happened by way of testing/patching, and there is reasonable trust demonstrated to "hand the keys" 
 over to a repository.
 
-Currently, the request mechanism is [contact Joshua on IRC](/articles/contributing/getting-involved/en). It is far easier to grant access to active community members than those unknown to the project.
+Currently, the request mechanism is [contact Solus Staff on Matrix](/articles/contributing/getting-involved/en). It is far easier to grant access to active community members than those unknown to the project.
 
 Finally, note that the management reserve the right to revoke access at any time, in order to preserve project safety and integrity.

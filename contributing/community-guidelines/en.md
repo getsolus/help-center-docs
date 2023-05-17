@@ -1,6 +1,6 @@
 +++
 title = "Community Guidelines"
-lastmod = "2019-03-28T15:09:45+01:00"
+lastmod = "2023-05-17T18:12:03-05:00"
 +++
 # Community Guidelines
 
@@ -14,7 +14,7 @@ The guidelines laid out in this section apply to all services offered or used by
 
 - Our Development Tracker
 - Any and all forums or organized communities, e.g. our Forums or sub-reddit
-- IRC or any other officially supported means of communicating with the project and community members in real-time
+- Matrix, IRC, or any other officially supported means of communicating with the project and community members in real-time
 - Postings to social media pages / properties owned or used by the project.
 
 ### Harassment
@@ -38,7 +38,7 @@ Members of the community are expected to engage in a manner which is respectful 
   - Political affiliation
 - Sexual or otherwise lewd in nature
 
-Profane language which is not derogatory, hateful, or sexual in nature may be allowed in specific off-topic channels or other locations permitted by the project. However, Core Team reserves the right to request the immediate ceasing of the use of such language by any individual if it is deemed to be derogatory, hateful, sexual, or in a manner which is otherwise distasteful.
+Profane language which is not derogatory, hateful, or sexual in nature may be allowed in specific off-topic rooms or other locations permitted by the project. However, Core Team reserves the right to request the immediate ceasing of the use of such language by any individual if it is deemed to be derogatory, hateful, sexual, or in a manner which is otherwise distasteful.
 
 ### Media Sharing
 
@@ -48,9 +48,9 @@ Members of the community shall not link / share media which is illegal, pornogra
 
 Members of the community should attempt to observe topic guidance when participating in various services offered or used by the project, such as:
 
-- Ensuring support-related channels / mediums remain free of development and off-topic discussions to maximize the community and team’s ability to respond and address issues or support requests.
-- Ensuring development channels / mediums remain free of off-topic discussions which are not relevant to the development or progression of various development items relating to Solus.
-- Ensuring off-topic channels / mediums remain free of heated discussions of polarizing issues or current events in order to keep these spaces inviting and enjoyable.
+- Ensuring support-related rooms / mediums remain free of development and off-topic discussions to maximize the community and team’s ability to respond and address issues or support requests.
+- Ensuring development rooms / mediums remain free of off-topic discussions which are not relevant to the development or progression of various development items relating to Solus.
+- Ensuring off-topic rooms / mediums remain free of heated discussions of polarizing issues or current events in order to keep these spaces inviting and enjoyable.
 
 ### Other
 
