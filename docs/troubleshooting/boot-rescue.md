@@ -70,7 +70,7 @@ If your system uses UEFI as opposed to GRUB, you will also need to mount your EF
 fdisk -o Device,Size,Type -l /dev/sdX
 ```
 
-Your output may look something similiar to:
+Your output may look something similar to:
 
 ``` bash
 Device       Size Type

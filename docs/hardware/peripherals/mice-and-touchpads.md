@@ -24,7 +24,7 @@ These instructions describe how to use the the synaptics driver instead of the d
 
 **NOTE:** The synaptics driver will only be used for your touchpad and libinput will be used for all other input devices.
 
-**NOTE:** That the synaptics driver is in maintainance mode and libinput is the preferred driver and also sees active development.
+**NOTE:** That the synaptics driver is in maintenance mode and libinput is the preferred driver and also sees active development.
 
 ### Setup
 
