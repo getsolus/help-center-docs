@@ -27,4 +27,4 @@ sudo setcap cap_dac_override,cap_net_admin,cap_net_raw+eip /usr/bin/dumpcap
 
 ## Usage
 
-Wireshark [User’s Guide](https://www.wireshark.org/docs/user/wsug_html_chunked/) and [learning material](https://www.wireshark.org/#learnWS) are available on [https://wireshark.org](https://wireshark.org).
+Wireshark [User’s Guide](https://www.wireshark.org/docs/wsug_html_chunked/) and [learning material](https://www.wireshark.org/#learnWS) are available on [https://wireshark.org](https://wireshark.org).

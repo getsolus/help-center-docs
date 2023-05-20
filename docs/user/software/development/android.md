@@ -87,7 +87,7 @@ repo sync -j `nproc` -c
 Once the source has finished downloading we can build Android. The following commands will not build android for any specific device. For building Android specifically for your device you'll need to find additional instructions.
 
 ``` bash
-source buildvsetup.sh
+source build/envsetup.sh
 lunch full-eng
 make -j`nproc`
 ```
