@@ -116,9 +116,10 @@ To validate a working network connection (assuming a network connection is avail
 
 In the event you had an incomplete upgrade, try the following commands:
 
-1. `sudo eopkg up`
-2. `sudo eopkg check | grep Broken | awk '{print $4}' | xargs sudo eopkg it --reinstall`
-3. Try reverting the latest package transaction (this should only be done if the first two steps, followed by the "Re-run System-Wide Configuration Triggers", failed to produce a successful bootup). See [our documentation on history and rollback](/docs/user/package-management/history-and-rollback) for more information, followed by re-applying your updates by running `sudo eopkg up`.
+1. `sudo eopkg rebuild-db`
+2. `sudo eopkg up`
+3. `sudo eopkg check | grep Broken | awk '{print $4}' | xargs sudo eopkg it --reinstall`
+4. Try reverting the latest package transaction (this should only be done if the first two steps, followed by the "Re-run System-Wide Configuration Triggers", failed to produce a successful bootup). See [our documentation on history and rollback](docs/user/package-management/history-and-rollback) for more information, followed by re-applying your updates by running `sudo eopkg up`.
 
 ### Re-run System-Wide Configuration Triggers
 
