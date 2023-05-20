@@ -82,7 +82,7 @@ const config = {
             position: 'left',
             label: 'Packaging',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: 'https://getsol.us/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/getsolus',
             label: 'GitHub',
@@ -124,7 +124,7 @@ const config = {
             items: [
               {
                 label: 'Blog',
-                to: '/blog',
+                to: 'https://getsol.us/blog',
               },
               {
                 label: 'GitHub',
