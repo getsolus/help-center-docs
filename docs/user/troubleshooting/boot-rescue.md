@@ -94,9 +94,11 @@ First run the following commands:
 
 
 ``` bash
-mount --bind /proc /target/proc
-mount --bind /dev /target/dev
-mount --bind /sys /target/sys
+mount --types proc /proc /target/proc
+mount --rbind /dev /target/dev
+mount --rbind /sys /target/sys
+mount --make-rslave /target/dev
+mount --make-rslave /target/sys
 ```
 
 Assuming all goes well, you should now be able to chroot into your Solus system by doing `chroot /target`.
