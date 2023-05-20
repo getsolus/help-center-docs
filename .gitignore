@@ -107,5 +107,3 @@ dist
 .docusaurus/
 
 **.kate-swp
-
-build/
