@@ -42,7 +42,8 @@ If you already have Solus installed and wish to enable secure boot then there is
 
 Firstly, you must confirm you have `clr-boot-manager, version: 3.2.12, release: 29` installed, run `eopkg info clr-boot-manager` to confirm this. This version of `clr-boot-manager` will have created a new UEFI boot entry on your machine called `Solus Linux Bootloader` that can be booted from with Secure Boot enabled.
 
-<em>Before continuing, it is important to note the screenshots provided here are for example only, your UEFI firmware interface will almost certainly look different.</em>
+:::note Before continuing, it is important to note the screenshots provided here are for example only, your UEFI firmware interface will almost certainly look different.
+:::
 
 Reboot your machine and select the appropriate keyboard button during startup to choose a boot device. The correct key will vary from machine to machine but some common keys are `F2`, `F11`, `F12`, or `Esc`. From the boot selection interface, select the `Solus Linux Bootloader` entry and boot from it. If you've manage to successfully boot then you can continue with enabling Secure Boot.
 
