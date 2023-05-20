@@ -97,40 +97,6 @@ lunch full-eng
 make -j`nproc`
 ```
 
-## Tips & Tricks
-
-There are a number of quality of life improvements you can do to improve your experience of building Android.
-
-### Using ccache to Speed Up Subsequent Builds
-
-ccache will cache compiler files after the initial compile to speed up subsequent builds, for building any large project more than once it's a must enable.
-
-In your `~/.bashrc` file add the following to specify to use ccache.
-
-``` bash
-export USE_CCACHE=1
-```
-
-You'll also need to specific the max amount of disk space you want ccache to use, where `10G` corresponds to 10GB.
-
-``` bash
-prebuilts/misc/linux-x86/ccache/ccache -M 10G
-```
-
-Additionally you can specify which directory you want the ccache to reside, this can be helpful if you have an additional disk drive. Normally ccache resides at `~/.ccache`.
-
-``` bash
-export CCACHE_DIR=/<path_of_your_choice>/.ccache 
-```
-
-If you're struggling for disk space you can turn on ccache compression to increase the number of files it can cache for a very minor performance penalty. Paste the following into your `~/.bashrc` file to enable.
-
-``` bash
-export CCACHE_COMPRESS=1
-```
-
-*After making changes to your `~/.bashrc` file, remember to run `source ~/.bashrc` for changes to take effect.*
-
 ## More Information
 
 Google has provided build instructions for building AOSP on Ubuntu and MacOS, you may find additional useful information there, not stated here.
