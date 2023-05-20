@@ -26,7 +26,7 @@ Minor syncs during the week, and correctional syncs shortly after the Friday-syn
 
 ## Package deprecation
 
-Under rare circumstances a package may need to be deprecated or even renamed. Packagers owning these changes must first communicate the need to ensure a coordinated deprecation. Raise the issue on the dev portal, or speak with the core team on IRC to ensure this is implemented correctly.
+Under rare circumstances a package may need to be deprecated or even renamed. Packagers owning these changes must first communicate the need to ensure a coordinated deprecation. Raise the issue on the dev portal, or speak with the core team on Matrix to ensure this is implemented correctly.
 
 Deprecated packages will remove themselves from the users systems as the first operation in an update or package install using the package manager, once marked as `Obsolete` in the index.
 

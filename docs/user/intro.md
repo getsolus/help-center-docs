@@ -58,6 +58,6 @@ If you are a Redditor, our subreddit fulfills a similar purpose to the forums.
 
 If you are having issues with your Solus system or one of our software packages not working as expected, you might consider filing a bug report on our Dev Tracker.
 
-**IRC**
+**Matrix**
 
-Last, but not least, we maintain an active presence on the [Libera IRC Network](https://libera.chat). Sign on and head over to `#solus` to get started.
+Last, but not least, we maintain an active presence on [Matrix](https://matrix.org). Sign up and head over to [`#solus:matrix.org`](https://matrix.to/#/#solus:matrix.org)` to get started. Read more about Solus on Matrix [here.](/docs/user/contributing/getting-involved.md#matrix-chat)
