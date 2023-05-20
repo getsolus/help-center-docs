@@ -72,7 +72,7 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'userSidebar',
             position: 'left',
             label: 'Help Center Home',
           },
