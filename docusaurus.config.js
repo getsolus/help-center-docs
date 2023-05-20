@@ -58,7 +58,14 @@ const config = {
     ],
   ],
 
-  plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
+  plugins: [
+    [
+      require.resolve("@cmfcmf/docusaurus-search-local"),
+      {
+        // Options here
+      },
+    ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -100,7 +107,7 @@ const config = {
             items: [
               {
                 label: 'Welcome',
-                to: '/docs/intro',
+                to: '/docs/user/intro',
               },
             ],
           },
