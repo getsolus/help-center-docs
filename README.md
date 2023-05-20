@@ -4,24 +4,15 @@ This is the repository for Solus's Help Center documentation. This repository ex
 
 Stumbled on this repo and have no idea what any of this is? Check out the [Solus](https://getsol.us) operating system!
 
+## Running Locally
+`npm start`
+
 ## Contributing
 
 ### Updating an Article
 
-When updating an article, remember to update the `lastmod` key / value in the TOML header. You can get the ISO 8601 formatted string by doing:
+When updating an article, remember to update the date.
 
-``` bash
-date --iso-8601=seconds
-```
-
-A TOML header is indicated by the following example contents at the top of a file:
-
-```
-+++
-title = "Example File"
-lastmod = "2018-03-03T14:41:12+02:00"
-+++
-```
 
 ### Multi-Lingual Documents
 
