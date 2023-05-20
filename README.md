@@ -5,6 +5,7 @@ This is the repository for Solus's Help Center documentation. This repository ex
 Stumbled on this repo and have no idea what any of this is? Check out the [Solus](https://getsol.us) operating system!
 
 ## Running Locally
+`npm install`
 `npm start`
 
 ## Contributing
