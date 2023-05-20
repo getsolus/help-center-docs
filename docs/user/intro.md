@@ -45,6 +45,11 @@ The Help Center is not intended to be as comprehensive as something like the Arc
 
 Our Flarum-powered forums are easy to use from any device and are a great resource for getting support.
 
+**[Matrix](https://matrix.to/#/#solus:matrix.org)**
+
+[Matrix](https://en.wikipedia.org/wiki/Matrix_(protocol)) is a great way to discuss issues and development with the community, and project developers in real-time. It's also a great place for getting support, but remember due
+to timezone differences there might not always be people there to answer your question immediately. You can access Matrix using a client like [Element Web](https://app.element.io/), or many [others](https://matrix.org/clients/). You will need a Matrix account.
+
 **[Reddit](https://www.reddit.com/r/SolusProject)**
 
 If you are a Redditor, our subreddit fulfills a similar purpose to the forums.
