@@ -14,6 +14,7 @@ const config = {
   url: 'https://help.getsol.us',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
+  // Since we use the help.getsol.us CNAME for GH Pages, this is '/' for now
   baseUrl: '/',
 
   // GitHub pages deployment config.
