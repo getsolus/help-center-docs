@@ -19,7 +19,7 @@ const DocList: DocSection[] = [
         Installing, software, boot mangement, troubleshooting and more
       </>
     ),
-    link: 'docs/intro',
+    link: 'docs/user/intro',
     img: (
       <IconUser size="96" stroke="1"></IconUser>
     )

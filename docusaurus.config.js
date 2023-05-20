@@ -21,7 +21,7 @@ const config = {
   organizationName: 'Solus', // Usually your GitHub org/user name.
   projectName: 'help-center-docs', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -57,6 +57,8 @@ const config = {
       }),
     ],
   ],
+
+  plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -146,4 +148,4 @@ const config = {
     }),
 };
 
-module.exports = config;
+module.exports = config
