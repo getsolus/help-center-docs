@@ -16,7 +16,7 @@ Each new package which is going to land in the Solus repository must have one or
 - Ensure the [packaging file](/docs/packaging/package.yml) adheres to the Solus [standards](/articles/packaging/packaging-practices/en)
 - Ensure the application or library is consistent with the Operating System aesthetics, file system conventions and the Solus philosophy in general
 
-On the Solus side however, the community must not forget that maintainers are volunteers, which may or may not have a technical background. More experiencied users are to engage newcoming maintainers in a welcoming manner, e.g. by listing their errors and inviting them to fix them. (More on this in the [community guidelines](/articles/contributing/community-guidelines/en.md#development--issue-trackers))
+On the Solus side however, the community must not forget that maintainers are volunteers, which may or may not have a technical background. More experiencied users are to engage newcoming maintainers in a welcoming manner, e.g. by listing their errors and inviting them to fix them. (More on this in the [community guidelines](/docs/contributing/community-guidelines#development--issue-trackers))
 
 The Core Team has the right to enforce certain practices, even when in contrast with maintainers' vision. It also has the right to ultimately accept or reject a patch.
 
