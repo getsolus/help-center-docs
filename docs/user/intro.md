@@ -29,7 +29,8 @@ For the most part, Solus will work with the majority of hardware out-of-the-box.
 
 We believe that Solus is for everyone. Each installation comes with a sane set of default applications for the majority of people, but everyone uses Solus for their own reasons. This section is intended to help you install other software to better suit your needs.
 
-**[Getting Involved](/docs/user/contributing/)**
+
+**[Contributing](/docs/category/contributing)**
 
 Solus is not a commercial project. It is built and maintained by volunteers who use Solus every day and have a passion for making it better. Whatever your skill-level or knowledge about Linux and Solus, this section will show you how to contribute to Solus.
 
