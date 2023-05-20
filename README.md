@@ -4,15 +4,27 @@ This is the repository for Solus's Help Center documentation. This repository ex
 
 Stumbled on this repo and have no idea what any of this is? Check out the [Solus](https://getsol.us) operating system!
 
-## Running Locally
+## Running Locally (from docusaurus branch)
+
 `npm install`
 `npm start`
 
-# Generate a static site
+# Generate a static site (from docusaurus branch)
+
 `npm run build`
 `npm run serve`
 
 This is needed to test searching
+
+## Publishing to https://help.getsol.us (via GH Pages)
+
+Ensure that you can successfully generate a static site as above.
+
+Then, when you're ready to deploy, run the following:
+
+`USE_SSH=true npm run deploy`
+
+This obviously assumes that you have ssh push access to the help-center-docs repo and are using `remote.origin.url=git@github.com:getsolus/help-center-docs.git` (as listed by `git config -l`).
 
 ## Contributing
 
