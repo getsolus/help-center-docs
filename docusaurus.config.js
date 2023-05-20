@@ -126,6 +126,10 @@ const config = {
                 label: 'Twitter',
                 href: 'https://twitter.com/SolusProject',
               },
+              {
+                label: 'Mastodon',
+                href: 'https://fosstodon.org/@Solus',
+              },
             ],
           },
           {
