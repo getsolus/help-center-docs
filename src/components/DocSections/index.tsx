@@ -40,7 +40,7 @@ const DocList: DocSection[] = [
 
 function Doc({title, img, description, link}: DocSection) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col col-3')}>
       <div className="text--center">
         {img}
       </div>
