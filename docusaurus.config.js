@@ -14,11 +14,11 @@ const config = {
   url: 'https://help.getsol.us',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/help-center-docs',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Solus', // Usually your GitHub org/user name.
+  organizationName: 'getsolus', // Usually your GitHub org/user name.
   projectName: 'help-center-docs', // Usually your repo name.
 
   onBrokenLinks: 'warn',
