@@ -34,11 +34,11 @@ Maintainers are free to [update a package](/docs/packaging/updating-an-existing-
 
 ### Non-maintainers
 
-If a package is actively maintained, modifications should not occur and the individual should exercise patience when it comes to the updating of software. In some cases, a maintainer may intentionally be holding back a package, or has simply not updated yet. If pertinent, the individual should file a [package update request](/docs/packaging/procedures/request-a-package-update). Alternatively, the individual can reach the maintainers or the Core Team on IRC and ask permission to update the package. It is also possible to submit a patch and attach a message to it clarifying the intention of updating the package, although this is a special case reserved to e.g. security updates and the patch is likely to be rejected.
+If a package is actively maintained, modifications should not occur and the individual should exercise patience when it comes to the updating of software. In some cases, a maintainer may intentionally be holding back a package, or has simply not updated yet. If pertinent, the individual should file a [package update request](/docs/packaging/procedures/request-a-package-update). Alternatively, the individual can reach the maintainers or the Core Team on Matrix and ask permission to update the package. It is also possible to submit a patch and attach a message to it clarifying the intention of updating the package, although this is a special case reserved to e.g. security updates and the patch is likely to be rejected.
 
 ## Template
 
-Presented here is the `MAINTAINERS.md` file. This file must be provided verbatim alongside the other patch contents, and filled in with the maintainers' personal information. An IRC contact is optional but recommended, but an e-mail address is mandatory. Similar to the `.solus/packager` file used for packaging, the maintainers listed in `MAINTAINERS.md` must use their real first and last name(s) for accountability purposes.
+Presented here is the `MAINTAINERS.md` file. This file must be provided verbatim alongside the other patch contents, and filled in with the maintainers' personal information. An Matrix contact is optional but recommended, but an e-mail address is mandatory. Similar to the `.solus/packager` file used for packaging, the maintainers listed in `MAINTAINERS.md` must use their real first and last name(s) for accountability purposes.
 
 The contact information section is a YAML list. If needed, more elements may be added, each per maintainer. Do not edit the file in any other way, including spacing, except *Name*, *Surname* and *REPLACEME* placeholders.
 
