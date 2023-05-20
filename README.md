@@ -13,12 +13,12 @@ git branch -u origin/master master
 git remote set-head origin -a
 ```
 
-## Running Locally (from docusaurus branch)
+## Running Locally
 
 `npm install`
 `npm start`
 
-# Generate a static site (from docusaurus branch)
+# Generate a static site
 
 `npm run build`
 `npm run serve`
