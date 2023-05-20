@@ -8,6 +8,12 @@ Stumbled on this repo and have no idea what any of this is? Check out the [Solus
 `npm install`
 `npm start`
 
+# Generate a static site
+`npm run build`
+`npm run serve`
+
+This is needed to test searching
+
 ## Contributing
 
 ### Updating an Article
