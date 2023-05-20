@@ -72,12 +72,13 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/logo.jpg',
       navbar: {
         title: 'Solus',
         logo: {
           alt: 'Solus Logo',
           src: 'img/logo.svg',
+          href: 'https://getsol.us',
         },
         items: [
           {
