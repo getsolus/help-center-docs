@@ -88,6 +88,6 @@ As such, we are not currently looking to our get our own `shim` signed by Micros
 
 ## Useful Links for Additional Reading
 
-- https://learn.microsoft.com/en-us/windows-hardware/drivers/dashboard/file-signing-reqs
+- https://learn.microsoft.com-us/windows-hardware/drivers/dashboard/file-signing-reqs
 - https://github.com/rhboot/shim-review/
 - https://github.com/rhboot/shim/

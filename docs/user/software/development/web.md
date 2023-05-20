@@ -18,7 +18,7 @@ Remember that Solus is not a server operating system: any usage outside local te
 
 ### Installation
 
-caddy is available in the `caddy` package. It can be installed from the [Software Center](/quick-start/installing-and-updating-software/en/) or via terminal:
+caddy is available in the `caddy` package. It can be installed from the [Software Center](/quick-start/installing-and-updating-software) or via terminal:
 
 ``` bash
 sudo eopkg install caddy
@@ -30,7 +30,7 @@ sudo eopkg install caddy
 
 caddy, like many other packages in the Solus repository, is [stateless](https://clearlinux.org/features/stateless). That means the package gets installed with a vendored configuration out-of-the-box which can be customized, or even overridden, by a privileged user.
 
-caddy can use any valid configuration by reloading it via the cli. For automatic HTTPS users may need to generate their own certs and to add them at their `Caddyfile`s. For PHP FastCGI support `php` needs to be also installed and with the `php-fpm` service also running. Reloading with the `/usr/share/caddy/Caddyfile` reverts caddy to its original settings. More documentation about caddy is available at their [website](https://caddyserver.com/docs/).
+caddy can use any valid configuration by reloading it via the cli. For automatic HTTPS users may need to generate their own certs and to add them at their `Caddyfile`s. For PHP FastCGI support `php` needs to be also installed and with the `php-fpm` service also running. Reloading with the `/usr/share/caddy/Caddyfile` reverts caddy to its original settings. More documentation about caddy is available at their [website](https://caddyserver.com/docs/user/).
 
 #### Management
 
@@ -113,7 +113,7 @@ Remember that Solus is not a server operating system: any usage outside the loca
 
 ### Installation
 
-nginx is available in the `nginx` package. It can be installed from the [Software Center](/quick-start/installing-and-updating-software/en/) or via terminal:
+nginx is available in the `nginx` package. It can be installed from the [Software Center](/quick-start/installing-and-updating-software) or via terminal:
 
 ```bash
 sudo eopkg install nginx

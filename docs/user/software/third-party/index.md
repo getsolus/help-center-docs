@@ -269,7 +269,7 @@ sudo eopkg it webstorm*.eopkg;sudo rm webstorm*.eopkg
 ### Enpass
 
 ``` bash
-sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/security/enpass/pspec.xml
+sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/securitypass/pspec.xml
 sudo eopkg it enpass*.eopkg;sudo rm enpass*.eopkg
 ```
 

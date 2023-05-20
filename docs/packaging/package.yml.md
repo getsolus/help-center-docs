@@ -68,9 +68,9 @@ Key Name | Type | Description
 **emul32** | `bool` | Set to `yes` to enable an `-m32` build (32-bit libs).
 **libsplit** | `bool` | Set to `no` to disable splitting of libraries into `devel` sub-packages.
 **conflicts** | `string(s)` | Specify packages that cannot be installed together with this one.
-**optimize** | `list` | Specify preset keys to modify compiler and linker flags during build. You can learn more [here](/articles/packaging/package.yml/en/#optimize-values).
-**builddeps** | `list` | Specify build dependencies for the package. You can learn more [here](/articles/packaging/packaging-practices/en/#build-dependencies).
-**rundeps** | `dict(s)` | Specify further runtime dependencies for the packages. You can learn more [here](/articles/packaging/packaging-practices/en/#runtime-dependencies).
+**optimize** | `list` | Specify preset keys to modify compiler and linker flags during build. You can learn more [here](/docs/packaging/package.yml#optimize-values).
+**builddeps** | `list` | Specify build dependencies for the package. You can learn more [here](/docs/packaging/packaging-practices#build-dependencies).
+**rundeps** | `dict(s)` | Specify further runtime dependencies for the packages. You can learn more [here](/docs/packaging/packaging-practices#runtime-dependencies).
 **replaces** | `dict(s)` | Replace one package with another, used when renaming or deprecating packages for clean upgrade paths.
 **patterns** | `dict(s)` | Allows fine grained control over file placement within the package or sub-packages. Useful for packages that are development only (i.e. `/usr/bin` files).
 **environment** | `unicode` | Specify code that will be exported to all packaging steps of the build (i.e. exporting variables for the entire build).
@@ -301,4 +301,4 @@ The values may also be expressed in list form, still using the same default key 
 
 ## Packaging Practices
 
-The concepts in this document merely expose the syntax of a `package.yml` file. Solus adheres to strict packaging practices and conventions which packagers must follow. They are explained in the [Packaging Practices](/articles/packaging/packaging-practices/en/) article.
+The concepts in this document merely expose the syntax of a `package.yml` file. Solus adheres to strict packaging practices and conventions which packagers must follow. They are explained in the [Packaging Practices](/docs/packaging/packaging-practices) article.

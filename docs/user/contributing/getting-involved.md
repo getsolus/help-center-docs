@@ -12,7 +12,7 @@ Solus is a big undertaking, and as such there are many ways in which your involv
 
 ### Community Guidelines
 
-The Solus Project enforces a set of community guidelines to maintain respect and professionalism, as well as a family-friendly environment. Please view our community guidelines [here](/articles/contributing/community-guidelines/en/).
+The Solus Project enforces a set of community guidelines to maintain respect and professionalism, as well as a family-friendly environment. Please view our community guidelines [here](/docs/user/contributing/community-guidelines).
 
 ### Community Forums
 
@@ -20,7 +20,7 @@ With so many new users joining, there are always more people needing help. A gre
 
 ### Matrix (chat)
 
-[Matrix](https://en.wikipedia.org/wiki/Matrix_(protocol)) is a great way to discuss issues and development with the community, and project developers in real-time. It's also a great place for getting support, but remember due
+[Matrix](https:/.wikipedia.org/wiki/Matrix_(protocol)) is a great way to discuss issues and development with the community, and project developers in real-time. It's also a great place for getting support, but remember due
 to timezone differences there might not always be people there to answer your question immediately. You can access Matrix using a client like [Element Web](https://app.element.io/), or many [others](https://matrix.org/clients/). You will need a Matrix account.
 
 You will find the following Solus rooms on the `matrix.org` homeserver:
@@ -50,7 +50,7 @@ Solus is funded through our [Open Collective](https://opencollective.com/getsolu
 
 ## Improving Documentation
 
-Our Help Center improves when the documentation improves. If there are articles that you think would be valuable to add, get involved by submitting pull requests to our [Help Center Docs](https://github.com/solus-project/help-center-docs) repo!
+Our Help Center improves when the documentation improves. If there are docs that you think would be valuable to add, get involved by submitting pull requests to our [Help Center Docs](https://github.com/solus-project/help-center-docs) repo!
 
 ## Packaging
 

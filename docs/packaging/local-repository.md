@@ -8,7 +8,7 @@ date: 2022-12-16
 
 This guide walks you through the steps necessary to tell solbuild how to utilise locally built `.eopkg's` that are not yet in the Solus repository.
 
-We assume you have worked through the [packaging](/articles/packaging/building-a-package/en/) material for creating a package with solbuild.
+We assume you have worked through the [packaging](/docs/packaging/building-a-package) material for creating a package with solbuild.
 
 ## Install the local profile
 

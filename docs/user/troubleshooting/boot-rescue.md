@@ -64,7 +64,7 @@ sdb                      8:16   1   7.3G  0 disk
 
 #### UEFI
 
-If your system uses UEFI as opposed to GRUB, you will also need to mount your EFI System Partition, otherwise referred to as ESP. If you followed our [UEFI guide](/articles/installation/disks/en/) during installation of Solus, then in all likelihood your ESP will be about 500mb in size. If you're unsure of the partition, run the following, replacing X with the same letter during your mounting of your root file system, minus the number:
+If your system uses UEFI as opposed to GRUB, you will also need to mount your EFI System Partition, otherwise referred to as ESP. If you followed our [UEFI guide](/docs/user/installation/disks) during installation of Solus, then in all likelihood your ESP will be about 500mb in size. If you're unsure of the partition, run the following, replacing X with the same letter during your mounting of your root file system, minus the number:
 
 ```bash
 fdisk -o Device,Size,Type -l /dev/sdX
@@ -116,7 +116,7 @@ In the event you had an incomplete upgrade, try the following commands:
 
 1. `sudo eopkg up`
 2. `sudo eopkg check | grep Broken | awk '{print $4}' | xargs sudo eopkg it --reinstall`
-3. Try reverting the latest package transaction (this should only be done if the first two steps, followed by the "Re-run System-Wide Configuration Triggers", failed to produce a successful bootup). See [our documentation on history and rollback](/articles/package-management/history-and-rollback/en) for more information, followed by re-applying your updates by running `sudo eopkg up`.
+3. Try reverting the latest package transaction (this should only be done if the first two steps, followed by the "Re-run System-Wide Configuration Triggers", failed to produce a successful bootup). See [our documentation on history and rollback](/docs/user/package-management/history-and-rollback) for more information, followed by re-applying your updates by running `sudo eopkg up`.
 
 ### Re-run System-Wide Configuration Triggers
 
@@ -126,7 +126,7 @@ In the chroot environment, run the following command which will perform various 
 sudo usysconf run -f
 ```
 
-After this, you should exit your chroot with `exit` then reboot your system. In the event you are still unable to access Solus, please [contact us](/articles/contributing/getting-involved/en).
+After this, you should exit your chroot with `exit` then reboot your system. In the event you are still unable to access Solus, please [contact us](/docs/user/contributing/getting-involved).
 
 ### Unmounting your system
 

@@ -12,7 +12,7 @@ Each version of Solus comes with a pre-installed collection of desktop applicati
 
 # Web Browser
 
-Solus comes pre-installed with Firefox, a secure and trustworthy web browser provided by the non-profit organization [Mozilla](https://www.mozilla.org/en-US/).
+Solus comes pre-installed with Firefox, a secure and trustworthy web browser provided by the non-profit organization [Mozilla](https://www.mozilla.org-US/).
 
 ![Firefox Screenshot](default-applications/firefox.jpg)
 
@@ -20,7 +20,7 @@ Solus comes pre-installed with Firefox, a secure and trustworthy web browser pro
 
 # Email Client
 
-Solus comes pre-installed with the powerful [Thunderbird](https://www.mozilla.org/en-US/thunderbird/) email, newsgroup, and feeds client.
+Solus comes pre-installed with the powerful [Thunderbird](https://www.mozilla.org-US/thunderbird/) email, newsgroup, and feeds client.
 
 ![Thunderbird Screenshot](default-applications/thunderbird.jpg)
 

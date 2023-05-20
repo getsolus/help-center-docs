@@ -11,14 +11,14 @@ Solus is a big undertaking, and as such there are many ways in which your involv
 
 ### Community Guidelines
 
-The Solus Project enforces a set of community guidelines to maintain respect and professionalism, as well as a family-friendly environment. Please view our community guidelines [here](/articles/contributing/community-guidelines/en/).
+The Solus Project enforces a set of community guidelines to maintain respect and professionalism, as well as a family-friendly environment. Please view our community guidelines [here](/docs/user/contributing/community-guidelines).
 
 ### Community Forums
 
 With so many new users joining, there are always more people needing help. A great way to help us out, would be to help out our users on the [Solus Project Forums](https://discuss.getsol.us).
 ### IRC
 
-[Internet Relay Chat](https://en.wikipedia.org/wiki/Internet_Relay_Chat) is a great way to discuss issues and development with the community, and project developers. It's also a great place for getting support, but remember due
+[Internet Relay Chat](https:/.wikipedia.org/wiki/Internet_Relay_Chat) is a great way to discuss issues and development with the community, and project developers. It's also a great place for getting support, but remember due
 to timezone differences there might not always be people present to answer your query immediately. You can access IRC using free clients like Hexchat (preinstalled on Solus) and Quassel! *Note that web IRC clients are not permitted..*
 
 You will find the following Solus channels on the [Libera Chat](https://libera.chat/) IRC network:
@@ -48,12 +48,12 @@ Solus is funded through our [Open Collective](https://opencollective.com/getsolu
 
 ## Improving Documentation
 
-Our Help Center improves when the documentation improves. If there are articles that you think would be valuable to add, get involved by submitting pull requests to our [Help Center Docs](https://github.com/solus-project/help-center-docs) repo!
+Our Help Center improves when the documentation improves. If there are docs that you think would be valuable to add, get involved by submitting pull requests to our [Help Center Docs](https://github.com/solus-project/help-center-docs) repo!
 
 ## Packaging
 
 There may be software you wish to have on your system that is currently not available in the repository. While you are more than welcome to submit a bug and wait for someone else to package the software you want, you can also improve
-and contribute to the community by packaging software. If you're interested in learning to package software, feel free to visit our documentation [here](/articles/packaging/).
+and contribute to the community by packaging software. If you're interested in learning to package software, feel free to visit our documentation [here](/docs/packaging/).
 
 ## Report Bugs
 
