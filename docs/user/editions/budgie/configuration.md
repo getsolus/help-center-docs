@@ -108,7 +108,7 @@ Find the Keyboard Layout Indicator entry and select it. Click the `+` button at 
 
 ### IBus
 
-Budgie comes with IBus ready to go straight out of the box. If you need an additional IBus IME see: [IBus](/software/localization/ibus/)
+Budgie comes with IBus ready to go straight out of the box. If you need an additional IBus IME see: [IBus](/docs/user/software/localization/ibus/)
 
 You will now be able to switch between your keyboard layouts by using the keyboard shortcut `Super + Space` or by using the Keyboard Layout Indicator applet.
 

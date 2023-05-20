@@ -42,7 +42,7 @@ To run database recovery, run `sudo eopkg rdb` in the terminal and then updates 
 
 ### Reverting updates
 
-If booting into the previous kernel doesn't solve the issue, there may be an issue with the package updates. It is possible to [revert the updates](/quick-start/package-management/history-and-rollback/) (this would also confirm that the issue is in the selected updates).
+If booting into the previous kernel doesn't solve the issue, there may be an issue with the package updates. It is possible to [revert the updates](/docs/user/quick-start/package-management/history-and-rollback/) (this would also confirm that the issue is in the selected updates).
 
 ## Boot Failure
 

@@ -102,7 +102,7 @@ In the Command box, you will need to write `ibus-daemon --xim`.  If you wish, yo
 
 ![MATE Add IBus Startup Entry](configuration/mate-ibus-add-startup.jpg)
 
-If you need an additional IBus IME for your language see: [IBus](/software/localization/ibus/)
+If you need an additional IBus IME for your language see: [IBus](/docs/user/software/localization/ibus/)
 
 Finish by closing the IBus Preferences window. You can now switch between your layouts by using the keyboard shortcut `Super + Space`.
 

@@ -12,7 +12,7 @@ Since Solus 4.4 secure boot is now supported. When you first boot the ISO, and, 
 
 ## Enrolling the Solus Certificate
 
-After [booting](../../installation/#boot-the-media) the ISO from USB/DVD and, if Secure Boot is enabled in your device's UEFI firmware. A warning will appear concerning a secure boot violation, press `Enter` on your keyboard to continue.
+After [booting](/docs/user/quick-start/installation/#boot-the-media) the ISO from USB/DVD and, if Secure Boot is enabled in your device's UEFI firmware. A warning will appear concerning a secure boot violation, press `Enter` on your keyboard to continue.
 
 ![Secure Boot violation](1-secure-boot-violation.png)
 

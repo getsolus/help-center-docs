@@ -96,7 +96,7 @@ If you wish to use multiple keyboard layouts, you can switch between them by usi
 
 ### IBus
 
-For ease of use, GNOME has IBus up and running by default. If you need an additional IBus IME see: [IBus](/software/localization/ibus/)
+For ease of use, GNOME has IBus up and running by default. If you need an additional IBus IME see: [IBus](/docs/user/software/localization/ibus/)
 
 You can now switch between your layouts by using the keyboard shortcut `Super + Space` or by clicking on the keyboard layout icon shown in the system tray.
 

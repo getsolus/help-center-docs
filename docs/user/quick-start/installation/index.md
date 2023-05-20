@@ -234,7 +234,7 @@ diskutil eject /dev/IDENTIFIER
 
 ---
 
-# Boot the Media
+## Boot the Media
 
 Now it is time to restart your computer to boot the DVD or USB. Most computers will automatically boot from DVDs and USB, however if you experience issues booting the media, you may need to select to boot from DVD or USB.
 

@@ -13,27 +13,27 @@ Solus is committed to helping our users get the most out of their systems. The H
 
 With that in mind, the Help Center has been broken up into several sections to help better organize the docs within:
 
-**[Quick Start](quick-start/)**
+**[Quick Start](/docs/user/quick-start/)**
 
 If you've never used Solus before, this section will set you on the right track. It contains docs related to installing Solus, software package management, the boot process, and troubleshooting all of the above.
 
 
-**[Editions](editions/)**
+**[Editions](/docs/user/editions/)**
 
 Solus comes in multiple Editions for different Desktop Environments. The purpose of this section is to introduce you to those desktops, walk you through common configuration tasks, and provides useful tips and tricks.
 
 
-**[Hardware](hardware/)**
+**[Hardware](/docs/user/hardware/)**
 
 For the most part, Solus will work with the majority of hardware out-of-the-box. But there are always exceptions. The docs in this section are focused on those exceptions and how to get the most out of your hardware.
 
 
-**[Software](software/)**
+**[Software](/docs/user/software/)**
 
 We believe that Solus is for everyone. Each installation comes with a sane set of default applications for the majority of people, but everyone uses Solus for their own reasons. This section is intended to help you install other software to better suit your needs.
 
 
-**[Getting Involved](contributing/)**
+**[Getting Involved](/docs/user/contributing/)**
 
 Solus is not a commercial project. It is built and maintained by volunteers who use Solus every day and have a passion for making it better. Whatever your skill-level or knowledge about Linux and Solus, this section will show you how to contribute to Solus.
 

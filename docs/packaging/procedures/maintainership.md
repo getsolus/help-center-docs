@@ -34,7 +34,7 @@ Maintainers are free to [update a package](/docs/packaging/updating-an-existing-
 
 ### Non-maintainers
 
-If a package is actively maintained, modifications should not occur and the individual should exercise patience when it comes to the updating of software. In some cases, a maintainer may intentionally be holding back a package, or has simply not updated yet. If pertinent, the individual should file a [package update request](/docs/packaging/request-a-package-update). Alternatively, the individual can reach the maintainers or the Core Team on IRC and ask permission to update the package. It is also possible to submit a patch and attach a message to it clarifying the intention of updating the package, although this is a special case reserved to e.g. security updates and the patch is likely to be rejected.
+If a package is actively maintained, modifications should not occur and the individual should exercise patience when it comes to the updating of software. In some cases, a maintainer may intentionally be holding back a package, or has simply not updated yet. If pertinent, the individual should file a [package update request](/docs/packaging/procedures/request-a-package-update). Alternatively, the individual can reach the maintainers or the Core Team on IRC and ask permission to update the package. It is also possible to submit a patch and attach a message to it clarifying the intention of updating the package, although this is a special case reserved to e.g. security updates and the patch is likely to be rejected.
 
 ## Template
 
@@ -43,7 +43,7 @@ Presented here is the `MAINTAINERS.md` file. This file must be provided verbatim
 The contact information section is a YAML list. If needed, more elements may be added, each per maintainer. Do not edit the file in any other way, including spacing, except *Name*, *Surname* and *REPLACEME* placeholders.
 
 ```
-This file is used to indicate responsibility for the maintenance of this package. Individuals on this list should be the sole modifiers of the package, excluding cases where the Solus Team may need to perform necessary rebuilds, upgrades, or security fixes. This list should not be used for any direct contact usage. If you believe this package requires a package update, follow documentation from https://getsol.us/docs/packaging/request-a-package-update. In the event this package no longer becomes sufficiently maintained, Core Team reserves the right to request a new maintainer or remove this package from the repository.
+This file is used to indicate responsibility for the maintenance of this package. Individuals on this list should be the sole modifiers of the package, excluding cases where the Solus Team may need to perform necessary rebuilds, upgrades, or security fixes. This list should not be used for any direct contact usage. If you believe this package requires a package update, follow documentation from https://getsol.us/docs/packaging/procedures/request-a-package-update. In the event this package no longer becomes sufficiently maintained, Core Team reserves the right to request a new maintainer or remove this package from the repository.
 
 - Name Surname
   - Matrix: REPLACEME

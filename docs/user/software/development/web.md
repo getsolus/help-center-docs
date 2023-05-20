@@ -18,7 +18,7 @@ Remember that Solus is not a server operating system: any usage outside local te
 
 ### Installation
 
-caddy is available in the `caddy` package. It can be installed from the [Software Center](/quick-start/installing-and-updating-software) or via terminal:
+caddy is available in the `caddy` package. It can be installed from the [Software Center](/docs/user/quick-start/installing-and-updating-software) or via terminal:
 
 ``` bash
 sudo eopkg install caddy
@@ -113,7 +113,7 @@ Remember that Solus is not a server operating system: any usage outside the loca
 
 ### Installation
 
-nginx is available in the `nginx` package. It can be installed from the [Software Center](/quick-start/installing-and-updating-software) or via terminal:
+nginx is available in the `nginx` package. It can be installed from the [Software Center](/docs/user/quick-start/installing-and-updating-software) or via terminal:
 
 ```bash
 sudo eopkg install nginx
@@ -148,4 +148,4 @@ Vagrant is a tool for building complete development environments. You can use pr
 
 - **Docker:** You can use Docker as a provider for Vagrant. You can install Docker via the `docker` package.
 
-- **VirtualBox:** You can use VirtualBox as a provider by following the "Solus As Host" instructions [here](/software/virtualization/virtualbox#solus-as-host).
+- **VirtualBox:** You can use VirtualBox as a provider by following the "Solus As Host" instructions [here](/docs/user/software/virtualization/virtualbox#solus-as-host).

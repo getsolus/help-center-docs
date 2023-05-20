@@ -18,6 +18,6 @@ Users should prefer the `rustup` way, since it gives the freedom to install any 
 
 The `rust` package, in fact, is present in the Solus repository for building packages that depend on it and it is not intended to be used by the final user, although it is possible and supported. Users that want to use the `rust` package for their projects will be limited to the targets and tools that Solus needs to support, namely x86_64 and i686 Linux targets and `cargo`. On the other hand, the `rust` package is ready to use after its installation with no extra configurations.
 
-Either way, it is also recommended to install our `system.devel` component, which is typically required for compiling. See our documentation for it [here](/software/development/base-development-tools).
+Either way, it is also recommended to install our `system.devel` component, which is typically required for compiling. See our documentation for it [here](/docs/user/software/development).
 
 As a final note, it is possible to [configure](https://rust-lang.github.io/rustup/installation/package-managers.html) `rustup` to use the system toolchain. This setup is **discouraged** unless aimed at developing applications targeting Solus itself.
