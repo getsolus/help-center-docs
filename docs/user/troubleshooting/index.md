@@ -42,7 +42,7 @@ To run database recovery, run `sudo eopkg rdb` in the terminal and then updates 
 
 ### Reverting updates
 
-If booting into the previous kernel doesn't solve the issue, there may be an issue with the package updates. It is possible to [revert the updates](/docs/user/quick-start/package-management/history-and-rollback/) (this would also confirm that the issue is in the selected updates).
+If booting into the previous kernel doesn't solve the issue, there may be an issue with the package updates. It is possible to [revert the updates](/docs/user/package-management/history-and-rollback) (this would also confirm that the issue is in the selected updates).
 
 ## Boot Failure
 
@@ -62,15 +62,15 @@ eopkg info linux-current | head -n2; uname -a
 
 If the kernel version and release don't match from lines 2 and 3 of the output, then you aren't booting into the latest kernel and this is the likely cause of X not loading (particularly if you just installed the drivers). A couple of common reasons are:
 
- - On a grub machine, a common cause for not booting the latest kernel is due to Solus not being the boot loader on the MBR. Make sure you are booting via the Solus boot loader (if possible), or update grub on the distro that own the boot loader, see [Legacy/BIOS installation](/docs/user/troubleshooting/installation-issues#legacy-bios-installation).
+ - On a grub machine, a common cause for not booting the latest kernel is due to Solus not being the boot loader on the MBR. Make sure you are booting via the Solus boot loader (if possible), or update grub on the distro that own the boot loader, see [Legacy/BIOS installation](/docs/user/troubleshooting/installation#legacybios-installation).
 
  - Another possibility is that the `ESP` has run out of space so the kernel cannot be copied over to it. You can debug why this isn't happening via `sudo CBM_DEBUG=1 clr-boot-manager update`. This will output all information on the process, where it may be failing, or that it is working correctly.
 
-If these two steps fail, you can't revert the installation of the drivers via [History and Rollback](/docs/user/quick-start/package-management/history-and-rollback)
+If these two steps fail, you can't revert the installation of the drivers via [History and Rollback](/docs/user/package-management/history-and-rollback)
 
 ### No Solus boot loader
 
-If the Solus boot loader is not functioning (this has been known to be broken by the odd update of a certain OS), the boot loader can be recreated via [Boot Rescue](/quick-start/troubleshooting/boot/)
+If the Solus boot loader is not functioning (this has been known to be broken by the odd update of a certain OS), the boot loader can be recreated via [Boot Rescue](/docs/user/troubleshooting/boot-rescue)
 
 ## Long boot time
 

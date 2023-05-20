@@ -18,7 +18,7 @@ Remember that Solus is not a server operating system: any usage outside local te
 
 ### Installation
 
-caddy is available in the `caddy` package. It can be installed from the [Software Center](/docs/user/quick-start/installing-and-updating-software) or via terminal:
+caddy is available in the `caddy` package. It can be installed from the [Software Center](/docs/user/package-management/basics#installing-software) or via terminal:
 
 ``` bash
 sudo eopkg install caddy
@@ -113,7 +113,7 @@ Remember that Solus is not a server operating system: any usage outside the loca
 
 ### Installation
 
-nginx is available in the `nginx` package. It can be installed from the [Software Center](/docs/user/quick-start/installing-and-updating-software) or via terminal:
+nginx is available in the `nginx` package. It can be installed from the [Software Center](/docs/user/package-management/basics#installing-software) or via terminal:
 
 ```bash
 sudo eopkg install nginx

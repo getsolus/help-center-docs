@@ -13,12 +13,12 @@ Solus is committed to helping our users get the most out of their systems. The H
 
 With that in mind, the Help Center has been broken up into several sections to help better organize the docs within:
 
-**[Quick Start](/docs/user/quick-start/)**
+**[Quick Start](/docs/category/quick-start)**
 
 If you've never used Solus before, this section will set you on the right track. It contains docs related to installing Solus, software package management, the boot process, and troubleshooting all of the above.
 
 
-**[Editions](/docs/user/editions/)**
+**[Editions](/docs/category/editions/)**
 
 Solus comes in multiple Editions for different Desktop Environments. The purpose of this section is to introduce you to those desktops, walk you through common configuration tasks, and provides useful tips and tricks.
 
@@ -28,7 +28,7 @@ Solus comes in multiple Editions for different Desktop Environments. The purpose
 For the most part, Solus will work with the majority of hardware out-of-the-box. But there are always exceptions. The docs in this section are focused on those exceptions and how to get the most out of your hardware.
 
 
-**[Software](/docs/user/software/)**
+**[Software](/docs/category/software)**
 
 We believe that Solus is for everyone. Each installation comes with a sane set of default applications for the majority of people, but everyone uses Solus for their own reasons. This section is intended to help you install other software to better suit your needs.
 
@@ -36,11 +36,6 @@ We believe that Solus is for everyone. Each installation comes with a sane set o
 **[Getting Involved](/docs/user/contributing/)**
 
 Solus is not a commercial project. It is built and maintained by volunteers who use Solus every day and have a passion for making it better. Whatever your skill-level or knowledge about Linux and Solus, this section will show you how to contribute to Solus.
-
-
-**[Release Status](status/)**
-
-For each new Release of Solus, we try our best to provide our users with the latest and greatest software. Solus is a rolling release, so regular updates are all you need to take advantage of the newest software. A Release focuses on getting you up-to-date from a new install and providing compatibility with newer hardware. This page provides a quick overview of what's included in the latest release.
 
 ## Additional Support
 
