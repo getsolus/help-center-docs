@@ -10,7 +10,7 @@ date: 2022-12-16
 
 If you are wanting to compile software under Solus, we recommend installing our system.devel component by running the following:
 
-``` bash
+```bash
 sudo eopkg install -c system.devel
 ```
 

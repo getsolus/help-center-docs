@@ -45,19 +45,19 @@ If you use LUKS-based encryption, the process will involve decrypting your LUKS 
 
 Your lsblk output should be similar to the one listed below:
 
-``` bash
+```bash
 NAME                   MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINT
 loop0                    7:0    0   1.3G  1 loop  /run/initramfs/squashfs
 loop1                    7:1    0   6.2G  1 loop  /run/rootfsbase
-loop2                    7:2    0   6.2G  1 loop  
-└─live-base            253:0    0   6.2G  1 dm    
-sda                      8:0    0 238.5G  0 disk  
-├─sda1                   8:1    0 488.3M  0 part  
-└─sda2                   8:2    0   238G  0 part  
-  └─decrypted          253:1    0   238G  0 crypt 
-    ├─SolusSystem-Swap 253:2    0   3.7G  0 lvm   
-    └─SolusSystem-Root 253:3    0 234.3G  0 lvm   
-sdb                      8:16   1   7.3G  0 disk  
+loop2                    7:2    0   6.2G  1 loop
+└─live-base            253:0    0   6.2G  1 dm
+sda                      8:0    0 238.5G  0 disk
+├─sda1                   8:1    0 488.3M  0 part
+└─sda2                   8:2    0   238G  0 part
+  └─decrypted          253:1    0   238G  0 crypt
+    ├─SolusSystem-Swap 253:2    0   3.7G  0 lvm
+    └─SolusSystem-Root 253:3    0 234.3G  0 lvm
+sdb                      8:16   1   7.3G  0 disk
 ├─sdb1                   8:17   1   1.4G  0 part  /run/initramfs/live
 └─sdb2                   8:18   1    40M  0 part
 ```
@@ -72,7 +72,7 @@ fdisk -o Device,Size,Type -l /dev/sdX
 
 Your output may look something similar to:
 
-``` bash
+```bash
 Device       Size Type
 /dev/sda1    512M EFI System
 /dev/sda2  111.3G Linux filesystem
@@ -82,7 +82,7 @@ Notice we have `/dev/sda1` as the Device with the `EFI System` type and roughly 
 
 With our ESP device known, let's go ahead and mount it, replacing `sdX#` in the case below with our partition.
 
-``` bash
+```bash
 mount /dev/sdX# /target/boot
 ```
 
@@ -92,8 +92,7 @@ To access your system and perform boot rescue, you will need to mount specific d
 
 First run the following commands:
 
-
-``` bash
+```bash
 mount --types proc /proc /target/proc
 mount --rbind /dev /target/dev
 mount --rbind /sys /target/sys
@@ -139,13 +138,13 @@ If you are still chrooted you have to exit the chroot environment by pressing `C
 
 Then proceed with unmounting the filesystem.
 
-``` bash
+```bash
 umount -R /target
 ```
 
 In case of having a LUKS-based encryption you'll have to deactivate your logical volumes plus volume groups and then close your LUKS partition.
 
-``` bash
+```bash
 lvchange -a n /dev/SolusSystem/Swap # `-a n` means `active: no`
 lvchange -a n /dev/SolusSystem/Root
 vgchange -a n SolusSystem

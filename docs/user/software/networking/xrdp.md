@@ -33,7 +33,7 @@ allowed_users=anybody
 
 Please note that xrdp does NOT run on system boot by default. It needs to be manually started/configured to start automatically:
 
-``` bash
+```bash
 # Start xrdp manually
 sudo systemctl start xrdp
 

@@ -20,7 +20,7 @@ Remember that Solus is not a server operating system: any usage outside local te
 
 caddy is available in the `caddy` package. It can be installed from the [Software Center](/docs/user/package-management/basics#installing-software) or via terminal:
 
-``` bash
+```bash
 sudo eopkg install caddy
 ```
 
@@ -36,7 +36,7 @@ caddy can use any valid configuration by reloading it via the cli. For automatic
 
 Basic caddy management is done via `systemd` and the cli, using the following commands:
 
-``` bash
+```bash
 sudo systemctl enable --now caddy # To enable nginx on startup and run it immediately.
 caddy reload --config /etc/caddy/Caddyfile # To reload caddy with an specified configuration.
 sudo systemctl stop caddy   # To stop caddy.
@@ -52,7 +52,7 @@ Solus provides httpd (otherwise referred to as Apache) web server for web develo
 
 httpd can be installed either from the Software Center or via terminal:
 
-``` bash
+```bash
 sudo eopkg install httpd
 ```
 
@@ -60,9 +60,9 @@ sudo eopkg install httpd
 
 #### Configuration and DocumentRoot
 
-Unlike most other operating systems, the httpd provided in Solus is [stateless](https://clearlinux.org/features/stateless), enabling us to provide out-of-the-box vendor configuration via `/usr/share/defaults/httpd/`, while still enabling the system administrator (*or a user with the appropriate permissions*) to override the vendor configuration via the system-wide configuration location, `/etc`.
+Unlike most other operating systems, the httpd provided in Solus is [stateless](https://clearlinux.org/features/stateless), enabling us to provide out-of-the-box vendor configuration via `/usr/share/defaults/httpd/`, while still enabling the system administrator (_or a user with the appropriate permissions_) to override the vendor configuration via the system-wide configuration location, `/etc`.
 
-Therefore, to make modifications to httpd's configuration, you must first create the directories `/etc/httpd/conf.d/` and create your own *.conf files, which will override the vendor-provided configuration files. 
+Therefore, to make modifications to httpd's configuration, you must first create the directories `/etc/httpd/conf.d/` and create your own \*.conf files, which will override the vendor-provided configuration files.
 
 **Note:** Modification of the **vendor** configuration files may result in your changes being overwritten during the next update to httpd.
 
@@ -72,7 +72,7 @@ By default, httpd's DocumentRoot is set to `/var/www/`, thus files you desire to
 
 To get PHP working, install it from the Software Center or via terminal:
 
-``` bash
+```bash
 sudo eopkg install php
 ```
 
@@ -99,7 +99,7 @@ sudo systemctl restart httpd && sudo systemctl restart php-fpm
 
 Managing httpd is done via systemd, using the following commands:
 
-``` bash
+```bash
 sudo systemctl enable httpd # Enable on startup
 sudo systemctl start httpd # Start the web server
 sudo systemctl stop httpd # Stop the web server

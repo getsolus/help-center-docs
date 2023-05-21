@@ -13,10 +13,10 @@ Samba is the standard Windows interoperability suite of programs for Linux and U
 To enable convenient file-sharing on Solus, we maintain a Solus-specific Samba configuration that out-of-the-box:
 
 - Supports Samba usershare functionality
-- Enables sharing of *$HOME* folders (manual user account activation needed)
+- Enables sharing of _$HOME_ folders (manual user account activation needed)
 - Is set up as a standalone server using the SMB2.0.2 protocol and up (>= Windows Vista/Server 2008)
-- Advertises itself via *Avahi* aka *Apple Bonjour* / *mDNS* / *zeroconf* for macOS compatibility
-- Advertises itself via *wsdd* aka *Web Services Discovery Daemon* for Windows 7+ compatibility
+- Advertises itself via _Avahi_ aka _Apple Bonjour_ / _mDNS_ / _zeroconf_ for macOS compatibility
+- Advertises itself via _wsdd_ aka _Web Services Discovery Daemon_ for Windows 7+ compatibility
 - Disables sharing of printers via Samba (use IPP via CUPS instead)
 - Allows access only from IPv4 and IPv6 private and link-local (non-internet-routable) addresses
 
@@ -30,7 +30,7 @@ As of Samba 4.11.x, the SMB1/CIFS protocol is officially deprecated upstream.
 
 Please note that Samba does NOT run on system boot by default. It needs to be manually started/configured to start automatically:
 
-``` bash
+```bash
 # Start Samba manually
 sudo systemctl start smb
 
@@ -52,16 +52,16 @@ sudo systemctl disable --now smb
 
 ### Enabling Windows 7+ network discovery support
 
-The Web Services Discovery protocol is used by Windows 7+ clients to discover shares on other computers.  Solus now includes the *wsdd* service which provides support for the Web Services Discovery protocol.
+The Web Services Discovery protocol is used by Windows 7+ clients to discover shares on other computers. Solus now includes the _wsdd_ service which provides support for the Web Services Discovery protocol.
 
 When restarting wsdd, it may be necessary to also restart Samba.
 
-``` bash
+```bash
 # Start wsdd manually (depends on the smb service)
 sudo systemctl start wsdd
 
 # Configure wsdd to start automatically on each boot and immediately start the service
-sudo systemctl enable --now wsdd 
+sudo systemctl enable --now wsdd
 
 # Check whether wsdd is running
 sudo systemctl status wsdd
@@ -76,7 +76,7 @@ sudo systemctl stop wsdd
 sudo systemctl disable --now wsdd
 ```
 
-For more details on managing services on Solus with *systemctl*, see `man systemctl` which is part of the systemd system and service manager.
+For more details on managing services on Solus with _systemctl_, see `man systemctl` which is part of the systemd system and service manager.
 
 ### Accessing Samba via IPv6
 
@@ -91,11 +91,11 @@ $ ip addr
     link/ether 14:da:e9:10:f9:c7 brd ff:ff:ff:ff:ff:ff
     inet 192.168.147.233/24 brd 192.168.147.255 scope global dynamic noprefixroute enp2s0
        valid_lft 5066sec preferred_lft 5066sec
-    inet6 fe80::d555:a50f:1aea:c944/64 scope link noprefixroute 
+    inet6 fe80::d555:a50f:1aea:c944/64 scope link noprefixroute
        valid_lft forever preferred_lft forever
 ```
 
-In the above example, the name of the relevant network device is `enp2s0`.  Note how the line starting with `inet6` contains an IPv6 address which begins with fe80:: and contains `scope link`.
+In the above example, the name of the relevant network device is `enp2s0`. Note how the line starting with `inet6` contains an IPv6 address which begins with fe80:: and contains `scope link`.
 
 Ensure that Samba has been started on the host and then query the running local Samba instance with the following command, using the IPv6 address and interface as show by the output of `ip addr`:
 
@@ -111,9 +111,9 @@ Anonymous login successful
 
         Sharename       Type      Comment
         ---------       ----      -------
-        eopkgs          Disk      
+        eopkgs          Disk
         IPC$            IPC       IPC Service (Samba server (version: 4.10.11, protocol: SMB3_11))
-        Public          Disk      
+        Public          Disk
 fe80::d555:a50f:1aea:c944%enp2s0 is an IPv6 address -- no workgroup available
 ```
 
@@ -121,15 +121,15 @@ Make sure to change the IPv6 address and interface name (`fe80::d555:a50f:1aea:c
 
 ## A brief introduction to the Samba usershare functionality
 
-In order to support user-managed (as opposed to system-managed) shares, Samba provides the so-called *usershare* functionality, where users can define network shares without touching the traditional Samba configuration file.
+In order to support user-managed (as opposed to system-managed) shares, Samba provides the so-called _usershare_ functionality, where users can define network shares without touching the traditional Samba configuration file.
 
 ### GUI - configuring shares via file manager plugins
 
 The default Solus configuration was written with the `nautilus-share` (Budgie/GNOME), `kdenetwork-filesharing` (KDE) and `caja-share` (MATE) file manager plugins in mind. These plugins allow the user to share folders in an easy and convenient way.
 
-All the user needs to do is to install either the `caja-extensions` package (which includes the `caja-share` plugin), the `kdenetwork-filesharing` package or the `nautilus-share` package from the Software Center and enable the relevant Samba services. 
+All the user needs to do is to install either the `caja-extensions` package (which includes the `caja-share` plugin), the `kdenetwork-filesharing` package or the `nautilus-share` package from the Software Center and enable the relevant Samba services.
 
-``` bash
+```bash
 # Budgie/GNOME
 sudo eopkg install nautilus-share
 
@@ -140,14 +140,13 @@ sudo eopkg install kdenetwork-filesharing
 sudo eopkg install caja-extensions
 ```
 
-In order to load the newly installed file manager plugin, the user will need to log out of the current desktop session and log back in to a new desktop session, at which point the plugin in question will be ready for use.  To enable shares from any drive and folder on your System you will need add the following parameter to /etc/samba/smb.conf:
+In order to load the newly installed file manager plugin, the user will need to log out of the current desktop session and log back in to a new desktop session, at which point the plugin in question will be ready for use. To enable shares from any drive and folder on your System you will need add the following parameter to /etc/samba/smb.conf:
 
 ```
 usershare owner only = false
 ```
 
-Afterwards simply right-clicking a folder and clicking *properties* will now show an option to share it, as well as whether to allow Read/Write permissions to your users or guest access.
-
+Afterwards simply right-clicking a folder and clicking _properties_ will now show an option to share it, as well as whether to allow Read/Write permissions to your users or guest access.
 
 ### CLI - using the net usershare command
 
@@ -169,11 +168,11 @@ net usershare info wildcard-sharename
 
 ## Managing Samba authentication for named users
 
-Should the user `some_user` wish to access e.g. the *$HOME* directory via Samba, it is necessary to enable the `some_user` Samba account.
+Should the user `some_user` wish to access e.g. the _$HOME_ directory via Samba, it is necessary to enable the `some_user` Samba account.
 
-Note that the `some_user` Samba account is separate from the `some_user` Linux user account, but they share the same *$HOME* directory.
+Note that the `some_user` Samba account is separate from the `some_user` Linux user account, but they share the same _$HOME_ directory.
 
-``` bash
+```bash
 # Add the some_user account to the Samba login db
 sudo smbpasswd -a some_user
 
@@ -200,24 +199,24 @@ The Samba log files live in the `/var/log/samba/` directory.
 
 ## Adding custom configuration parameters via `/etc/samba/smb.conf`
 
-**CAUTION:** *From this point on, it is assumed that the user is familiar with the Samba documentation, including `man smb.conf`, and that the user has a basic understanding of Linux filesystem permissions.*
+**CAUTION:** _From this point on, it is assumed that the user is familiar with the Samba documentation, including `man smb.conf`, and that the user has a basic understanding of Linux filesystem permissions._
 
 The default Solus-managed configuration (which lives in `/usr/share/defaults/samba/smb.conf` and will be overwritten on each Samba package update) is written such that it will attempt to include any configuration parameters present in `/etc/samba/smb.conf`.
-  
-Hence, any persistent user-managed parameters should be added to `/etc/samba/smb.conf` which will *never* be overwritten by the system package manager.
+
+Hence, any persistent user-managed parameters should be added to `/etc/samba/smb.conf` which will _never_ be overwritten by the system package manager.
 
 In addition, the Solus-controlled Samba configuration is written such that it is possible to override its default parameters simply by assigning a new value to the parameter in question in `/etc/samba/smb.conf`. From a technical perspective, any parameters added without a `[shared resource]` header will considered part of the `[global]` configuration section.
 
-This way, simply deleting or renaming  `/etc/samba/smb.conf` and restarting Samba with `sudo systemctl restart smb` will reset the configuration to the known working default Solus configuration.
+This way, simply deleting or renaming `/etc/samba/smb.conf` and restarting Samba with `sudo systemctl restart smb` will reset the configuration to the known working default Solus configuration.
 
-### Example -- anonymous, read-write share outside of *$HOME*
+### Example -- anonymous, read-write share outside of _$HOME_
 
-``` ini
+```ini
 # Contents of /etc/samba/smb.conf:
 #
 # If /etc/samba/smb.conf exists, it is automatically loaded by the Solus-
-# controlled default config residing in /usr/share/defaults/samba/smb.conf 
-# 
+# controlled default config residing in /usr/share/defaults/samba/smb.conf
+#
 # The following configuration creates a "//servername/someshare" share where
 # anonymous users have read and write access.
 #
@@ -234,14 +233,14 @@ read only = No
 # This is an example of how to limit access to the share to known IPs
 ;hosts deny = ALL
 ;hosts allow = 127.0.0.1 192.168.1.0/24
-# share config end   
+# share config end
 ```
 
 In the above example, it is assumed that the user has chosen a suitable method for making `/mnt/someshare` writeable by guest users.
 
-After adding a `[someshare]` section like in the above example, run `sudo testparm` to check that the newly included share does not contain syntax errors. Check out `man testparm` for more information about the *testparm* utility.
+After adding a `[someshare]` section like in the above example, run `sudo testparm` to check that the newly included share does not contain syntax errors. Check out `man testparm` for more information about the _testparm_ utility.
 
-If *testparm* didn't spot any problems, restart Samba with `sudo systemctl restart smb`, which will activate the new configuration.
+If _testparm_ didn't spot any problems, restart Samba with `sudo systemctl restart smb`, which will activate the new configuration.
 
 ### Links to the official Samba documentation
 
@@ -256,11 +255,11 @@ The default Solus Samba configuration is patterned on the above.
 
 Full manual control of Samba can be achieved by completely bypassing the default Solus Samba configuration.
 
-In the *smbd* manual page (`man 8 smbd`), it is shown how the compiled-in default config file can be overridden by specifying the `--configfile=<somepath>` flag during startup.
+In the _smbd_ manual page (`man 8 smbd`), it is shown how the compiled-in default config file can be overridden by specifying the `--configfile=<somepath>` flag during startup.
 
 To use the traditional `/etc/samba/smb.conf` configuration file exclusively (thus bypassing the Solus configuration), edit the `/etc/sysconfig/samba` file to look like so:
 
-``` bash
+```bash
 ## Path:           Network/Samba
 ## Description:    Samba process options
 ## Type:           string

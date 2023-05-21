@@ -40,7 +40,7 @@ If a package is actively maintained, modifications should not occur and the indi
 
 Presented here is the `MAINTAINERS.md` file. This file must be provided verbatim alongside the other patch contents, and filled in with the maintainers' personal information. An Matrix contact is optional but recommended, but an e-mail address is mandatory. Similar to the `.solus/packager` file used for packaging, the maintainers listed in `MAINTAINERS.md` must use their real first and last name(s) for accountability purposes.
 
-The contact information section is a YAML list. If needed, more elements may be added, each per maintainer. Do not edit the file in any other way, including spacing, except *Name*, *Surname* and *REPLACEME* placeholders.
+The contact information section is a YAML list. If needed, more elements may be added, each per maintainer. Do not edit the file in any other way, including spacing, except _Name_, _Surname_ and _REPLACEME_ placeholders.
 
 ```
 This file is used to indicate responsibility for the maintenance of this package. Individuals on this list should be the sole modifiers of the package, excluding cases where the Solus Team may need to perform necessary rebuilds, upgrades, or security fixes. This list should not be used for any direct contact usage. If you believe this package requires a package update, follow documentation from https://getsol.us/docs/packaging/procedures/request-a-package-update. In the event this package no longer becomes sufficiently maintained, Core Team reserves the right to request a new maintainer or remove this package from the repository.

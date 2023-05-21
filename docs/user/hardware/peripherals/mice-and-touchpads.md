@@ -30,13 +30,13 @@ These instructions describe how to use the the synaptics driver instead of the d
 
 To get started open up a terminal and install the synaptics driver.
 
-``` bash
+```bash
 sudo eopkg it xorg-driver-input-synaptics
 ```
 
 Then, copy the default synaptics config file to the `/etc/` directory.
 
-``` bash
+```bash
 sudo cp /usr/share/X11/xorg.conf.d/50-synaptics.conf /etc/X11/xorg.conf.d/90-synaptics.conf
 ```
 
@@ -44,7 +44,7 @@ sudo cp /usr/share/X11/xorg.conf.d/50-synaptics.conf /etc/X11/xorg.conf.d/90-syn
 
 Reboot your machine then verify the synaptics driver is in use:
 
-``` bash
+```bash
 cat /var/log/Xorg.0.log | grep "Using input driver 'synaptics' for"
 ```
 
@@ -55,7 +55,6 @@ If it returns a result, then success! The synaptics driver is in use instead of 
 If you wish to switch back to using libinput:
 
 ```
-sudo rm /etc/X11/xorg.conf.d/90-synaptics.conf 
-sudo eopkg rm xorg-driver-input-synaptics 
+sudo rm /etc/X11/xorg.conf.d/90-synaptics.conf
+sudo eopkg rm xorg-driver-input-synaptics
 ```
-

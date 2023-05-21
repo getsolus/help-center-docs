@@ -44,7 +44,7 @@ Please refrain from submitting a patch for the following instances:
 
 In three easy steps, you can set up arcanist for the first time:
 
-``` bash
+```bash
 sudo eopkg it arcanist
 arc set-config default https://dev.getsol.us
 arc install-certificate
@@ -119,7 +119,7 @@ Submission directly to a repository is only possible for maintainers. As a maint
 
 Pushing changes is not possible unless you have maintainer access. The same is also true of `make publish`.
 
-To request maintainer rights for a repository, it is expected that some level of contribution/maintenance has already happened by way of testing/patching, and there is reasonable trust demonstrated to "hand the keys" 
+To request maintainer rights for a repository, it is expected that some level of contribution/maintenance has already happened by way of testing/patching, and there is reasonable trust demonstrated to "hand the keys"
 over to a repository.
 
 Currently, the request mechanism is [contact Solus Staff on Matrix](/docs/user/contributing/getting-involved#matrix-chat)

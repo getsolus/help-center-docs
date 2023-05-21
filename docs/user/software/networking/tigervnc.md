@@ -12,24 +12,25 @@ TigerVNC is a high-performance implementation of the VNC protocol, which allows 
 
 TigerVNC can be installed either from the Software Center or via terminal. The terminal command to run it is:
 
-``` bash
+```bash
 sudo eopkg install tigervnc
 ```
 
-## Usage 
+## Usage
 
 ### Initial setup of vncserver
 
-For the initial setup of vncserver for TigerVNC you have to open a terminal and run: 
+For the initial setup of vncserver for TigerVNC you have to open a terminal and run:
 
-``` bash
+```bash
 vncserver
 ```
+
 While this setup you will be asked for setting up a **password** and if you'd like to setup a **view-only mode**, please do it accordingly your desire.
 
-After the initial setup you have to stop the vncserver process, for this please type inside the terminal 
+After the initial setup you have to stop the vncserver process, for this please type inside the terminal
 
-``` bash
+```bash
 vncserver -kill :1
 ```
 
@@ -39,7 +40,7 @@ Every Desktop needs a different Setup, you find the vncserver config under`$HOME
 
 ### Budgie
 
-``` bash
+```bash
 #!/bin/bash
 
 unset SESSION_MANAGER
@@ -52,7 +53,7 @@ budgie-panel &
 
 ### GNOME
 
-``` bash
+```bash
 #!/bin/bash
 
 unset SESSION_MANAGER
@@ -65,9 +66,10 @@ gnome-settings-daemon &
 metacity &
 nautilus &
 ```
+
 ### MATE
 
-``` bash
+```bash
 #!/bin/bash
 
 unset SESSION_MANAGER

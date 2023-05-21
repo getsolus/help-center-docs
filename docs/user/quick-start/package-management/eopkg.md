@@ -14,13 +14,13 @@ Solus uses the `eopkg` package management system to deliver software to the end-
 
 You can install one or more packages by using:
 
-``` bash
+```bash
 sudo eopkg install packagename
 ```
 
 For example:
 
-``` bash
+```bash
 sudo eopkg install gnome-documents gnome-music
 ```
 
@@ -28,13 +28,13 @@ sudo eopkg install gnome-documents gnome-music
 
 You can reinstall one or more packages by using:
 
-``` bash
+```bash
 sudo eopkg install --reinstall packagename
 ```
 
 For example:
 
-``` bash
+```bash
 sudo eopkg install --reinstall gnome-documents gnome-music
 ```
 
@@ -48,7 +48,7 @@ sudo eopkg remove packagename
 
 For example:
 
-``` bash
+```bash
 sudo eopkg remove gnome-documents gnome-music
 ```
 
@@ -56,13 +56,13 @@ sudo eopkg remove gnome-documents gnome-music
 
 You can get information on software, such as its description, version, installation size, and more, by using
 
-``` bash
+```bash
 sudo eopkg info packagename
 ```
 
 For example:
 
-``` bash
+```bash
 sudo eopkg info gnome-documents
 ```
 
@@ -70,13 +70,13 @@ sudo eopkg info gnome-documents
 
 You can update your system by using:
 
-``` bash
+```bash
 sudo eopkg upgrade
 ```
 
 If you want to **only** update a specific piece of software on your system, you can specify is like below:
 
-``` bash
+```bash
 sudo eopkg upgrade firefox
 ```
 
@@ -84,24 +84,19 @@ sudo eopkg upgrade firefox
 
 You can search the software selection Solus provides by using:
 
-``` bash
+```bash
 sudo eopkg search term
 ```
 
 For example:
 
-``` bash
+```bash
 sudo eopkg search documents
 ```
 
 Notice that you don't need to search for a specific software name, although you can do that. We search summaries and software names by default.
 
-
-
-
 # Advanced
-
-
 
 ## History and Rollback
 
@@ -113,7 +108,7 @@ Our rollback feature allows you to essentially rewind your system's software bac
 
 You can see the history from eopkg by using:
 
-``` bash
+```bash
 sudo eopkg history
 ```
 
@@ -121,13 +116,11 @@ sudo eopkg history
 
 To rollback your system, first use the above history command to check what the transaction / operation number was. Then, we use the following command:
 
-``` bash
+```bash
 sudo eopkg history -t number
 ```
 
 The number, in this case, is the operation before the one you want to change. So if the number was `100`, then you would use `99`.
-
-
 
 ## Repository Management
 
@@ -137,13 +130,13 @@ While Solus currently only provides two repositories, stable (shannon) and unsta
 
 You can add a repository by using:
 
-``` bash
+```bash
 sudo eopkg add-repo Name Url
 ```
 
 For example:
 
-``` bash
+```bash
 sudo eopkg add-repo Example https://example.com/repo/eopkg-index.xml.gz
 ```
 
@@ -153,13 +146,13 @@ sudo eopkg add-repo Example https://example.com/repo/eopkg-index.xml.gz
 
 You can remove a repository by using:
 
-``` bash
+```bash
 sudo eopkg remove-repo Name
 ```
 
 For example:
 
-``` bash
+```bash
 sudo eopkg remove-repo Example
 ```
 
@@ -167,13 +160,13 @@ sudo eopkg remove-repo Example
 
 You can enable a repository for usage, by using:
 
-``` bash
+```bash
 sudo eopkg enable-repo Name
 ```
 
 For example:
 
-``` bash
+```bash
 sudo eopkg enable-repo Example
 ```
 
@@ -181,13 +174,13 @@ sudo eopkg enable-repo Example
 
 You can disable a repository by using:
 
-``` bash
+```bash
 sudo eopkg disable-repo Name
 ```
 
 For example:
 
-``` bash
+```bash
 sudo eopkg disable-repo Example
 ```
 
@@ -195,13 +188,13 @@ sudo eopkg disable-repo Example
 
 You can update the index of a repository by using:
 
-``` bash
+```bash
 sudo eopkg update-repo Name
 ```
 
 For example:
 
-``` bash
+```bash
 sudo eopkg update-repo Example
 ```
 
@@ -211,7 +204,6 @@ sudo eopkg update-repo Example
 
 You can list all the repositories added on your system by using:
 
-``` bash
+```bash
 sudo eopkg list-repo
 ```
-

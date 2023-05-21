@@ -12,9 +12,10 @@ This article covers the installation of OBS Studio as well as the use of third-p
 
 To install OBS Studio, either open up the Software Center and type `obs-studio` into the Search section or run the following command:
 
-``` bash
+```bash
 sudo eopkg install obs-studio
 ```
+
 ## Virtual Camera
 
 OBS includes a virtual webcam device which can be used to send your OBS stream to video conferencing programs. In order to use this on Solus, you must first install from our repository a separate kernel module that is responsible for creating the necessary "loopback" device. There are two versions of this software available in the repository, you must choose the version that corresponds to the kernel you have installed.
@@ -24,13 +25,13 @@ To find out which kernel is installed, run:
 ```bash
 uname -r
 ```
+
 This should return a version which ends in `.current` or `.lts`.
 
 - If you are running the "current" kernel, install `v4l2loopback-current`: `sudo eopkg install v4l2loopback-current`
 - If you are running the "lts" kernel, install `v4l2loopback`: `sudo eopkg install v4l2loopback`
 
 Once v4l2loopback is installed, reboot your computer. Next time you start OBS, it will prompt you for your password to set up v4l2loopback. After that, the virtual camera should be available as a webcam in other programs.
-
 
 ## Plugins
 
@@ -65,7 +66,7 @@ To install Input Overlay, download the input-overlay-vNUM.zip file from their re
 
 Next, we'll install a library necessary to use the Input Overlay plugin, as well as an unzip tool to make the installation process easier. Run the following command:
 
-``` bash
+```bash
 sudo eopkg install libuiohook unzip
 ```
 
@@ -83,7 +84,7 @@ Next let's run the following commands in the Terminal. The commands below will:
 - Create an `input-overlay` folder in `~/.config/obs-studio/plugins` as well as creating the `plugins` folder if needed.
 - Copy over the necessary and recommended folders and files to our input-overlay plugin folder.
 
-``` bash
+```bash
 rm ~/Downloads/input-overlay*.zip
 mv ~/Downloads/input-overlay.v* ~/Downloads/input-overlay
 cd ~/Downloads/input-overlay/presets

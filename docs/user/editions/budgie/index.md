@@ -15,7 +15,7 @@ Budgie is the flagship Edition of Solus. It was originally started by Solus and 
 Here are some links related to this project that you may find helpful:
 
 - [Homepage](https://github.com/BuddiesOfBudgie)
-- [News](https://blog.buddiesofbudgie.org/) 
+- [News](https://blog.buddiesofbudgie.org/)
 - [Support](https://github.com/BuddiesOfBudgie/budgie-desktop/issues)
 
 [Go to Budgie Configuration](configuration)

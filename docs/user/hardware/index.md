@@ -3,6 +3,7 @@ title: Hardware
 summary: Guide to using additional hardware on Solus
 date: 2022-12-18
 ---
+
 # Hardware
 
 ## Preinstalled Drivers

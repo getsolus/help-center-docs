@@ -14,6 +14,4 @@ TODO: Provide a quick guide to these shortcuts like we did for Budgie
 
 TODO: Since Hot Corners aren't easily discoverable, maybe a quick intro to using them
 
-
-
 TODO: I'm sure there are other things that GNOME users can point out

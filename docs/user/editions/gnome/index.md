@@ -8,7 +8,7 @@ date: 2022-12-16
 
 GNOME Shell is provided by default with the GNOME Edition of Solus. They describe it as:
 
-> Provides core interface functions like switching windows, launching applications or see your notifications. It takes advantage of the capabilities of modern graphics hardware and introduces innovative user interface concepts to provide a delightful and easy to use experience. GNOME Shell is the defining technology of the GNOME 3 user experience. 
+> Provides core interface functions like switching windows, launching applications or see your notifications. It takes advantage of the capabilities of modern graphics hardware and introduces innovative user interface concepts to provide a delightful and easy to use experience. GNOME Shell is the defining technology of the GNOME 3 user experience.
 
 Here are some links related to this project that you may find helpful:
 

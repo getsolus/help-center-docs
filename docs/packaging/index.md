@@ -6,20 +6,18 @@ date: 2022-12-16
 
 # Prepare for Packaging
 
-
 ## Setting up Packager file
 
 In order to utilise the build system, you must first set up a configuration file that has your packager details.
 
-This file lives in the `.config/solus` folder of your home directory. You will need to create the `.config/solus` folder as well as the inner `packager` file. Inside the packager file, you need two keys, `Name` and `Email`. This is used when generating the machine 
+This file lives in the `.config/solus` folder of your home directory. You will need to create the `.config/solus` folder as well as the inner `packager` file. Inside the packager file, you need two keys, `Name` and `Email`. This is used when generating the machine
 file so that the packager details are stored within the resulting binary package.
 
-``` ini
+```ini
 [Packager]
 Name=Your Name Here
 Email=your.email@address
 ```
-
 
 ## Installing Development Tools
 
@@ -31,7 +29,7 @@ Namely:
 - `ypkg` the program that actually builds packages
 - `make` used by our build tools for scripting
 
-``` bash
+```bash
 sudo eopkg it -c system.devel
 ```
 
@@ -42,10 +40,9 @@ Additonally, we need a few more tools to carry out the packaging process:
 - `solbuild` is a lightweight container environment for building packages repeatably
 - `solbuild-config-unstable` sets up solbuild for working with the `unstable` repository
 
-``` bash
+```bash
 sudo eopkg it git arcanist solbuild solbuild-config-unstable
 ```
-
 
 ## Setting Up solbuild
 
@@ -54,7 +51,8 @@ The `solbuild` tool must first be initialized with a base image. All builds ther
 ### Initializing solbuild
 
 Next, you need to initialize solbuild via:
-``` bash
+
+```bash
 sudo solbuild init
 ```
 
@@ -66,10 +64,9 @@ It is a good idea to keep the base image updated. It will help reduce build time
 
 To update solbuild, run:
 
-``` bash
+```bash
 sudo solbuild update
 ```
-
 
 ## Setting up common
 
@@ -79,7 +76,7 @@ You need to clone the common repository with git by doing `git clone https://dev
 
 Next you need to set up symlinks. Do this from the same directory you executed the `git` command:
 
-``` bash
+```bash
 ln -sv common/Makefile.common .
 ln -sv common/Makefile.toplevel Makefile
 ln -sv common/Makefile.iso .
@@ -104,11 +101,11 @@ Your folder should look something similar to this:
 
 After setting up common, you can now build the package. Note that build dependencies and such will be installed locally (in the chroot environment).
 
-``` bash
+```bash
 make
 ```
 
 You will be prompted to enter your password by sudo so dependencies may be downloaded and the necessary eopkg files may be generated.
 
-Once you’ve achieved a successful build, the resulting `.eopkg` files will be moved to the current directory, along with the machine file, `pspec_*.xml` (currently `pspec_x86_64.xml`). We recommending checking the contents of your 
+Once you’ve achieved a successful build, the resulting `.eopkg` files will be moved to the current directory, along with the machine file, `pspec_*.xml` (currently `pspec_x86_64.xml`). We recommending checking the contents of your
 generated eopkg file(s) to ensure everything is located in the appropriate locations. You can do this by using `lseopkg file_name.eopkg`.

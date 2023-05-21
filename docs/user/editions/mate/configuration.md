@@ -6,14 +6,11 @@ date: 2022-12-16
 
 # Configuration
 
-
 # System
-
-
 
 ## Date and Time
 
-Using MATE, there are a couple of different ways to change the date and time.  You can right click on the time in the bottom panel and click on "Preferences".
+Using MATE, there are a couple of different ways to change the date and time. You can right click on the time in the bottom panel and click on "Preferences".
 
 ![MATE Date and Time Right-Click Menu](configuration/mate-time-and-date-right-click.jpg)
 
@@ -27,16 +24,15 @@ To change the time, click on "Time Settings" at the bottom of this window.
 
 Once you have the correct time, you can click on "Set System Time".
 
-Alternatively, if you wish to change your timezone, open the Brisk Menu and then click on "Administration" followed by "Time and Date".  Click on "Unlock" and input your user password so that you can alter the time zone.  
+Alternatively, if you wish to change your timezone, open the Brisk Menu and then click on "Administration" followed by "Time and Date". Click on "Unlock" and input your user password so that you can alter the time zone.
 
 ![MATE Timezone Settings](configuration/mate-time-and-date-settings.jpg)
-
 
 ## Default Applications
 
 Using MATE, open the Brisk Menu and click on "Preferences" and then on "Preferred Applications".
 
-In this section you will need to click one of the five tabs at the top to find the category you wish to change.  For most categories, you will need to have installed alternative applications before you can change the default settings.  For instance, if you wish to change the default image viewer from Eye of MATE to GIMP then you must first install GIMP (available in the Software Center).
+In this section you will need to click one of the five tabs at the top to find the category you wish to change. For most categories, you will need to have installed alternative applications before you can change the default settings. For instance, if you wish to change the default image viewer from Eye of MATE to GIMP then you must first install GIMP (available in the Software Center).
 
 ![MATE Preferred Applications](configuration/mate-preferred-applications.jpg)
 
@@ -44,17 +40,15 @@ You can specify default applications for individual file types by right clicking
 
 ![MATE File Context Menu](configuration/mate-open-with-right-click.jpg)
 
-Next, select the application you wish to use and make sure "Remember this application for "your file type" files" is ticked.  Finish by clicking "Open".  In the future, all files with the same file type will open with the same application.
+Next, select the application you wish to use and make sure "Remember this application for "your file type" files" is ticked. Finish by clicking "Open". In the future, all files with the same file type will open with the same application.
 
 ![MATE Application Selection](configuration/mate-open-with-setting.jpg)
-
-
 
 ## Displays
 
 With MATE, open the Brisk Menu and click on "Preferences" and then on "Displays".
 
-This opens the Monitor Preferences window and your display(s) will be represented by 1 or more colored boxes.  Click on the individual display you wish to configure.  You will now be able to select if you wish to set this monitor as the primary display, mirror all displays by turning on "Same image in all monitors", or turn it off.  This window also gives you the ability to change the aspect ratio, rotate the display, and to change the resolution.
+This opens the Monitor Preferences window and your display(s) will be represented by 1 or more colored boxes. Click on the individual display you wish to configure. You will now be able to select if you wish to set this monitor as the primary display, mirror all displays by turning on "Same image in all monitors", or turn it off. This window also gives you the ability to change the aspect ratio, rotate the display, and to change the resolution.
 
 ![MATE Monitor Preferences](configuration/mate-monitor-preferences.jpg)
 
@@ -62,11 +56,9 @@ You can arrange your displays by dragging the colored boxes to your preferred po
 
 ![MATE Monitor Arrangement](configuration/mate-monitor-preferences-dragging.jpg)
 
-Click "Apply" once you are happy with your changes.  If you would like to apply the changes to all the user accounts on your system, click on "Apply system-wide".  You will be shown a message asking if the display looks OK, if it does, click on "Keep This Configuration" within 30 seconds.
+Click "Apply" once you are happy with your changes. If you would like to apply the changes to all the user accounts on your system, click on "Apply system-wide". You will be shown a message asking if the display looks OK, if it does, click on "Keep This Configuration" within 30 seconds.
 
 ![MATE Confirm Monitor Preferences](configuration/mate-monitor-preferences-confirm.jpg)
-
-
 
 ## Keyboard Layout
 
@@ -74,7 +66,7 @@ To change your keyboard layout in MATE, open the Brisk Menu and click on "Prefer
 
 ![MATE Keyboard Preferences](configuration/mate-keyboard-preferences.jpg)
 
-To add a layout, click on the "+ Add..." button. The 2 tabs at the top of the chooser window give you the option to find your layout by country or by language. The preview gives you a graphical representation of each layout.  Once you are happy with your selection, click on "+ Add".
+To add a layout, click on the "+ Add..." button. The 2 tabs at the top of the chooser window give you the option to find your layout by country or by language. The preview gives you a graphical representation of each layout. Once you are happy with your selection, click on "+ Add".
 
 ![MATE Choose Keyboard Layout](configuration/mate-keyboard-choose-layout.jpg)
 
@@ -94,11 +86,11 @@ By default, IBus needs to be started in MATE before it can be used. Open the Bri
 
 ![MATE IBus Starting Daemon](configuration/mate-ibus-starting-daemon.jpg)
 
-If you wish to have the IBus daemon start automatically every time you start Solus MATE, Open the Brisk Menu, click on "Preferences" and then on "Startup Applications".  Under the Startup Programs tab, click on "+ Add".
+If you wish to have the IBus daemon start automatically every time you start Solus MATE, Open the Brisk Menu, click on "Preferences" and then on "Startup Applications". Under the Startup Programs tab, click on "+ Add".
 
 ![MATE Startup Applications](configuration/mate-startup-applications.jpg)
 
-In the Command box, you will need to write `ibus-daemon --xim`.  If you wish, you can also fill in a Name and Comment but these are not compulsory. Once you are happy with your inputs, click the "+ Add" button. IBus will now run each time you boot your computer.
+In the Command box, you will need to write `ibus-daemon --xim`. If you wish, you can also fill in a Name and Comment but these are not compulsory. Once you are happy with your inputs, click the "+ Add" button. IBus will now run each time you boot your computer.
 
 ![MATE Add IBus Startup Entry](configuration/mate-ibus-add-startup.jpg)
 
@@ -112,11 +104,9 @@ Or by left clicking on the keyboard layout icon shown in the system tray and sel
 
 ![MATE Bottom Panel IBus](configuration/mate-bottom-panel-ibus-left-click.jpg)
 
-
-
 ## Mouse and Touchpad
 
-With MATE, open the Brisk Menu and click on "Preferences" and then on "Mouse".  You can toggle between the mouse and touchpad settings using the tabs at the top of the Mouse Preferences window.  Click "Close" once you have finished making changes.
+With MATE, open the Brisk Menu and click on "Preferences" and then on "Mouse". You can toggle between the mouse and touchpad settings using the tabs at the top of the Mouse Preferences window. Click "Close" once you have finished making changes.
 
 ### Mouse
 
@@ -124,11 +114,11 @@ With MATE, open the Brisk Menu and click on "Preferences" and then on "Mouse".  
 
 For mice, you can set:
 
-- Left-handed or right-handed.  This will change your primary button.
+- Left-handed or right-handed. This will change your primary button.
 - Locate the pointer when the Control key is pressed.
 - Mouse speed and sensitivity.
 - Drag and Drop threshold. This is designed to prevent accidental dragging and dropping by setting the distance required to initiate a drag.
-- Double click timeout.  The length of time between 2 mouse clicks for it to register as a double click.
+- Double click timeout. The length of time between 2 mouse clicks for it to register as a double click.
 
 ### Touchpad
 
@@ -144,15 +134,13 @@ For touchpads, you can set:
 - Enabling / disabling "natural scrolling" (reversed scrolling direction).
 - Touchpad speed and sensitivity.
 
-
-
 ## Networking
 
-With MATE, you can manage your network settings by left or right clicking on the network icon in the bottom panel system tray.  A left click will bring up any wireless or wired connections currently available whilst a right click allows you to disable networking, view your current connection information and to create new connections and networks by clicking "Edit Connections...".
+With MATE, you can manage your network settings by left or right clicking on the network icon in the bottom panel system tray. A left click will bring up any wireless or wired connections currently available whilst a right click allows you to disable networking, view your current connection information and to create new connections and networks by clicking "Edit Connections...".
 
 ### Non-Hidden Network
 
-To connect to a network, left click on the network icon in the system tray.  This will show you a selection of the networks currently available and you may need to click on "More networks" to find the one you want.
+To connect to a network, left click on the network icon in the system tray. This will show you a selection of the networks currently available and you may need to click on "More networks" to find the one you want.
 
 ![MATE Networking Applet](configuration/mate-bottom-panel-network-left-click.jpg)
 
@@ -168,13 +156,11 @@ Should you wish to disconnect from a network, left click on the network icon aga
 
 ### Hidden Network
 
-To connect to a hidden network, left click on the network icon in the system tray and then on "Connect to Hidden Wi-Fi Network...".  You will now be asked for the network name and type of security (if any).
+To connect to a hidden network, left click on the network icon in the system tray and then on "Connect to Hidden Wi-Fi Network...". You will now be asked for the network name and type of security (if any).
 
 ![MATE Hidden Network](configuration/mate-network-hidden.jpg)
 
 If the network is found and has a password, you will be prompted to authenticate with the network.
-
-
 
 ## Sound and Sound Devices
 
@@ -184,15 +170,13 @@ To alter the volume in MATE, left click on the speaker icon in the bottom panel 
 
 ### Settings
 
-You can access sound settings, including individual application volume controls, and a simple speaker test by right clicking on the speaker icon in the bottom panel system tray and then clicking on "Sound Preferences".  Alternatively, you can open the Brisk Menu and then click on "Preferences" followed by "Sound".
+You can access sound settings, including individual application volume controls, and a simple speaker test by right clicking on the speaker icon in the bottom panel system tray and then clicking on "Sound Preferences". Alternatively, you can open the Brisk Menu and then click on "Preferences" followed by "Sound".
 
 ![MATE Sound Applet](configuration/mate-bottom-panel-sound-right-click.jpg)
 
 This will open the Sound Preferences window as shown below.
 
 ![MATE Sound Preferences](configuration/mate-sound-preferences.jpg)
-
-
 
 ## Users
 
@@ -202,7 +186,7 @@ To add and remove users with MATE, open the Brisk Menu and click on "Administrat
 
 ### Adding a User
 
-To add a user, click the "+ Add" button underneath the list of users.  You will be asked to input your password before you can make changes.
+To add a user, click the "+ Add" button underneath the list of users. You will be asked to input your password before you can make changes.
 
 ![MATE New User](configuration/mate-create-new-user.jpg)
 
@@ -210,7 +194,7 @@ Fill in the required items and then finish adding the new user by clicking "OK" 
 
 ### Removing a User
 
-To remove a user, open the User Settings window and then click on the user you wish to remove.  Now click on the "- Delete" button underneath the list of users.
+To remove a user, open the User Settings window and then click on the user you wish to remove. Now click on the "- Delete" button underneath the list of users.
 
 ![MATE User List](configuration/mate-multiple-user-settings.jpg)
 
@@ -218,11 +202,7 @@ Upon clicking to remove the user, you will be given the option to keep their fil
 
 ![MATE Keep Files Prompt](configuration/mate-keep-files-prompt.jpg)
 
-
-
 # User Interface
-
-
 
 ## Desktop Background
 
@@ -230,28 +210,25 @@ If you wish to change the MATE desktop background, simply right click anywhere o
 
 ![MATE Background Right Click Menu](configuration/mate-background-right-click.jpg)
 
-Alternatively, open the Brisk Menu and click on "Preferences" and then on "Appearance".  Click on the "Background" tab at the top if it isn't already selected.
+Alternatively, open the Brisk Menu and click on "Preferences" and then on "Appearance". Click on the "Background" tab at the top if it isn't already selected.
 
-In this section, you can choose between Solus wallpapers, solid colors, gradients or using your own pictures by clicking "Add".  After choosing, click "Close".
+In this section, you can choose between Solus wallpapers, solid colors, gradients or using your own pictures by clicking "Add". After choosing, click "Close".
 
 ![MATE Desktop Background Selection](configuration/mate-background-selection.jpg)
 
-
-
 ## Desktop Icons
 
-MATE has desktop icons enabled by default.  If you wish to disable or re-enable them, open the Brisk Menu, click on "Preferences" and then on "MATE Tweak".  You can then toggle them on and off by clicking "Show Desktop Icons" under the Desktop section.
+MATE has desktop icons enabled by default. If you wish to disable or re-enable them, open the Brisk Menu, click on "Preferences" and then on "MATE Tweak". You can then toggle them on and off by clicking "Show Desktop Icons" under the Desktop section.
 
 ![MATE Tweak Tool](configuration/mate-tweak-desktop.jpg)
 
-You may now add things to your Desktop.  This can be done by dragging an item onto the Desktop, right clicking an icon and selecting Copy to / Move to Desktop or by opening the Caja file manager and then moving the files you want to the Desktop folder (as shown in the image below).
+You may now add things to your Desktop. This can be done by dragging an item onto the Desktop, right clicking an icon and selecting Copy to / Move to Desktop or by opening the Caja file manager and then moving the files you want to the Desktop folder (as shown in the image below).
 
 ![MATE Desktop Folder](configuration/caja-desktop-folder.jpg)
 
-
 ## Workspaces
 
-In MATE, workspaces are enabled by default.  You can move between workspaces by using the keyboard shortcuts `Ctrl + Alt + Left` and `Ctrl + Alt + Right`.
+In MATE, workspaces are enabled by default. You can move between workspaces by using the keyboard shortcuts `Ctrl + Alt + Left` and `Ctrl + Alt + Right`.
 
 ![MATE Workspace Switching](configuration/mate-workspace-switching.jpg)
 
@@ -259,34 +236,34 @@ To send an application to a different workspace, right click on the applications
 
 ![MATE Workspace Menu](configuration/mate-workspace-titlebar-right-click.jpg)
 
-One of the easiest ways to view and manage your workspaces is by using the Workspace Switcher.  Right click inside the bottom panel and then click on "+ Add to Panel...".
+One of the easiest ways to view and manage your workspaces is by using the Workspace Switcher. Right click inside the bottom panel and then click on "+ Add to Panel...".
 
 ![MATE Open Panel Configuration](configuration/mate-bottom-panel-right-click.jpg)
 
-Towards the bottom of the list you will find the Workspace Switcher.  Click on it and then finish by clicking "+ Add".
+Towards the bottom of the list you will find the Workspace Switcher. Click on it and then finish by clicking "+ Add".
 
 ![MATE Add Applet to Panel](configuration/mate-workspace-switch-add-to-panel.jpg)
 
-You should now be able to see 4 slightly darker boxes to the left of your MATE system tray in the bottom panel.  The workspace you are currently viewing will be highlighted in blue.
+You should now be able to see 4 slightly darker boxes to the left of your MATE system tray in the bottom panel. The workspace you are currently viewing will be highlighted in blue.
 
 ![MATE Workspace Switcher](configuration/mate-workspace-switcher.jpg)
 
-In addition to using keyboard shortcuts, you will now be able to switch workspaces by clicking on them in the bottom panel.  You can also drag one workspace onto another in the bottom panel which will move the current active application to the new workspace.
+In addition to using keyboard shortcuts, you will now be able to switch workspaces by clicking on them in the bottom panel. You can also drag one workspace onto another in the bottom panel which will move the current active application to the new workspace.
 
 ### Keyboard Shortcuts
 
-MATE provides a variety of keyboard shortcuts for workspaces.  By default, the keyboard shortcuts for switching directly to a certain workspace are disabled.
+MATE provides a variety of keyboard shortcuts for workspaces. By default, the keyboard shortcuts for switching directly to a certain workspace are disabled.
 
-To enable these and to also view all other available shortcuts open the Brisk Menu and click on "Preferences" and then on "Keyboard Shortcuts".  The workspace shortcuts are listed under Windows Management.
+To enable these and to also view all other available shortcuts open the Brisk Menu and click on "Preferences" and then on "Keyboard Shortcuts". The workspace shortcuts are listed under Windows Management.
 
 ![MATE Workspace Keyboard Shortcuts](configuration/mate-workspace-keyboard-shortcuts.jpg)
 
 ### Workspaces Configuration
 
-By default, MATE provides you with 4 workspaces.  If you would like to have more, less or change their names you must first add the Workspace Switcher to your bottom panel, as detailed above.  You'll then be able to right click on the Workspace Switcher and select "Preferences".
+By default, MATE provides you with 4 workspaces. If you would like to have more, less or change their names you must first add the Workspace Switcher to your bottom panel, as detailed above. You'll then be able to right click on the Workspace Switcher and select "Preferences".
 
 ![MATE Open Switcher Preferences](configuration/mate-workspace-switcher-right-click.jpg)
 
-Use the plus and minus icons to add or remove workspaces.  You can rename workspaces by double clicking on the current names and typing in an alternative.  Click "X Close" once you are happy with your changes.
+Use the plus and minus icons to add or remove workspaces. You can rename workspaces by double clicking on the current names and typing in an alternative. Click "X Close" once you are happy with your changes.
 
 ![MATE Workspace Switcher Preferences](configuration/mate-workspace-switcher-preferences.jpg)

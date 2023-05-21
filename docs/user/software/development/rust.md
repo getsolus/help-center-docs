@@ -9,8 +9,9 @@ date: 2022-12-16
 There are two ways to install Rust. This article explains how they differ and which one should be used, according to users' needs.
 
 Rust can be obtained by:
- - Installing the `rustup` package, then installing any Rust target and/or tool using `rustup` itself
- - Installing the `rust` package
+
+- Installing the `rustup` package, then installing any Rust target and/or tool using `rustup` itself
+- Installing the `rust` package
 
 Users should prefer the `rustup` way, since it gives the freedom to install any tools and targets, including nightly versions and debugging utilities, although it may require editing the `PATH` variable depending on your shell setup. According to the official Rust [installation guide](https://www.rust-lang.org/tools/install):
 

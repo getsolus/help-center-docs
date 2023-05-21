@@ -12,18 +12,17 @@ First, install the latest version of HoN by downloading it and running "HoNClien
 
 Assuming that you install to ~/HoN (default), you only need to run two commands:
 
-``` bash
+```bash
 sudo eopkg it gconf libgcrypt11 libglu
 ```
 
 That installs all of the dependencies that HoN needs.
 
-``` bash
+```bash
 rm ~/HoN/libs-x86_64/{libcurl.so.4,libfreetype.so.6,libgcc_s.so.1,libgcrypt.so.11,libspeexdsp.so.1,libspeex.so.1,libstdc++.so.6,libudev.so.0}
 ```
 
 This removes all the libraries that conflict with the ones in Solus.
-
 
 ## Lutris
 
@@ -45,14 +44,14 @@ For more information you can visit their website at [lutris.net](https://lutris.
 
 Install dependencies and download Minecraft:
 
-``` bash
+```bash
 sudo eopkg it gconf binutils
 wget https://launcher.mojang.com/download/Minecraft.deb
 ```
 
 Extract files and remove old archive:
 
-``` bash
+```bash
 sudo ar xf Minecraft.deb
 sudo tar xf data.tar.xz -C /
 sudo rm control.tar.xz data.tar.xz debian-binary Minecraft.deb
@@ -60,7 +59,7 @@ sudo rm control.tar.xz data.tar.xz debian-binary Minecraft.deb
 
 Integrate the installed files into your system:
 
-``` bash
+```bash
 sudo usysconf run -f
 ```
 
@@ -73,7 +72,6 @@ Retroarch is a frontend for emulators, game engines and media players. It has al
 ### Installing the assets
 
 The assets are not packaged with Retroarch itself and have to be downloaded from inside the program. This can easily be done by going into the Online Updater from the Main Menu and selecting "Update Assets".
-
 
 ## Steam
 

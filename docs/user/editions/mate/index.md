@@ -19,4 +19,3 @@ Here are some links related to this project that you may find helpful:
 [Go to MATE Configuration](configuration)
 
 [Go to MATE Tips and Tricks](tips-and-tricks)
-

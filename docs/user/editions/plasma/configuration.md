@@ -40,8 +40,6 @@ TODO: Add directons and screenshots just like we have for the other editions
 
 ### Removing a User
 
-
-
 # User Interface
 
 ## Desktop Background

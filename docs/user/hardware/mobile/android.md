@@ -16,7 +16,6 @@ TODO: Tutorial on accessing files from a file browser. Android screenshots would
 
 Whether you are an Android developer or just need `adb` or `fastboot` for installing a ROM, we've got you covered! We just need to install `android-tools` from the Software Center or command-line:
 
-``` bash
+```bash
 sudo eopkg install android-tools
 ```
-

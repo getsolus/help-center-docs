@@ -20,7 +20,7 @@ With so many new users joining, there are always more people needing help. A gre
 
 ### Matrix (chat)
 
-[Matrix](https:/.wikipedia.org/wiki/Matrix_(protocol)) is a great way to discuss issues and development with the community, and project developers in real-time. It's also a great place for getting support, but remember due
+[Matrix](<https:/.wikipedia.org/wiki/Matrix_(protocol)>) is a great way to discuss issues and development with the community, and project developers in real-time. It's also a great place for getting support, but remember due
 to timezone differences there might not always be people there to answer your question immediately. You can access Matrix using a client like [Element Web](https://app.element.io/), or many [others](https://matrix.org/clients/). You will need a Matrix account.
 
 You will find the following Solus rooms on the `matrix.org` homeserver:
@@ -62,13 +62,13 @@ and contribute to the community by packaging software. If you're interested in l
 We're always looking to improve our systems, especially when they're not functioning as expected. By reporting bugs, you improve the system not only for you, but for all Solus Project users.
 
 - [Budgie Desktop](https://github.com/solus-project/budgie-desktop/issues)
-Solus Budgie Desktop issues are filed in the solus-project repo on github.
+  Solus Budgie Desktop issues are filed in the solus-project repo on github.
 
 - [Developer Portal](https://dev.getsol.us)
-Most bug reports about Solus itself, and its packages, should be filed here.
+  Most bug reports about Solus itself, and its packages, should be filed here.
 
 - [Solus Github Repos](https://github.com/getsolus)
-Certain parts of Solus, such as the Software Center, have repos on the getsolus repo on github. Check here to see if the system in question is listed. If so, file the bug in the appropriate repo.
+  Certain parts of Solus, such as the Software Center, have repos on the getsolus repo on github. Check here to see if the system in question is listed. If so, file the bug in the appropriate repo.
 
 ## Translations
 

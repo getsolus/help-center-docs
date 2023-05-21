@@ -20,7 +20,7 @@ This can be achieved by doing `make bump`, which increments the release number b
 
 To update the package to a newer version, use the `yupdate` tool. This tool is located at `/usr/share/ypkg/yupdate.py` and while you can use it directly, we generally recommend setting an alias via your `.bashrc`, `.zshrc`, etc.
 
-``` bash
+```bash
 alias updatePackage='/usr/share/ypkg/yupdate.py'
 ```
 
@@ -33,6 +33,6 @@ If you're updating the package to a newer version, naturally you would change bo
 
 Example:
 
-``` bash
+```bash
 /usr/share/ypkg/yupdate.py 1.0 https://example.com/example-1.0.tar.xz
 ```

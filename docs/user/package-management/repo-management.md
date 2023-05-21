@@ -3,6 +3,7 @@ title: Repository Management
 summary: Repository Management
 date: 2023-01-06
 ---
+
 # Repository Management
 
 While Solus currently only provides two repositories, stable (shannon) and unstable, our package manager does support actively using multiple repositories on your system. This is useful if you are using a vendor-provided repository.
@@ -11,13 +12,13 @@ While Solus currently only provides two repositories, stable (shannon) and unsta
 
 You can add a repository by using:
 
-``` bash
+```bash
 sudo eopkg add-repo Name Url
 ```
 
 For example:
 
-``` bash
+```bash
 sudo eopkg add-repo Example https://example.com/repo/eopkg-index.xml.gz
 ```
 
@@ -27,13 +28,13 @@ sudo eopkg add-repo Example https://example.com/repo/eopkg-index.xml.gz
 
 You can remove a repository by using:
 
-``` bash
+```bash
 sudo eopkg remove-repo Name
 ```
 
 For example:
 
-``` bash
+```bash
 sudo eopkg remove-repo Example
 ```
 
@@ -41,13 +42,13 @@ sudo eopkg remove-repo Example
 
 You can enable a repository for usage, by using:
 
-``` bash
+```bash
 sudo eopkg enable-repo Name
 ```
 
 For example:
 
-``` bash
+```bash
 sudo eopkg enable-repo Example
 ```
 
@@ -55,13 +56,13 @@ sudo eopkg enable-repo Example
 
 You can disable a repository by using:
 
-``` bash
+```bash
 sudo eopkg disable-repo Name
 ```
 
 For example:
 
-``` bash
+```bash
 sudo eopkg disable-repo Example
 ```
 
@@ -69,13 +70,13 @@ sudo eopkg disable-repo Example
 
 You can update the index of a repository by using:
 
-``` bash
+```bash
 sudo eopkg update-repo Name
 ```
 
 For example:
 
-``` bash
+```bash
 sudo eopkg update-repo Example
 ```
 
@@ -85,6 +86,6 @@ sudo eopkg update-repo Example
 
 You can list all the repositories added on your system by using:
 
-``` bash
+```bash
 sudo eopkg list-repo
 ```

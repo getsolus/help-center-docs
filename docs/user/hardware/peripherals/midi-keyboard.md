@@ -16,7 +16,7 @@ We will need to install three packages in order to use the keyboard:
 2. `qjackctl` - A controller for the JACK audio server
 3. `fluid-soundfont` - An open source soundfont to use with fluidsynth
 
-``` bash
+```bash
 sudo eopkg it qsynth qjackctl fluid-soundfont
 ```
 
@@ -38,7 +38,7 @@ You should now be ready to play on the keyboard using `qsynth`.
 
 The following keyboards have been tested and/or suggested to function correctly by our users.
 
-This list should not suggest that *only* such devices listed below are compatible with Solus, as there may be devices not listed below that are in fact compatible.
+This list should not suggest that _only_ such devices listed below are compatible with Solus, as there may be devices not listed below that are in fact compatible.
 
 ### M-audio
 

@@ -6,11 +6,7 @@ date: 2022-12-16
 
 # Configuration
 
-
-
 # System
-
-
 
 ## Date and Time
 
@@ -24,31 +20,27 @@ You will be presented with the following window. This window provides you with t
 
 ![Budgie Date and Time](configuration/budgie-configuring-date-and-time.jpg)
 
-If you wish to change how the time is displayed in the bottom panel, left click on the time and click "Preferences".  You can now show the date, seconds or use 24 hour time.
+If you wish to change how the time is displayed in the bottom panel, left click on the time and click "Preferences". You can now show the date, seconds or use 24 hour time.
 
 ![Budgie Clock Applet](configuration/budgie-ClockApplet.jpg)
-
-
 
 ## Default Applications
 
 You can configure default applications in Budgie by opening the Budgie Menu and then clicking on "Details" in the System Settings category.
 
-Upon entering the Details section, click on "Default Applications" and then use the drop down boxes to select a different default application for each category.  For most categories, you will need to have installed alternative applications before you can change the default settings.  For instance, if you wish to change the default video player from GNOME MPV to VLC then you must first install VLC (available in the Software Center).
+Upon entering the Details section, click on "Default Applications" and then use the drop down boxes to select a different default application for each category. For most categories, you will need to have installed alternative applications before you can change the default settings. For instance, if you wish to change the default video player from GNOME MPV to VLC then you must first install VLC (available in the Software Center).
 
 ![Budgie Default Applications](configuration/budgie-configuring-default-applications.jpg)
 
-*Note: In the image above, we've changed the Web browser and Photo viewer.*
+_Note: In the image above, we've changed the Web browser and Photo viewer._
 
 You can specify default applications for individual file types by right clicking on a file and then clicking on "Open With Other Application".
 
 ![Budgie Context Menu](configuration/budgie-open-with-right-click.jpg)
 
-Next, select the application you wish to use from the list.  You may need to click "View All Applications" if you can't see the one you would like to use.  Finish by clicking "Select".  In the future, all files with the same file type will open with the same application.
+Next, select the application you wish to use from the list. You may need to click "View All Applications" if you can't see the one you would like to use. Finish by clicking "Select". In the future, all files with the same file type will open with the same application.
 
 ![Budgie Application Selection](configuration/budgie-open-with-select-application.jpg)
-
-
 
 ## Displays
 
@@ -58,7 +50,7 @@ You will then be shown the following window.
 
 ![Budgie Displays Overview](configuration/budgie-displays-overview.jpg)
 
-Click on the individual display you wish to configure.  You will now be able to select if you wish to use this monitor as the primary or secondary display, mirror it with another display, or turn it off.  This window also gives you the size and aspect ratio, ability to rotate the display, and ability to change the resolution.
+Click on the individual display you wish to configure. You will now be able to select if you wish to use this monitor as the primary or secondary display, mirror it with another display, or turn it off. This window also gives you the size and aspect ratio, ability to rotate the display, and ability to change the resolution.
 
 ![Budgie Individual Display Settings](configuration/budgie-individual-display-settings.jpg)
 
@@ -66,11 +58,9 @@ Going back to the Displays section, you also have the option to arrange your dis
 
 ![Budgie Arrange Displays](configuration/budgie-arrange-displays.png)
 
-Click "Apply" once you are happy with your changes.  You will be shown a message asking if the display looks OK, if it does, click on "Keep This Configuration".
+Click "Apply" once you are happy with your changes. You will be shown a message asking if the display looks OK, if it does, click on "Keep This Configuration".
 
 ![Budgie Confirm Display Settings](configuration/budgie-display-confirm.jpg)
-
-
 
 ## Keyboard Layout
 
@@ -114,13 +104,11 @@ You will now be able to switch between your keyboard layouts by using the keyboa
 
 ![Budgie Keyboard Layout Applet: IBus](configuration/budgie-keyboard-layout-applet-ibus.jpg)
 
-
-
 ## Language
 
 You can change your language in Budgie by opening the Budgie Menu and then clicking on "Region and Language" in the System Settings category.
 
-You will now be shown the following window.  This window allows you to change your language, formatting for dates and times and the language of your keyboard.
+You will now be shown the following window. This window allows you to change your language, formatting for dates and times and the language of your keyboard.
 
 ![Budgie Region and Languages](configuration/budgie-region-and-languages.jpg)
 
@@ -128,13 +116,11 @@ Start by clicking "Language". This brings up a selection of languages to chose f
 
 ![Budgie Selecting Language](configuration/budgie-selecting-language.png)
 
-If your language does not appear in the list, click the ⋮ button at the bottom (three vertical dots) to show all the available languages.  You can use the search box to go directly to your choice or scroll down the list.
+If your language does not appear in the list, click the ⋮ button at the bottom (three vertical dots) to show all the available languages. You can use the search box to go directly to your choice or scroll down the list.
 
 ![Budgie Language Search](configuration/budgie-selecting-language-search.png)
 
-Once you have selected the language you wish to use, click "Done". You *may* need to logout and login to your computer for it to take affect.
-
-
+Once you have selected the language you wish to use, click "Done". You _may_ need to logout and login to your computer for it to take affect.
 
 ## Mouse and Touchpad
 
@@ -166,8 +152,6 @@ For touchpads, you can set:
 
 You can test your settings by clicking the "Test Your Settings" button in the top right of the window.
 
-
-
 ## Network
 
 To configure your network settings in Budgie, start by opening the Budgie Menu and then click on "Network" in the System Settings category.
@@ -194,8 +178,6 @@ If you wish to connect to a hidden network, click “Connect to Hidden Network..
 
 If the network is found and has a password, you will be prompted to authenticate with the network.
 
-
-
 ## Sound and Sound Devices
 
 To change the volume in Budgie, simply left click on the speaker icon in the system tray and drag the slider or use the plus and minus icons to reach your desired level.
@@ -204,15 +186,13 @@ To change the volume in Budgie, simply left click on the speaker icon in the sys
 
 ### Settings
 
-You can access sound settings via the Sound applet in Raven, the Notification and Widget Center.  Open Raven, either by clicking on its icon in the far right of the system tray or using the keyboard shortcut `Super + A`.  The Sound applet allows you to enable, disable and alter input and output methods as well as providing a simple volume slider.
+You can access sound settings via the Sound applet in Raven, the Notification and Widget Center. Open Raven, either by clicking on its icon in the far right of the system tray or using the keyboard shortcut `Super + A`. The Sound applet allows you to enable, disable and alter input and output methods as well as providing a simple volume slider.
 
 ![Raven Sound Applet](configuration/raven-sound-applet.jpg)
 
 You can access further sound settings, including individual application volume controls, and a simple speaker test by opening the Budgie Menu and then clicking on "Sound" in the System Settings category.
 
 ![Budgie Sound Settings](configuration/budgie-sound-settings.jpg)
-
-
 
 ## Users
 
@@ -238,15 +218,13 @@ Fill in the required items and then finish adding the new user by clicking "Add"
 
 ### Removing a User
 
-To remove a user, open the Users window and then click on the user you wish to remove.  Now click on the red "Remove User..." button in the bottom right corner.
+To remove a user, open the Users window and then click on the user you wish to remove. Now click on the red "Remove User..." button in the bottom right corner.
 
 ![Budgie User List](configuration/budgie-multiple-user-settings.jpg)
 
 Upon clicking to remove the user, you will be given the option to keep their files, delete their files, or cancel the removal of the user’s account.
 
 ![Budgie Keep Files Prompt](configuration/budgie-keep-files-prompt.jpg)
-
-
 
 # User Interface
 
@@ -266,21 +244,17 @@ In this section, you can choose between Solus wallpapers, pictures in your Pictu
 
 ![Budgie Background Selection](configuration/budgie-background-selection.jpg)
 
-
-
 ## Desktop Icons
 
-With Budgie, start by opening Raven, either by clicking on its icon in the far right of the system tray or using the keyboard shortcut `Super + A`.  Next, click the cog icon for Budgie Settings.
+With Budgie, start by opening Raven, either by clicking on its icon in the far right of the system tray or using the keyboard shortcut `Super + A`. Next, click the cog icon for Budgie Settings.
 
 Alternatively, you can open the Budgie Menu and then click "Desktop" in the System Settings category.
 
 ![Budgie Desktop Icons](configuration/budgie-desktop-icons.jpg)
 
-You may now add things to your Desktop.  This can be done by dragging an item onto the Desktop or by right clicking an icon and selecting Copy to / Move to Desktop.  Alternatively, open the Budgie Menu and click on "Files" and then move the files you want to the Desktop folder (as shown in the image below).  Please note, the Desktop folder is not visible in "Files" until you've enabled the Desktop icons.
+You may now add things to your Desktop. This can be done by dragging an item onto the Desktop or by right clicking an icon and selecting Copy to / Move to Desktop. Alternatively, open the Budgie Menu and click on "Files" and then move the files you want to the Desktop folder (as shown in the image below). Please note, the Desktop folder is not visible in "Files" until you've enabled the Desktop icons.
 
 ![Budgie Desktop Folder](configuration/budgie-nautilus-desktop-folder.jpg)
-
-
 
 ## Workspaces
 
@@ -295,7 +269,6 @@ Click the Raven settings 'cog' icon
 Alternatively, you can open the Budgie Menu and then click "Bottom Panel" in the System Settings category.
 
 ![Budgie Panel Menu](configuration/budgie-panel-menu.jpg)
-
 
 Find `Add applet` and click the `+` button. This will open menu to choose different applets, scroll down until you find `Workspace Switcher`, select it and click `Add Applet`
 

@@ -12,7 +12,7 @@ We assume you have worked through the [packaging](/docs/packaging) material for 
 
 ## Install the local profile
 
-``` bash
+```bash
 sudo eopkg install solbuild-config-local-unstable
 ```
 
@@ -39,7 +39,7 @@ There are some important things to know when working with local repositories, as
 
 As alluded to above, eopkg supports resolving packages from more than one repository.
 
-In practice, this can be leveraged to make the developer workflow more convenient by ensuring that eopkg pulls from the local solbuild repository. 
+In practice, this can be leveraged to make the developer workflow more convenient by ensuring that eopkg pulls from the local solbuild repository.
 
 ### Generating an eopkg index for the local solbuild repository
 
@@ -55,15 +55,15 @@ To generate or refresh the eopkg index in `/var/lib/solbuild/local`, simply run:
 
 It bears repeating that in its current incarnation, eopkg will always prefer packages from the topmost repository listed with `eopkg lr`.
 
-In other words, if a package exists both in the local solbuild repository and the official upstream Solus repository, eopkg will only consider the package from the first repository listed with `eopkg lr` *regardless of its release number*.
+In other words, if a package exists both in the local solbuild repository and the official upstream Solus repository, eopkg will only consider the package from the first repository listed with `eopkg lr` _regardless of its release number_.
 
 ### Adding the local solbuild repo to the eopkg repository database
 
-The easiest way to add the local solbuild repo to the list of repositories known to eopkg is to add the local solbuild repo and then *re-add* the official Solus repo.
+The easiest way to add the local solbuild repo to the list of repositories known to eopkg is to add the local solbuild repo and then _re-add_ the official Solus repo.
 
 #### Checking the currently known eopkg repositories
 
-But first, let's list the repositories currently known to eopkg with `eopkg lr` -- this should produce output similar to: 
+But first, let's list the repositories currently known to eopkg with `eopkg lr` -- this should produce output similar to:
 
 ```
 Solus [active]
@@ -76,8 +76,9 @@ Now the repositories need to be added to account for the desired dependency reso
 
 ```
 sudo eopkg ar Local /var/lib/solbuild/local/eopkg-index.xml.xz
-sudo eopkg ar Solus https://mirrors.rit.edu/solus/packages/unstable/eopkg-index.xml.xz 
+sudo eopkg ar Solus https://mirrors.rit.edu/solus/packages/unstable/eopkg-index.xml.xz
 ```
+
 This should yield output similar to:
 
 ```

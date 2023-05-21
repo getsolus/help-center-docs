@@ -3,6 +3,7 @@ title: Package Inclusion Policy
 summary: What's needed to include packages into the repository
 date: 2022-12-16
 ---
+
 # Package Inclusion Policy
 
 This policy sets forth the criteria for a package to be accepted for inclusion into the Solus repositories or rejected.
@@ -27,8 +28,8 @@ This policy sets forth the criteria for a package to be accepted for inclusion i
 - DOA (dead-on-arrival) packages are generally rejected from Solus. However, they may be included at the discretion of the project, if they provide unique functionality.
 - Projects with no tags/tarballs which lack traction, may be frozen until a suitable release is made. Tagging releases is an indicator for good release engineering practices.
 - Typically, we prefer **stable** tagged releases. However, this may be waived if:
- - The software has significant traction (i.e. prerelease)
- - A bug fix only exists beyond the latest stable release for a git source
+- The software has significant traction (i.e. prerelease)
+- A bug fix only exists beyond the latest stable release for a git source
 
 ### Stack Complexity
 
@@ -45,4 +46,4 @@ This policy sets forth the criteria for a package to be accepted for inclusion i
 
 ## Rejection
 
-Solus team members reserve the right to permanently reject a package request without the need for further discussion once the rejection is issued. The limited time of contributors should be considered and respected, instead of dragging out and 'necromancing' old issues in a vain attempt to force inclusion of previously rejected software. In the event of any policy change, existing/expired package requests will NOT be reevaluated under new criteria as this would lead to an exponential growth in work upon every policy change, and is physically impossible to handle for a project of *any* size.
+Solus team members reserve the right to permanently reject a package request without the need for further discussion once the rejection is issued. The limited time of contributors should be considered and respected, instead of dragging out and 'necromancing' old issues in a vain attempt to force inclusion of previously rejected software. In the event of any policy change, existing/expired package requests will NOT be reevaluated under new criteria as this would lead to an exponential growth in work upon every policy change, and is physically impossible to handle for a project of _any_ size.

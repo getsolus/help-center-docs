@@ -10,13 +10,11 @@ This guide provides some basic troubleshooting instructions for when you have an
 
 First of all performa a full system update `sudo eopkg up` (or via the Software Center). Then validate that packages are installed correctly and aren't missing files: (run this once, it will take some time and may not show much output)
 
-``` bash
+```bash
 sudo eopkg check | grep Broken | awk '{print $4}' | xargs sudo eopkg it --reinstall
 ```
 
 Then reboot the system to make sure the issue still persists on a clean system.
-
-
 
 ## Issues with Software Center or eopkg
 
@@ -31,8 +29,6 @@ To run database recovery, run `sudo eopkg rdb` in the terminal and then updates 
 ### eopkg check shows broken packages
 
 `eopkg check` checks the sha256sums of files on disk versus what was originally installed by the original .eopkg file. In some cases (for example .pyc files), these files will be modified in the normal operation of Solus. If after reinstalling a package it remains broken, then it's likely nothing to worry about (there are no exceptions made in `eopkg check` for files that are expected to change from use). When reinstalling broken packages, (per above) it only needs to be run once.
-
-
 
 ## Updated system and having issues
 
@@ -52,19 +48,19 @@ If Solus partially boots, you can generally get to a TTY using `Ctrl+Alt+F2` to 
 
 A common cause of not being able to boot is due to installing the nvidia drivers, but not booting into the latest kernel (the only kernel which has the drivers installed). Also ensure you have the correct driver version installed for your kernel. You can check if you have booted into the latest kernel by comparing the installed package with the booted kernel (instructions for both kernels)
 
-``` bash
+```bash
 eopkg info linux-lts | head -n2; uname -a
 ```
 
-``` bash
+```bash
 eopkg info linux-current | head -n2; uname -a
 ```
 
 If the kernel version and release don't match from lines 2 and 3 of the output, then you aren't booting into the latest kernel and this is the likely cause of X not loading (particularly if you just installed the drivers). A couple of common reasons are:
 
- - On a grub machine, a common cause for not booting the latest kernel is due to Solus not being the boot loader on the MBR. Make sure you are booting via the Solus boot loader (if possible), or update grub on the distro that own the boot loader, see [Legacy/BIOS installation](/docs/user/troubleshooting/installation#legacybios-installation).
+- On a grub machine, a common cause for not booting the latest kernel is due to Solus not being the boot loader on the MBR. Make sure you are booting via the Solus boot loader (if possible), or update grub on the distro that own the boot loader, see [Legacy/BIOS installation](/docs/user/troubleshooting/installation#legacybios-installation).
 
- - Another possibility is that the `ESP` has run out of space so the kernel cannot be copied over to it. You can debug why this isn't happening via `sudo CBM_DEBUG=1 clr-boot-manager update`. This will output all information on the process, where it may be failing, or that it is working correctly.
+- Another possibility is that the `ESP` has run out of space so the kernel cannot be copied over to it. You can debug why this isn't happening via `sudo CBM_DEBUG=1 clr-boot-manager update`. This will output all information on the process, where it may be failing, or that it is working correctly.
 
 If these two steps fail, you can't revert the installation of the drivers via [History and Rollback](/docs/user/package-management/history-and-rollback)
 
@@ -76,7 +72,7 @@ If the Solus boot loader is not functioning (this has been known to be broken by
 
 There are a number of factors that can contribute to a long boot time. The boot up messages can be viewed to look for any timeouts by looking at the timestamped journal.
 
-``` bash
+```bash
 sudo journalctl -b
 ```
 

@@ -12,7 +12,7 @@ date: 2022-12-16
 
 KSysGuard is usually installed as part of the KDE Plasma Desktop environment, but can be installed from the Software Center or via terminal:
 
-``` bash
+```bash
 sudo eopkg it ksysguard
 ```
 
@@ -20,7 +20,7 @@ sudo eopkg it ksysguard
 
 The per process networking plugin requires elevated access to your system. To enable the plugin as non-root user, execute these commands:
 
-``` bash
+```bash
 sudo setcap "CAP_NET_RAW=+ep" "/usr/lib64/kf5/ksysguard/ksgrd_network_helper"
 ```
 

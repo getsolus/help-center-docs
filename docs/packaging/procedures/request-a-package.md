@@ -14,12 +14,12 @@ Please provide as much of the following information as possible:
 
 - Name
 - Homepage
-- Why should this be included in the repository? If we already offer similar software in our repository **or third party**, please provide information on what your proposed software does that our existing offerings don't (*differentiators*).
+- Why should this be included in the repository? If we already offer similar software in our repository **or third party**, please provide information on what your proposed software does that our existing offerings don't (_differentiators_).
 - Is it Open Source (yes/no)
- - If no: Are we allowed to distribute it?
- - Set the Tags to have "Package Requests"
+- If no: Are we allowed to distribute it?
+- Set the Tags to have "Package Requests"
 - Who and how many users do you anticipate will use this software?
 - Link to source tarball/zip file
- - master.zip files **are not permitted**. We require versioned tarballs, for example: "1.2.3.tar.gz" or "packagename-1.2.3".
+- master.zip files **are not permitted**. We require versioned tarballs, for example: "1.2.3.tar.gz" or "packagename-1.2.3".
 
 Please put this information into a new [task](https://dev.getsol.us/maniphest/task/edit/form/4/).

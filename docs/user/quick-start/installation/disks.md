@@ -9,12 +9,12 @@ date: 2022-12-16
 Solus provides multiple ways you can install onto your system.
 
 1. **Whole Drive**  
-  Solus can take up the entire drive, using traditonal root partitions, or with LVM-managed root partitions.
+   Solus can take up the entire drive, using traditonal root partitions, or with LVM-managed root partitions.
 2. **Multi-boot**  
-  You can install Solus next to your existing operating system, such as Windows. *If you have multiple operating systems installed, we will choose the largest option.*
+   You can install Solus next to your existing operating system, such as Windows. _If you have multiple operating systems installed, we will choose the largest option._
 3. **Manual Partitioning**  
-  You can manually configure your system. This is only recommend for advanced users which may desire to have a dedicated `/home` partition. Note that if you manually configure your system, you will need to restart the Installer for those changes to apply appropriately.
-**Note:** Legacy (BIOS) must use MBR partition table while Unified EFI (UEFI) must use GPT partition table.
+    You can manually configure your system. This is only recommend for advanced users which may desire to have a dedicated `/home` partition. Note that if you manually configure your system, you will need to restart the Installer for those changes to apply appropriately.
+   **Note:** Legacy (BIOS) must use MBR partition table while Unified EFI (UEFI) must use GPT partition table.
 
 Alongside these options, we also provide the ability to use full-disk encryption. For the obvious reason of it being full-disk, this assumes you are installing Solus onto the entire drive.
 

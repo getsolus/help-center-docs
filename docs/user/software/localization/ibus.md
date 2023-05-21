@@ -16,14 +16,13 @@ You may have to agree to install some additional dependencies and will need to t
 
 ![IBus IME Dependencies](./ibus/ibus-ime-dependencies.jpg)
 
-Once it has finished installing, logout of your computer and then login again.  Now you'll be able to select the newly installed IME by following the same steps as detailed above for changing keyboard layouts in Budgie.  For instance, in this example we have installed the `ibus-hangul` package for the Korean language.  By following the steps above and then searching for Korean keyboard layouts, we are now able to select Korean (Hangul) as an input source.
+Once it has finished installing, logout of your computer and then login again. Now you'll be able to select the newly installed IME by following the same steps as detailed above for changing keyboard layouts in Budgie. For instance, in this example we have installed the `ibus-hangul` package for the Korean language. By following the steps above and then searching for Korean keyboard layouts, we are now able to select Korean (Hangul) as an input source.
 
 ![IBus Region and Language](./ibus/ibus-region-and-languages.jpg)
 
-Additionally, once you have added the IME and have it selected in the Region & Languages window, you can click on the cog icon under the input sources to load the settings window for your specific IME.  The `ibus-hangul` settings window is shown below but this will vary between the different IME's.
+Additionally, once you have added the IME and have it selected in the Region & Languages window, you can click on the cog icon under the input sources to load the settings window for your specific IME. The `ibus-hangul` settings window is shown below but this will vary between the different IME's.
 
 ![IBus IME Settings Example: Hangul](./ibus/ibus-ime-settings-hangul.jpg)
-
 
 ## IBus IME Package List
 

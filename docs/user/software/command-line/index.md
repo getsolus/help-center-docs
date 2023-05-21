@@ -18,11 +18,11 @@ Solus makes available other shells via our repository, with a full list availabl
 
 ### Installation
 
-In order to use a shell different from Bash, you may need to install the respective package for the shell to be able to work. You will find those packages in the Software-Center within the *System utilities* category, or via the command-line with `sudo eopkg install <Name of the Shell>`.
+In order to use a shell different from Bash, you may need to install the respective package for the shell to be able to work. You will find those packages in the Software-Center within the _System utilities_ category, or via the command-line with `sudo eopkg install <Name of the Shell>`.
 
 Example:
 
-``` bash
+```bash
 sudo eopkg install fish
 ```
 
@@ -46,7 +46,6 @@ Example:
 
 - For Fish: `echo "/usr/bin/fish" | sudo tee -a /etc/shells`
 
-
 ## fzf
 
 [fzf](https://github.com/junegunn/fzf) is a general-purpose command-line fuzzy finder. It can be used as an interactive Unix filter with any list: files, command history, processes, hostnames, bookmarks, git commits, etc.
@@ -55,7 +54,7 @@ Example:
 
 The fzf project consists of the following components: an `fzf` executable, an `fzf-tmux` script for launching fzf in a tmux pane, shell extensions (including key bindings and command-line fuzzy auto-completion), and a vim/Neovim plugin file. They are all available in the `fzf` package in the Software Center or via eopkg in a terminal:
 
-``` bash
+```bash
 sudo eopkg it fzf
 ```
 
@@ -67,14 +66,14 @@ The shell extensions are not enabled by default after the `fzf` package is insta
 
 #### Bash
 
-``` bash
+```bash
 FZF_COMPLETION_FILE=/usr/share/bash-completion/completions/fzf
 [[ -f $FZF_COMPLETION_FILE ]] && source $FZF_COMPLETION_FILE
 ```
 
 #### Zsh
 
-``` bash
+```bash
 FZF_COMPLETION_FILE=/usr/share/zsh/site-functions/_fzf
 [[ -f $FZF_COMPLETION_FILE ]] && source $FZF_COMPLETION_FILE
 ```
@@ -87,7 +86,7 @@ FZF_COMPLETION_FILE=/usr/share/zsh/site-functions/_fzf
 
 Add the following content to `~/.bashrc`:
 
-``` bash
+```bash
 FZF_KEYBINDING_FILE=/usr/share/fzf/key-bindings.bash
 [[ -f $FZF_KEYBINDING_FILE ]] && source $FZF_KEYBINDING_FILE
 ```
@@ -96,13 +95,13 @@ FZF_KEYBINDING_FILE=/usr/share/fzf/key-bindings.bash
 
 First create the following directory if it does not already exist:
 
-``` bash
+```bash
 mkdir -p $HOME/.config/fish/functions
 ```
 
 `cd` into this directory and make a file `fish_user_key_bindings.fish` with the following content:
 
-``` bash
+```bash
 function fish_user_key_bindings
   fzf_key_bindings
 end
@@ -110,7 +109,7 @@ end
 
 Then create the following symlink:
 
-``` bash
+```bash
 ln -s /usr/share/fzf/key-bindings.fish $HOME/.config/fish/functions/fzf_key_bindings.fish
 ```
 
@@ -118,7 +117,7 @@ ln -s /usr/share/fzf/key-bindings.fish $HOME/.config/fish/functions/fzf_key_bind
 
 Add the following content to `~/.zshrc`:
 
-``` bash
+```bash
 FZF_KEYBINDING_FILE=/usr/share/fzf/key-bindings.zsh
 [[ -f $FZF_KEYBINDING_FILE ]] && source $FZF_KEYBINDING_FILE
 ```
@@ -127,47 +126,49 @@ FZF_KEYBINDING_FILE=/usr/share/fzf/key-bindings.zsh
 
 [Powerline](https://github.com/powerline) is a statusline plugin for vim, and provides statuslines and prompts for several other applications, including zsh, bash, tmux, IPython, Awesome and Qtile.
 
-### Installation 
+### Installation
 
-Powerline has two components, the plugin system itself ([powerline](https://dev.getsol.us/source/powerline/)) and the 
+Powerline has two components, the plugin system itself ([powerline](https://dev.getsol.us/source/powerline/)) and the
 fonts ([powerline-fonts](https://dev.getsol.us/source/powerline-fonts/)). Both are available in the Software Center or via eopkg in a terminal:
 
-``` bash
+```bash
 sudo eopkg it powerline powerline-fonts
 ```
+
 To get powerline working inside your terminal, you need to add the following commands to the `.bashrc` inside your `$HOME` directory.
 
 ### Shell Prompts
 
 The Powerline daemon is not running automatically by any of the bindings. It is advised to add the following before any other powerline-related code in the shell configuration file
 
-``` bash
+```bash
 powerline-daemon -q
 ```
-#### Bash 
 
-``` bash
+#### Bash
+
+```bash
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 source /usr/lib/python3.9/site-packages/powerline/bindings/bash/powerline.sh
 ```
 
-#### Busybox and dash 
+#### Busybox and dash
 
-``` bash
+```bash
 source /usr/lib/python3.9/site-packages/powerline/bindings/shell/powerline.sh
 ```
 
-#### Fish 
+#### Fish
 
-``` bash
+```bash
 source /usr/lib/python3.9/site-packages/powerline/bindings/fish/powerline-setup.fish
 ```
 
-#### Zsh 
+#### Zsh
 
-``` bash
+```bash
 source /usr/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
 ```
 

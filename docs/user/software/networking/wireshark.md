@@ -12,7 +12,7 @@ date: 2022-12-16
 
 Wireshark can be installed either from the Software Center or via terminal:
 
-``` bash
+```bash
 sudo eopkg it wireshark
 ```
 
@@ -20,7 +20,7 @@ sudo eopkg it wireshark
 
 For security reasons, it is strongly unadvised to run Wireshark as root. To capture packets as non-root user, execute these commands:
 
-``` bash
+```bash
 sudo gpasswd -a $USER wireshark
 sudo setcap cap_dac_override,cap_net_admin,cap_net_raw+eip /usr/bin/dumpcap
 ```

@@ -1,59 +1,57 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Solus Help Center',
-  tagline: 'Help center for the Solus operating system',
-  favicon: 'img/support-icon-2.svg',
+  title: "Solus Help Center",
+  tagline: "Help center for the Solus operating system",
+  favicon: "img/support-icon-2.svg",
 
   // Set the production url of your site here
-  url: 'https://help.getsol.us',
+  url: "https://help.getsol.us",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   // Since we use the help.getsol.us CNAME for GH Pages, this is '/' for now
-  baseUrl: '/',
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'getsolus', // Usually your GitHub org/user name.
-  projectName: 'help-center-docs', // Usually your repo name.
+  organizationName: "getsolus", // Usually your GitHub org/user name.
+  projectName: "help-center-docs", // Usually your repo name.
 
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "warn",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
@@ -72,82 +70,83 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/logo.jpg',
+      image: "img/logo.jpg",
       navbar: {
-        title: 'Solus',
+        title: "Solus",
         logo: {
-          alt: 'Solus Logo',
-          src: 'img/logo.svg',
-          href: 'https://getsol.us',
+          alt: "Solus Logo",
+          src: "img/logo.svg",
+          href: "https://getsol.us",
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'userSidebar',
-            position: 'left',
-            label: 'Help Center Home',
+            type: "docSidebar",
+            sidebarId: "userSidebar",
+            position: "left",
+            label: "Help Center Home",
+            href: "/",
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'packagingSidebar',
-            position: 'left',
-            label: 'Packaging',
+            type: "docSidebar",
+            sidebarId: "packagingSidebar",
+            position: "left",
+            label: "Packaging",
           },
-          {to: 'https://getsol.us/blog', label: 'Blog', position: 'left'},
+          { to: "https://getsol.us/blog", label: "Blog", position: "left" },
           {
-            href: 'https://github.com/getsolus',
-            label: 'GitHub',
-            position: 'right',
+            href: "https://github.com/getsolus",
+            label: "GitHub",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'Welcome',
-                to: '/docs/user/intro',
+                label: "Welcome",
+                to: "/docs/user/intro",
               },
             ],
           },
           {
-            title: 'Community',
+            title: "Community",
             items: [
               {
-                label: 'Forums',
-                href: 'https://discuss.getsol.us',
+                label: "Forums",
+                href: "https://discuss.getsol.us",
               },
               {
-                label: 'Matrix',
-                href: 'https://matrix.to/#/#solus:matrix.org',
+                label: "Matrix",
+                href: "https://matrix.to/#/#solus:matrix.org",
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/SolusProject',
+                label: "Twitter",
+                href: "https://twitter.com/SolusProject",
               },
               {
-                label: 'Mastodon',
-                href: 'https://fosstodon.org/@Solus',
+                label: "Mastodon",
+                href: "https://fosstodon.org/@Solus",
               },
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
               {
-                label: 'Blog',
-                to: 'https://getsol.us/blog',
+                label: "Blog",
+                to: "https://getsol.us/blog",
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/getsolus',
+                label: "GitHub",
+                href: "https://github.com/getsolus",
               },
               {
-                label: 'Dev Tracker',
-                href: 'https://dev.getsol.us',
+                label: "Dev Tracker",
+                href: "https://dev.getsol.us",
               },
             ],
           },
@@ -161,4 +160,4 @@ const config = {
     }),
 };
 
-module.exports = config
+module.exports = config;

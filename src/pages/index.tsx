@@ -1,32 +1,53 @@
 import React from "react";
-import clsx from "clsx";
-import Link from "@docusaurus/Link";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 
-import styles from "./index.module.css";
-import DocSections from "../components/DocSections";
+import Container from "@mui/material/Container";
+import Grid2 from "@mui/material/Unstable_Grid2";
+import { DocSection } from "../types";
 
-function DocsHeader() {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <header className={clsx("hero hero--secondary", styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">Solus Help Center</h1>
-        <p className="hero__subtitle">Documentation for Solus</p>
-      </div>
-    </header>
-  );
-}
+import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import Inventory2OutlinedIcon from "@mui/icons-material/Inventory2Outlined";
+import Doc from "../components/home/Doc";
+import Header from "../components/home/Header";
 
-export default function Docs(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
+const DocList: DocSection[] = [
+  {
+    title: "Help Center Home",
+    description: <>Installing, software, boot management, troubleshooting and more</>,
+    link: "docs/user/intro",
+    img: <PersonOutlineOutlinedIcon sx={{ fontSize: 96 }} />,
+  },
+  {
+    title: "Packaging",
+    description: <>Get to grips with our advanced packaging features using easy to follow guides</>,
+    link: "docs/packaging",
+    img: <Inventory2OutlinedIcon sx={{ fontSize: 96 }} />,
+  },
+];
+
+const Docs = () => {
   return (
     <Layout title="Documentation" description="Solus">
-      <DocsHeader />
-      <main>
-        <DocSections />
-      </main>
+      <Header />
+      <Container sx={{ marginBlock: "4vh", maxWidth: 1920 }}>
+        <Grid2
+          columns={{
+            xs: 6,
+            sm: 6,
+            md: 12,
+          }}
+          container
+          margin={0}
+          spacing={4}
+          width={1}
+        >
+          {DocList.map((d) => (
+            <Doc {...d} key={`Doc-${d.title}`} />
+          ))}
+        </Grid2>
+      </Container>
     </Layout>
   );
-}
+};
+
+export default Docs;

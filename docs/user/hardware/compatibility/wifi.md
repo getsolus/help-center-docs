@@ -1,6 +1,6 @@
 ---
 title: WiFi
-summary: 
+summary:
 date: 2022-12-18
 ---
 
@@ -8,7 +8,7 @@ date: 2022-12-18
 
 The following wireless chipsets have been tested and/or suggested to function correctly by our users.
 
-This list should not suggest that *only*- such devices listed below are compatible with Solus, as there may be devices not listed below that are in fact compatible.
+This list should not suggest that _only_- such devices listed below are compatible with Solus, as there may be devices not listed below that are in fact compatible.
 
 ## Atheros
 

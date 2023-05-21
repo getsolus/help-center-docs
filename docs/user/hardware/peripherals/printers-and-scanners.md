@@ -6,7 +6,6 @@ date: 2022-12-16
 
 # Printers and Scanners
 
-
 # Printers
 
 ## Drivers
@@ -30,7 +29,7 @@ For example, `brother-mfc1910w` provides drivers for the MFC-1910w.
 
 The following printers have been tested and/or suggested to function correctly by our users.
 
-This list should not suggest that *only* such devices listed below are compatible with Solus, as there may be devices not listed below that are in fact compatible.
+This list should not suggest that _only_ such devices listed below are compatible with Solus, as there may be devices not listed below that are in fact compatible.
 
 ### Brother
 
@@ -70,7 +69,6 @@ You can connect your Brother scanner via USB or LAN to be able to scan. To get n
 
 If your scanner is networks, you need to tell `saned` the IP of your printer. It's advised to give your printer always the same IP inside your Network (ie. Static IP Address). Run the following command to accomplish this:
 
-``` bash
+```bash
 brsaneconfig4 -a name=SCANNER model=$MODEL ip=$IPOFYOURSCANNER
 ```
-

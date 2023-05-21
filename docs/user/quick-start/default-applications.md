@@ -8,15 +8,11 @@ date: 2022-12-16
 
 Each version of Solus comes with a pre-installed collection of desktop applications that can help you perform common tasks.
 
-
-
 # Web Browser
 
 Solus comes pre-installed with Firefox, a secure and trustworthy web browser provided by the non-profit organization [Mozilla](https://www.mozilla.org-US/).
 
 ![Firefox Screenshot](default-applications/firefox.jpg)
-
-
 
 # Email Client
 
@@ -24,18 +20,16 @@ Solus comes pre-installed with the powerful [Thunderbird](https://www.mozilla.or
 
 ![Thunderbird Screenshot](default-applications/thunderbird.jpg)
 
-
-
 # Managing Your Files
 
 Each Linux desktop environment has its own graphical application for managing files:
 
-| Desktop      | Application                     |
-| ------------ | ------------------------------- |
-| Budgie       | GNOME Files (formerly Nautilus) |
-| GNOME        | GNOME Files (formerly Nautilus) |
-| KDE          | Dolphin                         |
-| MATE         | Caja                            |
+| Desktop | Application                     |
+| ------- | ------------------------------- |
+| Budgie  | GNOME Files (formerly Nautilus) |
+| GNOME   | GNOME Files (formerly Nautilus) |
+| KDE     | Dolphin                         |
+| MATE    | Caja                            |
 
 ## Caja
 
@@ -44,8 +38,6 @@ Each Linux desktop environment has its own graphical application for managing fi
 ## GNOME Files
 
 ![GNOME Files Screenshot](default-applications/nautilus.jpg)
-
-
 
 # Office Suite
 
@@ -103,34 +95,29 @@ Finnish language support is provided by installing `libreoffice-voikko`. After i
 2. In the menubar, go to `Tools` then `Options`. This will open up the Options dialog.
 3. Go to the Language Settings, listed on the left of Options.
 4. Under Language Settings, click Writing Aids and ensure the "Spellchecker (Voikko)", "Grammar checker (Voikko)", and "Hyphenator (Voikko)" are under the "Available language modules" section.
-4. Under Language Settings, click Voikko and ensure "standard: suomi (perussanasto)" is selected under the "Vocabulary" section.
-
-
+5. Under Language Settings, click Voikko and ensure "standard: suomi (perussanasto)" is selected under the "Vocabulary" section.
 
 # Music
 
-| Desktop      | Application                     |
-| ------------ | ------------------------------- |
-| Budgie       | Rhythmbox                       |
-| GNOME        |                                 |
-| KDE          |                                 |
-| MATE         |                                 |
-
+| Desktop | Application |
+| ------- | ----------- |
+| Budgie  | Rhythmbox   |
+| GNOME   |             |
+| KDE     |             |
+| MATE    |             |
 
 ## Rhythmbox
 
 ![Rhythmbox Screenshot](default-applications/rhythmbox.jpg)
 
-
-
 # Video
 
-| Desktop      | Application                     |
-| ------------ | ------------------------------- |
-| Budgie       | MPV                             |
-| GNOME        | MPV                             |
-| KDE          |                                 |
-| MATE         | VLC                             |
+| Desktop | Application |
+| ------- | ----------- |
+| Budgie  | MPV         |
+| GNOME   | MPV         |
+| KDE     |             |
+| MATE    | VLC         |
 
 ## MPV
 
@@ -139,4 +126,3 @@ Finnish language support is provided by installing `libreoffice-voikko`. After i
 ## VLC
 
 ![VLC Screenshot](default-applications/vlc.jpg)
-

@@ -33,4 +33,3 @@ Deprecated packages will remove themselves from the users systems as the first o
 ## Major stack changes
 
 Large stack upgrades should begin as closely to the last Friday sync as possible, to ensure there is plenty of time for the work to be completed, integrated, and tested for regressions.
-

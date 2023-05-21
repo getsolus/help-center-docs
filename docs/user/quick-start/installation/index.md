@@ -94,7 +94,7 @@ For those comfortable with the command-line / terminal, we will walk you through
 
 First, insert the USB drive into your computer and open your Terminal. Proceed to type `lsblk` into your Terminal. It should output something along the lines of:
 
-``` bash
+```bash
 NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 sda      8:0    0 111.8G  0 disk
 ├─sda1   8:1    0   350M  0 part
@@ -115,7 +115,7 @@ If it is **not** in your Downloads folder, use `cd` to navigate to the correct d
 
 This is where we overwrite the contents of your USB drive so please ensure you identified the current drive in the `lsblk` stage above. My command is below, however you may need to replace `sdb` with the drive we located above:
 
-``` bash
+```bash
 sudo dd if=Solus-4.3-Budgie.iso of=/dev/sdb bs=1M;sudo sync;sudo eject /dev/sdb
 ```
 
@@ -174,7 +174,6 @@ You may see a message stating “The disk you inserted was not readable by this 
 
 ![macOS Etcher](mac-etcher.jpg)
 
-
 #### Command-Line
 
 For those comfortable with the macOS Terminal app, we will walk you through using `dd`.
@@ -183,13 +182,13 @@ First, insert the USB drive into your computer and open Terminal (found in Appli
 
 Now you'll need to identify your USB drive by listing your storage devices with the following command:
 
-``` bash
+```bash
 diskutil list
 ```
 
 You should see output similar to this:
 
-``` bash
+```bash
 /dev/disk0 (internal, physical):
    #:                       TYPE NAME                    SIZE       IDENTIFIER
    0:      GUID_partition_scheme                        *1.0 TB     disk0
@@ -204,31 +203,31 @@ You should see output similar to this:
    2:                  Apple_HFS Ultra                   15.3 GB    disk1s2
 ```
 
-From this output, we can see the USB drive is listed as - `/dev/disk1 (external, physical)`.  In this example, the IDENTIFIER is `disk1`.  Please note, your USB drive may have a different identifier.  You should be able to tell which is your USB drive by checking the name and size.
+From this output, we can see the USB drive is listed as - `/dev/disk1 (external, physical)`. In this example, the IDENTIFIER is `disk1`. Please note, your USB drive may have a different identifier. You should be able to tell which is your USB drive by checking the name and size.
 
-macOS usually auto-mounts USB drives so you’ll need to unmount it first before proceeding.  Use the following command and replace `IDENTIFIER` with the correct identifier we found in the `diskutil list` step.
+macOS usually auto-mounts USB drives so you’ll need to unmount it first before proceeding. Use the following command and replace `IDENTIFIER` with the correct identifier we found in the `diskutil list` step.
 
-``` bash
+```bash
 diskutil unmountDisk /dev/IDENTIFIER
 ```
 
-Now navigate to the folder that has the downloaded ISO.  This could be your Mac’s Downloads folder.  The following command will get you there:
+Now navigate to the folder that has the downloaded ISO. This could be your Mac’s Downloads folder. The following command will get you there:
 
-``` bash
+```bash
 cd ~/Downloads
 ```
 
-**This step is dangerous.  Using the wrong drive identifier could result in data loss.**  
+**This step is dangerous. Using the wrong drive identifier could result in data loss.**
 
-We will use the `dd` command to write the contents of the ISO to the thumb drive.  Replace `IDENTIFIER` in the command below with your drive identifier.  Note the extra `r` before the identifier (i.e `rdisk1`).  This is for raw mode, which along with bs=1m, makes the transfer faster.
+We will use the `dd` command to write the contents of the ISO to the thumb drive. Replace `IDENTIFIER` in the command below with your drive identifier. Note the extra `r` before the identifier (i.e `rdisk1`). This is for raw mode, which along with bs=1m, makes the transfer faster.
 
-``` bash
+```bash
 sudo dd if=Solus-4.3-Budgie.iso of=/dev/rIDENTIFIER bs=1m
 ```
 
-Be patient!  After a few minutes you’ll receive a message saying how much data was transferred.  You can now safely eject the usb drive.
+Be patient! After a few minutes you’ll receive a message saying how much data was transferred. You can now safely eject the usb drive.
 
-``` bash
+```bash
 diskutil eject /dev/IDENTIFIER
 ```
 

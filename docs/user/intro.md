@@ -17,21 +17,17 @@ With that in mind, the Help Center has been broken up into several sections to h
 
 If you've never used Solus before, this section will set you on the right track. It contains docs related to installing Solus, software package management, the boot process, and troubleshooting all of the above.
 
-
 **[Editions](/docs/category/editions/)**
 
 Solus comes in multiple Editions for different Desktop Environments. The purpose of this section is to introduce you to those desktops, walk you through common configuration tasks, and provides useful tips and tricks.
-
 
 **[Hardware](/docs/user/hardware/)**
 
 For the most part, Solus will work with the majority of hardware out-of-the-box. But there are always exceptions. The docs in this section are focused on those exceptions and how to get the most out of your hardware.
 
-
 **[Software](/docs/category/software)**
 
 We believe that Solus is for everyone. Each installation comes with a sane set of default applications for the majority of people, but everyone uses Solus for their own reasons. This section is intended to help you install other software to better suit your needs.
-
 
 **[Getting Involved](/docs/user/contributing/)**
 
@@ -47,7 +43,7 @@ Our Flarum-powered forums are easy to use from any device and are a great resour
 
 **[Matrix](https://matrix.to/#/#solus:matrix.org)**
 
-[Matrix](https://en.wikipedia.org/wiki/Matrix_(protocol)) is a great way to discuss issues and development with the community, and project developers in real-time. It's also a great place for getting support, but remember due
+[Matrix](<https://en.wikipedia.org/wiki/Matrix_(protocol)>) is a great way to discuss issues and development with the community, and project developers in real-time. It's also a great place for getting support, but remember due
 to timezone differences there might not always be people there to answer your question immediately. You can access Matrix using a client like [Element Web](https://app.element.io/), or many [others](https://matrix.org/clients/). You will need a Matrix account.
 
 **[Reddit](https://www.reddit.com/r/SolusProject)**

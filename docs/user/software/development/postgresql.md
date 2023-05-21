@@ -36,20 +36,20 @@ Note that all local connections are trusted and can access all databases by defa
 
 Because PostgreSQL is included as a single package, the only way to perform a major upgrade of PostgreSQL is via a backup/restore. The procedure below describes the upgrade process as it applies to Solus. See the [PostgreSQL documentation](https://www.postgresql.org/docs/15/upgrading.html#UPGRADING-VIA-PGDUMPALL) for more details.
 
-01. If you have already updated PostgreSQL, downgrade PostgreSQL back to 14.5:
+1.  If you have already updated PostgreSQL, downgrade PostgreSQL back to 14.5:
 
 ```
 sudo eopkg it https://mirrors.rit.edu/solus/packages/shannon/p/postgresql/postgresql-14.5-37-1-x86_64.eopkg \
               https://mirrors.rit.edu/solus/packages/shannon/p/postgresql/postgresql-libpq-14.5-37-1-x86_64.eopkg
 ```
 
-02. (Re)start PostgreSQL:
+2.  (Re)start PostgreSQL:
 
 ```
 sudo systemctl restart postgresql
 ```
 
-03. Create a backup of all current data:
+3.  Create a backup of all current data:
 
 ```
 sudo -u postgres pg_dumpall -f /tmp/backup.sql
@@ -57,38 +57,38 @@ sudo -u postgres pg_dumpall -f /tmp/backup.sql
 
 The location of the backup may be one of your choosing, but keep in mind that the `postgres` user needs to have write permissions on the given location.
 
-04. Stop PostgreSQL:
+4.  Stop PostgreSQL:
 
 ```
 sudo systemctl stop postgresql
 ```
 
-05. Rename the old data directory. This directory contains the old configuration and the original database, but requires significant disk space.
+5.  Rename the old data directory. This directory contains the old configuration and the original database, but requires significant disk space.
 
 ```
 sudo mv /var/db/pgsql/data /var/db/pgsql/data.old
 ```
 
-06. Create a new data directory:
+6.  Create a new data directory:
 
 ```
 sudo mkdir /var/db/pgsql/data
 sudo chown postgres: /var/db/pgsql/data
 ```
 
-07. Upgrade PostgreSQL:
+7.  Upgrade PostgreSQL:
 
 ```
 sudo eopkg upgrade
 ```
 
-08. Start PostgreSQL:
+8.  Start PostgreSQL:
 
 ```
 sudo systemctl start postgresql
 ```
 
-09. Restore the data:
+9.  Restore the data:
 
 ```
 sudo -u postgres psql < /tmp/backup.sql

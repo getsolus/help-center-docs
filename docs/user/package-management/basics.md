@@ -3,6 +3,7 @@ title: Basics to Package Management
 summary: Basics to Package Management
 date: 2023-01-06
 ---
+
 # Basics to Package Management
 
 Solus uses the eopkg package management system to deliver software to the end-user.  
@@ -12,13 +13,13 @@ Below are some basic commands for using eopkg.
 
 You can install one or more packages by using:
 
-``` bash
+```bash
 sudo eopkg install packagename
 ```
 
 For example:
 
-``` bash
+```bash
 sudo eopkg install gnome-documents gnome-music
 ```
 
@@ -26,13 +27,13 @@ sudo eopkg install gnome-documents gnome-music
 
 You can reinstall one or more packages by using:
 
-``` bash
+```bash
 sudo eopkg install --reinstall packagename
 ```
 
 For example:
 
-``` bash
+```bash
 sudo eopkg install --reinstall gnome-documents gnome-music
 ```
 
@@ -46,7 +47,7 @@ sudo eopkg remove packagename
 
 For example:
 
-``` bash
+```bash
 sudo eopkg remove gnome-documents gnome-music
 ```
 
@@ -54,13 +55,13 @@ sudo eopkg remove gnome-documents gnome-music
 
 You can get information on software, such as its description, version, installation size, and more, by using
 
-``` bash
+```bash
 sudo eopkg info packagename
 ```
 
 For example:
 
-``` bash
+```bash
 sudo eopkg info gnome-documents
 ```
 
@@ -68,13 +69,13 @@ sudo eopkg info gnome-documents
 
 You can update your system by using:
 
-``` bash
+```bash
 sudo eopkg upgrade
 ```
 
 If you want to **only** update a specific piece of software on your system, you can specify is like below:
 
-``` bash
+```bash
 sudo eopkg upgrade firefox
 ```
 
@@ -82,13 +83,13 @@ sudo eopkg upgrade firefox
 
 You can search the software selection Solus provides by using:
 
-``` bash
+```bash
 sudo eopkg search term
 ```
 
 For example:
 
-``` bash
+```bash
 sudo eopkg search documents
 ```
 
@@ -98,7 +99,7 @@ Notice that you don't need to search for a specific software name, although you 
 
 If you are wanting to compile software under Solus, we recommend installing our system.devel component by running the following:
 
-``` bash
+```bash
 sudo eopkg install -c system.devel
 ```
 

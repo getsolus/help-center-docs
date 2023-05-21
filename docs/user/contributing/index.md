@@ -3,6 +3,7 @@ title: Contributing
 summary: Contributing to Solus
 date: 2022-12-16
 ---
+
 # Getting Involved
 
 Solus is a big undertaking, and as such there are many ways in which your involvement can help us. Naturally, that means there are also many ways in which you can help out.
@@ -16,10 +17,11 @@ The Solus Project enforces a set of community guidelines to maintain respect and
 ### Community Forums
 
 With so many new users joining, there are always more people needing help. A great way to help us out, would be to help out our users on the [Solus Project Forums](https://discuss.getsol.us).
+
 ### IRC
 
 [Internet Relay Chat](https:/.wikipedia.org/wiki/Internet_Relay_Chat) is a great way to discuss issues and development with the community, and project developers. It's also a great place for getting support, but remember due
-to timezone differences there might not always be people present to answer your query immediately. You can access IRC using free clients like Hexchat (preinstalled on Solus) and Quassel! *Note that web IRC clients are not permitted..*
+to timezone differences there might not always be people present to answer your query immediately. You can access IRC using free clients like Hexchat (preinstalled on Solus) and Quassel! _Note that web IRC clients are not permitted.._
 
 You will find the following Solus channels on the [Libera Chat](https://libera.chat/) IRC network:
 
@@ -60,13 +62,13 @@ and contribute to the community by packaging software. If you're interested in l
 We're always looking to improve our systems, especially when they're not functioning as expected. By reporting bugs, you improve the system not only for you, but for all Solus Project users.
 
 - [Budgie Desktop](https://github.com/solus-project/budgie-desktop/issues)
-Solus Budgie Desktop issues are filed in the solus-project repo on github.
+  Solus Budgie Desktop issues are filed in the solus-project repo on github.
 
 - [Developer Portal](https://dev.getsol.us)
-Most bug reports about Solus itself, and its packages, should be filed here.
+  Most bug reports about Solus itself, and its packages, should be filed here.
 
 - [Solus Github Repos](https://github.com/getsolus)
-Certain parts of Solus, such as the Software Center, have repos on the getsolus repo on github. Check here to see if the system in question is listed. If so, file the bug in the appropriate repo.
+  Certain parts of Solus, such as the Software Center, have repos on the getsolus repo on github. Check here to see if the system in question is listed. If so, file the bug in the appropriate repo.
 
 ## Translations
 

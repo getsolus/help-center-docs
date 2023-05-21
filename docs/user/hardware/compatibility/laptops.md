@@ -8,7 +8,7 @@ date: 2022-12-18
 
 The following laptops have been tested and/or suggested to function correctly by our users.
 
-This list should not suggest that *only* such devices listed below are compatible with Solus, as there may be devices not listed below that are in fact compatible.
+This list should not suggest that _only_ such devices listed below are compatible with Solus, as there may be devices not listed below that are in fact compatible.
 
 ## Acer
 
@@ -52,11 +52,11 @@ This list should not suggest that *only* such devices listed below are compatibl
 - Asus Pro50SR
 - Asus ROG G750JZA
 - Asus VivoBook 15 K505ZA
- - Must use BIOS revision 306 and `linux-current` for functional touchpad.
+- Must use BIOS revision 306 and `linux-current` for functional touchpad.
 - Asus VivoBook 15 X505ZA
- - Must use BIOS revision 306 and `linux-current` for functional touchpad.
+- Must use BIOS revision 306 and `linux-current` for functional touchpad.
 - Asus VivoBook 15 X505ZA-BQ171T
- - Must use BIOS revision 306 and `linux-current` for functional touchpad.
+- Must use BIOS revision 306 and `linux-current` for functional touchpad.
 - Asus VivoBook Pro N61JA
 - Asus VivoBook Pro N61Jv
 - Asus X200MA
