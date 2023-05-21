@@ -126,10 +126,12 @@ const config = {
               {
                 label: "Twitter",
                 href: "https://twitter.com/SolusProject",
+                rel: "me",
               },
               {
                 label: "Mastodon",
                 href: "https://fosstodon.org/@Solus",
+                rel: "me",
               },
             ],
           },
@@ -143,6 +145,7 @@ const config = {
               {
                 label: "GitHub",
                 href: "https://github.com/getsolus",
+                rel: "me",
               },
               {
                 label: "Dev Tracker",
