@@ -5,6 +5,7 @@ This is the repository for Solus's Help Center documentation. This repository ex
 Stumbled on this repo and have no idea what any of this is? Check out the [Solus](https://getsol.us) operating system!
 
 ## Updating local repos after docusarus switch
+
 ```
 git branch -m master old-help-center
 git branch -m docusarus master
@@ -13,17 +14,41 @@ git branch -u origin/master master
 git remote set-head origin -a
 ```
 
-## Running Locally
+## Getting Started
 
-`npm install`
-`npm start`
+To get started developing our Docusaurus instance, or writing documentation, first [fork this project](https://github.com/getsolus/help-center-docs/fork) in order to submit pull requests for your changes
 
-# Generate a static site
+This project is written using [TypeScript](https://www.typescriptlang.org) and [React](https://reactjs.org), with some documentation being Markdown or [MDX](https://mdxjs.com/). To facilitate development, we use nvm and Yarn.
 
-`npm run build`
-`npm run serve`
+### NVM
 
-This is needed to test searching
+To set up nvm, the Node Version Manager, follow the instructions listed [here](https://github.com/nvm-sh/nvm#readme). We recommend [setting up their shell integration](https://github.com/nvm-sh/nvm#deeper-shell-integration) as well, so you can automatically switch to the correct Node version when working on this project. Otherwise, ensure you run `nvm use`. This project requires the "current" supported release series of Node.
+
+You can validate you are using the latest by running `node --version`. Your version should be at least 19.x.
+
+### Yarn
+
+This project makes use of [Yarn](https://yarnpkg.com/) for its package management. After setting up nvm and ensuring you are running the latest Node, run:
+
+```
+corepack enable
+```
+
+### Installing Dependencies
+
+To install the required dependencies, run: `yarn`
+
+### Starting Docusaurus
+
+To start the live reloading Docusaurus, run: `yarn start`
+
+### Other Useful Commands
+
+- Clear local build cache: `yarn clear`
+- Linting: `yarn lint`
+- Updating translation files: `yarn write-translations`
+- Validate build: `yarn build`
+- Run validated build: `yarn serve`
 
 ## Publishing to https://help.getsol.us (via GH Pages)
 
@@ -31,7 +56,7 @@ Ensure that you can successfully generate a static site as above.
 
 Then, when you're ready to deploy, run the following:
 
-`USE_SSH=true npm run deploy`
+`USE_SSH=true yarn run deploy`
 
 This obviously assumes that you have ssh push access to the help-center-docs repo and are using `remote.origin.url=git@github.com:getsolus/help-center-docs.git` (as listed by `git config -l`).
 
@@ -40,7 +65,6 @@ This obviously assumes that you have ssh push access to the help-center-docs rep
 ### Updating an Article
 
 When updating an article, remember to update the date.
-
 
 ### Multi-Lingual Documents
 

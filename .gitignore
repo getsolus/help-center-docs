@@ -103,9 +103,10 @@ dist
 # TernJS port file
 .tern-port
 
-# Generated docusaurus files
-.docusaurus/
+# Docusaurus
+.docusaurus
+.yarn/cache
+.yarn/install-state.gz
+build
 
 **.kate-swp
-
-build/

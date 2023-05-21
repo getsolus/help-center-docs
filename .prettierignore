@@ -1,0 +1,17 @@
+# Build artifacts
+**/.husky
+**/.next
+**/.turbo
+**/.yarn
+**/dist
+
+node_modules/
+**/node_modules
+
+# Infra for now until we know prettier doesn't do anything silly to our kubectl files
+**/infra/
+
+# LICENSE should not be touched
+LICENSE.md
+package.json
+yarn.lock
