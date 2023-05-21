@@ -81,4 +81,8 @@ Steam is currently available via the Solus repository, as the `steam` package.
 For systems running NVIDIA graphics hardware, you will need to install the corresponding 32bit video driver for your card, listed below:
 
 - Current Gen: `nvidia-glx-driver-32bit`
-- 390: `nvidia-390-glx-driver-32bit`
+- 470 series: `nvidia-470-glx-driver-32bit`
+
+:::info
+You can use our "Hardware Drivers" utility to find the right driver for your system.
+:::
