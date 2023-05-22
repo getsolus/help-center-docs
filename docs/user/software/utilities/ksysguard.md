@@ -1,7 +1,6 @@
 ---
 title: KSysGuard
 summary: Quick Start guide to KSysGuard on Solus
-date: 2022-12-16
 ---
 
 # KSysGuard

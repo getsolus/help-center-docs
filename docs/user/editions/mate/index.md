@@ -1,7 +1,6 @@
 ---
 title: MATE
 summary: A quick introduction to the MATE Edition of Solus
-date: 2022-12-16
 ---
 
 # MATE Desktop

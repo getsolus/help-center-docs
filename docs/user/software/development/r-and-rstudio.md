@@ -1,7 +1,6 @@
 ---
 title: R and Rstudio
 summary: Quick start guide for R and Rstudio on Solus
-date: 2022-12-16
 ---
 
 # R and Rstudio

@@ -1,7 +1,6 @@
 ---
 title: Getting Involved
 summary: Getting involved with the Solus community
-date: 2022-12-16
 ---
 
 # Getting Involved

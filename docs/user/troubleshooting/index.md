@@ -1,7 +1,6 @@
 ---
 title: Troubleshooting
 summary: Basic troubleshooting for some of the most common Solus problems.
-date: 2022-12-16
 ---
 
 # Troubleshooting Common Issues

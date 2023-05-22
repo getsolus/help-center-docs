@@ -1,7 +1,6 @@
 ---
 title: Requesting a Package Update
 summary: Boohoo, your favourite package is outdated!
-date: 2022-12-16
 ---
 
 # Requesting A Package Update

@@ -1,7 +1,6 @@
 ---
 title: Tips and Tricks
 summary: Useful tips and tricks for GNOME users
-date: 2022-12-16
 ---
 
 # Tips and Tricks

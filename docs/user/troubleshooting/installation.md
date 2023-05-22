@@ -1,7 +1,6 @@
 ---
 title: Installation Issues
 summary: Troubleshooting the Solus installation process
-date: 2023-01-07
 ---
 
 # Installation Issues

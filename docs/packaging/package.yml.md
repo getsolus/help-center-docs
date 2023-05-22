@@ -1,7 +1,6 @@
 ---
 title: Package YAML
 summary: Learning the package.yml packaging format
-date: 2023-05-22
 ---
 
 # Package.yml

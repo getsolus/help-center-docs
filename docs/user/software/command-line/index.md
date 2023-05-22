@@ -1,7 +1,6 @@
 ---
 title: Command Line
 summary: Installation and configuration of popular command line programs on Solus
-date: 2023-01-06
 ---
 
 # Command Line

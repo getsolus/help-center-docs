@@ -1,7 +1,6 @@
 ---
 title: Preparing to Install
 summary: Installation Guide for multiple operating systems
-date: 2022-12-16
 ---
 
 # Preparing to install

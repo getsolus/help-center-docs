@@ -1,7 +1,6 @@
 ---
 title: XRDP
 summary: User guide for XRDP on Solus
-date: 2022-12-16
 ---
 
 # XRDP

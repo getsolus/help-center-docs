@@ -1,7 +1,6 @@
 ---
 title: Tips and Tricks
 summary: Tips and Tricks for Budgie users
-date: 2022-12-16
 ---
 
 # Tips and Tricks

@@ -1,7 +1,6 @@
 ---
 title: Requesting a Package
 summary: Requesting a new package
-date: 2022-12-16
 ---
 
 # Requesting A Package

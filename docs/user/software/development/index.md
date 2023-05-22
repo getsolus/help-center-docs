@@ -1,7 +1,6 @@
 ---
 title: Development
 summary: Installation of development software on Solus
-date: 2022-12-16
 ---
 
 # Development

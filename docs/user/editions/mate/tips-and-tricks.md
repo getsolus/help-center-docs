@@ -1,7 +1,6 @@
 ---
 title: Tips and Tricks
 summary: Helpful tips and tricks for using MATE on Solus
-date: 2022-12-16
 ---
 
 # Tips and Tricks

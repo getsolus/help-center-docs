@@ -1,7 +1,6 @@
 ---
 title: Web Development
 summary: Solus specific help for different web development tools
-date: 2022-12-16
 ---
 
 # Web Development

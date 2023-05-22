@@ -1,7 +1,6 @@
 ---
 title: History and Software Rollback
 summary: History and Software Rollback
-date: 2023-01-06
 ---
 
 # History and Software Rollback

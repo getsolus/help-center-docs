@@ -1,7 +1,6 @@
 ---
 title: Gaming
 summary: Instructions for installing various gaming software on Solus
-date: 2023-01-06
 ---
 
 # Gaming

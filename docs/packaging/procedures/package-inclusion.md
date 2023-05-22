@@ -1,7 +1,6 @@
 ---
 title: Package Inclusion Policy
 summary: What's needed to include packages into the repository
-date: 2022-12-16
 ---
 
 # Package Inclusion Policy

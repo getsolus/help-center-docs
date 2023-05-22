@@ -1,7 +1,6 @@
 ---
 title: Apple
 summary: Quick guide to working with Apple devices on Solus
-date: 2022-12-18
 ---
 
 # Apple

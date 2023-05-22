@@ -1,7 +1,6 @@
 ---
 title: Updating an Existing Package
 summary: Updating an Existing Package
-date: 2022-12-16
 ---
 
 # Updating an Existing Package

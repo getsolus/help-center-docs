@@ -1,7 +1,6 @@
 ---
 title: PostgreSQL
 summary: A quick guide to using Postgres on Solus
-date: 2022-12-16
 ---
 
 # PostgreSQL server

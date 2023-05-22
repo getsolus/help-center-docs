@@ -1,7 +1,6 @@
 ---
 title: TigerVNC
 summary: A quick start guide to using TigerVNC on Solus
-date: 2022-12-16
 ---
 
 # TigerVNC

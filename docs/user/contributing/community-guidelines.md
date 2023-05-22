@@ -1,7 +1,6 @@
 ---
 title: Community Guidelines
 summary: Community Guidelines
-date: 2022-12-16
 ---
 
 # Community Guidelines

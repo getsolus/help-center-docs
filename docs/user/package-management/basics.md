@@ -1,7 +1,6 @@
 ---
 title: Basics to Package Management
 summary: Basics to Package Management
-date: 2023-01-06
 ---
 
 # Basics to Package Management

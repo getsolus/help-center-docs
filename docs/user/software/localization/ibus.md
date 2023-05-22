@@ -1,7 +1,6 @@
 ---
 title: IBus
 summary: Configuration of additional languages via IBUS
-date: 2022-12-16
 ---
 
 # IBus

@@ -1,7 +1,6 @@
 ---
 title: Prepare for Packaging
 summary: Quick guide on getting your system set up for packaging on Solus
-date: 2022-12-16
 ---
 
 # Prepare for Packaging
