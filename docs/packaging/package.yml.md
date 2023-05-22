@@ -1,7 +1,7 @@
 ---
 title: Package YAML
 summary: Learning the package.yml packaging format
-date: 2022-12-16
+date: 2023-05-22
 ---
 
 # Package.yml
@@ -49,12 +49,12 @@ Not all fields in `package.yml` are mandatory, but a small selection are. Below 
 ### Mandatory Keys
 
 | Key Name        | Type        | Description                                                                                                                                                                                                         |
-| --------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| --------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **name**        | `string`    | The name of the package. This is also used as the base of all sub-package names. Unless unavoidable, this should match the upstream name.                                                                           |
 | **version**     | `string`    | The version of the currently packaged software. This is taken from the tarball in most cases.                                                                                                                       |
 | **release**     | `integer`   | Specifies the current release number. Updates in the package number are based on this `release` number, _not_ the `version` number. As such, to release an update to users, this number must be incremented by one. |
 | **license**     | `string(s)` | Valid upstream license(s). Try to ensure these use [SPDX identifiers](https://spdx.org/licenses/).                                                                                                                  |
-| **source**      | `dict(s)`   | Upstream source URL (i.e. tarball), with the valid `sha256sum` as a value. Alternatively, the git repository URL prefixed with `git                                                                                 | ` and a git tag or commit hash as a value. |
+| **source**      | `dict(s)`   | Upstream source URL (i.e. tarball), with the valid `sha256sum` as a value. Alternatively, the git repository URL prefixed with "git&#124;" and a git tag or commit hash as a value. |
 | **component**   | `string`    | Component / group of packages this package belongs to. Check available components via `eopkg lc`                                                                                                                    |
 | **summary**     | `string`    | Brief package summary, or display name.                                                                                                                                                                             |
 | **description** | `string`    | More extensive description of the software, usually taken from the vendor website.                                                                                                                                  |
@@ -202,7 +202,7 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 | **%ARCH%**        | Indicates the current build architecture.                                                                                                        |
 | **%CC%**          | C compiler                                                                                                                                       |
 | **%CFLAGS%**      | cflags as set in `eopkg.conf`                                                                                                                    |
-| **%CONFOPTS%**    | Flags / options for configuration, such as `--prefix=%PREFIX%`. [Full List.](https://github.com/getsolus/ypkg/blob/master/ypkg2/rc.yml#L376-378) |
+| **%CONFOPTS%**    | Flags / options for configuration, such as `--prefix=%PREFIX%`. [Full List.](https://github.com/getsolus/ypkg/blob/master/ypkg2/rc.yml#L353-L356) |
 | **%CXX%**         | C++ compiler                                                                                                                                     |
 | **%CXXFLAGS%**    | cxxflags as set in `eopkg.conf`                                                                                                                  |
 | **%JOBS%**        | jobs, as set in `eopkg.conf`                                                                                                                     |
