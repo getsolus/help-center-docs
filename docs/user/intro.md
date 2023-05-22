@@ -1,7 +1,7 @@
 ---
 title: Welcome
 summary: Front page of the Help Center
-date: 2022-12-16
+date: 2023-05-21
 sidebar_position: 0
 ---
 
@@ -47,6 +47,8 @@ Our Flarum-powered forums are easy to use from any device and are a great resour
 [Matrix](<https://en.wikipedia.org/wiki/Matrix_(protocol)>) is a great way to discuss issues and development with the community, and project developers in real-time. It's also a great place for getting support, but remember due
 to timezone differences there might not always be people there to answer your question immediately. You can access Matrix using a client like [Element Web](https://app.element.io/), or many [others](https://matrix.org/clients/). You will need a Matrix account.
 
+Read more about Solus on Matrix [here.](/docs/user/contributing/getting-involved.md#matrix-chat)
+
 **[Reddit](https://www.reddit.com/r/SolusProject)**
 
 If you are a Redditor, our subreddit fulfills a similar purpose to the forums.
@@ -54,7 +56,3 @@ If you are a Redditor, our subreddit fulfills a similar purpose to the forums.
 **[Dev Tracker](https://dev.getsol.us)**
 
 If you are having issues with your Solus system or one of our software packages not working as expected, you might consider filing a bug report on our Dev Tracker.
-
-**Matrix**
-
-Last, but not least, we maintain an active presence on [Matrix](https://matrix.org). Sign up and head over to [`#solus:matrix.org`](https://matrix.to/#/#solus:matrix.org)` to get started. Read more about Solus on Matrix [here.](/docs/user/contributing/getting-involved.md#matrix-chat)
