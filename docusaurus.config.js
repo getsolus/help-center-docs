@@ -76,7 +76,6 @@ const config = {
         logo: {
           alt: "Solus Logo",
           src: "img/logo.svg",
-          href: "https://getsol.us",
         },
         items: [
           {
@@ -84,7 +83,6 @@ const config = {
             sidebarId: "userSidebar",
             position: "left",
             label: "Help Center Home",
-            href: "/",
           },
           {
             type: "docSidebar",
@@ -94,8 +92,8 @@ const config = {
           },
           { to: "https://getsol.us/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/getsolus",
-            label: "GitHub",
+            href: "https://getsol.us",
+            label: "getsol.us",
             position: "right",
           },
         ],
