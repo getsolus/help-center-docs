@@ -101,7 +101,7 @@ make -j`nproc`
 
 Google has provided build instructions for building AOSP on Ubuntu and MacOS, you may find additional useful information there, not stated here.
 
-https://source.android.com/source/requirements
+https://source.android.com/docs/setup/start/requirements
 
 If your device is supported by LineageOS you can choose your device and follow the device specific build instructions at the LineageOS Wiki.
 

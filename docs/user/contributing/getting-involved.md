@@ -49,7 +49,7 @@ Solus is funded through our [Open Collective](https://opencollective.com/getsolu
 
 ## Improving Documentation
 
-Our Help Center improves when the documentation improves. If there are docs that you think would be valuable to add, get involved by submitting pull requests to our [Help Center Docs](https://github.com/solus-project/help-center-docs) repo!
+Our Help Center improves when the documentation improves. If there are docs that you think would be valuable to add, get involved by submitting pull requests to our [Help Center Docs](https://github.com/getsolus/help-center-docs) repo!
 
 ## Packaging
 
@@ -60,8 +60,8 @@ and contribute to the community by packaging software. If you're interested in l
 
 We're always looking to improve our systems, especially when they're not functioning as expected. By reporting bugs, you improve the system not only for you, but for all Solus Project users.
 
-- [Budgie Desktop](https://github.com/solus-project/budgie-desktop/issues)
-  Solus Budgie Desktop issues are filed in the solus-project repo on github.
+- [Budgie Desktop](https://github.com/buddiesofbudgie/budgie-desktop/issues)
+  Budgie Desktop issues are filed in the buddiesofbudgie repo on github.
 
 - [Developer Portal](https://dev.getsol.us)
   Most bug reports about Solus itself, and its packages, should be filed here.
