@@ -14,31 +14,32 @@ All `package.yml` files **must** be valid YAML.
 The file is organised into a key→value hierarchy. The `ypkg` tool parses a `package.yml` file to build the corresponding package in a declarative manner, so most of the keys are simple strings, lists or nested key→value pairs. A special case consists in the packaging steps, which are scripts.
 
 An example file follows:
-
+<!-- prettier-ignore -->
 ```yaml
-name: nano
-version: 2.9.5
-release: 96
-source:
-  - https://www.nano-editor.org/dist/v2.9/nano-2.9.5.tar.xz: 7b8d181cb57f42fa86a380bb9ad46abab859b60383607f731b65a9077f4b4e19
-license: GPL-3.0-or-later
-summary: Small, friendly text editor inspired by Pico
-component: system.devel
+name       : nano
+version    : 2.9.5
+release    : 96
+source     :
+    - https://www.nano-editor.org/dist/v2.9/nano-2.9.5.tar.xz: 7b8d181cb57f42fa86a380bb9ad46abab859b60383607f731b65a9077f4b4e19
+homepage   : https://www.nano-editor.org
+license    : GPL-3.0-or-later
+summary    : Small, friendly text editor inspired by Pico
+component  : system.devel
 description: |
-  GNU nano is an easy-to-use text editor originally designed as a replacement for Pico, the ncurses-based editor from the non-free mailer package Pine (itself now available under the Apache License as Alpine).
-setup: |
-  %patch -p1 < $pkgfiles/0001-Use-a-stateless-configuration.patch
-  %reconfigure --enable-utf8 --docdir=/usr/share/doc/nano
-build: |
-  %make
-install: |
-  %make_install
-  install -D -m 00644 $pkgfiles/nanorc $installdir/usr/share/defaults/nano/nanorc
-  install -D -m 00644 $pkgfiles/git.nanorc $installdir/usr/share/nano/git.nanorc
-  # https://github.com/scopatz/nanorc
-  for rcFile in $pkgfiles/nanorc-extras/*.nanorc; do
-      install -m 00644 $rcFile $installdir/usr/share/nano
-  done
+    GNU nano is an easy-to-use text editor originally designed as a replacement for Pico, the ncurses-based editor from the non-free mailer package Pine (itself now available under the Apache License as Alpine).
+setup      : |
+    %patch -p1 < $pkgfiles/0001-Use-a-stateless-configuration.patch
+    %reconfigure --enable-utf8 --docdir=/usr/share/doc/nano
+build      : |
+    %make
+install    : |
+    %make_install
+    install -D -m 00644 $pkgfiles/nanorc $installdir/usr/share/defaults/nano/nanorc
+    install -D -m 00644 $pkgfiles/git.nanorc $installdir/usr/share/nano/git.nanorc
+    # https://github.com/scopatz/nanorc
+    for rcFile in $pkgfiles/nanorc-extras/*.nanorc; do
+        install -m 00644 $rcFile $installdir/usr/share/nano
+    done
 ```
 
 ## Keys
@@ -53,7 +54,7 @@ Not all fields in `package.yml` are mandatory, but a small selection are. Below 
 | **version**     | `string`    | The version of the currently packaged software. This is taken from the tarball in most cases.                                                                                                                       |
 | **release**     | `integer`   | Specifies the current release number. Updates in the package number are based on this `release` number, _not_ the `version` number. As such, to release an update to users, this number must be incremented by one. |
 | **license**     | `string(s)` | Valid upstream license(s). Try to ensure these use [SPDX identifiers](https://spdx.org/licenses/).                                                                                                                  |
-| **source**      | `dict(s)`   | Upstream source URL (i.e. tarball), with the valid `sha256sum` as a value. Alternatively, the git repository URL prefixed with "git&#124;" and a git tag or commit hash as a value. |
+| **source**      | `dict(s)`   | Upstream source URL (i.e. tarball), with the valid `sha256sum` as a value. Alternatively, the git repository URL prefixed with "git&#124;" and a git tag or commit hash as a value.                                 |
 | **component**   | `string`    | Component / group of packages this package belongs to. Check available components via `eopkg lc`                                                                                                                    |
 | **summary**     | `string`    | Brief package summary, or display name.                                                                                                                                                                             |
 | **description** | `string`    | More extensive description of the software, usually taken from the vendor website.                                                                                                                                  |
@@ -196,23 +197,23 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 
 ### Variable Macros
 
-| Macro             | Description                                                                                                                                      |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **%ARCH%**        | Indicates the current build architecture.                                                                                                        |
-| **%CC%**          | C compiler                                                                                                                                       |
-| **%CFLAGS%**      | cflags as set in `eopkg.conf`                                                                                                                    |
+| Macro             | Description                                                                                                                                       |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **%ARCH%**        | Indicates the current build architecture.                                                                                                         |
+| **%CC%**          | C compiler                                                                                                                                        |
+| **%CFLAGS%**      | cflags as set in `eopkg.conf`                                                                                                                     |
 | **%CONFOPTS%**    | Flags / options for configuration, such as `--prefix=%PREFIX%`. [Full List.](https://github.com/getsolus/ypkg/blob/master/ypkg2/rc.yml#L353-L356) |
-| **%CXX%**         | C++ compiler                                                                                                                                     |
-| **%CXXFLAGS%**    | cxxflags as set in `eopkg.conf`                                                                                                                  |
-| **%JOBS%**        | jobs, as set in `eopkg.conf`                                                                                                                     |
-| **%LDFLAGS%**     | ldflags as set in `eopkg.conf`                                                                                                                   |
-| **%LIBSUFFIX%**   | Library suffix (either 32 for 32-bit or 64 for 64-bit)                                                                                           |
-| **%PREFIX%**      | Hard-coded prefix `/usr`                                                                                                                         |
-| **%YJOBS%**       | Job count without `-j` as set in `eopkg.conf`                                                                                                    |
-| **%installroot%** | Hard-coded install directory                                                                                                                     |
-| **%libdir%**      | The distribution’s default library directory, i.e. `/usr/lib64` (Alters for `emul32`)                                                            |
-| **%version%**     | Version of the package, as specified in the version key.                                                                                         |
-| **%workdir%**     | Hard-coded work directory (source tree)                                                                                                          |
+| **%CXX%**         | C++ compiler                                                                                                                                      |
+| **%CXXFLAGS%**    | cxxflags as set in `eopkg.conf`                                                                                                                   |
+| **%JOBS%**        | jobs, as set in `eopkg.conf`                                                                                                                      |
+| **%LDFLAGS%**     | ldflags as set in `eopkg.conf`                                                                                                                    |
+| **%LIBSUFFIX%**   | Library suffix (either 32 for 32-bit or 64 for 64-bit)                                                                                            |
+| **%PREFIX%**      | Hard-coded prefix `/usr`                                                                                                                          |
+| **%YJOBS%**       | Job count without `-j` as set in `eopkg.conf`                                                                                                     |
+| **%installroot%** | Hard-coded install directory                                                                                                                      |
+| **%libdir%**      | The distribution’s default library directory, i.e. `/usr/lib64` (Alters for `emul32`)                                                             |
+| **%version%**     | Version of the package, as specified in the version key.                                                                                          |
+| **%workdir%**     | Hard-coded work directory (source tree)                                                                                                           |
 
 ## Variables
 
