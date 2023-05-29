@@ -1,7 +1,6 @@
 ---
 title: KDE Wallet
 summary: A quick introduction to using KWallet on Solus
-date: 2022-12-16
 ---
 
 # KDE Wallet and SSH keys

@@ -1,7 +1,6 @@
 ---
 title: Printers and Scanners
 summary: Guide to using printers and scanners on Solus
-date: 2022-12-16
 ---
 
 # Printers and Scanners

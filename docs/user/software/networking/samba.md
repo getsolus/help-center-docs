@@ -1,7 +1,6 @@
 ---
 title: Samba File Sharing
 summary: A quick start guide to Samba on Solus
-date: 2022-12-16
 ---
 
 # Samba file sharing

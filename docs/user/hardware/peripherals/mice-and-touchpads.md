@@ -1,7 +1,6 @@
 ---
 title: Mice and Touchpads
 summary: Guide to using and configuring input devices on Solus
-date: 2022-12-18
 ---
 
 # Mice and Touchpads

@@ -1,7 +1,6 @@
 ---
 title: Rust
 summary: A quick guide to getting set up for Rust development on Solus
-date: 2022-12-16
 ---
 
 # Rust

@@ -1,7 +1,6 @@
 ---
 title: Laptops
 summary: List of known-working laptop hardware from various vendors
-date: 2022-12-18
 ---
 
 # Laptops

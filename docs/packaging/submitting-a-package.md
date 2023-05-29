@@ -1,7 +1,6 @@
 ---
 title: Submitting the Package
 summary: Submitting the Package
-date: 2022-12-16
 ---
 
 # Submitting the Package

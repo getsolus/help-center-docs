@@ -1,7 +1,6 @@
 ---
 title: Booting with Secure Boot Enabled
 summary: Instructions for enrolling the Solus Certificate when Secure Boot is enabled
-date: 2022-12-27
 ---
 
 # Booting with Secure Boot Enabled

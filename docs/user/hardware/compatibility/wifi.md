@@ -1,7 +1,6 @@
 ---
 title: WiFi
 summary:
-date: 2022-12-18
 ---
 
 # WiFi

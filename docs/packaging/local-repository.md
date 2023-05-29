@@ -1,7 +1,6 @@
 ---
 title: Local Repository
 summary: Packaging Using a Local Repository
-date: 2022-12-16
 ---
 
 # Packaging Using a Local Repository

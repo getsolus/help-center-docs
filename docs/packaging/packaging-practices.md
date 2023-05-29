@@ -1,7 +1,6 @@
 ---
 title: Packaging Practices
 summary: Learning the best packaging practices
-date: 2022-12-16
 ---
 
 # Packaging Practices

@@ -1,7 +1,6 @@
 ---
 title: Desktops
 summary: Quick guides on switching between or installing additional Desktop Environments on Solus
-date: 2022-12-16
 ---
 
 # Desktop Environments

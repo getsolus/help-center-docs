@@ -1,7 +1,6 @@
 ---
 title: Configuration
 summary: Help for configuring MATE Desktop on Solus
-date: 2022-12-16
 ---
 
 # Configuration

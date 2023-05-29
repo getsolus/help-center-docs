@@ -1,7 +1,6 @@
 ---
 title: VirtualBox
 summary: Quick start guide for VirtualBox on Solus
-date: 2022-12-16
 ---
 
 # VirtualBox

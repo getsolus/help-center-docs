@@ -1,7 +1,6 @@
 ---
 title: Release Processes
 summary: Release Processes
-date: 2022-12-16
 ---
 
 # Release Processes

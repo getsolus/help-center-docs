@@ -1,7 +1,6 @@
 ---
 title: Open Broadcaster Software (OBS)
 summary: A quick start guide to OBS on Solus
-date: 2022-12-16
 ---
 
 # Open Broadcaster Software (OBS)

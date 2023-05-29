@@ -1,7 +1,6 @@
 ---
 title: GNOME
 summary: A quick introduction to the GNOME Edition of Solus
-date: 2022-12-16
 ---
 
 # GNOME Shell

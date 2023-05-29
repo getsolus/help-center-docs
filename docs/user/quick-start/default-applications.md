@@ -1,7 +1,6 @@
 ---
 title: Default Applications
 summary: A guide to the default applications included with Solus.
-date: 2022-12-16
 ---
 
 # Default Applications

@@ -1,7 +1,6 @@
 ---
 title: Boot Rescue
 summary: Troubleshooting the boot process for Solus
-date: 2023-01-06
 ---
 
 # Boot Rescue

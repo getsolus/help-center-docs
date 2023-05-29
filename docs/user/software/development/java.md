@@ -1,7 +1,6 @@
 ---
 title: Java
 summary: A quick guide to Java development on Solus
-date: 2022-12-16
 ---
 
 # Java

@@ -1,7 +1,6 @@
 ---
 title: Welcome
 summary: Front page of the Help Center
-date: 2023-05-21
 sidebar_position: 0
 ---
 

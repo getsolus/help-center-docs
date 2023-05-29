@@ -1,7 +1,6 @@
 ---
 title: Android
 summary: A quick guide to getting set up for Android development on Solus
-date: 2023-05-20
 ---
 
 # Building Android™ on Solus

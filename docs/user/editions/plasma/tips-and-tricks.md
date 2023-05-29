@@ -1,7 +1,6 @@
 ---
 title: Plasma
 summary: A quick introduction to the Plasma Edition of Solus
-date: 2022-12-16
 ---
 
 # Tips and Tricks

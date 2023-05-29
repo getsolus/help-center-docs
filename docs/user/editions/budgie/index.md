@@ -1,7 +1,6 @@
 ---
 title: Budgie
 summary: A quick introduction to the Budgie Edition of Solus
-date: 2022-12-16
 ---
 
 # Budgie Desktop

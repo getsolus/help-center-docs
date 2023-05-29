@@ -1,7 +1,6 @@
 ---
 title: Third Party
 summary: Quick Installation guide for all of the Third Party applications Solus can help you install
-date: 2022-12-16
 ---
 
 # Third Party

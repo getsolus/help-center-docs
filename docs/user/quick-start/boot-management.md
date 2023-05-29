@@ -1,7 +1,6 @@
 ---
 title: Boot Management
 summary: Guide to customizing the Solus boot process
-date: 2022-12-16
 ---
 
 # Boot Management

@@ -1,7 +1,6 @@
 ---
 title: Wireshark
 summary: A quick start guide to Wireshark on Solus
-date: 2022-12-16
 ---
 
 # Wireshark

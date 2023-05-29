@@ -1,7 +1,6 @@
 ---
 title: Disk Partitioning
 summary: Overview of the partitioning that the installer can perform
-date: 2022-12-16
 ---
 
 # Disk Partitioning

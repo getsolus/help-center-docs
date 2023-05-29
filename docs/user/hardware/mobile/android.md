@@ -1,7 +1,6 @@
 ---
 title: Android
 summary: Quick guide to working with Android devices on Solus
-date: 2022-12-16
 ---
 
 # Android

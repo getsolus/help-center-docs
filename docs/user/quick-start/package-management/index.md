@@ -1,7 +1,6 @@
 ---
 title: Software Center
 summary: Introduction to the Solus Software Center
-date: 2022-12-16
 ---
 
 # Software Center
