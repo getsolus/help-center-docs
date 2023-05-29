@@ -11,7 +11,7 @@ GNOME Shell is provided by default with the GNOME Edition of Solus. They describ
 
 Here are some links related to this project that you may find helpful:
 
-- [Homepage](https://gnome.org)
+- [Homepage](https://www.gnome.org/)
 - [News](https://thisweek.gnome.org/)
 - [Support](https://help.gnome.org/users/gnome-help/stable/)
 

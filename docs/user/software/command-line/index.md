@@ -171,4 +171,4 @@ source /usr/lib/python3.9/site-packages/powerline/bindings/fish/powerline-setup.
 source /usr/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
 ```
 
-Read more about powerline inside the Docs [Link](https://powerline.readthedocs.iomaster/usage/shell-prompts.html#)
+Read more about powerline on its [docs website](https://powerline.readthedocs.io/en/master/usage.html#shell-prompts-requirements)

@@ -5,7 +5,7 @@ summary: Quick start guide for VirtualBox on Solus
 
 # VirtualBox
 
-[VirtualBox](https://virtualbox.org) is an x86 and x86_64 virtualization software package developed by Oracle.
+[VirtualBox](https://www.virtualbox.org/) is an x86 and x86_64 virtualization software package developed by Oracle.
 
 ## Before you start
 

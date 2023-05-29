@@ -48,4 +48,4 @@ sudo eopkg install i3
 
 If you want to use i3 with support for GNOME Settings Daemon and other GNOME functionality, follow the instructions for installation of GNOME Shell, then choose GNOME+i3 at the login screen to use it.
 
-For more information about tiling window managers, click [here](https:/.wikipedia.org/wiki/Tiling_window_manager).
+For more information about tiling window managers, click [here](https:/en.wikipedia.org/wiki/Tiling_window_manager).

@@ -133,7 +133,7 @@ You can easily burn an ISO image to a DVD, on Windows 7 and newer, by using Wind
 
 ### USB
 
-You can easily burn an ISO image to a USB by using graphical tool [Rufus](https://rufus.akeo.ie/).
+You can easily burn an ISO image to a USB by using graphical tool [Rufus](https://rufus.ie/).
 
 1. Open Rufus.
 2. Ensure your device is correct by checking the contents of the Device dropdown.
@@ -160,7 +160,7 @@ Since OS X El Capitan (10.11), the easiest way to burn a DVD is:
 
 #### Graphical Tool
 
-One of the easiest ways to burn an ISO image to a USB thumb drive is by using a graphical tool called [Etcher](https://etcher.io/).
+One of the easiest ways to burn an ISO image to a USB thumb drive is by using a graphical tool called [Etcher](https://etcher.balena.io/).
 
 1. Open Etcher.
 2. Click on “Select image” and then select the ISO and click “Open”.

@@ -29,7 +29,7 @@ It is possible to connect to the database using the PostgreSQL user:
 sudo -u postgres psql
 ```
 
-Note that all local connections are trusted and can access all databases by default. This can be changed in `/var/db/pgsql/data/pg_hba.conf`, see the [PostgreSQL documentation](https://www.postgresql.org/docs/user/13/auth-pg-hba-conf.html) for more details.
+Note that all local connections are trusted and can access all databases by default. This can be changed in `/var/db/pgsql/data/pg_hba.conf`, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html) for more details.
 
 ## Updating to 15.1
 
