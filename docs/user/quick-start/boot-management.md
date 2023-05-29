@@ -47,7 +47,6 @@ By default, Solus utilizes our linux-current kernel. The separate kernel branche
 | bbswitch                | bbswitch-current                |
 | broadcom-sta            | broadcom-sta-current            |
 | linux-lts-headers       | linux-current-headers           |
-| nvidia-390-glx-driver   | nvidia-390-glx-driver-current   |
 | nvidia-470-glx-driver   | nvidia-470-glx-driver-current   |
 | nvidia-beta-driver      | nvidia-beta-driver-current      |
 | nvidia-developer-driver | nvidia-developer-driver-current |

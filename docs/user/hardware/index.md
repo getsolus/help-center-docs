@@ -59,7 +59,7 @@ If there are proprietary drivers that can be installed, they will show up in the
 | Asus        | piper                       |
 | Broadcom    | broadcom-sta                |
 | Logitech    | piper                       |
-| Nvidia      | 390, 370, Stable, Developer |
+| Nvidia      | 470, Main Series            |
 | Razer       | openrazer                   |
 | Roccat      | piper                       |
 | SteelSeries | piper                       |
