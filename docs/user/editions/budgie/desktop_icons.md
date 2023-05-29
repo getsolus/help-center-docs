@@ -1,7 +1,6 @@
 ---
 title: Desktop Icons
 summary: Switching to Nemo desktop icons
-date: 2023-05-20
 ---
 
 # Desktop Icons
