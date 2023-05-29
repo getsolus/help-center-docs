@@ -41,11 +41,3 @@ budgie-panel --reset --replace &
 ```
 
 After this you can press CTRL + D to close the terminal without closing the Budgie Panel process.
-<<<<<<< HEAD
-
-> TODO: There's got to be more that we can add here
-||||||| parent of 066a7b67 (Update Budgie tips and tricks page)
-
-> TODO: There's got to be more that we can add here
-=======
->>>>>>> 066a7b67 (Update Budgie tips and tricks page)
