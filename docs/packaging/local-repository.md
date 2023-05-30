@@ -66,7 +66,7 @@ But first, let's list the repositories currently known to eopkg with `eopkg lr` 
 
 ```
 Solus [active]
-   https://mirrors.rit.edu/solus/packages/unstable/eopkg-index.xml.xz
+   https://cdn.getsol.us/repo/unstable/eopkg-index.xml.xz
 ```
 
 #### Adding repositories in the correct order
@@ -75,7 +75,7 @@ Now the repositories need to be added to account for the desired dependency reso
 
 ```
 sudo eopkg ar Local /var/lib/solbuild/local/eopkg-index.xml.xz
-sudo eopkg ar Solus https://mirrors.rit.edu/solus/packages/unstable/eopkg-index.xml.xz
+sudo eopkg ar Solus https://cdn.getsol.us/repo/unstable/eopkg-index.xml.xz
 ```
 
 This should yield output similar to:
@@ -85,7 +85,7 @@ $ sudo eopkg ar Local /var/lib/solbuild/local/eopkg-index.xml.xz
 Repo Local added to system.
 Updating repository: Local
 Package database updated.
-$ sudo eopkg ar Solus https://mirrors.rit.edu/solus/packages/unstable/eopkg-index.xml.xz
+$ sudo eopkg ar Solus https://cdn.getsol.us/repo/unstable/eopkg-index.xml.xz
 Repo already present with name Solus and same URL. Removing first.
 Repo Solus added to system.
 Updating repository: Solus
@@ -105,7 +105,7 @@ $ eopkg lr
 Local [active]
    /var/lib/solbuild/local/eopkg-index.xml.xz
 Solus [active]
-   https://mirrors.rit.edu/solus/packages/unstable/eopkg-index.xml.xz
+   https://cdn.getsol.us/repo/unstable/eopkg-index.xml.xz
 ```
 
 #### Disabling the local solbuild repository in eopkg
@@ -120,7 +120,7 @@ $ sudo eopkg lr
 Local [inactive]
    /var/lib/solbuild/local/eopkg-index.xml.xz
 Solus [active]
-   https://mirrors.rit.edu/solus/packages/unstable/eopkg-index.xml.xz
+   https://cdn.getsol.us/repo/unstable/eopkg-index.xml.xz
 ```
 
 The `Local` eopkg repository can be re-enabled with `sudo eopkg enable-repo Local`.
@@ -131,7 +131,7 @@ $ sudo eopkg lr
 Local [active]
    /var/lib/solbuild/local/eopkg-index.xml.xz
 Solus [active]
-   https://mirrors.rit.edu/solus/packages/unstable/eopkg-index.xml.xz
+   https://cdn.getsol.us/repo/unstable/eopkg-index.xml.xz
 ```
 
 ## Closing thoughts
