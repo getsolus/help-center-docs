@@ -137,14 +137,3 @@ sudo systemctl stop nginx   # To stop nginx.
 
 More details about `systemctl` are available [at this address](https://www.freedesktop.org/software/systemd/man/systemctl.html).
 
-# Container Management
-
-## Vagrant
-
-Vagrant is a tool for building complete development environments. You can use providers listed below with Vagrant, which itself is installable via the `vagrant` package.
-
-### Providers
-
-- **Docker:** You can use Docker as a provider for Vagrant. You can install Docker via the `docker` package.
-
-- **VirtualBox:** You can use VirtualBox as a provider by following the "Solus As Host" instructions [here](/docs/user/software/virtualization/virtualbox#solus-as-host).
