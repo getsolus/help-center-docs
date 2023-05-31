@@ -5,6 +5,8 @@ summary: Modifying the eopkg configuration
 
 # Modifying the Eopkg Configuration
 
+The eopkg configuration file changes how eopkg works. The first section in the config has settings for the process of building a package. The second section allows you to configure the directories that eopkg uses for various operations. Lastly, the `general` section contains settings for the general operation of eopkg.
+
 ## Copying the default configuration
 
 Solus aims to be a stateless operating system, so the default configuration file for eopkg is saved to `/usr/share/defaults/eopkg/eopkg.conf`. To modify the configuration, you'll have to start by copying the default configuration file into `/etc/eopkg` so it will override the default file:
