@@ -3,7 +3,7 @@ title: Eopkg Configuration
 summary: Modifying the eopkg configuration
 ---
 
-# Modifying the Eopkg Configuration
+# Eopkg Configuration
 
 The eopkg configuration file changes how eopkg works. The first section in the config has settings for the process of building a package. The second section allows you to configure the directories that eopkg uses for various operations. Lastly, the `general` section contains settings for the general operation of eopkg.
 
@@ -19,7 +19,7 @@ Once the file has been copied, you can edit it with your text editor of choice.
 
 ## Notable keys
 
-Most keys in the config you'll probably want to leave untouched. Some, however, are useful to know about:
+Most keys in the config you'll probably want to leave untouched. However, some are useful to know about:
 
 | Key               | Description                                                  | Values        |
 | -------------------------------------------------------------------------------- | ------------- |
