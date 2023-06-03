@@ -63,7 +63,7 @@ We're always looking to improve our systems, especially when they're not functio
 - [Budgie Desktop](https://github.com/buddiesofbudgie/budgie-desktop/issues)
   Budgie Desktop issues are filed in the buddiesofbudgie repo on github.
 
-- [Developer Portal](https://dev.getsol.us)
+- [Dev Tracker](https://dev.getsol.us)
   Most bug reports about Solus itself, and its packages, should be filed here.
 
 - [Solus Github Repos](https://github.com/getsolus)

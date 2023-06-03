@@ -25,7 +25,7 @@ include ../Makefile.common
 Lastly, many package builds may result in the generation of an ABI report. These files start with `abi_*` and must also
 be included, as they allow simple tracking of changes to symbols and dependencies.
 
-For all patch submissions you must be using the `arcanist` utility to communicate with the [Solus Developer Portal](https://dev.getsol.us/)
+For all patch submissions you must be using the `arcanist` utility to communicate with the [Solus Dev Tracker](https://dev.getsol.us/)
 
 ## Prior to Patch Submission
 
@@ -38,19 +38,6 @@ Please refrain from submitting a patch for the following instances:
 
 - For a package that is yet to be accepted for inclusion by a member of the Triage Team. We welcome you to politely reach out via the package request task or [Matrix](/docs/user/contributing/getting-involved#matrix-chat) if you deem the review of the request to be time-sensitive in nature.
 - If your patch is a Work In Progress / WIP. Completed patches or patches which have a request for comments are accepted, however for request for comments please ensure your patch title contains `[RFC]`. WIP patches just clutter Differential and make patch review by the team more time consuming and introduces unnecessary work.
-
-## Setting up Arcanist
-
-In three easy steps, you can set up arcanist for the first time:
-
-```bash
-sudo eopkg it arcanist
-arc set-config default https://dev.getsol.us
-arc install-certificate
-```
-
-On the third step you will be given a unique link to log into the Developer Portal, to create a `Conduit API Token`. This
-token will be used to allow the CLI `arc` utility to communicate with Phabricator.
 
 ## Creating the patch
 
@@ -76,12 +63,12 @@ installed it, it's time to commit your changes with `git commit`.
 Make sure you provide a meaningful summary and a separate body to your commit message. For more information
 on suitable commit messages, please check the [tooling central documentation](https://github.com/solus-project/tooling-central/blob/master/README.rst#using-git).
 
-- If you want to link this patch to an issue on the Developer portal, simply mention it in your commit message: `The inclusion of <somepackage> fixes T1234`
+- If you want to link this patch to an issue on the Dev Tracker, simply mention it in your commit message: `The inclusion of <somepackage> fixes T1234`
 - If you need a change to depend on another change, mention it in the commit message too: `Depends on D5`
 
 ### Submitting for Review
 
-Now you have your git commit, it's time to send it to us for review. Using the CLI again, simply issue: `arc diff`
+Now you have your git commit, it's time to send it to us for review using `arcanist`. Using the CLI again, simply issue: `arc diff`
 
 A new editor session will open, where you can provide additional details. Note that the default reviewer will be assigned after you submit, so it is not necessary to specify anyone here. If you are updating an existing package, please be sure to include a summarized changelog (or a link to the changelog provided upstream) and a test plan indicating that you've installed and run the package. Once you're finished, save and exit the editor (`CTRL+O` + `CTRL+X` for nano), and the patch will then be uploaded. You'll be presented with the Differential URL, and a review will happen as soon as possible.
 

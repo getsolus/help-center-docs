@@ -43,6 +43,25 @@ Additonally, we need a few more tools to carry out the packaging process:
 sudo eopkg it git arcanist solbuild solbuild-config-unstable
 ```
 
+## Setting up a Dev Tracker Account
+
+The [Solus Dev Tracker](https://dev.getsol.us) is where all packaging patches are submitted and reviewed. It runs [Phabricator](https://www.phacility.com/phabricator/), and we use `arcanist` to submit patches directly from the command line.
+
+To submit patches to  you will need an acount. [Register a new account](https://dev.getsol.us/auth/start/) with your email address, or log in with a Github account. 
+
+### Setting up Arcanist
+
+In three easy steps, you can set up arcanist for the first time:
+
+```bash
+sudo eopkg it arcanist
+arc set-config default https://dev.getsol.us
+arc install-certificate
+```
+
+On the third step you will be given a unique link to log into the Dev Tracker, to create a `Conduit API Token`. This
+token will be used to allow the CLI `arc` utility to communicate with the Dev Tracker.
+
 ## Setting Up solbuild
 
 The `solbuild` tool must first be initialized with a base image. All builds thereafter will use this as a base, and construct a temporary overlay root to save on time and disk space in builds.
