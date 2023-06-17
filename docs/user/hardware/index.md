@@ -31,7 +31,7 @@ The situations with GPU drivers on Linux is a little complicated. Each driver is
 - **Xorg Driver**  
   In order to expose certain features to the Xorg Server, AMD and Intel have additional drivers which may be needed for things like variable refresh rate or multiple display support.
 
-Unfortunately for Nvidia users, the situation gets a little complicate. Linux has two sets of drivers for Nvidia GPUs:
+Unfortunately for Nvidia users, the situation gets a little complicated. Linux has two sets of drivers for Nvidia GPUs:
 
 - **Nouveau**  
   This is the open-source driver for Nvidia GPUs. It consists of a DRM Driver provided by the Linux Kernel, OpenGL Drivers (nvc0, nv50) from Mesa, and an Xorg Driver (xorg-driver-video-nouveau).  
