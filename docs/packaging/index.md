@@ -47,7 +47,7 @@ sudo eopkg it git arcanist solbuild solbuild-config-unstable
 
 The [Solus Dev Tracker](https://dev.getsol.us) is where all packaging patches are submitted and reviewed. It runs [Phabricator](https://www.phacility.com/phabricator/), and we use `arcanist` to submit patches directly from the command line.
 
-To submit patches to  you will need an acount. [Register a new account](https://dev.getsol.us/auth/start/) with your email address, or log in with a Github account. 
+To submit patches to you will need an acount. [Register a new account](https://dev.getsol.us/auth/start/) with your email address, or log in with a Github account. 
 
 ### Setting up Arcanist
 
