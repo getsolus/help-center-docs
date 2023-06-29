@@ -69,7 +69,7 @@ sda                  252:0    0   96G  0 disk
 ...
 ```
 
-  For decrypted volumes, the output should look similar to this, with `SolusSystem-Swap` and `SolusSystem-Root` being under "decrypted".:
+  For decrypted volumes, the output should look similar to this, with `SolusSystem-Swap` and `SolusSystem-Root` being under "decrypted":
 
 ```bash
 NAME                   MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINT
