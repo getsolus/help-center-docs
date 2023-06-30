@@ -44,7 +44,7 @@ Whether you're using GRUB or UEFI, you will need to mount your Solus root (`/`) 
 2. Next we make a directory where we will mount our local Solus system: `mkdir /target`
 3. Now, using `lsblk`, determine the partition of the Solus system. We recommend checking the size of the partition listed and if it matches the size of your Solus install, use that. It will likely be something along the lines of `sda#` or `sdb#`. For NVME drives, the name will look like `nvme0n1px`
   Note: If you see "lvm" as the type, the system has LVM partitions. See the next section for how to mount them.
-4. If your root partion is of type sdX / nvme0n1x, replace the "sdX#" in the following command with the partition and mount to the target directory we created: `mount /dev/sdX# /target`
+4. If your root partition is of type sdX / nvme0n1x, replace the "sdX#" in the following command with the partition and mount to the target directory we created: `mount /dev/sdX# /target`
 
 #### Encrypted Systems / LVM Systems
 
