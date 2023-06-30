@@ -17,7 +17,7 @@ After [booting](/docs/user/quick-start/installation/#boot-the-media) the ISO fro
 
 Now, it will provide 10 seconds in order to continue to MOK (Machine Owner Key) Management, press `Enter` again within the timeframe to do so.
 
-![Continue to MOK Mangement](2-perform-mok-management.png)
+![Continue to MOK Management](2-perform-mok-management.png)
 
 Use the down `↓` arrow key on your keyboard to select `Enroll Key from Disk` and press `Enter` to continue.
 
@@ -66,7 +66,7 @@ You can run `bootctl status | grep "Secure Boot"` in a terminal to verify Secure
 
 It is possible to delete the old Solus UEFI boot entry with `efibootmgr` once secure boot is enabled successfully, However, caution is required and as such, instructions to do so are not provided here.
 
-# Why is Enrolling the Solus Certificate Neccessary?
+# Why is Enrolling the Solus Certificate Necessary?
 
 In order to avoid the one time step of enrolling the Solus certificate, Solus would have to get it's own `shim` EFI executable signed by Microsoft. Currently, the following actions must be completed to do this:
 
