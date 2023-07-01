@@ -2,7 +2,7 @@
 
 A handy checklist anyone can use for testing an ISO.
 
-This is a list of some general things to check. It is not meant to be exhaustive, just enough to hit major points and hopefully uncover obvious problems. Testers are certainly not prohibited from doing more, at their discretion. Not all points will be testable by everyone (ex: docking / undocking). This is fine, this is just a reference.
+This is a list of some general things to check. It is not meant to be exhaustive, just enough to hit major points and hopefully uncover obvious problems. Testers are certainly not prohibited from doing more, at their discretion. Not all points will be testable by everyone (ex: docking / undocking). That is fine; this is just a reference.
 
 When testing, try to keep different types of users in mind. For instance, would a general / new user be comfortable with the experience? Would a technical user be put off by a limitation?
 
