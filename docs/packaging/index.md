@@ -9,8 +9,7 @@ summary: Quick guide on getting your system set up for packaging on Solus
 
 In order to utilise the build system, you must first set up a configuration file that has your packager details.
 
-This file lives in the `.config/solus` folder of your home directory. You will need to create the `.config/solus` folder as well as the inner `packager` file. Inside the packager file, you need two keys, `Name` and `Email`. This is used when generating the machine
-file so that the packager details are stored within the resulting binary package.
+This file lives in the `.config/solus` folder of your home directory. You will need to create the `.config/solus` folder as well as the inner `packager` file. Inside the packager file, you need two keys, `Name` and `Email`. This is used when generating the machine file so that the packager details are stored within the resulting binary package.
 
 ```ini
 [Packager]
@@ -20,7 +19,7 @@ Email=your.email@address
 
 ## Installing Development Tools
 
-We need to install a few things in order to get started with packaging.  
+We need to install a few things in order to get started with packaging.
 The main packages we need are provided by the `system.devel` component.
 
 Namely:
@@ -47,7 +46,7 @@ sudo eopkg it git arcanist solbuild solbuild-config-unstable
 
 The [Solus Dev Tracker](https://dev.getsol.us) is where all packaging patches are submitted and reviewed. It runs [Phabricator](https://www.phacility.com/phabricator/), and we use `arcanist` to submit patches directly from the command line.
 
-To submit patches to you will need an acount. [Register a new account](https://dev.getsol.us/auth/start/) with your email address, or log in with a Github account. 
+To submit patches you will need an account. [Register a new account](https://dev.getsol.us/auth/start/) with your email address, or log in with a Github account.
 
 ### Setting up Arcanist
 
