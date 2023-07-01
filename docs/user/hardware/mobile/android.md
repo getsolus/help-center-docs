@@ -5,7 +5,7 @@ summary: Quick guide to working with Android devices on Solus
 
 # Android
 
-For the most part, Android devices will work out of the box on Solus. The experience is similar to on other operatings systems.
+For the most part, Android devices will work out of the box on Solus. The experience is similar to on other operating systems.
 
 ## File Management
 

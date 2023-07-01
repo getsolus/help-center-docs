@@ -31,7 +31,7 @@ Namely:
 sudo eopkg it -c system.devel
 ```
 
-Additonally, we need a few more tools to carry out the packaging process:
+Additionally, we need a few more tools to carry out the packaging process:
 
 - `git` is used for version control of the solus sources
 - `arcanist` is required to submit patches for packages to the [Solus Dev Tracker](https://dev.getsol.us)
@@ -46,7 +46,7 @@ sudo eopkg it git arcanist solbuild solbuild-config-unstable
 
 The [Solus Dev Tracker](https://dev.getsol.us) is where all packaging patches are submitted and reviewed. It runs [Phabricator](https://www.phacility.com/phabricator/), and we use `arcanist` to submit patches directly from the command line.
 
-To submit patches you will need an account. [Register a new account](https://dev.getsol.us/auth/start/) with your email address, or log in with a Github account.
+To submit patches you will need an account. [Register a new Phabricator account](https://dev.getsol.us/auth/start/), or log in with a Github account.
 
 ### Setting up Arcanist
 
