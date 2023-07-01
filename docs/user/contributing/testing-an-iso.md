@@ -18,7 +18,7 @@ When testing, try to keep different types of users in mind. For instance, would 
 - Install your usual software and just make sure basic functionality works
 - Plugging in a USB drive allows user to mount the drive and access files
 - System can be put to sleep and woken, things still work after waking (display, keyboard, mouse, sound, network)
-- Able to create and use samba shares via file manager (you must [[ https://help.getsol.us/docs/user/software/networking/samba#samba-on-solus | enable smb after installation ]])
+- Able to create and use samba shares via file manager (you must [enable smb after installation](https://help.getsol.us/docs/user/software/networking/samba#samba-on-solus))
 - Anything that's been flaky in your experience (LVM, for instance)
 
 ### Laptops
@@ -26,6 +26,8 @@ When testing, try to keep different types of users in mind. For instance, would 
 - Multi-monitor display behaves properly with docking and undocking.
 
 ### VMs
+
+This functionality might be affected by the settings of the VM.
 
 - Copy and paste works from host to guest *before* install, while booted into the live ISO
 - Copy and paste works *after* installation and rebooting the VM
