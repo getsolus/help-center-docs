@@ -44,8 +44,8 @@ Solus is funded through our [Open Collective](https://opencollective.com/getsolu
 
 1. Offset virtual and physical infrastructure / hardware, ranging from datacenter co-location to providing repository mirrors and hardware upgrades for faster builds.
 2. Enable part-time and eventually full-time development by one or more developers (e.g. myself and Beatrice).
-3. Subsidize or pay in full necessary hardware for the Solus team and active contributors.
-4. Provide opportunities to finance specific approved works, such as various features, fixes, or rewrites that the Team would want to be done in a timely manner, by individuals in the our community that are well-known for high-quality contributions. These opportunities would be provided on a case-by-case basis with direct communication and engagement between all the Team and individual.
+3. Subsidize or pay in full necessary hardware for Solus Staff and active contributors.
+4. Provide opportunities to finance specific approved works, such as various features, fixes, or rewrites that the Solus Staff would want to be done in a timely manner, by individuals in the our community that are well-known for high-quality contributions. These opportunities would be provided on a case-by-case basis with direct communication and engagement between Solus Staff and the individual.
 
 ## Improving Documentation
 
