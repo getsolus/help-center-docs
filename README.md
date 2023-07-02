@@ -20,6 +20,13 @@ To get started developing our Docusaurus instance, or writing documentation, fir
 
 This project is written using [TypeScript](https://www.typescriptlang.org) and [React](https://reactjs.org), with some documentation being Markdown or [MDX](https://mdxjs.com/). To facilitate development, we use nvm and Yarn.
 
+Please lint and spellcheck your updates before creating a pull request. We recommend VS Code with the "prettier" extension for linting. You are free to use whatever software and linters you prefer as long as they get the job done.
+
+### Markdown
+
+We recommend "Code Spell Checker" or `codespell` for spell checking.
+Codespell is available for installation `sudo eopkg install codespell`
+
 ### NVM
 
 To set up nvm, the Node Version Manager, follow the instructions listed [here](https://github.com/nvm-sh/nvm#readme). We recommend [setting up their shell integration](https://github.com/nvm-sh/nvm#deeper-shell-integration) as well, so you can automatically switch to the correct Node version when working on this project. Otherwise, ensure you run `nvm use`. This project requires the "current" supported release series of Node.
