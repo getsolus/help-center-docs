@@ -12,7 +12,7 @@ The eopkg configuration file changes how eopkg works. The first section in the c
 Solus aims to be a stateless operating system, so the default configuration file for eopkg is saved to `/usr/share/defaults/eopkg/eopkg.conf`. To modify the configuration, you'll have to start by copying the default configuration file into `/etc/eopkg` so it will override the default file:
 
 ```sh
-sudo mkdir -p /etc/eopkg && cp /usr/share/defaults/eopkg/eopkg.conf /etc/eopkg/eopkg.conf
+sudo mkdir -p /etc/eopkg && sudo cp /usr/share/defaults/eopkg/eopkg.conf /etc/eopkg/eopkg.conf
 ```
 
 Once the file has been copied, you can edit it with your text editor of choice.
