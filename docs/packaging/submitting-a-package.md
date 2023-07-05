@@ -36,8 +36,8 @@ Prior to submitting a patch, please ensure you are checking the following:
 
 Please refrain from submitting a patch for the following instances:
 
-- For a package that is yet to be accepted for inclusion by a member of the Triage Team. We welcome you to politely reach out via the package request task or [Matrix](/docs/user/contributing/getting-involved#matrix-chat) if you deem the review of the request to be time-sensitive in nature.
-- If your patch is a Work In Progress / WIP. Completed patches or patches which have a request for comments are accepted, however for request for comments please ensure your patch title contains `[RFC]`. WIP patches just clutter Differential and make patch review by the team more time consuming and introduces unnecessary work.
+- For a package that is yet to be accepted for inclusion by a member of the Solus Staff team. We welcome you to politely reach out via the package request task or [Matrix](/docs/user/contributing/getting-involved#matrix-chat) if you deem the review of the request to be time-sensitive in nature.
+- If your patch is a Work In Progress / WIP. Completed patches or patches which have a request for comments are accepted, however for request for comments please ensure your patch title contains `[RFC]`. WIP patches just clutter Differential and make patch review by Solus Staff more time consuming and introduces unnecessary work.
 
 ## Creating the patch
 

@@ -32,7 +32,7 @@ This policy sets forth the criteria for a package to be accepted for inclusion i
 
 ### Stack Complexity
 
-- Certain requests may tick all the boxes, but introduce a level of complexity or require a level of engagement not possible to balance for the packaging team. Under certain situations, a request will be frozen until it has a dedicated maintainer.
+- Certain requests may tick all the boxes, but introduce a level of complexity or require a level of engagement not possible to balance for Solus Staff. Under certain situations, a request will be frozen until it has a dedicated maintainer.
 - This extends to requests for full desktop environments. However, this does not extend to minor components like drop-in window managers or panels separate of a dependent stack (i.e. Awesome WM, tint2, etc.)
 
 ### Value Add
@@ -45,4 +45,4 @@ This policy sets forth the criteria for a package to be accepted for inclusion i
 
 ## Rejection
 
-Solus team members reserve the right to permanently reject a package request without the need for further discussion once the rejection is issued. The limited time of contributors should be considered and respected, instead of dragging out and 'necromancing' old issues in a vain attempt to force inclusion of previously rejected software. In the event of any policy change, existing/expired package requests will NOT be reevaluated under new criteria as this would lead to an exponential growth in work upon every policy change, and is physically impossible to handle for a project of _any_ size.
+Solus Staff members reserve the right to permanently reject a package request without the need for further discussion once the rejection is issued. The limited time of contributors should be considered and respected, instead of dragging out and 'necromancing' old issues in a vain attempt to force inclusion of previously rejected software. In the event of any policy change, existing/expired package requests will NOT be reevaluated under new criteria as this would lead to an exponential growth in work upon every policy change, and is physically impossible to handle for a project of _any_ size.
