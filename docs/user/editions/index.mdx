@@ -1,7 +1,9 @@
 # Editions
 
-```mdx-code-block
-import {EditionCardsRow} from '@site/src/components/editions';
+import { ThemeProvider } from "@mui/material";
+import { EditionCardsRow } from "@site/src/components/editions";
+import { SiteTheme } from "@site/src/theme";
 
-<EditionCardsRow />
-```
+<ThemeProvider theme={SiteTheme}>
+  <EditionCardsRow />
+</ThemeProvider>

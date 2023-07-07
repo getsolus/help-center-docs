@@ -1,25 +1,19 @@
 import React from "react";
 import clsx from "clsx";
-import Translate from "@docusaurus/Translate";
+import Translate, { translate } from "@docusaurus/Translate";
 import Link from "@docusaurus/Link";
 import Image from "@theme/IdealImage";
 import Heading from "@theme/Heading";
-import { Box, Button, ButtonGroup, Stack } from "@mui/material";
-import { blueGrey } from "@mui/material/colors";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Button, ButtonGroup, Stack, useMediaQuery, useTheme } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import SettingsIcon from "@mui/icons-material/Settings";
 import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
 
-import imgBudgie from "@site/static/img/Budgie.jpg";
-import imgPlasma from "@site/static/img/Plasma.jpg";
-import imgGNOME from "@site/static/img/GNOME.jpg";
-import imgMATE from "@site/static/img/MATE.jpg";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
 const Editions = [
   {
     name: "Budgie",
-    image: imgBudgie,
     url: "budgie",
     urlConfig: "budgie/configuration",
     urlTips: "budgie/tips-and-tricks",
@@ -31,7 +25,6 @@ const Editions = [
   },
   {
     name: "Plasma",
-    image: imgPlasma,
     url: "plasma",
     urlConfig: "plasma/configuration",
     urlTips: "plasma/tips-and-tricks",
@@ -43,7 +36,6 @@ const Editions = [
   },
   {
     name: "GNOME",
-    image: imgGNOME,
     url: "gnome",
     urlConfig: "gnome/configuration",
     urlTips: "gnome/tips-and-tricks",
@@ -53,7 +45,6 @@ const Editions = [
   },
   {
     name: "MATE",
-    image: imgMATE,
     url: "mate",
     urlConfig: "mate/configuration",
     urlTips: "mate/tips-and-tricks",
@@ -65,22 +56,25 @@ const Editions = [
 
 type EditionCardProps = {
   name: string;
-  image: string;
   url: string;
   urlConfig: string;
   urlTips: string;
   description: JSX.Element;
 };
 
-const EditionCard = ({ name, image, url, urlConfig, urlTips, description }: EditionCardProps) => {
+const EditionCard = ({ name, url, urlConfig, urlTips, description }: EditionCardProps) => {
+  const theme = useTheme();
+  const hideIcons = useMediaQuery(theme.breakpoints.down("xl"));
+  const image = useBaseUrl(`/img/${name}.jpg`);
+
   return (
-    <Box className="col margin-bottom--lg" xs={6}>
-      <Stack className={clsx("card")}>
+    <Grid2 xs={6}>
+      <Stack className={clsx("card")} height={1}>
         <Stack className={clsx("card__image")}>
           <Link to={url}>
             <Image
               img={image}
-              alt={Translate({
+              alt={translate({
                 message: "Screenshot of {name} edition",
                 id: "edition.card.image",
                 description: "Alt text for images of editions",
@@ -95,42 +89,39 @@ const EditionCard = ({ name, image, url, urlConfig, urlTips, description }: Edit
           <p>{description}</p>
         </Stack>
         <Stack className="card__footer">
-          <ThemeProvider theme={buttonTheme}>
-            <ButtonGroup
-              variant="contained"
-              fullWidth="true"
-              aria-label="contained card button group"
-              sx={{ borderRadius: "10px" }}
+          <ButtonGroup
+            aria-label="contained card button group"
+            fullWidth
+            sx={{ borderRadius: "10px" }}
+            variant="contained"
+          >
+            <Button
+              href={urlConfig}
+              startIcon={!hideIcons ? <SettingsIcon /> : undefined}
+              sx={{ borderRadius: "10px", paddingInline: 2 }}
             >
-              <Button href={urlConfig} startIcon={<SettingsIcon />} sx={{ borderRadius: "10px" }}>
-                <Translate id="edition.card.configuration">Configuration</Translate>
-              </Button>
-              <Button href={urlTips} startIcon={<TipsAndUpdatesIcon />} sx={{ borderRadius: "10px" }}>
-                <Translate id="edition.card.tipsntricks">Tips & Tricks</Translate>
-              </Button>
-            </ButtonGroup>
-          </ThemeProvider>
+              <Translate id="edition.card.configuration">Configuration</Translate>
+            </Button>
+            <Button
+              href={urlTips}
+              startIcon={!hideIcons ? <TipsAndUpdatesIcon /> : undefined}
+              sx={{ borderRadius: "10px", paddingInline: 2 }}
+            >
+              <Translate id="edition.card.tipsntricks">Tips & Tricks</Translate>
+            </Button>
+          </ButtonGroup>
         </Stack>
       </Stack>
-    </Box>
+    </Grid2>
   );
 };
 
 export const EditionCardsRow = () => {
   return (
-    <Grid2 container>
+    <Grid2 container columns={{ xs: 6, sm: 6, md: 6, lg: 12 }} spacing={2}>
       {Editions.map((edition) => (
         <EditionCard key={edition.name} {...edition} />
       ))}
     </Grid2>
   );
 };
-
-const buttonTheme = createTheme({
-  palette: {
-    primary: {
-      main: blueGrey.A700,
-      dark: blueGrey.A100,
-    },
-  },
-});

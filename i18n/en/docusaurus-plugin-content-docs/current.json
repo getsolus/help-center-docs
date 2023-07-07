@@ -1,0 +1,98 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.userSidebar.category.Quick Start": {
+    "message": "Quick Start",
+    "description": "The label for category Quick Start in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.Preparing to Install": {
+    "message": "Preparing to Install",
+    "description": "The label for category Preparing to Install in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.Software Center": {
+    "message": "Software Center",
+    "description": "The label for category Software Center in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.Contributing": {
+    "message": "Contributing",
+    "description": "The label for category Contributing in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.Editions": {
+    "message": "Editions",
+    "description": "The label for category Editions in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.Budgie": {
+    "message": "Budgie",
+    "description": "The label for category Budgie in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.GNOME": {
+    "message": "GNOME",
+    "description": "The label for category GNOME in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.MATE": {
+    "message": "MATE",
+    "description": "The label for category MATE in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.Plasma": {
+    "message": "Plasma",
+    "description": "The label for category Plasma in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.Hardware": {
+    "message": "Hardware",
+    "description": "The label for category Hardware in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.Compatibility": {
+    "message": "Compatibility",
+    "description": "The label for category Compatibility in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.Mobile": {
+    "message": "Mobile",
+    "description": "The label for category Mobile in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.Peripherals": {
+    "message": "Peripherals",
+    "description": "The label for category Peripherals in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.Package Management": {
+    "message": "Package Management",
+    "description": "The label for category Package Management in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.Software": {
+    "message": "Software",
+    "description": "The label for category Software in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.Development": {
+    "message": "Development",
+    "description": "The label for category Development in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.Localization": {
+    "message": "Localization",
+    "description": "The label for category Localization in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.Networking": {
+    "message": "Networking",
+    "description": "The label for category Networking in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.Utilities": {
+    "message": "Utilities",
+    "description": "The label for category Utilities in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.Virtualization": {
+    "message": "Virtualization",
+    "description": "The label for category Virtualization in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.Web": {
+    "message": "Web",
+    "description": "The label for category Web in sidebar userSidebar"
+  },
+  "sidebar.userSidebar.category.Troubleshooting": {
+    "message": "Troubleshooting",
+    "description": "The label for category Troubleshooting in sidebar userSidebar"
+  },
+  "sidebar.packagingSidebar.category.Procedures": {
+    "message": "Procedures",
+    "description": "The label for category Procedures in sidebar packagingSidebar"
+  }
+}
