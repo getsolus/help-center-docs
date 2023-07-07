@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "Solus",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Solus Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Help Center Home": {
+    "message": "Help Center Home",
+    "description": "Navbar item with label Help Center Home"
+  },
+  "item.label.Packaging": {
+    "message": "Packaging",
+    "description": "Navbar item with label Packaging"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.getsol.us": {
+    "message": "getsol.us",
+    "description": "Navbar item with label getsol.us"
+  }
+}

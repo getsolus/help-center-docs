@@ -16,7 +16,7 @@ With that in mind, the Help Center has been broken up into several sections to h
 
 If you've never used Solus before, this section will set you on the right track. It contains docs related to installing Solus, software package management, the boot process, and troubleshooting all of the above.
 
-**[Editions](/docs/category/editions/)**
+**[Editions](/docs/user/editions/)**
 
 Solus comes in multiple Editions for different Desktop Environments. The purpose of this section is to introduce you to those desktops, walk you through common configuration tasks, and provides useful tips and tricks.
 
