@@ -25,10 +25,14 @@ Each Linux desktop environment has its own graphical application for managing fi
 
 | Desktop | Application                     |
 | ------- | ------------------------------- |
-| Budgie  | GNOME Files (formerly Nautilus) |
+| Budgie  | Nemo                            |
 | GNOME   | GNOME Files (formerly Nautilus) |
-| KDE     | Dolphin                         |
 | MATE    | Caja                            |
+| Plasma  | Dolphin                         |
+
+## Nemo
+
+![Nemo Screenshot](default-applications/nemo.jpg)
 
 ## Caja
 
@@ -37,6 +41,11 @@ Each Linux desktop environment has its own graphical application for managing fi
 ## GNOME Files
 
 ![GNOME Files Screenshot](default-applications/nautilus.jpg)
+
+## Dolphin
+
+![Dolphin Screenshot](default-applications/dolphin.jpg)
+
 
 # Office Suite
 
@@ -101,27 +110,36 @@ Finnish language support is provided by installing `libreoffice-voikko`. After i
 | Desktop | Application |
 | ------- | ----------- |
 | Budgie  | Rhythmbox   |
-| GNOME   |             |
-| KDE     |             |
-| MATE    |             |
+| GNOME   | Rhythmbox   |
+| MATE    | Rhythmbox   |
+| Plasma  | Elisa       |
 
 ## Rhythmbox
 
 ![Rhythmbox Screenshot](default-applications/rhythmbox.jpg)
 
+## Elisa
+
+![Elisa Screenshot](default-applications/elisa.jpg)
+
 # Video
 
-| Desktop | Application |
-| ------- | ----------- |
-| Budgie  | MPV         |
-| GNOME   | MPV         |
-| KDE     |             |
-| MATE    | VLC         |
+| Desktop | Application                    |
+| ------- | ------------------------------ |
+| Budgie  | Celluloid (formerly GNOME MPV) |
+| GNOME   | Celluloid (formerly GNOME MPV) |
+| MATE    | VLC                            |
+| Plasma  | Haruna                         |
 
-## MPV
+## Celluloid
 
-![MPV Screenshot](default-applications/mpv.jpg)
+![Celluloid Screenshot](default-applications/celluloid.webp)
 
 ## VLC
 
 ![VLC Screenshot](default-applications/vlc.jpg)
+
+## Haruna
+
+![Haruna Screenshot](default-applications/haruna.jpg)
+
