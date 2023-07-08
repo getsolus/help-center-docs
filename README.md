@@ -63,7 +63,7 @@ Ensure that you can successfully generate a static site as above.
 
 Then, when you're ready to deploy, run the following:
 
-`USE_SSH=true yarn run deploy`
+`git checkout deploy && git merge master`
 
 This obviously assumes that you have ssh push access to the help-center-docs repo and are using `remote.origin.url=git@github.com:getsolus/help-center-docs.git` (as listed by `git config -l`).
 
