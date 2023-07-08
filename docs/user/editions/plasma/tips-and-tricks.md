@@ -1,6 +1,6 @@
 ---
-title: Plasma
-summary: A quick introduction to the Plasma Edition of Solus
+title: Tips and Tricks
+summary: Helpful tips and tricks for using Plasma on Solus
 ---
 
 # Tips and Tricks
