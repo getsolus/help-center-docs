@@ -1,6 +1,7 @@
 ---
 title: Prepare for Packaging
 summary: Quick guide on getting your system set up for packaging on Solus
+sidebar_position: 0
 ---
 
 # Prepare for Packaging
