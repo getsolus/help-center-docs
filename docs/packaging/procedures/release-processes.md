@@ -25,9 +25,31 @@ Minor syncs during the week, and correctional syncs shortly after the Friday-syn
 
 ## Package deprecation
 
-Under rare circumstances a package may need to be deprecated or even renamed. Packagers owning these changes must first communicate the need to ensure a coordinated deprecation. Raise the issue on the Dev Tracker, or speak with Solus Staff on Matrix to ensure this is implemented correctly.
+There are times when a package may need to be deprecated or even renamed. Packagers owning these changes must first communicate the need to ensure a coordinated deprecation.
 
 Deprecated packages will remove themselves from the users systems as the first operation in an update or package install using the package manager, once marked as `Obsolete` in the index.
+
+### Deprecating a package
+
+Follow these steps to submit a package for deprecation:
+
+0. Fork and clone the `solus-sc` repo [on Github](https://github.com/getsolus/solus-sc), and/or create a new branch
+1. Edit `repo_data/distribution.xml.in`
+2. Add the package you wish to deprecate at the end of the `<Obsoletes>` section
+3. Run the `repo_data/merged_repos.sh` script
+4. Commit and push your changes to your repo/branch
+5. Open a Pull Request on Github
+
+If a deprecation depends on a packaging change landing before it can be properly deprecated without undesireable side effects on user systems, the GitHub deprecation Pull Request MUST link to the packaging change and declare it as a dependency for deprecation.
+
+### Undeprecating a package
+
+The above steps also apply to undeprecating a package, with the following additions:
+
+1. Before making changes, the package repository must be reactivated
+2. In Step 2, remove the package from the list instead of adding it
+3. After the `solus-sc` pull request has been merged, ask a Solus Staff member to index the repo with `ferryctl index unstable` (or do it yourself if you have the ability)
+4. Bump or update the package
 
 ## Major stack changes
 
