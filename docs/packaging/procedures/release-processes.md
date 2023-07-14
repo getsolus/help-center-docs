@@ -48,7 +48,7 @@ The above steps also apply to undeprecating a package, with the following additi
 
 1. Before making changes, the package repository must be reactivated
 2. In Step 2, remove the package from the list instead of adding it
-3. After the `solus-sc` pull request has been merged, ask a Solus Staff member to index the repo with `ferryctl index unstable` (or do it yourself if you have the ability)
+3. After the `solus-sc` pull request has been merged, ask a Solus Staff member to use available tooling to update the repository files, then index the repo with `ferryctl index unstable` (or do it yourself if you have the ability)
 4. Bump or update the package
 
 ## Major stack changes
