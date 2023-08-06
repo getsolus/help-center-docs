@@ -37,13 +37,3 @@ Server Name: PulseAudio (on PipeWire 0.3.71)
 ```
 
 Try logging out and in again if your system has not switched yet.
-
-### Known Issues
-
-On some systems, logging out and logging back in causes PipeWire to either crash or not restart. This can be fixed by running the following in your terminal:
-
-```sh
-systemctl --user restart pipewire pipewire-pulse
-```
-
-This will have to be re-done after every relog. Restarting the computer should also fix it until log out.
