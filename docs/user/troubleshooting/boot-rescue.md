@@ -158,7 +158,7 @@ In the event you had an incomplete upgrade, try the following commands:
 2. `sudo eopkg up`
 3. `sudo eopkg check | grep Broken | awk '{print $4}' | xargs sudo eopkg it --reinstall`
   If you see output that starts with "Usage", this means the system has no broken packages.
-4. Try reverting the latest package transaction (this should only be done if the first two steps, followed by the "Re-run System-Wide Configuration Triggers", failed to produce a successful bootup). See [our documentation on history and rollback](docs/user/package-management/history-and-rollback) for more information, followed by re-applying your updates by running `sudo eopkg up`.
+4. Try reverting the latest package transaction (this should only be done if the first two steps, followed by the "Re-run System-Wide Configuration Triggers", failed to produce a successful bootup). See [our documentation on history and rollback](/docs/user/package-management/history-and-rollback) for more information, followed by re-applying your updates by running `sudo eopkg up`.
 
 ### Correcting disks
 
