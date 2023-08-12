@@ -117,7 +117,7 @@ It is common practice to apply the patch within the `setup` section of your buil
 at `./files/0002-Sample-commit-2.patch`
 
 ```bash
-%patch -p1 < $pkgfiles/0002-Sample-commit-2.patch
+%patch -p1 -i $pkgfiles/0002-Sample-commit-2.patch
 ```
 
 Note you use the macro as you would normally use the patch command, however use of the macro ensures it performs a clean batch-mode patch.
