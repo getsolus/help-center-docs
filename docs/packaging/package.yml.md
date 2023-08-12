@@ -28,7 +28,7 @@ component  : system.devel
 description: |
     GNU nano is an easy-to-use text editor originally designed as a replacement for Pico, the ncurses-based editor from the non-free mailer package Pine (itself now available under the Apache License as Alpine).
 setup      : |
-    %patch -p1 < $pkgfiles/0001-Use-a-stateless-configuration.patch
+    %patch -p1 -i $pkgfiles/0001-Use-a-stateless-configuration.patch
     %reconfigure --enable-utf8 --docdir=/usr/share/doc/nano
 build      : |
     %make
