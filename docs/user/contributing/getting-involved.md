@@ -26,6 +26,7 @@ You will find the following Solus rooms on the `matrix.org` homeserver:
 
 - [#solus-support:matrix.org](https://matrix.to/#/#solus-support:matrix.org) Support room
 - [#solus-off-topic:matrix.org](https://matrix.to/#/#solus-off-topic:matrix.org) Off-topic room
+- [#solus-packaging:matrix.org](https://matrix.to/#/#solus-packaging:matrix.org) Packaging-related room
 - [#solus-development:matrix.org](https://matrix.to/#/#solus-development:matrix.org) Development-related room
 - [#solus-devlog:matrix.org](https://matrix.to/#/#solus-devlog:matrix.org) Commit and Pull Request notifications from the `getsolus` GitHub organization (developer oriented, read-only)
 - [#solus:matrix.org](https://matrix.to/#/#solus:matrix.org) **Matrix Space containing all rooms**
