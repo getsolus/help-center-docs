@@ -45,7 +45,7 @@ Please refrain from submitting a patch for the following instances:
 
 #### Creating a new branch (optional)
 
-This is optional but recommended. This will allow you to more easily seperate your work from an new changes made to the package repository which will allow you to more easily rebase any changes if needed. Create a new branch by running `git branch -b my-branch`
+This is optional but recommended. This will allow you to more easily seperate your work from an new changes made to the package repository which will allow you to more easily rebase any changes if needed. Create a new branch and switch to it by running `git checkout -b my-branch`
 
 :::tip
 - You can checkout the master branch by running `git checkout master`, and switch back to your branch by running `git checkout my-branch`
@@ -107,7 +107,7 @@ This will amend your original changes, and you can submit the updated patch once
 
 A new editor session will open, where you can provide details about the changes you've made between the last revision and the newly amended one. This comment will help reviewers to see what you've changed, to streamline the process of getting your patch into Solus.
 
-The web UI will automatically update with the latest patch, without having to create any new tasks. Once accepted, your patch will be merged, and a build will be issued.
+The web interface will automatically update with the latest patch. Once accepted, your patch will be merged, and a build will be issued.
 
 :::note
 - If you have already created a new commit, run `git rebase -i HEAD~2` to squash the commits, change the commit message to the same commit message as the original, removing any suggested commit message from git itself.
@@ -128,8 +128,7 @@ Submission directly to a repository is only possible for maintainers. As a maint
 
 Pushing changes is not possible unless you have maintainer access. The same is also true of `make publish`.
 
-To request maintainer rights for a repository, it is expected that some level of contribution/maintenance has already happened by way of testing/patching, and there is reasonable trust demonstrated to "hand the keys"
-over to a repository.
+To request maintainer rights for a repository, it is expected that some level of contribution/maintenance has already happened by way of testing/patching, and there is reasonable trust demonstrated to "hand the keys" over to a repository.
 
 Currently, the request mechanism is [contact Solus Staff on Matrix](/docs/user/contributing/getting-involved#matrix-chat)
 
