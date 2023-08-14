@@ -43,6 +43,16 @@ Please refrain from submitting a patch for the following instances:
 
 ### Manipulating files with Git
 
+#### Creating a new branch (optional)
+
+This is optional but recommended. This will allow you to more easily seperate your work from an new changes made to the package repository which will allow you to more easily rebase any changes if needed. Create a new branch by running `git branch -b my-branch`
+
+:::tip
+- You can checkout the master branch by running `git checkout master`, and switch back to your branch by running `git checkout my-branch`
+- If there any new changes to the repository whilst you are still working on your branch you can run `git pull origin master --rebase` to pull the changes then manually fixup any conflicts.
+- Once your pull request has been accepted you can delete your local branch by running `git branch -D my-branch` and `git push -d origin my-branch` to delete the remote branch.
+:::
+
 #### Adding files
 
 For every file you change or add, you must let git know about them: `git add someFile`
@@ -68,9 +78,24 @@ on suitable commit messages, please check the [tooling central documentation](ht
 
 ### Submitting for Review
 
-Now you have your git commit, it's time to send it to us for review using `arcanist`. Using the CLI again, simply issue: `arc diff`
+Now you have your changed committed, it's time to send it to us for review using by submitting a pull request to the GitHub repository.
 
-A new editor session will open, where you can provide additional details. Note that the default reviewer will be assigned after you submit, so it is not necessary to specify anyone here. If you are updating an existing package, please be sure to include a summarized changelog (or a link to the changelog provided upstream) and a test plan indicating that you've installed and run the package. Once you're finished, save and exit the editor (`CTRL+O` + `CTRL+X` for nano), and the patch will then be uploaded. You'll be presented with the Differential URL, and a review will happen as soon as possible.
+You will first need to fork the repository either from the GitHub web interface. Or by using the `gh` cli tool from the `github-cli` package.
+
+Next change your push url to the one that matches your fork. For example
+
+If you forked github.com/solus-packages/nano. It would be forked to github.com/mygithubaccount/nano. You can then set the push url to
+
+`git remote set-url --push origin https://github.com/mygithubaccount/nano`
+
+Finally, you can run `git push`.
+
+:::note
+If you've created your own branch the cli tool with prompt you with a new command to create and push to a remote branch matching the local one.
+:::
+
+Once the commit is successfully pushed. You'll notice that a URL will be provided that'll immediately allow you to create a pull request with your changes.
+Open the link, double check everything, then create the pull request!
 
 ## Updating a patch that needs changes
 
@@ -78,23 +103,21 @@ A new editor session will open, where you can provide additional details. Note t
 
 That's easy. **Don't make a new commit**, just make any relevant changes to your local tree, adding + removing as before, but this time run: `git commit --amend`.
 
-This will amend your original changes, and you can submit the patch once more with `arc diff`.
+This will amend your original changes, and you can submit the updated patch once more with `git push --force`.
 
 A new editor session will open, where you can provide details about the changes you've made between the last revision and the newly amended one. This comment will help reviewers to see what you've changed, to streamline the process of getting your patch into Solus.
 
 The web UI will automatically update with the latest patch, without having to create any new tasks. Once accepted, your patch will be merged, and a build will be issued.
 
-**Notes:**
-
+:::note
 - If you have already created a new commit, run `git rebase -i HEAD~2` to squash the commits, change the commit message to the same commit message as the original, removing any suggested commit message from git itself.
-- If you are concerned with `arc diff` creating a new Differential, you can run `arc diff --update DXXXXX`, changing `XXXXX` to the number assign to your initial Differential.
-  - If you have created a new Differential already, you can abandon it and update your previous differential by choosing the Add Action section below the web-based patch GUI, then choose "Abandon Revision", then click Submit.
+:::
 
 ### Updating Task Information
 
 If you forgot information such as a test plan, you can run resolve this by:
 
-1. Running `arc diff --edit`. This will open up an editor session, where you can edit the information.
+1. Edit your commit message with `git commit --amend` as well as editing the pull request on the GitHub web interface. <-- TODO: GitHub PR Templates
 2. Next, you will see an editor session for providing a message indicating the change, for example "Added a test plan."
 
 After this editor session, the updated patch will be automatically uploaded, the web UI will automatically update, and no new tasks will be created.

@@ -4,6 +4,11 @@ summary: Quick guide on getting your system set up for packaging on Solus
 sidebar_position: 0
 ---
 
+:::danger
+We are currently in the process of migrating our source repositories from Phabricator to GitHub. Updating all facets of the documentation will take some time.
+If you notice any issues feel free to file an issue or get in contact with us on our Matrix channels.
+:::
+
 # Prepare for Packaging
 
 ## Setting up Packager file
@@ -35,7 +40,6 @@ sudo eopkg it -c system.devel
 Additionally, we need a few more tools to carry out the packaging process:
 
 - `git` is used for version control of the solus sources
-- `arcanist` is required to submit patches for packages to the [Solus Dev Tracker](https://dev.getsol.us)
 - `solbuild` is a lightweight container environment for building packages repeatably
 - `solbuild-config-unstable` sets up solbuild for working with the `unstable` repository
 
@@ -43,24 +47,8 @@ Additionally, we need a few more tools to carry out the packaging process:
 sudo eopkg it git arcanist solbuild solbuild-config-unstable
 ```
 
-## Setting up a Dev Tracker Account
-
-The [Solus Dev Tracker](https://dev.getsol.us) is where all packaging patches are submitted and reviewed. It runs [Phabricator](https://www.phacility.com/phabricator/), and we use `arcanist` to submit patches directly from the command line.
-
-To submit patches you will need an account. [Register a new Phabricator account](https://dev.getsol.us/auth/start/), or log in with a Github account.
-
-### Setting up Arcanist
-
-In three easy steps, you can set up arcanist for the first time:
-
-```bash
-sudo eopkg it arcanist
-arc set-config default https://dev.getsol.us
-arc install-certificate
-```
-
-On the third step you will be given a unique link to log into the Dev Tracker, to create a `Conduit API Token`. This
-token will be used to allow the CLI `arc` utility to communicate with the Dev Tracker.
+## Setting up a GitHub account
+The solus source repositories for the package repository currently reside on [github.com/solus-packages](https://github.com/solus-packages). You will need a GitHub account to submit patches and file issues. You can create a GitHub account [here](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home).
 
 ## Setting Up solbuild
 
@@ -90,7 +78,7 @@ sudo solbuild update
 
 Next you need to set up `common`, a set of make scripts that enables you to more easily manage, build, check, and publish packages.
 
-You need to clone the common repository with git by doing `git clone https://dev.getsol.us/source/common.git` in the same directory you will have sub-folders for packages you are building.
+You need to clone the common repository with git by doing `git clone https://github.com/getsolus/common.git` in the same directory you will have sub-folders for packages you are building.
 
 Next you need to set up symlinks. Do this from the same directory you executed the `git` command:
 
