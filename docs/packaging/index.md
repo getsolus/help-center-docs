@@ -44,7 +44,7 @@ Additionally, we need a few more tools to carry out the packaging process:
 - `solbuild-config-unstable` sets up solbuild for working with the `unstable` repository
 
 ```bash
-sudo eopkg it git arcanist solbuild solbuild-config-unstable
+sudo eopkg it git solbuild solbuild-config-unstable
 ```
 
 ## Setting up a GitHub account
