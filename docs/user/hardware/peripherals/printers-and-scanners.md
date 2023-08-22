@@ -20,7 +20,9 @@ Many printers will work out-of the box on Solus. If yours doesn't, you should tr
 
 ### Brother
 
-Brother drivers are distributed by Brother for a single printer only. Because of this, you will need to install the package for your specific printer.
+The Solus repositories include `brlaser`, an open-source driver for many Brother monochrome laser printers and multi-function devices. Compatible models are listed [here](https://github.com/Owl-Maintain/brlaser#supported-printers)
+
+Other Brother drivers are distributed by Brother for a single printer only. Because of this, you will need to install the package for your specific printer.
 
 For example, `brother-mfc1910w` provides drivers for the MFC-1910w.
 
@@ -56,7 +58,7 @@ This list should not suggest that _only_ such devices listed below are compatibl
 - Brother MFC-L2703DW
 - Brother MFC-L2740DW
 
-Should your printer not be on this list you can request your Printer here for inclusion [here](https://dev.getsol.us/T83)
+Should your printer not be on this list, and the generic `brlaser` driver does not work, you can request your printer here for inclusion [here](https://github.com/getsolus/packages/issues/212)
 
 # Scanners
 
