@@ -157,9 +157,14 @@ const config = {
                 rel: "me",
               },
               {
-                label: "Dev Tracker",
+                label: "Packages",
                 href: "https://dev.getsol.us",
               },
+              {
+                label: "Issue Tracker",
+                href: "https://issues.getsol.us",
+              },
+              
             ],
           },
         ],

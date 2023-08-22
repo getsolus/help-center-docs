@@ -25,8 +25,6 @@ include ../Makefile.common
 Lastly, many package builds may result in the generation of an ABI report. These files start with `abi_*` and must also
 be included, as they allow simple tracking of changes to symbols and dependencies.
 
-For all patch submissions you must be using the `arcanist` utility to communicate with the [Solus Dev Tracker](https://dev.getsol.us/)
-
 ## Prior to Patch Submission
 
 Prior to submitting a patch, please ensure you are checking the following:
@@ -45,7 +43,7 @@ Please refrain from submitting a patch for the following instances:
 
 #### Creating a new branch (optional)
 
-This is optional but recommended. This will allow you to more easily seperate your work from an new changes made to the package repository which will allow you to more easily rebase any changes if needed. Create a new branch and switch to it by running `git checkout -b my-branch`
+This is optional but recommended. This will allow you to more easily separate your work from an new changes made to the package repository which will allow you to more easily rebase any changes if needed. Create a new branch and switch to it by running `git checkout -b my-branch`
 
 :::tip
 - You can checkout the master branch by running `git checkout master`, and switch back to your branch by running `git checkout my-branch`
@@ -73,8 +71,8 @@ installed it, it's time to commit your changes with `git commit`.
 Make sure you provide a meaningful summary and a separate body to your commit message. For more information
 on suitable commit messages, please check the [tooling central documentation](https://github.com/solus-project/tooling-central/blob/master/README.rst#using-git).
 
-- If you want to link this patch to an issue on the Dev Tracker, simply mention it in your commit message: `The inclusion of <somepackage> fixes T1234`
-- If you need a change to depend on another change, mention it in the commit message too: `Depends on D5`
+- If you want to link this patch to an issue on the Dev Tracker, simply mention it in your commit message: `The inclusion of <somepackage> fixes #1234`
+- If you need a change to depend on another change, mention it in the commit message too: `Depends on #123`
 
 ### Submitting for Review
 
@@ -84,7 +82,7 @@ You will first need to fork the repository either from the GitHub web interface.
 
 Next change your push url to the one that matches your fork. For example
 
-If you forked github.com/solus-packages/nano. It would be forked to github.com/mygithubaccount/nano. You can then set the push url to
+If you forked `github.com/solus-packages/nano`, it would be forked to `github.com/mygithubaccount/nano`. You can then set the push url to
 
 `git remote set-url --push origin https://github.com/mygithubaccount/nano`
 

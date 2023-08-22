@@ -21,4 +21,4 @@ Please provide as much of the following information as possible:
 - Link to source tarball/zip file
 - master.zip files **are not permitted**. We require versioned tarballs, for example: "1.2.3.tar.gz" or "packagename-1.2.3".
 
-Please put this information into a new [task](https://dev.getsol.us/maniphest/task/edit/form/4/).
+Please put this information into a new [issue](https://github.com/getsolus/packages/issues/new?assignees=&labels=Package+Request%2CPriority%3A+Wishlist&projects=&template=request-new-package.yml&title=What%27s+the+package+name%3F).
