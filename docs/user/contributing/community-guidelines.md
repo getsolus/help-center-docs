@@ -67,10 +67,10 @@ The below mentioned guidelines apply to individual services provided or used by 
 
 ### Development / Issue Trackers
 
-Solus utilizes a multitude of development and issue trackers to facilitate the development of various items in our project and to address issues raised by our community through tasks / issue reports. These development trackers include, but are not limited to:
+Solus utilizes a number of development and issue trackers to facilitate the development of various projects, and to address issues raised by our community through tasks / issue reports. These development trackers include, but are not limited to:
 
-- Our self-hosted development tracker (Phabricator) at https://dev.getsol.us
-- All issue trackers utilized by the project across repositories hosted in our GitHub organizations
+- The main Solus Github Issue Tracker at `issues.getsol.us`
+- Other GitHub issue trackers found in other Solus repositories under the `getsolus` organization.
 
 Members of the community are expected to:
 

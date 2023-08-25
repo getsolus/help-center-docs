@@ -39,9 +39,13 @@
     "message": "GitHub",
     "description": "The label of footer link with label=GitHub linking to https://github.com/getsolus"
   },
-  "link.item.label.Dev Tracker": {
-    "message": "Dev Tracker",
-    "description": "The label of footer link with label=Dev Tracker linking to https://dev.getsol.us"
+  "link.item.label.Packages": {
+    "message": "Packages",
+    "description": "The label of footer link with label=Packages linking to https://dev.getsol.us"
+  },
+  "link.item.label.Issue Tracker": {
+    "message": "Issue Tracker",
+    "description": "The label of footer link with label=Issue Tracker linking to https://issues.getsol.us"
   },
   "copyright": {
     "message": "Copyright © 2023 Solus Project. Built with Docusaurus.",

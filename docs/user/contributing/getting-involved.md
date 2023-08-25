@@ -62,14 +62,14 @@ and contribute to the community by packaging software. If you're interested in l
 
 We're always looking to improve our systems, especially when they're not functioning as expected. By reporting bugs, you improve the system not only for you, but for all Solus Project users.
 
-- [Budgie Desktop](https://github.com/buddiesofbudgie/budgie-desktop/issues)
-  Budgie Desktop issues are filed in the buddiesofbudgie repo on github.
-
-- [Dev Tracker](https://dev.getsol.us)
+- [Main Solus GitHub Issue Tracker](https://issues.getsol.us)
   Most bug reports about Solus itself, and its packages, should be filed here.
 
-- [Solus Github Repos](https://github.com/getsolus)
-  Certain parts of Solus, such as the Software Center, have repos on the getsolus repo on github. Check here to see if the system in question is listed. If so, file the bug in the appropriate repo.
+- [Other Solus Github Repos](https://github.com/getsolus)
+  Certain parts of Solus, such as the Software Center, have repos in the `getsolus` organization on GitHub. Check here to see if the system in question is listed. If so, file the bug in the appropriate repo.
+
+- [Budgie Desktop](https://github.com/buddiesofbudgie/budgie-desktop/issues)
+  Budgie Desktop issues are filed in the `buddiesofbudgie` repo on GitHub.
 
 ## Translations
 
