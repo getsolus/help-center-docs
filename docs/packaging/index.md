@@ -75,44 +75,43 @@ To update solbuild, run:
 sudo solbuild update
 ```
 
-## Setting up common
+## Setting up a Build Directory
 
-Next you need to set up `common`, a set of make scripts that enables you to more easily manage, build, check, and publish packages.
-
-You need to clone the common repository with git by doing `git clone https://github.com/getsolus/common.git` in the same directory you will have sub-folders for packages you are building.
-
-Next you need to set up symlinks. Do this from the same directory you executed the `git` command:
+Create a build directory to hold sub-directories with packaging files. Here we are using the name `solus-builds` and placing it in our home directory, but you can use whatever you prefer.
 
 ```bash
+mkdir ~/solus-builds
+cd solus-builds
+```
+
+### Setting up `common`
+
+Next you need to set up `common`, a set of scripts that enables you to manage, build, check, and publish packages.
+
+Run the following commands to clone the `common` repository and create the required symlinks. Do this inside `solus-builds`:
+
+```bash
+git clone https://github.com/getsolus/common.git
 ln -sv common/Makefile.common .
 ln -sv common/Makefile.toplevel Makefile
 ln -sv common/Makefile.iso .
 ```
 
-Next, inside the **folder** of the **package** you are building, run: `echo "include ../Makefile.common" > Makefile`
-
-This will enable you to call `make` commands from inside the package folder.
-
 Your folder should look something similar to this:
 
 ```
-| common/
-| your-package/
-| - Makefile
-| Makefile
-| Makefile.common
-| Makefile.iso
+└── solus-builds
+   ├── common
+   │  ├── *lots of stuff, not shown here*
+   ├── Makefile -> common/Makefile.toplevel
+   ├── Makefile.common -> common/Makefile.common
+   └── Makefile.iso -> common/Makefile.iso
 ```
 
-## Building packages (Solus only)
+## Building Packages
 
-After setting up common, you can now build the package. Note that build dependencies and such will be installed locally (in the chroot environment).
+With your new build environment set up, you can now build packages.
 
-```bash
-make
-```
-
-You will be prompted to enter your password by sudo so dependencies may be downloaded and the necessary eopkg files may be generated.
-
-Once you’ve achieved a successful build, the resulting `.eopkg` files will be moved to the current directory, along with the machine file, `pspec_*.xml` (currently `pspec_x86_64.xml`). We recommending checking the contents of your
-generated eopkg file(s) to ensure everything is located in the appropriate locations. You can do this by using `lseopkg file_name.eopkg`.
+- [Your First Package](docs/packaging/your-first-package.md)
+- [Updating an Existing Package](docs/packaging/updating-an-existing-package.md)
+- [Creating a New Package](docs/packaging/creating-a-new-package.md)
