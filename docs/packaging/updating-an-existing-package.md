@@ -35,3 +35,11 @@ Example:
 ```bash
 /usr/share/ypkg/yupdate.py 1.0 https://example.com/example-1.0.tar.xz
 ```
+
+## Building a package
+
+After bumping or updating the package, build it:
+
+```bash
+make
+```
