@@ -1,59 +1,90 @@
 ---
-title: Submitting the Package
-summary: Submitting the Package
+title: Submitting a Package for Review
+summary: Submitting a Package for Review
+sidebar_position: 5
 ---
 
-# Submitting the Package
+# Testing the Package and Submitting a Pull Request for Review
 
-This article will walk you through submitting a patch for a package for review and inclusion in the Solus repository.
+Please refrain from submitting a pull request for the following instances:
 
-When contributing patches to Solus, please note that we do not accept the upload of binary files (i.e. `.eopkg`).
-All repository packages are built by a dedicated build server, from the source files provided in your patch upload.
+- For a package that is yet to be accepted for inclusion by a member of the Solus Staff team. Search [open package requests](https://github.com/getsolus/packages/issues?q=label%3A%22Package+Request%22) to see if there is an open request for the package.
+  We welcome you to politely reach out via the package request issue or our Support room on [Matrix](/docs/user/contributing/getting-involved#matrix-chat) if you deem the review of the request to be time-sensitive in nature.
+- If your pull request is a Work In Progress / WIP. Pull requests that are completed or are marked as *request for comments* (RFC) are accepted. For RFC request please ensure your patch title contains `[RFC]` and is marked as 'draft'. WIP patches clutter the issue tracker and make patch review by Solus Staff more time consuming and introduces unnecessary work.
 
-At minimum, your patch will include changes for the following:
+## Test Your Package
+
+After you ran `make` (or the appropriate command for the package) you now have `.eopkg` files in the package directory. Each pull request requires you to explain how you tested the package to make sure things work as expected. These files allow us to perform that testing.
+
+### Install the `.eopkg` Files
+To install your new package, run the following command in the directory where you built the package. Include **all** `.eopkg` files that were built.
+
+```bash
+sudo eopkg it *.eopkg
+```
+
+Testing need not be very complicated. The goal is to ensure the package will reliably work for our users. Testing effort will depend on how complex the software is. At minimum, you want to ensure the application launches, and performs basic functionality as expected.
+
+For example, if you were updating a text editor, you would want to make sure you can open, create and save files. If you know of issues the package has had in the past, it's a good idea to test that as well to make sure there are no regressions. There are plenty of historical pull requests to review if you want more detail.
+
+### Returning to the Repository Version (optional but recommended)
+
+It is a good idea to remove the package you built, and return to the repository version, once you are done testing. To do this, run the following command on the main application. Example:
+
+```bash
+sudo eopkg it --reinstall nano
+```
+
+### Remove the `.eopkg` Files
+
+Before you can submit your pull request, you need to remove the `.eopkg` files. They are not accepted in package pull requests. All repository packages are built by a dedicated build server from the source files provided in your pull request.
+
+To remove them, run:
+
+```bash
+make clean
+```
+
+## Package Review
+
+### Verify Necessary Files Are Included
+
+At minimum, your pull request will include changes for the following files:
 
 - `package.yml`
 - `pspec_*.xml`
 
-If any additional files were required for the build, then you must also include the `files/` directory.
+Double check the `package.yml` to make sure the builddeps are in the right order, and that it otherwise adheres to the [standards](package.yml.md) Solus has set.
+
+If any additional files were required for the build, then you must also include the `files/` directory. See [Packaging Practices](packaging-practices.md) for more detail.
 If you are creating a new package, you will also need to include a `Makefile` containing the following text:
 
 ```
 include ../Makefile.common
 ```
 
-Lastly, many package builds may result in the generation of an ABI report. These files start with `abi_*` and must also
-be included, as they allow simple tracking of changes to symbols and dependencies.
+Lastly, many package builds may result in the generation of an ABI report. These files start with `abi_*` and must also be included, as they allow simple tracking of changes to symbols and dependencies.
 
-## Prior to Patch Submission
+## Creating the Pull Request
 
-Prior to submitting a patch, please ensure you are checking the following:
+### Manipulating Files With Git
 
-- There is not an existing patch already provided by others.
-- If you are submitting a patch for the inclusion of software in the repo, that the package your patch pertains to has a corresponding package request that is **accepted for inclusion** or is a dependency of a package that has been accepted into the repository.
+#### Working with branches
 
-Please refrain from submitting a patch for the following instances:
-
-- For a package that is yet to be accepted for inclusion by a member of the Solus Staff team. We welcome you to politely reach out via the package request task or [Matrix](/docs/user/contributing/getting-involved#matrix-chat) if you deem the review of the request to be time-sensitive in nature.
-- If your patch is a Work In Progress / WIP. Completed patches or patches which have a request for comments are accepted, however for request for comments please ensure your patch title contains `[RFC]`. WIP patches just clutter Differential and make patch review by Solus Staff more time consuming and introduces unnecessary work.
-
-## Creating the patch
-
-### Manipulating files with Git
-
-#### Creating a new branch (optional)
-
-This is optional but recommended. This will allow you to more easily separate your work from an new changes made to the package repository which will allow you to more easily rebase any changes if needed. Create a new branch and switch to it by running `git checkout -b my-branch`
-
-:::tip
-- You can checkout the master branch by running `git checkout master`, and switch back to your branch by running `git checkout my-branch`
-- If there any new changes to the repository whilst you are still working on your branch you can run `git pull origin master --rebase` to pull the changes then manually fixup any conflicts.
+- If necessary, you can checkout the master branch by running `git switch master`, and switch back to your branch by running `git switch my-branch`
+- If there any new changes to the repository whilst you are still working on your branch you can run `git pull origin master --rebase` to pull the changes then manually fixup any conflicts. You can check your branch against master with `git diff master..my-branch`.
 - Once your pull request has been accepted you can delete your local branch by running `git branch -D my-branch` and `git push -d origin my-branch` to delete the remote branch.
-:::
+
+#### Check your changes
+
+It's a good idea to review the changes you have made to each file. This is to make sure you're committing what you intend and to make sure it looks good. Do this before adding changed files.
+
+To diff them all at once, useful for small changes, use `git diff`.
+To diff each file one at a time run `git diff filename` on each one.
 
 #### Adding files
 
-For every file you change or add, you must let git know about them: `git add someFile`
+For every file you change or add, you must let git know about it: `git add someFile`
 
 #### Removing files
 
@@ -63,45 +94,78 @@ For files that must be removed, you must do so using git: `git rm someFile`
 
 Likewise, for renaming a file, you must do so via git: `git mv someFile someFileName2`
 
-### Commit
+### Commit your Changes
 
-Once you're happy with your change, and you have verified locally that it works by having first built and
-installed it, it's time to commit your changes with `git commit`.
+**Check your branch**
 
-Make sure you provide a meaningful summary and a separate body to your commit message. For more information
-on suitable commit messages, please check the [tooling central documentation](https://github.com/solus-project/tooling-central/blob/master/README.rst#using-git).
+Get the status of the branch with `git status`. Make sure all the files you changed are staged, and that there are no untracked files. The git status should say your branch is clean.
 
-- If you want to link this patch to an issue on the Dev Tracker, simply mention it in your commit message: `The inclusion of <somepackage> fixes #1234`
+Now that you've tested and reviewed your change, when you're happy with it, it's time to commit your changes with `git commit`.
+
+Make sure you provide a meaningful summary (with the package name) and a separate body to your commit message. Package update details should come from the upstream project release notes, and contain no links. There may also be a section for Solus specific work.
+
+There should be a summary line, a blank line, and then the rest of the commit message. Bullet point lists should start with a dash.
+
+Here is an example in our standard format:
+
+```
+Update foo to 1.2.3
+
+**Changelog**
+
+Bugfixes:
+
+- Fixed a crash
+- Something else
+
+Enhancements:
+
+- Implemented a feature
+- Error when encountering a thing
+
+**Full release notes:**
+- [1.2.3](https://github.com/foo/foo/releases/tag/v1.2.3)
+
+## Test Plan
+
+- Launched the application
+- Exercised the UI
+- Exercised some feature
+```
+
+For more information on suitable commit messages, please check the [tooling central documentation](https://github.com/solus-project/tooling-central/blob/master/README.rst#using-git).
+
+- If you want to link this pull request to an existing issue, simply mention it in your commit message: `The inclusion of <somepackage> fixes #1234`
 - If you need a change to depend on another change, mention it in the commit message too: `Depends on #123`
 
-### Submitting for Review
+### Submitting the Pull Request for Review
 
-Now you have your changed committed, it's time to send it to us for review using by submitting a pull request to the GitHub repository.
+Now that you have your changed committed, it's time to send it to us for review by submitting a pull request to the GitHub repository.
 
-You will first need to fork the repository either from the GitHub web interface. Or by using the `gh` cli tool from the `github-cli` package.
+You will first need to fork the repository. You can do this either from the GitHub web interface, or by using the [`gh` cli tool](https://cli.github.com/manual/gh_repo_fork) from the `github-cli` package.
 
-Next change your push url to the one that matches your fork. For example
+Next, change your push url to the one that matches your fork. For example:
 
-If you forked `github.com/solus-packages/nano`, it would be forked to `github.com/mygithubaccount/nano`. You can then set the push url to
+If you forked `github.com/solus-packages/nano`, it would be forked to `github.com/mygithubaccount/nano`. You would set the push url with:
 
 `git remote set-url --push origin https://github.com/mygithubaccount/nano`
 
-Finally, you can run `git push`.
+Finally, run `git push`.
 
 :::note
-If you've created your own branch the cli tool with prompt you with a new command to create and push to a remote branch matching the local one.
+If you've created your own branch, the cli tool will prompt you with a new command to create and push to a remote branch matching the local one.
 :::
 
-Once the commit is successfully pushed. You'll notice that a URL will be provided that'll immediately allow you to create a pull request with your changes.
+Once the commit is successfully pushed, you'll notice that a URL will be provided that will immediately allow you to create a pull request with your changes.
 Open the link, double check everything, then create the pull request!
 
-## Updating a patch that needs changes
+## Updating a Pull Request That Needs Changes
 
 ### Updating files
 
 That's easy. **Don't make a new commit**, just make any relevant changes to your local tree, adding + removing as before, but this time run: `git commit --amend`.
 
-This will amend your original changes, and you can submit the updated patch once more with `git push --force`.
+This will amend your original changes, and you can submit the updated commit with `git push --force`.
 
 A new editor session will open, where you can provide details about the changes you've made between the last revision and the newly amended one. This comment will help reviewers to see what you've changed, to streamline the process of getting your patch into Solus.
 
@@ -128,6 +192,6 @@ Pushing changes is not possible unless you have maintainer access. The same is a
 
 To request maintainer rights for a repository, it is expected that some level of contribution/maintenance has already happened by way of testing/patching, and there is reasonable trust demonstrated to "hand the keys" over to a repository.
 
-Currently, the request mechanism is [contact Solus Staff on Matrix](/docs/user/contributing/getting-involved#matrix-chat)
+Currently, the request mechanism is [to contact Solus Staff on matrix in the Packaging room](/docs/user/contributing/getting-involved#matrix-chat).
 
 Finally, note that the management reserve the right to revoke access at any time, in order to preserve project safety and integrity.

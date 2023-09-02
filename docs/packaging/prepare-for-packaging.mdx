@@ -1,19 +1,18 @@
 ---
 title: Prepare for Packaging
 summary: Quick guide on getting your system set up for packaging on Solus
-sidebar_position: 0
+sidebar_position: 1
 ---
 
-:::danger
-We are currently in the process of migrating our source repositories from Phabricator to GitHub. Updating all facets of the documentation will take some time.
-If you notice any issues feel free to file an issue or get in contact with us on our Matrix channels.
-:::
+import MigrationWarning from './_markdown-migration-warning.md';
+
+<MigrationWarning/>
 
 # Prepare for Packaging
 
-## Setting up Packager file
+## Setting up the Packager file
 
-In order to utilise the build system, you must first set up a configuration file that has your packager details.
+In order to utilize the build system, you must first set up a configuration file that has your packager details.
 
 This file lives in the `.config/solus` folder of your home directory. You will need to create the `.config/solus` folder as well as the inner `packager` file. Inside the packager file, you need two keys, `Name` and `Email`. This is used when generating the machine file so that the packager details are stored within the resulting binary package.
 
@@ -40,24 +39,23 @@ sudo eopkg it -c system.devel
 Additionally, we need a few more tools to carry out the packaging process:
 
 - `git` is used for version control of the solus sources
+- `github-cli` is used to make working with GitHub easier
 - `solbuild` is a lightweight container environment for building packages repeatably
 - `solbuild-config-unstable` sets up solbuild for working with the `unstable` repository
 
 ```bash
-sudo eopkg it git solbuild solbuild-config-unstable
+sudo eopkg it git github-cli solbuild solbuild-config-unstable
 ```
 
 ## Setting up a GitHub account
 
 The solus source repositories for the package repository currently reside on [github.com/solus-packages](https://github.com/solus-packages). You will need a GitHub account to submit patches and file issues. You can create a GitHub account [here](https://github.com/signup).
 
-## Setting Up solbuild
+## Setting up solbuild
 
 The `solbuild` tool must first be initialized with a base image. All builds thereafter will use this as a base, and construct a temporary overlay root to save on time and disk space in builds.
 
-### Initializing solbuild
-
-Next, you need to initialize solbuild via:
+Initialize solbuild via:
 
 ```bash
 sudo solbuild init
@@ -84,11 +82,16 @@ mkdir ~/solus-builds
 cd solus-builds
 ```
 
-### Setting up `common`
+Next you need to set up `common`. This is a repository with a set of make scripts which enable you to more easily manage, build, check, and publish packages.
 
-Next you need to set up `common`, a set of scripts that enables you to manage, build, check, and publish packages.
+Change into the directory you will keep the folders for the packages you will be buildingand clone the common repository with git. For instance if you have a package directory `/home/user/packaging` you would run:
 
-Run the following commands to clone the `common` repository and create the required symlinks. Do this inside `solus-builds`:
+```bash
+cd /home/user/packaging
+git clone https://dev.getsol.us/source/common.git
+```
+
+Next you need to set up a few symlinks. Do this from the same directory you executed the `git` command:
 
 ```bash
 git clone https://github.com/getsolus/common.git
@@ -97,7 +100,7 @@ ln -sv common/Makefile.toplevel Makefile
 ln -sv common/Makefile.iso .
 ```
 
-Your folder should look something similar to this:
+Your packaging folder should look something similar to this:
 
 ```
 └── solus-builds
@@ -108,10 +111,28 @@ Your folder should look something similar to this:
    └── Makefile.iso -> common/Makefile.iso
 ```
 
+##  Recommended aliases
+Consider creating these aliases in your `.bashrc` file (or equivalent for the zsh or fish shell).
+
+The script `common/Scripts/yauto.py` is used to create an initial `package.yml` file for packages that aren't yet in the repository.
+
+```bash
+alias fetchYml="$HOME/solus-builds/common/Scripts/yauto.py"
+```
+
+The script `common/Scripts/epcsearch.py` is used to find packages that satisfy build dependencies.
+
+```bash
+alias epcsearch='~/packaging/common/Scripts/epcsearch.py'
+```
+
+The `yupdate` tool is used when updating packages.
+
+```bash
+alias updatePackage='/usr/share/ypkg/yupdate.py'
+```
+
 ## Building Packages
 
-With your new build environment set up, you can now build packages.
-
-- [Your First Package](docs/packaging/your-first-package.md)
-- [Updating an Existing Package](docs/packaging/updating-an-existing-package.md)
-- [Creating a New Package](docs/packaging/creating-a-new-package.md)
+Your system is now set up for package work.
+If you are new to packaging, see [Your First Package](your-first-package.md).

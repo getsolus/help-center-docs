@@ -3,15 +3,15 @@ title: Package YAML
 summary: Learning the package.yml packaging format
 ---
 
-# Package.yml
+# `package.yml`
 
-All packages are generated from a single build file, which provides all of the required metadata for the package manager, plus the packaging steps involved to produce a package. This follows the YAML specification.
+Each package is generated from a single build file `package.yml`. This provides all of the required metadata for the package manager, plus the packaging steps involved to produce a package. This file follows the YAML specification.
 
 ## Format
 
 All `package.yml` files **must** be valid YAML.
 
-The file is organised into a key→value hierarchy. The `ypkg` tool parses a `package.yml` file to build the corresponding package in a declarative manner, so most of the keys are simple strings, lists or nested key→value pairs. A special case consists in the packaging steps, which are scripts.
+The file is organised into a key→value hierarchy. The `ypkg` tool parses a `package.yml` file to build the corresponding package in a declarative manner. As such, most of the keys are simple strings, lists or nested key→value pairs. A special case consists in the packaging steps, which are scripts.
 
 An example file follows:
 <!-- prettier-ignore -->
@@ -54,6 +54,7 @@ Not all fields in `package.yml` are mandatory, but a small selection are. Below 
 | **version**     | `string`    | The version of the currently packaged software. This is taken from the tarball in most cases.                                                                                                                       |
 | **release**     | `integer`   | Specifies the current release number. Updates in the package number are based on this `release` number, _not_ the `version` number. As such, to release an update to users, this number must be incremented by one. |
 | **license**     | `string(s)` | Valid upstream license(s). Try to ensure these use [SPDX identifiers](https://spdx.org/licenses/).                                                                                                                  |
+| **homepage**    | `string`    | Provides a link to the package's homepage, used in the Software Center.                                                                                          |
 | **source**      | `dict(s)`   | Upstream source URL (i.e. tarball), with the valid `sha256sum` as a value. Alternatively, the git repository URL prefixed with "git&#124;" and a git tag or commit hash as a value.                                 |
 | **component**   | `string`    | Component / group of packages this package belongs to. Check available components via `eopkg lc`                                                                                                                    |
 | **summary**     | `string`    | Brief package summary, or display name.                                                                                                                                                                             |
@@ -76,7 +77,6 @@ Not all fields in `package.yml` are mandatory, but a small selection are. Below 
 | **patterns**    | `dict(s)`   | Allows fine grained control over file placement within the package or sub-packages. Useful for packages that are development only (i.e. `/usr/bin` files). |
 | **environment** | `unicode`   | Specify code that will be exported to all packaging steps of the build (i.e. exporting variables for the entire build).                                    |
 | **networking**  | `bool`      | Set to `yes` to enable networking within solbuild.                                                                                                         |
-| **homepage**    | `string`    | Provides a link to the package's homepage in the Software Center.                                                                                          |
 
 ### Packaging Step Keys, optional
 

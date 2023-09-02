@@ -1,13 +1,45 @@
 ---
 title: Updating an Existing Package
 summary: Updating an Existing Package
+sidebar_position: 4
 ---
 
 # Updating an Existing Package
 
 This article will go over updating a package that is already in the Solus git repository.
 
-The instructions below assume you have cloned the package's repository using the https link provided on the respective git page, [for example nano](https://github.com/solus-packages/nano). The process for submitting an updated package is the same as if it is a new package. Follow the steps [here](/docs/packaging/submitting-a-package).
+The instructions below assume you have cloned the package's repository. The easiest way to do this is (substitute the actual package name):
+
+```bash
+git make package-name.clone
+```
+
+Alternatively, you may use the https link provided on the respective git page, [for example nano](https://github.com/solus-packages/nano).
+
+
+:::note
+
+**Please [look to see if an issue has been filed](https://github.com/getsolus/packages/issues?q=label%3A%22Package+Request%22) for the software update**.
+If there is an existing request, please add a link to it in your pull request. Ex:
+
+```
+Software update request https://github.com/getsolus/packages/issues/123
+```
+
+:::
+
+## Update Your GitHub Fork
+
+If you have a fork of the package in GitHub, from previous updates, log into GitHub. Make sure you're looking at the master branch & that your fork is up to date with the repo it was forked from. If your fork indicates it is behind, use the "Sync fork" button to bring it up to date.
+
+## Switch to a New Git Branch
+
+It's always a good idea to switch to a new git branch before beginning packaging work.   This will allow you to more easily separate your work from an new changes made to the package repository, which will allow you to more easily rebase any changes if needed.
+Example:
+
+```bash
+git switch -c update_mypackage_versionnum
+```
 
 ## Bumping a package
 
@@ -17,7 +49,7 @@ This can be achieved by doing `make bump`, which increments the release number b
 
 ## Updating a package
 
-To update the package to a newer version, use the `yupdate` tool. This tool is located at `/usr/share/ypkg/yupdate.py` and while you can use it directly, we generally recommend setting an alias via your `.bashrc`, `.zshrc`, etc.
+To update the package to a newer version, use the `yupdate` tool. This is located at `/usr/share/ypkg/yupdate.py`. We recommend setting an alias via your `.bashrc`, `.zshrc`, etc.
 
 ```bash
 alias updatePackage='/usr/share/ypkg/yupdate.py'
@@ -35,3 +67,13 @@ Example:
 ```bash
 /usr/share/ypkg/yupdate.py 1.0 https://example.com/example-1.0.tar.xz
 ```
+
+## Building a package
+
+After bumping or updating the package, build it using the appropriate command. Usually this is:
+
+```bash
+make
+```
+
+Next, you'll [test the package and submit a pull request for review](submitting-a-package.md).
