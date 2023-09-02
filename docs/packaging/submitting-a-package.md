@@ -192,6 +192,6 @@ Pushing changes is not possible unless you have maintainer access. The same is a
 
 To request maintainer rights for a repository, it is expected that some level of contribution/maintenance has already happened by way of testing/patching, and there is reasonable trust demonstrated to "hand the keys" over to a repository.
 
-Currently, the request mechanism is [to contact Solus Staff on matrix in the Packaging room](/docs/user/contributing/getting-involved#matrix-chat).
+Currently, the request mechanism is [to contact Solus Staff on Matrix in the Packaging room](/docs/user/contributing/getting-involved#matrix-chat).
 
 Finally, note that the management reserve the right to revoke access at any time, in order to preserve project safety and integrity.
