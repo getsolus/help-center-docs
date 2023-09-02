@@ -124,7 +124,7 @@ Understanding how to translate source code into a good `package.yml` file is the
 
 ## Build the Package
 
-Build the package (`tree` uses `make`, other packages may use another command):
+Build the package with:
 
 ```bash
 make

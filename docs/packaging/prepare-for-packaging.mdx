@@ -10,6 +10,12 @@ import MigrationWarning from './_markdown-migration-warning.md';
 
 # Prepare for Packaging
 
+## Switch to the Unstable Repository
+
+Packages need to be built and tested against the "unstable" repository. If you don't want to switch your primary system to unstable, you can do your packaging work in a VM. We have Virtual Machine Manager in the repos.
+
+Refer to [Repository Management](docs/user/package-management/repo-management) to see how to add and switch to unstable.
+
 ## Setting up the Packager file
 
 In order to utilize the build system, you must first set up a configuration file that has your packager details.
@@ -49,7 +55,13 @@ sudo eopkg it git github-cli solbuild solbuild-config-unstable
 
 ## Setting up a GitHub account
 
-The solus source repositories for the package repository currently reside on [github.com/solus-packages](https://github.com/solus-packages). You will need a GitHub account to submit patches and file issues. You can create a GitHub account [here](https://github.com/signup).
+The solus source repositories for the package repository currently reside on [github.com/solus-packages](https://github.com/solus-packages). You will need a GitHub account to submit patches and file issues. You can create a GitHub account [here](https://github.com/signup). Note that you will also need to set up [2FA(https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa)] (two factor authentication) with your account.
+
+### Configure `github-cli`.
+
+Once you have a GitHub account, you need to configure `github-cli` to work with it. At the minimum, you need to run `gh auth login`. Have your GitHub credentials and 2FA (two factor authentication) mechanism at hand.
+
+See the [GitHub CLI quickstart](https://docs.github.com/en/github-cli/github-cli/quickstart) for some common uses of the tool.
 
 ## Setting up solbuild
 
@@ -84,17 +96,16 @@ cd solus-builds
 
 Next you need to set up `common`. This is a repository with a set of make scripts which enable you to more easily manage, build, check, and publish packages.
 
-Change into the directory you will keep the folders for the packages you will be buildingand clone the common repository with git. For instance if you have a package directory `/home/user/packaging` you would run:
+Change into the directory you will keep the folders for the packages you will be building and clone the common repository with git. For instance if you have a package directory `/home/user/solus-builds` you would run:
 
 ```bash
-cd /home/user/packaging
-git clone https://dev.getsol.us/source/common.git
+cd /home/user/solus-builds
+git clone https://github.com/getsolus/common.git
 ```
 
 Next you need to set up a few symlinks. Do this from the same directory you executed the `git` command:
 
 ```bash
-git clone https://github.com/getsolus/common.git
 ln -sv common/Makefile.common .
 ln -sv common/Makefile.toplevel Makefile
 ln -sv common/Makefile.iso .

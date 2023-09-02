@@ -14,7 +14,7 @@ Please refrain from submitting a pull request for the following instances:
 
 ## Test Your Package
 
-After you ran `make` (or the appropriate command for the package) you now have `.eopkg` files in the package directory. Each pull request requires you to explain how you tested the package to make sure things work as expected. These files allow us to perform that testing.
+After you run `make`, you now have `.eopkg` files in the package directory. Each pull request requires you to explain how you tested the package to make sure things work as expected. These files allow us to perform that testing.
 
 ### Install the `.eopkg` Files
 To install your new package, run the following command in the directory where you built the package. Include **all** `.eopkg` files that were built.
@@ -32,7 +32,7 @@ For example, if you were updating a text editor, you would want to make sure you
 It is a good idea to remove the package you built, and return to the repository version, once you are done testing. To do this, run the following command on the main application. Example:
 
 ```bash
-sudo eopkg it --reinstall nano
+sudo eopkg it --reinstall tree
 ```
 
 ### Remove the `.eopkg` Files
@@ -135,8 +135,8 @@ Enhancements:
 
 For more information on suitable commit messages, please check the [tooling central documentation](https://github.com/solus-project/tooling-central/blob/master/README.rst#using-git).
 
-- If you want to link this pull request to an existing issue, simply mention it in your commit message: `The inclusion of <somepackage> fixes #1234`
-- If you need a change to depend on another change, mention it in the commit message too: `Depends on #123`
+- If you want to link this pull request to an existing issue, simply mention it in your commit message (use the full URL): `The inclusion of <somepackage> fixes https://github.com/getsolus/packages/issues/123`
+- If you need a change to depend on another change, mention it in the commit message too (use the full URL): `Depends on https://github.com/getsolus/packages/issues/234`
 
 ### Submitting the Pull Request for Review
 
@@ -186,7 +186,7 @@ After this editor session, the updated patch will be automatically uploaded, the
 
 ## Maintainership
 
-Submission directly to a repository is only possible for maintainers. As a maintainer you may freely push to your package(s) and initiate builds for them, which will be pushed to the unstable repository. You can watch builds [here](https://build.getsol.us/)
+Submission directly to a repository is only possible for maintainers. As a maintainer you may freely push to your package(s) and initiate builds for them, which will be pushed to the unstable repository. You can watch builds [here](https://build.getsol.us/).
 
 Pushing changes is not possible unless you have maintainer access. The same is also true of `make publish`.
 
