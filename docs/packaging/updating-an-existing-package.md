@@ -32,9 +32,16 @@ Software update request https://github.com/getsolus/packages/issues/123
 
 If you have a fork of the package in GitHub, from previous updates, log into GitHub. Make sure you're looking at the master branch & that your fork is up to date with the repo it was forked from. If your fork indicates it is behind, use the "Sync fork" button to bring it up to date.
 
+You will also need to bring your local copy of that fork up to date. To do so run:
+
+```bash
+cd /home/solus-builds/package-name
+git pull
+```
+
 ## Switch to a New Git Branch
 
-It's always a good idea to switch to a new git branch before beginning packaging work.   This will allow you to more easily separate your work from an new changes made to the package repository, which will allow you to more easily rebase any changes if needed.
+It's always a good idea to switch to a new git branch before beginning packaging work. This will allow you to more easily separate your work from an new changes made to the package repository, which will allow you to more easily rebase any changes if needed.
 Example:
 
 ```bash
