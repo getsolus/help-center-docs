@@ -70,6 +70,14 @@ Example:
 
 ## Building a package
 
+After bumping or updating the package, build it:
+
+```bash
+make
+```
+
+## Building a package
+
 After bumping or updating the package, build it using the appropriate command. Usually this is:
 
 ```bash
