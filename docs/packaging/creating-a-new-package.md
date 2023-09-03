@@ -122,6 +122,10 @@ To read more about finding and including dependencies and other parts of `packag
 
 Understanding how to translate source code into a good `package.yml` file is the heart of packaging. If you are stumped, or have questions, **ask for help in our Solus Packaging room on [Matrix](/docs/user/contributing/getting-involved#matrix-chat).**
 
+## The `MAINTAINERS.md` file
+
+You must add a file called `MAINTAINERS.md` using the template in [Maintainership](procedures/maintainership.md). Solus uses this to track the primary maintainer(s) for each package.
+
 ## Build the Package
 
 Build the package with:

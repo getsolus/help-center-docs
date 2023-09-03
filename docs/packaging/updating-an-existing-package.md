@@ -48,13 +48,13 @@ Example:
 git switch -c update_mypackage_versionnum
 ```
 
-## Bumping a package
+## Bumping a Package
 
 Bumping a package is typically done when rebuilding against a changed dependency, such as `imagemagick` needing to be rebuilt if `libwebp` changes. Additionally, it is done if changes are being made to the package, such as additional new dependencies or other modifications.
 
 This can be achieved by doing `make bump`, which increments the release number by 1.
 
-## Updating a package
+## Updating a Package
 
 To update the package to a newer version, use the `yupdate` tool. This is located at `/usr/share/ypkg/yupdate.py`. We recommend setting an alias via your `.bashrc`, `.zshrc`, etc.
 
@@ -75,11 +75,9 @@ Example:
 /usr/share/ypkg/yupdate.py 1.0 https://example.com/example-1.0.tar.xz
 ```
 
-## The legacy `MAINTAINERS.md` file
+## The `MAINTAINERS.md` File
 
-Solus packages used to use a file called `MAINTAINERS.md` to track maintainership. We now use the `.config/solus/packager` file for this.
-
-If you see the `MAINTAINERS.md` file in the package you're updating, it should be deleted.
+There must be a file called `MAINTAINERS.md` using the template in [Maintainership](procedures/maintainership.md). Add it if it does not already exist. It should name the current maintainer(s) of the package.
 
 ## Building the package
 
