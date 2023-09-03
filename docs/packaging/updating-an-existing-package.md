@@ -41,7 +41,7 @@ git pull
 
 ## Switch to a New Git Branch
 
-It's always a good idea to switch to a new git branch before beginning packaging work. This will allow you to more easily separate your work from an new changes made to the package repository, which will allow you to more easily rebase any changes if needed.
+It's always a good idea to switch to a new git branch before beginning packaging work. This will allow you to more easily separate your work from any new changes made to the package repository, which will allow you to more easily rebase any changes if needed.
 Example:
 
 ```bash
@@ -75,7 +75,13 @@ Example:
 /usr/share/ypkg/yupdate.py 1.0 https://example.com/example-1.0.tar.xz
 ```
 
-## Building a package
+## The legacy `MAINTAINERS.md` file
+
+Solus packages used to use a file called `MAINTAINERS.md` to track maintainership. We now use the `.config/solus/packager` file for this.
+
+If you see the `MAINTAINERS.md` file in the package you're updating, it should be deleted.
+
+## Building the package
 
 After bumping or updating the package, build it by running:
 

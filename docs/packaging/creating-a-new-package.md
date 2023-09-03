@@ -34,7 +34,7 @@ We recommend making the name of the package directory match the name of the pack
 
 ## Initialize Git Repo
 
-Initialize the folder as a git repository and switch to a new branch.  This will allow you to more easily separate your work from an new changes made to the package repository, which will allow you to more easily rebase any changes if needed.
+Initialize the folder as a git repository and switch to a new branch.  This will allow you to more easily separate your work from any new changes made to the package repository, which will allow you to more easily rebase any changes if needed.
 
 Example:
 
