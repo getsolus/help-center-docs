@@ -8,7 +8,9 @@ summary: Helpful tips and tricks for using Plasma on Solus.
 ## Keyboard Shortcuts
 
 :::tip
+
 To see the complete list of keyboard shortcuts available on your system, open the **[System Settings](configuration.md#opening-system-settings)** screen, then go to **Workspace** > **Shortcuts**.
+
 :::
 
 The following table shows some of the keyboard shortcuts available in Solus Plasma.
@@ -50,8 +52,10 @@ The following table outlines the actions you can perform using KRunner.
 |Switch between windows                          |Enter the name of an open window and select an entry from the **Windows** list.                  |
 
 :::info
+
 - To see a list of the currencies KRunner supports, see [https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html).
 - Unit and currency conversions do not require the `=` symbol.
+
 :::
 
 ## Dolphin
@@ -69,3 +73,16 @@ The following table describes some of the keyboard shortcuts you can use in Dolp
 |Show/hide hidden files                         |Press `Ctrl` + `H` to show/hide hidden files.                                         |
 |Show/hide the side panel                       |Press `F9` to show/hide the **Places** side panel.                                    |
 |Switch between the view modes                  |Press `Ctrl` + `1` to display icons in _icons_ view, press `Ctrl` + `2` to display icons in _compact_ view, or press `Ctrl` + `3` to display icons in _details_ view; |
+
+## Context Menu
+
+The _Plasma_ desktop provides a variety of context menus. Context menus display options, settings, and actions applicable to the current context or element you select.
+
+The following table describes some of the context menus available in Plasma.
+
+|Context menu          |Description                                                                              |
+|----------------------|-----------------------------------------------------------------------------------------|
+|Bottom panel settings |Right-click on an empty space of the bottom panel to open the bottom panel context menu. |
+|Widget settings       |Right-click on any widget in the bottom panel to open the widget context menu.           |
+|Desktop settings      |Right-click anywhere on the desktop to open the desktop context menu.                    |
+|File                  |Right-click a file to open the file context menu.                                        |

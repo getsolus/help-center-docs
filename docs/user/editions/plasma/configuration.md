@@ -53,7 +53,9 @@ In the [**System Settings**](#opening-system-settings) screen, go to **Personali
 ## Displays
 
 :::tip
+
 Press `Super + P` to access the screen layout settings.
+
 :::
 
 1. In the [**System Settings**](#opening-system-settings) screen, go to **Hardware** > **Display and Monitor** > **Display Configuration**.
@@ -67,7 +69,9 @@ Press `Super + P` to access the screen layout settings.
 ### Configuring Keyboard Layouts
 
 :::caution Important
+
 If you need to input languages that do not use Latin characters (for example, Chinese or Japanese), [use IBus instead](#using-ibus).
+
 :::
 
 1. In the [**System Settings**](#opening-system-settings) screen, go to **Input Devices** > **Keyboard** > **Layouts**.
@@ -88,7 +92,9 @@ If you need to input languages that do not use Latin characters (for example, Ch
 Solus Plasma includes IBus installed by default. However, you need to enable and integrate IBus with Plasma before usage.
 
 :::caution Important
+
 Using IBus overrides the configuration in the **Layouts** section of **System Settings**
+
 :::
 
 1. Open the `/home/[username]/.bashrc` file with a text editor.
@@ -108,7 +114,9 @@ export XMODIFIERS=@im=ibus
    1. Open **IBus Preferences** from the application launcher.
    2. In the **Input Method** tab, add the keyboard layout you need.
    :::caution Important
+
    Some keyboard layouts require [installing additional packages](../../software/localization/ibus.md).
+
    :::
 
 ## Mouse and Touchpad
@@ -191,7 +199,9 @@ The following table describes how to customize the desktop using the **Desktop F
 | Display only specific files in the desktop | Go to the **Filter** section,configure the necessary settings, and click **OK**.     |
 
 :::info
+
 **Icons** and **Location** are only available when the desktop layout is set to **Folder View**.
+
 :::
 
 ## Virtual Desktops
@@ -202,7 +212,9 @@ Virtual desktops are helpful to keep tasks organized and avoid clutter. For exam
 Plasma arranges virtual desktops in a grid. You can configure the rows of the grid to suit your needs.
 
 :::note
+
 Solus Plasma has one virtual desktop and one row by default.
+
 :::
 
 ### Creating Virtual Desktops
@@ -213,8 +225,10 @@ Solus Plasma has one virtual desktop and one row by default.
    2. (Optional) Click the **Rename** button to change the name of the virtual desktop.
 4. Repeat the previous step to add multiple virtual desktops.
 
-   :::caution Important
+   :::caution 
+
    Plasma arranges the desktops by the rows automatically.
+
    :::
 5. (Optional) Configure the behavior of the virtual desktops.
    - **Navigation wraps around**: Lets you cycle through your virtual desktops in a loop using keyboard shortcuts or mouse gestures.
@@ -224,8 +238,10 @@ Solus Plasma has one virtual desktop and one row by default.
 6. Click **Apply**
 
 :::tip
+
 Plasma displays the virtual desktop grid next to the application launcher button.
 ![Virtual desktop grid](configuration/vd-grid.png)
+
 :::
 
 ### Switching Between Virtual Desktops
@@ -240,5 +256,7 @@ The following table outlines the methods to change between desktops in Solus Pla
 ![Keyboard shortcuts to switch between desktops](configuration/switch-desktop-shortcut-list.png)
 
 :::note
+
 Some of the keyboard shortcuts are disabled by default.
+
 :::
