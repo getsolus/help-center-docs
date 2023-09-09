@@ -113,11 +113,12 @@ export XMODIFIERS=@im=ibus
 6. Configure keyboard layouts as you need.
    1. Open **IBus Preferences** from the application launcher.
    2. In the **Input Method** tab, add the keyboard layout you need.
-   :::caution Important
+   
+:::caution Important
 
-   Some keyboard layouts require [installing additional packages](../../software/localization/ibus.md).
+Some keyboard layouts require [installing additional packages](../../software/localization/ibus.md).
 
-   :::
+:::
 
 ## Mouse and Touchpad
 1. In the [**System Settings**](#opening-system-settings) screen, go to the appropriate configuration screen:
