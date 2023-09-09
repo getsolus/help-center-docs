@@ -1,20 +1,26 @@
 ---
 title: Plasma
-summary: A quick introduction to the Plasma Edition of Solus
+summary: A quick introduction to the Plasma edition of Solus
 ---
 
-# Plasma Shell
+# Plasma
 
-Plasma Desktop is provided by the Plasma Edition of Solus. They describe it as:
+![Solus Plasma](plasma.jpg)
 
-> Plasma is KDE's flagship product, offering the most customizable desktop environment available. The KDE community has the driving goal of making it simple by default, and powerful when needed.
+The _Plasma_ desktop is a graphical user interface for Linux distributions that aims to offer users an intuitive and customizable user interface to interact with their devices. The Plasma desktop is developed by KDE.
 
-Here are some links related to this project that you may find helpful:
+To learn more about the Plasma desktop and KDE, refer to the following pages:
 
-- [Homepage](https://kde.org/plasma-desktop/)
-- [News](https://kde.org/announcements/)
-- [Support](https://kde.org/support/)
+- [https://kde.org/plasma-desktop/](https://kde.org/plasma-desktop/)
+- [https://kde.org/announcements/](https://kde.org/announcements/)
+- [https://kde.org/support/](https://kde.org/support/)
 
-[Go to Plasma Configuration](configuration)
+***
 
-[Go to Plasma Tips and Tricks](tips-and-tricks)
+[Configuration](configuration)
+
+Learn how to customize and configure the Plasma Desktop on Solus.
+
+[Tips and Tricks](tips-and-tricks)
+
+Helpful tips and tricks for using Plasma on Solus.
