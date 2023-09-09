@@ -5,7 +5,7 @@ summary: Learning the package.yml packaging format
 
 # `package.yml`
 
-Each package is generated from a single build file named `package.yml`. This provides all of the required metadata for the package manager, plus the packaging steps involved to produce a package. This file follows the YAML specification.
+Each package is generated from a single build file named `package.yml`. This file is sometimes also called a "recipe" since it provides steps for building a package. It provides all of the required metadata for the package manager, plus the packaging steps involved to produce a package. This file follows the YAML specification.
 
 ## Format
 
