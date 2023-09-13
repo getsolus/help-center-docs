@@ -1,50 +1,80 @@
 ---
 title: Creating a New Package
-summary: Creating a Package For Inclusion in the Repo
+summary: Creating a Package For Inclusion in the Repositories
 sidebar_position: 3
 ---
 
 # Creating a New Package
 
-This page will take you through the steps required to build a new package for the Solus repo. For this example, we will use the command line utility [tree](https://gitlab.com/OldManProgrammer/unix-tree), which is already packaged for Solus, but we will pretend like it's not.
+This page will take you through the steps required to build a new package for the Solus package repositories. For this example, we will use the command line utility [tree](https://gitlab.com/OldManProgrammer/unix-tree), which is already packaged for Solus, but we will pretend like it's not.
 
 :::note
 
 **Please [look to see if an issue has been filed](https://github.com/getsolus/packages/issues?q=label%3A%22Package+Request%22) for the software or library you intend to package**. If there is an existing request, please add a link to it in your pull request. Ex:
 
 ```
-Software request https://github.com/getsolus/packages/issues/123
+This PR resolves software request https://github.com/getsolus/packages/issues/123
 ```
 
 :::
 
-## Fork the getsolus/packages repo
+## Fork the getsolus/packages Repository / Update Your Fork
 
-1. Fork the repo [getsolus/packages](https://github.com/getsolus/packages) using the GitHub web UI or  [`gh` cli tool](https://cli.github.com/manual/gh_repo_fork) from the `github-cli` package. It will be forked to `github.com/yourgithubaccount/packages`.
-   If you had already cloned this repo, make sure to update it with `git pull`.
-2. From within your packaging directory, clone the fork. For example `gh repo clone yourgithubaccount/packages`.
-3. Create a new branch in this repo. For example: `git switch -c add_tree`.
+### Create a Fork
+
+If you had not yet done so already, fork the repo [getsolus/packages](https://github.com/getsolus/packages) using the GitHub web UI or [`gh` cli tool](https://cli.github.com/manual/gh_repo_fork) from the `github-cli` package. It will be forked to `github.com/yourgithubaccount/packages`.
+
+### Update a Fork
+
+If you already have a fork of [getsolus/packages](https://github.com/getsolus/packages) in GitHub, log into GitHub. Make sure you're looking at the master branch. Check to see that your fork is up to date with the main repo it was forked from. If your fork indicates it is behind, use the "Sync fork" button to bring it up to date.
+
+## Clone the packages repo / update your clone
+
+### Clone the repo
+
+From within your packaging directory, clone the fork. For example `gh repo clone yourgithubaccount/packages`.
+Then, change to this directory and create a new branch.
+
+```bash
+cd /home/solus-builds/packages
+git switch -c your-branch
+```
+
+### Update an existing clone
+
+If you already have a local clone, you need to bring it up to date and create a new branch. To do so run:
+
+```bash
+cd /home/solus-builds/packages
+git switch master
+git pull
+git switch -c your-branch
+```
 
 ## Create a New Package Directory
 
-From within your packaging directory, create a new directory for the new package. Use the package name as the directory name. Then, create the required Makefile within that directory.
+From within your packaging directory, create a new directory for the new package. Use the package name as the directory name.
+
+Initialize the folder as a git repository and switch to a new branch.  This will allow you to more easily separate your work from any new changes made to the package repository, which will allow you to more easily rebase any changes if needed. Then, create the required Makefile within that directory.
 
 ```bash
 mkdir tree
 cd tree
-echo "include ../Makefile.common" > Makefile
-```
-
-## Initialize the Git Repo
-
-Initialize the folder as a git repository and switch to a new branch.  This will allow you to more easily separate your work from any new changes made to the package repository, which will allow you to more easily rebase any changes if needed.
-
-Example:
-
-``` bash
 git init
 git switch -c my-branch
 ```
+
+## Link to the `Makefile` File
+
+Every package directory needs a file `Makefile`. To create it with the proper contents, run this:
+
+```bash
+echo "include ../Makefile.common" > Makefile
+```
+
+## Create The `MAINTAINERS.md` File
+
+You must add a file called `MAINTAINERS.md` using the template in [Maintainership](procedures/maintainership.md). Solus uses this to track the primary maintainer(s) for each package.
 
 ## Create the `package.yml` File
 
@@ -125,18 +155,10 @@ To read more about finding and including dependencies and other parts of `packag
 
 Understanding how to translate source code into a good `package.yml` file is the heart of packaging. If you are stumped, or have questions, **ask for help in our Solus Packaging room on [Matrix](/docs/user/contributing/getting-involved#matrix-chat).**
 
-## Create The `MAINTAINERS.md` File
-
-You must add a file called `MAINTAINERS.md` using the template in [Maintainership](procedures/maintainership.md). Solus uses this to track the primary maintainer(s) for each package.
 
 ## Build the Package
 
-Build the package with:
-
-```bash
-make
-```
-
+Build the package with `make`
 Once the build completes, your directory should now include the following files:
 
 ```text
@@ -148,19 +170,24 @@ Once the build completes, your directory should now include the following files:
 └── tree-2.1.1-1-1-x86_64.eopkg
 ```
 
-All these files _except_ the `*eopkg` file should be included in your pull request.
+All these files _except_ the `*eopkg` file(s) should be included in your pull request. You will remove them after testing the package.
+
+Once your package has built successfully, you will need to [test it](testing-a-package).
 
 ## Commit your Changes
 
-**Check your branch**
+Check the [changes in your files](git-basics).
 
-Get the status of the branch with `git status`. Make sure all the files you changed are staged, and that there are no untracked files. The git status should say your branch is clean.
+[Add / remove files as necessary to the commit](git-basics.md). Then, **check your branch**.
 
-Now that you've tested and reviewed your change, when you're happy with it, it's time to commit your changes with `git commit`.
+Run `git status`. Make sure all the files you changed are staged, and that there are no untracked files. When all it well, run `git commit`.
 
-Make sure you provide a meaningful summary (with the package name) and a separate body to your commit message.
+### Commit message format for new packages
 
-There should be a summary line, a blank line, and then the rest of the commit message. Bullet point lists should start with a dash.
+There should be a summary line (with the package name), a blank line, and then the rest of the commit message.
+
+- There should at the minimum be a summary and Test Plan.
+- Bullet point lists should start with a dash.
 
 Here is an example in our standard format:
 
@@ -179,39 +206,4 @@ For more information on suitable commit messages, please check the [tooling cent
 - If you want to link this pull request to an existing package request, simply mention it in your commit message (use the full URL): `The inclusion of <somepackage> resolves https://github.com/getsolus/packages/issues/123`
 - If you need a change to depend on another change, mention it in the commit message too (use the full URL): `Depends on https://github.com/getsolus/packages/issues/234`
 
-## Submitting a Pull Request for Review
-
-In the package folder, run `git push`.
-
-:::note
-If you've created your own branch, the cli tool will prompt you with a new command to create and push to a remote branch matching the local one.
-:::
-
-Once the commit is successfully pushed, you'll notice that a URL will be provided that will immediately allow you to create a pull request with your changes.
-Open the link, double check everything, then create the pull request!
-
-## Updating a Pull Request That Needs Changes
-
-### Updating files
-
-TODO: remove git amend / git push --force?
-That's easy. **Don't make a new commit**. Make any relevant changes to your local branch, adding and removing as before, but this time run: `git commit --amend`.
-
-This will amend your original changes, and you can submit the updated commit with `git push`.
-
-A new editor session will open, where you can provide details about the changes you've made between the last revision and the newly amended one. This comment will help reviewers to see what you've changed, to streamline the process of getting your patch into Solus.
-
-The web interface will automatically update with the latest commit. Once accepted, your pull request will be merged, and someone on the Solus Team will issue a build.
-
-:::note
-- If you have already created a new commit, run `git rebase -i HEAD~2` to squash the commits, change the commit message to the same commit message as the original, removing any suggested commit message from git itself.
-:::
-
-### Updating Task Information
-
-If you forgot information such as a test plan, you can run resolve this by:
-
-1. Edit your commit message with `git commit --amend` as well as editing the pull request on the GitHub web interface. <-- TODO: GitHub PR Templates
-2. Next, you will see an editor session for providing a message indicating the change, for example "Added a test plan."
-
-After this editor session, the updated patch will be automatically uploaded, the web UI will automatically update, and no new tasks will be created.
+Next, you'll [submit a pull request for review](submitting-a-pull-request.md).
