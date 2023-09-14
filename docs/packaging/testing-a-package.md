@@ -1,3 +1,9 @@
+---
+title: Testing a Package
+summary: Testing a Package
+sidebar_position: 5
+---
+
 # Testing a Package
 
 After building a package, it must be tested against the unstable repo before a pull request can be submitted. Each pull request requires you to explain how you tested the package to make sure things work as expected.

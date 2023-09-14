@@ -64,9 +64,9 @@ git init
 git switch -c my-branch
 ```
 
-## Link to the `Makefile` File
+## Link to the `Makefile`
 
-Every package directory needs a file `Makefile`. To create it with the proper contents, run this:
+Every package directory needs a `Makefile`. To create it with the proper contents, run this:
 
 ```bash
 echo "include ../Makefile.common" > Makefile
@@ -194,7 +194,7 @@ Here is an example in our standard format:
 ```
 Initial inclusion of the tree package
 
-## Test Plan
+**Test Plan**
 
 - Launched the application
 - Exercised the UI

@@ -32,7 +32,7 @@ git pull
 git status
 ```
 
-The output should indicate you are up to date with origin/master and that your working tree is clean. If not, please reach out to the Solus Packaging team on [Matrix](/docs/user/contributing/getting-involved.md#matrix-chat).
+The output should indicate you are up to date with origin/master and that your working tree is clean. If not, please reach out to the Solus Packaging team on [Matrix](/docs/user/contributing/getting-involved#matrix-chat).
 
 Next, run this script to update all repos from Phab to GitHub:
 

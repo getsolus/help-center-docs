@@ -1,7 +1,7 @@
 ---
-title: Submitting a Package for Review
-summary: Submitting a Package for Review
-sidebar_position: 5
+title: Submitting a Pull Request for Review
+summary: Submitting a Pull Request for Review
+sidebar_position: 6
 ---
 
 # Submitting a Pull Request for Review
@@ -65,4 +65,4 @@ Submit the updated commit with `git push`. The web interface will automatically 
 
 Once your pull request is accepted and merged, someone on the Solus Team will issue a build. Your new / updated package will be published to the unstable repos.
 
-At this point you may [delete the local and remote branches](git-basics.md) for this pull request.
+At this point you may [delete the local and remote branches](git-basics#deleting-your-branch-after-a-pull-request-is-merged) for this pull request.

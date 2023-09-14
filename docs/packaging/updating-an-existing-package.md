@@ -141,7 +141,7 @@ Enhancements:
 **Full release notes:**
 - [1.2.3](https://github.com/foo/foo/releases/tag/v1.2.3)
 
-## Test Plan
+**Test Plan**
 
 - Launched the application
 - Exercised the UI
@@ -153,4 +153,4 @@ For more information on suitable commit messages, please check the [tooling cent
 - If you want to link this pull request to an existing issue, simply mention it in your commit message (use the full URL): `The inclusion of <somepackage> fixes https://github.com/getsolus/packages/issues/123`
 - If you need a change to depend on another change, mention it in the commit message too (use the full URL): `Depends on https://github.com/getsolus/packages/issues/234`
 
-Next, you'll [submit a pull request for review](submitting-a-package.md).
+Next, you'll [submit a pull request for review](submitting-a-pull-request.md).
