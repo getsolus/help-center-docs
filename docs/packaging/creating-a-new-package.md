@@ -32,36 +32,32 @@ If you already have a fork of [getsolus/packages](https://github.com/getsolus/pa
 
 ### Clone the repo
 
-From within your packaging directory, clone the fork. For example `gh repo clone yourgithubaccount/packages`.
-Then, change to this directory and create a new branch.
+From within your packaging directory, clone the fork. Then, change to this directory.
 
 ```bash
+cd /home/solus-builds
+gh repo clone yourgithubaccount/packages
 cd /home/solus-builds/packages
-git switch -c your-branch
 ```
 
 ### Update an existing clone
 
-If you already have a local clone, you need to bring it up to date and create a new branch. To do so run:
+If you already have a local clone, you need to bring it up to date. To do this run:
 
 ```bash
 cd /home/solus-builds/packages
 git switch master
 git pull
-git switch -c your-branch
 ```
 
 ## Create a New Package Directory
 
-From within your packaging directory, create a new directory for the new package. Use the package name as the directory name.
-
-Initialize the folder as a git repository and switch to a new branch.  This will allow you to more easily separate your work from any new changes made to the package repository, which will allow you to more easily rebase any changes if needed. Then, create the required Makefile within that directory.
+Create a new subdirectory for the new package. Use the package name as the directory name. Now, create a new branch. This will allow you to more easily separate your work from any new changes made to the package repository, which will allow you to more easily rebase any changes if needed. To do so run:
 
 ```bash
 mkdir tree
 cd tree
-git init
-git switch -c my-branch
+git switch -c your-branch
 ```
 
 ## Link to the `Makefile`
@@ -154,7 +150,6 @@ install    : |
 To read more about finding and including dependencies and other parts of `package.yml` please see [Packaging Practices](packaging-practices.md).
 
 Understanding how to translate source code into a good `package.yml` file is the heart of packaging. If you are stumped, or have questions, **ask for help in our Solus Packaging room on [Matrix](/docs/user/contributing/getting-involved#matrix-chat).**
-
 
 ## Build the Package
 

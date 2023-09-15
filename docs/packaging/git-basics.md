@@ -46,4 +46,12 @@ Now that you've tested and reviewed your change, when you're happy with it, it's
 
 ## Deleting your branch after a pull request is merged
 
-Once your pull request has been accepted you can delete your local branch by running `git branch -D my-branch` and `git push -d origin my-branch` to delete the remote branch.
+Once your pull request has been accepted you can delete your working branches.
+First, change to the package directory, switch to the master branch, then delete your local and the remote branches.
+
+```bash
+cd /home/solus-builds/package
+git switch master
+git branch -D my-branch
+git push -d origin my-branch
+```

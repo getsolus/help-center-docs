@@ -28,14 +28,22 @@ Double check the `package.yml` to make sure the builddeps are in the right order
 
 If any additional files were required for the build, then you must also include the `files/` directory. See [Packaging Practices](packaging-practices.md) for more detail.
 
-Lastly, many package builds may result in the automatic generation of an ABI report. These files start with `abi_*` and must also be included, as they allow simple tracking of changes to symbols and dependencies.
+Many package builds may result in the automatic generation of an ABI report. These files start with `abi_*` and must also be included, as they allow simple tracking of changes to symbols and dependencies.
+
+Take a final look over your commit message to make sure it has all the necessary information, and that the formatting is good. You can use this, which will show the most recent commit:
+
+```bash
+git log -1
+```
 
 ## Creating the Pull Request
 
 In the package folder, run `git push`.
 
 :::note
-If you've created your own branch, as recommend,ed the cli tool will show you a new command to create and push to a remote branch matching the local one. Run this.
+
+If you've created your own branch, as recommended, the cli tool will show you a new command to create and push to a remote branch matching the local one. Run this.
+
 :::
 
 Once the commit is successfully pushed, you'll notice that a URL will be provided that will immediately allow you to create a pull request with your changes.
@@ -44,11 +52,13 @@ Run `git status` one last time to make sure your branch is clean. If it is, open
 
 ## Amending a New Pull Request
 
-If you forgot information, such as a test plan, you can run resolve this easily.
+There may be times you need to make minor changes after submitting the pull request. For instance, you see something that needs correcting. You may update your pull request with a new commit and push, as with any other change. We recommend keeping this to a minimum after submitting your PR so that reviewers aren't working with old information.
 
-1. Edit your commit message with `git commit --amend`.
-2. Next, you will see an editor session for providing a message indicating the change, for example "Added a test plan.".
-3. Run `git push`.
+:::note
+
+Previously, with Phabricator. we required amending your commit. This is no longer necessary and is not recommended.
+
+:::
 
 ## Updating a Pull Request That Has Changes Requested
 

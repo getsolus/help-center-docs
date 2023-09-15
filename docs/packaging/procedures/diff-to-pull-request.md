@@ -16,7 +16,7 @@ To make the process even easier, we recommend installing `github-cli` (`sudo eop
 It would be a good idea to change the name of the directory to avoid a naming conflict when you fork and clone the new repository.
 
 ```bash
-cd ~/solus-builds # Change this to wherever your package build directory is
+cd ~/solus-builds # Change this to wherever your package packaging directory is
 mv bottom bottom-old
 ```
 

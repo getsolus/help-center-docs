@@ -11,7 +11,7 @@ This page will guide you through the steps required to build your first package.
 
 For this example we will use the text editor `nano`.
 
-Change to your build directory. Your directory may have a different name or location:
+Change to your packaging directory. Your directory may have a different name or location:
 
 ```bash
 cd ~/solus-builds
