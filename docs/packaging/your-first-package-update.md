@@ -27,7 +27,7 @@ cd packages/packages/n/nano
 Increase the release number by one ("bump" the package) and then check the results:
 
 ```bash
-make bump
+go-task bump
 git diff
 ```
 
@@ -51,7 +51,7 @@ index 2ff1756..4bc344c 100644
 Next, build the package:
 
 ```bash
-make
+go-task
 ```
 
 You will be prompted to enter your password by sudo, and the `solbuild` tool will build the package.
