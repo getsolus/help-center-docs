@@ -65,14 +65,6 @@ Now, create a new branch. This will allow you to more easily separate your work 
 git switch -c your-branch
 ```
 
-## Link to the `Makefile`
-
-Every package directory needs a `Makefile`. To create it with the proper contents, run this:
-
-```bash
-echo "include ../Makefile.common" > Makefile
-```
-
 ## Create The `MAINTAINERS.md` File
 
 You must add a file called `MAINTAINERS.md` using the template in [Maintainership](procedures/maintainership.md). Solus uses this to track the primary maintainer(s) for each package.
@@ -158,7 +150,7 @@ Understanding how to translate source code into a good `package.yml` file is the
 
 ## Build the Package
 
-Build the package with `make`
+Build the package with `go-task`
 Once the build completes, your directory should now include the following files:
 
 ```text

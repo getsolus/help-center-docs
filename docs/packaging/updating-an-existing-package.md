@@ -65,7 +65,7 @@ git switch -c update_nano
 
 Bumping a package is typically done when rebuilding against a changed dependency, such as `imagemagick` needing to be rebuilt if `libwebp` changes. It is also done if changes are being made to the package, such as adding new dependencies or other modifications which aren't a version update.
 
-This can be achieved by doing `make bump`, which increments the release number by 1.
+This can be achieved by doing `go-task bump`, which increments the release number by 1.
 
 ## Updating a Package
 
@@ -94,7 +94,7 @@ There must be a file called `MAINTAINERS.md` using the template in [Maintainersh
 
 ## Build the package
 
-After bumping or updating the package, build it by running `make`.
+After bumping or updating the package, build it by running `go-task`.
 Once your package has built successfully, you will need to [test it](testing-a-package).
 
 ## Commit Your Changes
