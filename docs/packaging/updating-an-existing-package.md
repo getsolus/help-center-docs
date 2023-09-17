@@ -19,15 +19,16 @@ This PR resolves software update request https://github.com/getsolus/packages/is
 
 :::
 
-## Fork the Package Repository / Update Your Fork
+
+## Fork the getsolus/packages Repository / Update Your Fork
 
 ### Create a Fork
 
-If you had not yet done so already, fork the repo for the package (nano in this example) using the GitHub web UI or [`gh` cli tool](https://cli.github.com/manual/gh_repo_fork) from the `github-cli` package. It will be forked to `github.com/yourgithubaccount/nano`.
+If you had not yet done so already, fork [getsolus/packages](https://github.com/getsolus/packages) using the GitHub web UI or [`gh` cli tool](https://cli.github.com/manual/gh_repo_fork) from the `github-cli` package. It will be forked to `github.com/yourgithubaccount/packages`.
 
 ### Update a Fork
 
-If you already have a fork of the package in GitHub, from previous updates, log into GitHub. Make sure you're looking at the master branch. Check to see that your fork is up to date with the repo it was forked from. If your fork indicates it is behind, use the "Sync fork" button to bring it up to date.
+If you already have a fork of [getsolus/packages](https://github.com/getsolus/packages) in GitHub, log into GitHub. Make sure you're looking at the main branch. Check to see that your fork is up to date with the main repo it was forked from. If your fork indicates it is behind, use the "Sync fork" button to bring it up to date.
 
 ## Clone the package repo / update your clone
 
@@ -37,8 +38,8 @@ If you do not yet have a clone of the package, change to your packaging director
 
 ```bash
 cd ~/solus-builds
-gh repo clone yourgithubaccount/nano
-cd nano
+gh repo clone yourgithubaccount/packages
+cd packages/packages/n/nano
 ```
 
 ### Update an existing clone
@@ -47,7 +48,7 @@ If you already have a local clone, you need to bring it up to date. To do so run
 
 ```bash
 cd ~/solus-builds/package-name
-git switch master
+git switch main
 git pull
 ```
 
