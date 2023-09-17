@@ -10,12 +10,12 @@ summary: Basic git commands for packaging
 The recommended way to switch branches is `git switch`.
 To create a new branch use `git switch -c`.
 
-## Keeping your branch up to date with the master branch
+## Keeping your branch up to date with the main branch
 
 If there any new changes to the repository whilst you are still working on your branch you need to [sync your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
-Run `git fetch`, and `git rebase origin/master` to pull the changes in.
+Run `git fetch`, and `git rebase origin/main` to pull the changes in.
 You will need to fix any conflicts manually.
-You can check your branch against master with `git diff origin/master..my-branch`.
+You can check your branch against main with `git diff origin/main..my-branch`.
 
 ## Adding files
 
@@ -47,11 +47,11 @@ Now that you've tested and reviewed your change, when you're happy with it, it's
 ## Deleting your branch after a pull request is merged
 
 Once your pull request has been accepted you can delete your working branches.
-First, change to the package directory, switch to the master branch, then delete your local and the remote branches.
+First, change to the package directory, switch to the main branch, then delete your local and the remote branches.
 
 ```bash
 cd ~/solus-builds/package
-git switch master
+git switch main
 git branch -D my-branch
 git push -d origin my-branch
 ```
