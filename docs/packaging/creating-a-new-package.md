@@ -35,9 +35,9 @@ If you already have a fork of [getsolus/packages](https://github.com/getsolus/pa
 From within your packaging directory, clone the fork. Then, change to this directory.
 
 ```bash
-cd /home/solus-builds
+cd ~/solus-builds
 gh repo clone yourgithubaccount/packages
-cd /home/solus-builds/packages
+cd ~/solus-builds/packages
 ```
 
 ### Update an existing clone
@@ -45,7 +45,7 @@ cd /home/solus-builds/packages
 If you already have a local clone, you need to bring it up to date. To do this run:
 
 ```bash
-cd /home/solus-builds/packages
+cd ~/solus-builds/packages
 git switch master
 git pull
 ```
@@ -165,7 +165,7 @@ Once the build completes, your directory should now include the following files:
 └── tree-2.1.1-1-1-x86_64.eopkg
 ```
 
-All these files _except_ the `*eopkg` file(s) should be included in your pull request. You will remove them after testing the package.
+All these files _except_ the `*eopkg` file(s) should be included in your pull request. You will remove the `.eopkg` files after testing the package.
 
 Once your package has built successfully, you will need to [test it](testing-a-package).
 
@@ -175,7 +175,11 @@ Check the [changes in your files](git-basics).
 
 [Add / remove files as necessary to the commit](git-basics.md). Then, **check your branch**.
 
-Run `git status`. Make sure all the files you changed are staged, and that there are no untracked files. When all it well, run `git commit`.
+Run `git status`. Make sure all the files you changed are staged, and that there are no untracked files. When all is well, run `git commit --cleanup=scissors`.
+
+import GitCommitCleanup from './_git_commit_cleanup.md';
+
+<GitCommitCleanup/>
 
 ### Commit message format for new packages
 
@@ -184,16 +188,24 @@ There should be a summary line (with the package name), a blank line, and then t
 - There should at the minimum be a summary and Test Plan.
 - Bullet point lists should start with a dash.
 
-Here is an example in our standard format:
+Here is an example in our standard format (make sure to check the box in the checklist):
 
 ```
-Initial inclusion of the tree package
+tree: initial inclusion in the repository
 
-**Test Plan**
+## Summary
+
+Add the tree package, which recursively lists directories in a tree like manner.
+
+## Test Plan
 
 - Launched the application
 - Exercised the UI
 - Exercised some feature
+
+## Checklist
+
+- [] Package was built and tested against unstable
 ```
 
 For more information on suitable commit messages, please check the [tooling central documentation](https://github.com/solus-project/tooling-central/blob/master/README.rst#using-git).

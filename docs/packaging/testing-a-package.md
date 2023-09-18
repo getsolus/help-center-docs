@@ -36,6 +36,6 @@ Before you can submit your pull request, you need to remove the `.eopkg` files. 
 To remove these files, run:
 
 ```bash
-make clean
+go-task clean
 ```
 

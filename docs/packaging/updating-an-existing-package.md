@@ -36,24 +36,17 @@ If you already have a fork of the package in GitHub, from previous updates, log 
 If you do not yet have a clone of the package, change to your packaging directory, clone your fork and switch to its directory. For example:
 
 ```bash
-cd /home/solus-builds
+cd ~/solus-builds
 gh repo clone yourgithubaccount/nano
 cd nano
 ```
-
-:::note Alternatives to `gh repo clone`
-
-You may use the https link provided on the respective git page, [for example nano](https://github.com/solus-packages/nano) with `git clone`.
-You may use `git make package-name.clone`.
-
-:::
 
 ### Update an existing clone
 
 If you already have a local clone, you need to bring it up to date. To do so run:
 
 ```bash
-cd /home/solus-builds/package-name
+cd ~/solus-builds/package-name
 git switch master
 git pull
 ```
@@ -105,15 +98,19 @@ Once your package has built successfully, you will need to [test it](testing-a-p
 
 ## Commit Your Changes
 
-Check the [changes in your files](git-basics).
+Check the [changes in your files](git-basics#check-the-changes-in-your-files).
 
 [Add / remove files as necessary to the commit](git-basics.md). Then, **check your branch**.
 
-Run `git status`. Make sure all the files you changed are staged, and that there are no untracked files. When all it well, run `git commit`.
+Run `git status`. Make sure all the files you changed are staged, and that there are no untracked files. When all is well, run `git commit --cleanup=scissors`.
+
+import GitCommitCleanup from './_git_commit_cleanup.md';
+
+<GitCommitCleanup/>
 
 ### Commit message format for updated / bumped packages
 
-There should be a meaningful summary line (with the package name), a blank line, and then the rest of the commit message.
+There should be a meaningful summary line (which starts with the package name), a blank line, and then the rest of the commit message.
 
 - Bullet point lists should start with a dash.
 - Include a changelog with a brief list of updates from the upstream release notes, with no links.
@@ -121,12 +118,12 @@ There should be a meaningful summary line (with the package name), a blank line,
 - Optional: A link to the upstream release notes page.
 - Include your Test Plan.
 
-Here is an example in our standard format:
+Here is an example in our standard format (make sure to check the box in the checklist):
 
 ```
-Update foo to 1.2.3
+foo: Update to 1.2.3
 
-**Changelog**
+## Summary
 
 Bugfixes:
 
@@ -141,11 +138,15 @@ Enhancements:
 **Full release notes:**
 - [1.2.3](https://github.com/foo/foo/releases/tag/v1.2.3)
 
-**Test Plan**
+## Test Plan
 
 - Launched the application
 - Exercised the UI
 - Exercised some feature
+
+## Checklist
+
+- [] Package was built and tested against unstable
 ```
 
 For more information on suitable commit messages, please check the [tooling central documentation](https://github.com/solus-project/tooling-central/blob/master/README.rst#using-git).

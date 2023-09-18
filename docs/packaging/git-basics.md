@@ -50,7 +50,7 @@ Once your pull request has been accepted you can delete your working branches.
 First, change to the package directory, switch to the master branch, then delete your local and the remote branches.
 
 ```bash
-cd /home/solus-builds/package
+cd ~/solus-builds/package
 git switch master
 git branch -D my-branch
 git push -d origin my-branch

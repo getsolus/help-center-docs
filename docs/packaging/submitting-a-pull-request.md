@@ -56,7 +56,7 @@ There may be times you need to make minor changes after submitting the pull requ
 
 :::note
 
-Previously, with Phabricator. we required amending your commit. This is no longer necessary and is not recommended.
+Previously, with Phabricator, we required amending your commit. This is no longer necessary and is not recommended.
 
 :::
 
