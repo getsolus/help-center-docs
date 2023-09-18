@@ -78,28 +78,156 @@ This is not an automatic subpackage, you must use `patterns` to utilise it. It i
 
 ## Maintenance
 
-When submitting a change `package.yml`, it must be accompanied by its corresponding `pspec_*.xml` file, which was generated at build time. This machine file allows the repository maintainers to evaluate the package condition.
+When submitting a changed `package.yml`, it must be accompanied by its corresponding `pspec_*.xml` file, which was generated at build time. This machine file allows the repository maintainers to evaluate the package condition.
 
 When providing a new version of a package, or a fix, always ensure you increment the `release` number by 1. This ensures that users of your package are correctly updated to the latest version.
 
 Never submit a package without having first tested it, and ensuring it builds within `solbuild`, a clean chroot environment.
-
-## Generating a Package.yml
-
-Making a package.yml file is not necessarily a manual process. In fact, [once you have common setup](/docs/packaging), you already have a script capable of generating a package.yml file based
-on the source archive URL.
-
-You can generate a package.yml by using `common/Scripts/yauto.py URL_TO_ARCHIVE`. We recommend creation an alias in your `.bashrc` or `.zshrc`, so you can access it wherever you are. For example:
-
-```bash
-alias fetchYml="$HOME/repository/common/Scripts/yauto.py"
-```
 
 ## Licenses
 
 All new packages or updates to packages should abide by the [SPDX 3.x](https://spdx.org/licenses/) definitions, with the following policy:
 
 - `-only` licenses, such as `GPL-2.0-only`, should **only be declared** as such when the upstream explicitly states "only", otherwise it should always be `-or-later`.
+
+## Build dependencies
+
+:::note
+Build dependencies should be listed in the following order in `package.yml`
+pkgconfig dependencies in alphabetical order
+explicitly named dependencies in alphabetical order
+
+Example:
+```yaml
+builddeps  :
+    - pkgconfig(ayatana-appindicator-0.1)
+    - pkgconfig(dri)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(libnotify)
+    - pkgconfig(libpcsclite)
+    - pkgconfig(pango)
+    - pkgconfig(python3)
+    - git
+    - python-poetry
+    - swig
+```
+:::
+
+### Background
+
+Most software packages that you build will, in one way or another, depend on another software package to provide specific functionality. This is usually achieved by using a library.
+
+Any package that is submitted to our repositories is always built in a clean chroot environment. Therefore, any dependencies required to build that package in a reproducible and sane fashion must be listed.
+
+This is achieved by populating the `builddeps` key with a list of build dependencies. We support two kinds of build dependencies: explicitly named, or `pkgconfig` dependencies.
+
+We prefer the use of `pkgconfig` dependencies. Most modern software will use the `pkg-config` tool (package configuration) to determine which files are required to build the current software. This may include compiler flags, library to link against and where the package headers are located.
+
+An obvious advantage to supporting `pkgconfig` dependencies is that there is a 1:1 mapping between the name requested by the build and the name used within the `package.yml`. Instead of trying to hunt down the package providing that dependency, you simply list the same name. Any package in the repository will export information about the `.pc` files (for `pkg-config`) it contains, enabling you to use those as a build dependency.
+
+A secondary advantage is that this allows for easily switching or replacing a providing package. When no `pkgconfig` name is available (some packages do not provide these, or it doesn’t make sense for them to), you
+may use the explicit package name. Always ensure you select the correct package, i.e. the `-devel` subpackage. This provides the necessary symlinks and headers to build packages.
+
+### Finding what package provides a dependency (if any)
+
+The script `common/Scripts/epcsearch.py` is used to find packages that satisfy build dependencies. We recommend making an alias for your shell for this.
+
+```bash
+alias epcsearch='~/packaging/common/Scripts/epcsearch.py'
+```
+
+As an example, if you know a package has a build dependency of `gtk+-3.0` you would run:
+
+```bash
+epcsearch gtk+-3.0
+```
+
+This will output:
+
+```bash
+epcsearch gtk+-3.0
+pkgconfig(gtk+-3.0) found in: libgtk-3-devel
+pkgconfig32(gtk+-3.0) found in: libgtk-3-32bit-devel
+```
+
+You can also determine if there are pkgconfigs available from a -devel package by doing `eopkg info (name)` and looking for the `Provides` key.
+
+Example:
+
+```bash
+eopkg info libgtk-3-devel
+```
+
+In output:
+
+```bash
+Provides: pkgconfig(gtk+-3.0) pkgconfig(gdk-3.0) pkgconfig(gdk-wayland-3.0) pkgconfig(gail-3.0) pkgconfig(gdk-x11-3.0) pkgconfig(gtk+-unix-print-3.0)
+pkgconfig(gtk+-wayland-3.0) pkgconfig(gtk+-x11-3.0)
+```
+
+### Using pkgconfig dependencies
+
+In the `builddeps` list, simply use the `pkgconfig(name)` syntax. For example, to add gtk+-3.0 to the build dependencies, we would do the following:
+
+```yaml
+builddeps:
+  - pkgconfig(gtk+-3.0)
+```
+
+At build time the appropriate provider package is selected, in this instance `libgtk-3-devel`
+
+### Using explicitly named dependencies
+
+When there is not a `pkgconfig` dependency available, use an explicitly named dependency.
+Simply list the package name.
+
+:::note
+When a `pkgconfig` dependency is available you will be asked to use that instead.
+:::
+
+```yaml
+builddeps:
+  - stk-devel
+```
+
+## Runtime dependencies
+
+Runtime dependencies are extra packages that a package needs in order to function correctly. A common example of this is other libraries. Solus `eopkg` packages will automatically add any binary dependencies at
+runtime, so that you do not have to.
+
+All `devel` subpackages automatically depend on their parent package. On top of this, if they provide a `.pc` pkg-config file, we export this information, and automatically determine the packages this particular
+package would need to be able to build against correctly. As such, the majority of dependencies for builds are automatically resolved.
+
+In certain instances, binary dependencies aren’t enough. An example of this might be an extra Python package, or a font, something that is not accounted for by binary checks.
+
+To account for this, you may add extra explicit runtime dependencies to your package. These are taken from the optional `rundeps` ypkg key.
+
+This key uses the `dict(s)` type, and the default key is the current package `name`. You may express a different subpackage to apply dependencies to by using that name as a key, i.e. `devel`, or `docs`.
+
+This would add the “python-gobject” runtime dependency to the main package:
+
+```yaml
+rundeps:
+    - python-gobject
+```
+
+This would add the same dependency, as well as adding it to the `devel` subpackage:
+
+```yaml
+rundeps:
+    - python-gobject
+    - devel: python-gobject
+```
+
+Remember this uses the `dict(s)` type, which is very flexible. You can equally express this as follows (adding more deps as an example):
+
+```yaml
+rundeps:
+    - python-gobject
+    - devel:
+        - somepackage
+        - someotherpackage
+```
 
 ## Patching / extra files
 
@@ -113,7 +241,7 @@ Solus tooling allows the use of `./files/security/cve-xxxx-xxxx.nopatch` (which 
 
 ### Applying a patch
 
-It is common practice to apply the patch within the `setup` section of your build staging. We can achieve this using the `%patch` macro, and the `$pkgfiles` variable. In this example, the required file is located
+It is common practice to apply the patch file(s) within the `setup` section of your build staging. We can achieve this using the `%patch` macro, and the `$pkgfiles` variable. In this example, the required file is located
 at `./files/0002-Sample-commit-2.patch`
 
 ```bash
@@ -153,103 +281,6 @@ This is an example of installing a custom profile file, seen in the `bash` packa
 
 ```bash
 install -m 0644 $pkgfiles/profile $installdir/etc/profile
-```
-
-## Build dependencies
-
-Most software packages that you build will in one way or another, depend on another software package to provide specific functionality. This is usually achieved by using a library.
-
-Any package that is submitted to our repositories is always built in a clean chroot environment, therefore any dependencies required to build that package in a reproducible and sane fashion, must be listed.
-
-This is achieved by populating the `builddeps` key with a list of build dependencies. We support two kinds of build dependencies: explicitly named, or `pkgconfig` dependencies.
-
-We prefer the use of `pkgconfig` dependencies. Most modern software will use the `pkg-config` tool (package configuration) to determine which files are required to build the current software. This may include
-compiler flags, library to link against and where the package headers are located.
-
-An obvious advantage to supporting `pkgconfig` dependencies is that there is a 1:1 mapping between the name requested by the build and the name used within the `package.yml`. Instead of trying to hunt down
-the package providing that dependency, you simply list the same name. Any package in the repository will export information about the `.pc` files (for `pkg-config`) it contains, enabling you to use those as a build dependency.
-
-A secondary advantage is that this allows for easily switching or replacing a providing package. When no `pkgconfig` name is available (some packages do not provide these, or it doesn’t make sense for them to), you
-may use the explicit package name. Always ensure you select the correct package, i.e. the `-devel` subpackage. This provides the necessary symlinks and headers to build packages.
-
-### Using pkgconfig dependencies
-
-In the `builddeps` list, simply use the `pkgconfig(name)` syntax. For example, to add gtk+-3.0 to the build dependencies, we would do the following:
-
-```yaml
-builddeps:
-  - pkgconfig(gtk+-3.0)
-```
-
-At build time the appropriate provider package is selected, in this instance `libgtk-3-devel`
-
-You can determine if there are pkgconfigs available from a -devel package by doing `eopkg info (name)` and looking for the `Provides` key.
-
-Example:
-
-```bash
-$ eopkg info libgtk-3-devel
-```
-
-In output:
-
-```bash
-Provides: pkgconfig(gtk+-3.0) pkgconfig(gdk-3.0) pkgconfig(gdk-wayland-3.0) pkgconfig(gail-3.0) pkgconfig(gdk-x11-3.0) pkgconfig(gtk+-unix-print-3.0)
-pkgconfig(gtk+-wayland-3.0) pkgconfig(gtk+-x11-3.0)
-```
-
-If you want to do a reverse process and figure out what package is part of pkgconfig you can use:
-
-```
-common/Scripts/epcsearch.py NAME
-```
-
-### Using explicit named dependencies
-
-As may be obvious, simply list the package name. Note we discourage this when a `pkgconfig` dependency is available.
-
-```yaml
-builddeps:
-  - stk-devel
-```
-
-## Runtime dependencies
-
-Runtime dependencies are extra packages that a package needs in order to function correctly. A common example of this is other libraries. Solus `eopkg` packages will automatically add any binary dependencies at
-runtime, so that you do not have to.
-
-All `devel` subpackages automatically depend on their parent package. On top of this, if they provide a `.pc` pkg-config file, we export this information, and automatically determine the packages this particular
-package would need to be able to build against correctly. As such, the majority of dependencies for builds are automatically resolved.
-
-In certain instances, binary dependencies aren’t enough. An example of this might be an extra Python package, or a font, something that is not accounted for by binary checks.
-
-To account for this, you may add extra explicit runtime dependencies to your package. These are taken from the optional `rundeps` ypkg key.
-
-This key uses the `dict(s)` type, and the default key is the current package `name`. You may express a different subpackage to apply dependencies to by using that name as a key, i.e. `devel`, or `docs`.
-
-This would add the “python-gobject” runtime dependency to the main package:
-
-```
-rundeps:
-    - python-gobject
-```
-
-This would add the same dependency, as well as adding it to the `devel` subpackage:
-
-```
-rundeps:
-    - python-gobject
-    - devel: python-gobject
-```
-
-Remember this uses the `dict(s)` type, which is very flexible. You can equally express this as follows (adding more deps as an example):
-
-```
-rundeps:
-    - python-gobject
-    - devel:
-        - somepackage
-        - someotherpackage
 ```
 
 ## Patterns

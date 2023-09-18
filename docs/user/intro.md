@@ -44,7 +44,7 @@ Our Flarum-powered forums are easy to use from any device and are a great resour
 **[Matrix](https://matrix.to/#/#solus:matrix.org)**
 
 [Matrix](<https://en.wikipedia.org/wiki/Matrix_(protocol)>) is a great way to discuss issues and development with the community, and project developers in real-time. It's also a great place for getting support, but remember due
-to timezone differences there might not always be people there to answer your question immediately. You can access Matrix using a client like [Element Web](https://app.element.io/), or many [others](https://matrix.org/clients/). You will need a Matrix account.
+to timezone differences there might not always be people there to answer your question immediately. You can access [Matrix](/docs/user/contributing/getting-involved.md#matrix-chat) using a client like [Element Web](https://app.element.io/), or many [others](https://matrix.org/clients/). You will need a [Matrix](/docs/user/contributing/getting-involved.md#matrix-chat) account.
 
 Read more about Solus on Matrix [here.](/docs/user/contributing/getting-involved.md#matrix-chat)
 
