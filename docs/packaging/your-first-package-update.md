@@ -17,18 +17,17 @@ Change to your packaging directory. Your directory may have a different name or 
 cd ~/solus-builds
 ```
 
-Clone the `nano` repository, then change into it:
-The `make nano.clone` command will clone the `nano` package repository `https://github.com/solus-packages/nano`
+Clone the `packages` repository, then change into it:
 
 ```bash
-make nano.clone
-cd nano
+git clone https://github.com/getsolus/packages.git
+cd packages/packages/n/nano
 ```
 
 Increase the release number by one ("bump" the package) and then check the results:
 
 ```bash
-make bump
+go-task bump
 git diff
 ```
 
@@ -52,7 +51,7 @@ index 2ff1756..4bc344c 100644
 Next, build the package:
 
 ```bash
-make
+go-task
 ```
 
 You will be prompted to enter your password by sudo, and the `solbuild` tool will build the package.

@@ -34,32 +34,22 @@ Matrix=@username.matrix.org
 
 ## Installing Development Tools
 
-We need to install a few things in order to get started with packaging.
-The main packages we need are provided by the `system.devel` component.
+We need to install a few things in order to get started with packaging:
 
-Namely:
-
-- `ypkg` the program that actually builds packages
-- `make` used by our build tools for scripting
-
-```bash
-sudo eopkg it -c system.devel
-```
-
-Additionally, we need a few more tools to carry out the packaging process:
-
+- `go-task` is used by our build tools for scripting
 - `git` is used for version control of the solus sources
 - `github-cli` is used to make working with GitHub easier
 - `solbuild` is a lightweight container environment for building packages repeatably
 - `solbuild-config-unstable` sets up solbuild for working with the `unstable` repository
+- `ypkg` is the program that actually builds packages
 
 ```bash
-sudo eopkg it git github-cli solbuild solbuild-config-unstable
+sudo eopkg it go-task git github-cli solbuild solbuild-config-unstable ypkg
 ```
 
 ## Setting up a GitHub account
 
-The Solus source repositories for the package repository currently reside on [github.com/solus-packages](https://github.com/solus-packages). You will need a GitHub account to submit patches and file issues. You can create a GitHub account [here](https://github.com/signup). Note that you will also need to set up [2FA](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa)(two factor authentication) for your account.
+The Solus source repositories for the package repository currently reside on [github.com/getsolus/packages](https://github.com/getsolus/packages). You will need a GitHub account to submit patches and file issues. You can create a GitHub account [here](https://github.com/signup). Note that you will also need to set up [2FA](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa) (two factor authentication) for your account.
 
 ### Configure `github-cli`.
 
@@ -96,33 +86,6 @@ Create a packaging directory to hold sub-directories with packaging files. Here 
 ```bash
 mkdir ~/solus-builds
 cd solus-builds
-```
-
-Next you need to set up `common`. This is a repository with a set of make scripts which enable you to more easily manage, build, check, and publish packages.
-
-Change into the directory you will keep the folders for the packages you will be building and clone the common repository with git. For instance if you have a package directory `/home/user/solus-builds` you would run:
-
-```bash
-git clone https://github.com/getsolus/common.git
-```
-
-Next you need to set up a few symlinks. Do this from the same directory you executed the `git` command:
-
-```bash
-ln -sv common/Makefile.common .
-ln -sv common/Makefile.toplevel Makefile
-ln -sv common/Makefile.iso .
-```
-
-Your packaging folder should look something similar to this:
-
-```
-└── solus-builds
-   ├── common
-   │  ├── *lots of stuff, not shown here*
-   ├── Makefile -> common/Makefile.toplevel
-   ├── Makefile.common -> common/Makefile.common
-   └── Makefile.iso -> common/Makefile.iso
 ```
 
 ##  Recommended aliases

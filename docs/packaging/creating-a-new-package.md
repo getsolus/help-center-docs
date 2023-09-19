@@ -26,7 +26,7 @@ If you had not yet done so already, fork the repo [getsolus/packages](https://gi
 
 ### Update a Fork
 
-If you already have a fork of [getsolus/packages](https://github.com/getsolus/packages) in GitHub, log into GitHub. Make sure you're looking at the master branch. Check to see that your fork is up to date with the main repo it was forked from. If your fork indicates it is behind, use the "Sync fork" button to bring it up to date.
+If you already have a fork of [getsolus/packages](https://github.com/getsolus/packages) in GitHub, log into GitHub. Make sure you're looking at the `main` branch. Check to see that your fork is up to date with the main repo it was forked from. If your fork indicates it is behind, use the "Sync fork" button to bring it up to date.
 
 ## Clone the packages repo / update your clone
 
@@ -46,26 +46,23 @@ If you already have a local clone, you need to bring it up to date. To do this r
 
 ```bash
 cd ~/solus-builds/packages
-git switch master
+git switch main
 git pull
 ```
 
 ## Create a New Package Directory
 
-Create a new subdirectory for the new package. Use the package name as the directory name. Now, create a new branch. This will allow you to more easily separate your work from any new changes made to the package repository, which will allow you to more easily rebase any changes if needed. To do so run:
+Create a new subdirectory for the new package. Use the package name as the directory name and create it in the appropriate prefix directory in `packages` (usually the first letter of the package).
 
 ```bash
-mkdir tree
-cd tree
-git switch -c your-branch
+mkdir packages/t/tree
+cd packages/t/tree
 ```
 
-## Link to the `Makefile`
+Now, create a new branch. This will allow you to more easily separate your work from any new changes made to the package repository, which will allow you to more easily rebase any changes if needed. To do so run:
 
-Every package directory needs a `Makefile`. To create it with the proper contents, run this:
-
-```bash
-echo "include ../Makefile.common" > Makefile
+```
+git switch -c your-branch
 ```
 
 ## Create The `MAINTAINERS.md` File
@@ -153,7 +150,7 @@ Understanding how to translate source code into a good `package.yml` file is the
 
 ## Build the Package
 
-Build the package with `make`
+Build the package with `go-task`
 Once the build completes, your directory should now include the following files:
 
 ```text
