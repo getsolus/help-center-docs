@@ -27,8 +27,8 @@ _These items are not mandatory yet, and are subject to change_
 #### Switching From `make` to `go-task`
 
 - All packaging actions are now handled by `go-task` rather than `make`.
-  - For example: `make` to build a package is replaced with `go-task`.
-  - Most commands are similar: `make local`, for example, is replaced by `go-task local`.
+  - Building a package can be done using `go-task` rather than `make`.
+  - Commands are the same: `make local`, for example, is replaced by `go-task local`.
   - You can see all available commands by browsing to `Taskfile.ymml` in the `packages` repo at [`common/Taskfile.yml`](https://github.com/getsolus/packages/blob/main/common/Taskfile.yml).
 - Packagers should install `go-task` on their machines if they have not already.
 - The `Makefile` included with every package is no longer required. Please delete it from a package when updating, and do not include it when making the initial commit of a new package.
