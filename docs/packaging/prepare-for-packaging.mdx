@@ -34,27 +34,17 @@ Matrix=@username.matrix.org
 
 ## Installing Development Tools
 
-We need to install a few things in order to get started with packaging.
-The main packages we need are provided by the `system.devel` component.
+We need to install a few things in order to get started with packaging:
 
-Namely:
-
-- `ypkg` the program that actually builds packages
-
-```bash
-sudo eopkg it -c system.devel
-```
-
-Additionally, we need a few more tools to carry out the packaging process:
-
-- `go-task` is used by our build tools for scripting.
+- `go-task` is used by our build tools for scripting
 - `git` is used for version control of the solus sources
 - `github-cli` is used to make working with GitHub easier
 - `solbuild` is a lightweight container environment for building packages repeatably
 - `solbuild-config-unstable` sets up solbuild for working with the `unstable` repository
+- `ypkg` is the program that actually builds packages
 
 ```bash
-sudo eopkg it go-task git github-cli solbuild solbuild-config-unstable
+sudo eopkg it go-task git github-cli solbuild solbuild-config-unstable ypkg
 ```
 
 ## Setting up a GitHub account
