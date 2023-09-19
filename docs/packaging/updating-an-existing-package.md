@@ -19,7 +19,6 @@ This PR resolves software update request https://github.com/getsolus/packages/is
 
 :::
 
-
 ## Fork the getsolus/packages Repository / Update Your Fork
 
 ### Create a Fork
@@ -30,11 +29,11 @@ If you had not yet done so already, fork [getsolus/packages](https://github.com/
 
 If you already have a fork of [getsolus/packages](https://github.com/getsolus/packages) in GitHub, log into GitHub. Make sure you're looking at the main branch. Check to see that your fork is up to date with the main repo it was forked from. If your fork indicates it is behind, use the "Sync fork" button to bring it up to date.
 
-## Clone the package repo / update your clone
+## Clone the `packages` Repo / Update Your Clone
 
-### Clone the repo
+### Clone the `packages` repo
 
-If you do not yet have a clone of the package, change to your packaging directory, clone your fork and switch to its directory. For example:
+If you do not yet have a local clone of your packages fork, change to your packaging directory. Then, clone your fork and switch to its directory. For example:
 
 ```bash
 cd ~/solus-builds
@@ -96,6 +95,12 @@ There must be a file called `MAINTAINERS.md` using the template in [Maintainersh
 
 After bumping or updating the package, build it by running `go-task`.
 Once your package has built successfully, you will need to [test it](testing-a-package).
+
+After testing, remove the `.eopkg` files with:
+
+```bash
+go-task clean
+```
 
 ## Commit Your Changes
 

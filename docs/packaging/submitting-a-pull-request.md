@@ -18,11 +18,10 @@ At minimum, your pull request will include changes for the following files:
 
 - `package.yml`
 - `pspec_*.xml`
-
-It will also include these files:
-
-- `Makefile`
 - `MAINTAINERS.md`
+
+Make sure there is no `Makefile`, as this was deprecated.
+Make sure there are no `.eopkg` files.
 
 Double check the `package.yml` to make sure the builddeps are in the right order, and that it otherwise adheres to the [standards](package.yml.md) Solus has set.
 

@@ -156,7 +156,6 @@ Once the build completes, your directory should now include the following files:
 ```text
 ├── abi_used_libs
 ├── abi_used_symbols
-├── Makefile
 ├── package.yml
 ├── pspec_x86_64.xml
 └── tree-2.1.1-1-1-x86_64.eopkg
