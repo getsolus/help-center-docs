@@ -4,17 +4,13 @@ summary: Steps for setting up a packaging environment and submitting packages
 sidebar_position: 0
 ---
 
-import MigrationWarning from './_markdown-migration-warning.md';
-
-<MigrationWarning/>
-
 # Packaging Overview
 
 This is the overall workflow for creating or updating a package.
 
 ## Development Environment Preparation
 
-1. [Prepare for Packaging](prepare-for-packaging.mdx)
+1. [Prepare for Packaging](prepare-for-packaging.md)
 2. Review the [requirements for the package.yml file](docs/packaging/package.yml.md).
 3. Also review our [Packaging Practices](docs/packaging/packaging-practices.md).
 

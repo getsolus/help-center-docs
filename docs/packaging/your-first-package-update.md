@@ -5,7 +5,7 @@ summary: An example of how to build a package that exists in the Solus repos for
 
 # Your First Package Update
 
-This page will guide you through the steps required to build your first package. This is really a test to make sure that your [build environment is set up correctly](docs/packaging/prepare-for-packaging.mdx). You will clone an existing package, build it, then install it, and finally remove it.
+This page will guide you through the steps required to build your first package. This is really a test to make sure that your [build environment is set up correctly](docs/packaging/prepare-for-packaging.md). You will clone an existing package, build it, then install it, and finally remove it.
 
 ## Cloning and building `nano`
 
