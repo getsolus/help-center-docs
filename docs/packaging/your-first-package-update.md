@@ -58,10 +58,9 @@ You will be prompted to enter your password by sudo, and the `solbuild` tool wil
 If the build is successful, you will have a `nano` package file with a name like `nano-7.2-161-1-x86_64.eopkg`. Run the `ls` tool to check the exact name:
 
 ```bash
-ls
-
+$ ls
 abi_used_libs     files       package.yml
-abi_used_symbols  Makefile  nano-7.2-162-1-x86_64.eopkg  pspec_x86_64.xml
+abi_used_symbols  nano-7.2-162-1-x86_64.eopkg  pspec_x86_64.xml
 ```
 
 Congratulations! You have successfully built your first package on Solus.
