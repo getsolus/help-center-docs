@@ -5,18 +5,46 @@ summary: Installation of development software on Solus
 
 # Development
 
-## Base Development Tools
+Solus provides a stable fundation for creating, testing, and deploying applications.
 
-If you are wanting to compile software under Solus, we recommend installing our system.devel component by running the following:
+You can install tools such as text editors, programming languages, compilers, and version control systems. Solus also supports containerization and virtualization technologies.
+
+## Getting Started
+
+If you want to compile and develop software using Solus, we recommend installing the _system.devel_ component.
 
 ```bash
 sudo eopkg install -c system.devel
 ```
 
-This will provide items such as clang, gcc, make, a multitude of devel sub-packages, and more. Our system.devel is similar to packages on other operating systems, such as Debian's build-essentials.
+The system.devel component installs libraries and packages for software development, such as _clang_, _gcc_, and _make_.
 
-## Additional Tools
+***
 
-> TODO: Add blockquote CSS to mkdocs theme
+[**Android**](android)
 
-> TODO: Add links to the other development pages
+A quick guide to getting set up for Android development on Solus.
+
+[**Containers**](containers)
+
+Install and configure containerization software on Solus.
+
+[**Java**](java)
+
+Learn how to install, run, and manage Java on Solus.
+
+[**PostgreSQL**](postgresql)
+
+A quick guide to using PostgreSQL on Solus.
+
+[**R and R Studio**](r-and-rstudio)
+
+Quick start guide for R and R Studio on Solus.
+
+[**Rust**](rust)
+
+A quick guide to getting set up for Rust development on Solus.
+
+[**Web Development**](web)
+
+Install and configure different web development tools on Solus.
