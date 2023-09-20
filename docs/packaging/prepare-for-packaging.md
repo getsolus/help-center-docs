@@ -4,10 +4,6 @@ summary: Quick guide on getting your system set up for packaging on Solus
 sidebar_position: 1
 ---
 
-import MigrationWarning from './_markdown-migration-warning.md';
-
-<MigrationWarning/>
-
 # Prepare for Packaging
 
 ## Switch to the Unstable Repository
