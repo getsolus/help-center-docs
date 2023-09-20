@@ -29,7 +29,7 @@ _These items are not mandatory yet, and are subject to change_
 - All packaging actions are now handled by `go-task` rather than `make`.
   - Building a package can be done using `go-task` rather than `make`.
   - Commands are the same: `make local`, for example, is replaced by `go-task local`.
-  - You can see all available commands by browsing to `Taskfile.ymml` in the `packages` repo at [`common/Taskfile.yml`](https://github.com/getsolus/packages/blob/main/common/Taskfile.yml).
+  - You can see all available commands by either browsing to `Taskfile.yml` in the `packages` repo at [`common/Taskfile.yml`](https://github.com/getsolus/packages/blob/main/common/Taskfile.yml) OR running `go-task -l` somewhere in your updated clone of the packages git monorepo.
 - Packagers should install `go-task` on their machines if they have not already.
 - The `Makefile` included with every package is no longer required. Please delete it from a package when updating, and do not include it when making the initial commit of a new package.
 
