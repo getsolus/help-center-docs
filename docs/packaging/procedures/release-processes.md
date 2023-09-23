@@ -40,7 +40,7 @@ Follow these steps to submit a package for deprecation:
 5. Commit and push your changes to your repo/branch
 6. Open a Pull Request on GitHub
 
-If a deprecation depends on a packaging change landing before it can be properly deprecated without undesireable side effects on user systems, the GitHub deprecation Pull Request MUST link to the packaging change and declare it as a dependency for deprecation.
+If a deprecation depends on a packaging change landing before it can be properly deprecated without undesirable side effects on user systems, the GitHub deprecation Pull Request MUST link to the packaging change and declare it as a dependency for deprecation.
 
 ### Un-deprecating a package
 

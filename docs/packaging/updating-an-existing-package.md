@@ -69,7 +69,7 @@ This can be achieved by doing `go-task bump`, which increments the release numbe
 
 ## Updating a Package
 
-To update the package to a newer version, use the `yupdate` tool. This is located at `/usr/share/ypkg/yupdate.py`. We recommend setting an alias via your `.bashrc`, `.zshrc`, or method appropropriate to your shell.
+To update the package to a newer version, use the `yupdate` tool. This is located at `/usr/share/ypkg/yupdate.py`. We recommend setting an alias via your `.bashrc`, `.zshrc`, or method appropriate to your shell.
 
 ```bash
 alias updatePackage='/usr/share/ypkg/yupdate.py'
