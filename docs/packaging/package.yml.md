@@ -86,9 +86,9 @@ The packaging steps are all considered optional, however the absence of the `ins
 | Step Name   | Description                                                                                                                                                |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **setup**   | Performed after the source extraction. This is the correct place to perform any `configure` routine, or to `patch` the sources.                            |
-| **build**   | Use this step to run the build portion, e.g. `make`                                                                                                        |
-| **install** | This is where you should install the files into the final packaging directory, e.g. `make install`                                                         |
-| **check**   | This is where tests / checking should occur, e.g. `make check`                                                                                             |
+| **build**   | Use this step to run the build portion, for example, `make`                                                                                                |
+| **install** | This is where you should install the files into the final packaging directory, for example, `make install`                                                 |
+| **check**   | This is where tests / checking should occur, for example, `make check`                                                                                     |
 | **profile** | This is where profiling tests should be specified. `ypkg` will handle setting flags to generate profiling data and using that data for an optimized build. |
 
 ## Optimize values
@@ -102,7 +102,7 @@ One or more optimize values can be specified in a list with the `optimize` key i
 | **no-bind-now**  | Configures the package to disable certain flags, where RELRO is unsupported.        |
 | **no-symbolic**  | Disables `-Wl,-Bsymbolic-functions` linker flag.                                    |
 | **unroll-loops** | Enables `-funroll-loops`. Use this sparingly, only when it provides proven benefit. |
-| **runpath**      | Enablse `-Wl,--enable-new-dtags` to make linker use RUNPATH's instead of RPATH's.   |
+| **runpath**      | Enables `-Wl,--enable-new-dtags` to make linker use RUNPATH's instead of RPATH's.   |
 | **avx256**       | Disables `-mprefer-vector-width=128` in avx2 builds.                                |
 | **thin-lto**     | Enables Thin Link Time Optimization `-flto=thin` with a supported linker.           |
 | **lto**          | Enables Link Time Optimization `-flto`.                                             |
@@ -125,8 +125,8 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 | Macro              | Description                                                                                                                |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------- |
 | **%autogen**       | Runs autogen with our `%CONFOPTS%` to create a configure script then proceeds to run `%configure`.                         |
-| **%cmake**         | Configures cmake project with the distribution specific options, such as prefix and release type.                          |
-| **%cmake_ninja**   | Configures cmake project with ninja so it can be used with `%ninja_build`, `%ninja_install` and `%ninja_check` macros.     |
+| **%cmake**         | Configures a cmake project with the distribution specific options, such as prefix and release type.                        |
+| **%cmake_ninja**   | Configures a cmake project with ninja so it can be used with `%ninja_build`, `%ninja_install` and `%ninja_check` macros.   |
 | **%configure**     | Runs `./configure` with our `%CONFOPTS%` variable macro.                                                                   |
 | **%make**          | Runs the `make` command with the job count specified in `eopkg.conf` ([More info](advanced-config/eopkg-configuration.md)) |
 | **%make_install**  | Performs a `make install`, using the `DESTDIR` variant. Should work for the vast majority of packages.                     |
@@ -149,7 +149,7 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | **%meson_configure** | Runs `meson` with our CFLAGS and appropriate flags such as `libdir`.                                                    |
 | **%ninja_build**     | Runs `ninja` and passes our `%JOBS%` variable. This macro obsoletes _%meson_build_.                                     |
-| **%ninja_install**   | Runs `ninja install` and passed the appropriate `DESTDIR` and `%JOBS%` variable. This macro obsoletes _%meson_install_. |
+| **%ninja_install**   | Runs `ninja install` and passes the appropriate `DESTDIR` and `%JOBS%` variable. This macro obsoletes _%meson_install_. |
 | **%ninja_check**     | Runs `ninja test` and passes our `%JOBS%` variable. This macro obsoletes _%meson_check_.                                |
 
 ### Perl Actionable Macros
@@ -195,7 +195,7 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 | ------------------ | ----------------------------------------------------------------------------- |
 | **%waf_configure** | Runs `waf configure` with prefix.                                             |
 | **%waf_build**     | Runs `waf` and passes our `%JOBS%` variable.                                  |
-| **%waf_install**   | Runs `waf install` and passed the appropriate `destdir` and `%JOBS%` variable |
+| **%waf_install**   | Runs `waf install` and passes the appropriate `destdir` and `%JOBS%` variable |
 
 ### Variable Macros
 
@@ -221,18 +221,18 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 
 A set of variables are exported in our build stages. These are used to provide context and structure to the scripts.
 
-| Variable         | Description                                                                            |
-| ---------------- | -------------------------------------------------------------------------------------- |
-| **$CFLAGS**      | cflags as set in `eopkg.conf`                                                          |
-| **$CXXFLAGS**    | cxxflags as set in `eopkg.conf`                                                        |
-| **$LDFLAGS**     | ldflags as set in `eopkg.conf`                                                         |
-| **$CC**          | C compiler                                                                             |
-| **$CXX**         | C++ compiler                                                                           |
-| **$EMUL32BUILD** | Set only when compiling in `emul32` mode                                               |
-| **$installdir**  | The install directory, i.e. where files are installed to for packaging                 |
-| **$pkgfiles**    | Refers to the `./files` directory relative to the `package.yml` file                   |
-| **$sources**     | Refers to the directory where your source files are stored e.g. `$sources/nano.tar.gz` |
-| **$workdir**     | The work, or source, directory of the package build                                    |
+| Variable         | Description                                                                                     |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| **$CFLAGS**      | cflags as set in `eopkg.conf`                                                                   |
+| **$CXXFLAGS**    | cxxflags as set in `eopkg.conf`                                                                 |
+| **$LDFLAGS**     | ldflags as set in `eopkg.conf`                                                                  |
+| **$CC**          | C compiler                                                                                      |
+| **$CXX**         | C++ compiler                                                                                    |
+| **$EMUL32BUILD** | Set only when compiling in `emul32` mode                                                        |
+| **$installdir**  | The install directory, i.e. where files are installed to for packaging                          |
+| **$pkgfiles**    | Refers to the `./files` directory relative to the `package.yml` file                            |
+| **$sources**     | Refers to the directory where your source files are stored, for example, `$sources/nano.tar.gz` |
+| **$workdir**     | The work, or source, directory of the package build                                             |
 
 ## Types
 
@@ -275,7 +275,7 @@ Note that each `ypkg key` in the YAML file is actually a dict.
 ### dict(s)
 
 `dict(s)` consists of a list of `dict`s and some assumptions. We primarily make use of this to express advanced information within the package. These permit you to provide no key, and a value only.
-In this instance, the key is implicitly assumed to be the package name (e.g. `nano`):
+In this instance, the key is implicitly assumed to be the package name (for example, `nano`):
 
 `- some value`
 
