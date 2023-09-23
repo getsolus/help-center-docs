@@ -98,6 +98,7 @@ pkgconfig dependencies in alphabetical order
 explicitly named dependencies in alphabetical order
 
 Example:
+<!-- prettier-ignore -->
 ```yaml
 builddeps  :
     - pkgconfig(ayatana-appindicator-0.1)
@@ -169,9 +170,10 @@ pkgconfig(gtk+-wayland-3.0) pkgconfig(gtk+-x11-3.0)
 
 In the `builddeps` list, simply use the `pkgconfig(name)` syntax. For example, to add gtk+-3.0 to the build dependencies, we would do the following:
 
+<!-- prettier-ignore -->
 ```yaml
 builddeps:
-  - pkgconfig(gtk+-3.0)
+    - pkgconfig(gtk+-3.0)
 ```
 
 At build time the appropriate provider package is selected, in this instance `libgtk-3-devel`
@@ -185,9 +187,10 @@ Simply list the package name.
 When a `pkgconfig` dependency is available you will be asked to use that instead.
 :::
 
+<!-- prettier-ignore -->
 ```yaml
 builddeps:
-  - stk-devel
+    - stk-devel
 ```
 
 ## Runtime dependencies
@@ -206,6 +209,7 @@ This key uses the `dict(s)` type, and the default key is the current package `na
 
 This would add the “python-gobject” runtime dependency to the main package:
 
+<!-- prettier-ignore -->
 ```yaml
 rundeps:
     - python-gobject
@@ -213,6 +217,7 @@ rundeps:
 
 This would add the same dependency, as well as adding it to the `devel` subpackage:
 
+<!-- prettier-ignore -->
 ```yaml
 rundeps:
     - python-gobject
@@ -221,6 +226,7 @@ rundeps:
 
 Remember this uses the `dict(s)` type, which is very flexible. You can equally express this as follows (adding more deps as an example):
 
+<!-- prettier-ignore -->
 ```yaml
 rundeps:
     - python-gobject

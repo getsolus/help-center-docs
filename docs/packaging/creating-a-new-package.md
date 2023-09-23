@@ -91,6 +91,7 @@ You can, of course, create your `package.yml` file entirely from scratch, but th
 
 Now you should have a `package.yml` file that looks something like this:
 
+<!-- prettier-ignore -->
 ```yaml
 name       : unix-tree
 version    : 2.1.1
@@ -125,6 +126,7 @@ For this example, we need to fix the following:
 
 After updating the file, it will now look like:
 
+<!-- prettier-ignore -->
 ```yaml
 name       : tree
 version    : 2.1.1
@@ -189,17 +191,17 @@ Here is an example in our standard format (make sure to check the box in the che
 ```
 tree: initial inclusion in the repository
 
-## Summary
+**Summary**
 
 Add the tree package, which recursively lists directories in a tree like manner.
 
-## Test Plan
+**Test Plan**
 
 - Launched the application
 - Exercised the UI
 - Exercised some feature
 
-## Checklist
+**Checklist**
 
 - [] Package was built and tested against unstable
 ```
