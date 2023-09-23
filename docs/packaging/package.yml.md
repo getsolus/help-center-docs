@@ -57,7 +57,7 @@ Not all fields in `package.yml` are mandatory, but a small selection are. Below 
 | **license**     | `string(s)` | Valid upstream license(s). Try to ensure these use [SPDX identifiers](https://spdx.org/licenses/).                                                                                                                  |
 | **homepage**    | `string`    | Provides a link to the package's homepage, used in the Software Center.                                                                                                                                             |
 | **source**      | `dict(s)`   | Upstream source URL (i.e. tarball), with the valid `sha256sum` as a value. Alternatively, the git repository URL prefixed with "git&#124;" and a git tag or commit hash as a value.                                 |
-| **component**   | `string`    | Component / group of packages this package belongs to. Check available components via `eopkg lc`                                                                                                                    |
+| **component**   | `string`    | Component / group of packages this package belongs to. Check available components via `eopkg lc`.                                                                                                                   |
 | **summary**     | `string`    | Brief package summary, or display name.                                                                                                                                                                             |
 | **description** | `string`    | More extensive description of the software, usually taken from the vendor website.                                                                                                                                  |
 
@@ -86,9 +86,9 @@ The packaging steps are all considered optional, however the absence of the `ins
 | Step Name   | Description                                                                                                                                                |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **setup**   | Performed after the source extraction. This is the correct place to perform any `configure` routine, or to `patch` the sources.                            |
-| **build**   | Use this step to run the build portion, for example, `make`                                                                                                |
-| **install** | This is where you should install the files into the final packaging directory, for example, `make install`                                                 |
-| **check**   | This is where tests / checking should occur, for example, `make check`                                                                                     |
+| **build**   | Use this step to run the build portion, for example, `make`.                                                                                               |
+| **install** | This is where you should install the files into the final packaging directory, for example, `make install`.                                                |
+| **check**   | This is where tests / checking should occur, for example, `make check`.                                                                                    |
 | **profile** | This is where profiling tests should be specified. `ypkg` will handle setting flags to generate profiling data and using that data for an optimized build. |
 
 ## Optimize values
@@ -122,25 +122,25 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 
 ### Actionable Macros
 
-| Macro              | Description                                                                                                                |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| **%autogen**       | Runs autogen with our `%CONFOPTS%` to create a configure script then proceeds to run `%configure`.                         |
-| **%cmake**         | Configures a cmake project with the distribution specific options, such as prefix and release type.                        |
-| **%cmake_ninja**   | Configures a cmake project with ninja so it can be used with `%ninja_build`, `%ninja_install` and `%ninja_check` macros.   |
-| **%configure**     | Runs `./configure` with our `%CONFOPTS%` variable macro.                                                                   |
-| **%make**          | Runs the `make` command with the job count specified in `eopkg.conf` ([More info](advanced-config/eopkg-configuration.md)) |
-| **%make_install**  | Performs a `make install`, using the `DESTDIR` variant. Should work for the vast majority of packages.                     |
-| **%patch**         | Sane patch macro to run in batch mode and not contaminate source tree on failure                                           |
-| **%apply_patches** | Applies all patches listed in the `series` file in `./files` folder.                                                       |
-| **%reconfigure**   | Updates build scripts such as `./configure` and proceeds to run `%configure`.                                              |
+| Macro              | Description                                                                                                                 |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------- |
+| **%autogen**       | Runs autogen with our `%CONFOPTS%` to create a configure script then proceeds to run `%configure`.                          |
+| **%cmake**         | Configures a cmake project with the distribution specific options, such as prefix and release type.                         |
+| **%cmake_ninja**   | Configures a cmake project with ninja so it can be used with `%ninja_build`, `%ninja_install` and `%ninja_check` macros.    |
+| **%configure**     | Runs `./configure` with our `%CONFOPTS%` variable macro.                                                                    |
+| **%make**          | Runs the `make` command with the job count specified in `eopkg.conf`. ([More info](advanced-config/eopkg-configuration.md)) |
+| **%make_install**  | Performs a `make install`, using the `DESTDIR` variant. Should work for the vast majority of packages.                      |
+| **%patch**         | Sane patch macro to run in batch mode and not contaminate source tree on failure.                                           |
+| **%apply_patches** | Applies all patches listed in the `series` file in `./files` folder.                                                        |
+| **%reconfigure**   | Updates build scripts such as `./configure` and proceeds to run `%configure`.                                               |
 
 ### Haskell Actionable Macros
 
 | Macro                | Description                                                                                                                  |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | **%cabal_configure** | Runs `cabal configure` with prefix, libdir, etc. and ensures the necessary package.conf.d is copied to the correct location. |
-| **%cabal_build**     | Runs `cabal build` with `%JOBS%`                                                                                             |
-| **%cabal_install**   | Runs `cabal copy` to `$installdir`                                                                                           |
+| **%cabal_build**     | Runs `cabal build` with `%JOBS%`.                                                                                            |
+| **%cabal_install**   | Runs `cabal copy` to `$installdir`.                                                                                          |
 | **%cabal_register**  | Runs `cabal register` to generate a pkg-config for package and version, then installs the conf file.                         |
 
 ### Ninja Actionable Macros
@@ -187,52 +187,52 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 | **%qmake**      | Runs `qmake` for Qt5 with the appropriate make flags.                                                                  |
 | **%qmake4**     | Runs `qmake` for Qt4, as well as adding the necessary MOC, RCC, and UIC flags since those Qt4 executables end in -qt4. |
 | **%qml_cache**  | Compiles `*.qml` files into `*.qmlc` so they are compiled ahead of time.                                               |
-| **%qml6_cache** | Same as `%qml_cache`, but for Qt6                                                                                      |
+| **%qml6_cache** | Same as `%qml_cache`, but for Qt6.                                                                                     |
 
 ### Waf Actionable Macros
 
-| Macro              | Description                                                                   |
-| ------------------ | ----------------------------------------------------------------------------- |
-| **%waf_configure** | Runs `waf configure` with prefix.                                             |
-| **%waf_build**     | Runs `waf` and passes our `%JOBS%` variable.                                  |
-| **%waf_install**   | Runs `waf install` and passes the appropriate `destdir` and `%JOBS%` variable |
+| Macro              | Description                                                                    |
+| ------------------ | ------------------------------------------------------------------------------ |
+| **%waf_configure** | Runs `waf configure` with prefix.                                              |
+| **%waf_build**     | Runs `waf` and passes our `%JOBS%` variable.                                   |
+| **%waf_install**   | Runs `waf install` and passes the appropriate `destdir` and `%JOBS%` variable. |
 
 ### Variable Macros
 
 | Macro             | Description                                                                                                                                       |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **%ARCH%**        | Indicates the current build architecture.                                                                                                         |
-| **%CC%**          | C compiler                                                                                                                                        |
-| **%CFLAGS%**      | cflags as set in `eopkg.conf`                                                                                                                     |
+| **%CC%**          | C compiler.                                                                                                                                       |
+| **%CFLAGS%**      | cflags as set in `eopkg.conf`.                                                                                                                    |
 | **%CONFOPTS%**    | Flags / options for configuration, such as `--prefix=%PREFIX%`. [Full List.](https://github.com/getsolus/ypkg/blob/master/ypkg2/rc.yml#L394-L406) |
-| **%CXX%**         | C++ compiler                                                                                                                                      |
-| **%CXXFLAGS%**    | cxxflags as set in `eopkg.conf`                                                                                                                   |
-| **%JOBS%**        | jobs, as set in `eopkg.conf`                                                                                                                      |
-| **%LDFLAGS%**     | ldflags as set in `eopkg.conf`                                                                                                                    |
-| **%LIBSUFFIX%**   | Library suffix (either 32 for 32-bit or 64 for 64-bit)                                                                                            |
-| **%PREFIX%**      | Hard-coded prefix `/usr`                                                                                                                          |
-| **%YJOBS%**       | Job count without `-j` as set in `eopkg.conf`                                                                                                     |
-| **%installroot%** | Hard-coded install directory                                                                                                                      |
-| **%libdir%**      | The distribution’s default library directory, i.e. `/usr/lib64` (Alters for `emul32`)                                                             |
+| **%CXX%**         | C++ compiler.                                                                                                                                     |
+| **%CXXFLAGS%**    | cxxflags as set in `eopkg.conf`.                                                                                                                  |
+| **%JOBS%**        | jobs, as set in `eopkg.conf`.                                                                                                                     |
+| **%LDFLAGS%**     | ldflags as set in `eopkg.conf`.                                                                                                                   |
+| **%LIBSUFFIX%**   | Library suffix (either 32 for 32-bit or 64 for 64-bit).                                                                                           |
+| **%PREFIX%**      | Hard-coded prefix `/usr`.                                                                                                                         |
+| **%YJOBS%**       | Job count without `-j` as set in `eopkg.conf`.                                                                                                    |
+| **%installroot%** | Hard-coded install directory.                                                                                                                     |
+| **%libdir%**      | The distribution’s default library directory, i.e. `/usr/lib64` (Alters for `emul32`).                                                            |
 | **%version%**     | Version of the package, as specified in the `version` key.                                                                                        |
-| **%workdir%**     | Hard-coded work directory (source tree)                                                                                                           |
+| **%workdir%**     | Hard-coded work directory (source tree).                                                                                                          |
 
 ## Variables
 
 A set of variables are exported in our build stages. These are used to provide context and structure to the scripts.
 
-| Variable         | Description                                                                                     |
-| ---------------- | ----------------------------------------------------------------------------------------------- |
-| **$CFLAGS**      | cflags as set in `eopkg.conf`                                                                   |
-| **$CXXFLAGS**    | cxxflags as set in `eopkg.conf`                                                                 |
-| **$LDFLAGS**     | ldflags as set in `eopkg.conf`                                                                  |
-| **$CC**          | C compiler                                                                                      |
-| **$CXX**         | C++ compiler                                                                                    |
-| **$EMUL32BUILD** | Set only when compiling in `emul32` mode                                                        |
-| **$installdir**  | The install directory, i.e. where files are installed to for packaging                          |
-| **$pkgfiles**    | Refers to the `./files` directory relative to the `package.yml` file                            |
-| **$sources**     | Refers to the directory where your source files are stored, for example, `$sources/nano.tar.gz` |
-| **$workdir**     | The work, or source, directory of the package build                                             |
+| Variable         | Description                                                                                      |
+| ---------------- | ------------------------------------------------------------------------------------------------ |
+| **$CFLAGS**      | cflags as set in `eopkg.conf`.                                                                   |
+| **$CXXFLAGS**    | cxxflags as set in `eopkg.conf`.                                                                 |
+| **$LDFLAGS**     | ldflags as set in `eopkg.conf`.                                                                  |
+| **$CC**          | C compiler.                                                                                      |
+| **$CXX**         | C++ compiler.                                                                                    |
+| **$EMUL32BUILD** | Set only when compiling in `emul32` mode.                                                        |
+| **$installdir**  | The install directory, i.e. where files are installed to for packaging.                          |
+| **$pkgfiles**    | Refers to the `./files` directory relative to the `package.yml` file.                            |
+| **$sources**     | Refers to the directory where your source files are stored, for example, `$sources/nano.tar.gz`. |
+| **$workdir**     | The work, or source, directory of the package build.                                             |
 
 ## Types
 
