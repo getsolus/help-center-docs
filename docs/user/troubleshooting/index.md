@@ -7,7 +7,7 @@ summary: Basic troubleshooting for some of the most common Solus problems.
 
 This guide provides some basic troubleshooting instructions for when you have an issue in Solus. Before reporting bugs, it is important to validate your Solus installation doesn't suffer from missing files or disk corruption. Also ensuring the system is fully up to date as the bug may have already been fixed.
 
-First of all performa a full system update `sudo eopkg up` (or via the Software Center). Then validate that packages are installed correctly and aren't missing files: (run this once, it will take some time and may not show much output)
+First of all perform a full system update `sudo eopkg up` (or via the Software Center). Then validate that packages are installed correctly and aren't missing files: (run this once, it will take some time and may not show much output)
 
 ```bash
 sudo eopkg check | grep Broken | awk '{print $4}' | xargs sudo eopkg it --reinstall
