@@ -35,7 +35,7 @@ Solus is not a commercial project. It is built and maintained by volunteers who 
 
 ## Additional Support
 
-The Help Center is not intended to be as comprehensive as something like the Arch Wiki. If you find yourself needing help with something not covered here, there are a varienty of places you might get support from us or fellow users.
+The Help Center is not intended to be as comprehensive as something like the Arch Wiki. If you find yourself needing help with something not covered here, there are a variety of places you might get support from us or fellow users.
 
 **[Forums](https://discuss.getsol.us)**
 

@@ -4,11 +4,11 @@ This is the repository for Solus's Help Center documentation. This repository ex
 
 Stumbled on this repo and have no idea what any of this is? Check out the [Solus](https://getsol.us) operating system!
 
-## Updating local repos after docusarus switch
+## Updating local repos after docusaurus switch
 
 ```
 git branch -m master old-help-center
-git branch -m docusarus master
+git branch -m docusaurus master
 git fetch origin
 git branch -u origin/master master
 git remote set-head origin -a

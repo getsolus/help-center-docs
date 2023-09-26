@@ -8,7 +8,7 @@ summary: Overview of the partitioning that the installer can perform
 Solus provides multiple ways you can install onto your system.
 
 1. **Whole Drive**  
-   Solus can take up the entire drive, using traditonal root partitions, or with LVM-managed root partitions.
+   Solus can take up the entire drive, using traditional root partitions, or with LVM-managed root partitions.
 2. **Multi-boot**  
    You can install Solus next to your existing operating system, such as Windows. _If you have multiple operating systems installed, we will choose the largest option._
 3. **Manual Partitioning**  
