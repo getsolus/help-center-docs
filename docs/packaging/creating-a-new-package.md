@@ -18,31 +18,11 @@ This PR resolves software request https://github.com/getsolus/packages/issues/12
 
 :::
 
-## Fork the getsolus/packages Repository / Update Your Fork
-
-### Create a Fork
-
-If you had not yet done so already, fork the repo [getsolus/packages](https://github.com/getsolus/packages) using the GitHub web UI or [`gh` cli tool](https://cli.github.com/manual/gh_repo_fork) from the `github-cli` package. It will be forked to `github.com/yourgithubaccount/packages`.
-
-### Update a Fork
-
-If you already have a fork of [getsolus/packages](https://github.com/getsolus/packages) in GitHub, log into GitHub. Make sure you're looking at the `main` branch. Check to see that your fork is up to date with the main repo it was forked from. If your fork indicates it is behind, use the "Sync fork" button to bring it up to date.
-
-## Clone the packages repo / update your clone
-
-### Clone the repo
-
-From within your packaging directory, clone the fork. Then, change to this directory.
-
-```bash
-cd ~/solus-builds
-gh repo clone yourgithubaccount/packages
-cd ~/solus-builds/packages
-```
-
 ### Update an existing clone
 
-If you already have a local clone, you need to bring it up to date. To do this run:
+If you do not have a local clone set up yet, see [Prepare for Packaging](prepare-for-packaging.md#fork-the-getsoluspackages-repository)
+
+Bring your local clone up to date. Run:
 
 ```bash
 cd ~/solus-builds/packages
@@ -73,20 +53,21 @@ You must add a file called `MAINTAINERS.md` using the template in [Maintainershi
 
 You will need a link to the most recent source tarball for this from the software's website.
 
-Create a skeleton `package.yml` file using the script `common/Scripts/yauto.py` and the link for the tarball. For example:
+To create a skeleton `package.yml` file, use the the `go-task new` command
+
+This command takes two arguments, in the following order:
+
+1. package name
+2. Source URL
 
 ```bash
-../common/Scripts/yauto.py https://gitlab.com/OldManProgrammer/unix-tree/-/archive/2.1.1/unix-tree-2.1.1.tar.gz
+go-task new -- tree https://gitlab.com/OldManProgrammer/unix-tree/-/archive/2.1.1/unix-tree-2.1.1.tar.gz
 ```
 
-Consider creating an alias for this script in your `.bashrc` file (or equivalent for your preferred shell).
-
-```bash
-alias fetchYml="$HOME/solus-builds/common/Scripts/yauto.py"
-```
+The `go-task new` command will automatically place the new `package.yml` in the proper directory according the package name, _and will overwrite any existing `package.yml` file at that location_
 
 :::note
-You can, of course, create your `package.yml` file entirely from scratch, but the script will give you a better starting point. We recommend using the script.
+You can, of course, create your `package.yml` file entirely from scratch, but `go-task new` will give you a better starting point. We recommend using the `go-task new` command.
 :::
 
 Now you should have a `package.yml` file that looks something like this:
@@ -113,7 +94,7 @@ install    : |
     %make_install
 ```
 
-The `yauto.py` script has filled many fields for us, but not all of them will be right, and some of them need to be filled in. Refer to the [package.yml page](docs/packaging/package.yml.md) to see how each field should be used.
+The `go-task new` command has filled many fields for us, but not all of them will be right, and some of them need to be filled in. Refer to the [package.yml page](docs/packaging/package.yml.md) to see how each field should be used.
 
 For this example, we need to fix the following:
 
@@ -175,7 +156,7 @@ Check the [changes in your files](git-basics).
 
 Run `git status`. Make sure all the files you changed are staged, and that there are no untracked files. When all is well, run `git commit --cleanup=scissors`.
 
-import GitCommitCleanup from './_git_commit_cleanup.md';
+import GitCommitCleanup from './\_git_commit_cleanup.md';
 
 <GitCommitCleanup/>
 

@@ -84,25 +84,17 @@ mkdir ~/solus-builds
 cd solus-builds
 ```
 
-##  Recommended aliases
-Consider creating these aliases in your `.bashrc` file (or equivalent for the zsh or fish shell).
+## Fork the getsolus/packages Repository
 
-The script `common/Scripts/yauto.py` is used to create an initial `package.yml` file for packages that aren't yet in the repository.
+Create your own fork of [getsolus/packages](https://github.com/getsolus/packages) using the GitHub web UI or [`gh` cli tool](https://cli.github.com/manual/gh_repo_fork) from the `github-cli` package. It will be forked to `github.com/yourgithubaccount/packages`.
 
-```bash
-alias fetchYml="$HOME/solus-builds/common/Scripts/yauto.py"
-```
+## Clone Your Forked Package Repository
 
-The script `common/Scripts/epcsearch.py` is used to find packages that satisfy build dependencies.
+Create a local clone of the package repository you just forked
 
 ```bash
-alias epcsearch='~/packaging/common/Scripts/epcsearch.py'
-```
-
-The `yupdate` tool is used when updating packages.
-
-```bash
-alias updatePackage='/usr/share/ypkg/yupdate.py'
+cd ~/solus-builds
+gh repo clone yourgithubaccount/packages
 ```
 
 ## Building Packages
