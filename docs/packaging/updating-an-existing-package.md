@@ -19,32 +19,11 @@ This PR resolves software update request https://github.com/getsolus/packages/is
 
 :::
 
+### Update your clone of the packages Repository
 
-## Fork the getsolus/packages Repository / Update Your Fork
+If you do not have a local clone set up yet, see [Prepare for Packaging](prepare-for-packaging.md#fork-the-getsoluspackages-repository)
 
-### Create a Fork
-
-If you had not yet done so already, fork [getsolus/packages](https://github.com/getsolus/packages) using the GitHub web UI or [`gh` cli tool](https://cli.github.com/manual/gh_repo_fork) from the `github-cli` package. It will be forked to `github.com/yourgithubaccount/packages`.
-
-### Update a Fork
-
-If you already have a fork of [getsolus/packages](https://github.com/getsolus/packages) in GitHub, log into GitHub. Make sure you're looking at the `main` branch. Check to see that your fork is up to date with the main repo it was forked from. If your fork indicates it is behind, use the "Sync fork" button to bring it up to date.
-
-## Clone the package repo / update your clone
-
-### Clone the repo
-
-If you do not yet have a clone of your packages repo fork, change to your packaging directory and clone your fork. Then, switch to the directory of the package to update. For example:
-
-```bash
-cd ~/solus-builds
-gh repo clone yourgithubaccount/packages
-cd packages/packages/n/nano
-```
-
-### Update an existing clone
-
-If you already have a local clone, you need to bring it up to date. To do so run:
+Bring your local clone up to date. Run:
 
 ```bash
 cd ~/solus-builds/packages/n/nano
@@ -69,13 +48,9 @@ This can be achieved by doing `go-task bump`, which increments the release numbe
 
 ## Updating a Package
 
-To update the package to a newer version, use the `yupdate` tool. This is located at `/usr/share/ypkg/yupdate.py`. We recommend setting an alias via your `.bashrc`, `.zshrc`, or method appropriate to your shell.
+To update the package to a newer version, use the `go-task update` command.
 
-```bash
-alias updatePackage='/usr/share/ypkg/yupdate.py'
-```
-
-This script takes two arguments, in the following order:
+This command takes two arguments, in the following order:
 
 1. Version
 2. Source URL
@@ -85,7 +60,7 @@ If you're updating the package to a newer version, naturally you would change bo
 Example:
 
 ```bash
-/usr/share/ypkg/yupdate.py 1.0 https://example.com/example-1.0.tar.xz
+go-task update -- 1.0 https://example.com/example-1.0.tar.xz
 ```
 
 ## The `MAINTAINERS.md` File
@@ -105,7 +80,7 @@ Check the [changes in your files](git-basics#check-the-changes-in-your-files).
 
 Run `git status`. Make sure all the files you changed are staged, and that there are no untracked files. When all is well, run `git commit --cleanup=scissors`.
 
-import GitCommitCleanup from './_git_commit_cleanup.md';
+import GitCommitCleanup from './\_git_commit_cleanup.md';
 
 <GitCommitCleanup/>
 
