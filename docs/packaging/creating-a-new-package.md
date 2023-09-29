@@ -53,7 +53,7 @@ You must add a file called `MAINTAINERS.md` using the template in [Maintainershi
 
 You will need a link to the most recent source tarball for this from the software's website.
 
-To create a skeleton `package.yml` file, use the the `go-task new` command
+To create a skeleton `package.yml` file, use the the `go-task new` command.
 
 This command takes two arguments, in the following order:
 
@@ -64,7 +64,7 @@ This command takes two arguments, in the following order:
 go-task new -- tree https://gitlab.com/OldManProgrammer/unix-tree/-/archive/2.1.1/unix-tree-2.1.1.tar.gz
 ```
 
-The `go-task new` command will automatically place the new `package.yml` in the proper directory according the package name, _and will overwrite any existing `package.yml` file at that location_
+The `go-task new` command will automatically place the new `package.yml` in the proper directory according the package name, _and will overwrite any existing `package.yml` file at that location_.
 
 :::note
 You can, of course, create your `package.yml` file entirely from scratch, but `go-task new` will give you a better starting point. We recommend using the `go-task new` command.
@@ -133,7 +133,7 @@ Understanding how to translate source code into a good `package.yml` file is the
 
 ## Build the Package
 
-Build the package with `go-task`
+Build the package with `go-task`.
 Once the build completes, your directory should now include the following files:
 
 ```text
