@@ -12,8 +12,9 @@
 - You may view the forum without providing personal data
 - Cookies are used to store login information
 - We collect personal information when you register for an account:
-  - Username
-  - Email address
+  - *Username* and (optional) *password* for account identification and authorization.
+  - *Email address* for account recovery and notifications.
+  - (optional) *Third party login information* to allow signing in using an SSO provider like *GitHub*.
 
 ### Third Party Hosts
 
