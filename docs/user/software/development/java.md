@@ -9,7 +9,7 @@ Solus includes multiple LTS versions of Java in the repositories. You can instal
 
 :::tip
 
-If you need to install different versions or Java, use alternative installation methods such as _SDKMAN!_.
+If you need to install different versions or Java, use alternative installation methods such as [_SDKMAN!_](https://sdkman.io/).
 
 :::
 

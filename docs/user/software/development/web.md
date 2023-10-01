@@ -20,7 +20,7 @@ Caddy is installed with a default configuration that you can customize as needed
 
 ### Installation
 
-To install _caddy_, use the Software Center or execute the following command:
+To install `caddy`, use the Software Center or execute the following command:
 
 ```bash
 sudo eopkg install caddy
@@ -47,11 +47,11 @@ You can use the following commands to manage Caddy:
 
 ## httpd (Apache)
 
-httpd (Apache)  is installed with a default configuration that you can customize as needed.
+httpd (Apache) is installed with a default configuration that you can customize as needed.
 
 ### Installation
 
-To install _httpd_, use the Software Center or execute the following command:
+To install `httpd`, use the Software Center or execute the following command:
 
 ```bash
 sudo eopkg install httpd
@@ -72,7 +72,7 @@ The document root is the directory where Apache serves files from. By default, t
 
 #### Enabling PHP Support
 
-1. Install _php_ from the Software Center or execute the following command: `sudo eopkg install php`.
+1. Install `php` from the Software Center or execute the following command: `sudo eopkg install php`.
 2. Create a new `/etc/httpd/conf.d/php.conf` file with the following contents:
 
 ```
@@ -96,10 +96,12 @@ You can use the following commands to manage httpd:
 - Stop the web server: `sudo systemctl stop httpd`
 
 ## nginx
-nginx  is installed with a default configuration that you can customize as needed.
+
+nginx is installed with a default configuration that you can customize as needed.
+
 ### Installation
 
-To install _nginx_, use the Software Center or execute the following command:
+To install `nginx`, use the Software Center or execute the following command:
 
 ```bash
 sudo eopkg install nginx
