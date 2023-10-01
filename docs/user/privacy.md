@@ -27,7 +27,7 @@ Solus cannot control how data is collected and processed on the third party host
 #### Github
 
 - The Solus homepage `getsol.us`, and the help center `help.getsol.us` are hosted by Github Pages
-- Some Solus repositories are hosted on Github under the  [`getsolus` organization](https://github.com/getsolus/)
+- Solus repositories are hosted on Github under the [`getsolus` organization](https://github.com/getsolus/)
 - [Github Privacy Policy](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement)
 
 #### Matrix
