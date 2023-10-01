@@ -6,22 +6,7 @@
 - Solus does not use telemetry or automatic error reporting.
 - Some packages may include their own built-in telemetry (examples: Firefox, Steam). Solus cannot control data collected in this way. These packages may allow you to disable this telemetry.
 
-## Solus Websites
-
-### Dev Tracker
-
-- `dev.getsol.us`
-- You may view the dev tracker without providing personal data
-- Cookies are used to store login information
-- We collect personal data when you register for an account:
-  - Name or Username
-  - Email address
-  - Timezone (optional)
-  - SSH key (optional)
-- If you decide to contribute to packaging, your **name** and **email address** will be publicly viewable. This information will be attached to your contribution, even if you delete your account, based on our interest in maintaining documentation on submitted packages.
-- If you decide to submit bug reports or other issues, then delete your account, we will keep your submitted issues based on our interest in maintaining consistent bug reporting and issue tracking, but your name will be removed.
-
-### Forum
+## Solus Forum
 
 - `discuss.getsol.us`
 - You may view the forum without providing personal data
