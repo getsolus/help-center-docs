@@ -40,6 +40,7 @@ Solus cannot control how data is collected and processed on the third party host
 ## Your rights under the GDPR
 
 If you are covered by the [GDPR](https://gdpr.eu/) you have rights as a data subject. Your rights are detailed under [Chapter 3 of the GDPR](https://gdpr.eu/article-12-how-controllers-should-provide-personal-data-to-the-subject/)
+Additionally, you have the right to lodge a complaint with your national [Data Protection Authority](https://edpb.europa.eu/about-edpb/board/members_en).
 
 ## Privacy Contact
 
