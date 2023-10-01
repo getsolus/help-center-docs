@@ -1,4 +1,4 @@
-# Privacy Policy  (Draft)
+# Privacy Policy
 
 ## Solus Installations
 
