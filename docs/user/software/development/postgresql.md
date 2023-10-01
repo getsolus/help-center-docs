@@ -31,15 +31,15 @@ sudo -u postgres psql
 
 Note that all local connections are trusted and can access all databases by default. This can be changed in `/var/db/pgsql/data/pg_hba.conf`, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html) for more details.
 
-## Updating to 15.1
+## Updating to 16
 
-Because PostgreSQL is included as a single package, the only way to perform a major upgrade of PostgreSQL is via a backup/restore. The procedure below describes the upgrade process as it applies to Solus. See the [PostgreSQL documentation](https://www.postgresql.org/docs/15/upgrading.html#UPGRADING-VIA-PGDUMPALL) for more details.
+Because PostgreSQL is included as a single package, the only way to perform a major upgrade of PostgreSQL is via a backup/restore. The procedure below describes the upgrade process as it applies to Solus. See the [PostgreSQL documentation](https://www.postgresql.org/docs/16/upgrading.html#UPGRADING-VIA-PGDUMPALL) for more details.
 
-1.  If you have already updated PostgreSQL, downgrade PostgreSQL back to 14.5:
+1.  If you have already updated PostgreSQL, downgrade PostgreSQL back to 15.4:
 
 ```
-sudo eopkg it https://mirrors.rit.edu/solus/packages/shannon/p/postgresql/postgresql-14.5-37-1-x86_64.eopkg \
-              https://mirrors.rit.edu/solus/packages/shannon/p/postgresql/postgresql-libpq-14.5-37-1-x86_64.eopkg
+sudo eopkg it https://cdn.getsol.us/repo/shannon/p/postgresql/postgresql-15.4-42-1-x86_64.eopkg \
+              https://cdn.getsol.us/repo/shannon/p/postgresql/postgresql-libpq-15.4-42-1-x86_64.eopkg
 ```
 
 2.  (Re)start PostgreSQL:
