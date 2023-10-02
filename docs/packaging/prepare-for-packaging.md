@@ -10,7 +10,7 @@ sidebar_position: 1
 
 Packages need to be built and tested against the "unstable" repository. If you don't want to switch your primary system to unstable, you can do your packaging work in a VM. We have Virtual Machine Manager in the repos.
 
-Refer to [Repository Management](docs/user/package-management/repo-management) to see how to add and switch to unstable.
+Refer to [Repository Management](/docs/user/package-management/repo-management) to see how to add and switch to unstable.
 
 ## Setting up the Packager file
 
