@@ -22,7 +22,7 @@ If you already have a fork of [getsolus/packages](https://github.com/getsolus/pa
 If you already have a local clone, you need to bring it up to date. To do so run:
 
 ```bash
-cd ~/solus-builds
+cd ~/solus-builds/packages
 git switch main
 git pull
 ```
