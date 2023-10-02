@@ -97,6 +97,27 @@ cd ~/solus-builds
 gh repo clone yourgithubaccount/packages
 ```
 
+## Set up Monorepo Helper Functions (Optional)
+
+After cloning your repo, create a symlink to source our bash shell helper functions
+
+```bash
+mkdir -p ~/.bashrc.d
+ln -s ~/solus-builds/packages/common/Scripts/helpers.sh ~/.bashrc.d/solus-monorepo-helpers.sh
+```
+
+Then start a new instance of `bash` to source the script.
+
+Afterwards, you should have the following available from your shell:
+
+| Function          | Description | Usage                                                                                                                                                                                                          |
+| ----------------- | -------------------------------------------------------------------------------------------------- | ---------- |
+| **gotosoluspkgs** | Change directory to the solus monorepo from anywhere on the filesystem. | `gotosoluspkgs`
+| **goroot**        | When in the solus monorepo, change directory to the root directory of the git repository. | `goroot`
+| **gotopkg**       | Change directory to any solus package. You can type part of the package name then double press `Tab` to get autocompletion for this function. | `gotopkg firefox`
+| **whatuses**      | Find out what packages use a library by reading the `abi_used_libs` files. | `whatuses libfoobar.so.1`
+| **whatprovides**  | Find out what package provides a library by reading the `abi_libs` files. | `whatprovides libfoobar.so.1.`
+
 ## Building Packages
 
 Your system is now set up for package work.
