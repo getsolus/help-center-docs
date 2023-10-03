@@ -7,6 +7,23 @@ summary: Repository Management
 
 While Solus currently only provides two repositories, stable (shannon) and unstable, our package manager does support actively using multiple repositories on your system. This is useful if you are using a vendor-provided repository.
 
+## Official Solus Repositories
+
+The official Solus repositories are:
+
+- Stable (shannon)
+  - `https://cdn.getsol.us/repo/shannon/eopkg-index.xml.xz`
+  - This is the default repository.
+- Unstable
+  - `https://cdn.getsol.us/repo/unstable/eopkg-index.xml.xz`
+  - This repository should only be used if you intend to build Solus packages or to test new packages before they are synced to the *stable* repository.
+
+:::danger
+
+It is not always safe to perform a system update when using the **unstable** repository. Always check the topic of the [#solus-packaging](https://matrix.to/#/#solus-packaging:matrix.org) Matrix room before updating.
+
+:::
+
 ## Adding a Repository
 
 You can add a repository by using:
@@ -18,7 +35,7 @@ sudo eopkg add-repo Name Url
 For example:
 
 ```bash
-sudo eopkg add-repo Example https://example.com/repo/eopkg-index.xml.gz
+sudo eopkg add-repo Example https://example.com/repo/eopkg-index.xml.xz
 ```
 
 **Note:** This does not enable the repository.
