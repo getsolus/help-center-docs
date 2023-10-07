@@ -49,13 +49,20 @@ Once the commit is successfully pushed, you'll notice that a URL will be provide
 
 Run `git status` one last time to make sure your branch is clean. If it is, open the link, double check everything, and create the pull request!
 
-## Amending a New Pull Request
+## Amending a Pull Request
 
-There may be times you need to make minor changes after submitting the pull request. For instance, you see something that needs correcting. You may update your pull request with a new commit and push, as with any other change. We recommend keeping this to a minimum after submitting your PR so that reviewers aren't working with old information.
+There may be times you need to make minor changes after submitting the pull request. For instance, you see something that needs correcting. To do this, you will need to amend your commit.
+
+1. Make your changes
+2. Stage your changes: `git add .`
+3. Amend the commit: `git commit --amend`
+4. Push the amended commit: `git push --force`
+
+The web interface on GitHub will automatically update with the latest changes.
 
 :::note
 
-Previously, with Phabricator, we required amending your commit. This is no longer necessary and is not recommended.
+We want amended commits because of the way our tooling works. It expects that there is only one Git commit per package change.
 
 :::
 
@@ -63,12 +70,7 @@ Previously, with Phabricator, we required amending your commit. This is no longe
 
 Your pull request will be reviewed, and changes may be requested. This is normal. It's to ensure the quality of the packages in our repository and to make sure each PR adheres to our standards.
 
-Make any relevant changes to your local branch. Add or remove files as needed, and commit. In the new commit message, describe the changes you've made between the last revision and the new one.
-Ex: "Updated the build order in package.yml as requested".
-
-This helps reviewers see what you've changed, to streamline the process of getting your work merged.
-
-Submit the updated commit with `git push`. The web interface will automatically update with the latest changes.
+If you need to make changes in response to a review, follow the steps in the [section above](#amending-a-pull-request).
 
 ## After the Pull Request is Accepted
 
