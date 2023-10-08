@@ -22,6 +22,13 @@ _These items are not mandatory yet, and are subject to change_
 
 ## 2023
 
+### October
+
+#### Recommending amending commits in Pull Requests
+
+- Amending commits and force pushing the changes works better with our build tooling.
+  - It was thought that abandoning this practice would be okay, but it turns out not to be the case.
+
 ### September
 
 #### Switching From `make` to `go-task`
