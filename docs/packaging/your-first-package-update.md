@@ -14,14 +14,19 @@ For this example we will use the text editor `nano`.
 Change to your packaging directory. Your directory may have a different name or location:
 
 ```bash
-cd ~/solus-builds
+cd ~/solus-packages
 ```
 
-Clone the `packages` repository, then change into it:
+Switch to the directory containing the `nano` recipe:
 
 ```bash
-git clone https://github.com/getsolus/packages.git
-cd packages/packages/n/nano
+cd packages/n/nano
+```
+Alternatively, if you've set up the [Monorepo Helper Functions](docs/packaging/prepare-for-packaging#set-up-monorepo-helper-functions-optional) you can replace the above to steps by these simple commands:
+
+```bash
+gotosoluspkgs
+gotopkg nano
 ```
 
 Increase the release number by one ("bump" the package) and then check the results:

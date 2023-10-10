@@ -80,8 +80,8 @@ sudo solbuild update
 Create a packaging directory to hold sub-directories with packaging files. Here we are using the name `solus-builds` and placing it in our home directory, but you can use whatever you prefer.
 
 ```bash
-mkdir ~/solus-builds
-cd solus-builds
+mkdir ~/solus-packages
+cd solus-packages
 ```
 
 ## Fork the getsolus/packages Repository
@@ -93,8 +93,7 @@ Create your own fork of [getsolus/packages](https://github.com/getsolus/packages
 Create a local clone of the package repository you just forked
 
 ```bash
-cd ~/solus-builds
-gh repo clone yourgithubaccount/packages
+gh repo clone packages ~/solus-packages
 ```
 
 ## Set up Monorepo Helper Functions (Optional)
@@ -103,7 +102,7 @@ After cloning your repo, create a symlink to source our bash shell helper functi
 
 ```bash
 mkdir -p ~/.bashrc.d
-ln -s ~/solus-builds/packages/common/Scripts/helpers.sh ~/.bashrc.d/solus-monorepo-helpers.sh
+ln -s ~/solus-packages/common/Scripts/helpers.sh ~/.bashrc.d/solus-monorepo-helpers.sh
 ```
 
 Then start a new instance of `bash` to source the script.
