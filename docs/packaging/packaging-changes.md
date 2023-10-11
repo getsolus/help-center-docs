@@ -11,16 +11,14 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 - This list is not exhaustive
 - This list is in _reverse chronological order_ (newest first)
 
-## Upcoming
+## 2023
 
-_These items are not mandatory yet, and are subject to change_
+### October
 
 #### Requiring `homepage` in `package.yml`
 
-- The `homepage` key in `package.yml` will become mandatory. If a package does not have a homepage, use the address for the upstream source.
-- We are exploring how to enforce this; for now we will ask nicely.
-
-## 2023
+- The `homepage` key in `package.yml` has become mandatory. Use the address to the upstream source repository (eg: the GitHub page) if a package does not have a homepage.
+- This is enforced by checks on all pull requests.
 
 ### October
 
