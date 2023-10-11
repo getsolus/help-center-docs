@@ -43,5 +43,5 @@ If you are covered by the [GDPR](https://gdpr.eu/) you have rights as a data sub
 
 ## Privacy Contact
 
-Any concerns or requests about personal data should be sent to [privacy@getsol.us](mailto:privacy@getsol.us) TODO: what is the correct email?
+Any concerns or requests about personal data should be sent to [privacy@getsol.us](mailto:privacy@getsol.us)
 
