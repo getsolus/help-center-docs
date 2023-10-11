@@ -77,7 +77,7 @@ sudo solbuild update
 
 ## Setting up a Build Directory
 
-Create a packaging directory to hold sub-directories with packaging files. Here we are using the name `solus-builds` and placing it in our home directory, but you can use whatever you prefer.
+Create a packaging directory to hold sub-directories with packaging files. Here we are using the name `solus-packages` and placing it in our home directory, but you can use whatever you prefer.
 
 ```bash
 mkdir ~/solus-packages
