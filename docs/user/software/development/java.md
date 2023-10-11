@@ -17,12 +17,11 @@ All Java packages in the Solus repositories include the _Java Runtime Environmen
 
 The following table lists the versions of Java available in the Solus repositories.
 
-|Version |Package name |Installation directory |Included components|Notes
-|---|-----|-----|-----|-----|
-|Java 8| `openjdk-8` |`/usr/lib64/openjdk-8`|JRE, JDK|See openjdk-8 below|
-|Java 11| `openjdk-11` |`/usr/lib64/openjdk-11`|JRE, JDK, OpenJFX||
-|Java 17| `openjdk-17` |`/usr/lib64/openjdk-17`|JRE, JDK||
-
+| Version | Package name | Installation directory  | Included components | Notes                 |
+| ------- | ------------ | ----------------------- | ------------------- | --------------------- |
+| Java 8  | `openjdk-8`  | `/usr/lib64/openjdk-8`  | JRE, JDK            | See _openjdk-8_ below |
+| Java 11 | `openjdk-11` | `/usr/lib64/openjdk-11` | JRE, JDK, OpenJFX   |                       |
+| Java 17 | `openjdk-17` | `/usr/lib64/openjdk-17` | JRE, JDK            |                       |
 
 ## Running Java Applications
 
@@ -44,3 +43,5 @@ There are multiple ways to execute Java applications in Solus:
 :::danger Important
 
 openjdk-8 is scheduled for removal in the near future. It is not recommended that you use it today.
+
+:::
