@@ -11,12 +11,10 @@ While Solus currently only provides two repositories, stable (shannon) and unsta
 
 The official Solus repositories are:
 
-- Stable (shannon)
-  - `https://cdn.getsol.us/repo/shannon/eopkg-index.xml.xz`
-  - This is the default repository.
-- Unstable
-  - `https://cdn.getsol.us/repo/unstable/eopkg-index.xml.xz`
-  - This repository should only be used if you intend to build Solus packages or to test new packages before they are synced to the *stable* repository.
+| Repository       | URL                                                      | Notes                                                                                                                                                |
+| ---------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Stable (shannon) | `https://cdn.getsol.us/repo/shannon/eopkg-index.xml.xz`  | This is the default repository.                                                                                                                      |
+| Unstable         | `https://cdn.getsol.us/repo/unstable/eopkg-index.xml.xz` | This repository should only be used if you intend to build Solus packages or to test new packages before they are synced to the _stable_ repository. |
 
 :::danger
 
