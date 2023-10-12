@@ -75,22 +75,13 @@ To update solbuild, run:
 sudo solbuild update
 ```
 
-## Setting up a Build Directory
-
-Create a packaging directory to hold sub-directories with packaging files. Here we are using the name `solus-packages` and placing it in our home directory, but you can use whatever you prefer.
-
-```bash
-mkdir ~/solus-packages
-cd solus-packages
-```
-
 ## Fork the getsolus/packages Repository
 
 Create your own fork of [getsolus/packages](https://github.com/getsolus/packages) using the GitHub web UI or [`gh` cli tool](https://cli.github.com/manual/gh_repo_fork) from the `github-cli` package. It will be forked to `github.com/yourgithubaccount/packages`.
 
 ## Clone Your Forked Package Repository
 
-Create a local clone of the package repository you just forked
+Create a local clone of the package repository you just forked. Here we are using the name `solus-packages` and cloning it into our home directoy. The rest of the documentation will presume this structure. You can choose a different name and path but will have to make sure to replace it in every command that refers to the `solus-packages` directory.
 
 ```bash
 gh repo clone packages ~/solus-packages
