@@ -26,7 +26,7 @@ If you do not have a local clone set up yet, see [Prepare for Packaging](prepare
 Bring your local clone up to date. Run:
 
 ```bash
-cd ~/solus-builds/packages/n/nano
+cd ~/solus-packages/packages/n/nano
 git switch main
 git pull
 ```
@@ -78,11 +78,7 @@ Check the [changes in your files](git-basics#check-the-changes-in-your-files).
 
 [Add / remove files as necessary to the commit](git-basics.md). Then, **check your branch**.
 
-Run `git status`. Make sure all the files you changed are staged, and that there are no untracked files. When all is well, run `git commit --cleanup=scissors`.
-
-import GitCommitCleanup from './\_git_commit_cleanup.md';
-
-<GitCommitCleanup/>
+Run `git status`. Make sure all the files you changed are staged, and that there are no untracked files. When all is well, run `git commit`.
 
 ### Commit message format for updated / bumped packages
 
@@ -99,7 +95,7 @@ Here is an example in our standard format (make sure to check the box in the che
 ```
 foo: Update to 1.2.3
 
-## Summary
+**Summary**
 
 Bugfixes:
 
@@ -111,16 +107,16 @@ Enhancements:
 - Implemented a feature
 - Error when encountering a thing
 
-**Full release notes:**
+Full release notes:
 - [1.2.3](https://github.com/foo/foo/releases/tag/v1.2.3)
 
-## Test Plan
+**Test Plan**
 
 - Launched the application
 - Exercised the UI
 - Exercised some feature
 
-## Checklist
+**Checklist**
 
 - [] Package was built and tested against unstable
 ```

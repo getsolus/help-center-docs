@@ -25,7 +25,7 @@ If you do not have a local clone set up yet, see [Prepare for Packaging](prepare
 Bring your local clone up to date. Run:
 
 ```bash
-cd ~/solus-builds/packages
+cd ~/solus-packages
 git switch main
 git pull
 ```
@@ -154,11 +154,7 @@ Check the [changes in your files](git-basics).
 
 [Add / remove files as necessary to the commit](git-basics.md). Then, **check your branch**.
 
-Run `git status`. Make sure all the files you changed are staged, and that there are no untracked files. When all is well, run `git commit --cleanup=scissors`.
-
-import GitCommitCleanup from './\_git_commit_cleanup.md';
-
-<GitCommitCleanup/>
+Run `git status`. Make sure all the files you changed are staged, and that there are no untracked files. When all is well, run `git commit`.
 
 ### Commit message format for new packages
 
