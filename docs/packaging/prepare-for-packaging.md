@@ -25,7 +25,7 @@ A [Matrix](/docs/user/contributing/getting-involved#matrix-chat) contact is opti
 [Packager]
 Name=Your Name Here
 Email=your.email@address
-Matrix=@username.matrix.org
+Matrix=@username:matrix.org
 ```
 
 ## Installing Development Tools
