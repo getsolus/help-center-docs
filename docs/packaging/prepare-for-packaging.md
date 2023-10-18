@@ -87,6 +87,16 @@ Create a local clone of the package repository you just forked. Here we are usin
 gh repo clone packages ~/solus-packages
 ```
 
+## Initialize Git hooks
+
+Initialize Git hooks for working with the repository by running:
+
+```
+go-task -d ~/solus-packages init
+```
+
+This makes it easy to create commits in the correct format, and will warn you about issues with things you commit.
+
 ## Set up Monorepo Helper Functions (Optional)
 
 After cloning your repo, create a symlink to source our bash shell helper functions

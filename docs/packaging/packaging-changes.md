@@ -15,6 +15,11 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 ### October
 
+#### Git hooks
+
+Run `go-task init` to initialize Git hooks for the packages repository.
+See [Prepare for packaging](prepare-for-packaging.md#initialize-git-hooks).
+
 #### Requiring `homepage` in `package.yml`
 
 - The `homepage` key in `package.yml` has become mandatory. Use the address to the upstream source repository (eg: the GitHub page) if a package does not have a homepage.
