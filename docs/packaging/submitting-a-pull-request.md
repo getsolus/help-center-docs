@@ -66,6 +66,20 @@ We want amended commits because of the way our tooling works. It expects that th
 
 :::
 
+### Amending a Pull Request with multiple commits
+
+Sometimes, you may be submitting multiple packages in a single pull request, and one of them might need changes. The process is very similar to the above steps, but with a couple of additions.
+
+1. Rebase on the `main` branch: `git rebase -i origin/main`
+2. A text editor will open in your terminal (`nano` by default). Change the line or lines of the commits you want to change from `pick` to `edit`
+3. Save and close the editor (by default, `Ctrl+s` `Ctrl+x`)
+4. Make your changes
+5. Stage your changes: `git add .`
+6. Amend the commit: `git commit --amend`
+7. Continue the rebase: `git rebase --continue`
+8. Repeat steps 4 through 7 for all commits you wish to edit
+9. Push the amended stack: `git push --force`
+
 ## Updating a Pull Request That Has Changes Requested
 
 Your pull request will be reviewed, and changes may be requested. This is normal. It's to ensure the quality of the packages in our repository and to make sure each PR adheres to our standards.
