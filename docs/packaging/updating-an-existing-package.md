@@ -90,7 +90,10 @@ There should be a meaningful summary line (which starts with the package name), 
 - Optional: A link to the upstream release notes page.
 - Include your Test Plan.
 
-Here is an example in our standard format (make sure to check the box in the checklist):
+`git commit` on [an initialized repository](prepare-for-packaging.md#initialize-git-hooks) will automatically open your editor with the correct template.
+Note that lines starting with a `#` will be ignored by Git and do not need to be removed.
+
+Here is an example in our standard format:
 
 ```
 foo: Update to 1.2.3
@@ -108,22 +111,10 @@ Enhancements:
 - Error when encountering a thing
 
 Full release notes:
+
 - [1.2.3](https://github.com/foo/foo/releases/tag/v1.2.3)
-
-**Test Plan**
-
-- Launched the application
-- Exercised the UI
-- Exercised some feature
-
-**Checklist**
-
-- [] Package was built and tested against unstable
 ```
 
 For more information on suitable commit messages, please check the [tooling central documentation](https://github.com/solus-project/tooling-central/blob/master/README.rst#using-git).
-
-- If you want to link this pull request to an existing issue, simply mention it in your commit message (use the full URL): `The inclusion of <somepackage> fixes https://github.com/getsolus/packages/issues/123`
-- If you need a change to depend on another change, mention it in the commit message too (use the full URL): `Depends on https://github.com/getsolus/packages/issues/234`
 
 Next, you'll [submit a pull request for review](submitting-a-pull-request.md).

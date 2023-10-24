@@ -47,7 +47,15 @@ If you've created your own branch, as recommended, the cli tool will show you a 
 
 Once the commit is successfully pushed, you'll notice that a URL will be provided that will immediately allow you to create a pull request with your changes.
 
-Run `git status` one last time to make sure your branch is clean. If it is, open the link, double check everything, and create the pull request!
+Run `git status` one last time to make sure your branch is clean. If it is:
+
+1. Open the link.
+2. Fill in a summary of your changes (usually the same as the commit message).
+3. Link any relevant issues:
+   - If you want to link this pull request to an existing issue, simply mention it in the PR summary: `The inclusion of <somepackage> fixes #123`.
+   - If you need a change to depend on another change, mention it in the PR summary too: `Depends on #234`.
+4. Double check everything
+5. Create the pull request!
 
 ## Amending a Pull Request
 
