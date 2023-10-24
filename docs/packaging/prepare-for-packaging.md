@@ -112,7 +112,7 @@ ln -s ~/solus-packages/common/Scripts/helpers.sh ~/.bashrc.d/solus-monorepo-help
 
 ```fish
 mkdir -p ~/.config/fish/conf.d
-ln -s ~/solus-builds/packages/common/Scripts/helpers.fish ~/.config/fish/conf.d/solus.fish
+ln -s ~/solus-packages/common/Scripts/helpers.fish ~/.config/fish/conf.d/solus.fish
 ```
 
 ### zsh
@@ -121,7 +121,7 @@ ln -s ~/solus-builds/packages/common/Scripts/helpers.fish ~/.config/fish/conf.d/
 mkdir -p ~/.zshrc.d
 printf "\nfpath=(~/.zshrc.d \$fpath)" >> ~/.zshrc
 source ~/.zshrc
-ln -s ~/solus-builds/packages/common/Scripts/helpers.zsh ~/.zshrc.d/solus-monorepo-helpers.zsh
+ln -s ~/solus-packages/common/Scripts/helpers.zsh ~/.zshrc.d/solus-monorepo-helpers.zsh
 ```
 
 ---
