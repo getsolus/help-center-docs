@@ -99,16 +99,34 @@ This makes it easy to create commits in the correct format, and will warn you ab
 
 ## Set up Monorepo Helper Functions (Optional)
 
-After cloning your repo, create a symlink to source our bash shell helper functions
+After cloning your repo, create a symlink to source our helper functions for your shell. Then, start a new instance of the shell.
+
+### bash
 
 ```bash
 mkdir -p ~/.bashrc.d
 ln -s ~/solus-packages/common/Scripts/helpers.sh ~/.bashrc.d/solus-monorepo-helpers.sh
 ```
 
-Then start a new instance of `bash` to source the script.
+### fish
 
-Afterwards, you should have the following available from your shell:
+```fish
+mkdir -p ~/.config/fish/conf.d
+ln -s ~/solus-builds/packages/common/Scripts/helpers.fish ~/.config/fish/conf.d/solus.fish
+```
+
+### zsh
+
+```zsh
+mkdir -p ~/.zshrc.d
+printf "\nfpath=(~/.zshrc.d \$fpath)" >> ~/.zshrc
+source ~/.zshrc
+ln -s ~/solus-builds/packages/common/Scripts/helpers.zsh ~/.zshrc.d/solus-monorepo-helpers.zsh
+```
+
+---
+
+You should now have the following available from your shell:
 
 | Function          | Description | Usage                                                                                                                                                                                                          |
 | ----------------- | -------------------------------------------------------------------------------------------------- | ---------- |
