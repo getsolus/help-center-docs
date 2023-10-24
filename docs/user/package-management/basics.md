@@ -40,7 +40,7 @@ sudo eopkg install --reinstall gnome-documents gnome-music
 
 You can uninstall one or more packages by using:
 
-```
+```bash
 sudo eopkg remove packagename
 ```
 
@@ -55,13 +55,13 @@ sudo eopkg remove gnome-documents gnome-music
 You can get information on software, such as its description, version, installation size, and more, by using
 
 ```bash
-sudo eopkg info packagename
+eopkg info packagename
 ```
 
 For example:
 
 ```bash
-sudo eopkg info gnome-documents
+eopkg info gnome-documents
 ```
 
 ## Updating
@@ -83,13 +83,13 @@ sudo eopkg upgrade firefox
 You can search the software selection Solus provides by using:
 
 ```bash
-sudo eopkg search term
+eopkg search term
 ```
 
 For example:
 
 ```bash
-sudo eopkg search documents
+eopkg search documents
 ```
 
 Notice that you don't need to search for a specific software name, although you can do that. We search summaries and software names by default.

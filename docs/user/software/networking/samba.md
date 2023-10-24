@@ -21,7 +21,7 @@ To enable convenient file-sharing on Solus, we maintain a Solus-specific Samba c
 
 As of Samba 4.7.x, Solus disables the old, deprecated and insecure original SMB1/CIFS protocol by default.
 
-For more information on this choice, please read [this post regarding SMB1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/).
+For more information on this choice, please read [this post regarding SMB1](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858).
 
 As of Samba 4.11.x, the SMB1/CIFS protocol is officially deprecated upstream.
 

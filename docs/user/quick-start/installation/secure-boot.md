@@ -39,7 +39,7 @@ Now, with the Solus certificate enrolled, press `Enter` to reboot the machine, b
 
 If you already have Solus installed and wish to enable secure boot then there is one extra step you must perform BEFORE continuing with [Enrolling the Solus Certificate](#enrolling-the-solus-certificate) as normal.
 
-Firstly, you must confirm you have `clr-boot-manager, version: 3.2.12, release: 29` installed, run `eopkg info clr-boot-manager` to confirm this. This version of `clr-boot-manager` will have created a new UEFI boot entry on your machine called `Solus Linux Bootloader` that can be booted from with Secure Boot enabled.
+Firstly, you must confirm you have `clr-boot-manager, version: 3.2.12, release: 29` (or later) installed, run `eopkg info clr-boot-manager` to confirm this. This version of `clr-boot-manager` will have created a new UEFI boot entry on your machine called `Solus Linux Bootloader` that can be booted from with Secure Boot enabled.
 
 :::note Before continuing, it is important to note the screenshots provided here are for example only, your UEFI firmware interface will almost certainly look different.
 :::
@@ -87,6 +87,6 @@ As such, we are not currently looking to our get our own `shim` signed by Micros
 
 ## Useful Links for Additional Reading
 
-- https://learn.microsoft.com-us/windows-hardware/drivers/dashboard/file-signing-reqs
+- https://learn.microsoft.com/windows-hardware/drivers/dashboard/file-signing-reqs
 - https://github.com/rhboot/shim-review/
 - https://github.com/rhboot/shim/

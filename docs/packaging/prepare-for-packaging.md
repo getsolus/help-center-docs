@@ -110,14 +110,14 @@ ln -s ~/solus-packages/common/Scripts/helpers.sh ~/.bashrc.d/solus-monorepo-help
 
 ### fish
 
-```fish
+```bash
 mkdir -p ~/.config/fish/conf.d
 ln -s ~/solus-packages/common/Scripts/helpers.fish ~/.config/fish/conf.d/solus.fish
 ```
 
 ### zsh
 
-```zsh
+```bash
 mkdir -p ~/.zshrc.d
 printf "\nfpath=(~/.zshrc.d \$fpath)" >> ~/.zshrc
 source ~/.zshrc

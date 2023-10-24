@@ -18,7 +18,7 @@ If you've never used Solus before, this section will set you on the right track.
 
 **[Editions](/docs/user/editions/)**
 
-Solus comes in multiple Editions for different Desktop Environments. The purpose of this section is to introduce you to those desktops, walk you through common configuration tasks, and provides useful tips and tricks.
+Solus comes in multiple editions for different desktop environments. The purpose of this section is to introduce you to those desktops, walk you through common configuration tasks, and provide useful tips and tricks.
 
 **[Hardware](/docs/user/hardware/)**
 
@@ -43,7 +43,7 @@ Our Flarum-powered forums are easy to use from any device and are a great resour
 **[Matrix](https://matrix.to/#/#solus:matrix.org)**
 
 [Matrix](<https://en.wikipedia.org/wiki/Matrix_(protocol)>) is a great way to discuss issues and development with the community, and project developers in real-time. It's also a great place for getting support, but remember due
-to timezone differences there might not always be people there to answer your question immediately. You can access [Matrix](/docs/user/contributing/getting-involved.md#matrix-chat) using a client like [Element Web](https://app.element.io/), or many [others](https://matrix.org/clients/). You will need a [Matrix](/docs/user/contributing/getting-involved.md#matrix-chat) account.
+to timezone differences there might not always be people there to answer your question immediately. You can access [Matrix](/docs/user/contributing/getting-involved.md#matrix-chat) using a client like [Element Web](https://app.element.io/), or many [others](https://matrix.org/ecosystem/clients/). You will need a [Matrix](/docs/user/contributing/getting-involved.md#matrix-chat) account.
 
 Read more about Solus on Matrix [here.](/docs/user/contributing/getting-involved.md#matrix-chat)
 

@@ -11,10 +11,10 @@ While Solus currently only provides two repositories, stable (shannon) and unsta
 
 The official Solus repositories are:
 
-| Repository       | URL                                                      | Notes                                                                                                                                                |
-| ---------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Stable (shannon) | `https://cdn.getsol.us/repo/shannon/eopkg-index.xml.xz`  | This is the default repository.                                                                                                                      |
-| Unstable         | `https://cdn.getsol.us/repo/unstable/eopkg-index.xml.xz` | This repository should only be used if you intend to build Solus packages or to test new packages before they are synced to the _stable_ repository. |
+| Repository           | URL                                                      | Notes                                                                                                                                                |
+| -------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Stable (shannon)** | `https://cdn.getsol.us/repo/shannon/eopkg-index.xml.xz`  | This is the default repository.                                                                                                                      |
+| **Unstable**         | `https://cdn.getsol.us/repo/unstable/eopkg-index.xml.xz` | This repository should only be used if you intend to build Solus packages or to test new packages before they are synced to the _stable_ repository. |
 
 :::danger
 
@@ -101,5 +101,5 @@ sudo eopkg update-repo Example
 You can list all the repositories added on your system by using:
 
 ```bash
-sudo eopkg list-repo
+eopkg list-repo
 ```

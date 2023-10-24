@@ -18,7 +18,7 @@ When testing, try to keep different types of users in mind. For instance, would 
 - Install your usual software and just make sure basic functionality works
 - Plugging in a USB drive allows user to mount the drive and access files
 - System can be put to sleep and woken, things still work after waking (display, keyboard, mouse, sound, network)
-- Able to create and use samba shares via file manager (you must [enable smb after installation](https://help.getsol.us/docs/user/software/networking/samba#samba-on-solus))
+- Able to create and use samba shares via file manager (you must [enable smb after installation](/docs/user/software/networking/samba.md#samba-on-solus))
 - Anything that's been flaky in your experience (LVM, for instance)
 
 ### Laptops

@@ -14,7 +14,7 @@ Our rollback feature allows you to essentially rewind your system's software bac
 You can see the history from eopkg by using:
 
 ```bash
-sudo eopkg history
+eopkg history
 ```
 
 ## Rollback

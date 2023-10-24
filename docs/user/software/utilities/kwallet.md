@@ -15,7 +15,7 @@ However, additional configuration is needed to make the KDE Wallet manage SSH ke
 
 This document assumes that you are familiar with utilising SSH key passphrases.
 
-For more information, see [working with SSH key passphrases](https://help.github.com/en/articles/working-with-ssh-key-passphrases)
+For more information, see [working with SSH key passphrases](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases)
 
 ## The `SSH_ASKPASS` environment variable
 
