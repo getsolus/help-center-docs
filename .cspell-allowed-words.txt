@@ -33,9 +33,11 @@ builddeps
 caddyfile
 caja
 cangjie
+cbindgen
 centrino
 cflags
 changeme
+checkdeps
 chipsets
 chrooted
 chrooting
@@ -48,6 +50,7 @@ confopts
 cran
 cryptsetup
 cxxflags
+cython
 datacenter
 datagrip
 dbus

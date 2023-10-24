@@ -74,7 +74,7 @@ Note the same static archive rules apply to `32bit` packages. These packages are
 
 ### The utils subpackage
 
-This is not an automatic subpackage, you must use `patterns` to utilise it. It is provided for instances that it may not be suitable to have binaries present, i.e. for a library package.
+This is not an automatic subpackage, you must use `patterns` to utilize it. It is provided for instances that it may not be suitable to have binaries present, i.e. for a library package.
 
 ## Maintenance
 
@@ -238,6 +238,17 @@ rundeps:
         - somepackage
         - someotherpackage
 ```
+
+## Check dependencies
+
+Check dependencies are a special kind of build dependency reserved for automatic package testing by `solbuild`. Check dependencies should only be used during the `check` build phase.
+When a package is part of an automatic build sequence, these dependencies  will **not** be considered when determining build order.
+
+### Example
+
+The package `cbindgen` includes `cython` in `checkdeps` to run tests in the `check` phase.
+
+[cbindgen package.yml file](https://github.com/getsolus/packages/blob/main/packages/c/cbindgen/package.yml)
 
 ## Patching / extra files
 

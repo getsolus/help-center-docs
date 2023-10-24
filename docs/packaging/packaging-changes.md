@@ -15,6 +15,10 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 ### October
 
+#### Adding `checkdeps` in `package.yml`
+
+- A new type of packaging dependency was added: `checkdeps`. They behave the same as `builddeps`, except they are not considered when determining build order for automatic builds. See the [package.yml page](/docs/packaging/package.yml).
+
 #### Git hooks
 
 - Run `go-task init` to initialize Git hooks for the packages repository. See [Prepare for packaging](prepare-for-packaging.md#initialize-git-hooks).
