@@ -38,7 +38,7 @@ The settings should be on one line with a space between them. You will need to r
 
 # Kernels
 
-## Installing an a different kernel branch
+## Installing a different kernel branch
 
 By default, Solus utilizes our linux-current kernel. The separate kernel branches can be added by installing the `linux-lts` or `linux-current` packages. Note that each kernel has separate module packages, so if you use these kernel modules, you'll need to install the one related to the kernel you are adding.
 
