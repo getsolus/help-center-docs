@@ -5,57 +5,75 @@ summary: Installation Guide for multiple operating systems
 
 # Preparing to install
 
-The first step to installing Solus is acquiring the correct media. The Solus Project provides ISO images, which contain the contents of Solus for installing.
+The first step to installing Solus is getting the correct media. The Solus Project provides ISO images, which contain the contents of Solus for installing.
 
----
+## Getting the ISO
 
-# Getting the ISO
+Download a Solus ISO by going to our [Download page](https://getsol.us/download) and picking an edition.
 
-You can download a Solus ISO by going to our [Download page](https://getsol.us/download).
+## Verifying the ISO
 
----
+### Linux and macOS
 
-# Verifying the ISO
+Download the SHA256SUMS files for your chosen ISO edition: _File_, _Signed File_ and _Public Key_ from the links next to the _Download_ buttons on our [Download page](https://getsol.us/download).
 
-## Linux and Mac
+**Note:** You should download all these files to the same directory.
 
-Download the relevant Solus ISO SHA256SUMS: File, Signed File and Public Key from the [Download page](https://getsol.us/download).
+#### Verifying the SHA256SUMS file signature
 
-**Note:** It is advisable that the files are all placed in the same folder.
-
-### Import the Public Key
+Import the Solus public key:
 
 ```bash
-gpg --import <Public Key>.gpg
+cd ~/path/to/download/directory
+gpg --import solus-releng-pub.gpg
 ```
 
-### Verify SHA256SUMS file signature
+Verify the signed checksum file:
 
 ```bash
-gpg --verify <Signed File>.sign <File>.sha256sum
+gpg --verify Solus-4.4-Budgie.iso.sha256sum.sign Solus-4.4-Budgie.iso.sha256sum
 ```
 
-### Verify ISO
+#### Verifying the ISO checksum
+
+Check that the computed hash of the downloaded ISO file matches the hash supplied by Solus:
 
 ```bash
 sha256sum -c Solus-4.4-Budgie.iso.sha256sum | grep OK
 ```
 
----
+### Windows
 
-# Creating Bootable Media
+#### Verifying signed SHA256SUM file
+
+On Windows, first install [gpg4win](https://www.gpg4win.org/).
+
+Now you can run the same `gpg` commands from the the _Verify SHA256SUMS file signature_ section above.
+
+#### Verifying the ISO checksum
+
+Launch powershell and compute the hash of the ISO file you just downloaded. You will have to manually compare the result to the hash in the SHA256SUMS file.
+
+```powershell
+Get-FileHash C:\path\to\Solus-4.4-Budgie.iso
+cat C:\path\to\Solus-4.4-Budgie.iso.sha256sum
+```
+
+Alternatively, you can use a graphical program that can calculate SHA256 hashes like _Rufus_ or _7zip_.
+
+## Creating bootable media
 
 To make boot media, you will need:
 
 1. Either a blank DVD or a USB drive larger than 2 GB.
 2. If using a USB, the ability to boot from the USB.
-3. ISO from the "Getting the ISO" section.
+3. ISO file from the _Getting the ISO_ section.
 
-There is a multitude of tools which enable the writing of our ISO image to DVDs or USB thumb drives. Below, we break it apart across Linux, Windows and macOS.
+There are many tools which can write our ISO image to DVDs or USB thumb drives. Chose from an option below.
 
-## Linux
+### Linux
 
-### DVD
+#### DVD
 
 We recommend using [Brasero](https://wiki.gnome.org/Apps/Brasero) for writing the ISO to a DVD.
 
@@ -67,9 +85,9 @@ We recommend using [Brasero](https://wiki.gnome.org/Apps/Brasero) for writing th
 6. Click "Burn" and wait.
 7. Upon seeing “Image successfully burned to DVD”, click "Close".
 
-### USB
+#### USB
 
-#### Graphical Tool
+##### Graphical tool
 
 We recommend using [Gnome MultiWriter](https://wiki.gnome.org/Apps/MultiWriter). Please note that unetbootin will **not** work.
 
@@ -87,7 +105,7 @@ Upon completion, you will be prompted with the following dialog and your USB is 
 
 ![MultiWriter Done](done.jpg)
 
-#### Command-Line
+##### Command-line
 
 For those comfortable with the command-line / terminal, we will walk you through using `dd`.
 
@@ -109,18 +127,22 @@ You will see one disk, in this case `/dev/sdb`, that is roughly the size of the 
 Next, locate the downloaded ISO. It will most likely be in your Downloads folder. In the event that it is, type: `cd ~/Downloads`
 
 If it is **not** in your Downloads folder, use `cd` to navigate to the correct directory.
+
 :::danger
+
 This is where we overwrite the contents of your USB drive so please ensure you identified the correct drive in the `lsblk` stage above. Selecting the wrong drive here will lead to its contents being overwritten. An example command is below, however you may need to replace `sdb` with the drive we located above:
+
 :::
+
 ```bash
 sudo dd if=Solus-4.4-Budgie.iso of=/dev/sdb bs=4M status=progress oflag=sync && sudo eject /dev/sdb
 ```
 
-This will write the contents of the ISO to the thumb drive so you can boot it and also make sure the data is synchronised so you can eject the USB safely.
+This will write the contents of the ISO to the thumb drive so you can boot it and also make sure the data is synchronized so you can eject the USB safely.
 
-## Windows
+### Windows
 
-### DVD
+#### DVD
 
 You can easily burn an ISO image to a DVD, on Windows 7 and newer, by using Window's built-in file manager (Explorer).
 
@@ -129,7 +151,7 @@ You can easily burn an ISO image to a DVD, on Windows 7 and newer, by using Wind
 3. Select the correct disc burner.
 4. Click "Burn".
 
-### USB
+#### USB
 
 You can easily burn an ISO image to a USB by using graphical tool [Rufus](https://rufus.ie/).
 
@@ -141,9 +163,9 @@ You can easily burn an ISO image to a USB by using graphical tool [Rufus](https:
 
 ![Rufus](rufus.jpg)
 
-## macOS
+### macOS
 
-### DVD
+#### DVD
 
 Since OS X El Capitan (10.11), the easiest way to burn a DVD is:
 
@@ -154,9 +176,9 @@ Since OS X El Capitan (10.11), the easiest way to burn a DVD is:
 
 ![macOS Burn DVD](mac-burn-dvd.jpg)
 
-### USB
+#### USB
 
-#### Graphical Tool
+##### Graphical tool
 
 One of the easiest ways to burn an ISO image to a USB thumb drive is by using a graphical tool called [Etcher](https://etcher.balena.io/).
 
@@ -171,7 +193,7 @@ You may see a message stating “The disk you inserted was not readable by this 
 
 ![macOS Etcher](mac-etcher.jpg)
 
-#### Command-Line
+##### Command-line
 
 For those comfortable with the macOS Terminal app, we will walk you through using `dd`.
 
@@ -213,9 +235,13 @@ Now navigate to the folder that has the downloaded ISO. This could be your Mac�
 ```bash
 cd ~/Downloads
 ```
+
 :::danger
+
 **This next step is dangerous. Using the wrong drive identifier could result in data loss.**
+
 :::
+
 We will use the `dd` command to write the contents of the ISO to the thumb drive. Replace `IDENTIFIER` in the command below with your drive identifier. Note the extra `r` before the identifier (i.e `rdisk1`). This is for raw mode, which along with bs=1m, makes the transfer faster.
 
 ```bash
@@ -228,9 +254,7 @@ Be patient! After a few minutes you’ll receive a message saying how much data 
 diskutil eject /dev/IDENTIFIER
 ```
 
----
-
-## Boot the Media
+## Boot the media
 
 Now it is time to restart your computer to boot the DVD or USB. Most computers will automatically boot from DVDs and USB, however if you experience issues booting the media, you may need to select to boot from DVD or USB.
 
