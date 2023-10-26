@@ -11,6 +11,7 @@ After building a package, it must be tested against the unstable repo before a p
 You will use the .eopkg file(s) created by the build process for testing.
 
 ## Install the `.eopkg` Files
+
 To install your new package, run the following command in the directory where you built the package. Include **all** `.eopkg` files that were built.
 
 ```bash
@@ -38,4 +39,3 @@ To remove these files, run:
 ```bash
 go-task clean
 ```
-

@@ -21,11 +21,11 @@ Once the file has been copied, you can edit it with your text editor of choice.
 
 Most keys in the config you'll probably want to leave untouched. However, some are useful to know about:
 
-| Key               | Description                                                  | Values        |
-| -------------------------------------------------------------------------------- | ------------- |
-| generateDebug     | Whether or not debug symbol subpackages will be generated    | True / False  |
-| jobs              | How many building jobs to use when compiling the source      | auto / number |
-| retry_attempts    | How many times to retry downloading a package during install | number        |
+| Key            | Description                                                  | Values        |
+| -------------- | ------------------------------------------------------------ | ------------- |
+| generateDebug  | Whether or not debug symbol subpackages will be generated    | True / False  |
+| jobs           | How many building jobs to use when compiling the source      | auto / number |
+| retry_attempts | How many times to retry downloading a package during install | number        |
 
 ## Restoring defaults
 

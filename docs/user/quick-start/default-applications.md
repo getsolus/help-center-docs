@@ -46,7 +46,6 @@ Each Linux desktop environment has its own graphical application for managing fi
 
 ![Dolphin Screenshot](default-applications/dolphin.jpg)
 
-
 # Office Suite
 
 Solus comes pre-installed with [LibreOffice](https://libreoffice.org), an office suite that is capable of replacing Microsoft<sup>TM</sup> Office for the most common tasks.
@@ -142,4 +141,3 @@ Finnish language support is provided by installing `libreoffice-voikko`. After i
 ## Haruna
 
 ![Haruna Screenshot](default-applications/haruna.jpg)
-

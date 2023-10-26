@@ -22,6 +22,7 @@ Switch to the directory containing the `nano` recipe:
 ```bash
 cd packages/n/nano
 ```
+
 Alternatively, if you've set up the [Monorepo Helper Functions](docs/packaging/prepare-for-packaging#set-up-monorepo-helper-functions-optional) you can replace the above to steps by these simple commands:
 
 ```bash

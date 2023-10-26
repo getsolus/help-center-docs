@@ -25,7 +25,9 @@ Please check the following:
 
 1. [Update your development environment](update-dev-environment.md)
 2. Prepare the package directory and build the package
-  * For a new package that does not yet exist in the repos see [Creating a New Package](creating-a-new-package.md)
-  * For updating a package that already is in the repos see [Updating an Existing Package](updating-an-existing-package.md)
+
+- For a new package that does not yet exist in the repos see [Creating a New Package](creating-a-new-package.md)
+- For updating a package that already is in the repos see [Updating an Existing Package](updating-an-existing-package.md)
+
 3. [Test the Package](testing-a-package.md)
 4. [Submit a Pull Request for Review](submitting-a-pull-request.md)

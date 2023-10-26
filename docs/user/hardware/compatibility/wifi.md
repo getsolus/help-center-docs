@@ -57,7 +57,6 @@ This list should not suggest that _only_- such devices listed below are compatib
 - Ralink RT5390
 - Ralink RT3070
 
-
 ## Realtek
 
 - Realtek RTL8101E/RTL8102E

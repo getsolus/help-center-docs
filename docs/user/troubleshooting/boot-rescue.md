@@ -43,7 +43,7 @@ Whether you're using GRUB or UEFI, you will need to mount your Solus root (`/`) 
 1. First we need to be the root user. Type: `sudo su`
 2. Next we make a directory where we will mount our local Solus system: `mkdir /target`
 3. Now, using `lsblk`, determine the partition of the Solus system. We recommend checking the size of the partition listed and if it matches the size of your Solus install, use that. It will likely be something along the lines of `sda#` or `sdb#`. For NVME drives, the name will look like `nvme0n1px`
-  Note: If you see "lvm" as the type, the system has LVM partitions. See the next section for how to mount them.
+   Note: If you see "lvm" as the type, the system has LVM partitions. See the next section for how to mount them.
 4. If your root partition is of type sdX / nvme0n1x, replace the "sdX#" in the following command with the partition and mount to the target directory we created: `mount /dev/sdX# /target`
 
 #### Encrypted Systems / LVM Systems
@@ -53,7 +53,7 @@ If you use LUKS-based encryption, the process will involve decrypting your LUKS 
 
 1. If the disk is encrypted, decrypt it by running `cryptsetup luksOpen /dev/sdX# decrypted`, replacing `X#` with the partition you identified, and enter your password when prompted.
 2. Next check the output of `lsblk`. This will show you any LVM volumes. You should now see `SolusSystem-Swap` and `SolusSystem-Root`.
-  For non-encrypted volumes, you may see something like this. In this example, `SolusSystem-Swap` and `SolusSystem-Root` are under "sda2":
+   For non-encrypted volumes, you may see something like this. In this example, `SolusSystem-Swap` and `SolusSystem-Root` are under "sda2":
 
 ```bash
 NAME                   MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINT
@@ -69,7 +69,7 @@ sda                  252:0    0   96G  0 disk
 ...
 ```
 
-  For decrypted volumes, the output should look similar to this, with `SolusSystem-Swap` and `SolusSystem-Root` being under "decrypted":
+For decrypted volumes, the output should look similar to this, with `SolusSystem-Swap` and `SolusSystem-Root` being under "decrypted":
 
 ```bash
 NAME                   MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINT
@@ -95,6 +95,7 @@ sdb                      8:16   1   7.3G  0 disk
 If your system uses UEFI as opposed to GRUB, you will also need to mount your EFI System Partition, otherwise referred to as ESP. If you followed our [UEFI guide](/docs/user/quick-start/installation/disks#uefi) during installation of Solus, then in all likelihood your ESP will be about 500mb in size. If you're unsure of the partition, run the following, replacing X with the same letter during your mounting of your root file system, minus the number:
 
 For HDD / SDD drives:
+
 ```bash
 fdisk -o Device,Size,Type -l /dev/sdX
 ```
@@ -157,7 +158,7 @@ In the event you had an incomplete upgrade, try the following commands:
 1. `sudo eopkg rebuild-db`
 2. `sudo eopkg up`
 3. `sudo eopkg check | grep Broken | awk '{print $4}' | xargs sudo eopkg it --reinstall`
-  If you see output that starts with "Usage", this means the system has no broken packages.
+   If you see output that starts with "Usage", this means the system has no broken packages.
 4. Try reverting the latest package transaction (this should only be done if the first two steps, followed by the "Re-run System-Wide Configuration Triggers", failed to produce a successful bootup). See [our documentation on history and rollback](/docs/user/package-management/history-and-rollback) for more information, followed by re-applying your updates by running `sudo eopkg up`.
 
 ### Correcting disks
