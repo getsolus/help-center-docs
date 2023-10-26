@@ -48,7 +48,7 @@ sha256sum -c Solus-4.4-Budgie.iso.sha256sum | grep OK
 
 On Windows, first install [gpg4win](https://www.gpg4win.org/).
 
-Now you can run the same `gpg` commands from the the _Verify SHA256SUMS file signature_ section above.
+Now you can run the same `gpg` commands from the the [_Verifyng the SHA256SUMS file signature_](/docs/user/quick-start/installation/index.md#verifying-the-sha256sums-file-signature) section above.
 
 #### Verifying the ISO checksum
 
