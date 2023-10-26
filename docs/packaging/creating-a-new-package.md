@@ -10,7 +10,7 @@ This page will take you through the steps required to build a new package for th
 
 :::note
 
-**Please [look to see if an issue has been filed](https://github.com/getsolus/packages/issues?q=label%3A%22Package+Request%22) and *accepted* for the software or library you intend to package**. If there is an existing request, please add a link to it in your pull request. Ex:
+**Please [look to see if an issue has been filed](https://github.com/getsolus/packages/issues?q=label%3A%22Package+Request%22) and _accepted_ for the software or library you intend to package**. If there is an existing request, please add a link to it in your pull request. Ex:
 
 ```
 This PR resolves software request https://github.com/getsolus/packages/issues/123

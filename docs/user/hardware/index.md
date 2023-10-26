@@ -54,14 +54,14 @@ If there are proprietary drivers that can be installed, they will show up in the
 
 ### Supported Drivers
 
-| Vendor      | Drivers                     |
-| ----------- | --------------------------- |
-| Asus        | piper                       |
-| Broadcom    | broadcom-sta                |
-| Logitech    | piper                       |
-| Nvidia      | 470, Main Series            |
-| Razer       | openrazer                   |
-| Roccat      | piper                       |
-| SteelSeries | piper                       |
-| VMWare      | open-vm-tools               |
-| XBox        | xone                        |
+| Vendor      | Drivers          |
+| ----------- | ---------------- |
+| Asus        | piper            |
+| Broadcom    | broadcom-sta     |
+| Logitech    | piper            |
+| Nvidia      | 470, Main Series |
+| Razer       | openrazer        |
+| Roccat      | piper            |
+| SteelSeries | piper            |
+| VMWare      | open-vm-tools    |
+| XBox        | xone             |

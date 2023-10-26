@@ -11,9 +11,9 @@
 - You may view the forum without providing personal data
 - Cookies are used to store login information
 - We collect personal information when you register for an account:
-  - *Username* and (optional) *password* for account identification and authorization.
-  - *Email address* for account recovery and notifications.
-  - (optional) *Third party login information* to allow signing in using an SSO provider like *GitHub*.
+  - _Username_ and (optional) _password_ for account identification and authorization.
+  - _Email address_ for account recovery and notifications.
+  - (optional) _Third party login information_ to allow signing in using an SSO provider like _GitHub_.
   - This information will be retained and processed to authenticate logins. The information will be retained until you delete your account.
 
 ### Third Party Hosts
@@ -34,8 +34,7 @@ Solus cannot control how data is collected and processed on the third party host
 #### Matrix
 
 - The Solus matrix rooms are hosted by the Matrix.org homeserver
-- [Matrix.org Homeserver Privacy Notice](https://matrix.org/legal/privacy-notice) 
-
+- [Matrix.org Homeserver Privacy Notice](https://matrix.org/legal/privacy-notice)
 
 ## Your rights under the GDPR
 
@@ -44,4 +43,3 @@ If you are covered by the [GDPR](https://gdpr.eu/) you have rights as a data sub
 ## Privacy Contact
 
 Any concerns or requests about personal data should be sent to [privacy@getsol.us](mailto:privacy@getsol.us)
-

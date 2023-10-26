@@ -94,10 +94,12 @@ All new packages or updates to packages should abide by the [SPDX 3.x](https://s
 
 :::note
 Build dependencies should be ordered according to the following rules in `package.yml`:
+
 1. `pkgconfig` dependencies before explicitly named dependencies
 2. Each of these two groups in so-called ASCIIbetical order (that is, alphabetical order with all uppercase letters before lowercase letters, and digits/punctuation before letters, [see here](https://en.wikipedia.org/wiki/ASCII#Character_order))
 
 Example:
+
 <!-- prettier-ignore -->
 ```yaml
 builddeps  :
@@ -113,6 +115,7 @@ builddeps  :
     - python-poetry
     - swig
 ```
+
 :::
 
 ### Background

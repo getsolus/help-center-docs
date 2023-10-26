@@ -15,7 +15,7 @@ To learn more about the Plasma desktop and KDE, refer to the following pages:
 - [https://kde.org/announcements/](https://kde.org/announcements/)
 - [https://kde.org/support/](https://kde.org/support/)
 
-***
+---
 
 [Configuration](configuration)
 

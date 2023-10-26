@@ -16,6 +16,7 @@ Solus provides multiple web servers for local testing of web applications.
 :::
 
 ## Caddy
+
 Caddy is installed with a default configuration that you can customize as needed.
 
 ### Installation
@@ -28,7 +29,7 @@ sudo eopkg install caddy
 
 ### Configuration
 
-You can configure Caddy using a _Caddyfile_, a text file that contains configuration directives. The default Caddyfile is located at `/usr/share/caddy/Caddyfile`. 
+You can configure Caddy using a _Caddyfile_, a text file that contains configuration directives. The default Caddyfile is located at `/usr/share/caddy/Caddyfile`.
 
 To reload Caddy with a new configuration file, use the following command:
 
@@ -42,8 +43,8 @@ For more information, see the Caddy documentation at [https://caddyserver.com/do
 
 You can use the following commands to manage Caddy:
 
-* Enable Caddy on startup and start immediately after enabling: `sudo systemctl enable --now caddy`
-* Stop Caddy: `sudo systemctl stop caddy`
+- Enable Caddy on startup and start immediately after enabling: `sudo systemctl enable --now caddy`
+- Stop Caddy: `sudo systemctl stop caddy`
 
 ## httpd (Apache)
 
@@ -60,6 +61,7 @@ sudo eopkg install httpd
 ### Usage
 
 #### Configuration and DocumentRoot
+
 The default configuration files for Apache are located in the `/usr/share/defaults/httpd/` directory. To override the default configuration, create a new file with the `.conf` extension in the `/etc/httpd/conf.d` directory.
 
 :::caution Important
@@ -85,6 +87,7 @@ SetHandler "proxy:fcgi://127.0.0.1:9000"
 DirectoryIndex index.php index.html
 </IfModule>
 ```
+
 3. Execute the following command: `sudo systemctl restart httpd && sudo systemctl restart php-fpm`
 
 #### Management
@@ -123,5 +126,5 @@ To revert back to the original settings, delete the `/etc/nginx/` folder.
 
 You can use the following commands to manage nginx:
 
-* Enable nginx on startup and start immediately after enabling: `sudo systemctl enable --now nginx`
-* Stop nginx: `sudo systemctl stop nginx`
+- Enable nginx on startup and start immediately after enabling: `sudo systemctl enable --now nginx`
+- Stop nginx: `sudo systemctl stop nginx`

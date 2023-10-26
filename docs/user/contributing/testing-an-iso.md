@@ -29,8 +29,8 @@ When testing, try to keep different types of users in mind. For instance, would 
 
 This functionality might be affected by the settings of the VM.
 
-- Copy and paste works from host to guest *before* install, while booted into the live ISO
-- Copy and paste works *after* installation and rebooting the VM
+- Copy and paste works from host to guest _before_ install, while booted into the live ISO
+- Copy and paste works _after_ installation and rebooting the VM
 
 ## For the specific release
 

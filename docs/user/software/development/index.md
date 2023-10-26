@@ -19,7 +19,7 @@ sudo eopkg install -c system.devel
 
 The `system.devel` component installs libraries and packages for software development, such as `clang`, `gcc`, and `make`.
 
-***
+---
 
 [**Android**](android)
 
