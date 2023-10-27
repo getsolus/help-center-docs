@@ -29,13 +29,13 @@ Improvements have been made to make it simple for contributors to test fixes out
 
 Note that you will need both the regular package and the `-devel` package if you want to build another package against them using `pkgconfig()` in the `package.yml file`.
 
-With the `.eopkg` files now present in the local repo, we can make use of them in solbuild by running `make local` rather than `make`. This will index the local repository and prioritise their use over what is available in the Solus unstable repository.
+With the `.eopkg` files now present in the local repo, we can make use of them in solbuild by running `go-task build-local` rather than just  `go-task`. This will index the local repository and prioritise their use over what is available in the Solus unstable repository.
 
 ## Best practices when working with a solbuild local repository
 
 There are some important things to know when working with local repositories, as they may lead to issues later on.
 
-- Solbuild will use your version of a package from the local repo regardless of whether there's a higher release in the Solus repository. Therefore you should only use `make local` when required and also remove old packages from the local repo when no longer needed.
+- Solbuild will use your version of a package from the local repo regardless of whether there's a higher release in the Solus repository. Therefore you should only use `go-task build-local` when required and also remove old packages from the local repo when no longer needed.
 - If the package is already installed in the solbuild image, the release must be higher for it to be installed.
 
 ## Eopkg and local repositories
