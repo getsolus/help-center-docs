@@ -13,7 +13,7 @@ Solus makes available other shells via our repository, with a full list availabl
 
 - [Dash](http://gondor.apana.org.au/~herbert/dash/)
 - [Fish](https://fishshell.com/)
-- [Zsh](http://zsh.sourceforge.net/)
+- [Zsh](http://zsh.sourceforge.io/)
 
 ### Installation
 

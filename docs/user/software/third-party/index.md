@@ -9,7 +9,7 @@ The following applications are provided via our 3rd Party Repository to facilita
 
 Alongside the following commands, you may also find some of these applications via the Third Party section on our Software Center.
 
-If these instructions fail to work please [file an issue](https://github.com/getsolus/3rd-Party). To upgrade once installed simply run the commands again. If there is a new version it will be installed.
+If these instructions fail to work please [file an issue](https://github.com/getsolus/3rd-party/issues). To upgrade once installed simply run the commands again. If there is a new version it will be installed.
 
 ## Browsers
 

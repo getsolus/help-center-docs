@@ -9,13 +9,13 @@ Each version of Solus comes with a pre-installed collection of desktop applicati
 
 # Web Browser
 
-Solus comes pre-installed with Firefox, a secure and trustworthy web browser provided by the non-profit organization [Mozilla](https://www.mozilla.org-US/).
+Solus comes pre-installed with Firefox, a secure and trustworthy web browser provided by the non-profit organization [Mozilla](https://www.mozilla.org/).
 
 ![Firefox Screenshot](default-applications/firefox.jpg)
 
 # Email Client
 
-Solus comes pre-installed with the powerful [Thunderbird](https://www.mozilla.org-US/thunderbird/) email, newsgroup, and feeds client.
+Solus comes pre-installed with the powerful [Thunderbird](https://www.mozilla.org/thunderbird/) email, newsgroup, and feeds client.
 
 ![Thunderbird Screenshot](default-applications/thunderbird.jpg)
 
@@ -48,7 +48,7 @@ Each Linux desktop environment has its own graphical application for managing fi
 
 # Office Suite
 
-Solus comes pre-installed with [LibreOffice](https://libreoffice.org), an office suite that is capable of replacing Microsoft<sup>TM</sup> Office for the most common tasks.
+Solus comes pre-installed with [LibreOffice](https://www.libreoffice.org), an office suite that is capable of replacing Microsoft<sup>TM</sup> Office for the most common tasks.
 
 By default, Solus provides Writer (document editor), Calc (spreadsheet editor), and Impress (presentation editor). Other applications such as Math or Draw can be installed from the Software Center.
 

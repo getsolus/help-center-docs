@@ -19,7 +19,7 @@ We assume you have worked through the [packaging](/docs/packaging) material for 
 sudo eopkg install solbuild-config-local-unstable
 ```
 
-You will also need to ensure that your common directory is fully up to date. Run `git pull` from within the common directory to receive the latest updates.
+You will also need to ensure that your repository is fully up to date. See [Update Your Development Environment](/docs/packaging/update-dev-environment.md)
 
 ## Utilising the local repository
 
@@ -29,7 +29,7 @@ Improvements have been made to make it simple for contributors to test fixes out
 
 Note that you will need both the regular package and the `-devel` package if you want to build another package against them using `pkgconfig()` in the `package.yml file`.
 
-With the `.eopkg` files now present in the local repo, we can make use of them in solbuild by running `go-task build-local` rather than just  `go-task`. This will index the local repository and prioritise their use over what is available in the Solus unstable repository.
+With the `.eopkg` files now present in the local repo, we can make use of them in solbuild by running `go-task build-local` rather than just `go-task`. This will index the local repository and prioritise their use over what is available in the Solus unstable repository.
 
 ## Best practices when working with a solbuild local repository
 
@@ -52,7 +52,9 @@ As mentioned earlier, the local solbuild repo installed by the `solbuild-config-
 
 To generate or refresh the eopkg index in `/var/lib/solbuild/local`, simply run:
 
-`sudo eopkg index --skip-signing /var/lib/solbuild/local/ --output /var/lib/solbuild/local/eopkg-index.xml`
+```bash
+sudo eopkg index --skip-signing /var/lib/solbuild/local/ --output /var/lib/solbuild/local/eopkg-index.xml
+```
 
 ### A note on package resolution priority
 
@@ -77,7 +79,7 @@ Solus [active]
 
 Now the repositories need to be added to account for the desired dependency resolution order:
 
-```
+```bash
 sudo eopkg ar Local /var/lib/solbuild/local/eopkg-index.xml.xz
 sudo eopkg ar Solus https://cdn.getsol.us/repo/unstable/eopkg-index.xml.xz
 ```
