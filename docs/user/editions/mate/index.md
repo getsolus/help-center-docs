@@ -5,6 +5,12 @@ summary: A quick introduction to the MATE Edition of Solus
 
 # MATE Desktop
 
+:::caution
+
+We plan to deprecate the MATE Desktop, we will instead ship an edition with Xfce in the near future. See the Solus 4.4 blog post [here](https://getsol.us/2023/07/08/solus-4-4-released/)
+
+:::
+
 MATE Desktop is provided by the MATE Edition of Solus. They describe it as:
 
 > The MATE Desktop Environment is the continuation of GNOME 2. It provides an intuitive and attractive desktop environment using traditional metaphors for Linux and other Unix-like operating systems.
