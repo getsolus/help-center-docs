@@ -124,12 +124,15 @@ In order to support user-managed (as opposed to system-managed) shares, Samba pr
 
 ### GUI - configuring shares via file manager plugins
 
-The default Solus configuration was written with the `nautilus-share` (Budgie/GNOME), `kdenetwork-filesharing` (KDE) and `caja-share` (MATE) file manager plugins in mind. These plugins allow the user to share folders in an easy and convenient way.
+The default Solus configuration was written with the `nemo-share` (Budgie), `nautilus-share` (GNOME), `kdenetwork-filesharing` (KDE) and `caja-share` (MATE) file manager plugins in mind. These plugins allow the user to share folders in an easy and convenient way.
 
-All the user needs to do is to install either the `caja-extensions` package (which includes the `caja-share` plugin), the `kdenetwork-filesharing` package or the `nautilus-share` package from the Software Center and enable the relevant Samba services.
+All you need to do is to install either the `caja-extensions` package (which includes the `caja-share` plugin), the `kdenetwork-filesharing` package, the `nautilus-share` package or the `nemo-share` package from the Software Center and enable the relevant Samba services.
 
 ```bash
-# Budgie/GNOME
+# Budgie
+sudo eopkg install nemo-share
+
+#GNOME
 sudo eopkg install nautilus-share
 
 # KDE
@@ -139,13 +142,9 @@ sudo eopkg install kdenetwork-filesharing
 sudo eopkg install caja-extensions
 ```
 
-In order to load the newly installed file manager plugin, the user will need to log out of the current desktop session and log back in to a new desktop session, at which point the plugin in question will be ready for use. To enable shares from any drive and folder on your System you will need add the following parameter to /etc/samba/smb.conf:
+In order to load the newly installed file manager plugin, you will need to log out of the current desktop session and log back in to a new desktop session, at which point the plugin in question will be ready for use.
 
-```
-usershare owner only = false
-```
-
-Afterwards simply right-clicking a folder and clicking _properties_ will now show an option to share it, as well as whether to allow Read/Write permissions to your users or guest access.
+Afterwards, simply right-clicking a folder and clicking _properties_ will now show an option to share it, as well as whether to allow Read/Write permissions to your users or guest access.
 
 ### CLI - using the net usershare command
 
