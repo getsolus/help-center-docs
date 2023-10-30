@@ -29,6 +29,12 @@ sudo eopkg install gdm gnome-shell gnome-desktop-branding
 
 ## MATE
 
+:::caution
+
+We plan to deprecate the MATE Desktop, we will instead ship an edition with Xfce in the near future. See the Solus 4.4 blog post [here](https://getsol.us/2023/07/08/solus-4-4-released/)
+
+:::
+
 Solus offers the MATE desktop environment / experience, tailored to advanced users and older hardware, as well as shipping with our modern menu called [Brisk Menu](https://github.com/getsolus/brisk-menu). If you have installed either our Budgie or GNOME editions, you can try out and install MATE by running the following command:
 
 ```bash
