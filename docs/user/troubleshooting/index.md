@@ -31,6 +31,19 @@ To run database recovery, run `sudo eopkg rdb` in the terminal and then updates 
 
 ## Updated system and having issues
 
+### Broken UI with Chromium applications
+
+There is an [upstream bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1442633) with Chromium that causes it to try to use an invalid shader cache instead of rebuilding it, crashing the GPU process. The issue is now fixed in Chromium, but it may take some time for applications to update their Chromium version.
+
+To fix applications exhibiting this problem, run these commands to remove the shader cache:
+
+```bash
+find ~/.cache -name GPUCache -exec rm -rv {} +
+find ~/.config -name GPUCache -exec rm -rv {} +
+```
+
+And restart the application.
+
 ### Boot into previous kernel
 
 `clr-boot-manager` by default retains the latest installed kernel, plus the currently running kernel. This means that when you receive a kernel update, there are two kernels to boot into. Sometimes there are regressions that occur in the kernel, so you are able to boot into the previous kernel if the update has caused any hardware issues (for example failing to suspend when it worked previously). When booting via EFI, the boot menu can be shown by hitting space (repeatedly) during boot.
