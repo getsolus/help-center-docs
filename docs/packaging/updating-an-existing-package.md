@@ -113,6 +113,14 @@ Enhancements:
 Full release notes:
 
 - [1.2.3](https://github.com/foo/foo/releases/tag/v1.2.3)
+
+**Test Plan**
+
+<!-- Short description of how the package was tested -->
+
+**Checklist**
+
+- [ ] Package was built and tested against unstable
 ```
 
 For more information on suitable commit messages, please check the [tooling central documentation](https://github.com/solus-project/tooling-central/blob/master/README.rst#using-git).
