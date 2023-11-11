@@ -66,6 +66,7 @@ Not all fields in `package.yml` are mandatory, but a small selection are. Below 
 | Key Name        | Type        | Description                                                                                                                                                |
 | --------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **clang**       | `bool`      | Set to `yes` if this package benefits from being built with Clang.                                                                                         |
+| **avx2**        | `bool`      | Set to `yes` if this package benefits from being built with x64-64-v3                                                                                      |
 | **extract**     | `bool`      | Set to `no` to disable automatic source extraction.                                                                                                        |
 | **autodep**     | `bool`      | Set to `no` to disable automatic binary dependency resolution at build time.                                                                               |
 | **emul32**      | `bool`      | Set to `yes` to enable an `-m32` build (32-bit libs).                                                                                                      |
@@ -95,17 +96,23 @@ The packaging steps are all considered optional, however the absence of the `ins
 
 One or more optimize values can be specified in a list with the `optimize` key in the `package.yml` file. Several values can override or conflict with each other and should be used only where they provide a performance benefit, or fix a bug in the package or build.
 
-| Optimize Value   | Description                                                                         |
-| ---------------- | ----------------------------------------------------------------------------------- |
-| **speed**        | Optimises the package for performance `-O3` plus other flags.                       |
-| **size**         | Optimises the package build to minimize size `-Os`. Not supported with clang.       |
-| **no-bind-now**  | Configures the package to disable certain flags, where RELRO is unsupported.        |
-| **no-symbolic**  | Disables `-Wl,-Bsymbolic-functions` linker flag.                                    |
-| **unroll-loops** | Enables `-funroll-loops`. Use this sparingly, only when it provides proven benefit. |
-| **runpath**      | Enables `-Wl,--enable-new-dtags` to make linker use RUNPATH's instead of RPATH's.   |
-| **avx256**       | Disables `-mprefer-vector-width=128` in avx2 builds.                                |
-| **thin-lto**     | Enables Thin Link Time Optimization `-flto=thin` with a supported linker.           |
-| **lto**          | Enables Link Time Optimization `-flto`.                                             |
+| Optimize Value                  | Description                                                                                                                                       |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **speed**                       | Optimises the package for performance `-O3` plus other flags.                                                                                     |
+| **size**                        | Optimises the package build to minimize size `-Os`. Not supported with clang.                                                                     |
+| **no-bind-now**                 | Configures the package to disable certain flags, where RELRO is unsupported.                                                                      |
+| **no-symbolic**                 | Disables `-Wl,-Bsymbolic-functions` linker flag.                                                                                                  |
+| **unroll-loops**                | Enables `-funroll-loops`. Use this sparingly, only when it provides proven benefit.                                                               |
+| **runpath**                     | Enables `-Wl,--enable-new-dtags` to make linker use RUNPATH's instead of RPATH's.                                                                 |
+| **avx256**                      | Disables `-mprefer-vector-width=128` in avx2 builds.                                                                                              |
+| **thin-lto**                    | Enables Thin Link Time Optimization `-flto=thin` with a supported linker.                                                                         |
+| **lto**                         | Enables Link Time Optimization `-flto`.                                                                                                           |
+| **icf-safe**                    | Enables safe Identical Cold Folding `--icf=safe`. `function-sections` is recommended when not using clang. Uses gold linker when not using clang. |
+| **icf-all**                     | Enables Identical Cold Folding `--icf=all`. `function-sections` is recommended when not using clang. Uses gold linker when not using clang.       |
+| **polly**                       | Enables polyhedral optimizations for the clang toolchain.                                                                                         |
+| **function-sections**           | Generate a seperate ELF section for each function. Recommended with ICF when not using clang.                                                     |
+| **no-reorder-blocks-partition** | Disables block partition reordering with the gcc toolchain. Provided to facilitate BOLT'ed binaries/libraries.                                    |
+| **emit-relocs**                 | Instructs the linker to emit relocations. Provided to facilitate BOLT'ed binaries/libraries.                                                      |
 
 ## Macros
 
@@ -197,6 +204,16 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 | **%waf_build**     | Runs `waf` and passes our `%JOBS%` variable.                                   |
 | **%waf_install**   | Runs `waf install` and passes the appropriate `destdir` and `%JOBS%` variable. |
 
+### BOLT Actionable Macros
+
+BOLT is a post-link optimizer developed to speed up large applications. You will need to run a workload after instrumenting a binary or library. Think of it as post-link profile guided optimization.
+
+| Macro              | Description                                                                                                                                             |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **%bolt_instr**    | Instrument a binary or library with llvm-bolt. Requires it to be built with `emit-relocs`, as well as `no-reorder-blocks-partition` if not using clang. |
+| **%bolt_merge**    | Merge fdata profiles into a single file after running a workload with a BOLT instrumented binary.                                                       |
+| **%bolt_opt**      | Optimize a binary using BOLT after running `%bolt_merge`.                                                                                               |
+
 ### Variable Macros
 
 | Macro             | Description                                                                                                                                       |
@@ -221,18 +238,21 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 
 A set of variables are exported in our build stages. These are used to provide context and structure to the scripts.
 
-| Variable         | Description                                                                                      |
-| ---------------- | ------------------------------------------------------------------------------------------------ |
-| **$CFLAGS**      | cflags as set in `eopkg.conf`.                                                                   |
-| **$CXXFLAGS**    | cxxflags as set in `eopkg.conf`.                                                                 |
-| **$LDFLAGS**     | ldflags as set in `eopkg.conf`.                                                                  |
-| **$CC**          | C compiler.                                                                                      |
-| **$CXX**         | C++ compiler.                                                                                    |
-| **$EMUL32BUILD** | Set only when compiling in `emul32` mode.                                                        |
-| **$installdir**  | The install directory, i.e. where files are installed to for packaging.                          |
-| **$pkgfiles**    | Refers to the `./files` directory relative to the `package.yml` file.                            |
-| **$sources**     | Refers to the directory where your source files are stored, for example, `$sources/nano.tar.gz`. |
-| **$workdir**     | The work, or source, directory of the package build.                                             |
+| Variable           | Description                                                                                      |
+| ----------------   | ------------------------------------------------------------------------------------------------ |
+| **$CFLAGS**        | cflags as set in `eopkg.conf`.                                                                   |
+| **$CXXFLAGS**      | cxxflags as set in `eopkg.conf`.                                                                 |
+| **$LDFLAGS**       | ldflags as set in `eopkg.conf`.                                                                  |
+| **$CC**            | C compiler.                                                                                      |
+| **$CXX**           | C++ compiler.                                                                                    |
+| **$EMUL32BUILD**   | Set only when compiling in `emul32` mode.                                                        |
+| **$AVX2BUILD**     | Set only when compiling in `avx2` mode.                                                          |
+| **$PGO_GEN_BUILD** | Set during the instrumentation phase of a PGO build.                                             |
+| **$PGO_USE_BUILD** | Set during the use phase of a PGO build.                                                         |
+| **$installdir**    | The install directory, i.e. where files are installed to for packaging.                          |
+| **$pkgfiles**      | Refers to the `./files` directory relative to the `package.yml` file.                            |
+| **$sources**       | Refers to the directory where your source files are stored, for example, `$sources/nano.tar.gz`. |
+| **$workdir**       | The work, or source, directory of the package build.                                             |
 
 ## Types
 
