@@ -31,6 +31,11 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 ### September
 
+#### Switch to asterisk bolding for PR template
+
+- The initial PR template for the `packages` repository used markdown header styling (`## Heading text`), but `solus-sc` does not render that styling, so the template was changed to asterisk bolding (`**Heading text**`)
+- https://github.com/getsolus/packages/pull/366
+
 #### Switching From `make` to `go-task`
 
 - All packaging actions are now handled by `go-task` rather than `make`.
