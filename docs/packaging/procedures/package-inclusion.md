@@ -11,7 +11,7 @@ This policy sets forth the criteria for a package to be accepted for inclusion i
 
 ### Explicitly Redistributable
 
-- Software under a free software or open source software license, or license text which explicitly states that it is **permissible** to redistribute the software.
+- Software under a free software or open source software license, or license text which explicitly states that it is **permissible** to redistribute the software. We use the [SPDX License List](https://spdx.org/licenses/).
 - For anything that cannot be redistributed by Solus, there is the possibility for them to be provided as a Flatpak, for Third Party repository inclusion, however the Solus project is not responsible for flatpak or snap implementation of these items. These items should then fetch only at installation time, and not contain non distributable components.
 - Solus supports both VCS (currently only git, this will expand) and traditional software sources (such as tarballs) for packages, equally.
 - Unless **absolutely unavoidable**, the sources for a package should be source, and not **binary, prebuilt** sources. Exceptions may be made in rare cases, such as stage1 bootstrap for a compiler, or requires custom components otherwise impossible to provide in Solus (patched libraries, etc.)
