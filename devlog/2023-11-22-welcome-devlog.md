@@ -1,0 +1,28 @@
+---
+title: Welcome to the Solus Devlog
+description: Welcome to the Solus Development Log.
+slug: welcome-solus-devlog-v1
+authors:
+  - name: Joey Riches
+    title: Solus Staff
+    url: https://github.com/joebonrichie
+    image_url: https://avatars.githubusercontent.com/u/5338090?s=400&u=f77ed45c7e83814ce3e8bd199fc293bd5b53682b&v=4
+tags: [hello, devlog, firstpost, solus]
+hide_table_of_contents: false
+---
+
+Welcome to the Solus Development Log.
+
+The Solus Development Log will be used by Solus Staff and outside contributors going forward to hightlight wins and changes in Solus. Keep an eye on this space.
+
+<!-- truncate -->
+
+The Solus DevLog has been setup to facilitate helping communicate with the outside world; wins, signficant changes as well as challenges within Solus. Solus Staff and contributors are encouraged to use this space going forward.
+
+The DevLog has been setup as a seperate entity to the [Solus Blog](https://getsol.us/blog/) to encourage more short form development content that doesn't require the same level of polish an official blog post will take.
+
+It is hoped that this will be used to help communicate what's going on in Solus such that our short-term and medium-term progress, goals and ambitions remain less of a black box to the outside world.
+
+Additionally, it is hoped it will help provide context to any of our murmurings for any users who keep an eye on the [getsolus](https://github.com/getsolus/) GitHub organization page and the [Solus](https://matrix.to/#/#solus:matrix.org) Matrix channels.
+
+Hope to see you back at this space soon with more content!
