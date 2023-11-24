@@ -30,18 +30,11 @@ git switch main
 git pull
 ```
 
-## Create a New Package Directory
+## Create a New Branch
 
-Create a new subdirectory for the new package. Use the package name as the directory name and create it in the appropriate prefix directory in `packages` (usually the first letter of the package).
+It's always a good idea to switch to a new git branch before beginning packaging work. This helps to separate your work from any new changes made to the package repository, which will allow you to more easily rebase any changes if needed. To do so run:
 
 ```bash
-mkdir packages/t/tree
-cd packages/t/tree
-```
-
-Now, create a new branch. This will allow you to more easily separate your work from any new changes made to the package repository, which will allow you to more easily rebase any changes if needed. To do so run:
-
-```
 git switch -c your-branch
 ```
 
@@ -53,7 +46,7 @@ You must add a file called `MAINTAINERS.md` using the template in [Maintainershi
 
 You will need a link to the most recent source tarball for this from the software's website.
 
-To create a skeleton `package.yml` file, use the the `go-task new` command.
+To create a skeleton `package.yml` file, use the `go-task new` command.
 
 This command takes two arguments, in the following order:
 
@@ -133,7 +126,12 @@ Understanding how to translate source code into a good `package.yml` file is the
 
 ## Build the Package
 
-Build the package with `go-task`.
+Build the package using `go-task`. The default task will build the package against the Unstable repository, so you don't have to specify a task here.
+
+```bash
+go-task
+```
+
 Once the build completes, your directory should now include the following files:
 
 ```text
@@ -150,11 +148,21 @@ Once your package has built successfully, you will need to [test it](testing-a-p
 
 ## Commit your Changes
 
-Check the [changes in your files](git-basics).
+Check the [changes in your files](git-basics#check-the-changes-in-your-files).
 
 [Add / remove files as necessary to the commit](git-basics.md). Then, **check your branch**.
 
-Run `git status`. Make sure all the files you changed are staged, and that there are no untracked files. When all is well, run `git commit`.
+Double-check that everything looks correct and all of the files have been staged before committing.
+
+```bash
+git status
+```
+
+If all looks well, commit your changes.
+
+```bash
+git commit
+```
 
 ### Commit message format for new packages
 

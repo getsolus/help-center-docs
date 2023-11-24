@@ -33,24 +33,41 @@ git pull
 
 ## Switch to a New Git Branch
 
-It's always a good idea to switch to a new git branch before beginning packaging work. This will allow you to more easily separate your work from any new changes made to the package repository, which will allow you to more easily rebase any changes if needed.
-Example:
+It's always a good idea to switch to a new git branch before beginning packaging work. This helps to separate your work from any new changes made to the package repository, which will allow you to more easily rebase any changes if needed. To do so run:
 
 ```bash
 git switch -c update_nano
 ```
 
-## Bumping a Package
+## Updating a Package
+
+There are two types of package updates: a package bump, and moving a package to a different version.
 
 Bumping a package is typically done when rebuilding against a changed dependency, such as `imagemagick` needing to be rebuilt if `libwebp` changes. It is also done if changes are being made to the package, such as adding new dependencies or other modifications which aren't a version update.
 
-This can be achieved by doing `go-task bump`, which increments the release number by 1.
+### Bumping a Package
 
-## Updating a Package
+Bumping can be achieved by running the `bump` task, which increments the release number by 1.
 
-To update the package to a newer version, use the `go-task update` command.
+```bash
+go-task bump
+```
 
-This command takes two arguments, in the following order:
+Check to make sure that the result is as expected.
+
+```bash
+git diff package.yml
+```
+
+:::note
+Certain packages with long descriptions might have their description messed up when this is run. Check if this happened, and fix it if necessary.
+:::
+
+### Using a Different Version
+
+To update the package to a newer version, use the `update` task.
+
+This task takes two arguments, in the following order:
 
 1. Version
 2. Source URL
@@ -69,7 +86,12 @@ There must be a file called `MAINTAINERS.md` using the template in [Maintainersh
 
 ## Build the package
 
-After bumping or updating the package, build it by running `go-task`.
+Build the package using `go-task`. The default task will build the package against the Unstable repository, so you don't have to specify a task here.
+
+```bash
+go-task
+```
+
 Once your package has built successfully, you will need to [test it](testing-a-package).
 
 ## Commit Your Changes
@@ -78,7 +100,17 @@ Check the [changes in your files](git-basics#check-the-changes-in-your-files).
 
 [Add / remove files as necessary to the commit](git-basics.md). Then, **check your branch**.
 
-Run `git status`. Make sure all the files you changed are staged, and that there are no untracked files. When all is well, run `git commit`.
+Double-check that everything looks correct and all of the files have been staged before committing.
+
+```bash
+git status
+```
+
+If all looks well, commit your changes.
+
+```bash
+git commit
+```
 
 ### Commit message format for updated / bumped packages
 
