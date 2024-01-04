@@ -5,11 +5,13 @@ summary: Guidance for writing Solus content
 
 # Solus style guide
 
-This page explains the style guides we try to follow when writing for Solus, mainly for the Help Center.
+Solus needs a style guide to give clarity to our contributors and a consistent experience for readers. But we don't want to write our own! We surveyed existing style guides, and we picked parts that were more suitable for our content.
 
-Solus needs a style guide to give clarity to our contributors and consistent experience for readers. But we don't want to write our own! We have surveyed the style guides written by other organizations and picked the parts we thought were valuable for Solus.
+:::note
 
-Remember that existing Help Center pages do not necessarily follow this guide; many pages were written before this page we wrote this guide.
+Existing help center topics might not follow our style guide yet.
+
+:::
 
 ## General writing style
 
@@ -28,42 +30,74 @@ If you are unsure of how to use a common linux term, refer to the [Glossary of t
 
 ## Specific guidance
 
-_In no particular order_
+_In alphabetical order, not order of importance._
 
-### Markdown formatting
+### Admonitions
 
-- Write content using [markdown formatting](https://www.markdownguide.org/cheat-sheet/), use [Prettier](https://prettier.io/) to enforce consistent formatting.
+This section is based on the [Red Hat supplementary style guide.](https://redhat-documentation.github.io/supplementary-style-guide/#admonitions).
 
-### Spelling
+Admonitions should draw the reader’s attention to certain information. Keep admonitions to a minimum, and avoid placing multiple admonitions close to one another. If multiple admonitions are necessary, restructure the information by moving the less-important statements into the flow of the main content. See the [Docusaurus documentation](https://docusaurus.io/docs/markdown-features/admonitions) to learn the correct syntax.
 
-- We prefer American spelling over British.
+| Type           | Description                                                                                                                                                                                                                               |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Note           | Additional guidance or advice that improves product configuration, performance, or supportability                                                                                                                                         |
+| Important      | Advisory information essential to the completion of a task or default configuration settings. Users must not disregard this information.                                                                                                  |
+| Warning/Danger | Information about potential system damage, data loss, or a support-related issue if the user disregards this admonition. <br> If available, offer information to avoid the problem in the future or state where to find more information. |
+| Tip            | Recommendations, suggestions, and alternative methods that might not be obvious. Tips are not essential to using the product.                                                                                                             |
+
+## Code blocks
+
+Code blocks must indicate the programming language of the code snippet.
+
+````md
+```js
+console.log("Hello, world!");
+```
+````
+
+### Commands
+
+- Commands as part of procedures must be inside code blocks with `bash` as the language type. This ensures users get a "copy to clipboard" button.
+- When needed, indicate the directory where users need to move before executing the command.
+
+  ````md
+  ```bash
+  cd  ~/path/to/directory
+  sudo somecommand
+  ```
+  ````
 
 ### Common Solus terms
 
 - Solus
   - Prefer _Solus_ rather than _Solus Project_. Don't use _Solus OS_ or _Solus Linux_.
-- Repo
-  - Don't use _repo_ as a short form of _repository_, except in the case of _monorepo_.
-  - Don't use _the repo(sitory)_  to mean _the packages repository_ or _the monorepo_. We have many repositories, be specific
+  - The names of the different editions of Solus are:
+    - Solus Budgie
+    - Solus GNOME
+    - Solus MATE
+    - Solus Plasma
+- Repositories
+  - Avoid using terms such as _repo_, or _monorepo_, use the specific repository name instead.
+  - Example: "The packages repository", instead of "The monorepo".
 - Dev Tracker
-  - _Dev Tracker_ should not be used.
+  - Avoid using the term _Dev Tracker_.
 
-### Commands, code examples, package names
+### Markdown formatting
 
-- Commands as part of a procedure (that user could copy directly) should be inside a code block, even if they are one line. This give's the user a "copy to clipboard" button:
-- Commands as part of a procedure should always start be moving the user to the correct directory
-- Code blocks should indicate the language used, for automatic syntax highlighting
-    
-    ````md
-    ```bash
-    cd  ~/path/to/directory
-    sudo somecommand
-    ```
-    ````
-- The first instance of a package name should match the name in the repository, and use in line code formatting (example: `nano`), subsequent uses can be in italics.
+Write content using [markdown formatting](https://www.markdownguide.org/cheat-sheet/), use [Prettier](https://prettier.io/) to enforce consistent formatting.
 
-### Admonitions
+## Package Names
 
-This wording is taken from the _Red Hat guide_ [here](https://redhat-documentation.github.io/supplementary-style-guide/#admonitions).
+- The name of packages in the Solus repository must use inline code formatting.
 
-Admonitions should draw the reader’s attention to certain information. Keep admonitions to a minimum, and avoid placing multiple admonitions close to one another. If multiple admonitions are necessary, restructure the information by moving the less-important statements into the flow of the main content. See the [Docusaurus documentation](https://docusaurus.io/docs/markdown-features/admonitions) to learn the correct syntax.
+```md
+To install `caddy`, use the Software Center or execute the following command:
+```
+
+- When referring to the name of a product or project, use the name the authors use.
+
+Examples: _RetroArch_, and _Code::Blocks_
+
+### Spelling
+
+We prefer American spelling over British spelling. When in doubt about the spelling of a word, see the [Merriam-Webster dictionary](https://www.merriam-webster.com/).
