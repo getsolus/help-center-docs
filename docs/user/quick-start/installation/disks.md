@@ -21,7 +21,7 @@ Alongside these options, we also provide the ability to use full-disk encryption
 
 If you are using a system with UEFI, you may need to create a EFI System Partition, also referred to as an ESP. This is not necessary if you are enabling Solus to install onto the entire disk.
 
-To create an EFI System Partition, open up GParted and create a FAT32 partition that is 512MB in size. Next, right-click on the partition and click Manage Flags. On the Manage Flags section, enable the `boot` and `esp` flags.
+To create an EFI System Partition, open up GParted and create a FAT32 partition that is 1GB in size. Next, right-click on the partition and click Manage Flags. On the Manage Flags section, enable the `boot` and `esp` flags.
 
 **Notes:**
 
