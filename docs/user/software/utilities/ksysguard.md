@@ -5,7 +5,7 @@ summary: Quick Start guide to KSysGuard on Solus
 
 # KSysGuard
 
-[KSysGuard](https://userbase.kde.org/KSysGuard) KSysGuard, also known as KDE System Guard and KDE System Monitor, is designed to make simple process control available to a user without needing to do any special setup.
+[KSysGuard](https://userbase.kde.org/KSysGuard), also known as KDE System Guard and KDE System Monitor, is designed to make simple process control available to a user without needing to do any special setup.
 
 ## Installation
 
