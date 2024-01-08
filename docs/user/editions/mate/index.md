@@ -7,7 +7,7 @@ summary: A quick introduction to the MATE Edition of Solus
 
 :::caution
 
-We plan to deprecate the MATE Desktop, we will instead ship an edition with Xfce in the near future. See the Solus 4.4 blog post [here](https://getsol.us/2023/07/08/solus-4-4-released/)
+The MATE Edition is deprecated. XFCE has been included to replace it. See the Solus 4.4 blog post [here](https://getsol.us/2023/07/08/solus-4-4-released/)
 
 :::
 

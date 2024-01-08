@@ -52,6 +52,15 @@ const Editions = [
       <Translate id="edition.mate.description">A traditional desktop for advanced users and older hardware.</Translate>
     ),
   },
+  {
+    name: "XFCE",
+    url: "xfce",
+    urlConfig: "xfce/configuration",
+    urlTips: "xfce/tips-and-tricks",
+    description: (
+      <Translate id="edition.xfce.description">A lightweight desktop that aims to be fast while still being friendly.</Translate>
+    ),
+  },
 ];
 
 type EditionCardProps = {
