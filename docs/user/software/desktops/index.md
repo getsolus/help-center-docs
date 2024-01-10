@@ -69,7 +69,7 @@ If you want to use i3 with support for GNOME Settings Daemon and other GNOME fun
 Solus offers Sway as a Wayland-only tiling window manager. You can install it with the following command:
 
 ```bash
-Sudo eopkg install sway
+sudo eopkg install sway
 ```
 
 Sway expects users to do some configuration, refer to the [Sway Wiki](https://github.com/swaywm/sway/wiki).
