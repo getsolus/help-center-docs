@@ -1,7 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const themes = require('prism-react-renderer').themes;
+const themes = require("prism-react-renderer").themes;
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
 
@@ -165,7 +165,6 @@ const config = {
                 label: "Issue Tracker",
                 href: "https://issues.getsol.us",
               },
-              
             ],
           },
         ],

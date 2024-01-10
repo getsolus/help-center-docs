@@ -58,7 +58,9 @@ const Editions = [
     urlConfig: "xfce/configuration",
     urlTips: "xfce/tips-and-tricks",
     description: (
-      <Translate id="edition.xfce.description">A lightweight desktop that aims to be fast while still being friendly.</Translate>
+      <Translate id="edition.xfce.description">
+        A lightweight desktop that aims to be fast while still being friendly.
+      </Translate>
     ),
   },
 ];

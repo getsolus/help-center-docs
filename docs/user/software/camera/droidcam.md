@@ -38,6 +38,7 @@ DroidCam can be installed from Software Center or via terminal :
 ```bash
 sudo eopkg it droidcam
 ```
+
 Once DroidCam is installed, reboot your system. Now DroidCam is ready to use.
 
 ## Usage

@@ -125,7 +125,8 @@ There should be a meaningful summary line (which starts with the package name), 
 `git commit` on [an initialized repository](prepare-for-packaging.md#initialize-git-hooks) will automatically open your editor with the correct template.
 Note that lines starting with a `#` will be ignored by Git and do not need to be removed.
 
-*Important*: Do not include issue numbers in changelogs. This will incorrectly link your issue to another one in our repository. Ex:
+_Important_: Do not include issue numbers in changelogs. This will incorrectly link your issue to another one in our repository. Ex:
+
 ```
 - #123 fixed a thing
 ```

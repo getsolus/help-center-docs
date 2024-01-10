@@ -44,14 +44,14 @@ sudo eopkg install -c desktop.mate
 
 ## XFCE
 
-Solus offers the XFCE desktop environment for users preferring a more lightweight experience. It is reccomended for existing MATE users. You can install XFCE with the following command:
+Solus offers the XFCE desktop environment for users preferring a more lightweight experience. It is recommended for existing MATE users. You can install XFCE with the following command:
 
 ```
 # Do NOT attempt to do this if you are running the KDE Plasma Desktop version of Solus!
 sudo eopkg install -c desktop.xfce
 ```
 
-### Tiling window manaagers
+## Tiling window managers
 
 ### i3
 
@@ -73,5 +73,5 @@ sudo eopkg install sway
 ```
 
 Sway expects users to do some configuration, refer to the [Sway Wiki](https://github.com/swaywm/sway/wiki).
-  
+
 For more information about tiling window managers, click [here](https:/en.wikipedia.org/wiki/Tiling_window_manager).

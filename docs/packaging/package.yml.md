@@ -98,8 +98,8 @@ One or more optimize values can be specified in a list with the `optimize` key i
 
 | Optimize Value                  | Description                                                                                                                                       |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **speed**                       | Optimises the package for performance `-O3` plus other flags.                                                                                     |
-| **size**                        | Optimises the package build to minimize size `-Os`. Not supported with clang.                                                                     |
+| **speed**                       | Optimizes the package for performance `-O3` plus other flags.                                                                                     |
+| **size**                        | Optimizes the package build to minimize size `-Os`. Not supported with clang.                                                                     |
 | **no-bind-now**                 | Configures the package to disable certain flags, where RELRO is unsupported.                                                                      |
 | **no-symbolic**                 | Disables `-Wl,-Bsymbolic-functions` linker flag.                                                                                                  |
 | **unroll-loops**                | Enables `-funroll-loops`. Use this sparingly, only when it provides proven benefit.                                                               |
@@ -110,7 +110,7 @@ One or more optimize values can be specified in a list with the `optimize` key i
 | **icf-safe**                    | Enables safe Identical Cold Folding `--icf=safe`. `function-sections` is recommended when not using clang. Uses gold linker when not using clang. |
 | **icf-all**                     | Enables Identical Cold Folding `--icf=all`. `function-sections` is recommended when not using clang. Uses gold linker when not using clang.       |
 | **polly**                       | Enables polyhedral optimizations for the clang toolchain.                                                                                         |
-| **function-sections**           | Generate a seperate ELF section for each function. Recommended with ICF when not using clang.                                                     |
+| **function-sections**           | Generate a separate ELF section for each function. Recommended with ICF when not using clang.                                                     |
 | **no-reorder-blocks-partition** | Disables block partition reordering with the gcc toolchain. Provided to facilitate BOLT'ed binaries/libraries.                                    |
 | **emit-relocs**                 | Instructs the linker to emit relocations. Provided to facilitate BOLT'ed binaries/libraries.                                                      |
 
@@ -208,11 +208,11 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 
 BOLT is a post-link optimizer developed to speed up large applications. You will need to run a workload after instrumenting a binary or library. Think of it as post-link profile guided optimization.
 
-| Macro              | Description                                                                                                                                             |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **%bolt_instr**    | Instrument a binary or library with llvm-bolt. Requires it to be built with `emit-relocs`, as well as `no-reorder-blocks-partition` if not using clang. |
-| **%bolt_merge**    | Merge fdata profiles into a single file after running a workload with a BOLT instrumented binary.                                                       |
-| **%bolt_opt**      | Optimize a binary using BOLT after running `%bolt_merge`.                                                                                               |
+| Macro           | Description                                                                                                                                             |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **%bolt_instr** | Instrument a binary or library with llvm-bolt. Requires it to be built with `emit-relocs`, as well as `no-reorder-blocks-partition` if not using clang. |
+| **%bolt_merge** | Merge fdata profiles into a single file after running a workload with a BOLT instrumented binary.                                                       |
+| **%bolt_opt**   | Optimize a binary using BOLT after running `%bolt_merge`.                                                                                               |
 
 ### Variable Macros
 
@@ -239,7 +239,7 @@ BOLT is a post-link optimizer developed to speed up large applications. You will
 A set of variables are exported in our build stages. These are used to provide context and structure to the scripts.
 
 | Variable           | Description                                                                                      |
-| ----------------   | ------------------------------------------------------------------------------------------------ |
+| ------------------ | ------------------------------------------------------------------------------------------------ |
 | **$CFLAGS**        | cflags as set in `eopkg.conf`.                                                                   |
 | **$CXXFLAGS**      | cxxflags as set in `eopkg.conf`.                                                                 |
 | **$LDFLAGS**       | ldflags as set in `eopkg.conf`.                                                                  |
