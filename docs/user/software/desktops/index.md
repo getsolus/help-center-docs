@@ -31,7 +31,7 @@ sudo eopkg install gdm gnome-shell gnome-desktop-branding
 
 :::caution
 
-We plan to deprecate the MATE Desktop, we will instead ship an edition with Xfce in the near future. See the Solus 4.4 blog post [here](https://getsol.us/2023/07/08/solus-4-4-released/)
+We plan to deprecate the MATE Desktop, for a similar experience, consider XFCE.
 
 :::
 
@@ -42,7 +42,18 @@ Solus offers the MATE desktop environment / experience, tailored to advanced use
 sudo eopkg install -c desktop.mate
 ```
 
-## i3
+## XFCE
+
+Solus offers the XFCE desktop environment for users preferring a more lightweight experience. It is reccomended for existing MATE users. You can install XFCE with the following command:
+
+```
+# Do NOT attempt to do this if you are running the KDE Plasma Desktop version of Solus!
+sudo eopkg install -c desktop.xfce
+```
+
+### Tiling window manaagers
+
+### i3
 
 Solus offers i3 as a tiling window manager. Users wanting to try i3 can install it by running the following command:
 
@@ -53,4 +64,14 @@ sudo eopkg install i3
 
 If you want to use i3 with support for GNOME Settings Daemon and other GNOME functionality, follow the instructions for installation of GNOME Shell, then choose GNOME+i3 at the login screen to use it.
 
+### Sway
+
+Solus offers Sway as a Wayland-only tiling window manager. You can install it with the following command:
+
+```bash
+sudo eopkg install sway
+```
+
+Sway expects users to do some configuration, refer to the [Sway Wiki](https://github.com/swaywm/sway/wiki).
+  
 For more information about tiling window managers, click [here](https:/en.wikipedia.org/wiki/Tiling_window_manager).
