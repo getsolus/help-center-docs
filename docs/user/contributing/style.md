@@ -74,13 +74,14 @@ console.log("Hello, world!");
   - The names of the different editions of Solus are:
     - Solus Budgie
     - Solus GNOME
-    - Solus MATE
     - Solus Plasma
+    - Solus XFCE
 - Repositories
   - Avoid using terms such as _repo_, or _monorepo_, use the specific repository name instead.
   - Example: "The packages repository", instead of "The monorepo".
 - Dev Tracker
   - Avoid using the term _Dev Tracker_.
+  - Example: "The packages issue tracker", instead or "The dev tracker"
 
 ### Markdown formatting
 
