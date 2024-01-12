@@ -42,7 +42,7 @@ Admonitions should draw the reader’s attention to certain information. Keep ad
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Note           | Additional guidance or advice that improves product configuration, performance, or supportability                                                                                                                                         |
 | Important      | Advisory information essential to the completion of a task or default configuration settings. Users must not disregard this information.                                                                                                  |
-| Warning/Danger | Information about potential system damage, data loss, or a support-related issue if the user disregards this admonition. <br> If available, offer information to avoid the problem in the future or state where to find more information. |
+| Warning/Danger | Information about potential system damage, data loss, or a support-related issue if the user disregards this admonition.  If available, offer information to avoid the problem in the future or state where to find more information. |
 | Tip            | Recommendations, suggestions, and alternative methods that might not be obvious. Tips are not essential to using the product.                                                                                                             |
 
 ## Code blocks

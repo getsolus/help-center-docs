@@ -128,7 +128,7 @@ Finnish language support is provided by installing `libreoffice-voikko`. After i
 | Budgie  | Celluloid (formerly GNOME MPV) |
 | GNOME   | Celluloid (formerly GNOME MPV) |
 | Plasma  | Haruna                         |
-| XFCE    | Parole
+| XFCE    | Parole                         |
 
 ## Celluloid
 

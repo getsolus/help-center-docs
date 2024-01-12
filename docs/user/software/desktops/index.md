@@ -11,7 +11,7 @@ WARNING: Do NOT attempt to install ANY other desktop environments next to KDE Pl
 
 ## Budgie
 
-The flagship desktop environment / experience of Solus is Budgie. If you have installed either our  GNOME or XFCE editions, you can try out and install Budgie by running the following command:
+The flagship desktop environment / experience of Solus is Budgie. If you have installed either our GNOME or XFCE editions, you can try out and install Budgie by running the following command:
 
 ```bash
 # Do NOT attempt to do this if you are running the KDE Plasma Desktop version of Solus!
