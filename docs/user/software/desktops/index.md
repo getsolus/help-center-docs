@@ -5,13 +5,13 @@ summary: Quick guides on switching between or installing additional Desktop Envi
 
 # Desktop Environments
 
-Solus offers a [multitude of desktop environments](https://getsol.us/solus/experiences/), ranging from the feature-rich and modern Budgie to the traditional MATE experience. It is recommended to use the ISO for a specific desktop environment but it is possible to install them afterwards if you wish to do try one out.
+Solus offers a [multitude of desktop environments](https://getsol.us/solus/experiences/), ranging from the feature-rich and modern Budgie to the traditional XFCE experience. It is recommended to use the ISO for a specific desktop environment but it is possible to install them afterwards if you wish to do try one out.
 
 WARNING: Do NOT attempt to install ANY other desktop environments next to KDE Plasma Desktop. This scenario is NOT supported and you will be told so in no uncertain terms if asking for support.
 
 ## Budgie
 
-The flagship desktop environment / experience of Solus is Budgie. If you have installed either our MATE or GNOME editions, you can try out and install Budgie by running the following command:
+The flagship desktop environment / experience of Solus is Budgie. If you have installed either our  GNOME or XFCE editions, you can try out and install Budgie by running the following command:
 
 ```bash
 # Do NOT attempt to do this if you are running the KDE Plasma Desktop version of Solus!
@@ -20,7 +20,7 @@ sudo eopkg install -c desktop.budgie
 
 ## Gnome Shell
 
-Solus offers a GNOME Shell experience that ships out-of-the-box with a variety of extensions. If you have installed either our Budgie or MATE editions, you can try out and install GNOME Shell by running the following commands:
+Solus offers a GNOME Shell experience that ships out-of-the-box with a variety of extensions. If you have installed either our Budgie or XFCE editions, you can try out and install GNOME Shell by running the following commands:
 
 ```bash
 # Do NOT attempt to do this if you are running the KDE Plasma Desktop version of Solus!
