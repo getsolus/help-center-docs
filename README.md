@@ -22,10 +22,14 @@ This project is written using [TypeScript](https://www.typescriptlang.org) and [
 
 Please lint and spellcheck your updates before creating a pull request. We recommend VS Code with the "prettier" extension for linting. You are free to use whatever software and linters you prefer as long as they get the job done.
 
-### Markdown
+### Content Formatting and Spelling
 
-We recommend "Code Spell Checker" or `codespell` for spell checking.
-Codespell is available for installation `sudo eopkg install codespell`
+- This project includes `prettier` for markdown and code formatting
+  - Command: `yarn prettier`
+- This project includes `cpsell` for spell-checking, and has a custom wordlist `.cspell-allowed-wordlist.txt`
+  - Command: `yarn cspell`
+  - Note that we use american spelling
+  - If you use vscode with the `cspell` extension, the custom dictionary will be used 
 
 ### NVM
 
