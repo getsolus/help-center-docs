@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksolus_help_center=self.webpackChunksolus_help_center||[]).push([[5093],{2334:e=>{e.exports=JSON.parse('{"title":"Software","slug":"/category/software","permalink":"/docs/category/software","navigation":{"previous":{"title":"Privacy Policy","permalink":"/docs/user/privacy"},"next":{"title":"Camera","permalink":"/docs/category/camera"}}}')}}]);

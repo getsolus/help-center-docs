@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Solus Help Center Blog</title>
+        <link>https://help.getsol.us/blog</link>
+        <description>Solus Help Center Blog</description>
+        <lastBuildDate>Sat, 13 Jan 2024 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Welcome to the Solus Devlog]]></title>
+            <link>https://help.getsol.us/blog/welcome-solus-devlog-v1</link>
+            <guid>https://help.getsol.us/blog/welcome-solus-devlog-v1</guid>
+            <pubDate>Sat, 13 Jan 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Welcome to the Solus Development Log.]]></description>
+            <content:encoded><![CDATA[<p>Welcome to the Solus Development Log.</p>
+<p>The Solus Development Log will be used by Solus Staff and outside contributors to hightlight wins and changes in Solus. Keep an eye on this space.</p>
+<p>The Solus DevLog has been setup to facilitate improved communication with the outside world; wins, signficant changes, as well as challenges, within Solus. Solus Staff and contributors are encouraged to use this space.</p>
+<p>The DevLog has been setup as a seperate entity to the <a href="https://getsol.us/blog/" target="_blank" rel="noopener noreferrer">Solus Blog</a> to encourage more short form development content that doesn't require the same level of polish as an official blog post.</p>
+<p>It is hoped that this will be used to help communicate what's going on in Solus such that our short-term and medium-term progress, goals, and ambitions are less of a black box to the outside world.</p>
+<p>Additionally, we believe it will help provide context to any of our murmurings for any users who keep an eye on the <a href="https://github.com/getsolus/" target="_blank" rel="noopener noreferrer">getsolus</a> GitHub organization page and the <a href="https://matrix.to/#/#solus:matrix.org" target="_blank" rel="noopener noreferrer">Solus</a> Matrix channels.</p>
+<p>Hope to see you back at this space soon with more content!</p>]]></content:encoded>
+            <category>hello</category>
+            <category>devlog</category>
+            <category>firstpost</category>
+            <category>solus</category>
+        </item>
+    </channel>
+</rss>
