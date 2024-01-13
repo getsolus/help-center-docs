@@ -28,7 +28,7 @@ Please lint and spellcheck your updates before creating a pull request. We recom
   - Command: `yarn prettier`
 - This project includes `cpsell` for spell-checking, and has a custom wordlist `.cspell-allowed-wordlist.txt`
   - Command: `yarn cspell`
-  - Note that we use american spelling
+  - Note that we use American spelling
   - If you use vscode with the `cspell` extension, the custom dictionary will be used
 
 ### NVM
