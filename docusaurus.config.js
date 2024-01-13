@@ -50,7 +50,13 @@ const config = {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          //editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          blogTitle: 'Solus DevLog',
+          blogDescription: 'The Solus Development (b)log!',
+          postsPerPage: 'ALL',
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
+          path: 'devlog',
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -102,11 +108,11 @@ const config = {
             position: "left",
             label: "Packaging",
           },
-          { to: "https://getsol.us/blog", label: "Blog", position: "left" },
           {
-            href: "https://getsol.us",
-            label: "getsol.us",
-            position: "right",
+            to: 'blog',
+            label: 'Dev Log',
+            position: 'left'
+
           },
         ],
       },
