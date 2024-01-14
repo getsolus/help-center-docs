@@ -1,7 +1,6 @@
 name: 'Format with Prettier'
 on:
   pull_request:
-      branches: [master]
 
 jobs:
   prettier:
@@ -9,9 +8,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
       - name: Prettify code
         uses: creyD/prettier_action@v4.3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           prettier_options: --write **/*.{md,mdx}
           only_changed: True
