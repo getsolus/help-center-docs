@@ -231,13 +231,13 @@ Upon clicking to remove the user, you will be given the option to keep their fil
 
 To change the desktop background in Budgie, open the Budgie Control Center by selecting "System Settings" from either the Budgie Menu, or by right-clicking on a blank spot on the desktop.
 
-![Budgie Desktop Right-Click Menu](configuration/budgie-background-right-click.jpg)
+![Budgie Desktop Right-Click Menu](configuration/budgie-desktop-blank-space-right-click.jpg)
 
 Once the Budgie Control Center is open, click "Background" on the left-hand sidebar.
 
 Click one of the images displayed on the right to choose a pre-installed background image, or click "Add Picture..." in the headerbar to add one of your own image files to the available options.
 
-![Budgie Settings Background Section](configuration/budgie-background-section.jpg)
+![Budgie Control Center Background Section](configuration/budgie-control-center-background.jpg)
 
 ## Desktop Icons
 
