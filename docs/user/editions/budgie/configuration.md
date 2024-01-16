@@ -9,37 +9,37 @@ summary: Help for configuring the Budgie desktop on Solus
 
 ## Date and Time
 
-In Budgie, the easiest way to access the date and time settings is by left clicking on the time in the bottom panel and clicking on "Time and date settings".
+In Budgie, the easiest way to access the date and time settings is by left clicking on the time in the bottom panel and clicking on "System time and date settings".
 
-![Budgie Date and Time Right-Click](configuration/budgie-time-and-date-right-click.jpg)
+![Budgie Date and Time Right-Click](configuration/budgie-system-time-and-date-popup.jpg)
 
-Alternatively, you can open the Settings Menu and then click on "Details" and then "Date & Time" in the System Settings section.
+Alternatively, you can open the Budgie Control Center, and scroll the left-hand sidebar down to the bottom to find "Date & Time".
 
-You will be presented with the following window. This window provides you with the ability to enable / disable automatic date & time, automatic time zone changing, and the time format.
+You will be presented with the following window. From here, you can enable / disable automatic date & time, automatic time zone changing, and change between AM/PM and 24-hour time formats. Note that changing the system date & time and time zone information requires clicking the 'Unlock' button at the top of the window, and entering your password.
 
-![Budgie Date and Time](configuration/budgie-configuring-date-and-time.jpg)
+![Budgie Date and Time](configuration/budgie-control-center-date-time.jpg)
 
-If you wish to change how the time is displayed in the bottom panel, left click on the time and click "Preferences". You can now show the date, seconds or use 24 hour time.
+If you wish to change how the time is displayed in the bottom panel, open Budgie Desktop Settings from the Budgie Menu, choose the Bottom Panel from the left-hand sidebar, choose Clock from the list of applets in the middle, then adjust your desired settings on the right-hand side.
 
-![Budgie Clock Applet](configuration/budgie-ClockApplet.jpg)
+![Budgie Clock Applet](configuration/budgie-desktop-settings-bottom-panel-clock.jpg)
+
+If you want to set a custom date & time format, the ["conversion specifications" referenced by the POSIX standards](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/date.html) list the options that can be entered.
 
 ## Default Applications
 
-You can configure default applications in Budgie by opening the Budgie Menu and then clicking on "Details" in the System Settings category.
+You can configure default applications in Budgie by opening the Budgie Control Center, and scrolling the left-hand sidebar down to "Default Applications".
 
-Upon entering the Details section, click on "Default Applications" and then use the drop down boxes to select a different default application for each category. For most categories, you will need to have installed alternative applications before you can change the default settings. For instance, if you wish to change the default video player from GNOME MPV to VLC then you must first install VLC (available in the Software Center).
+The drop down boxes here enable choosing the default application for each category of file. For most categories, you will need to have already installed alternative applications before you can change the default settings. For instance, if you wish to change the default video player from Celluloid to VLC, then you must first install VLC (available in the Software Center).
 
-![Budgie Default Applications](configuration/budgie-configuring-default-applications.jpg)
+![Budgie Default Applications](configuration/budgie-control-center-default-applications.jpg)
 
-_Note: In the image above, we've changed the Web browser and Photo viewer._
+You can specify default applications for individual file types by right-clicking on a file and clicking on "Open With" from the popup menu, then choosing "Other Application".
 
-You can specify default applications for individual file types by right clicking on a file and then clicking on "Open With Other Application".
+![Budgie Context Menu](configuration/budgie-open-with.jpg)
 
-![Budgie Context Menu](configuration/budgie-open-with-right-click.jpg)
+Next, select the application you wish to use from the list, then click "Set as default" below the list. Finish by clicking "OK". In the future, all files with the same file type will open with the chosen application.
 
-Next, select the application you wish to use from the list. You may need to click "View All Applications" if you can't see the one you would like to use. Finish by clicking "Select". In the future, all files with the same file type will open with the same application.
-
-![Budgie Application Selection](configuration/budgie-open-with-select-application.jpg)
+![Budgie Application Selection](configuration/budgie-open-with-other.jpg)
 
 ## Displays
 
