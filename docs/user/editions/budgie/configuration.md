@@ -241,15 +241,15 @@ Click one of the images displayed on the right to choose a pre-installed backgro
 
 ## Desktop Icons
 
-With Budgie, start by opening Raven, either by clicking on its icon in the far right of the system tray or using the keyboard shortcut `Super + A`. Next, click the cog icon for Budgie Settings.
+Desktop Icons are enabled by default when Budgie is installed for the first time. To check or toggle this setting, open the Budgie Desktop Settings app by selecting "Budgie Desktop Settings" from the Budgie Menu, or from the pop-up menu when right-clicking on a blank spot on the desktop.
 
-Alternatively, you can open the Budgie Menu and then click "Desktop" in the System Settings category.
+In the Budgie Desktop Settings app, click Desktop in the left-hand sidebar - Desktop Icons is the first toggle switch on that screen.
 
-![Budgie Desktop Icons](configuration/budgie-desktop-icons.jpg)
+![Budgie Desktop Icons](configuration/budgie-desktop-settings-desktop-section.jpg)
 
-You may now add things to your Desktop. This can be done by dragging an item onto the Desktop or by right clicking an icon and selecting Copy to / Move to Desktop. Alternatively, open the Budgie Menu and click on "Files" and then move the files you want to the Desktop folder (as shown in the image below). Please note, the Desktop folder is not visible in "Files" until you've enabled the Desktop icons.
+To place files on your desktop, you can either drag them directly onto the Desktop, or move the files you want to the Desktop folder within the Nemo file manager app (as shown in the image below).
 
-![Budgie Desktop Folder](configuration/budgie-nautilus-desktop-folder.jpg)
+![Budgie Desktop Folder](configuration/budgie-nemo-desktop-folder.jpg)
 
 ## Workspaces
 
