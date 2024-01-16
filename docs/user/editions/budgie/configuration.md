@@ -63,43 +63,41 @@ Click "Apply" once you are happy with your changes. You will be shown a message 
 
 ## Keyboard Layout
 
-Using Budgie, you can change your keyboard layout by opening the Budgie Menu and then clicking on "Region and Language" in the System Settings category.
+Using Budgie, you can change your keyboard layout in the Budgie Control Center. Click on the Budgie Menu, click the System Settings icon at the bottom or "Budgie Control Center" in the application list, and then click on "Keyboard" in the System Settings category.
 
-You will now be shown the following dialog.
-
-![Budgie Region and Languages](configuration/budgie-region-and-languages.jpg)
+![Budgie Keyboard Settings](configuration/budgie-control-center-keyboard.jpg)
 
 Click the `+` button to add an input source (keyboard layout). You will be shown the following dialog.
 
-![Budgie Add Input Source](configuration/budgie-add-input-source.png)
+![Budgie Add Input Source](configuration/budgie-control-center-add-input-method.jpg)
 
 Here you can select the language and then keyboard layout within each language section. If it does not appear in this list, click the `⋮` button (three vertical dots). This will enable you to search for the keyboard layout you wish to use.
 
-After choosing the keyboard layout, click "Done". You will be brought back to the following dialog with your new keyboard layout. In the image below, we are now using English (US), Finnish, and Swedish layout.
+After choosing the keyboard layout, click the "Add" button at the top of the window. You will be brought back to the following dialog with your new keyboard layout. In the image below, we are now using English (US) and English (UK) layouts.
 
-![Budgie New Layout Added](configuration/budgie-region-and-languages-newlang.jpg)
+![Budgie New Layout Added](configuration/budgie-input-sources-multiple.jpg)
 
-You can remove a keyboard layout by clicking on one of the items, for instance Swedish, then clicking the `-` button.
+You can remove a keyboard layout by clicking on one of the items, for instance Swedish, then clicking the `⋮` button, then choosing "Remove".
 
-If you wish to use multiple keyboard layouts, you can switch between them by using the keyboard shortcut `Super + Space` or by adding the Keyboard Layout Indicator applet to your Budgie panel.
+If you wish to use multiple keyboard layouts, you can switch between them by using the keyboard shortcut `Super + Shift + Space`, or by adding the Keyboard Layout Indicator applet to your Budgie panel.
 
 ### Keyboard Layout Indicator
 
-To add the Keyboard Layout Indicator to your panel, open Raven, either by clicking on its icon in the far right of the system tray or using the keyboard shortcut `Super + A`. Now click the Raven settings cog icon.
+To add the Keyboard Layout Indicator to your panel, open the Budgie Desktop Settings app from the Budgie Menu, then click "Bottom Panel" on the left-hand sidebar.
 
-![Raven Settings Icon](configuration/raven-settings-cog.jpg)
+![Budgie Bottom Panel Settings](configuration/budgie-desktop-settings-bottom-panel-clock.jpg)
 
-Click the "Panel" button, then in the Applets section, click the `+` button.
+On the right side of the window, click the `+` button next to "Add applet".
 
-Find the Keyboard Layout Indicator entry and select it. Click the `+` button at the top of the panel. This will add the Keyboard Layout Indicator to the center section, as shown below.
+Find the Keyboard Layout Indicator entry and select it, then click "Add" at the top of the window. This will add the Keyboard Layout Indicator (to the center section by default), as shown below.
 
-![Budgie Keyboard Layout Applet](configuration/budgie-keyboard-layout-applet.jpg)
+![Budgie Keyboard Layout Applet](configuration/budgie-keyboard-layout-switcher.jpg)
 
 ### IBus
 
 Budgie comes with IBus ready to go straight out of the box. If you need an additional IBus IME see: [IBus](/docs/user/software/localization/ibus/)
 
-You will now be able to switch between your keyboard layouts by using the keyboard shortcut `Super + Space` or by using the Keyboard Layout Indicator applet.
+You will now be able to switch between your keyboard layouts by using the keyboard shortcut `Super + Shift /+ Space` or by using the Keyboard Layout Indicator applet.
 
 ![Budgie Keyboard Layout Applet: IBus](configuration/budgie-keyboard-layout-applet-ibus.jpg)
 
