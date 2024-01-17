@@ -99,3 +99,14 @@ You should not be logged into your Plasma session while doing this. It is also h
   ```
 6. Shut down the live environment and remove the live USB drive.
 7. Reboot back into your regular Plasma session. Check the application to see if it looks OK now.
+8. It should not be necessary to recover the cache files that were deleted. If you need to, you can recover a file by copying it from the backup directory to the actual directory.
+
+  For example, to recover the file `.kde/share/config/kdeglobals`:
+  ```
+  cp -av .kde.bak/share/config/kdeglobals .kde/share/config/kdeglobals
+  ```
+  To restore an entire directory:
+  ```
+  cp -rav .kde.bak/share/config/ .kde/share/config
+  ```
+  After restoring the file(s) or directories, log out of Plasma and log back in.
