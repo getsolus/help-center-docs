@@ -63,7 +63,7 @@ Not all fields in `package.yml` are mandatory, but a small selection are. Below 
 
 ### Optional, supported keys
 
- Key Name        | Type        | Description                                                                                                                                                                                                                                                                           |
+| Key Name        | Type        | Description                                                                                                                                                                                                                                                                           |
 | --------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **clang**       | `bool`      | Set to `yes` if this package benefits from being built with Clang.                                                                                                                                                                                                                    |
 | **extract**     | `bool`      | Set to `no` to disable automatic source extraction.                                                                                                                                                                                                                                   |

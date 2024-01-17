@@ -51,12 +51,12 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           //editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          blogTitle: 'Solus DevLog',
-          blogDescription: 'The Solus Development (b)log!',
-          postsPerPage: 'ALL',
-          blogSidebarTitle: 'All posts',
-          blogSidebarCount: 'ALL',
-          path: 'devlog',
+          blogTitle: "Solus DevLog",
+          blogDescription: "The Solus Development (b)log!",
+          postsPerPage: "ALL",
+          blogSidebarTitle: "All posts",
+          blogSidebarCount: "ALL",
+          path: "devlog",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -109,10 +109,9 @@ const config = {
             label: "Packaging",
           },
           {
-            to: 'blog',
-            label: 'Dev Log',
-            position: 'left'
-
+            to: "blog",
+            label: "Dev Log",
+            position: "left",
           },
         ],
       },

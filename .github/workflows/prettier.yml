@@ -1,4 +1,4 @@
-name: 'Format with Prettier'
+name: "Format with Prettier"
 on:
   pull_request:
 

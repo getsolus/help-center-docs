@@ -1,4 +1,4 @@
-name: 'Spellcheck with cspell'
+name: "Spellcheck with cspell"
 on:
   pull_request:
 
@@ -15,5 +15,5 @@ jobs:
           inline: warning
           strict: false
           incremental_files_only: true
-          config: '.cspell.json'
+          config: ".cspell.json"
           verbose: false

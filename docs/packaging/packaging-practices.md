@@ -242,7 +242,7 @@ rundeps:
 ## Check dependencies
 
 Check dependencies are a special kind of build dependency reserved for automatic package testing by `solbuild`. Check dependencies should only be used during the `check` build phase.
-When a package is part of an automatic build sequence, these dependencies  will **not** be considered when determining build order.
+When a package is part of an automatic build sequence, these dependencies will **not** be considered when determining build order.
 
 ### Example
 
