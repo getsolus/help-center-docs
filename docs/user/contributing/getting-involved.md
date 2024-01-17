@@ -38,7 +38,6 @@ Alongside the forums, you can communicate with developers or others in the commu
 - [Facebook](https://www.facebook.com/get.solus)
 - [Mastodon](https://fosstodon.org/@Solus)
 - [Reddit](https://www.reddit.com/r/SolusProject/)
-- [Twitter](https://twitter.com/solusproject)
 
 ## Funding
 

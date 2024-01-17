@@ -140,11 +140,6 @@ const config = {
                 href: "https://matrix.to/#/#solus:matrix.org",
               },
               {
-                label: "Twitter",
-                href: "https://twitter.com/SolusProject",
-                rel: "me",
-              },
-              {
                 label: "Mastodon",
                 href: "https://fosstodon.org/@Solus",
                 rel: "me",
