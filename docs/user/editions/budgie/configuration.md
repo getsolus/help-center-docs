@@ -15,11 +15,11 @@ In Budgie, the easiest way to access the date and time settings is by left click
 
 Alternatively, you can open the Budgie Control Center, and scroll the left-hand sidebar down to the bottom to find "Date & Time".
 
-You will be presented with the following window. From here, you can enable / disable automatic date & time, automatic time zone changing, and change between AM/PM and 24-hour time formats. Note that changing the system date & time and time zone information requires clicking the 'Unlock' button at the top of the window, and entering your password.
+You will be presented with the following window. From here, you can enable / disable automatic date & time, automatic time zone changing, and change between AM/PM and 24-hour time formats. Note that changing the system date & time and time zone information requires clicking the "Unlock" button at the top of the window, and entering your password.
 
 ![Budgie Date and Time](configuration/budgie-control-center-date-time.jpg)
 
-If you wish to change how the time is displayed in the bottom panel, open Budgie Desktop Settings from the Budgie Menu, choose the Bottom Panel from the left-hand sidebar, choose Clock from the list of applets in the middle, then adjust your desired settings on the right-hand side.
+If you wish to change how the time is displayed in the bottom panel, open Budgie Desktop Settings from the Budgie Menu, choose the Bottom Panel from the left-hand sidebar, choose "Clock" from the list of applets in the middle, then adjust your desired settings on the right-hand side.
 
 ![Budgie Clock Applet](configuration/budgie-desktop-settings-bottom-panel-clock.jpg)
 
@@ -29,7 +29,7 @@ If you want to set a custom date & time format, the ["conversion specifications"
 
 You can configure default applications in Budgie by opening the Budgie Control Center, and scrolling the left-hand sidebar down to "Default Applications".
 
-The drop down boxes here enable choosing the default application for each category of file. For most categories, you will need to have already installed alternative applications before you can change the default settings. For instance, if you wish to change the default video player from Celluloid to VLC, then you must first install VLC (available in the Software Center).
+The drop-down boxes here enable choosing the default application for each category of file. For most categories, you will need to have already installed alternative applications before you can change the default settings. For instance, if you wish to change the default video player from Celluloid to VLC, then you must first install VLC (available in the Software Center).
 
 ![Budgie Default Applications](configuration/budgie-control-center-default-applications.jpg)
 
@@ -71,7 +71,7 @@ Click the "+" button to add an input source (keyboard layout). You will be shown
 
 ![Budgie Add Input Source](configuration/budgie-control-center-add-input-method.jpg)
 
-Here you can select the language and then keyboard layout within each language section. If it does not appear in this list, click the `⋮` button (three vertical dots). This will enable you to search for the keyboard layout you wish to use.
+Here you can select the language and then keyboard layout within each language section. If it does not appear in this list, click the "⋮" button (three vertical dots). This will enable you to search for the keyboard layout you wish to use.
 
 After choosing the keyboard layout, click the "Add" button at the top of the window. You will be brought back to the following dialog with your new keyboard layout. In the image below, we are now using English (US) and English (UK) layouts.
 
