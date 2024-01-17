@@ -18,41 +18,67 @@ This is often caused by a Firefox bug. It can be triggered by various things, li
 
 You may not need to reboot to recover from this state. Killing all firefox processes may be all that's necessary. To do so:
 
-- Get to a virtual terminal (TTY) with Ctrl-Alt-F3
-- Run `killall firefox`, this should close all Firefox windows
-- Return to your Plasma session with Ctrl-Alt-F2
+1. Open a virtual terminal by pressing `Ctrl+Alt+F3`.
+2. Run the following to kill all firefox windows:
+  ```bash
+  killall firefox
+  ```
+  This should close all Firefox windows.
+3. Return to the Plasma session by pressing `Ctrl-Alt-F2`.
 
-You should now be able to use Plasma normally.
+  You should now be able to use Plasma normally.
 
 ## Application windows look corrupt / incomplete
 
 **Symptoms**
-- Application windows look corrupt. For example, NeoChat not displaying room or user icons.
+- Application windows look corrupt. For example, NeoChat does not display room or user icons.
 - Menus in an application are blank.
 
-You may be able to fix this by clearing KDE / Plasma cache files.
-NOTE: You should not be logged into your Plasma session while doing this. It is also highly recommended to back up the folders mentioned below before deleting anything.
+You may be able to fix this by clearing KDE / Plasma cache files, by following the steps below.
 
-- While still logged into your Plasma session, cd to your home directory, and back up the following directories:
+:::caution
+
+You should not be logged into your Plasma session while doing this. It is also highly recommended to back up the folders mentioned below before deleting anything.
+
+:::
+
+1. While still logged into your Plasma session, cd to your home directory:
 
   ```bash
   cd
+  ```
+
+2. Run these commands to back up the following directories:
+
+  ```bash
   cp -av ~/.kde{,.bak}
   cp -av ~/.config{,.bak}
   cp -av ~/.local{,.bak}
   cp -av ~/share{,.bak}
   ```
 
-- Log out of Plasma. Boot from a live USB, such as one of the Solus live environments.
-- Mount your hard drive's system. For instructions on how to do this see [Mounting your system](https://help.getsol.us/docs/user/troubleshooting/boot-rescue#mounting-your-system)
+  The output will show what files were copied. Each directory will have another copy with a .bak extension such as `~/.config.bak`. These can be used to recover configuration files, if necessary.
 
-- Change to your user's directory where you mounted your system. In this example, your system has been mounted to `/mount`:
+2. Shut down the system. Boot from a live USB, such as one of the Solus live environments.
+3. Mount your hard drive's system. For instructions on how to do this see [Mounting your system](/docs/user/troubleshooting/boot-rescue#mounting-your-system).
+4. Change to your user's directory where you mounted your system. In this example, your system has been mounted to `/mount`:
 
   ```bash
   cd /mount/home/username
   ```
 
-- Run the following from your home directory that you just switched to:
+  Replace "username" with the username you use for Solus.
+  You can make sure the directory is correct by listing the files:
+
+  ```bash
+  ls -laH
+  ```
+
+  You should see the files you would usually see in your home directory when logged into Solus normally.
+
+5. Now you need to remove the various caches that Plasma uses.
+
+  Run the following from your home directory that you just switched to:
 
   ```bash
   rm -rf .kde
@@ -71,4 +97,5 @@ NOTE: You should not be logged into your Plasma session while doing this. It is 
   rm -f plasma*
   rm -rf kde* akonadi* KDE kconf_updaterc baloo* dolphinrc drkonqirc gwenviewrc kmail2rc k*rc katemetainfos
   ```
-Reboot back into your regular Plasma session. Check the application to see if it looks OK now.
+6. Shut down the live environment and remove the live USB drive.
+7. Reboot back into your regular Plasma session. Check the application to see if it looks OK now.
