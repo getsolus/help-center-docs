@@ -239,9 +239,9 @@ Click one of the images displayed on the right to choose a pre-installed backgro
 
 ## Desktop Icons
 
-Desktop Icons are enabled by default when Budgie is installed for the first time. To check or toggle this setting, open the Budgie Desktop Settings app by selecting "Budgie Desktop Settings" from the Budgie Menu, or from the pop-up menu when right-clicking on a blank spot on the desktop.
+Desktop Icons are enabled by default. To disable them, open the Budgie Desktop Settings app by selecting "Budgie Desktop Settings" from the Budgie Menu, or from the pop-up menu when right-clicking on a blank spot on the desktop.
 
-In the Budgie Desktop Settings app, click Desktop in the left-hand sidebar - Desktop Icons is the first toggle switch on that screen.
+In the Budgie Desktop Settings app, click "Desktop" in the left-hand sidebar - Desktop Icons is the first toggle switch on that screen.
 
 ![Budgie Desktop Icons](configuration/budgie-desktop-settings-desktop-section.jpg)
 
@@ -251,13 +251,13 @@ To place files on your desktop, you can either drag them directly onto the Deskt
 
 ## Workspaces
 
-Budgie enables the switching of workspaces via the Workspace Switcher. You can enable workspaces in Budgie by adding the Workspace Switcher applet to your panel.
+Budgie enables the switching of workspaces with the Workspace Switcher. You can enable workspaces in Budgie by adding the Workspace Switcher applet to your panel.
 
 To add this applet, open the Budgie Control Center by selecting "System Settings" from either the Budgie Menu, or by right-clicking on a blank spot on the desktop. Once in the Budgie Control Center, in the left-hand sidebar, select the panel to which you want to add the Workspace Switcher (choose the default Bottom Panel if you don't want to add more panels at this time).
 
 ![Budgie Desktop Settings Panel Section](configuration/budgie-desktop-settings-bottom-panel.jpg)
 
-Click the + button next to 'Add applet' on the right side of the window. This will open the list of available applets - scroll down until you find `Workspace Switcher`, select it, and then click the 'Add' button in the top-right of the window.
+Click the + button next to "Add applet" on the right side of the window. This will open the list of available applets - scroll down until you find "Workspace Switcher", select it, and then click the 'Add' button in the top-right of the window.
 
 ![Adding Budgie Workspaces Applet](configuration/budgie-control-center-panel-add-workspace-switcher.jpg)
 
@@ -269,17 +269,17 @@ You should now see your workspaces available in the main Budgie panel. Applicati
 
 Budgie provides a variety of keyboard shortcuts for workspaces.
 
-To view these shortcuts, open the Budgie Control Center app, choose the Keyboard section in the left-hand sidebar, then scroll down in the right part of the window to choose 'Keyboard Shortcuts'.
+To view these shortcuts, open the Budgie Control Center app, choose the "Keyboard" section in the left-hand sidebar, then scroll down in the right part of the window to choose "Keyboard Shortcuts".
 
 ![Budgie Control Center Keyboard Shortcuts](configuration/budgie-control-center-keyboard-shortcuts-location.jpg)
 
-Workspace shortcuts are contained in the 'Navigation' section of the Keyboard Shortcuts window.
+Workspace shortcuts are contained in the "Navigation" section of the Keyboard Shortcuts window.
 
 ![Budgie Control Center Keyboard Shortcuts Sections](configuration/budgie-control-center-keyboard-shortcuts-popup.jpg)
 
 ### Workspaces Configuration
 
-There are 4 workspaces available in Budgie by default. To add a new workspace, click on the `+` button.
+There are 4 workspaces available in Budgie by default. To add a new workspace, click on the "+" button.
 
 If you wish to remove or rename your workspace, right click on the desired workspace and select rename or remove.
 
