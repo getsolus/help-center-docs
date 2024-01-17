@@ -67,7 +67,7 @@ Using Budgie, you can change your keyboard layout in the Budgie Control Center. 
 
 ![Budgie Keyboard Settings](configuration/budgie-control-center-keyboard.jpg)
 
-Click the `+` button to add an input source (keyboard layout). You will be shown the following dialog.
+Click the "+" button to add an input source (keyboard layout). You will be shown the following dialog.
 
 ![Budgie Add Input Source](configuration/budgie-control-center-add-input-method.jpg)
 
@@ -77,7 +77,7 @@ After choosing the keyboard layout, click the "Add" button at the top of the win
 
 ![Budgie New Layout Added](configuration/budgie-input-sources-multiple.jpg)
 
-You can remove a keyboard layout by clicking on one of the items, for instance Swedish, then clicking the `⋮` button, then choosing "Remove".
+You can remove a keyboard layout by clicking on one of the items, for instance Swedish, then clicking the "⋮" button, then choosing "Remove".
 
 If you wish to use multiple keyboard layouts, you can switch between them by using the keyboard shortcut `Super + Shift + Space`, or by adding the Keyboard Layout Indicator applet to your Budgie panel.
 
@@ -87,7 +87,7 @@ To add the Keyboard Layout Indicator to your panel, open the Budgie Desktop Sett
 
 ![Budgie Bottom Panel Settings](configuration/budgie-desktop-settings-bottom-panel-clock.jpg)
 
-On the right side of the window, click the `+` button next to "Add applet".
+On the right side of the window, click the "+" button next to "Add applet".
 
 Find the Keyboard Layout Indicator entry and select it, then click "Add" at the top of the window. This will add the Keyboard Layout Indicator (to the center section by default), as shown below.
 
