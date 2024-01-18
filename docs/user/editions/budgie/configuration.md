@@ -77,7 +77,7 @@ After choosing the keyboard layout, click the "Add" button at the top of the win
 
 ![Budgie New Layout Added](configuration/budgie-input-sources-multiple.jpg)
 
-You can remove a keyboard layout by clicking on one of the items, for instance Swedish, then clicking the "⋮" button, then choosing "Remove".
+You can remove a keyboard layout by clicking on one of the items, for instance English (UK), then clicking the "⋮" button, then choosing "Remove".
 
 If you wish to use multiple keyboard layouts, you can switch between them by using the keyboard shortcut `Super + Shift + Space`, or by adding the Keyboard Layout Indicator applet to your Budgie panel.
 
@@ -97,7 +97,7 @@ Find the Keyboard Layout Indicator entry and select it, then click "Add" at the 
 
 Budgie comes with IBus ready to go straight out of the box. If you need an additional IBus IME see: [IBus](/docs/user/software/localization/ibus/)
 
-You will now be able to switch between your keyboard layouts by using the keyboard shortcut `Super + Shift /+ Space` or by using the Keyboard Layout Indicator applet.
+You will now be able to switch between your keyboard layouts by using the keyboard shortcut `Super + Shift + Space` or by using the Keyboard Layout Indicator applet.
 
 ![Budgie Keyboard Layout Applet: IBus](configuration/budgie-keyboard-layout-applet-ibus.jpg)
 
