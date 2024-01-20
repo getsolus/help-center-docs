@@ -5,13 +5,12 @@ set -e
 # 1. Converts all text to lowercase
 # 2. Sorts the file
 # 3. Removes duplicate entries
-
+ 
 TARGET='.cspell-allowed-words.txt'
 
 if [ ! -f $TARGET ]; then
     echo "File $TARGET not found!"
     exit 1
-
 fi
 
 awk -i inplace '{print tolower($0)}' $TARGET
