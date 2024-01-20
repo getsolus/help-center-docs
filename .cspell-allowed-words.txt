@@ -32,6 +32,7 @@ buddiesofbudgie
 builddeps
 caddyfile
 caja
+calamares
 cangjie
 cbindgen
 centrino
@@ -84,6 +85,7 @@ fdisk
 ferryctl
 ferryd
 filesharing
+firstpost
 flarum
 flatpak
 flicky
@@ -104,12 +106,14 @@ gpasswd
 gperf
 gssapi
 haruna
+headerbar
 homeserver
 hostnames
 hplip
 hyphenator
 ibetical
 ibus
+ikey
 inet
 inkjet
 inspiron
@@ -125,6 +129,7 @@ ksgrd
 ksshaskpass
 ksysguard
 ldflags
+libc
 libcurl
 libdir
 libfoobar
@@ -149,6 +154,7 @@ libudev
 libuiohook
 libwebp
 lifebook
+livingsilver
 luks
 lutris
 lvchange
@@ -182,6 +188,7 @@ nomodeset
 nopatch
 noprefixroute
 nproc
+nuitka
 nvme
 ocen
 ocenaudio
@@ -206,6 +213,7 @@ plexmediaserver
 pomo
 pomodoneapp
 portege
+posix
 powerline
 presario
 probook
@@ -259,6 +267,7 @@ smbdoptions
 smbpasswd
 solbuild
 solusesp
+somecommand
 somekey
 someotherpackage
 somepackage

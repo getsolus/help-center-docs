@@ -18,6 +18,8 @@ Close watchers of our [packages repository](https://github.com/getsolus/packages
 
 It's a long story.
 
+<!-- truncate -->
+
 Our package manager `eopkg` is written in Python2. Python2 was originally planned to hit end-of-life all the way back in 2015! So Solus contributors past and present have wrestled with three thorny issues:
 
 - Do we really want to just port `eopkg` to python3? Surely we could build something newer and shinier.
