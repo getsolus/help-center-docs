@@ -52,7 +52,7 @@ There are some important things to know when working with local repositories, as
 
 `eopkg` supports resolving packages from more than one repository. This can be used to configure `eopkg` to prefer installing local repository packages over packages from the Solus repository.
 
-This requires an existing local repository index. If you have used the command `go-task build-local`, then an index was created automatically. Otherwise, you must create one
+This requires an existing local repository index. If you have used the command `go-task build-local`, then an index was created automatically. Otherwise, you must create one.
 
 ### Creating or updating the local repository index
 
