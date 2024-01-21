@@ -21,7 +21,7 @@ sudo eopkg install solbuild-config-local-unstable
 
 You will also need to ensure that your repository is fully up to date. See [Update Your Development Environment](/docs/packaging/update-dev-environment.md)
 
-## Using to the local repository
+## Using the local repository
 
 ### Copying .eopkg files to the local repository
 
