@@ -148,7 +148,8 @@ To validate a working network connection (assuming a network connection is avail
 
 1. Exit the chroot by typing `exit`
 2. Run
-```
+
+```bash
 cp /run/systemd/resolve/stub-resolv.conf /target/run/systemd/resolve/
 cd /target/etc
 ln -s ../run/systemd/resolve/stub-resolv.conf /target/etc/resolv.conf
