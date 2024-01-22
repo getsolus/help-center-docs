@@ -92,7 +92,7 @@ sdb                      8:16   1   7.3G  0 disk
 
 #### UEFI
 
-If your system uses UEFI as opposed to GRUB, you will also need to mount your EFI System Partition, otherwise referred to as ESP. If you followed our [UEFI guide](/docs/user/quick-start/installation/disks#uefi) during installation of Solus, then in all likelihood your ESP will be about 500mb in size. If you're unsure of the partition, run the following, replacing X with the same letter during your mounting of your root file system, minus the number:
+If your system uses UEFI as opposed to GRUB, you will also need to mount your EFI System Partition, otherwise referred to as ESP. If you followed our [UEFI guide](/docs/user/quick-start/installation/disks#uefi) during installation of Solus, then in all likelihood your ESP will be about 1GB in size. For an older installation, it may be around 512MB. If you're unsure of the partition, run the following, replacing X with the same letter during your mounting of your root file system, minus the number:
 
 For HDD / SDD drives:
 
