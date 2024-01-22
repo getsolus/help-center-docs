@@ -3,13 +3,13 @@ title: Community Guidelines
 summary: Community Guidelines
 ---
 
-# Community Guidelines
+# Community guidelines
 
 The Solus Project enforces a set of community guidelines to maintain a family-friendly, respectful, and professional environment.
 
 Our guidelines apply to all services offered or used by the project, in addition to any terms of service of third-party services used by the project. Solus Staff reserves the right to either ban or terminate access, on a temporary or permanent basis, to members of the community which are found to be violating our guidelines.
 
-## General Guidelines
+## General guidelines
 
 The guidelines laid out in this section apply to all services offered or used by the project, such as (but not limited to):
 
@@ -41,11 +41,11 @@ Members of the community are expected to engage in a manner which is respectful 
 
 Profane language which is not derogatory, hateful, or sexual in nature may be allowed in specific off-topic rooms or other locations permitted by the project. However, the Solus Staff moderation team reserves the right to request the immediate ceasing of the use of such language by any individual if it is deemed to be derogatory, hateful, sexual, or in a manner which is otherwise distasteful.
 
-### Media Sharing
+### Media sharing
 
 Members of the community shall not link / share media which is illegal, pornographic / sexual, or otherwise offensive in nature. This extends to sharing media which shows any illegal or otherwise harmful acts, such as acts of violence.
 
-### Observe Topic Guidance
+### Observe topic guidance
 
 Members of the community should attempt to observe topic guidance when participating in various services offered or used by the project, such as:
 
@@ -57,15 +57,16 @@ Members of the community should attempt to observe topic guidance when participa
 
 The below guidelines do not fall into any specific category but should be observed by members of the community:
 
-- The continual repetition and/or advertisement of any products, services, or projects is not permitted.
-- The usage of bots unless explicitly permitted by the project is strictly forbidden.
-- No spamming or flooding. This may result in temporary removals (e.g. kicks in IRC) to prevent the continued spamming or flooding.
+- Continual repetition and/or advertisement of any products, services, or projects is not allowed.
+- Using bots or other automated ways of interaction, unless explicitly permitted by the project, is not allowed.
+- No spamming or flooding. This may result in temporary removals (for example: kicks in Matrix) or warnings, to prevent the continued spamming or flooding.
+- Promotion of unofficial Solus communities or communication channels without prior permission is not allowed.
 
-## Service-Specific Guidelines
+## Service-specific guidelines
 
 The below mentioned guidelines apply to individual services provided or used by the project.
 
-### Development / Issue Trackers
+### Repositories and  issue trackers
 
 Solus utilizes a number of repositories and issue trackers to facilitate the development of various items in our project and to address issues raised by our community through tasks / issue reports. These include, but are not limited to:
 
