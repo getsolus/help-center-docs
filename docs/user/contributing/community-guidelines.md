@@ -66,7 +66,7 @@ The below guidelines do not fall into any specific category but should be observ
 
 The below mentioned guidelines apply to individual services provided or used by the project.
 
-### Repositories and  issue trackers
+### Repositories and issue trackers
 
 Solus utilizes a number of repositories and issue trackers to facilitate the development of various items in our project and to address issues raised by our community through tasks / issue reports. These include, but are not limited to:
 
