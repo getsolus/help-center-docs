@@ -153,6 +153,7 @@ cp /run/systemd/resolve/stub-resolv.conf /target/run/systemd/resolve/
 cd /target/etc
 ln -s ../run/systemd/resolve/stub-resolv.conf /target/etc/resolv.conf
 ```
+
 3. Chroot back into `/target` by running `chroot /target` again.
 4. Retry networking.
 
