@@ -130,6 +130,7 @@ ksshaskpass
 ksysguard
 ldflags
 libc
+libcmis
 libcurl
 libdir
 libfoobar
@@ -155,6 +156,7 @@ libuiohook
 libwebp
 lifebook
 livingsilver
+localrepo
 luks
 lutris
 lvchange
@@ -236,6 +238,7 @@ readline
 realtek
 redditor
 redistributable
+reindex
 releng
 relocs
 relro
