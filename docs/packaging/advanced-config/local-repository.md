@@ -65,7 +65,7 @@ sudo eopkg index --skip-signing /var/lib/solbuild/local/ --output /var/lib/solbu
 Or, if you have our [helper functions](docs/packaging/prepare-for-packaging#set-up-monorepo-helper-functions-optional) set up, you get the same result by running:
 
 ```bash
-reindex-localrepo
+localrepo_reindex
 ```
 
 Keep in mind that the index needs to be refreshed whenever you add or remove locally built packages to your local repository. Otherwise, `eopkg` won't know that new packages are available or have been removed from the local repository.
