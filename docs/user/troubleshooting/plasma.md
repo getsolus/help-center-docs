@@ -93,4 +93,4 @@ You should not be logged into your Plasma session while deleting the cache files
   ```
   cp -rav .kde.bak/share/config/ .kde/share/config
   ```
-  After restoring the file(s) or directories, restart your system.
+  After restoring the files or directories, restart your system.
