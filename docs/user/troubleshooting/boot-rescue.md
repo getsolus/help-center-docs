@@ -147,7 +147,12 @@ Assuming all goes well, you should now be able to chroot into your Solus system 
 To validate a working network connection (assuming a network connection is available in your live image), you can run `ping google.com` in the chrooted environment. If you get responses from `google.com`, you have a successful connection to the Internet. If you do not, try the following:
 
 1. Exit the chroot by typing `exit`
-2. Run `cp /etc/resolv.conf /target/etc/`
+2. Run
+```
+cp /run/systemd/resolve/stub-resolv.conf /target/run/systemd/resolve/
+cd /target/etc
+ln -s ../run/systemd/resolve/stub-resolv.conf /target/etc/resolv.conf
+```
 3. Chroot back into `/target` by running `chroot /target` again.
 4. Retry networking.
 
