@@ -9,6 +9,7 @@ When testing, try to keep different types of users in mind. For instance, would 
 ## For any release
 
 - ISO can be written to a USB, used to boot a system and install
+- Can unlock the device if the live ISO lockscreen engaes
 - Installer is easy to follow
 - Installer detects location, time and time zone properly. Bonus points if the correct timezone is shown in the picker and you don't have to manually select one.
 - Start menu works, has search
