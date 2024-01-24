@@ -43,13 +43,6 @@ sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-par
 sudo eopkg it franz*.eopkg;sudo rm franz*.eopkg
 ```
 
-### Skype for Linux
-
-```bash
-sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/network/im/skype/pspec.xml
-sudo eopkg it skype*.eopkg;sudo rm *.eopkg
-```
-
 ### Slack
 
 ```bash
