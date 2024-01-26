@@ -74,4 +74,4 @@ sudo eopkg install sway
 
 Sway expects users to do some configuration, refer to the [Sway Wiki](https://github.com/swaywm/sway/wiki).
 
-For more information about tiling window managers, click [here](https:/en.wikipedia.org/wiki/Tiling_window_manager).
+For more information about tiling window managers, click [here](https://en.wikipedia.org/wiki/Tiling_window_manager).
