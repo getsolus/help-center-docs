@@ -100,7 +100,7 @@ const config = {
             type: "docSidebar",
             sidebarId: "userSidebar",
             position: "left",
-            label: "Help Center Home",
+            label: "Users",
           },
           {
             type: "docSidebar",

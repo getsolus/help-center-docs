@@ -1,15 +1,15 @@
 {
   "title": {
-    "message": "Solus",
+    "message": "Solus Help Center",
     "description": "The title in the navbar"
   },
   "logo.alt": {
     "message": "Solus Logo",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Help Center Home": {
-    "message": "Help Center Home",
-    "description": "Navbar item with label Help Center Home"
+  "item.label.Users": {
+    "message": "Users",
+    "description": "Navbar item with label Users"
   },
   "item.label.Packaging": {
     "message": "Packaging",
