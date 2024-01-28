@@ -6,51 +6,36 @@ sidebar_position: 0
 
 # Welcome
 
-Solus is committed to helping our users get the most out of their systems. The Help Center has been put together to introduce Solus users to our ecosystem and guide them through some of the most common tasks they might need help with.
+Solus is committed to helping users get the most out of their systems. We designed the help center to introduce our ecosystem and guide you through typical tasks you might need help with.
 
-## Sections
+## Table of contents
 
-With that in mind, the Help Center has been broken up into several sections to help better organize the docs within:
+We organized the help center into sections to help you navigate the contents easily:
 
-**[Quick Start](/docs/category/quick-start)**
+| Section                                                  | Description                                                                                                                                                               |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Quick Start](/docs/category/quick-start)                | If you're new to Solus, this section will set you on the right track. Find documentation on installing Solus, software management, the boot process, and troubleshooting. |
+| [Contributing](/docs/category/contributing)              | Find how you can contribute to Solus, whether you're a beginner or an experienced Linux and Solus user.                                                                   |
+| [Editions](/docs/user/editions/)                         | Understand the different editions of Solus: differences between editions, configuration tasks, and helpful tips and tricks.                                               |
+| [Hardware](/docs/user/hardware/)                         | Solus supports most hardware out-of-the-box, but there are exceptions. This section focuses on those exceptions and how to get the most out of your hardware.             |
+| [Package management](/docs/category/package-management/) | Learn how to install software and manage the repositories of your Solus system.                                                                                           |
+| [Privacy policy](/docs/user/privacy.md)                  | Understand our privacy policy: Learn how we handle your data, and how to contact us for privacy concerns.                                                                 |
+| [Software](/docs/category/software/)                     | Getting started and configuration guides for the software packages included in Solus.                                                                                     |
+| [Troubleshooting](/docs/user/troubleshooting/)           | Learn how to diagnose and fix problems you might have with Solus.                                                                                                         |
 
-If you've never used Solus before, this section will set you on the right track. It contains docs related to installing Solus, software package management, the boot process, and troubleshooting all of the above.
+## Support channels
 
-**[Editions](/docs/user/editions/)**
+If you need help with something not covered in the help center, there are various channels where you can seek support from the Solus team or other Solus users.
 
-Solus comes in multiple editions for different desktop environments. The purpose of this section is to introduce you to those desktops, walk you through common configuration tasks, and provide useful tips and tricks.
+| Channel                                         | Description                                                                                                                                                                    |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Forums](https://discuss.getsol.us)             | Our Flarum-powered forums are easy to use from any device and are a great resource for getting support.                                                                        |
+| [Matrix](https://matrix.to/#/#solus:matrix.org) | Matrix is a great way to discuss issues and development in real-time. Learn how to access Solus' Matrix space [here](/docs/user/contributing/getting-involved.md#matrix-chat). |
+| [Reddit](https://www.reddit.com/r/SolusProject) | If you are a Redditor, our subreddit has a similar purpose to the forums.                                                                                                      |
+| [Issue tracker](https://issues.getsol.us)       | If you have issues with your Solus system, or any of our software packages doesn't work as expected, consider filing a bug report on our issue tracker.                        |
 
-**[Hardware](/docs/user/hardware/)**
+:::caution[Important]
 
-For the most part, Solus will work with the majority of hardware out-of-the-box. But there are always exceptions. The docs in this section are focused on those exceptions and how to get the most out of your hardware.
+Volunteers around the world build and maintain Solus. Due to time zone differences there might not always be people to answer your questions immediately.
 
-**[Software](/docs/category/software)**
-
-We believe that Solus is for everyone. Each installation comes with a sane set of default applications for the majority of people, but everyone uses Solus for their own reasons. This section is intended to help you install other software to better suit your needs.
-
-**[Contributing](/docs/category/contributing)**
-
-Solus is not a commercial project. It is built and maintained by volunteers who use Solus every day and have a passion for making it better. Whatever your skill-level or knowledge about Linux and Solus, this section will show you how to contribute to Solus.
-
-## Additional Support
-
-The Help Center is not intended to be as comprehensive as something like the Arch Wiki. If you find yourself needing help with something not covered here, there are a variety of places you might get support from us or fellow users.
-
-**[Forums](https://discuss.getsol.us)**
-
-Our Flarum-powered forums are easy to use from any device and are a great resource for getting support.
-
-**[Matrix](https://matrix.to/#/#solus:matrix.org)**
-
-[Matrix](<https://en.wikipedia.org/wiki/Matrix_(protocol)>) is a great way to discuss issues and development with the community, and project developers in real-time. It's also a great place for getting support, but remember due
-to timezone differences there might not always be people there to answer your question immediately. You can access [Matrix](/docs/user/contributing/getting-involved.md#matrix-chat) using a client like [Element Web](https://app.element.io/), or many [others](https://matrix.org/ecosystem/clients/). You will need a [Matrix](/docs/user/contributing/getting-involved.md#matrix-chat) account.
-
-Read more about Solus on Matrix [here.](/docs/user/contributing/getting-involved.md#matrix-chat)
-
-**[Reddit](https://www.reddit.com/r/SolusProject)**
-
-If you are a Redditor, our subreddit fulfills a similar purpose to the forums.
-
-**[Issue Tracker](https://issues.getsol.us)**
-
-If you are having issues with your Solus system or one of our software packages not working as expected, you might consider filing a bug report on our issue tracker.
+:::
