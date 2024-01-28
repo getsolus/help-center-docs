@@ -18,7 +18,7 @@ The flagship desktop environment / experience of Solus is Budgie. If you have in
 sudo eopkg install -c desktop.budgie
 ```
 
-## Gnome Shell
+## GNOME Shell
 
 Solus offers a GNOME Shell experience that ships out-of-the-box with a variety of extensions. If you have installed either our Budgie or XFCE editions, you can try out and install GNOME Shell by running the following commands:
 
