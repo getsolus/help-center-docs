@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksolus_help_center=self.webpackChunksolus_help_center||[]).push([[6610],{72142:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/devlog","page":1,"postsPerPage":2,"totalPages":1,"totalCount":2,"blogDescription":"The Solus Development (b)log!","blogTitle":"Solus DevLog"}')}}]);
