@@ -76,6 +76,7 @@ envsetup
 eopkg
 eopkgs
 epcsearch
+ermo
 escpr
 exfat
 fastboot
@@ -197,6 +198,7 @@ ocenaudio
 oflag
 openrazer
 organised
+packagekit
 packagename
 persson
 perussanasto
@@ -270,6 +272,8 @@ smbdoptions
 smbpasswd
 solbuild
 solusesp
+solusian
+solusians
 somecommand
 somekey
 someotherpackage
@@ -332,6 +336,7 @@ wireshark
 workdir
 wsdd
 wxwidgets
+xcfe
 xmodifiers
 xone
 xorg

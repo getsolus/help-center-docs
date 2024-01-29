@@ -1,6 +1,5 @@
 ---
 title: eopkg is dead, long live eopkg
-description: Welcome to the Solus Development Log.
 slug: eopkg-is-dead-long-live-eopkg
 authors:
   - name: David Harder
