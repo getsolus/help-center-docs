@@ -89,9 +89,9 @@ We recommend using [Brasero](https://wiki.gnome.org/Apps/Brasero) for writing th
 
 ##### Graphical tool
 
-We recommend using [Gnome MultiWriter](https://wiki.gnome.org/Apps/MultiWriter). Please note that unetbootin will **not** work.
+We recommend using [GNOME MultiWriter](https://wiki.gnome.org/Apps/MultiWriter). Please note that unetbootin will **not** work.
 
-Upon opening Gnome MultiWriter, you will likely be shown a window similar to the one below, in the event your USB drive is already plugged in.
+Upon opening GNOME MultiWriter, you will likely be shown a window similar to the one below, in the event your USB drive is already plugged in.
 
 ![MultiWriter Start](start.jpg)
 
