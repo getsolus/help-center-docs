@@ -113,6 +113,41 @@ const config = {
             label: "Dev Log",
             position: "left",
           },
+          {
+            label: "More",
+            items: [
+              {
+                href: "https://getsol.us",
+                label: "Solus Homepage",
+              },
+              {
+                label: "Forums",
+                href: "https://discuss.getsol.us/",
+              },
+              {
+                href: "https://matrix.to/#/#solus:matrix.org",
+                label: "Matrix",
+              },
+              {
+                label: "Mastodon",
+                href: "https://fosstodon.org/@Solus",
+              },
+              {
+                label: "Github",
+                href: "https://github.com/getsolus",
+              },
+              {
+                label: "Packages",
+                href: "https://dev.getsol.us/",
+              },
+              {
+                label: "Issue Tracker",
+                href: "https://issues.getsol.us/",
+              },
+            ],
+            type: "dropdown",
+            position: "left",
+          },
         ],
       },
       footer: {
