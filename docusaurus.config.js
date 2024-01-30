@@ -122,8 +122,25 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Welcome",
+                label: "Users",
                 to: "/docs/user/intro",
+              },
+              {
+                label: "Packaging",
+                to: "/docs/packaging",
+              },
+            ],
+          },
+          {
+            title: "News",
+            items: [
+              {
+                label: "Solus Blog",
+                to: "https://getsol.us/blog",
+              },
+              {
+                label: "Solus Devlog",
+                to: "blog",
               },
             ],
           },
@@ -149,8 +166,8 @@ const config = {
             title: "More",
             items: [
               {
-                label: "Blog",
-                to: "https://getsol.us/blog",
+                label: "Solus Homepage",
+                to: "https://getsol.us/",
               },
               {
                 label: "GitHub",
