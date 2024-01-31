@@ -3,6 +3,10 @@
     "message": "Docs",
     "description": "The title of the footer links column with title=Docs in the footer"
   },
+  "link.title.News": {
+    "message": "News",
+    "description": "The title of the footer links column with title=News in the footer"
+  },
   "link.title.Community": {
     "message": "Community",
     "description": "The title of the footer links column with title=Community in the footer"
@@ -11,9 +15,21 @@
     "message": "More",
     "description": "The title of the footer links column with title=More in the footer"
   },
-  "link.item.label.Welcome": {
-    "message": "Welcome",
-    "description": "The label of footer link with label=Welcome linking to /docs/user/intro"
+  "link.item.label.Users": {
+    "message": "Users",
+    "description": "The label of footer link with label=Users linking to /docs/user/intro"
+  },
+  "link.item.label.Packaging": {
+    "message": "Packaging",
+    "description": "The label of footer link with label=Packaging linking to /docs/user/packaging"
+  },
+  "link.item.label.SolusBlog": {
+    "message": "SolusBlog",
+    "description": "The label of footer link with label=SolusBlog linking to  https://getsol.us/blog"
+  },
+  "link.item.label.SolusDevlog": {
+    "message": "Solus Devlog",
+    "description": "The label of footer link with label=Users linking to /blog"
   },
   "link.item.label.Forums": {
     "message": "Forums",
@@ -27,9 +43,9 @@
     "message": "Mastodon",
     "description": "The label of footer link with label=Mastodon linking to https://fosstodon.org/@Solus"
   },
-  "link.item.label.Blog": {
-    "message": "Blog",
-    "description": "The label of footer link with label=Blog linking to https://getsol.us/blog"
+  "link.item.label.SolusHomepage": {
+    "message": "Solus Homepage",
+    "description": "The label of footer link with label=SolusHomepage linking to https://getsol.us/"
   },
   "link.item.label.GitHub": {
     "message": "GitHub",

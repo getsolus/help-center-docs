@@ -100,7 +100,7 @@ const config = {
             type: "docSidebar",
             sidebarId: "userSidebar",
             position: "left",
-            label: "Help Center Home",
+            label: "Users",
           },
           {
             type: "docSidebar",
@@ -113,6 +113,41 @@ const config = {
             label: "Dev Log",
             position: "left",
           },
+          {
+            label: "More",
+            items: [
+              {
+                href: "https://getsol.us",
+                label: "Solus Homepage",
+              },
+              {
+                label: "Forums",
+                href: "https://discuss.getsol.us/",
+              },
+              {
+                href: "https://matrix.to/#/#solus:matrix.org",
+                label: "Matrix",
+              },
+              {
+                label: "Mastodon",
+                href: "https://fosstodon.org/@Solus",
+              },
+              {
+                label: "Github",
+                href: "https://github.com/getsolus",
+              },
+              {
+                label: "Packages",
+                href: "https://dev.getsol.us/",
+              },
+              {
+                label: "Issue Tracker",
+                href: "https://issues.getsol.us/",
+              },
+            ],
+            type: "dropdown",
+            position: "left",
+          },
         ],
       },
       footer: {
@@ -122,8 +157,25 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Welcome",
+                label: "Users",
                 to: "/docs/user/intro",
+              },
+              {
+                label: "Packaging",
+                to: "/docs/packaging",
+              },
+            ],
+          },
+          {
+            title: "News",
+            items: [
+              {
+                label: "Solus Blog",
+                to: "https://getsol.us/blog",
+              },
+              {
+                label: "Solus Devlog",
+                to: "blog",
               },
             ],
           },
@@ -149,8 +201,8 @@ const config = {
             title: "More",
             items: [
               {
-                label: "Blog",
-                to: "https://getsol.us/blog",
+                label: "Solus Homepage",
+                to: "https://getsol.us/",
               },
               {
                 label: "GitHub",
