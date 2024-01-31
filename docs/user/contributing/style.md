@@ -20,13 +20,13 @@ Use the [Google developer documentation style guide](https://developers.google.c
 Some useful pages:
 
 - [Text formatting summary](https://developers.google.com/style/text-formatting)
-- [Procedure](https://developers.google.com/style/procedures)
+- [Procedures](https://developers.google.com/style/procedures)
 - [Timeless documentation](https://developers.google.com/style/timeless-documentation)
 - [Word list](https://developers.google.com/style/word-list)
 
 ## Linux-specific terms
 
-If you are unsure of how to use a common linux term, refer to the [Glossary of terms and conventions](https://redhat-documentation.github.io/supplementary-style-guide/#glossary-terms-conventions) from the _Red Hat supplementary style guide for documentation_
+If you are unsure of how to use a common Linux term, refer to the [Glossary of terms and conventions](https://redhat-documentation.github.io/supplementary-style-guide/#glossary-terms-conventions) from the _Red Hat supplementary style guide for documentation_
 
 ## Specific guidance
 
@@ -81,7 +81,7 @@ console.log("Hello, world!");
   - Example: "The packages repository", instead of "The monorepo".
 - Dev Tracker
   - Avoid using the term _Dev Tracker_.
-  - Example: "The packages issue tracker", instead or "The dev tracker"
+  - Example: "The packages issue tracker", instead of "The dev tracker"
 
 ### Markdown formatting
 

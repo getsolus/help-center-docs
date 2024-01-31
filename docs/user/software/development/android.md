@@ -73,7 +73,7 @@ First we need to create a directory where we want to download Android.
 mkdir ~/android && cd ~/android
 ```
 
-Next we'll need to initialize the repository with what version of Android you want to build. You can find a list of versions you can checkout [here](https://source.android.com/source/build-numbers#source-code-tags-and-builds).
+Next we'll need to initialize the repository with what version of Android you want to build. You can find a list of versions you can checkout [here](https://source.android.com/docs/setup/reference/build-numbers#source-code-tags-and-builds).
 
 ```bash
 repo init -u https://android.googlesource.com/platform/manifest -b android-8.0.0_r34

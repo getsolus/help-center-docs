@@ -35,7 +35,7 @@ You may not need to reboot to recover from this state. Killing all firefox proce
 
 You may be able to fix this by clearing KDE / Plasma cache files.
 
-:::cautionImportant
+:::caution Important
 
 You should not be logged into your Plasma session while deleting the cache files, booting from a live USB is necessary.
 

@@ -15,7 +15,7 @@ Solus comes pre-installed with Firefox, a secure and trustworthy web browser pro
 
 # Email Client
 
-Solus comes pre-installed with the powerful [Thunderbird](https://www.mozilla.org/thunderbird/) email, newsgroup, and feeds client.
+Solus comes pre-installed with the powerful [Thunderbird](https://www.thunderbird.net/) email, newsgroup, and feeds client.
 
 ![Thunderbird Screenshot](default-applications/thunderbird.jpg)
 
@@ -33,10 +33,6 @@ Each Linux desktop environment has its own graphical application for managing fi
 ## Nemo
 
 ![Nemo Screenshot](default-applications/nemo.jpg)
-
-## Caja
-
-![Caja Screenshot](default-applications/caja.jpg)
 
 ## GNOME Files
 

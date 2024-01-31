@@ -11,9 +11,9 @@ When using a terminal session to perform command-line activities, a Unix shell i
 
 Solus makes available other shells via our repository, with a full list available in `/usr/share/defaults/etc/shells`. Common shells, aside from Bash, are:
 
-- [Dash](http://gondor.apana.org.au/~herbert/dash/)
+- [Dash](https://gondor.apana.org.au/~herbert/dash/)
 - [Fish](https://fishshell.com/)
-- [Zsh](http://zsh.sourceforge.io/)
+- [Zsh](https://zsh.sourceforge.io/)
 
 ### Installation
 
@@ -57,7 +57,7 @@ The fzf project consists of the following components: an `fzf` executable, an `f
 sudo eopkg it fzf
 ```
 
-The shell extensions are not enabled by default after the `fzf` package is installed. The procedures to enable these features are described below. For more tips and examples on the usage of `fzf`, visit its [github](https://github.com/junegunn/fzf) and [wiki](https://github.com/junegunn/fzf/wiki/examples) pages.
+The shell extensions are not enabled by default after the `fzf` package is installed. The procedures to enable these features are described below. For more tips and examples on the usage of `fzf`, visit its [GitHub repository](https://github.com/junegunn/fzf) and [Wiki pages](https://github.com/junegunn/fzf/wiki/examples).
 
 ### Fuzzy Auto-Completion
 
