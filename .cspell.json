@@ -1,0 +1,15 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": ["add", "to", ".cspell-allowed-words.txt", "instead"],
+  "flagWords": ["flaggedword", "hte", "repo"],
+  "dictionaries": ["cspell-allowed-words"],
+
+  "dictionaryDefinitions": [
+    {
+      "name": "cspell-allowed-words",
+      "path": "./.cspell-allowed-words.txt",
+      "addWords": true
+    }
+  ]
+}

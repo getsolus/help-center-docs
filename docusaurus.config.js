@@ -1,8 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const themes = require("prism-react-renderer").themes;
+const lightCodeTheme = themes.github;
+const darkCodeTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -49,7 +50,13 @@ const config = {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          //editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          blogTitle: "Solus DevLog",
+          blogDescription: "The Solus Development (b)log!",
+          postsPerPage: "ALL",
+          blogSidebarTitle: "All posts",
+          blogSidebarCount: "ALL",
+          path: "devlog",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -93,7 +100,7 @@ const config = {
             type: "docSidebar",
             sidebarId: "userSidebar",
             position: "left",
-            label: "Help Center Home",
+            label: "Users",
           },
           {
             type: "docSidebar",
@@ -101,11 +108,45 @@ const config = {
             position: "left",
             label: "Packaging",
           },
-          { to: "https://getsol.us/blog", label: "Blog", position: "left" },
           {
-            href: "https://getsol.us",
-            label: "getsol.us",
-            position: "right",
+            to: "blog",
+            label: "Dev Log",
+            position: "left",
+          },
+          {
+            label: "More",
+            items: [
+              {
+                href: "https://getsol.us",
+                label: "Solus Homepage",
+              },
+              {
+                label: "Forums",
+                href: "https://discuss.getsol.us/",
+              },
+              {
+                href: "https://matrix.to/#/#solus:matrix.org",
+                label: "Matrix",
+              },
+              {
+                label: "Mastodon",
+                href: "https://fosstodon.org/@Solus",
+              },
+              {
+                label: "Github",
+                href: "https://github.com/getsolus",
+              },
+              {
+                label: "Packages",
+                href: "https://dev.getsol.us/",
+              },
+              {
+                label: "Issue Tracker",
+                href: "https://issues.getsol.us/",
+              },
+            ],
+            type: "dropdown",
+            position: "left",
           },
         ],
       },
@@ -116,8 +157,25 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Welcome",
+                label: "Users",
                 to: "/docs/user/intro",
+              },
+              {
+                label: "Packaging",
+                to: "/docs/packaging",
+              },
+            ],
+          },
+          {
+            title: "News",
+            items: [
+              {
+                label: "Solus Blog",
+                to: "https://getsol.us/blog",
+              },
+              {
+                label: "Solus Devlog",
+                to: "blog",
               },
             ],
           },
@@ -133,11 +191,6 @@ const config = {
                 href: "https://matrix.to/#/#solus:matrix.org",
               },
               {
-                label: "Twitter",
-                href: "https://twitter.com/SolusProject",
-                rel: "me",
-              },
-              {
                 label: "Mastodon",
                 href: "https://fosstodon.org/@Solus",
                 rel: "me",
@@ -148,8 +201,8 @@ const config = {
             title: "More",
             items: [
               {
-                label: "Blog",
-                to: "https://getsol.us/blog",
+                label: "Solus Homepage",
+                to: "https://getsol.us/",
               },
               {
                 label: "GitHub",
@@ -164,7 +217,6 @@ const config = {
                 label: "Issue Tracker",
                 href: "https://issues.getsol.us",
               },
-              
             ],
           },
         ],

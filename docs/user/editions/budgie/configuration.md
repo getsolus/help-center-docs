@@ -9,37 +9,37 @@ summary: Help for configuring the Budgie desktop on Solus
 
 ## Date and Time
 
-In Budgie, the easiest way to access the date and time settings is by left clicking on the time in the bottom panel and clicking on "Time and date settings".
+In Budgie, the easiest way to access the date and time settings is by left clicking on the time in the bottom panel and clicking on "System time and date settings".
 
-![Budgie Date and Time Right-Click](configuration/budgie-time-and-date-right-click.jpg)
+![Budgie Date and Time Right-Click](configuration/budgie-system-time-and-date-popup.jpg)
 
-Alternatively, you can open the Settings Menu and then click on "Details" and then "Date & Time" in the System Settings section.
+Alternatively, you can open the Budgie Control Center, and scroll the left-hand sidebar down to the bottom to find "Date & Time".
 
-You will be presented with the following window. This window provides you with the ability to enable / disable automatic date & time, automatic time zone changing, and the time format.
+You will be presented with the following window. From here, you can enable / disable automatic date & time, automatic time zone changing, and change between AM/PM and 24-hour time formats. Note that changing the system date & time and time zone information requires clicking the "Unlock" button at the top of the window, and entering your password.
 
-![Budgie Date and Time](configuration/budgie-configuring-date-and-time.jpg)
+![Budgie Date and Time](configuration/budgie-control-center-date-time.jpg)
 
-If you wish to change how the time is displayed in the bottom panel, left click on the time and click "Preferences". You can now show the date, seconds or use 24 hour time.
+If you wish to change how the time is displayed in the bottom panel, open Budgie Desktop Settings from the Budgie Menu, choose the Bottom Panel from the left-hand sidebar, choose "Clock" from the list of applets in the middle, then adjust your desired settings on the right-hand side.
 
-![Budgie Clock Applet](configuration/budgie-ClockApplet.jpg)
+![Budgie Clock Applet](configuration/budgie-desktop-settings-bottom-panel-clock.jpg)
+
+If you want to set a custom date & time format, the ["conversion specifications" referenced by the POSIX standards](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/date.html) list the options that can be entered.
 
 ## Default Applications
 
-You can configure default applications in Budgie by opening the Budgie Menu and then clicking on "Details" in the System Settings category.
+You can configure default applications in Budgie by opening the Budgie Control Center, and scrolling the left-hand sidebar down to "Default Applications".
 
-Upon entering the Details section, click on "Default Applications" and then use the drop down boxes to select a different default application for each category. For most categories, you will need to have installed alternative applications before you can change the default settings. For instance, if you wish to change the default video player from GNOME MPV to VLC then you must first install VLC (available in the Software Center).
+The drop-down boxes here enable choosing the default application for each category of file. For most categories, you will need to have already installed alternative applications before you can change the default settings. For instance, if you wish to change the default video player from Celluloid to VLC, then you must first install VLC (available in the Software Center).
 
-![Budgie Default Applications](configuration/budgie-configuring-default-applications.jpg)
+![Budgie Default Applications](configuration/budgie-control-center-default-applications.jpg)
 
-_Note: In the image above, we've changed the Web browser and Photo viewer._
+You can specify default applications for individual file types by right-clicking on a file and clicking on "Open With" from the popup menu, then choosing "Other Application".
 
-You can specify default applications for individual file types by right clicking on a file and then clicking on "Open With Other Application".
+![Budgie Context Menu](configuration/budgie-open-with.jpg)
 
-![Budgie Context Menu](configuration/budgie-open-with-right-click.jpg)
+Next, select the application you wish to use from the list, then click "Set as default" below the list. Finish by clicking "OK". In the future, all files with the same file type will open with the chosen application.
 
-Next, select the application you wish to use from the list. You may need to click "View All Applications" if you can't see the one you would like to use. Finish by clicking "Select". In the future, all files with the same file type will open with the same application.
-
-![Budgie Application Selection](configuration/budgie-open-with-select-application.jpg)
+![Budgie Application Selection](configuration/budgie-open-with-other.jpg)
 
 ## Displays
 
@@ -63,43 +63,41 @@ Click "Apply" once you are happy with your changes. You will be shown a message 
 
 ## Keyboard Layout
 
-Using Budgie, you can change your keyboard layout by opening the Budgie Menu and then clicking on "Region and Language" in the System Settings category.
+Using Budgie, you can change your keyboard layout in the Budgie Control Center. Click on the Budgie Menu, click the System Settings icon at the bottom or "Budgie Control Center" in the application list, and then click on "Keyboard" in the System Settings category.
 
-You will now be shown the following dialog.
+![Budgie Keyboard Settings](configuration/budgie-control-center-keyboard.jpg)
 
-![Budgie Region and Languages](configuration/budgie-region-and-languages.jpg)
+Click the "+" button to add an input source (keyboard layout). You will be shown the following dialog.
 
-Click the `+` button to add an input source (keyboard layout). You will be shown the following dialog.
+![Budgie Add Input Source](configuration/budgie-control-center-add-input-method.jpg)
 
-![Budgie Add Input Source](configuration/budgie-add-input-source.png)
+Here you can select the language and then keyboard layout within each language section. If it does not appear in this list, click the "⋮" button (three vertical dots). This will enable you to search for the keyboard layout you wish to use.
 
-Here you can select the language and then keyboard layout within each language section. If it does not appear in this list, click the `⋮` button (three vertical dots). This will enable you to search for the keyboard layout you wish to use.
+After choosing the keyboard layout, click the "Add" button at the top of the window. You will be brought back to the following dialog with your new keyboard layout. In the image below, we are now using English (US) and English (UK) layouts.
 
-After choosing the keyboard layout, click "Done". You will be brought back to the following dialog with your new keyboard layout. In the image below, we are now using English (US), Finnish, and Swedish layout.
+![Budgie New Layout Added](configuration/budgie-input-sources-multiple.jpg)
 
-![Budgie New Layout Added](configuration/budgie-region-and-languages-newlang.jpg)
+You can remove a keyboard layout by clicking on one of the items, for instance English (UK), then clicking the "⋮" button, then choosing "Remove".
 
-You can remove a keyboard layout by clicking on one of the items, for instance Swedish, then clicking the `-` button.
-
-If you wish to use multiple keyboard layouts, you can switch between them by using the keyboard shortcut `Super + Space` or by adding the Keyboard Layout Indicator applet to your Budgie panel.
+If you wish to use multiple keyboard layouts, you can switch between them by using the keyboard shortcut `Super + Shift + Space`, or by adding the Keyboard Layout Indicator applet to your Budgie panel.
 
 ### Keyboard Layout Indicator
 
-To add the Keyboard Layout Indicator to your panel, open Raven, either by clicking on its icon in the far right of the system tray or using the keyboard shortcut `Super + A`. Now click the Raven settings cog icon.
+To add the Keyboard Layout Indicator to your panel, open the Budgie Desktop Settings app from the Budgie Menu, then click "Bottom Panel" on the left-hand sidebar.
 
-![Raven Settings Icon](configuration/raven-settings-cog.jpg)
+![Budgie Bottom Panel Settings](configuration/budgie-desktop-settings-bottom-panel-clock.jpg)
 
-Click the "Panel" button, then in the Applets section, click the `+` button.
+On the right side of the window, click the "+" button next to "Add applet".
 
-Find the Keyboard Layout Indicator entry and select it. Click the `+` button at the top of the panel. This will add the Keyboard Layout Indicator to the center section, as shown below.
+Find the Keyboard Layout Indicator entry and select it, then click "Add" at the top of the window. This will add the Keyboard Layout Indicator (to the center section by default), as shown below.
 
-![Budgie Keyboard Layout Applet](configuration/budgie-keyboard-layout-applet.jpg)
+![Budgie Keyboard Layout Applet](configuration/budgie-keyboard-layout-switcher.jpg)
 
 ### IBus
 
 Budgie comes with IBus ready to go straight out of the box. If you need an additional IBus IME see: [IBus](/docs/user/software/localization/ibus/)
 
-You will now be able to switch between your keyboard layouts by using the keyboard shortcut `Super + Space` or by using the Keyboard Layout Indicator applet.
+You will now be able to switch between your keyboard layouts by using the keyboard shortcut `Super + Shift + Space` or by using the Keyboard Layout Indicator applet.
 
 ![Budgie Keyboard Layout Applet: IBus](configuration/budgie-keyboard-layout-applet-ibus.jpg)
 
@@ -229,66 +227,60 @@ Upon clicking to remove the user, you will be given the option to keep their fil
 
 ## Desktop Background
 
-To change the desktop background in Budgie, simply right click anywhere on the desktop and select "Change background".
+To change the desktop background in Budgie, open the Budgie Control Center by selecting "System Settings" from either the Budgie Menu, or by right-clicking on a blank spot on the desktop.
 
-![Budgie Desktop Right-Click Menu](configuration/budgie-background-right-click.jpg)
+![Budgie Desktop Right-Click Menu](configuration/budgie-desktop-blank-space-right-click.jpg)
 
-Alternatively, you can open the Settings Menu and then click "Background" in the System Settings category.
+Once the Budgie Control Center is open, click "Background" on the left-hand sidebar.
 
-You will have two options, Background and Lock Screen. Click "Background".
+Click one of the images displayed on the right to choose a pre-installed background image, or click "Add Picture..." in the headerbar to add one of your own image files to the available options.
 
-![Budgie Settings Background Section](configuration/budgie-background-section.jpg)
-
-In this section, you can choose between Solus wallpapers, pictures in your Pictures folder, or solid colors. After choosing, click "Select".
-
-![Budgie Background Selection](configuration/budgie-background-selection.jpg)
+![Budgie Control Center Background Section](configuration/budgie-control-center-background.jpg)
 
 ## Desktop Icons
 
-With Budgie, start by opening Raven, either by clicking on its icon in the far right of the system tray or using the keyboard shortcut `Super + A`. Next, click the cog icon for Budgie Settings.
+Desktop Icons are enabled by default. To disable them, open the Budgie Desktop Settings app by selecting "Budgie Desktop Settings" from the Budgie Menu, or from the pop-up menu when right-clicking on a blank spot on the desktop.
 
-Alternatively, you can open the Budgie Menu and then click "Desktop" in the System Settings category.
+In the Budgie Desktop Settings app, click "Desktop" in the left-hand sidebar - Desktop Icons is the first toggle switch on that screen.
 
-![Budgie Desktop Icons](configuration/budgie-desktop-icons.jpg)
+![Budgie Desktop Icons](configuration/budgie-desktop-settings-desktop-section.jpg)
 
-You may now add things to your Desktop. This can be done by dragging an item onto the Desktop or by right clicking an icon and selecting Copy to / Move to Desktop. Alternatively, open the Budgie Menu and click on "Files" and then move the files you want to the Desktop folder (as shown in the image below). Please note, the Desktop folder is not visible in "Files" until you've enabled the Desktop icons.
+To place files on your desktop, you can either drag them directly onto the Desktop, or move the files you want to the Desktop folder within the Nemo file manager app (as shown in the image below).
 
-![Budgie Desktop Folder](configuration/budgie-nautilus-desktop-folder.jpg)
+![Budgie Desktop Folder](configuration/budgie-nemo-desktop-folder.jpg)
 
 ## Workspaces
 
-Budgie enables the switching of workspaces via the Workspace Switcher. You can enable workspaces in Budgie by adding the Workspace Switcher applet to Raven.
+Budgie enables the switching of workspaces with the Workspace Switcher. You can enable workspaces in Budgie by adding the Workspace Switcher applet to your panel.
 
-Open Raven using the shortcut `Super + A` or use your mouse to open Raven in the far right of the main Budgie panel.
+To add this applet, open the Budgie Control Center by selecting "System Settings" from either the Budgie Menu, or by right-clicking on a blank spot on the desktop. Once in the Budgie Control Center, in the left-hand sidebar, select the panel to which you want to add the Workspace Switcher (choose the default Bottom Panel if you don't want to add more panels at this time).
 
-Click the Raven settings 'cog' icon
+![Budgie Desktop Settings Panel Section](configuration/budgie-desktop-settings-bottom-panel.jpg)
 
-![Raven Settings Icon](configuration/raven-settings-cog.jpg)
+Click the + button next to "Add applet" on the right side of the window. This will open the list of available applets - scroll down until you find "Workspace Switcher", select it, and then click the 'Add' button in the top-right of the window.
 
-Alternatively, you can open the Budgie Menu and then click "Bottom Panel" in the System Settings category.
+![Adding Budgie Workspaces Applet](configuration/budgie-control-center-panel-add-workspace-switcher.jpg)
 
-![Budgie Panel Menu](configuration/budgie-panel-menu.jpg)
+You should now see your workspaces available in the main Budgie panel. Applications can be moved between workspaces by dragging and dropping their icons within the Workspace Switcher.
 
-Find `Add applet` and click the `+` button. This will open menu to choose different applets, scroll down until you find `Workspace Switcher`, select it and click `Add Applet`
-
-![Budgie Workspaces Applet](configuration/budgie-workspace-applet.jpg)
-
-You should now see your workspaces available in the main Budgie panel.
-
-![Budgie Workspaces](configuration/budgie-workspaces.jpg)
+![Budgie Workspaces](configuration/budgie-panel-with-workspace-switcher.jpg)
 
 ### Keyboard Shortcuts
 
 Budgie provides a variety of keyboard shortcuts for workspaces.
 
-To view these shortcuts open the Keyboard application and scroll to the Navigation section.
+To view these shortcuts, open the Budgie Control Center app, choose the "Keyboard" section in the left-hand sidebar, then scroll down in the right part of the window to choose "Keyboard Shortcuts".
 
-![Budgie Workspaces Keyboard Shortcuts](configuration/budgie-workspace-shortcuts-gcc.jpg)
+![Budgie Control Center Keyboard Shortcuts](configuration/budgie-control-center-keyboard-shortcuts-location.jpg)
+
+Workspace shortcuts are contained in the "Navigation" section of the Keyboard Shortcuts window.
+
+![Budgie Control Center Keyboard Shortcuts Sections](configuration/budgie-control-center-keyboard-shortcuts-popup.jpg)
 
 ### Workspaces Configuration
 
-There are 4 workspaces available in Budgie by default. For adding an new Workspace, click on the `+` button.
+There are 4 workspaces available in Budgie by default. To add a new workspace, click on the "+" button.
 
 If you wish to remove or rename your workspace, right click on the desired workspace and select rename or remove.
 
-![Budgie Remove or Rename Workspaces](configuration/budgie-workspace-remove.jpg)
+![Budgie Remove or Rename Workspaces](configuration/budgie-workspace-context-menu.jpg)

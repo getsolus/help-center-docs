@@ -1,17 +1,17 @@
 ---
 title: Local Repository
-summary: Packaging Using a Local Repository
+summary: Packaging using a local repository
 ---
 
-# Packaging Using a Local Repository
+# Packaging using a local repository
 
-This guide walks you through the steps necessary to tell solbuild how to utilise locally built `.eopkg's` that are not yet in the Solus repository.
+This guide walks you through the steps necessary to tell `solbuild` how to use your locally built `.eopkg` files that are not yet in the Solus repository.
 
 :::note
-It is not necessary to use a local repository to test most package submissions. The easier and recommended way is to install the eopkg files provided when a package is built. This is intended for use with stack upgrades, rebuilds, or new packages that need new dependencies that are not yet in the repo.
+It is not necessary to use a local repository to test most package submissions. The easier and recommended way is to install the `eopkg` files created when a package is built. This procedure is intended for use with stack upgrades, rebuilds, or new packages that need new dependencies that are not yet in the repository.
 :::
 
-We assume you have worked through the [packaging](/docs/packaging) material for creating a package with solbuild.
+We assume you have worked through the [packaging](/docs/packaging) material for creating a package with `solbuild`.
 
 ## Install the local profile
 
@@ -21,63 +21,73 @@ sudo eopkg install solbuild-config-local-unstable
 
 You will also need to ensure that your repository is fully up to date. See [Update Your Development Environment](/docs/packaging/update-dev-environment.md)
 
-## Utilising the local repository
+## Using the local repository
 
-Solbuild has had support for local repos since its creation.
+### Copying .eopkg files to the local repository
 
-Improvements have been made to make it simple for contributors to test fixes out of the repo without having to wait for each patch to be merged. To include `.eopkg` files within a build, they need to be copied to the local repo directory `/var/lib/solbuild/local`.
+To use your locally built `.eopkg` files as a dependencies for another package, you must copy the regular package file, and any accompanying `-devel` packages to the local repository directory `/var/lib/solbuild/local`.
 
-Note that you will need both the regular package and the `-devel` package if you want to build another package against them using `pkgconfig()` in the `package.yml file`.
+For example, building the package `libcmis` produces the packages `libcmis` and `libcmis-devel`. Both should be copied to the local repository to build other packages against `libcmis`
 
-With the `.eopkg` files now present in the local repo, we can make use of them in solbuild by running `go-task build-local` rather than just `go-task`. This will index the local repository and prioritise their use over what is available in the Solus unstable repository.
+To copy all `.eopkg` files within a directory to the local repository, use the following command:
 
-## Best practices when working with a solbuild local repository
+```bash
+cp *.eopkg /var/lib/solbuild/local
+```
+
+### Using the local repository to build a package
+
+With the `.eopkg` files now present in the local repository, you can use them to build a package by running `go-task build-local`, rather than just `go-task`, and `solbuild` will prefer your packages over packages found in the Solus repository.
+
+Every time you run `go-task build-local`, all `eopkg` files in the local repository will be re-indexed.
+
+### Best practices when working with a solbuild local repository
 
 There are some important things to know when working with local repositories, as they may lead to issues later on.
 
-- Solbuild will use your version of a package from the local repo regardless of whether there's a higher release in the Solus repository. Therefore you should only use `go-task build-local` when required and also remove old packages from the local repo when no longer needed.
-- If the package is already installed in the solbuild image, the release must be higher for it to be installed.
+- `solbuild` will use your version of a package from the local repository regardless of whether there's a higher release in the Solus repository. Therefore you should only use `go-task build-local` when required and also remove old packages from the local repository when they are no longer needed.
+- If the package is already installed in the `solbuild` image, the release must be higher for it to be installed.
 
-## Eopkg and local repositories
+## Installing packages from the local repository index
 
-As alluded to above, eopkg supports resolving packages from more than one repository.
+`eopkg` supports resolving packages from more than one repository. This can be used to configure `eopkg` to prefer installing local repository packages over packages from the Solus repository.
 
-In practice, this can be leveraged to make the developer workflow more convenient by ensuring that eopkg pulls from the local solbuild repository.
+This requires an existing local repository index. If you have used the command `go-task build-local`, then an index was created automatically. Otherwise, you must create one.
 
-### Generating an eopkg index for the local solbuild repository
+### Creating or updating the local repository index
 
-Before packages from the local solbuild repository can be resolved, an eopkg index file needs to be created.
-
-As mentioned earlier, the local solbuild repo installed by the `solbuild-config-local-unstable` package lives in `/var/lib/solbuild/local`.
-
-To generate or refresh the eopkg index in `/var/lib/solbuild/local`, simply run:
+To generate or refresh the `eopkg` index in `/var/lib/solbuild/local`, use the following command:
 
 ```bash
 sudo eopkg index --skip-signing /var/lib/solbuild/local/ --output /var/lib/solbuild/local/eopkg-index.xml
 ```
 
-### A note on package resolution priority
+Or, if you have our [helper functions](docs/packaging/prepare-for-packaging#set-up-monorepo-helper-functions-optional) set up, you get the same result by running:
 
-It bears repeating that in its current incarnation, eopkg will always prefer packages from the topmost repository listed with `eopkg lr`.
+```bash
+localrepo_reindex
+```
 
-In other words, if a package exists both in the local solbuild repository and the official upstream Solus repository, eopkg will only consider the package from the first repository listed with `eopkg lr` _regardless of its release number_.
+Keep in mind that the index needs to be refreshed whenever you add or remove locally built packages to your local repository. Otherwise, `eopkg` won't know that new packages are available or have been removed from the local repository.
 
-### Adding the local solbuild repo to the eopkg repository database
+### Package resolution priority in eopkg
 
-The easiest way to add the local solbuild repo to the list of repositories known to eopkg is to add the local solbuild repo and then _re-add_ the official Solus repo.
+`eopkg` will always prefer packages from the topmost repository listed with `eopkg lr`.
 
-#### Checking the currently known eopkg repositories
+In other words, if a package exists both in the local repository and the Solus repository, `eopkg` will only consider the package from the first repository listed with `eopkg lr` _regardless of its release number_.
 
-But first, let's list the repositories currently known to eopkg with `eopkg lr` -- this should produce output similar to:
+### Adding the local repository index to the eopkg repository database
+
+The easiest way to add the local repository index to the list of repositories known to `eopkg`, in the correct order, is to add the local repository and then _re-add_ the official Solus repository:
+
+1. First, let's list the repositories currently known to `eopkg` with `eopkg lr`. This should produce output similar to:
 
 ```
 Solus [active]
    https://cdn.getsol.us/repo/unstable/eopkg-index.xml.xz
 ```
 
-#### Adding repositories in the correct order
-
-Now the repositories need to be added to account for the desired dependency resolution order:
+2. Now the repositories need to be added to account for the desired dependency resolution order:
 
 ```bash
 sudo eopkg ar Local /var/lib/solbuild/local/eopkg-index.xml.xz
@@ -100,11 +110,9 @@ eopkg-index.xml.xz             (2.1 MB)100%    914.38 KB/s [00:00:01] [complete]
 Package database updated.
 ```
 
-#### Re-checking the currently known eopkg repositories
+3. Check that the dependency resolution order is correct so that packages from the local `solbuild` repository are preferred over the upstream Solus repository.
 
-All that is left now is to check that the dependency resolution order is correct so that packages from the local solbuild repository are preferred over the upstream Solus repository.
-
-Thus, `eopkg lr` should yield output similar to:
+`eopkg lr` should yield output similar to:
 
 ```
 $ eopkg lr
@@ -116,7 +124,7 @@ Solus [active]
 
 #### Disabling the local solbuild repository in eopkg
 
-To reset the system to use packages from the official Solus repository exclusively, the `Local` eopkg repository can be disabled with the command `sudo eopkg disable-repo Local`.
+To reset the system to use only packages from the official Solus repository, disable the "Local" `eopkg` repository using the command `sudo eopkg disable-repo Local`.
 
 The output should look similar to:
 
@@ -129,7 +137,7 @@ Solus [active]
    https://cdn.getsol.us/repo/unstable/eopkg-index.xml.xz
 ```
 
-The `Local` eopkg repository can be re-enabled with `sudo eopkg enable-repo Local`.
+The "Local" `eopkg` repository can be re-enabled with `sudo eopkg enable-repo Local`.
 
 ```
 $ sudo eopkg enable-repo Local
@@ -143,7 +151,3 @@ Solus [active]
 ## Closing thoughts
 
 Congratulations on making it this far! Your system should now be ready for convenient deployment and testing of locally built packages.
-
-Note that packages not present in the local solbuild repository will be fetched from the upstream official Solus (unstable) repository.
-
-Finally, keep in mind that the eopkg index needs to be refreshed whenever you add or remove locally built packages to your local solbuild repository -- otherwise eopkg won't know that new packages are available / have been removed from the repository.

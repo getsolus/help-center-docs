@@ -92,7 +92,7 @@ sdb                      8:16   1   7.3G  0 disk
 
 #### UEFI
 
-If your system uses UEFI as opposed to GRUB, you will also need to mount your EFI System Partition, otherwise referred to as ESP. If you followed our [UEFI guide](/docs/user/quick-start/installation/disks#uefi) during installation of Solus, then in all likelihood your ESP will be about 500mb in size. If you're unsure of the partition, run the following, replacing X with the same letter during your mounting of your root file system, minus the number:
+If your system uses UEFI as opposed to GRUB, you will also need to mount your EFI System Partition, otherwise referred to as ESP. If you followed our [UEFI guide](/docs/user/quick-start/installation/disks#uefi) during installation of Solus, then in all likelihood your ESP will be about 1GB in size. For an older installation, it may be around 512MB. If you're unsure of the partition, run the following, replacing X with the same letter during your mounting of your root file system, minus the number:
 
 For HDD / SDD drives:
 
@@ -147,7 +147,14 @@ Assuming all goes well, you should now be able to chroot into your Solus system 
 To validate a working network connection (assuming a network connection is available in your live image), you can run `ping google.com` in the chrooted environment. If you get responses from `google.com`, you have a successful connection to the Internet. If you do not, try the following:
 
 1. Exit the chroot by typing `exit`
-2. Run `cp /etc/resolv.conf /target/etc/`
+2. Run
+
+```bash
+cp /run/systemd/resolve/stub-resolv.conf /target/run/systemd/resolve/
+cd /target/etc
+ln -s ../run/systemd/resolve/stub-resolv.conf /target/etc/resolv.conf
+```
+
 3. Chroot back into `/target` by running `chroot /target` again.
 4. Retry networking.
 

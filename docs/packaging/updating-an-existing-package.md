@@ -117,13 +117,25 @@ git commit
 There should be a meaningful summary line (which starts with the package name), a blank line, and then the rest of the commit message.
 
 - Bullet point lists should start with a dash.
-- Include a changelog with a brief list of updates from the upstream release notes, with no links.
+- Include a changelog with a brief list of updates from the upstream release notes, with no links or issue numbers.
 - There may also be a section for Solus specific work (e.g. rebuild against x / rework to remove dependency).
 - Optional: A link to the upstream release notes page.
 - Include your Test Plan.
 
 `git commit` on [an initialized repository](prepare-for-packaging.md#initialize-git-hooks) will automatically open your editor with the correct template.
 Note that lines starting with a `#` will be ignored by Git and do not need to be removed.
+
+_Important_: Do not include issue numbers in changelogs. This will incorrectly link your issue to another one in our repository. Ex:
+
+```
+- #123 fixed a thing
+```
+
+If you want to intentionally link to another issue in this repository, the right way is to use our repo name. Ex:
+
+```
+Fixes getsolus/packages#issuenumber
+```
 
 Here is an example in our standard format:
 

@@ -54,31 +54,31 @@ Not all fields in `package.yml` are mandatory, but a small selection are. Below 
 | **name**        | `string`    | The name of the package. This is also used as the base of all sub-package names. Unless unavoidable, this should match the upstream name.                                                                           |
 | **version**     | `string`    | The version of the currently packaged software. This is taken from the tarball in most cases.                                                                                                                       |
 | **release**     | `integer`   | Specifies the current release number. Updates in the package number are based on this `release` number, _not_ the `version` number. As such, to release an update to users, this number must be incremented by one. |
-| **license**     | `string(s)` | Valid upstream license(s). Try to ensure these use [SPDX identifiers](https://spdx.org/licenses/).                                                                                                                  |
-| **homepage**    | `string`    | Provides a link to the package's homepage, used in the Software Center.                                                                                                                                             |
 | **source**      | `dict(s)`   | Upstream source URL (i.e. tarball), with the valid `sha256sum` as a value. Alternatively, the git repository URL prefixed with "git&#124;" and a git tag or commit hash as a value.                                 |
-| **component**   | `string`    | Component / group of packages this package belongs to. Check available components via `eopkg lc`.                                                                                                                   |
+| **homepage**    | `string`    | Provides a link to the package's homepage, used in the Software Center.                                                                                                                                             |
+| **license**     | `string(s)` | Valid upstream license(s). Try to ensure these use [SPDX identifiers](https://spdx.org/licenses/).                                                                                                                  |
 | **summary**     | `string`    | Brief package summary, or display name.                                                                                                                                                                             |
+| **component**   | `string`    | Component / group of packages this package belongs to. Check available components via `eopkg lc`.                                                                                                                   |
 | **description** | `string`    | More extensive description of the software, usually taken from the vendor website.                                                                                                                                  |
 
 ### Optional, supported keys
 
-| Key Name        | Type        | Description                                                                                                                                                |
-| --------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **clang**       | `bool`      | Set to `yes` if this package benefits from being built with Clang.                                                                                         |
-| **avx2**        | `bool`      | Set to `yes` if this package benefits from being built with x64-64-v3                                                                                      |
-| **extract**     | `bool`      | Set to `no` to disable automatic source extraction.                                                                                                        |
-| **autodep**     | `bool`      | Set to `no` to disable automatic binary dependency resolution at build time.                                                                               |
-| **emul32**      | `bool`      | Set to `yes` to enable an `-m32` build (32-bit libs).                                                                                                      |
-| **libsplit**    | `bool`      | Set to `no` to disable splitting of libraries into `devel` sub-packages.                                                                                   |
-| **conflicts**   | `string(s)` | Specify packages that cannot be installed together with this one.                                                                                          |
-| **optimize**    | `list`      | Specify preset keys to modify compiler and linker flags during build. You can learn more [here](/docs/packaging/package.yml#optimize-values).              |
-| **builddeps**   | `list`      | Specify build dependencies for the package. You can learn more [here](/docs/packaging/packaging-practices#build-dependencies).                             |
-| **rundeps**     | `dict(s)`   | Specify further runtime dependencies for the packages. You can learn more [here](/docs/packaging/packaging-practices#runtime-dependencies).                |
-| **replaces**    | `dict(s)`   | Replace one package with another, used when renaming or deprecating packages for clean upgrade paths.                                                      |
-| **patterns**    | `dict(s)`   | Allows fine grained control over file placement within the package or sub-packages. Useful for packages that are development only (i.e. `/usr/bin` files). |
-| **environment** | `unicode`   | Specify code that will be exported to all packaging steps of the build (i.e. exporting variables for the entire build).                                    |
-| **networking**  | `bool`      | Set to `yes` to enable networking within solbuild.                                                                                                         |
+| Key Name        | Type        | Description                                                                                                                                                                                                                                                                           |
+| --------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **clang**       | `bool`      | Set to `yes` if this package benefits from being built with Clang.                                                                                                                                                                                                                    |
+| **extract**     | `bool`      | Set to `no` to disable automatic source extraction.                                                                                                                                                                                                                                   |
+| **autodep**     | `bool`      | Set to `no` to disable automatic binary dependency resolution at build time.                                                                                                                                                                                                          |
+| **emul32**      | `bool`      | Set to `yes` to enable an `-m32` build (32-bit libs).                                                                                                                                                                                                                                 |
+| **libsplit**    | `bool`      | Set to `no` to disable splitting of libraries into `devel` sub-packages.                                                                                                                                                                                                              |
+| **conflicts**   | `string(s)` | Specify packages that cannot be installed together with this one.                                                                                                                                                                                                                     |
+| **optimize**    | `list`      | Specify preset keys to modify compiler and linker flags during build. You can learn more [here](/docs/packaging/package.yml#optimize-values).                                                                                                                                         |
+| **builddeps**   | `list`      | Specify build dependencies for the package. You can learn more [here](/docs/packaging/packaging-practices#build-dependencies).                                                                                                                                                        |
+| **rundeps**     | `dict(s)`   | Specify further runtime dependencies for the packages. You can learn more [here](/docs/packaging/packaging-practices#runtime-dependencies).                                                                                                                                           |
+| **checkdeps**   | `dict(s)`   | Specify build dependencies for the package which will _not_ be considered when determining build order for automatic builds. These dependencies should only be used during the `check` build phase. You can learn more [here](/docs/packaging/packaging-practices#check-dependencies) |
+| **replaces**    | `dict(s)`   | Replace one package with another, used when renaming or deprecating packages for clean upgrade paths.                                                                                                                                                                                 |
+| **patterns**    | `dict(s)`   | Allows fine grained control over file placement within the package or sub-packages. Useful for packages that are development only (i.e. `/usr/bin` files).                                                                                                                            |
+| **environment** | `unicode`   | Specify code that will be exported to all packaging steps of the build (i.e. exporting variables for the entire build).                                                                                                                                                               |
+| **networking**  | `bool`      | Set to `yes` to enable networking within solbuild.                                                                                                                                                                                                                                    |
 
 ### Packaging Step Keys, optional
 
@@ -98,8 +98,8 @@ One or more optimize values can be specified in a list with the `optimize` key i
 
 | Optimize Value                  | Description                                                                                                                                       |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **speed**                       | Optimises the package for performance `-O3` plus other flags.                                                                                     |
-| **size**                        | Optimises the package build to minimize size `-Os`. Not supported with clang.                                                                     |
+| **speed**                       | Optimizes the package for performance `-O3` plus other flags.                                                                                     |
+| **size**                        | Optimizes the package build to minimize size `-Os`. Not supported with clang.                                                                     |
 | **no-bind-now**                 | Configures the package to disable certain flags, where RELRO is unsupported.                                                                      |
 | **no-symbolic**                 | Disables `-Wl,-Bsymbolic-functions` linker flag.                                                                                                  |
 | **unroll-loops**                | Enables `-funroll-loops`. Use this sparingly, only when it provides proven benefit.                                                               |
@@ -110,7 +110,7 @@ One or more optimize values can be specified in a list with the `optimize` key i
 | **icf-safe**                    | Enables safe Identical Cold Folding `--icf=safe`. `function-sections` is recommended when not using clang. Uses gold linker when not using clang. |
 | **icf-all**                     | Enables Identical Cold Folding `--icf=all`. `function-sections` is recommended when not using clang. Uses gold linker when not using clang.       |
 | **polly**                       | Enables polyhedral optimizations for the clang toolchain.                                                                                         |
-| **function-sections**           | Generate a seperate ELF section for each function. Recommended with ICF when not using clang.                                                     |
+| **function-sections**           | Generate a separate ELF section for each function. Recommended with ICF when not using clang.                                                     |
 | **no-reorder-blocks-partition** | Disables block partition reordering with the gcc toolchain. Provided to facilitate BOLT'ed binaries/libraries.                                    |
 | **emit-relocs**                 | Instructs the linker to emit relocations. Provided to facilitate BOLT'ed binaries/libraries.                                                      |
 
@@ -208,11 +208,11 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 
 BOLT is a post-link optimizer developed to speed up large applications. You will need to run a workload after instrumenting a binary or library. Think of it as post-link profile guided optimization.
 
-| Macro              | Description                                                                                                                                             |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **%bolt_instr**    | Instrument a binary or library with llvm-bolt. Requires it to be built with `emit-relocs`, as well as `no-reorder-blocks-partition` if not using clang. |
-| **%bolt_merge**    | Merge fdata profiles into a single file after running a workload with a BOLT instrumented binary.                                                       |
-| **%bolt_opt**      | Optimize a binary using BOLT after running `%bolt_merge`.                                                                                               |
+| Macro           | Description                                                                                                                                             |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **%bolt_instr** | Instrument a binary or library with llvm-bolt. Requires it to be built with `emit-relocs`, as well as `no-reorder-blocks-partition` if not using clang. |
+| **%bolt_merge** | Merge fdata profiles into a single file after running a workload with a BOLT instrumented binary.                                                       |
+| **%bolt_opt**   | Optimize a binary using BOLT after running `%bolt_merge`.                                                                                               |
 
 ### Variable Macros
 
@@ -239,7 +239,7 @@ BOLT is a post-link optimizer developed to speed up large applications. You will
 A set of variables are exported in our build stages. These are used to provide context and structure to the scripts.
 
 | Variable           | Description                                                                                      |
-| ----------------   | ------------------------------------------------------------------------------------------------ |
+| ------------------ | ------------------------------------------------------------------------------------------------ |
 | **$CFLAGS**        | cflags as set in `eopkg.conf`.                                                                   |
 | **$CXXFLAGS**      | cxxflags as set in `eopkg.conf`.                                                                 |
 | **$LDFLAGS**       | ldflags as set in `eopkg.conf`.                                                                  |

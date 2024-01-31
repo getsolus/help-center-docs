@@ -1,0 +1,19 @@
+name: "Spellcheck with cspell"
+on:
+  pull_request:
+
+jobs:
+  spellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: streetsidesoftware/cspell-action@v5
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          files: |
+            **/*.{md,mdx}
+          inline: warning
+          strict: false
+          incremental_files_only: true
+          config: ".cspell.json"
+          verbose: false

@@ -17,7 +17,7 @@ The Solus Project enforces a set of community guidelines to maintain respect and
 
 With so many new users joining, there are always more people needing help. A great way to help us out, would be to help out our users on the [Solus Project Forums](https://discuss.getsol.us).
 
-### [Matrix](/docs/user/contributing/getting-involved#matrix-chat) (chat)
+### Matrix (chat)
 
 [Matrix](<https:/.wikipedia.org/wiki/Matrix_(protocol)>) is a great way to discuss issues and development with the community, and project developers in real-time. It's also a great place for getting support, but remember due
 to timezone differences there might not always be people there to answer your question immediately. You can access Matrix using a client like [Element Web](https://app.element.io/), or many [others](https://matrix.org/ecosystem/clients/). You will need a Matrix account.
@@ -38,20 +38,14 @@ Alongside the forums, you can communicate with developers or others in the commu
 - [Facebook](https://www.facebook.com/get.solus)
 - [Mastodon](https://fosstodon.org/@Solus)
 - [Reddit](https://www.reddit.com/r/SolusProject/)
-- [Twitter](https://twitter.com/solusproject)
 
 ## Funding
 
-Solus is funded through our [Open Collective](https://opencollective.com/getsolus), with our fiscal host being the non-profit 501(c)3 organization [Open Source Collective](https://www.oscollective.org/). This funding enables / will enable us to:
-
-1. Offset virtual and physical infrastructure / hardware, ranging from datacenter co-location to providing repository mirrors and hardware upgrades for faster builds.
-2. Enable part-time and eventually full-time development by one or more developers (e.g. myself and Beatrice).
-3. Subsidize or pay in full necessary hardware for Solus Staff and active contributors.
-4. Provide opportunities to finance specific approved works, such as various features, fixes, or rewrites that the Solus Staff would want to be done in a timely manner, by individuals in the our community that are well-known for high-quality contributions. These opportunities would be provided on a case-by-case basis with direct communication and engagement between Solus Staff and the individual.
+Solus is funded through our [Open Collective](https://opencollective.com/getsolus), with our fiscal host being the non-profit 501(c)(3) organization [Open Source Collective](https://www.oscollective.org/). To read more about what this funding enables us to do take a look at the ["About" section of our Open Collective page](https://opencollective.com/getsolus#category-ABOUT).
 
 ## Improving Documentation
 
-Our Help Center improves when the documentation improves. If there are docs that you think would be valuable to add, get involved by submitting pull requests to our [Help Center Docs](https://github.com/getsolus/help-center-docs) repo!
+Our Help Center improves when the documentation improves. If there are docs that you think would be valuable to add, get involved by submitting pull requests to our [Help Center Docs](https://github.com/getsolus/help-center-docs) repository!
 
 ## Packaging
 
@@ -65,11 +59,11 @@ We're always looking to improve our systems, especially when they're not functio
 - [Main Solus GitHub Issue Tracker](https://issues.getsol.us)
   Most bug reports about Solus itself, and its packages, should be filed here.
 
-- [Other Solus GitHub Repos](https://github.com/getsolus)
-  Certain parts of Solus, such as the Software Center, have repos in the `getsolus` organization on GitHub. Check here to see if the system in question is listed. If so, file the bug in the appropriate repo.
+- [Other Solus GitHub Repositories](https://github.com/getsolus)
+  Certain parts of Solus, such as the Software Center, have repositories in the `getsolus` organization on GitHub. Check here to see if the system in question is listed. If so, file the bug in the appropriate repository.
 
-- [Budgie Desktop](https://github.com/buddiesofbudgie/budgie-desktop/issues)
-  Budgie Desktop issues are filed in the `buddiesofbudgie` repo on GitHub.
+- [Budgie Desktop](https://github.com/BuddiesOfBudgie/budgie-desktop/issues)
+  Budgie Desktop issues are filed in the `BuddiesOfBudgie/budgie-desktop` repository on GitHub.
 
 ## Translations
 
