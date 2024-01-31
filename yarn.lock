@@ -3589,6 +3589,7 @@ __metadata:
   checksum: 4b4584c2c73fc18cbd599047538896450974e134c2c74f19eb202db0ce8e6c3c49c6f65ed6ade61c796d476d3cbb55d6be58df62bc9568a0c72d88e42fca1d16
   languageName: node
   linkType: hard
+
 "@docusaurus/core@npm:3.1.1":
   version: 3.1.1
   resolution: "@docusaurus/core@npm:3.1.1"
