@@ -3666,7 +3666,7 @@ __metadata:
     react: ^18.0.0
     react-dom: ^18.0.0
   bin:
-    docusaurus: bin/docusaurus.mj
+    docusaurus: bin/docusaurus.mjs
   checksum: a35851dd6dc5ff5d2c8a8efb36b9875dc33a9e067a4677e5c9437a8635970e55a3cf14bb6eba9c9e356f4189283fb401b39423d497eb17bb09a16dd0ed84b1da
   languageName: node
   linkType: hard
