@@ -3,23 +3,23 @@ title: Default Applications
 summary: A guide to the default applications included with Solus.
 ---
 
-# Default Applications
+# Default applications
 
 Each version of Solus comes with a pre-installed collection of desktop applications that can help you perform common tasks.
 
-# Web Browser
+## Web browser
 
 Solus comes pre-installed with Firefox, a secure and trustworthy web browser provided by the non-profit organization [Mozilla](https://www.mozilla.org/).
 
 ![Firefox Screenshot](default-applications/firefox.jpg)
 
-# Email Client
+## Email client
 
 Solus comes pre-installed with the powerful [Thunderbird](https://www.thunderbird.net/) email, newsgroup, and feeds client.
 
 ![Thunderbird Screenshot](default-applications/thunderbird.jpg)
 
-# Managing Your Files
+## Managing your files
 
 Each Linux desktop environment has its own graphical application for managing files:
 
@@ -30,19 +30,19 @@ Each Linux desktop environment has its own graphical application for managing fi
 | Plasma  | Dolphin                         |
 | XFCE    | Nemo                            |
 
-## Nemo
+### Nemo
 
 ![Nemo Screenshot](default-applications/nemo.jpg)
 
-## GNOME Files
+### GNOME Files
 
 ![GNOME Files Screenshot](default-applications/nautilus.jpg)
 
-## Dolphin
+### Dolphin
 
 ![Dolphin Screenshot](default-applications/dolphin.jpg)
 
-# Office Suite
+## Office suite
 
 Solus comes pre-installed with [LibreOffice](https://www.libreoffice.org), an office suite that is capable of replacing Microsoft<sup>TM</sup> Office for the most common tasks.
 
@@ -56,41 +56,41 @@ By default, Solus provides Writer (document editor), Calc (spreadsheet editor), 
 | Draw        | Visio                       |                  |
 | Math        |                             |                  |
 
-## Calc
+### Calc
 
 ![LibreOffice Calc Screenshot](default-applications/libreoffice-calc.jpg)
 
 Calc is a spreadsheet editor. You can view, create, and edit spreadsheets as well as leverage a comprehensive range of advanced functions. Calc supports a variety of common open formats and Microsoft<sup>TM</sup> Office compatible document formats such as (but not limited to): `xls`, `xlsx`, and `ods`.
 
-## Draw
+### Draw
 
 ![LibreOffice Draw Screenshot](default-applications/libreoffice-draw.jpg)
 
 Draw is a graphical editor that allows you to sketch diagrams, workflows and any kind of other simple to complex drawing you can imagine. You can install Draw from the Software Center by searching for the package `libreoffice-draw`.
 
-## Impress
+### Impress
 
 ![LibreOffice Impress Screenshot](default-applications/libreoffice-impress.jpg)
 
 Impress is a presentation viewer and editor. You can view, create, edit, and export presentations in common open formats or Microsoft<sup>TM</sup> Office compatible document formats such as (but not limited to): `ppt`, `pptx`, and `odp`.
 
-## Math
+### Math
 
 ![LibreOffice Math Screenshot](default-applications/libreoffice-math.jpg)
 
 Math is a formula editor. Create your mathematical and scientific expressions and insert them with the correct formatting into your text documents, spreadsheets, presentations, or drawings. Math can be installed from the Software Center by searching for the package `libreoffice-math`.
 
-## Writer
+### Writer
 
 ![LibreOffice Writer Screenshot](default-applications/libreoffice-writer.jpg)
 
 Writer is a document editor. You can view, create, edit, and export documents in common open formats or Microsoft<sup>TM</sup> Office compatible document formats such as (but not limited to): `doc`, `docx`, and `odt`.
 
-## Spell-checking
+### Spell-checking
 
 LibreOffice Writer users may want to install the package `libreoffice-common-dictionaries` from Software Center to automatically enable spell-checking support.
 
-### Finnish
+#### Finnish
 
 Finnish language support is provided by installing `libreoffice-voikko`. After installation of this package, there is further configuration required to properly leverage the Voikko spell-checking and Finnish dictionary support.
 
@@ -100,7 +100,7 @@ Finnish language support is provided by installing `libreoffice-voikko`. After i
 4. Under Language Settings, click Writing Aids and ensure the "Spellchecker (Voikko)", "Grammar checker (Voikko)", and "Hyphenator (Voikko)" are under the "Available language modules" section.
 5. Under Language Settings, click Voikko and ensure "standard: suomi (perussanasto)" is selected under the "Vocabulary" section.
 
-# Music
+## Music
 
 | Desktop | Application |
 | ------- | ----------- |
@@ -109,15 +109,15 @@ Finnish language support is provided by installing `libreoffice-voikko`. After i
 | Plasma  | Elisa       |
 | XFCE    | Rhythmbox   |
 
-## Rhythmbox
+### Rhythmbox
 
 ![Rhythmbox Screenshot](default-applications/rhythmbox.jpg)
 
-## Elisa
+### Elisa
 
 ![Elisa Screenshot](default-applications/elisa.jpg)
 
-# Video
+## Video
 
 | Desktop | Application                    |
 | ------- | ------------------------------ |
@@ -126,14 +126,14 @@ Finnish language support is provided by installing `libreoffice-voikko`. After i
 | Plasma  | Haruna                         |
 | XFCE    | Parole                         |
 
-## Celluloid
+### Celluloid
 
 ![Celluloid Screenshot](default-applications/celluloid.webp)
 
-## Haruna
+### Haruna
 
 ![Haruna Screenshot](default-applications/haruna.jpg)
 
-## Parole
+### Parole
 
 ![Parole Screenshot](default-applications/parole.png)
