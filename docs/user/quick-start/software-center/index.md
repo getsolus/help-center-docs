@@ -5,7 +5,7 @@ summary: Introduction to the Solus Software Center
 
 # Software Center
 
-You can install software ranging from Google Chrome to LibreOffice, as well as updating software, via our Software Center.
+You can install software ranging from Google Chrome to LibreOffice, as well as update software, via our Software Center.
 
 ![Software Center](solus-sc.jpg)
 

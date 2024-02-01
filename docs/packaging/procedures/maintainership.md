@@ -15,7 +15,7 @@ Each new package which is going to land in the Solus repository must have one or
 - Ensure the [packaging file](/docs/packaging/package.yml) adheres to the Solus [standards](/docs/packaging/packaging-practices)
 - Ensure the application or library is consistent with the Operating System aesthetics, file system conventions and the Solus philosophy in general
 
-On the Solus side however, the community must not forget that maintainers are volunteers, which may or may not have a technical background. More experienced users are to engage new maintainers in a welcoming manner, e.g. by listing their errors and inviting them to fix them. (More on this in the [community guidelines](/docs/user/contributing/community-guidelines#development--issue-trackers))
+On the Solus side however, the community must not forget that maintainers are volunteers, which may or may not have a technical background. More experienced users are to engage new maintainers in a welcoming manner, e.g. by listing their errors and inviting them to fix them. (More on this in the [community guidelines](/docs/user/contributing/community-guidelines#repositories-and-issue-trackers))
 
 The Solus Staff have the right to enforce certain practices, even when in contrast with maintainers' vision. It also has the right to ultimately accept or reject a patch.
 
@@ -37,7 +37,7 @@ If a package is actively maintained, modifications should not occur and the indi
 
 ## Template for the `MAINTAINERS.md` File
 
-Presented here is the `MAINTAINERS.md` file. This file must be provided verbatim alongside the other patch contents, and filled in with the maintainers' personal information. A [Matrix](https://help.getsol.us/docs/user/contributing/getting-involved#matrix-chat) contact is optional but recommended, while an email address is mandatory. Similar to the `.solus/packager` file used for packaging, the maintainers listed in `MAINTAINERS.md` must use their real first and last name(s) for accountability purposes.
+Presented here is the `MAINTAINERS.md` file. This file must be provided verbatim alongside the other patch contents, and filled in with the maintainers' personal information. A [Matrix](/docs/user/contributing/getting-involved#matrix-chat) contact is optional but recommended, while an email address is mandatory. Similar to the `.solus/packager` file used for packaging, the maintainers listed in `MAINTAINERS.md` must use their real first and last name(s) for accountability purposes.
 
 The contact information section is a YAML list. If needed, more elements may be added, each per maintainer. Do not edit the file in any other way, including spacing, except _Name_, _Surname_ and _REPLACEME_ placeholders.
 

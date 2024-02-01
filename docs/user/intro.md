@@ -53,4 +53,4 @@ If you are a Redditor, our subreddit fulfills a similar purpose to the forums.
 
 **[Issue Tracker](https://issues.getsol.us)**
 
-If you are having issues with your Solus system or one of our software packages not working as expected, you might consider filing a bug report on our Dev Tracker.
+If you are having issues with your Solus system or one of our software packages not working as expected, you might consider filing a bug report on our issue tracker.

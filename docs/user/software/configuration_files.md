@@ -9,7 +9,7 @@ These are the standard locations on a Solus installation for software configurat
 
 :::note
 
-Solus uses a "stateless" system configuration. For what that means see [Stateless Configuration](statelessness.md).
+Solus uses a "stateless" system configuration. For what that means see the [Clear Linux Guide to Stateless Configuration](https://www.clearlinux.org/clear-linux-documentation/reference/manpages/stateless.7.html).
 
 :::
 
@@ -33,5 +33,5 @@ Some common configuration files:
 | pam                                                | `/etc/pam.d/`<br />`/usr/share/defaults/etc/pam.d/`     |
 | ssh                                                | `$HOME/.ssh/`<br />`/usr/share/defaults/etc/ssh/`       |
 | ssl                                                | `/etc/ssl/`<br />`/usr/share/defaults/etc/ssl/`         |
-| [tigervnc](docs/user/software/networking/tigervnc) | `$HOME/.vnc/xstartup`                                   |
-| [xrdp](docs/user/software/networking/xrdp)         | `/etc/X11/Xwrapper.config`                              |
+| [tigervnc](/docs/user/software/networking/tigervnc) | `$HOME/.vnc/xstartup`                                   |
+| [xrdp](/docs/user/software/networking/xrdp)         | `/etc/X11/Xwrapper.config`                              |
