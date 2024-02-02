@@ -5,21 +5,21 @@ summary: The purpose and format of monitoring.yml
 
 # `monitoring.yml`
 
-:::warning
+:::important
 
-A `monitoring.yml` is not yet required for Solus packages.
+A `monitoring.yml` file is not yet required for Solus packages.
 
 :::
 
 A `monitoring.yml` file is included in the Packages repository directory for every Solus package to enable automatic scanning for new releases and security advisories.
 
-Checking for new releases is done by mapping the Solus package to an [Anitya](https://github.com/fedora-infra/anitya) ID. _Anitya_ is a Fedora (todo Red Hat?) project, part of [release-monitoring.org](https://release-monitoring.org/)
+Checking for new releases is done by mapping the Solus package to an [Anitya](https://github.com/fedora-infra/anitya) ID. _Anitya_ is a Red Hat project, part of [release-monitoring.org](https://release-monitoring.org/)
 
 Checking for security advisories ([CVEs](https://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures)), is done by mapping the Solus package to a _Common Platform Enumeration Name_ ([CPE](https://nvd.nist.gov/products/cpe)) from the National Vulnerability Database.
 
-# systemd as an example
+## systemd as an example
 
-Let's look at the `monitoring.yml` for `systemd` as an example.
+Let's look at the `monitoring.yml` file for `systemd` as an example.
 
 The `systemd` directory in the Packages repository looks like this:
 
@@ -50,36 +50,37 @@ security:
     - CVE-2022-55555
 ```
 
-## `monitoring.yml` fields
 
-### `releases`
+
+## "releases" fields
 
 - Fields used to monitor for new versions
 
-#### `id` (Anitya ID)
+### id (Anitya ID)
 
 - One `id` field per Solus package
 - Find the ID by searching [release-monitoring.org](https://release-monitoring.org/) by project name, then taking the ID out of the URL for the correct search result.
 - For example, the correct `systemd` search result for us is `systemd-stable` with the URL [https://release-monitoring.org/project/205088/](https://release-monitoring.org/project/205088/), so we use `205088` as the ID
 
-#### `ignore`
+### ignore
 
-- Contains regexes for version strings we choose to ignore
-- The regex should be enclosed in quotes
-- For example, we are keeping Solus on the `252.x` releases of `systemd`, so releases tp later versions can be ignored, and the regex becomes: `253.*`
-- Include a comment explaining the reason for every regex
+- Not a required field
+- Contains regular expressions for version strings we choose to ignore
+- The regular expression should be enclosed in quotes
+- For example, we are keeping Solus on the `252.x` releases of `systemd`, so later versions can be ignored, and the regular expression becomes: `253.*`
+- Include a comment explaining the reason for every regular expression
 
-#### `rss`
+### rss
 
+- This field is optional but strongly encouraged
 - URL for a releases RSS feed
 - If the only RSS feed you can find for a project is a general "news" feed, don't include the field
-- This field is optional but strongly encouraged
 
-## `security`
+## "security" fields
 
 - Fields used to monitor for security advisories (CVEs)
 
-### `cpe` (CPE Name)
+### cpe (CPE Name)
 
 - A full CPE Name contains redundant information we can ignore, we are only interested in `vendor` and `product`
 - For example, `cpe:2.3:a:systemd_project:systemd` is a CPE for the _vendor_ `systemd_project`, and the _product_ `systemd`
@@ -141,8 +142,9 @@ security:
   cpe: ~
 ```
 
-#### `ignore`
+### ignore
 
+- Not a required field
 - Use this field to list specific CVE identifiers which can be ignored
 - todo: explanation of when this should be used, whether list items should include a comment with a reason
-- Unlike the `ignore` field under `releases`, regexes should not be used.
+- Unlike the `ignore` field under `releases`, regular expressions should not be used.
