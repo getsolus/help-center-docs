@@ -1,39 +1,39 @@
-# Help Center Documentation
+<p align="center">
+  <a href="https://getsol.us">
+    <img src="https://getsol.us/imgs/logo.png" alt="Solus logo"/>
+  </a>
+</p>
 
-This is the repository for Solus's Help Center documentation. This repository exists to help facilitate and encourage community contributions to improving our documentation and enabling an easier user experience for everyone.
+# Help Center documentation
 
-Stumbled on this repo and have no idea what any of this is? Check out the [Solus](https://getsol.us) operating system!
+This is the repository for Solus's [Help Center](https://help.getsol.us/) documentation. You can help us improve the Solus experience by:
 
-## Updating local repos after docusaurus switch
+- Contributing documentation on new topics.
+- Editing existing documentation for formatting, spelling and punctuation, and conformance with our [style guide](https://help.getsol.us/docs/user/contributing/style).
+- Working on fixes for [existing issues](https://github.com/getsolus/help-center-docs/issues).
+- Identifying and reporting new issues.
 
-```
-git branch -m master old-help-center
-git branch -m docusaurus master
-git fetch origin
-git branch -u origin/master master
-git remote set-head origin -a
-```
+## Getting started
 
-## Getting Started
+To get started developing our Docusaurus instance, or writing documentation, first [fork this project](https://github.com/getsolus/help-center-docs/fork) so you can submit pull requests for your changes.
 
-To get started developing our Docusaurus instance, or writing documentation, first [fork this project](https://github.com/getsolus/help-center-docs/fork) in order to submit pull requests for your changes
+This project is written using [TypeScript](https://www.typescriptlang.org) and [React](https://reactjs.org), with content written in Markdown or [MDX](https://mdxjs.com/). To facilitate development, we use `nvm` and `yarn`.
 
-This project is written using [TypeScript](https://www.typescriptlang.org) and [React](https://reactjs.org), with some documentation being Markdown or [MDX](https://mdxjs.com/). To facilitate development, we use nvm and Yarn.
+Please lint and spellcheck your contributions before creating a pull request. We recommend VS Code with the "prettier" extension for linting, and [Code Spell Checker](https://cspell.org/) (`cspell`) for spelling.
 
-Please lint and spellcheck your updates before creating a pull request. We recommend VS Code with the "prettier" extension for linting. You are free to use whatever software and linters you prefer as long as they get the job done.
+### Content formatting and spelling
 
-### Content Formatting and Spelling
-
+- Writing style should follow our [style guide](https://help.getsol.us/docs/user/contributing/style)
 - This project includes `prettier` for markdown and code formatting
   - Command: `yarn prettier`
-- This project includes `cpsell` for spell-checking, and has a custom wordlist `.cspell-allowed-wordlist.txt`
+- This project includes Cspell for spell-checking, and has a custom wordlist `.cspell-allowed-wordlist.txt`
   - Command: `yarn cspell`
   - Note that we use American spelling
-  - If you use vscode with the `cspell` extension, the custom dictionary will be used
+  - If you use vscode with the Code Spell Checker extension, the custom dictionary will be used
 
 ### NVM
 
-To set up nvm, the Node Version Manager, follow the instructions listed [here](https://github.com/nvm-sh/nvm#readme). We recommend [setting up their shell integration](https://github.com/nvm-sh/nvm#deeper-shell-integration) as well, so you can automatically switch to the correct Node version when working on this project. Otherwise, ensure you run `nvm use`. This project requires the "current" supported release series of Node.
+To set up `nvm`, the Node Version Manager, follow the instructions listed [here](https://github.com/nvm-sh/nvm#readme). We recommend [setting up their shell integration](https://github.com/nvm-sh/nvm#deeper-shell-integration) as well, so you can automatically switch to the correct Node version when working on this project. Otherwise, ensure you run `nvm use`. This project requires the "current" supported release series of Node.
 
 You can validate you are using the latest by running `node --version`. Your version should be at least 19.x.
 
@@ -45,7 +45,7 @@ This project makes use of [Yarn](https://yarnpkg.com/) for its package managemen
 corepack enable
 ```
 
-### Installing Dependencies
+### Installing dependencies
 
 To install the required dependencies, run: `yarn`
 
@@ -53,7 +53,7 @@ To install the required dependencies, run: `yarn`
 
 To start the live reloading Docusaurus, run: `yarn start`
 
-### Other Useful Commands
+### Other useful commands
 
 - Clear local build cache: `yarn clear`
 - Linting: `yarn lint`
@@ -69,21 +69,17 @@ Then, when you're ready to deploy, run the following:
 
 `git switch deploy && git merge master`
 
-This obviously assumes that you have ssh push access to the help-center-docs repo and are using `remote.origin.url=git@github.com:getsolus/help-center-docs.git` (as listed by `git config -l`).
+This obviously assumes that you have ssh push access to the `help-center-docs` repository and are using `remote.origin.url=git@github.com:getsolus/help-center-docs.git` (as listed by `git config -l`).
 
 ## Contributing
 
-### Updating an Article
-
-When updating an article, remember to update the date.
-
-### Multi-Lingual Documents
+### Multi-lingual documents
 
 Note that multi-lingual documents are not yet supported on our Help Center. When it does, we'll be happy to accept non-English language documents.
 
 ## Licenses
 
-### Build System
+### Build system
 
 Files relating to the parsing / build system are licensed under GPL-2.0. For the full text, view LICENSE.txt.
 
@@ -91,7 +87,7 @@ Files relating to the parsing / build system are licensed under GPL-2.0. For the
 
 The Markdown files in this repository are licensed under the Creative Commons By-NC-SA 4.0 License. For the full text, view LICENSE-MD.txt. Solus Project is considered the sole rights holder of these works.
 
-### Media Assets
+### Media assets
 
 - Solus logo copyright and licensing information is provided on our [Brand Guidelines page](https://getsol.us/branding).
 - Non-logo assets are licensed under Creative Commons By-NC-SA 4.0 License. For the full text, view LICENSE-MD.txt. Solus Project is considered the sole rights holder of these works.
