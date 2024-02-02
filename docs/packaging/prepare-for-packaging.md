@@ -4,15 +4,15 @@ summary: Quick guide on getting your system set up for packaging on Solus
 sidebar_position: 1
 ---
 
-# Prepare for Packaging
+# Prepare for packaging
 
-## Switch to the Unstable Repository
+## Switch to the Unstable repository
 
 Packages need to be built and tested against the "unstable" repository. If you don't want to switch your primary system to unstable, you can do your packaging work in a VM. We have Virtual Machine Manager in the repos.
 
 Refer to [Repository Management](/docs/user/package-management/repo-management) to see how to add and switch to unstable.
 
-## Setting up the Packager file
+## Setting up the packager file
 
 In order to utilize the build system, you must first set up a configuration file that has your packager details.
 
@@ -28,19 +28,21 @@ Email=your.email@address
 Matrix=@username:matrix.org
 ```
 
-## Installing Development Tools
+## Installing development tools
 
 We need to install a few things in order to get started with packaging:
 
+- `curl` is used by our optional Helper Functions
 - `go-task` is used by our build tools for scripting
 - `git` is used for version control of the solus sources
 - `github-cli` is used to make working with GitHub easier
+- `jq` is used by our optional Helper Functions
 - `solbuild` is a lightweight container environment for building packages repeatably
 - `solbuild-config-unstable` sets up solbuild for working with the `unstable` repository
 - `ypkg` is the program that actually builds packages
 
 ```bash
-sudo eopkg it go-task git github-cli solbuild solbuild-config-unstable ypkg
+sudo eopkg it curl go-task git github-cli jq solbuild solbuild-config-unstable ypkg
 ```
 
 ## Setting up a GitHub account
@@ -79,7 +81,7 @@ sudo solbuild update
 
 Create your own fork of [getsolus/packages](https://github.com/getsolus/packages) using the GitHub web UI or [`gh` cli tool](https://cli.github.com/manual/gh_repo_fork) from the `github-cli` package. It will be forked to `github.com/yourgithubaccount/packages`.
 
-## Clone Your Forked Package Repository
+## Clone Your forked package repository
 
 Create a local clone of the package repository you just forked. Here we are using the name `solus-packages` and cloning it into our home directoy. The rest of the documentation will presume this structure. You can choose a different name and path but will have to make sure to replace it in every command that refers to the `solus-packages` directory.
 
@@ -87,7 +89,7 @@ Create a local clone of the package repository you just forked. Here we are usin
 gh repo clone packages ~/solus-packages
 ```
 
-## Initialize Git hooks
+## Initialize git hooks
 
 Initialize Git hooks for working with the repository by running:
 
@@ -97,9 +99,11 @@ go-task -d ~/solus-packages init
 
 This makes it easy to create commits in the correct format, and will warn you about issues with changes you commit.
 
-## Set up Monorepo Helper Functions (Optional)
+## Set up repository helper functions (Optional)
 
-After cloning your repo, create a symlink to source our helper functions for your shell. Then, start a new instance of the shell.
+The helper functions are a collection of shell scripts that help you navigate the packages repository more quickly, and perform some specialized searches.
+
+After cloning your repository, create a symlink to source the helper functions for your shell. Then, start a new instance of the shell.
 
 ### bash
 
@@ -130,13 +134,14 @@ You should now have the following available from your shell:
 
 | Function          | Description                                                                                                                                   | Usage                          |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| **gotosoluspkgs** | Change directory to the solus monorepo from anywhere on the filesystem.                                                                       | `gotosoluspkgs`                |
+| **cpesearch**     | Search for CPE Names for packages. For use when writing the [`monitoring.yml`](/docs/packaging/monitoring.yml.md) file for a package          | `cpesearch search-term`         |
 | **goroot**        | When in the solus monorepo, change directory to the root directory of the git repository.                                                     | `goroot`                       |
 | **gotopkg**       | Change directory to any solus package. You can type part of the package name then double press `Tab` to get autocompletion for this function. | `gotopkg firefox`              |
-| **whatuses**      | Find out what packages use a library by reading the `abi_used_libs` files.                                                                    | `whatuses libfoobar.so.1`      |
+| **gotosoluspkgs** | Change directory to the solus monorepo from anywhere on the filesystem.                                                                       | `gotosoluspkgs`                |
 | **whatprovides**  | Find out what package provides a library by reading the `abi_libs` files.                                                                     | `whatprovides libfoobar.so.1.` |
+| **whatuses**      | Find out what packages use a library by reading the `abi_used_libs` files.                                                                    | `whatuses libfoobar.so.1`      |
 
-## Building Packages
+## Building packages
 
 Your system is now set up for package work.
 If you are new to packaging, see [Your First Package Update](your-first-package-update.md).
