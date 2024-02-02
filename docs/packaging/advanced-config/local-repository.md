@@ -62,7 +62,7 @@ To generate or refresh the `eopkg` index in `/var/lib/solbuild/local`, use the f
 sudo eopkg index --skip-signing /var/lib/solbuild/local/ --output /var/lib/solbuild/local/eopkg-index.xml
 ```
 
-Or, if you have our [helper functions](/docs/packaging/prepare-for-packaging#set-up-monorepo-helper-functions-optional) set up, you get the same result by running:
+Or, if you have our [helper functions](/docs/packaging/prepare-for-packaging#set-up-repository-helper-functions-optional) set up, you get the same result by running:
 
 ```bash
 localrepo_reindex
