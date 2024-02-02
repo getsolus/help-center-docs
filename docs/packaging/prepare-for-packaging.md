@@ -134,7 +134,7 @@ You should now have the following available from your shell:
 
 | Function          | Description                                                                                                                                   | Usage                          |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| **cpesearch**     | Search for CPE Names for packages. For use when writing the [`monitoring.yml`](/docs/packaging/monitoring.yml.md) file for a package          | `cpesearch search-term`         |
+| **cpesearch**     | Search for CPE Names for packages. For use when writing the [`monitoring.yml`](/docs/packaging/monitoring.yml.md) file for a package          | `cpesearch search-term`        |
 | **goroot**        | When in the solus monorepo, change directory to the root directory of the git repository.                                                     | `goroot`                       |
 | **gotopkg**       | Change directory to any solus package. You can type part of the package name then double press `Tab` to get autocompletion for this function. | `gotopkg firefox`              |
 | **gotosoluspkgs** | Change directory to the solus monorepo from anywhere on the filesystem.                                                                       | `gotosoluspkgs`                |

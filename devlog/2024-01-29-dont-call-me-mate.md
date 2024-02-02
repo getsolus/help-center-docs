@@ -16,7 +16,7 @@ Back in our [4.4 release post](https://getsol.us/2023/07/08/solus-4-4-released/)
 
 ## The problem
 
-MATE and XFCE are similar enough that eager Solusians can, and have, installed XCFE on their MATE machines with nothing more than a couple of `eopkg` commands. We're pretty sure our resident `bash` script enthusiast (ermo) could hammer out a working transition script in an evening. But we want a more polished experience. We know *you* follow Solus news; after all, you're reading this. However, we assume there are users who dutifully update their systems, but have no interest in keeping up with our blog posts. How do we get their attention and prompt them to move away from MATE?
+MATE and XFCE are similar enough that eager Solusians can, and have, installed XCFE on their MATE machines with nothing more than a couple of `eopkg` commands. We're pretty sure our resident `bash` script enthusiast (ermo) could hammer out a working transition script in an evening. But we want a more polished experience. We know _you_ follow Solus news; after all, you're reading this. However, we assume there are users who dutifully update their systems, but have no interest in keeping up with our blog posts. How do we get their attention and prompt them to move away from MATE?
 
 ## Introducing the Solus MATE Transition Tool
 
