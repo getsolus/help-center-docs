@@ -75,7 +75,7 @@ You can find the Anitya ID by searching [release-monitoring.org](https://release
 
 A [CPE Name](https://en.wikipedia.org/wiki/Common_Platform_Enumeration) is a structured naming scheme for information technology systems, primarily used to search for CVEs. A full CPE Name contains redundant information we can ignore, we are only interested in `vendor` and `product`
 
-For example, `cpe:2.3:a:systemd_project:systemd` is the CPE for the _vendor_ `systemd_project`, and the _product_ `systemd`
+For example, `cpe:2.3:a:systemd_project:systemd` is the CPE for the _vendor_ `systemd_project`, and the _product_ `systemd`.
 
 ### Finding the CPE Name
 
