@@ -14,19 +14,19 @@ import Header from "../components/home/Header";
 const DocList: DocSection[] = [
   {
     title: "Users",
-    description: <>Installing, software, boot management, troubleshooting and more</>,
+    description: <>Installing, software, boot management, troubleshooting and more.</>,
     link: "docs/user/intro",
     img: <PersonOutlineOutlinedIcon sx={{ fontSize: 96 }} />,
   },
   {
     title: "Packaging",
-    description: <>Get to grips with our advanced packaging features using easy to follow guides</>,
+    description: <>Get to grips with our advanced packaging features using easy to follow guides.</>,
     link: "docs/packaging",
     img: <Inventory2OutlinedIcon sx={{ fontSize: 96 }} />,
   },
   {
     title: "Dev Log",
-    description: <>Learn what our developers have been up to</>,
+    description: <>Learn what our developers have been up to, and preview upcoming changes.</>,
     link: "blog",
     img: <EngineeringOutlinedIcon sx={{ fontSize: 96 }} />,
   },
