@@ -39,7 +39,7 @@ releases:
   ignore:
     # We only update to the n-1 stable release. So for now we're only interested in 252.x updates
     - "253.*"
-  rss: [todo proper rss link]
+  rss: https://github.com/systemd/systemd-stable/tags.atom
 security:
   cpe:
     - vendor: systemd_project
@@ -47,46 +47,44 @@ security:
     - vendor: freedesktop
       product: systemd
   ignore:
+    # A non-existent CVE added here as an example
     - CVE-2022-55555
 ```
 
-
-
 ## "releases" fields
 
-- Fields used to monitor for new versions
+Fields used to monitor for new versions.
 
-### id (Anitya ID)
+| Field    | Type                        | Required ?              | Description                                                                                                                                                                                                                                              |
+| -------- | --------------------------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`     | integer                     | Yes                     | Anitya ID from [release-monitoring.org](https://release-monitoring.org/)                                                                                                                                                                                 |
+| `ignore` | list of regular expressions | No                      | List of regular expressions enclosed in quotes matching versions to ignore. Include a comment explaining the ignored versions.                                                                                                                           |
+| `rss`    | URL                         | No, strongly encouraged | URL for a releases RSS feed. If the only RSS feed you can find for a project is a general "news" feed, don't include the field. For GitHub projects, You can use the "tags" or "releases" feed: `https://github.com/USER/REPOSITORY/tagsORreleases.atom` |
 
-- One `id` field per Solus package
-- Find the ID by searching [release-monitoring.org](https://release-monitoring.org/) by project name, then taking the ID out of the URL for the correct search result.
-- For example, the correct `systemd` search result for us is `systemd-stable` with the URL [https://release-monitoring.org/project/205088/](https://release-monitoring.org/project/205088/), so we use `205088` as the ID
+### Finding the Anitya ID
 
-### ignore
+To find the Anitya ID, search [release-monitoring.org](https://release-monitoring.org/) by project name, then take the ID out of the URL for the correct search result.
 
-- Not a required field
-- Contains regular expressions for version strings we choose to ignore
-- The regular expression should be enclosed in quotes
-- For example, we are keeping Solus on the `252.x` releases of `systemd`, so later versions can be ignored, and the regular expression becomes: `253.*`
-- Include a comment explaining the reason for every regular expression
-
-### rss
-
-- This field is optional but strongly encouraged
-- URL for a releases RSS feed
-- If the only RSS feed you can find for a project is a general "news" feed, don't include the field
+For example, the correct `systemd` search result for us is `systemd-stable` with the URL [https://release-monitoring.org/project/205088/](https://release-monitoring.org/project/205088/), so we use `205088` in the `id` field
 
 ## "security" fields
 
-- Fields used to monitor for security advisories (CVEs)
+Fields used to monitor for security advisories (CVEs)
 
-### cpe (CPE Name)
+| Field    | Type            | Required ? | Description                                                                                                                                                                                               |
+| -------- | --------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `cpe`    | list            | Yes        | List of `vendor:product` pairs from a full CPE name. CVEs for a given project may be published under more than one CPE; include more than one if that is likely.                                          |
+| `ignore` | list of strings | No         | List of specific CVE identifiers which can be ignored, including a comment explaining why each CVE was ignored. As an example, a CVE can be ignored if the Solus package includes a patch fixing the CVE. |
 
-- A full CPE Name contains redundant information we can ignore, we are only interested in `vendor` and `product`
-- For example, `cpe:2.3:a:systemd_project:systemd` is a CPE for the _vendor_ `systemd_project`, and the _product_ `systemd`
-- CVEs for a given project may be published under more than one CPE; include more than one if that is likely
+### What is a CPE Name?
 
-#### Determining the CPE Name
+A [CPE Name](https://en.wikipedia.org/wiki/Common_Platform_Enumeration) is a structured naming scheme for information technology systems, primarily used to search for CVEs.
+
+CPE names contain redundant information we can ignore, we are only interested in the vendor and the product.
+
+For example, `cpe:2.3:a:systemd_project:systemd` is the CPE for the _vendor_ `systemd_project`, and the _product_ `systemd`.
+
+### Finding the CPE Name
 
 The easiest way to search for CPE Names is with the following command; replacing `systemd` with your search term:
 
@@ -94,7 +92,17 @@ The easiest way to search for CPE Names is with the following command; replacing
 curl -s -X POST https://cpe-guesser.cve-search.org/search -d "{\"query\": [\"systemd\"]}" | jq .
 ```
 
-todo: mention the proto helper script once it is merger
+Note this command uses the `jq` tool, which you may not have installed:
+
+```bash
+sudo eopkg it jq
+```
+
+If you have our [helper functions](/docs/packaging/prepare-for-packaging#set-up-repository-helper-functions-optional) installed, you can use the following command:
+
+```bash
+cpesearch systemd
+```
 
 :::tip
 
@@ -132,9 +140,11 @@ Ignore the numerical ids, let's walk through the CPEs by vendor:
 - `freedesktop` is from freedesktop.org and is a good candidate, so we add it
 - `systemd_project` is a good candidate, so we add it
 
-#### No known CPE
+### No known CPE
 
-It is possible that an established product has not had a security advisory in the past, and therefore **does not have a CPE**; please ask on Matrix if you are unsure. In that case, include an empty `security` and `cpe`  field with a comment in the following format:
+If an established product hasn't had a security advisory in the past, it might not have a CPE.
+
+In that case, include an empty `security` and `cpe` field with a comment in the following format:
 
 ```yaml
 # No known CPE, checked 20240123
@@ -142,9 +152,8 @@ security:
   cpe: ~
 ```
 
-### ignore
+:::tip
 
-- Not a required field
-- Use this field to list specific CVE identifiers which can be ignored
-- todo: explanation of when this should be used, whether list items should include a comment with a reason
-- Unlike the `ignore` field under `releases`, regular expressions should not be used.
+If you are unsure of what to do in this case, feel free to ask in the Solus Packaging Matrix room.
+
+:::
