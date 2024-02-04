@@ -55,7 +55,7 @@ security:
 | Field    | Type                        | Required ?              | Description                                                                                                                    |
 | -------- | --------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | `id`     | integer                     | Yes                     | Anitya ID from [release-monitoring.org](https://release-monitoring.org/)                                                       |
-| `ignore` | list of regular expressions | No                      | List of regular expression matching versions to ignore. Include a comment explaining the ignored versions. Enclose in quotes   |
+| `ignore` | list of regular expressions | No                      | List of regular expressions enclosed in quotes matching versions to ignore. Include a comment explaining the ignored versions. |
 | `rss`    | URL                         | No, strongly encouraged | URL for a releases RSS feed. If the only RSS feed you can find for a project is a general "news" feed, don't include the field |
 
 - Fields used to monitor for new versions
