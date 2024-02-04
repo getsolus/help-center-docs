@@ -62,7 +62,9 @@ security:
 
 ### Finding the Anitya ID
 
-You can find the Anitya ID by searching [release-monitoring.org](https://release-monitoring.org/) by project name, then taking the ID out of the URL for the correct search result. For example, the correct `systemd` search result for us is `systemd-stable` with the URL [https://release-monitoring.org/project/205088/](https://release-monitoring.org/project/205088/), so we use `205088` in the `id field`
+To find the Anitya ID, search [release-monitoring.org](https://release-monitoring.org/) by project name, then take the ID out of the URL for the correct search result. 
+
+For example, the correct `systemd` search result for us is `systemd-stable` with the URL [https://release-monitoring.org/project/205088/](https://release-monitoring.org/project/205088/), so we use `205088` in the `id` field
 
 ## "security" fields
 
