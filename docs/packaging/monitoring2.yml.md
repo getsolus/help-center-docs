@@ -39,7 +39,7 @@ releases:
   ignore:
     # We only update to the n-1 stable release. So for now we're only interested in 252.x updates
     - "253.*"
-  rss: [todo proper rss link]
+  rss: https://github.com/systemd/systemd-stable/tags.atom
 security:
   cpe:
     - vendor: systemd_project
@@ -47,18 +47,19 @@ security:
     - vendor: freedesktop
       product: systemd
   ignore:
+    # A non-existent CVE added here as an example
     - CVE-2022-55555
 ```
 
 ## "releases" fields
 
+Fields used to monitor for new versions.
+
 | Field    | Type                        | Required ?              | Description                                                                                                                    |
 | -------- | --------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | `id`     | integer                     | Yes                     | Anitya ID from [release-monitoring.org](https://release-monitoring.org/)                                                       |
 | `ignore` | list of regular expressions | No                      | List of regular expressions enclosed in quotes matching versions to ignore. Include a comment explaining the ignored versions. |
-| `rss`    | URL                         | No, strongly encouraged | URL for a releases RSS feed. If the only RSS feed you can find for a project is a general "news" feed, don't include the field |
-
-- Fields used to monitor for new versions
+| `rss`    | URL                         | No, strongly encouraged | URL for a releases RSS feed. If the only RSS feed you can find for a project is a general "news" feed, don't include the field. For GitHub projects, You can use the "tags" or "releases" feed: `https://github.com/USER/REPOSITORY/tagsORreleases.atom` |
 
 ### Finding the Anitya ID
 
@@ -68,14 +69,18 @@ For example, the correct `systemd` search result for us is `systemd-stable` with
 
 ## "security" fields
 
+Fields used to monitor for security advisories (CVEs)
+
 | Field    | Type            | Required ? | Description                                                                         |
 | -------- | --------------- | ---------- | ----------------------------------------------------------------------------------- |
 | `cpe`    | list            | Yes        | List of `vendor:product` pairs from a full CPE name. CVEs for a given project may be published under more than one CPE; include more than one if that is likely.                            |
-| `ignore` | list of strings | No         | List of specific CVE identifiers which can be ignored. Todo: do we include reasons? |
+| `ignore` | list of strings | No         | List of specific CVE identifiers which can be ignored, including a comment explaining why each CVE was ignored. Please discuss your reasons for ignoring a CVE with Solus Staff. |
 
 ### What is a CPE Name?
 
-A [CPE Name](https://en.wikipedia.org/wiki/Common_Platform_Enumeration) is a structured naming scheme for information technology systems, primarily used to search for CVEs. A full CPE Name contains redundant information we can ignore, we are only interested in `vendor` and `product`
+A [CPE Name](https://en.wikipedia.org/wiki/Common_Platform_Enumeration) is a structured naming scheme for information technology systems, primarily used to search for CVEs. 
+
+CPE names contain redundant information we can ignore, we are only interested in the vendor and the product.
 
 For example, `cpe:2.3:a:systemd_project:systemd` is the CPE for the _vendor_ `systemd_project`, and the _product_ `systemd`.
 
@@ -87,7 +92,13 @@ The easiest way to search for CPE Names is with the following command; replacing
 curl -s -X POST https://cpe-guesser.cve-search.org/search -d "{\"query\": [\"systemd\"]}" | jq .
 ```
 
-If you have our [helper functions](/docs/packaging/prepare-for-packaging#set-up-monorepo-helper-functions-optional) installed, you can use the following command:
+Note this command uses the `jq` tool, which you may not have installed:
+
+```bash
+sudo eopkg it jq
+```
+
+If you have our [helper functions](/docs/packaging/prepare-for-packaging#set-up-repository-helper-functions-optional) installed, you can use the following command:
 
 ```bash
 cpesearch systemd
@@ -141,3 +152,9 @@ In that case, include an empty `security` and `cpe` field with a comment in the 
 security:
   cpe: ~
 ```
+
+:::tip
+
+If you are unsure of what to do in this case, feel free to ask in the Solus Packaging Matrix room.
+
+:::
