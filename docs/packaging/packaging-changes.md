@@ -11,6 +11,15 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 - This list is not exhaustive
 - This list is in _reverse chronological order_ (newest first)
 
+## 2024
+
+### February
+
+#### Begin adding `monitoring.yml` to packages
+
+- A new per-package file was introduced: `monitoring.yml`. Used to monitor packages for releases and security advisories; see [monitoring.yml](docs/packaging/monitoring.yml.md).
+- This is not enforced by automatic checks yet, but we may ask that it be added.
+
 ## 2023
 
 ### October
