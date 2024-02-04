@@ -130,7 +130,9 @@ Ignore the numerical ids, let's walk through the CPEs by vendor:
 
 ### No known CPE
 
-It is possible that an established product has not had a security advisory in the past, and therefore **does not have a CPE**; please ask on Matrix if you are unsure. In that case, include an empty `security` and `cpe` field with a comment in the following format:
+If an established product hasn't had a security advisory in the past, it might not have a CPE. 
+
+In that case, include an empty `security` and `cpe` field with a comment in the following format:
 
 ```yaml
 # No known CPE, checked 20240123
