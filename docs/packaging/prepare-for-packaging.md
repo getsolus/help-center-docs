@@ -32,7 +32,6 @@ Matrix=@username:matrix.org
 
 We need to install a few things in order to get started with packaging:
 
-- `curl` is used by our optional Helper Functions
 - `go-task` is used by our build tools for scripting
 - `git` is used for version control of the solus sources
 - `github-cli` is used to make working with GitHub easier
@@ -42,7 +41,7 @@ We need to install a few things in order to get started with packaging:
 - `ypkg` is the program that actually builds packages
 
 ```bash
-sudo eopkg it curl go-task git github-cli jq solbuild solbuild-config-unstable ypkg
+sudo eopkg it go-task git github-cli jq solbuild solbuild-config-unstable ypkg
 ```
 
 ## Setting up a GitHub account
