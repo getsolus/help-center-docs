@@ -2,6 +2,7 @@ abcm
 ahci
 akonadi
 alienware
+anitya
 anthy
 anydesk
 aosp
@@ -99,6 +100,7 @@ flicky
 flto
 fluidsynth
 fpath
+freedesktop
 funroll
 gamepad
 gconf
@@ -157,6 +159,7 @@ ksysguard
 kwalletd
 kxmlgui
 ldflags
+lennart
 libc
 libcmis
 libcurl
@@ -242,6 +245,7 @@ pkgfiles
 pkgname
 plasmashell
 plexmediaserver
+poettering
 pomo
 pomodoneapp
 portege
@@ -268,6 +272,7 @@ readline
 realtek
 redditor
 redistributable
+regexes
 reindex
 releng
 relocs
