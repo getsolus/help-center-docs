@@ -36,29 +36,27 @@ This is invariably created for packages that provide libraries and development h
 /usr/include
 /usr/$lib/lib*.so
 /usr/$lib/lib*.a
-/usr/share/man2/
-/usr/share/man3/
+/usr/share/man/man3
 /usr/share/pkgconfig
 /usr/$lib/pkgconfig
 /usr/share/cmake
 /usr/share/vala
 ```
 
-Note that for some packages, `/usr/$lib/lib*.so` files are not symlinks. In this instance, the main package will be broken with no library files present. This can quickly be determined by looking at the resulting .xml file generated after running the build.
+Note that for some packages, `/usr/$lib/lib*.so` files are not symlinks. In this instance, the main package will be broken with no library files present. This can quickly be determined by looking at the resulting `pspec_*.xml` file generated after running the build.
 If this happens, simply override with `patterns` or set `libsplit` to “no”.
 
-**A note on static archives**: Unless it is absolutely unavoidable, you should disable static libraries within your build. This is usually fixed by adding `--disable-static` to your configure routine. If `*.a` files are shown in your packaging request, it will be
-questioned, as they can pose a greater security risk if packages link against these static archives.
+**A note on static archives**: Unless it is absolutely unavoidable, you should disable static libraries within your build. This is usually fixed by adding `--disable-static` to your configure routine. If `*.a` files are shown in your packaging request, it will be questioned, as they can pose a greater security risk if packages link against these static archives.
 
 ### The docs subpackage
 
 Currently there is only one pattern which is forced into a `docs` subpackage:
 
 ```
-/usr/share/gtk-doc
+/usr/share/gtk-doc/html
 ```
 
-If required, you can use `patterns` to move other files into the `docs` subpackage, making it smaller.
+If required, you can use `patterns` to move other files into the `docs` subpackage, reducing the size of the main package.
 
 ### The 32bit subpackage
 
@@ -130,32 +128,26 @@ We prefer the use of `pkgconfig` dependencies. Most modern software will use the
 
 An obvious advantage to supporting `pkgconfig` dependencies is that there is a 1:1 mapping between the name requested by the build and the name used within the `package.yml`. Instead of trying to hunt down the package providing that dependency, you simply list the same name. Any package in the repository will export information about the `.pc` files (for `pkg-config`) it contains, enabling you to use those as a build dependency.
 
-A secondary advantage is that this allows for easily switching or replacing a providing package. When no `pkgconfig` name is available (some packages do not provide these, or it doesn’t make sense for them to), you
-may use the explicit package name. Always ensure you select the correct package, i.e. the `-devel` subpackage. This provides the necessary symlinks and headers to build packages.
+A secondary advantage is that this allows for easily switching or replacing a providing package. When no `pkgconfig` name is available (some packages do not provide these, or it doesn’t make sense for them to), you may use the explicit package name. Always ensure you select the correct package, i.e. the `-devel` subpackage. This provides the necessary symlinks and headers to build packages.
 
-### Finding what package provides a dependency (if any)
+### Finding what package provides a pkgconfig dependency (if any)
 
-The script `common/Scripts/epcsearch.py` is used to find packages that satisfy build dependencies. We recommend making an alias for your shell for this.
+You can use `go-task` to find packages that satisfy `pkgconfig` dependencies. It can search for multiple dependencies at once.
 
-```bash
-alias epcsearch='~/packaging/common/Scripts/epcsearch.py'
-```
-
-As an example, if you know a package has a build dependency of `gtk+-3.0` you would run:
+As an example, if you know a package has the build dependencies `Qt5Core` and `Qt6Core`, you would run:
 
 ```bash
-epcsearch gtk+-3.0
+go-task pkgconfig -- Qt5Core Qt6Core
 ```
 
 This will output:
 
 ```bash
-epcsearch gtk+-3.0
-pkgconfig(gtk+-3.0) found in: libgtk-3-devel
-pkgconfig32(gtk+-3.0) found in: libgtk-3-32bit-devel
+pkgconfig(Qt5Core) found in: qt5-base-devel
+pkgconfig(Qt6Core) found in: qt6-base-devel
 ```
 
-You can also determine if there are pkgconfigs available from a -devel package by doing `eopkg info (name)` and looking for the `Provides` key.
+You can also determine if there are `pkgconfigs` available from a `-devel` package by doing `eopkg info (name)` and looking for the `Provides` key.
 
 Example:
 
@@ -172,7 +164,7 @@ pkgconfig(gtk+-wayland-3.0) pkgconfig(gtk+-x11-3.0)
 
 ### Using pkgconfig dependencies
 
-In the `builddeps` list, simply use the `pkgconfig(name)` syntax. For example, to add gtk+-3.0 to the build dependencies, we would do the following:
+In the `builddeps` list, use the `pkgconfig(name)` syntax. For example, to add `gtk+-3.0` to the build dependencies, you would do the following:
 
 <!-- prettier-ignore -->
 ```yaml
@@ -191,6 +183,8 @@ Simply list the package name.
 When a `pkgconfig` dependency is available you will be asked to use that instead.
 :::
 
+Example:
+
 <!-- prettier-ignore -->
 ```yaml
 builddeps:
@@ -199,11 +193,9 @@ builddeps:
 
 ## Runtime dependencies
 
-Runtime dependencies are extra packages that a package needs in order to function correctly. A common example of this is other libraries. Solus `eopkg` packages will automatically add any binary dependencies at
-runtime, so that you do not have to.
+Runtime dependencies are extra packages that a package needs in order to function correctly. A common example of this is other libraries. Solus `eopkg` packages will automatically add any binary dependencies at runtime, so that you do not have to.
 
-All `devel` subpackages automatically depend on their parent package. On top of this, if they provide a `.pc` pkg-config file, we export this information, and automatically determine the packages this particular
-package would need to be able to build against correctly. As such, the majority of dependencies for builds are automatically resolved.
+All `devel` subpackages automatically depend on their parent package. On top of this, if they provide a `.pc` pkg-config file, we export this information, and automatically determine the packages this particular package would need to be able to build against correctly. As such, the majority of dependencies for builds are automatically resolved.
 
 In certain instances, binary dependencies aren’t enough. An example of this might be an extra Python package, or a font, something that is not accounted for by binary checks.
 
@@ -257,19 +249,18 @@ Files that may be required during the build can be accessed via the `$pkgfiles` 
 Both patches and extra files (such as systemd units) are stored in this directory. Note that if your patch is to address a **CVE**, you must use the following naming scheme: `./files/security/cve-xxxx-xxxx.patch`
 
 Where `xxxx-xxxx` is replaced with the full CVE ID. Complying with this simple rule ensures that we can know at any time the security status of packages when using tools such as `cve-check-tool`
-
+kept
 Solus tooling allows the use of `./files/security/cve-xxxx-xxxx.nopatch` (which isn't applied in the build) to indicate that a CVE has been validated as not applicable to the Solus package. This can be because another patch resolves this CVE, or there is a false positive via `cve-check-tool`. The contents of the file can describe why it doesn't apply without requiring a patch (i.e. Resolved by cve-xxxx-xxxx.patch).
 
 ### Applying a patch
 
-It is common practice to apply the patch file(s) within the `setup` section of your build staging. We can achieve this using the `%patch` macro, and the `$pkgfiles` variable. In this example, the required file is located
-at `./files/0002-Sample-commit-2.patch`
+It is common practice to apply the patch file(s) within the `setup` section of your build staging. We can achieve this using the `%patch` macro, and the `$pkgfiles` variable. In this example, the required file is located at `./files/0002-Sample-commit-2.patch`
 
 ```bash
 %patch -p1 -i $pkgfiles/0002-Sample-commit-2.patch
 ```
 
-Note you use the macro as you would normally use the patch command, however use of the macro ensures it performs a clean batch-mode patch.
+Note you use the macro as you would normally use the `patch` command, however use of the macro ensures it performs a clean batch-mode patch.
 
 If you are using compressed patches, i.e. for the `bash` or `readline` packages, you can pipe the call through `zcat` or similar:
 
@@ -286,7 +277,7 @@ security/cve-xxxx-xxxx.patch
 fix-silliness.patch
 ```
 
-Both of the files above will be applied using `-p1`. If you need to use stripping num, like `-p4`, you can do something like:
+Both of the files above will be applied using stripping number `-p1`. If you need to use a different stripping number, like `-p4`, you can write:
 
 ```bash
 security/cve-xxxx-xxxx.patch -p4
@@ -295,8 +286,7 @@ fix-silliness.patch
 
 ## Installing extra files
 
-We recommend using patches where possible first, as they ensure correct maintenance and will be updated across package versions. If you must install extra files into the directory, please use the `install`
-command, ensuring you set the correct permissions. Again, files are accessible from the `./files/` directory, relative to `package.yml`.
+We recommend using patches where possible first, as they ensure correct maintenance and will be updated across package versions. If you must install extra files into the directory, please use the `install` command, ensuring you set the correct permissions. Again, files are accessible from the `./files` directory, relative to `package.yml`.
 
 This is an example of installing a custom profile file, seen in the `bash` package:
 
@@ -310,17 +300,16 @@ In most instances, `ypkg` will assign the correct location for files, whether it
 
 In these instances it is possible to override the default assignment by way of patterns. These are simply a list of paths or globs to ensure a particular file, or set of files, end up in the desired location.
 
-The `patterns` key expects a `dict(s)` argument. The default key for each pattern is assumed to be the `name` of the package, so omitting the name would place files into the main package. The value should be a
-path or pattern you wish to match, ensuring files go to a specific location.
+The `patterns` key expects a `dict(s)` argument. The default key for each pattern is assumed to be the `name` of the package, so omitting the name would place files into the main package. The value should be a path or pattern you wish to match, ensuring files go to a specific location.
 
-In this example from libjpeg-turbo, we move all documentation into the `docs` subpackage:
+In this example from `libjpeg-turbo`, we move all documentation into the `docs` subpackage:
 
 ```
 patterns:
     - docs: [/usr/share/man]
 ```
 
-This example, taken from the wayland package, ensures the binaries from `/usr/bin` and the `/usr/share/wayland` are located in the `devel` subpackage:
+This example, taken from the `wayland` package, ensures the binaries from `/usr/bin` and the directory `/usr/share/wayland` are located in the `devel` subpackage:
 
 ```
 patterns:
@@ -331,11 +320,9 @@ patterns:
 
 ## Replace / rename
 
-In some situations, it may be required to replace one package with another, or to rename an existing package. In these instances you should coordinate with a repository maintainer to ensure the replaced package is
-marked **Obsolete** within the index. This will ensure correct upgrade paths for users.
+In some situations, it may be required to replace one package with another, or to rename an existing package. In these instances you should coordinate with a repository maintainer to ensure the replaced package is marked **Obsolete** within the index. This will ensure correct upgrade paths for users.
 
-Note that to retire a package, you must also coordinate with a repository maintainer. An **Obsolete** package is removed by the package manager when the user upgrades. As such, correct upgrade paths need to be
-established.
+Note that to retire a package, you must also coordinate with a repository maintainer. An **Obsolete** package is removed by the package manager when the user upgrades. As such, correct upgrade paths need to be established.
 
 The `replaces` ypkg key uses the `dict(s)` type, and the default key is assumed to be the current package `name`.
 
@@ -347,12 +334,11 @@ replaces:
     - libgeoclue
 ```
 
-The `name` of this package is **geoclue**, and the new package names are now:
+The `name` of this package is `geoclue`, and the new package names are now:
 
-- geoclue
-- geoclue-devel
+- `geoclue`
+- `geoclue-devel`
 
-Given the `replaces` values above, **geoclue** now replaces **libgeoclue**, and **geoclue-devel** replaces **libgeoclue-devel**. This is entirely transparent to the user, with a seamless update replacing the old
-packages with the new renamed packages.
+Given the `replaces` values above, `geoclue` now replaces `libgeoclue`, and `geoclue-devel` replaces `libgeoclue-devel`. This is entirely transparent to the user, with a seamless update replacing the old packages with the new renamed packages.
 
 The repository maintainer marked the old names as **Obsolete** in the index.
