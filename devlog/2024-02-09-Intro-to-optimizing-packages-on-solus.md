@@ -15,7 +15,7 @@ We'll explore how to build packages with advanced compiler techniques in order t
 
 <!-- truncate -->
 
-# Por Qué la Cauza
+# Cual es la causa
 
 Linux distributions have a lot of control over how a source-based package gets compiled and shipped to users as part of a binary repository. Aggressive and advanced compiler optimization techniques, as well as other methods can be used to provide greater out of the box performance for end users. This can greatly benefit users running on older hardware to provide a snappier end-user experience; reducing time waiting on a heavy workload to finish; or even improved battery life; amongst other improvements.
 
