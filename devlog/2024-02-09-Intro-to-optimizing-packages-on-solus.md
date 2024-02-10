@@ -1,6 +1,6 @@
 ---
 title: Intro to Optimizing Packages on Solus
-description: Explore how to employ advanced compiler techniques such as PGO, BOLT & Glibc HWCaps to squeeze extra performance from packages using libwebp as a test vehcile
+description: Explore how to employ advanced compiler techniques such as PGO, BOLT & Glibc HWCaps to squeeze extra performance from packages using libwebp as a test vehicle
 slug: solus-optimizing-packages
 authors:
   - name: Joey Riches
@@ -19,30 +19,32 @@ We'll explore how to build packages with advanced compiler techniques in order t
 
 Linux distributions have a lot of control over how a source-based package gets compiled and shipped to users as part of a binary repository. Aggressive and advanced compiler optimization techniques, as well as other methods can be used to provide greater out of the box performance for end users. This can greatly benefit users running on older hardware to provide a snappier end-user experience; reducing time waiting on a heavy workload to finish; or even improved battery life; amongst other improvements.
 
-Part of the problem is, a packager's time is limited. So how, as a distribution, do you choose to try provide faster compatible packages for a end user. A historic approach is to simply change the default compiler flags for _all_ packages, such as enabling [LTO](https://en.wikipedia.org/wiki/Interprocedural_optimization) by default. Whilst this approach can work well, at Solus the philosophy is slightly different where a packager can trivially enable several advanced compiler optimization techniques such as [PGO](https://en.wikipedia.org/wiki/Profile-guided_optimization) without too much faffing around on a _targeted_ package.
+Part of the problem is, a packager's time is limited. So how, as a distribution, do you choose to try provide faster compatible packages for an end user. A historic approach is to simply change the default compiler flags for _all_ packages, such as enabling [LTO](https://en.wikipedia.org/wiki/Interprocedural_optimization) by default. Whilst this approach can work well, at Solus the philosophy is slightly different where a packager can trivially enable several advanced compiler optimization techniques such as [PGO](https://en.wikipedia.org/wiki/Profile-guided_optimization) without too much faffing around on a _targeted_ package.
 
 The benefits of such an approach are:
-   - Can target the performance of a specific package to benefit _all_ users
-   - A compiler optimization may improve one package, but may not apply globally to all packages.
+
+- Can target the performance of a specific package to benefit _all_ users
+- A compiler optimization may improve one package, but may not apply globally to all packages.
 
 The downsides are such:
-   - Requires additional packager time to benchmark and experiment with different optimization strategies.
-   - Requires the packager to _choose_ and invest time into improving performance of a package.
-   - Requires the packager to find an appropriate benchmark to test the package against.
-   - Experimenting with compiler optimizations may not bear fruit: no meaningful improvement in performance, or there may be some other bottleneck.
+
+- Requires additional packager time to benchmark and experiment with different optimization strategies.
+- Requires the packager to _choose_ and invest time into improving performance of a package.
+- Requires the packager to find an appropriate benchmark to test the package against.
+- Experimenting with compiler optimizations may not bear fruit: no meaningful improvement in performance, or there may be some other bottleneck.
 
 # Optimization Techniques Available
 
 - speed:
-    - As simple as it gets really, build a package with `-O3` instead of `-O2` as well as any other flags deemed worthy to be included as part of the `speed` flags. The main drawback of this is that `-O3` is not guaranteed to produce faster results than building with `-O2` and typically will produce bigger binaries. The days of `-O3` outright breaking your program in weird unexpected ways is largely behind us.
+  - As simple as it gets really, build a package with `-O3` instead of `-O2` as well as any other flags deemed worthy to be included as part of the `speed` flags. The main drawback of this is that `-O3` is not guaranteed to produce faster results than building with `-O2` and typically will produce bigger binaries. The days of `-O3` outright breaking your program in weird unexpected ways is largely behind us.
 - LTO:
-    - Compared to some other distributions `-flto` is not yet enabled by default on Solus. LTO is almost guaranteed to provide a %1 or slightly larger performance improvement as well as a smaller binary at the cost of increased compiling times and memory usage during build. When combined with other optimization techniques such as PGO the LTO optimization can really stretch it's legs and provide even greater uplift!
+  - Compared to some other distributions `-flto` is not yet enabled by default on Solus. LTO is almost guaranteed to provide a %1 or slightly larger performance improvement as well as a smaller binary at the cost of increased compiling times and memory usage during build. When combined with other optimization techniques such as PGO the LTO optimization can really stretch its legs and provide even greater uplift!
 - Clang:
-    - Not strictly an optimization, but, building a package with `clang` instead of `gcc` and `ld.ldd` to link instead of the infamous `ld.bfd` may provide a faster package out of the box. You'll have to be careful of subtle ABI differences if building with `clang`. If in doubt, and, `clang` is the obvious choice, perform safety rebuilds on all reverse dependencies of the package.
+  - Not strictly an optimization, but, building a package with `clang` instead of `gcc` and `ld.ldd` to link instead of the infamous `ld.bfd` may provide a faster package out of the box. You'll have to be careful of subtle ABI differences if building with `clang`. If in doubt, and, `clang` is the obvious choice, perform safety rebuilds on all reverse dependencies of the package.
 - PGO:
-    - Profile guided optimization. Build once with instrumentation in order to collect profile data when ran. Run the program using a representative workload in order to collect profiling data. Build the program again with the profiling data provided in order to build an optimized variant.
+  - Profile guided optimization. Build once with instrumentation in order to collect profile data when ran. Run the program using a representative workload in order to collect profiling data. Build the program again with the profiling data provided in order to build an optimized variant.
 - BOLT:
-    - Binary optimization and layout tool. You can think of this as "post-link PGO" where you instrument a binary with `bolt` to collect profiling data. Run that binary. Then finally reorganize the binary layout using the collected profile data. This generally works better on large statically linked binaries but smaller binaries or libraries such as found in a typical package can benefit too. This optimization is still quite new.
+  - Binary optimization and layout tool. You can think of this as "post-link PGO" where you instrument a binary with `bolt` to collect profiling data. Run that binary. Then finally reorganize the binary layout using the collected profile data. This generally works better on large statically linked binaries but smaller binaries or libraries such as found in a typical package can benefit too. This optimization is still quite new.
 
 Regardless, that's enough word spaghetti, let's look at the process to actually optimize a package.
 
@@ -84,7 +86,7 @@ install    : |
     %make_install
 ```
 
-Okay, looks to a quite simple affair. A simple configure, make, make install as well as `emul32` being enabled specifying the -32bit packages are also provided from this recipe. Next step is to look for a repeatable and easy way to benchmark it. We'll begin by looking at the `pspec_x86_64.xml` file which lists all the files produced from the `package.yml` recipe as well as some metadata.
+Okay, looks to be a quite simple affair. A simple configure, make, make install as well as `emul32` being enabled specifying the -32bit packages are also provided from this recipe. Next step is to look for a repeatable and easy way to benchmark it. We'll begin by looking at the `pspec_x86_64.xml` file which lists all the files produced from the `package.yml` recipe as well as some metadata.
 
 ```xml
         <Name>libwebp</Name>
@@ -164,6 +166,7 @@ optimize:
 ```
 
 Moment of truth...
+
 ```
 $ hyperfine "dwebp ~/3.webp -o /dev/null"
 Benchmark 1: dwebp ~/3.webp -o /dev/null
@@ -179,7 +182,7 @@ Well okay, we got a very minor uplift in decoding performance and a slightly hig
 
 ## PGO is great, except, when it isn't.
 
-Next step is to explore PGO (Profile Guided Optimization). For our `libwebp` package, looks like we already hit a bit of a snafu. There's no testsuite included in the tarball! That's a bit of a disappointment as a testsuite such as `make check` is by far and away the easiest and most comprehensive workload that can be used for profiling as part of PGO, especially for smaller libraries. However, we can still experiment with the just built `dwebp` and `cwebp` binaries as a suitable workload for PGO.
+Next step is to explore PGO (Profile Guided Optimization). For our `libwebp` package, looks like we already hit a bit of a snafu. There's no test suite included in the tarball! That's a bit of a disappointment as a test suite such as `make check` is by far and away the easiest and most comprehensive workload that can be used for profiling as part of PGO, especially for smaller libraries. However, we can still experiment with the just built `dwebp` and `cwebp` binaries as a suitable workload for PGO.
 
 Luckily, as part of the package.yml format all you have to do is provide a profile for automatic PGO. After chrooting into the build environment and fiddling around a bit we end up with:
 
@@ -191,6 +194,7 @@ profile    : |
 ```
 
 After specifying that, 6 builds will now be performed instead of 2:
+
 - emul32:
   - Instrumented build
   - Run profiling workload
@@ -203,6 +207,7 @@ After specifying that, 6 builds will now be performed instead of 2:
 For this relatively small package it increases the build time from 1m1.672s to 1m42.199s
 
 The next moment of truth...
+
 ```
 $ hyperfine "dwebp ~/3.webp -o /dev/null"
 Benchmark 1: dwebp ~/3.webp -o /dev/null
@@ -214,13 +219,13 @@ Benchmark 1: cwebp ~/PNG_Test.png -o /dev/null
   Range (min … max):    1.335 s …  1.374 s    10 runs
 ```
 
-Well... That's interesting. We actually regress in performance for decode performance whilst gaining another small bump in encoding performance. Worst still, we get a bunch of `profile count data file not found [-Wmissing-profile]` warning messages during the optimized build indicating to us our profiling workload isn't comprehensive enough and doesn't cover enough code paths. The lack of a handy `make check` that could be used as a profiling workload is really hurting us here. For now, let's put in a pin in exploring PGO, it isn't a dead end but more work needs to be done curating a more comprehensive workload to chuck at it in this particular case, whilst other, easier, optimization techniques are still available to us.
+Well... That's interesting. We actually regress in performance for decode performance whilst gaining another small bump in encoding performance. Worse still, we get a bunch of `profile count data file not found [-Wmissing-profile]` warning messages during the optimized build indicating to us our profiling workload isn't comprehensive enough and doesn't cover enough code paths. The lack of a handy `make check` that could be used as a profiling workload is really hurting us here. For now, let's put a pin in exploring PGO, it isn't a dead end but more work needs to be done curating a more comprehensive workload to chuck at it in this particular case, whilst other, easier, optimization techniques are still available to us.
 
 ## 256 Vector Units go brrrrrr...
 
-The next obvious step is to explore `glibc` hardware capabilities. For those unaware both `clang` and `gnu` compilers provide `x86_64-v2`, `x86_64-v3` and `x86_64-v4` miroarchitechure build options on top of the baseline of `x86_64`. These enable the use of targeting additional CPU instruction sets during compilation for better performance. For example, `-sse4.2` for `x86_64-v2`, `-avx2` for `x86_64-v3`, and `-avx512` for `x86_64-v4`.
+The next obvious step is to explore `glibc` hardware capabilities. For those unaware both `clang` and `gnu` compilers provide `x86_64-v2`, `x86_64-v3` and `x86_64-v4` micro-architecture build options on top of the baseline of `x86_64`. These enable the use of targeting additional CPU instruction sets during compilation for better performance. For example, `-sse4.2` for `x86_64-v2`, `-avx2` for `x86_64-v3`, and `-avx512` for `x86_64-v4`.
 
-Whilst that's great 'n all, if a program is built with `x86_64-v3` and gains an additional ~10% uplift in performance, it's no good if a `x86_64-v2` compatible cpu can't run it. Luckily the `glibc` loader that's found on almost general purpose linux installs provides a way to load higher or lower microarchitecture libraries if they're installed and supported.
+Whilst that's great 'n all, if a program is built with `x86_64-v3` and gains an additional ~10% uplift in performance, it's no good if a `x86_64-v2` compatible cpu can't run it. Luckily the `glibc` loader that's found on almost general purpose linux installs provides a way to load higher or lower micro-architecture libraries if they're installed and supported.
 
 On top of all that, the `package.yml` format provides an incredibly simple way of providing `x86_64-v3` built libraries by enabling the `avx2 : yes` flag.
 
@@ -231,6 +236,7 @@ With `avx2 : yes` enabled in the `libwebp` package three builds are performed.
 - x86_64
 
 We now see these additional files in the `pspec_x86_64.xml` file
+
 ```diff
 +            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libsharpyuv.so.0</Path>
 +            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libsharpyuv.so.0.0.1</Path>
@@ -245,6 +251,7 @@ We now see these additional files in the `pspec_x86_64.xml` file
 ```
 
 Let's rerun `lld` on `dwebp` after installing the new package and...
+
 ```
 $ ldd /usr/bin/dwebp
 	linux-vdso.so.1 (0x00007ffeab5b1000)
@@ -259,6 +266,7 @@ $ ldd /usr/bin/dwebp
 ```
 
 We can crucially see that `dwebp` is now loading the `x86-64-v3` built `libwebp.so` lib from `/usr/lib/glibc-hwcaps/x86-64-v3/libwebp.so.7.1.8`, success! Let's what our performance looks like.
+
 ```
 $ hyperfine "dwebp ~/3.webp -o /dev/null"
 Benchmark 1: dwebp ~/3.webp -o /dev/null
@@ -273,7 +281,7 @@ Benchmark 1: cwebp ~/PNG_Test.png -o /dev/null
 Let's recap so far:
 
 | Optimization            | Decode             | Encode  | Size    |
-| ------------            | --------           | ------- | ------- |
+| ----------------------- | ------------------ | ------- | ------- |
 | Baseline                | 202.2 ms           | 1.399 s | 1.33 MB |
 | Speed + LTO             | 200.0 ms           | 1.353 s | 1.73 MB |
 | Speed + LTO + PGO       | 204.1 ms :warning: | 1.349 s | 1.07 MB |
@@ -293,9 +301,9 @@ Let's look at `dwebp` first with `perf report -i dwebp.data`.
 
 ![Perf report dwebp](perf_report_dwebp_png.webp)
 
-Well god damn, literally all of our time is being spent in `libz.so` it's no wonder our compiler optimizations were hardly improving performance. 
+Well god damn, literally all of our time is being spent in `libz.so` it's no wonder our compiler optimizations were hardly improving performance.
 
-Let's also look at the `cwebp` report, we've generally been getter better results from it.
+Let's also look at the `cwebp` report, we've generally been getting better results from it.
 
 ![Perf report cwebp](perf_report_cwebp_png.webp)
 
@@ -307,11 +315,12 @@ You may remember early on, when I said we are also indirectly testing `libpng`. 
 
 > Decodes the WebP image file to PNG format
 
-Turns out, it's more accurate to say we are _directly_ testing `libpng` and by extension `zlib`. It isn't `libwebp` that's spending all of it's time in `libz.so`, it's `libpng`! This is exactly the reason you have to be careful about the benchmarks chosen and, ensure you understand what they're doing.
+Turns out, it's more accurate to say we are _directly_ testing `libpng` and by extension `zlib`. It isn't `libwebp` that's spending all of its time in `libz.so`, it's `libpng`! This is exactly the reason you have to be careful about the benchmarks chosen and, ensure you understand what they're doing.
 
 However, the good news about this little snafu is:
-  1. `dwebp` can be used to translate to another image format such as `.yuv` that'll more accurately remove the bottleneck from `libz.so`.
-  2. We now know that `libpng` has a huge bottleneck in `libz.so` and speeding up `zlib` _should_ dramatically speed up `libpng` performance.
+
+1. `dwebp` can be used to translate to another image format such as `.yuv` that'll more accurately remove the bottleneck from `libz.so`.
+2. We now know that `libpng` has a huge bottleneck in `libz.so` and speeding up `zlib` _should_ dramatically speed up `libpng` performance.
 
 ## Adjusting the Benchmark
 
@@ -325,24 +334,25 @@ Okay that's awesome, no `libpng.so` or `libz.so` to mess with our tests!
 
 Let's reapply our optimizations, keeping those which apply an uplift
 
-| Optimization            | Decode             | Size    |
-| ------------            | ------------------ | ------- |
-| Baseline                | 14.7 ms            | 1.33 MB |
-| Speed                   | 14.5 ms            | 1.56 MB |
-| LTO                     | 14.6 ms            | 1.40 MB |
-| PGO                     | 18.0 ms :warning:  | 1.07 MB |
-| x86-64-v3               | 12.7 ms            | 2.35 MB |
-| Speed + LTO + x86-64-v3 | 12.3 ms            | 3.17 MB |
+| Optimization            | Decode            | Size    |
+| ----------------------- | ----------------- | ------- |
+| Baseline                | 14.7 ms           | 1.33 MB |
+| Speed                   | 14.5 ms           | 1.56 MB |
+| LTO                     | 14.6 ms           | 1.40 MB |
+| PGO                     | 18.0 ms :warning: | 1.07 MB |
+| x86-64-v3               | 12.7 ms           | 2.35 MB |
+| Speed + LTO + x86-64-v3 | 12.3 ms           | 3.17 MB |
 
 Okay, this is great, whilst we aren't getting much from speed or LTO, we are getting a big uplift from x86-64-v3 libraries and when combined with the other optimizations we're getting an uplift in performance of around ~16% at the cost of close to thrice the installed package size.
 
 ### Partial Profiling
 
-Once again we see that PGO regresses performance hard, however, that smaller size is giving a good hint! We already know that the profiling workload we gave it isn't very comprehensive due to the bunch of `-Wmissing-profile` warnings we get during the optimized build. By default, PGO will aggressively inline and apply additional optimizations to code that's part of the profiling workload with everything else that isn't will be optimized for size. The idea being, hotpath code is fast and code that doesn't matter is small. However, what happens when you can't craft a comprehensive workload such that seems to be the case here? Luckily GCC has a flag for exactly that `-fprofile-partial-training`. GCC docs state that:
+Once again we see that PGO regresses performance hard, however, that smaller size is giving a good hint! We already know that the profiling workload we gave it isn't very comprehensive due to the bunch of `-Wmissing-profile` warnings we get during the optimized build. By default, PGO will aggressively inline and apply additional optimizations to code that's part of the profiling workload while everything else will be optimized for size. The idea being, hot-path code is fast and code that doesn't matter is small. However, what happens when you can't craft a comprehensive workload, as seems to be the case here? Luckily GCC has a flag for exactly that `-fprofile-partial-training`. GCC docs state that:
 
->  In some cases it is not practical to train all possible hot paths in the program. (For example, program may contain functions specific for a given hardware and training may not cover all hardware configurations program is run on.) With -fprofile-partial-training profile feedback will be ignored for all functions not executed during the train run leading them to be optimized as if they were compiled without profile feedback. This leads to better performance when train run is not representative but also leads to significantly bigger code.
+> In some cases it is not practical to train all possible hot paths in the program. (For example, program may contain functions specific for a given hardware and training may not cover all hardware configurations program is run on.) With -fprofile-partial-training profile feedback will be ignored for all functions not executed during the train run leading them to be optimized as if they were compiled without profile feedback. This leads to better performance when train run is not representative but also leads to significantly bigger code.
 
 Okay, let's try it out, all we need to do is specify in our `package.yml` recipe.
+
 <!-- prettier-ignore -->
 ```yaml
 environment: |
@@ -354,19 +364,19 @@ environment: |
 
 And the results:
 
-| Optimization                          | Decode             | Size    |
-| ------------                          | ------------------ | ------- |
-| Speed + LTO + x86-64-v3               | 12.3 ms            | 3.17 MB |
-| Speed + LTO + x86-64-v3 + Partial PGO | 12.5 ms            | 3.13 MB |
+| Optimization                          | Decode  | Size    |
+| ------------------------------------- | ------- | ------- |
+| Speed + LTO + x86-64-v3               | 12.3 ms | 3.17 MB |
+| Speed + LTO + x86-64-v3 + Partial PGO | 12.5 ms | 3.13 MB |
 
 Well, it was worth a try. This highlights how useless PGO can be when you don't or can't provide it a good workload. Interestingly, we don't get the size bloat that was promised, in fact, the opposite.
 
 # Final libwebp Results
 
-| Benchmark                           | Time Before | Time After | Size Before  | Size After |
-| ------------                        | --------    | -------    | -------      | ---------  |
-| "dwebp ~/3.webp -yuv -o /dev/null"  | 14.5 ms     | 12.3 ms    | 1.33 MB      | 3.17 MB    |
-| "cwebp ~/PNG_Test.png -o /dev/null" | 1.399 s     | 1.313 s    | --           | --         |
+| Benchmark                           | Time Before | Time After | Size Before | Size After |
+| ----------------------------------- | ----------- | ---------- | ----------- | ---------- |
+| "dwebp ~/3.webp -yuv -o /dev/null"  | 14.5 ms     | 12.3 ms    | 1.33 MB     | 3.17 MB    |
+| "cwebp ~/PNG_Test.png -o /dev/null" | 1.399 s     | 1.313 s    | --          | --         |
 
 In the end, we get a very healthy ~16% improvement in decoding from a .webp to .yuv file. As well as a respectable 6% improvement in encoding from a .png to .webp file. However, the increased package size is very unfortunate. It's possible to tweak the x86-64-v3 build and only ship the libs that actually improve performance in order to get the installed size back to an acceptable level.
 
@@ -383,6 +393,7 @@ Let's just go for it, replacing Solus' `zlib` package with zlib-ng built in comp
 ## I Zee a Purty lil' Package
 
 Well that was simple. Here's what our zlib-ng `package.yml` recipe looks like.
+
 <!-- prettier-ignore -->
 ```yaml
 name       : zlib
@@ -444,21 +455,21 @@ Well. This is pretty much inline with our flawed `dwebp` benchmark from earlier.
 
 However, we're not done yet. We still have our compiler optimizations available to us to squeeze more performance from `zlib-ng`.
 
-| Optimization                          | Decode             | Size      |
-| ------------                          | ------------------ | --------- |
-| Baseline                              | 896.6 ms           | 141.00 KB |
-| Speed                                 | 883.6 ms           | 182.00 KB |
-| LTO                                   | 892.7 ms           | 133.00 KB |
-| PGO                                   | 894.6 ms           | 141.00 KB |
-| x86-64-v3                             | 892.5 ms           | 295.00 KB |
-| Speed + LTO                           | 882.6 ms           | 170.00 KB |
-| Speed + LTO + PGO + x86-64-v3         | 882.5 ms           | 250.00 KB |
+| Optimization                  | Decode   | Size      |
+| ----------------------------- | -------- | --------- |
+| Baseline                      | 896.6 ms | 141.00 KB |
+| Speed                         | 883.6 ms | 182.00 KB |
+| LTO                           | 892.7 ms | 133.00 KB |
+| PGO                           | 894.6 ms | 141.00 KB |
+| x86-64-v3                     | 892.5 ms | 295.00 KB |
+| Speed + LTO                   | 882.6 ms | 170.00 KB |
+| Speed + LTO + PGO + x86-64-v3 | 882.5 ms | 250.00 KB |
 
-It looks like in this case the simple speed + LTO optimizations is the way to go. Speed gives the majority of the speedup but LTO helps bring back down the package size again. However, it's only a 1.5% improvement from baseline for this benchmark. We can always rebenchmark it later, testing zlib performance more directly instead of via libpng. It shows how good job the zlib-ng developers have done that it's so performant right out of the gate.
+It looks like in this case the simple speed + LTO optimizations is the way to go. Speed gives the majority of the speedup but LTO helps bring back down the package size again. However, it's only a 1.5% improvement from baseline for this benchmark. We can always re-benchmark it later, testing zlib performance more directly instead of via libpng. It shows how good a job the zlib-ng developers have done that it's so performant right out of the gate.
 
 # Final Words
 
-We've shown the process of how a package can be optimized in Solus, through the failings and wins here I hope some good tips and tricks were provided in avoiding common pitfuls. Additional benchmarking strategies such as BOLT or Polly optimizations were not discussed and it'll be good material for a future blog post.
+We've shown the process of how a package can be optimized in Solus, through the failings and wins here I hope some good tips and tricks were provided in avoiding common pitfalls. Additional benchmarking strategies such as BOLT or Polly optimizations were not discussed and it'll be good material for a future blog post.
 
 Some other important things such as tweaking the system for benchmarking in order to get representative and consistent results were also not discussed. This is especially important in power budget constrained systems such as laptops and worth bearing in mind.
 
