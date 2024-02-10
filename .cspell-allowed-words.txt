@@ -26,6 +26,7 @@ bootctl
 bootloader
 bootup
 bopomofo
+bottlenecked
 brasero
 brlaser
 brsaneconfig
@@ -49,11 +50,13 @@ chsh
 cifs
 clion
 cmdline
+compat
 configfile
 confopts
 cpesearch
 cran
 cryptsetup
+cwebp
 cxxflags
 cython
 datacenter
@@ -75,6 +78,7 @@ droidcam
 dtags
 dumpall
 dumpcap
+dwebp
 dymo
 efibootmgr
 emul
@@ -100,6 +104,7 @@ flicky
 flto
 fluidsynth
 fpath
+fprofile
 freedesktop
 funroll
 gamepad
@@ -107,6 +112,7 @@ gconf
 geoclue
 getsol
 getsolus
+giflib
 gobject
 goroot
 gotopkg
@@ -121,6 +127,7 @@ headerbar
 homeserver
 hostnames
 hplip
+hwcaps
 hyphenator
 ibetical
 ibus
@@ -176,15 +183,20 @@ libideviceactivation
 libimobiledevice
 libinput
 libjpeg
+libsharpyuv
 libspeex
 libspeexdsp
 libsplit
 libssh
 libstdc
 libsuffix
+libturbojpeg
 libudev
 libuiohook
 libwebp
+libwebpdecoder
+libwebpdemux
+libwebpmux
 lifebook
 livingsilver
 localrepo
@@ -245,6 +257,7 @@ pkgfiles
 pkgname
 plasmashell
 plexmediaserver
+pngtopng
 poettering
 pomo
 pomodoneapp
@@ -318,6 +331,7 @@ soundfont
 soundfonts
 spideroak
 squashfs
+ssim
 statuslines
 subpackages
 sunvox
@@ -361,12 +375,17 @@ voikko
 vostro
 vpcec
 vulkan
+vwebp
+webp
+webpinfo
+webpmux
 webstorm
 whatprovides
 whatuses
 winbind
 winbindoptions
 wireshark
+wmissing
 workdir
 wsdd
 wxwidgets
@@ -379,6 +398,7 @@ xrdp
 xstartup
 xwrapper
 yjobs
+yolo
 yourgithubaccount
 ypkg
 zcat
