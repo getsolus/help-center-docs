@@ -299,13 +299,13 @@ So far, we've been benchmarking fairly simply using `hyperfine`, let's swap that
 
 Let's look at `dwebp` first with `perf report -i dwebp.data`.
 
-![Perf report dwebp](perf_report_dwebp_png.webp)
+![Perf report dwebp](img/2024-02-09-intro-to-optimizing/perf_report_dwebp_png.webp)
 
 Well god damn, literally all of our time is being spent in `libz.so` it's no wonder our compiler optimizations were hardly improving performance.
 
 Let's also look at the `cwebp` report, we've generally been getting better results from it.
 
-![Perf report cwebp](perf_report_cwebp_png.webp)
+![Perf report cwebp](img/2024-02-09-intro-to-optimizing/perf_report_cwebp_png.webp)
 
 Okay, much more of our time is being spent in `libwebp.so` itself here which helps to explain why we were seeing a better performance uplift. Still 5.68% of our time is being spent in `libz`.
 
@@ -328,7 +328,7 @@ After reverting the `libwebp` package to the baseline let's use our adjusted dec
 
 We'll now use `dwebp ~/3.webp -yuv -o /dev/null` for a decoding test, let's run that with `perf` to ensure we're exclusively testing `libwebp.so` here.
 
-![Perf report dwebp to yuv](perf_report_dwebp_yuv.webp)
+![Perf report dwebp to yuv](img/2024-02-09-intro-to-optimizing/perf_report_dwebp_yuv.webp)
 
 Okay that's awesome, no `libpng.so` or `libz.so` to mess with our tests!
 
