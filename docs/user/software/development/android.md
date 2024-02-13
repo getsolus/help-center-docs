@@ -17,13 +17,7 @@ Before we can start we need to setup our build environment ready for building An
 
 ### Installing Build Dependencies
 
-Android 7 (Nougat) and Android 8 (Oreo) require OpenJDK 8. Android 5 (Lollipop) and Android 6 (Marshmallow) require OpenJDK 7 which is not currently in the repository.
-
-To install OpenJDK 8 run:
-
-```bash
-sudo eopkg it openjdk-8-devel
-```
+Android 7 (Nougat) and Android 8 (Oreo) require OpenJDK 8. Android 5 (Lollipop) and Android 6 (Marshmallow) require OpenJDK 7. Both OpenJDK 7 and OpenJDK 8 are not currently in the repository.
 
 Next we need to install packages from the `system.devel` component, these provide common build tools for general software development.
 

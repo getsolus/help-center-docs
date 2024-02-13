@@ -19,7 +19,6 @@ The following table lists the versions of Java available in the Solus repositori
 
 | Version | Package name | Installation directory  | Included components | Notes                 |
 | ------- | ------------ | ----------------------- | ------------------- | --------------------- |
-| Java 8  | `openjdk-8`  | `/usr/lib64/openjdk-8`  | JRE, JDK            | See _openjdk-8_ below |
 | Java 11 | `openjdk-11` | `/usr/lib64/openjdk-11` | JRE, JDK, OpenJFX   |                       |
 | Java 17 | `openjdk-17` | `/usr/lib64/openjdk-17` | JRE, JDK            |                       |
 
@@ -37,11 +36,3 @@ There are multiple ways to execute Java applications in Solus:
 - Create a script that sets `JAVA_HOME` before running the application.
 - Symlink the java executable from `/path/to/jdk/bin` to `/usr/bin`.
 - Add `/path/to/jdk/bin` to your PATH environment variable.
-
-## openjdk-8
-
-:::danger Important
-
-openjdk-8 is scheduled for removal in the near future. It is not recommended that you use it today.
-
-:::
