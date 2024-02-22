@@ -32,7 +32,7 @@ For example, building the package `libcmis` produces the packages `libcmis` and 
 To copy all `.eopkg` files within a directory to the local repository, use the following command:
 
 ```bash
-cp *.eopkg /var/lib/solbuild/local
+sudo cp *.eopkg /var/lib/solbuild/local
 ```
 
 ### Using the local repository to build a package
