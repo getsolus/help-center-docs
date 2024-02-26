@@ -150,25 +150,25 @@ powerline-daemon -q
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
-source /usr/lib/python3.10/site-packages/powerline/bindings/bash/powerline.sh
+source /usr/lib/python3.11/site-packages/powerline/bindings/bash/powerline.sh
 ```
 
 #### Busybox and dash
 
 ```bash
-source /usr/lib/python3.10/site-packages/powerline/bindings/shell/powerline.sh
+source /usr/lib/python3.11/site-packages/powerline/bindings/shell/powerline.sh
 ```
 
 #### Fish
 
 ```bash
-source /usr/lib/python3.10/site-packages/powerline/bindings/fish/powerline-setup.fish
+set fish_function_path $fish_function_path "/usr/lib/python3.11/site-packages/powerline/bindings/fish/"
 ```
 
 #### Zsh
 
 ```bash
-source /usr/lib/python3.10/site-packages/powerline/bindings/zsh/powerline.zsh
+source /usr/lib/python3.11/site-packages/powerline/bindings/zsh/powerline.zsh
 ```
 
 Read more about powerline on its [docs website](https://powerline.readthedocs.io/en/master/usage.html#shell-prompts-requirements)
