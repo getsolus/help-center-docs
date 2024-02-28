@@ -167,6 +167,21 @@ Full release notes:
 - [ ] Package was built and tested against unstable
 ```
 
+### Other commit message format examples
+
+In the cases where you are not updating a package to a new version, but simply applying a patch or fixing an existing version, the following commit message shortlogs are considered suitable:
+
+- Add the `homepage` metadata key:
+  - `package: Add homepage`
+- Fix a packaging issue (including adding a patch to fix the package)
+  - `package: Fix (...)`
+- Updating a README, monitoring.yml file or other stuff that does not directly _change_ the package, meaning the package release number didn't need a bump:
+  - `package: [NFC] Add README.md and monitoring.yml`
+
+`[NFC]` is an abbreviation adopted from the clang compiler suite, which expands to "Non Functional Change".
+
+The overall reasoning for the git shortlog formats shown above is to enable quick and efficient "at-a-glance" parsing of git shortlogs for Solus Staff.
+
 For more information on suitable commit messages, please check the [tooling central documentation](https://github.com/solus-project/tooling-central/blob/master/README.rst#using-git).
 
 Next, you'll [submit a pull request for review](submitting-a-pull-request.md).
