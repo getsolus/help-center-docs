@@ -174,7 +174,7 @@ There should be a summary line (with the package name), a blank line, and then t
 Here is an example in our standard format (make sure to check the box in the checklist):
 
 ```
-tree: initial inclusion in the repository
+tree: Add at v2.1.1
 
 **Summary**
 
