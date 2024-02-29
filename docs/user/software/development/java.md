@@ -17,10 +17,10 @@ All Java packages in the Solus repositories include the _Java Runtime Environmen
 
 The following table lists the versions of Java available in the Solus repositories.
 
-| Version | Package name | Installation directory  | Included components | Notes                 |
-| ------- | ------------ | ----------------------- | ------------------- | --------------------- |
-| Java 11 | `openjdk-11` | `/usr/lib64/openjdk-11` | JRE, JDK, OpenJFX   |                       |
-| Java 17 | `openjdk-17` | `/usr/lib64/openjdk-17` | JRE, JDK            |                       |
+| Version | Package name | Installation directory  | Included components | Notes |
+| ------- | ------------ | ----------------------- | ------------------- | ----- |
+| Java 11 | `openjdk-11` | `/usr/lib64/openjdk-11` | JRE, JDK, OpenJFX   |       |
+| Java 17 | `openjdk-17` | `/usr/lib64/openjdk-17` | JRE, JDK            |       |
 
 ## Running Java Applications
 

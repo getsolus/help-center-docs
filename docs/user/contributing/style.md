@@ -38,15 +38,14 @@ This section is based on the [Red Hat supplementary style guide](https://redhat-
 
 Admonitions should draw the reader’s attention to certain information. Keep admonitions to a minimum, and avoid placing multiple admonitions close to one another. If multiple admonitions are necessary, restructure the information by moving the less-important statements into the flow of the main content. See the [Docusaurus documentation](https://docusaurus.io/docs/markdown-features/admonitions) to learn the correct syntax.
 
-| Type           | Description                                                                                                                                                                                                                          |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Note           | Additional guidance or advice that improves product configuration, performance, or supportability                                                                                                                                    |
-| Tip            | Recommendations, suggestions, and alternative methods that might not be obvious. Tips are not essential to using the product.                                                                                                        |
-| Info           | General information about the topic at hand that may be useful or relevant to user.           |                                                                                                 
-| Important      | Advisory information essential to the completion of a task or default configuration settings. Users must not disregard this information.                                                                                             |
-| Warning        | Information that warns the user to proceed with caution. Warning emphasizes a course of action’s potential downsides. |
-| Danger         | Information about imminent system damage, data loss, or a support-related issue if the user disregards this admonition. If available, offer information to avoid the problem in the future or state where to find more information. |
-
+| Type      | Description                                                                                                                                                                                                                         |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Note      | Additional guidance or advice that improves product configuration, performance, or supportability                                                                                                                                   |
+| Tip       | Recommendations, suggestions, and alternative methods that might not be obvious. Tips are not essential to using the product.                                                                                                       |
+| Info      | General information about the topic at hand that may be useful or relevant to user.                                                                                                                                                 |
+| Important | Advisory information essential to the completion of a task or default configuration settings. Users must not disregard this information.                                                                                            |
+| Warning   | Information that warns the user to proceed with caution. Warning emphasizes a course of action’s potential downsides.                                                                                                               |
+| Danger    | Information about imminent system damage, data loss, or a support-related issue if the user disregards this admonition. If available, offer information to avoid the problem in the future or state where to find more information. |
 
 ## Code blocks
 
