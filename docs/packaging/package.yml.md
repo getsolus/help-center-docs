@@ -143,12 +143,15 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 
 ### Haskell Actionable Macros
 
-| Macro                | Description                                                                                                                  |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| **%cabal_configure** | Runs `cabal configure` with prefix, libdir, etc. and ensures the necessary package.conf.d is copied to the correct location. |
-| **%cabal_build**     | Runs `cabal build` with `%JOBS%`.                                                                                            |
-| **%cabal_install**   | Runs `cabal copy` to `$installdir`.                                                                                          |
-| **%cabal_register**  | Runs `cabal register` to generate a pkg-config for package and version, then installs the conf file.                         |
+| Macro                  | Description                                                                                                                       |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **%cabal_configure**   | Configures a Cabal project that requires online dependencies, like a Cargo-style build                                            |
+| **%haskell_configure** | Runs `runhaskell configure` with prefix, libdir, etc. and ensures the necessary package.conf.d is copied to the correct location. |
+| **%haskell_build**     | Runs `runhaskell build` with `%JOBS%`.                                                                                            |
+| **%haskell_install**   | Runs `runhaskell copy` to `$installdir`.                                                                                          |
+| **%haskell_register**  | Runs `runhaskell register` to generate a pkg-config for package and version, then installs the conf file.                         |
+
+Existing Haskell packages may use the old `cabal_build`, `cabal_install`, `cabal_register` macros. Please use the new `haskell_*` macros instead.
 
 ### Ninja Actionable Macros
 
