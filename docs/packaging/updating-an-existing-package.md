@@ -114,7 +114,7 @@ git commit
 
 ## Commit message format
 
-With the switch to a single large package git repository, having a regular, easy-to-read standardized commit message format helps enable quick and efficient "at-a-glance" parsing of git commit messages for packagers and Staff alike.
+With the switch to a single large package git repository, having a regular, easy-to-read, and standardized commit message format helps enable quick and efficient "at-a-glance" reading of git commit messages for packagers and Staff alike.
 
 Each commit message should consist of a meaningful summary line (which starts with the package name), a blank line, and then the rest of the commit message body.
 
@@ -183,7 +183,7 @@ In the cases where you are not updating a package to a new version, but simply a
   - `package: Add homepage`
 - Fix a packaging issue (including adding a patch to fix the package)
   - `package: Fix (...)`
-- Updating a README, [monitoring.yml file](https://help.getsol.us/docs/packaging/monitoring.yml) or other stuff that does not directly _change_ the package, meaning the package release number didn't need a bump:
+- Updating a README, [monitoring.yml file](monitoring.yml.md) or other stuff that does not directly _change_ the package, meaning the package release number didn't need a bump:
   - `package: [NFC] Add README.md and monitoring.yml`
 
 As stated previously, `[NFC]` is an abbreviation of "No Functional Change".
