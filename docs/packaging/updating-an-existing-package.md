@@ -112,9 +112,17 @@ If all looks well, commit your changes.
 git commit
 ```
 
-### Commit message format for updated / bumped packages
+## Commit message format
 
-There should be a meaningful summary line (which starts with the package name), a blank line, and then the rest of the commit message.
+With the switch to a single large package git repository, having a regular, easy-to-read, and standardized commit message format helps enable quick and efficient "at-a-glance" reading of git commit messages for packagers and Staff alike.
+
+Each commit message should consist of a meaningful summary line (which starts with the package name), a blank line, and then the rest of the commit message body.
+
+Note that `[NFC]` (listed in an example below) is an abbreviation for "No Functional Change".
+
+### Package update
+
+The following guidelines apply to the commit message body:
 
 - Bullet point lists should start with a dash.
 - Include a changelog with a brief list of updates from the upstream release notes, with no links or issue numbers.
@@ -166,6 +174,19 @@ Full release notes:
 
 - [ ] Package was built and tested against unstable
 ```
+
+### Other commit message format examples
+
+In the cases where you are not updating a package to a new version, but simply applying a patch or fixing an existing version, the following commit messages are considered suitable:
+
+- Add the `homepage` metadata key:
+  - `package: Add homepage`
+- Fix a packaging issue (including adding a patch to fix the package)
+  - `package: Fix (...)`
+- Updating a README, [monitoring.yml file](monitoring.yml.md) or other stuff that does not directly _change_ the package, meaning the package release number didn't need a bump:
+  - `package: [NFC] Add README.md and monitoring.yml`
+
+As stated previously, `[NFC]` is an abbreviation of "No Functional Change".
 
 For more information on suitable commit messages, please check the [tooling central documentation](https://github.com/solus-project/tooling-central/blob/master/README.rst#using-git).
 
