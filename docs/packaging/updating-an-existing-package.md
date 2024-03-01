@@ -183,7 +183,7 @@ In the cases where you are not updating a package to a new version, but simply a
   - `package: Add homepage`
 - Fix a packaging issue (including adding a patch to fix the package)
   - `package: Fix (...)`
-- Updating a README, monitoring.yml file or other stuff that does not directly _change_ the package, meaning the package release number didn't need a bump:
+- Updating a README, [monitoring.yml file](https://help.getsol.us/docs/packaging/monitoring.yml) or other stuff that does not directly _change_ the package, meaning the package release number didn't need a bump:
   - `package: [NFC] Add README.md and monitoring.yml`
 
 As stated previously, `[NFC]` is an abbreviation of "No Functional Change".
