@@ -109,6 +109,12 @@ const config = {
             label: "Packaging",
           },
           {
+            type: "docSidebar",
+            sidebarId: "organizationSidebar",
+            position: "left",
+            label: "Organization",
+          },
+          {
             to: "blog",
             label: "Dev Log",
             position: "left",
