@@ -1,6 +1,4 @@
-import React from "react";
 import { Person, WebsiteType } from "../types";
-import { Box } from "@mui/material";
 
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LanguageIcon from "@mui/icons-material/Language";
@@ -8,7 +6,7 @@ import MastodonIcon from "@site/static/img/icons/mastodon.svg";
 
 export const People: Record<string, Person> = {
   AlgentAlbrahimi: {
-    description: () => <Box></Box>,
+    description: "",
     matrix: "@algent:matrix.org",
     names: {
       first: "Algent",
@@ -28,7 +26,7 @@ export const People: Record<string, Person> = {
     ],
   },
   DavidHarder: {
-    description: () => <Box></Box>,
+    description: "",
     matrix: "@davidjharder:matrix.org",
     names: {
       first: "David",
@@ -43,12 +41,7 @@ export const People: Record<string, Person> = {
     ],
   },
   EvanMaddock: {
-    description: () => (
-      <Box>
-        Sci-fi and tech nerd who enjoys programming, woodworking, cooking, and other miscellaneous stuff. Not
-        necessarily in that order.
-      </Box>
-    ),
+    description: "Sci-fi and tech nerd who enjoys programming, woodworking, cooking, and other miscellaneous stuff. Not necessarily in that order.",
     matrix: "@ebonjaeger:matrix.org",
     names: {
       first: "Evan",
@@ -68,7 +61,7 @@ export const People: Record<string, Person> = {
     ],
   },
   GavinZhao: {
-    description: () => <Box></Box>,
+    description: "",
     matrix: "@gzgavinzhao:matrix.org",
     names: {
       first: "Gavin",
@@ -83,7 +76,7 @@ export const People: Record<string, Person> = {
     ],
   },
   HansKelson: {
-    description: () => <Box></Box>,
+    description: "",
     matrix: "@sheepman:m.stupid.frickin.website",
     names: {
       first: "Hans",
@@ -98,7 +91,7 @@ export const People: Record<string, Person> = {
     ],
   },
   IkeyDoherty: {
-    description: () => <Box></Box>,
+    description: "",
     matrix: "@ikeydoherty:matrix.org",
     names: {
       first: "Ikey",
@@ -118,7 +111,7 @@ export const People: Record<string, Person> = {
     ],
   },
   JoeyRiches: {
-    description: () => <Box></Box>,
+    description: "",
     matrix: "@joebonrichie:matrix.org",
     names: {
       first: "Joey",
@@ -133,9 +126,7 @@ export const People: Record<string, Person> = {
     ],
   },
   JoshuaStrobl: {
-    description: () => (
-      <Box>🛠️ Founder / Lead of Buddies of Budgie. 🐧 Fedora Budgie Spin maintainer. Enjoyer of MMOs and whiskey.</Box>
-    ),
+    description: "🛠️ Founder / Lead of Buddies of Budgie. 🐧 Fedora Budgie Spin maintainer. Enjoyer of MMOs and whiskey.",
     matrix: "@joshuastrobl:matrix.org",
     names: {
       first: "Joshua",
@@ -160,7 +151,7 @@ export const People: Record<string, Person> = {
     ],
   },
   JustinZobel: {
-    description: () => <Box></Box>,
+    description: "I am.",
     matrix: "@justin.zobel:kde.org",
     names: {
       first: "Justin",
@@ -175,7 +166,7 @@ export const People: Record<string, Person> = {
     ],
   },
   ReillyBrogan: {
-    description: () => <Box></Box>,
+    description: "",
     matrix: "@reillybrogan:matrix.org",
     names: {
       first: "Reilly",
@@ -190,7 +181,7 @@ export const People: Record<string, Person> = {
     ],
   },
   RuneMorling: {
-    description: () => <Box></Box>,
+    description: "",
     matrix: "@ermo:matrix.org",
     names: {
       first: "Rune",
@@ -210,7 +201,7 @@ export const People: Record<string, Person> = {
     ],
   },
   SilkeHofstra: {
-    description: () => <Box></Box>,
+    description: "",
     matrix: "@silex:slxh.eu",
     names: {
       first: "Silke",
@@ -230,7 +221,7 @@ export const People: Record<string, Person> = {
     ],
   },
   ThomasStaudinger: {
-    description: () => <Box></Box>,
+    description: "",
     matrix: "@Staudey:matrix.org",
     names: {
       first: "Thomas",
@@ -250,7 +241,7 @@ export const People: Record<string, Person> = {
     ],
   },
   TraceyClark: {
-    description: () => <Box></Box>,
+    description: "",
     matrix: "@traceyc:matrix.org",
     names: {
       first: "Tracey",
@@ -275,7 +266,7 @@ export const People: Record<string, Person> = {
     ],
   },
   TroyHarvey: {
-    description: () => <Box></Box>,
+    description: "",
     matrix: "@harveydevel:matrix.org",
     names: {
       first: "Troy",
@@ -290,7 +281,7 @@ export const People: Record<string, Person> = {
     ],
   },
   ZachBacon: {
-    description: () => <Box></Box>,
+    description: "",
     matrix: "@ZachBacon:matrix.org",
     names: {
       first: "Zach",

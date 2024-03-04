@@ -6,7 +6,7 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import Link from "@docusaurus/Link";
 import { Teams } from "../data/teams";
 import { People } from "../data/people";
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import Grid2 from "@mui/material/Unstable_Grid2";
 
 type PersonProps = {
   embeddedIn: string;
@@ -61,7 +61,7 @@ export const Person = ({ embeddedIn, isBadge = false, onAvatarClick, person, sx 
         {!isBadge && (
           <>
             <Box textAlign={!usePersonRow ? "center" : undefined}>
-              <person.description />
+              {person.description}
             </Box>
             {person.matrix && <small>Matrix: {person.matrix}</small>}
           </>
