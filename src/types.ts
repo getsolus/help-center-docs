@@ -16,7 +16,7 @@ export type DocSection = {
 };
 
 export type Person = {
-  description: () => JSX.Element;
+  description: string;
   matrix?: string;
   names: PersonName;
   websites: PersonWebsite[];
