@@ -31,6 +31,8 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 #### Git hooks
 
 - Run `go-task init` to initialize Git hooks for the packages repository. See [Prepare for packaging](prepare-for-packaging.md#initialize-git-hooks).
+- Use `git commit` for committing packaging changes and fill in the template shown.
+  It is no longer required to manually copy-paste the template or use `git commit --cleanup=scissors`.
 
 #### Requiring `homepage` in `package.yml`
 
