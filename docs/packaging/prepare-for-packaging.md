@@ -56,7 +56,7 @@ See the [GitHub CLI quickstart](https://docs.github.com/en/github-cli/github-cli
 
 ### Git identity setup
 
-If you have not used git before, you should set your git identity in your global git config file (`~/.gitconfig). Use the following commands:
+If you have not used git before, you should set your git identity in your global git config file (`~/.gitconfig`). Use the following commands:
 
 ```bash
 git config --global user.name "John Doe"
