@@ -65,7 +65,6 @@ git config --global user.email johndoe@example.com
 
 See the [Git Book](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) for more first-time setup options.
 
-
 ## Setting up solbuild
 
 The `solbuild` tool must first be initialized with a base image. All builds thereafter will use this as a base, and construct a temporary overlay root to save on time and disk space in builds.
