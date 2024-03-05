@@ -44,7 +44,7 @@ We need to install a few things in order to get started with packaging:
 sudo eopkg it go-task git github-cli jq solbuild solbuild-config-unstable ypkg
 ```
 
-## Setting up a GitHub account
+## Setting up a GitHub account and Git
 
 The Solus source repositories for the package repository currently reside on [github.com/getsolus/packages](https://github.com/getsolus/packages). You will need a GitHub account to submit patches and file issues. You can create a GitHub account [here](https://github.com/signup). Note that you will also need to set up [2FA](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa) (two factor authentication) for your account.
 
@@ -53,6 +53,17 @@ The Solus source repositories for the package repository currently reside on [gi
 Once you have a GitHub account, you need to configure `github-cli` to work with it. At minimum, you need to run `gh auth login`. Have your GitHub credentials and 2FA (two factor authentication) mechanism at hand.
 
 See the [GitHub CLI quickstart](https://docs.github.com/en/github-cli/github-cli/quickstart) for some common uses of the tool.
+
+### Git identity setup
+
+If you have not used git before, you should set your git identity in your global git config file (`~/.gitconfig`). Use the following commands:
+
+```bash
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+```
+
+See the [Git Book](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) for more first-time setup options.
 
 ## Setting up solbuild
 
