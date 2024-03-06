@@ -21,7 +21,7 @@ eopkg history
 
 :::warning
 
-If you have a local repo set up, [disable it](https://help.getsol.us/docs/packaging/advanced-config/local-repository#disabling-the-local-solbuild-repository-in-eopkg) before doing rollbacks or you may get an error.
+If you have a local repository set up, [disable it](https://help.getsol.us/docs/packaging/advanced-config/local-repository#disabling-the-local-solbuild-repository-in-eopkg) before doing rollbacks or you may get an error.
 > Error parsing repository index information. Index file does not exist or is malformed.
 
 :::
