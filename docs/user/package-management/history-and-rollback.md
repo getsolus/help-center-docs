@@ -19,6 +19,13 @@ eopkg history
 
 ## Rollback
 
+:::info
+
+If you have a local repository set up, [disable it](https://help.getsol.us/docs/packaging/advanced-config/local-repository#disabling-the-local-solbuild-repository-in-eopkg) before doing rollbacks or you may get an error.
+> Error parsing repository index information. Index file does not exist or is malformed.
+
+:::
+
 To rollback your system, first use the above history command to check what the transaction / operation number was. Then, we use the following command:
 
 ```bash
