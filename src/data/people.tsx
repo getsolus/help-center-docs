@@ -5,6 +5,21 @@ import LanguageIcon from "@mui/icons-material/Language";
 import MastodonIcon from "@site/static/img/icons/mastodon.svg";
 
 export const People: Record<string, Person> = {
+  AlexanderVorobyev: {
+    description: "",
+    matrix: "@flabb:matrix.org",
+    names: {
+      first: "Alexander",
+      last: "Vorobyev"
+    },
+    websites: [
+      {
+        icon: GitHubIcon,
+        to: "https://github.com/aleksvor",
+        type: WebsiteType.GITHUB,
+      }
+    ],
+  },
   AlgentAlbrahimi: {
     description: "",
     matrix: "@algent:matrix.org",
