@@ -75,7 +75,7 @@ Not all fields in `package.yml` are mandatory, but a small selection are. Below 
 - Renaming sources
   - If the file resulting from the source download needs to be renamed (often to avoid a name that would conflict with another source), add the preferred name to the URL as a URI fragment.
   - Example: `https://github.com/docker/cli/archive/refs/tags/v25.0.3.tar.gz#docker-cli.tar.gz : 04ad0cea992a65db20cb1b0dbf6d1ce32c705ce879de51b22095fe8d28030815`
-  - This renames the download file `v25.0.3.tar.gz` to `docker-cli.tar.gz`.
+  - This renames the downloaded file from `v25.0.3.tar.gz` to `docker-cli.tar.gz`.
 
 ### Optional, supported keys
 
