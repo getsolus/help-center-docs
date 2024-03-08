@@ -61,7 +61,7 @@ Not all fields in `package.yml` are mandatory, but a small selection are. Below 
 | **component**   | `string`    | Component / group of packages this package belongs to. Check available components via `eopkg lc`.                                                                                                                   |
 | **description** | `string`    | More extensive description of the software, usually taken from the vendor website.                                                                                                                                  |
 
-#### source key
+#### "source" key
 
 - Tarball source
   - Upstream source URL to the source code archive (often called the "tarball"), followed by the `sha256sum` for the tarball, as a value.
