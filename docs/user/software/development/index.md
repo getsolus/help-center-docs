@@ -21,10 +21,6 @@ The `system.devel` component installs libraries and packages for software develo
 
 ---
 
-[**Android**](android)
-
-A quick guide to getting set up for Android development on Solus.
-
 [**Containers**](containers)
 
 Install and configure containerization software on Solus.
