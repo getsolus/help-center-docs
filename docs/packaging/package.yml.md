@@ -47,19 +47,35 @@ install    : |
 
 Not all fields in `package.yml` are mandatory, but a small selection are. Below is the complete list of the available fields.
 
-### Mandatory Keys
+### Mandatory keys
 
 | Key Name        | Type        | Description                                                                                                                                                                                                         |
 | --------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **name**        | `string`    | The name of the package. This is also used as the base of all sub-package names. Unless unavoidable, this should match the upstream name.                                                                           |
 | **version**     | `string`    | The version of the currently packaged software. This is taken from the tarball in most cases.                                                                                                                       |
 | **release**     | `integer`   | Specifies the current release number. Updates in the package number are based on this `release` number, _not_ the `version` number. As such, to release an update to users, this number must be incremented by one. |
-| **source**      | `dict(s)`   | Upstream source URL (i.e. tarball), with the valid `sha256sum` as a value. Alternatively, the git repository URL prefixed with "git&#124;" and a git tag or commit hash as a value.                                 |
+| **source**      | `dict(s)`   | See [source key](/docs/packaging/package.yml#source-key) below.                                                                                                                                                      |
 | **homepage**    | `string`    | Provides a link to the package's homepage, used in the Software Center.                                                                                                                                             |
 | **license**     | `string(s)` | Valid upstream license(s). Try to ensure these use [SPDX identifiers](https://spdx.org/licenses/).                                                                                                                  |
 | **summary**     | `string`    | Brief package summary, or display name.                                                                                                                                                                             |
 | **component**   | `string`    | Component / group of packages this package belongs to. Check available components via `eopkg lc`.                                                                                                                   |
 | **description** | `string`    | More extensive description of the software, usually taken from the vendor website.                                                                                                                                  |
+
+#### "source" key
+
+- Tarball source
+  - Upstream source URL to the source code archive (often called the "tarball"), followed by the `sha256sum` for the tarball, as a value.
+  - Example: `https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz : 86f3442768bd2873cec693f83cdf80b4b444ad3cc14760b74361474fc87a4526`
+  - Tarball sources are preferred over git sources, whenever possible, because git tags can be changed to point to different commits.
+- Git source
+  - Git repository URL prefixed with `git|`, followed by the git tag or commit hash, as a value.
+  - Example: `git|https://github.com/getsolus/solus-sc.git : 6e786b3e86982272717ca4bed4f783fc43a678f3`
+- Multiple sources
+  - If multiple sources are listed, only the first source will be copied from the `$sources` directory to the `$workdir` directory.
+- Renaming sources
+  - If the file resulting from the source download needs to be renamed (often to avoid a name that would conflict with another source), add the preferred name to the URL as a URI fragment.
+  - Example: `https://github.com/docker/cli/archive/refs/tags/v25.0.3.tar.gz#docker-cli.tar.gz : 04ad0cea992a65db20cb1b0dbf6d1ce32c705ce879de51b22095fe8d28030815`
+  - This renames the downloaded file from `v25.0.3.tar.gz` to `docker-cli.tar.gz`.
 
 ### Optional, supported keys
 
@@ -80,7 +96,7 @@ Not all fields in `package.yml` are mandatory, but a small selection are. Below 
 | **environment** | `unicode`   | Specify code that will be exported to all packaging steps of the build (i.e. exporting variables for the entire build).                                                                                                                                                               |
 | **networking**  | `bool`      | Set to `yes` to enable networking within solbuild.                                                                                                                                                                                                                                    |
 
-### Packaging Step Keys, optional
+### Packaging step keys, optional
 
 The packaging steps are all considered optional, however the absence of the `install` step will result in no package generated. Each of these keys contains content that will be placed within a script and executed within a controlled environment to perform the package build. For all intents and purposes, they are Bash scripts with a predefined environment.
 
@@ -127,7 +143,7 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 %configure --disable-static
 ```
 
-### Actionable Macros
+### Actionable macros
 
 | Macro              | Description                                                                                                                 |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------- |
@@ -141,7 +157,7 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 | **%apply_patches** | Applies all patches listed in the `series` file in `./files` folder.                                                        |
 | **%reconfigure**   | Updates build scripts such as `./configure` and proceeds to run `%configure`.                                               |
 
-### Haskell Actionable Macros
+### Haskell actionable macros
 
 | Macro                  | Description                                                                                                                       |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -153,7 +169,7 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 
 Existing Haskell packages may use the old `cabal_build`, `cabal_install`, `cabal_register` macros. Please use the new `haskell_*` macros instead.
 
-### Ninja Actionable Macros
+### Ninja actionable macros
 
 | Macro                | Description                                                                                                             |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -162,7 +178,7 @@ Existing Haskell packages may use the old `cabal_build`, `cabal_install`, `cabal
 | **%ninja_install**   | Runs `ninja install` and passes the appropriate `DESTDIR` and `%JOBS%` variable. This macro obsoletes _%meson_install_. |
 | **%ninja_check**     | Runs `ninja test` and passes our `%JOBS%` variable. This macro obsoletes _%meson_check_.                                |
 
-### Perl Actionable Macros
+### Perl actionable macros
 
 | Macro             | Description                                                                              |
 | ----------------- | ---------------------------------------------------------------------------------------- |
@@ -170,7 +186,7 @@ Existing Haskell packages may use the old `cabal_build`, `cabal_install`, `cabal
 | **%perl_build**   | Runs Perl build scripts or attempts `%make`.                                             |
 | **%perl_install** | Runs Perl install scripts or attempts `%make_install`.                                   |
 
-### Python Actionable Macros
+### Python actionable macros
 
 | Macro                | Description                                                                                                                                                                                                           |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -183,14 +199,14 @@ Existing Haskell packages may use the old `cabal_build`, `cabal_install`, `cabal
 | **%python3_test**    | Without argument, runs the test portion of setup.py. With a `.py` script, execute the script with python3. With something else execute the command "as it is". ([More info](https://github.com/getsolus/ypkg/pull/1)) |
 | **%python3_compile** | Compiles `*.py` files using python3. This is only useful where the build doesn't compile them already (indicated by availability of `*.pyc` files).                                                                   |
 
-### Ruby Actionable Macros
+### Ruby actionable macros
 
 | Macro            | Description                                         |
 | ---------------- | --------------------------------------------------- |
 | **%gem_build**   | Runs `gem build`.                                   |
 | **%gem_install** | Runs `gem install` with the appropriate parameters. |
 
-### Qt Actionable Macros
+### Qt actionable macros
 
 | Macro           | Description                                                                                                            |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------- |
@@ -199,7 +215,7 @@ Existing Haskell packages may use the old `cabal_build`, `cabal_install`, `cabal
 | **%qml_cache**  | Compiles `*.qml` files into `*.qmlc` so they are compiled ahead of time.                                               |
 | **%qml6_cache** | Same as `%qml_cache`, but for Qt6.                                                                                     |
 
-### Waf Actionable Macros
+### Waf actionable macros
 
 | Macro              | Description                                                                    |
 | ------------------ | ------------------------------------------------------------------------------ |
@@ -207,7 +223,7 @@ Existing Haskell packages may use the old `cabal_build`, `cabal_install`, `cabal
 | **%waf_build**     | Runs `waf` and passes our `%JOBS%` variable.                                   |
 | **%waf_install**   | Runs `waf install` and passes the appropriate `destdir` and `%JOBS%` variable. |
 
-### BOLT Actionable Macros
+### BOLT actionable macros
 
 BOLT is a post-link optimizer developed to speed up large applications. You will need to run a workload after instrumenting a binary or library. Think of it as post-link profile guided optimization.
 
@@ -217,7 +233,7 @@ BOLT is a post-link optimizer developed to speed up large applications. You will
 | **%bolt_merge** | Merge fdata profiles into a single file after running a workload with a BOLT instrumented binary.                                                       |
 | **%bolt_opt**   | Optimize a binary using BOLT after running `%bolt_merge`.                                                                                               |
 
-### Variable Macros
+### Variable macros
 
 | Macro                        | Description                                                                                                                                       |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -328,6 +344,6 @@ The values may also be expressed in list form, still using the same default key 
     - value three
 ```
 
-## Packaging Practices
+## Packaging practices
 
 The concepts in this document merely expose the syntax of a `package.yml` file. Solus adheres to strict packaging practices and conventions which packagers must follow. They are explained in the [Packaging Practices](/docs/packaging/packaging-practices) article.
