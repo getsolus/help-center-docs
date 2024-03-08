@@ -5,7 +5,7 @@ summary: A quick introduction to the Budgie Edition of Solus
 
 # Budgie Desktop
 
-> TODO: Add Budgie branding image
+![Budgie Desktop Logo](https://raw.githubusercontent.com/BuddiesOfBudgie/budgie-desktop/main/.github/logo.png)
 
 Budgie is the flagship Edition of Solus. It was originally started by Solus and has now been spun off into its own distro-agnostic project. They describe it as:
 
@@ -14,7 +14,8 @@ Budgie is the flagship Edition of Solus. It was originally started by Solus and 
 Here are some links related to this project that you may find helpful:
 
 - [Homepage](https://github.com/BuddiesOfBudgie)
-- [News](https://blog.buddiesofbudgie.org/)
+- [News](https://blog.buddiesofbudgie.org/) 
+- [Documentation](https://docs.buddiesofbudgie.org)
 - [Support](https://github.com/BuddiesOfBudgie/budgie-desktop/issues)
 
 [Go to Budgie Configuration](configuration)
