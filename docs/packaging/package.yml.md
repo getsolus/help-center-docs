@@ -66,7 +66,7 @@ Not all fields in `package.yml` are mandatory, but a small selection are. Below 
 - Tarball source
   - Upstream source URL to the source code archive (often called the "tarball"), followed by the `sha256sum` for the tarball, as a value.
   - Example: `https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz : 86f3442768bd2873cec693f83cdf80b4b444ad3cc14760b74361474fc87a4526`
-  - Tarball sources are preferred over git sources, whenever possible, because git tags can be changed to point to different commits
+  - Tarball sources are preferred over git sources, whenever possible, because git tags can be changed to point to different commits.
 - Git source
   - Git repository URL prefixed with `git|`, followed by the git tag or commit hash, as a value.
   - Example: `git|https://github.com/getsolus/solus-sc.git : 6e786b3e86982272717ca4bed4f783fc43a678f3`
