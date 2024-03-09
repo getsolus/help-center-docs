@@ -15,7 +15,7 @@ Install `pipewire-jack` by executing the following command:
 sudo eopkg it pipewire-jack
 ```
 
-Currently, using `pipewire-jack` as a `JACK` replacement is not as smooth as one would think. One must get their hands dirty a little to get JACK apps to behave appropriately 🛠
+Currently, using `pipewire-jack` as a `JACK` replacement is not as smooth as one would think. You need to do some manual configuration to get JACK apps to behave appropriately.
 
 ### Issues to be fixed
 
