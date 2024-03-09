@@ -9,7 +9,7 @@ Solus comes with Pipewire configured by default.
 
 ## Pipewire as a JACK Replacement
 
-Firstly, install `pipewire-jack`
+Install `pipewire-jack` by executing the following command:
 
 ```bash
 sudo eopkg it pipewire-jack
