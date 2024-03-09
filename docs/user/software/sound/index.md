@@ -25,9 +25,8 @@ With no configuration, `pipewire` doesn't switch to the appropriate sample rate 
 
 ### Configuration
 
-Fortunately both the `pipewire` and `pipewire-jack` packages come with the configs we need.
 
-Open up your terminal of choice and input the commands below
+1. Open the terminal and input the following commands:
 
 ```bash
 cd .config/
@@ -37,21 +36,23 @@ sudo cp /usr/share/pipewire/jack.conf pipewire/
 sudo chown yourUserName:yourUserName pipewire/jack.conf pipewire/pipewire.conf.d/10-rates.conf
 ```
 
-Now open the `jack.conf` in your text editor and
+2. Open the `jack.conf` in your text editor and:
 
-1. Search for `node.rate`
-2. Uncomment `node.rate`
-3. Input the sample-rate you wish JACK applications to open with after the `1/`
-   - common rates: 44100 48000 88200 96000
+    1. Search for `node.rate`.
+    2. Uncomment `node.rate`.
+    3. Input the sample rate you wish JACK applications to open with after the `1/`.
+    Common rates: 44100, 48000, 88200, 96000.
 
-**Without this `Pipewire` wont dynamically adjust the sample-rate for you whenever a `JACK` application opens**
+    Without this Pipewire doesn't dynamically adjust the sample rate for you whenever a JACK application opens.
 
 ![jack.conf change gif](config-change.gif)
 
-Now reboot your system.
+3. Reboot your system.
 
 :::note
-After applying the configuration above there **WILL** be a delay of up to 2 seconds when beginning to play audio. This is due to the 10-rates.conf that allows `Pipewire` to dynamically change sample-rates. Although, once the sample-rate is set everything is instant.
+After applying the configuration, there are delays of up to 2 seconds when beginning to play audio due to the `10-rates.conf` that allows `Pipewire` to change sample rates dynamically. 
+
+After the sample rate is set, there are no delays.
 :::
 
 ### Not Done Yet
