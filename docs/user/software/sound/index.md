@@ -19,7 +19,7 @@ Currently, using `pipewire-jack` as a `JACK` replacement is not as smooth as one
 
 ### Issues to be fixed
 
-With no configuration pipewire will not be able to switch to the appropriate sample-rate for the project.
+With no configuration, `pipewire` doesn't switch to the appropriate sample rate for the project.
 
 ![Pipewire Rates Issue](ardour-pipewire-rates-issue.png)
 
