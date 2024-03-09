@@ -57,27 +57,27 @@ After the sample rate is set, there are no delays.
 
 ### Not Done Yet
 
-Lastly, we need to enable the `Pro Audio` sound configuration for our card. Not doing so will result in terrible Xruns (pops and crackles) even with all applied configuration.
+Enable the pro audio sound configuration for our card to avoid pops and crackles (also known as [Xruns](https://alsa.opensrc.org/Xruns)).
 
-**On Budgie**: `pavucontrol` is required to get access to the `Pro Audio` config. So install it
+**On Budgie**: Install `pavucontrol`.
 
 ```bash
 sudo eopkg it pavucontrol
 ```
 
-Now open the program, switch over to the `Configuration` tab and select the `Pro Audio` option from the dropdown menu for your card
+Open `pavucontrol`, go to the **Configuration** tab and select the **Pro Audio** option from the dropdown menu for your card.
 
 ![Pavucontrol Config Change](pavu-config.gif)
 
-**On KDE**: everything you need is in the `Audio` section of system settings. Simply choose from the dropdown same as above.
+**On KDE**: Go to the `Audio` section of system settings. Select the **Pro Audio** option from the dropdown menu for your card.
 
-**All is done! Happy audio production!!** 🥰
+All is done! Happy audio production!!
 
 ### Limits
 
 If this is annoying you
 
-![Ardour yelling about limited amount of locked memory](ulimits.png)
+![Ardour warning about the limited amount of locked memory](ulimits.png)
 
 You can adjust it by configuring the `limits.conf`. In this case we'll be using the `limits.d` for simplicity.
 
