@@ -23,7 +23,7 @@ Our package manager `eopkg` is written in Python2. Python2 was originally planne
 
 - Do we really want to just port `eopkg` to python3? Surely we could build something newer and shinier.
 - How exactly do we want to port `eopkg` to Python3? (We'll call this ported version `eopkg3` for short)
-- How do make sure `eopkg3` works even if something goes wrong with the Python3 libraries on someone's machine?
+- How do we make sure `eopkg3` works even if something goes wrong with the Python3 libraries on someone's machine?
 
 Here's the plan to solve this: Ikey and friends over at Serpent OS are actively building a new package manager [_moss_](https://github.com/serpent-os/moss) that we are excited about. And they're building it with Solus in mind as an eventual user. This will be our fix for the first problem. In the meantime, we're taking a pragmatic approach to the last two issues so that (frankly) we can do more exciting things.
 
