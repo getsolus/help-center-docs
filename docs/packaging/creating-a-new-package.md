@@ -92,7 +92,7 @@ The `go-task new` command has filled many fields for us, but not all of them wil
 For this example, we need to fix the following:
 
 - The name needs to be `tree`, so update it.
-- The `license` is correct, so we remove the comment.
+- The `license` is correct, so we remove the comment. License values need to match an "Identifier" in the [SPDX License List](https://spdx.org/licenses/).
 - Fill in `homepage`, `component`, `summary`, and `description`.
 - Remove `builddeps`. This package has no build dependencies beyond the ones already available for every package (the `system.devel` packages).
 - The `setup` step is not required, remove it.
