@@ -75,3 +75,18 @@ sudo eopkg install sway
 Sway expects users to do some configuration, refer to the [Sway Wiki](https://github.com/swaywm/sway/wiki).
 
 For more information about tiling window managers, click [here](https://en.wikipedia.org/wiki/Tiling_window_manager).
+
+## Stacking window manager
+
+### Labwc
+
+Solus offers Labwc as a Wayland-only stacking window manager. You can install it with the following command:
+
+```bash
+sudo eopkg install labwc
+```
+
+Labwc expects users to do some configuration, refer to the [Labwc wiki](https://labwc.github.io/)
+
+For more information about stacking window managers, click [here](https://en.wikipedia.org/wiki/Stacking_window_manager)
+
