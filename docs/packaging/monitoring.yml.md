@@ -67,6 +67,8 @@ To find the Anitya ID, search [release-monitoring.org](https://release-monitorin
 
 For example, the correct `systemd` search result for us is `systemd-stable` with the URL [https://release-monitoring.org/project/205088/](https://release-monitoring.org/project/205088/), so we use `205088` in the `id` field
 
+If a project is not tracked by release-monitoring.org, you can create an account and [add it.](https://release-monitoring.org/static/docs/user-guide.html#creating-new-project)
+
 ## "security" fields
 
 Fields used to monitor for security advisories (CVEs)
