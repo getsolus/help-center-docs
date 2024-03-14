@@ -89,4 +89,3 @@ sudo eopkg install labwc
 Labwc expects users to do some configuration, refer to the [Labwc wiki](https://labwc.github.io/)
 
 For more information about stacking window managers, click [here](https://en.wikipedia.org/wiki/Stacking_window_manager)
-
