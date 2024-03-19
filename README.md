@@ -30,6 +30,7 @@ Please lint and spellcheck your contributions before creating a pull request. We
   - Command: `yarn cspell`
   - Note that we use American spelling
   - If you use vscode with the Code Spell Checker extension, the custom dictionary will be used
+  - You can tidy the allowed-wordlist with `go-task tidy-words`
 
 ### NVM
 
@@ -67,7 +68,7 @@ Ensure that you can successfully generate a static site as above.
 
 Then, when you're ready to deploy, run the following:
 
-`git switch deploy && git merge master`
+`go-task deploy`
 
 This obviously assumes that you have ssh push access to the `help-center-docs` repository and are using `remote.origin.url=git@github.com:getsolus/help-center-docs.git` (as listed by `git config -l`).
 

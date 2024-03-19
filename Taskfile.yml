@@ -1,0 +1,32 @@
+version: '3'
+
+set: [pipefail]
+
+tasks:
+  # Ensure people new to go-task and used to 'make help' have an easier time
+  help:
+    desc: Show how to list available tasks
+    cmds:
+      - |
+        echo "Use 'go-task -l/--list' to list available tasks."
+
+  # Merge "master" into "deploy" branch for GitHub pages deployment
+  deploy:
+    desc: Merge the "master" branch into "deploy" to start GitHub Pages build
+    cmds:
+      - git switch master
+      - git pull origin master
+      - git switch deploy
+      - git merge master
+      - git push origin deploy
+      - git switch master
+
+  # Tidy up the allowed-words list
+  tidy-words:
+    desc: Tidy and sort the allowed-words list
+    env:
+      TARGET: .cspell-allowed-words.txt
+    cmds:
+      - awk -i inplace '{print tolower($0)}' $TARGET
+      - sort -o $TARGET $TARGET
+      - awk -i inplace '!seen[$0]++' $TARGET
