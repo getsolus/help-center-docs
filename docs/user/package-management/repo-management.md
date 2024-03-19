@@ -94,7 +94,7 @@ For example:
 sudo eopkg update-repo Example
 ```
 
-**Note:** You can update all repository by **not** providing a name.
+**Note:** You can update all repositories by **not** providing a name.
 
 ## List repositories
 
