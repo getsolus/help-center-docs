@@ -188,7 +188,7 @@ sudo usysconf run -f
 Run the following command, which will update the boot entries for your EFI menu:
 
 ```bash
-clr-boot-manager update
+sudo clr-boot-manager update
 ```
 
 After this, you should exit your chroot with `exit` then reboot your system. In the event you are still unable to access Solus, please [contact us](/docs/user/contributing/getting-involved).
