@@ -179,8 +179,16 @@ In the event that disk changes had caused the system to fail to boot, try the fo
 
 In the chroot environment, run the following command which will perform various configuration triggers to update your icon cache, update GRUB and EFI configuration, re-compile settings, and more.
 
-```
+```bash
 sudo usysconf run -f
+```
+
+### Regenerate UEFI Boot Entries
+
+Run the following command, which will update the boot entries for your EFI menu:
+
+```bash
+sudo clr-boot-manager update
 ```
 
 After this, you should exit your chroot with `exit` then reboot your system. In the event you are still unable to access Solus, please [contact us](/docs/user/contributing/getting-involved).
