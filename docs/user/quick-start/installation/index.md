@@ -5,6 +5,8 @@ summary: Installation Guide for multiple operating systems
 
 # Preparing to install
 
+Before you start, make sure your system meets the [minimum requirements](system-requirements.md).
+
 The first step to installing Solus is getting the correct media. The Solus Project provides ISO images, which contain the contents of Solus for installing.
 
 ## Getting the ISO
