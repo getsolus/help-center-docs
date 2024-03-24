@@ -22,4 +22,5 @@ Please join our [Matrix rooms](/docs/user/contributing/getting-involved.md#matri
 - Do not translate the following strings; leave them untouched:
   - `Packagekit`
   - `XDG_SESSION_DESKTOP`
+- If a string includes a new-line character, be sure to include it in the same place in the translation.
 
