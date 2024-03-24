@@ -13,6 +13,8 @@ Please join our [Matrix rooms](/docs/user/contributing/getting-involved.md#matri
 
 ### Solus Mate Transition Tool
 
+[Transifex project link](https://app.transifex.com/solus/solus-mate-transition-tool/)
+
 - Strings which include curly braces `{ }` should be translated leaving the curly braces, *and anything inside the braces*, untouched.
 - Examples:
   - `{DE} Successfully installed, please reboot to continue.` translates to:
