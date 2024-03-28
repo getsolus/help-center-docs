@@ -3,7 +3,7 @@ title: System Requirements
 summary: Hardware Requirements Guide
 ---
 
-# System Requirements
+# System requirements
 
 - A blank DVD or a USB drive that is at least 3GB
 - On UEFI systems, an EFI partition of 1GB minimum
@@ -24,6 +24,10 @@ These are general recommendations. Your requirements may vary based on your inte
 
 :::info
 
-Desktop environments that are more feature rich use the graphics card for 3D-acceleration, when possible. They will benefit from dedicated and more powerful GPUs. Older graphics cards may not support acceleration.
+Desktop environments that are more feature rich (such as GNOME and KDE Plasma) use the graphics card for 3D-acceleration, when possible. They will benefit from dedicated and more powerful GPUs. Older graphics cards may not support acceleration:
+
+- Intel prior to GMA9xx
+- NVIDIA prior to NV30 (GeForce FX5xxx series)
+- Radeon prior to R300 (Radeon 9500)
 
 :::
