@@ -14,7 +14,7 @@ We organized the help center into sections to help you navigate the contents eas
 
 | Section                                                  | Description                                                                                                                                                               |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Quick Start](/docs/category/quick-start)                | If you're new to Solus, this section will set you on the right track. Find documentation on installing Solus, software management, the boot process, and troubleshooting. |
+| [Quick Start](/docs/category/quick-start)                | If you're new to Solus, this section will set you on the right track. Find documentation on system requirements, installing Solus, software management, the boot process, and troubleshooting. |
 | [Contributing](/docs/category/contributing)              | Find how you can contribute to Solus, whether you're a beginner or an experienced Linux and Solus user.                                                                   |
 | [Editions](/docs/user/editions/)                         | Understand the different editions of Solus: differences between editions, configuration tasks, and helpful tips and tricks.                                               |
 | [Hardware](/docs/user/hardware/)                         | Solus supports most hardware out-of-the-box, but there are exceptions. This section focuses on those exceptions and how to get the most out of your hardware.             |
