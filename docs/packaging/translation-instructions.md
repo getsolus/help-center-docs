@@ -15,7 +15,7 @@ Please join our [Matrix rooms](/docs/user/contributing/getting-involved.md#matri
 
 [Transifex project link](https://app.transifex.com/solus/solus-mate-transition-tool/)
 
-- Strings which include curly braces `{ }` should be translated leaving the curly braces, *and anything inside the braces*, untouched.
+- Strings which include curly braces `{ }` should be translated leaving the curly braces, _and anything inside the braces_, untouched.
 - Examples:
   - `{DE} Successfully installed, please reboot to continue.` translates to:
   - `{DE} Instalado exitosamente, reinicie para continuar.`
@@ -25,4 +25,3 @@ Please join our [Matrix rooms](/docs/user/contributing/getting-involved.md#matri
   - `Packagekit`
   - `XDG_SESSION_DESKTOP`
 - If a string includes a new-line character, be sure to include it in the same place in the translation.
-
