@@ -196,4 +196,4 @@ For more information on suitable commit messages, please check the [tooling cent
 - If you want to link this pull request to an existing package request, simply mention it in your commit message (use the full URL): `The inclusion of <somepackage> resolves https://github.com/getsolus/packages/issues/123`
 - If you need a change to depend on another change, mention it in the commit message too (use the full URL): `Depends on https://github.com/getsolus/packages/issues/234`
 
-Next, you'll [submit a pull request for review](submitting-a-pull-request.md).
+Next, you'll [submit a pull request for review](submitting-a-pull-request.mdx).
