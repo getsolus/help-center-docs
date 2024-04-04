@@ -89,23 +89,53 @@ We recommend using [Brasero](https://wiki.gnome.org/Apps/Brasero) for writing th
 
 #### USB
 
-##### Graphical tool
+We recommend using [GNOME MultiWriter](https://wiki.gnome.org/Apps/MultiWriter) or [ISO Image Writer](https://apps.kde.org/isoimagewriter/) for KDE. Please note that unetbootin will **not** work.
 
-We recommend using [GNOME MultiWriter](https://wiki.gnome.org/Apps/MultiWriter). Please note that unetbootin will **not** work.
+##### GNOME MultiWriter
 
-Upon opening GNOME MultiWriter, you will likely be shown a window similar to the one below, in the event your USB drive is already plugged in.
+Upon opening GNOME MultiWriter, you will likely be shown a window similar to the one below, if your USB drive is already plugged in and mounted.
 
-![MultiWriter Start](start.jpg)
+:::warning
 
-If your USB drive is not plugged, you will be prompted with an image indicating to plug it in.
+The ISO image will be written to _all mounted USB drives_. Ensure that the only USB drive that is connected is the one you wish to write the ISO to.
+
+:::
+
+![MultiWriter Start](gmw_start.jpg)
+
+If your USB drive is not mounted, you will be prompted with an image indicating to plug it in.
 
 Next, click the "Start Copying" button, and you will be prompted to select the ISO. Choose the ISO you downloaded in the "Getting the ISO" section. The USB will automatically be written to.
 
-![MultiWriter Writing](writing.jpg)
+![MultiWriter Writing](gmw_writing.jpg)
 
 Upon completion, you will be prompted with the following dialog and your USB is now ready for use.
 
-![MultiWriter Done](done.jpg)
+![MultiWriter Done](gmw_done.jpg)
+
+#### KDE ISO Image Writer
+
+:::info
+
+You will need both the ISO and sha256sums file for it saved in the same directory.
+
+:::
+
+When you open ISO Image Writer, you will see a window similar to the one below, if your USB drive is already plugged in and mounted.
+
+![ImageWriter Start](iiw_1_start.png)
+
+If there is no USB drive mounted, the USB drive field will be greyed out. Simply plug in the USB drive you want to use for the ISO, it will be auto-detected.
+
+Click on the top field "Write this ISO image:". Select the ISO image you downloaded in the "Getting the ISO" section.
+
+You may see "Downloading ISO image". When this is done, click the Create button.
+
+![ImageWriter Writing](iiw_2_writing.png)
+
+When the operation is finished, you will see the confirmation dialog. Your USB is now ready for use.
+
+![ImageWriter Done](iiw_3_done.png)
 
 ##### Command-line
 
