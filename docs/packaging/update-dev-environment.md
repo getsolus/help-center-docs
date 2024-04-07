@@ -15,7 +15,7 @@ Always make sure your development environment and system are up to date before b
 
 ## Update Your Fork of the getsolus/packages Repository
 
-If you already have a fork of [getsolus/packages](https://github.com/getsolus/packages) in GitHub, log into GitHub. Make sure you're looking at the `main` branch. Check to see that your fork is up to date with the main repo it was forked from. If your fork indicates it is behind, use the "Sync fork" button to bring it up to date.
+If you already have a fork of [getsolus/packages](https://github.com/getsolus/packages) in GitHub, log into GitHub. Make sure you're looking at the `main` branch. Check to see that your fork is up to date with the main repository it was forked from. If your fork indicates it is behind, use the "Sync fork" button to bring it up to date.
 
 ## Update Your Local Clone of Your Fork
 

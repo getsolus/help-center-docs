@@ -96,6 +96,7 @@ sudo eopkg ar Solus https://cdn.getsol.us/repo/unstable/eopkg-index.xml.xz
 
 This should yield output similar to:
 
+<!-- spellchecker:disable -->
 ```
 $ sudo eopkg ar Local /var/lib/solbuild/local/eopkg-index.xml.xz
 Repo Local added to system.
@@ -109,6 +110,7 @@ eopkg-index.xml.xz.sha1sum     (40.0  B)100%    765.61 KB/s [00:00:00] [complete
 eopkg-index.xml.xz             (2.1 MB)100%    914.38 KB/s [00:00:01] [complete]
 Package database updated.
 ```
+<!-- spellchecker:enable -->
 
 3. Check that the dependency resolution order is correct so that packages from the local `solbuild` repository are preferred over the upstream Solus repository.
 
@@ -128,6 +130,7 @@ To reset the system to use only packages from the official Solus repository, dis
 
 The output should look similar to:
 
+<!-- spellchecker:disable -->
 ```
 $ sudo eopkg disable-repo Local
 $ sudo eopkg lr
@@ -136,9 +139,11 @@ Local [inactive]
 Solus [active]
    https://cdn.getsol.us/repo/unstable/eopkg-index.xml.xz
 ```
+<!-- spellchecker:enable -->
 
 The "Local" `eopkg` repository can be re-enabled with `sudo eopkg enable-repo Local`.
 
+<!-- spellchecker:disable -->
 ```
 $ sudo eopkg enable-repo Local
 $ sudo eopkg lr
@@ -147,6 +152,7 @@ Local [active]
 Solus [active]
    https://cdn.getsol.us/repo/unstable/eopkg-index.xml.xz
 ```
+<!-- spellchecker:enable -->
 
 ## Closing thoughts
 

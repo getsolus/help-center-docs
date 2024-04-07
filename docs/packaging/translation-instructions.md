@@ -17,10 +17,12 @@ Please join our [Matrix rooms](/docs/user/contributing/getting-involved.md#matri
 
 - Strings which include curly braces `{ }` should be translated leaving the curly braces, _and anything inside the braces_, untouched.
 - Examples:
+<!-- spellchecker:disable -->
   - `{DE} Successfully installed, please reboot to continue.` translates to:
   - `{DE} Instalado exitosamente, reinicie para continuar.`
   - `Successfully Installed {}` translates to:
   - `Instalado exitosamente {}`
+<!-- spellchecker:enable -->
 - Do not translate the following strings; leave them untouched:
   - `Packagekit`
   - `XDG_SESSION_DESKTOP`

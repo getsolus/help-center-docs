@@ -14,7 +14,7 @@ hide_table_of_contents: false
 We'll explore how to build packages with advanced compiler techniques in order to squeeze more performance out of the box for packages in Solus. We'll be using the story of how `libwebp` was optimized for and how it led to an unexpected side quest.
 
 <!-- truncate -->
-
+<!-- cspell:disable-next-line -->
 # Cual es la causa
 
 Linux distributions have a lot of control over how a source-based package gets compiled and shipped to users as part of a binary repository. Aggressive and advanced compiler optimization techniques, as well as other methods can be used to provide greater out of the box performance for end users. This can greatly benefit users running on older hardware to provide a snappier end-user experience; reducing time waiting on a heavy workload to finish; or even improved battery life; amongst other improvements.
@@ -122,6 +122,7 @@ Awesome, these binaries do exactly what we need to benchmark `libwebp`, but, we 
 
 One extra step we have to do is ensure these binaries are actually linking against their own library, as upstream developers can have a habit of making sure their binaries don't link against their own libraries and end up being self-contained. Run `ldd` to verify.
 
+<!-- spellchecker:disable -->
 ```
 $ ldd /usr/bin/dwebp
 	linux-vdso.so.1 (0x00007ffed8733000)
@@ -134,6 +135,7 @@ $ ldd /usr/bin/dwebp
 	libz.so.1 => /usr/lib/libz.so.1.3.0 (0x00007f7473200000)
 	/usr/lib64/ld-linux-x86-64.so.2 (0x00007f7473bea000)
 ```
+<!-- spellchecker:enable -->
 
 Awesome in this case both `dwebp` and `cwebp` link against `libwebp.so` so we can be confident that any performance improvements will be applicable to all packages in the repository linking against `libwebp`.
 
@@ -221,6 +223,7 @@ Benchmark 1: cwebp ~/PNG_Test.png -o /dev/null
 
 Well... That's interesting. We actually regress in performance for decode performance whilst gaining another small bump in encoding performance. Worse still, we get a bunch of `profile count data file not found [-Wmissing-profile]` warning messages during the optimized build indicating to us our profiling workload isn't comprehensive enough and doesn't cover enough code paths. The lack of a handy `make check` that could be used as a profiling workload is really hurting us here. For now, let's put a pin in exploring PGO, it isn't a dead end but more work needs to be done curating a more comprehensive workload to chuck at it in this particular case, whilst other, easier, optimization techniques are still available to us.
 
+<!-- cspell:disable-next-line -->
 ## 256 Vector Units go brrrrrr...
 
 The next obvious step is to explore `glibc` hardware capabilities. For those unaware both `clang` and `gnu` compilers provide `x86_64-v2`, `x86_64-v3` and `x86_64-v4` micro-architecture build options on top of the baseline of `x86_64`. These enable the use of targeting additional CPU instruction sets during compilation for better performance. For example, `-sse4.2` for `x86_64-v2`, `-avx2` for `x86_64-v3`, and `-avx512` for `x86_64-v4`.
@@ -252,6 +255,7 @@ We now see these additional files in the `pspec_x86_64.xml` file
 
 Let's rerun `lld` on `dwebp` after installing the new package and...
 
+<!-- spellchecker:disable -->
 ```
 $ ldd /usr/bin/dwebp
 	linux-vdso.so.1 (0x00007ffeab5b1000)
@@ -264,6 +268,7 @@ $ ldd /usr/bin/dwebp
 	libz.so.1 => /usr/lib/glibc-hwcaps/x86-64-v3/libz.so.1.3 (0x00007f9a34dbb000)
 	/usr/lib64/ld-linux-x86-64.so.2 (0x00007f9a3520b000)
 ```
+<!-- spellchecker:enable -->
 
 We can crucially see that `dwebp` is now loading the `x86-64-v3` built `libwebp.so` lib from `/usr/lib/glibc-hwcaps/x86-64-v3/libwebp.so.7.1.8`, success! Let's what our performance looks like.
 
@@ -390,10 +395,12 @@ However, there is some light in this tunnel as various forks of zlib having been
 
 Let's just go for it, replacing Solus' `zlib` package with zlib-ng built in compatible mode. It's a bit scary due to how integral zlib is in a typical Linux install, but, how hard could it be?
 
+<!-- cspell:disable-next-line -->
 ## I Zee a Purty lil' Package
 
 Well that was simple. Here's what our zlib-ng `package.yml` recipe looks like.
 
+<!-- spellchecker:disable -->
 <!-- prettier-ignore -->
 ```yaml
 name       : zlib
@@ -422,6 +429,7 @@ install    : |
 check      : |
     %ninja_check
 ```
+<!-- spellchecker:enable -->
 
 After building it, all the files seem to be in the right place and the test suite is passing. Let's just install it overwriting our canonical `zlib` package and hope our system doesn't die... I think the word is YOLO.
 

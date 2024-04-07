@@ -139,7 +139,7 @@ _Important_: Do not include issue numbers in changelogs. This will incorrectly l
 - #123 fixed a thing
 ```
 
-If you want to intentionally link to another issue in this repository, the right way is to use our repo name. Ex:
+If you want to intentionally link to another issue in this repository, the right way is to use our repository name:
 
 ```
 Fixes getsolus/packages#issuenumber

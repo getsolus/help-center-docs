@@ -37,6 +37,7 @@ builddeps
 caddyfile
 caja
 calamares
+callgraph
 cangjie
 cbindgen
 centrino
@@ -53,6 +54,7 @@ cmdline
 compat
 configfile
 confopts
+corepack
 cpesearch
 cran
 cryptsetup
@@ -65,6 +67,7 @@ dbus
 destdir
 devel
 devlog
+diggity
 dircolors
 directoy
 dirmodel
@@ -165,6 +168,7 @@ ksycoca
 ksysguard
 kwalletd
 kxmlgui
+labwc
 ldflags
 lennart
 libc
@@ -197,9 +201,11 @@ libwebp
 libwebpdecoder
 libwebpdemux
 libwebpmux
+libz
 lifebook
 livingsilver
 localrepo
+lpng
 luks
 lutris
 lvchange
@@ -237,6 +243,7 @@ nuitka
 nvme
 ocen
 ocenaudio
+ofast
 oflag
 openrazer
 organised
@@ -277,6 +284,7 @@ qosmio
 qsynth
 qtile
 quickstart
+radeon
 ralink
 rbind
 rdesktop
@@ -302,6 +310,7 @@ rslave
 rstudio
 rubymine
 rundeps
+runhaskell
 runpath
 runrecovery
 rustup
@@ -352,6 +361,7 @@ tmpfiles
 touchpad
 touchpads
 trackpad
+transifex
 uefi
 ufriilt
 unetbootin
@@ -386,6 +396,7 @@ winbind
 winbindoptions
 wireshark
 wmissing
+wordlist
 workdir
 wsdd
 wxwidgets
