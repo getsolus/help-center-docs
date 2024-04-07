@@ -30,4 +30,4 @@ Please check the following:
 - For updating a package that already is in the repos see [Updating an Existing Package](updating-an-existing-package.md)
 
 3. [Test the Package](testing-a-package.md)
-4. [Submit a Pull Request for Review](submitting-a-pull-request.md)
+4. [Submit a Pull Request for Review](submitting-a-pull-request.mdx)

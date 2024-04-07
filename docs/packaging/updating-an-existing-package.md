@@ -190,4 +190,4 @@ As stated previously, `[NFC]` is an abbreviation of "No Functional Change".
 
 For more information on suitable commit messages, please check the [tooling central documentation](https://github.com/solus-project/tooling-central/blob/master/README.rst#using-git).
 
-Next, you'll [submit a pull request for review](submitting-a-pull-request.md).
+Next, you'll [submit a pull request for review](submitting-a-pull-request.mdx).
