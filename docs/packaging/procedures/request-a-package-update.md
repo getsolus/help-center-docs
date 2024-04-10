@@ -7,7 +7,7 @@ summary: Boohoo, your favorite package is outdated!
 
 Packages updates are typically provided by the community or dedicated package maintainers. If we are not shipping the latest stable release of a package, however, you can let us know.
 
-**First, please [look to see if an update request has already been filed](https://github.com/getsolus/packages/labels/Package%20Request) for the software or library you require**.
+**First, please [look to see if an update request has already been filed](https://github.com/getsolus/packages/labels/Package%20Update%20Request) for the software or library you require**.
 
 If there isn't an existing request, you can use the link below to request a package update. Note that updates solely for a new version number, platform-specific updates (such as to macOS or Windows) which aren't relevant, or solely translation updates, are generally not accepted or not prioritized.
 
