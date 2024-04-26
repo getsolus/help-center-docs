@@ -17,6 +17,27 @@ Checking for new releases is done by mapping the Solus package to an [Anitya](ht
 
 Checking for security advisories ([CVEs](https://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures)), is done by mapping the Solus package to a _Common Platform Enumeration Name_ ([CPE](https://nvd.nist.gov/products/cpe)) from the National Vulnerability Database.
 
+## Adding monitoring.yml to an existing package
+
+To add a monitoring.yml file to an existing package you can use the following `go-task` command to add a template file, starting from within the directory containing the `package.yml` for a given package:
+
+```bash
+go-task add-monitoring
+```
+
+Which will create a file with the following contents:
+
+```yaml
+releases:
+  id: null # Check https://release-monitoring.org/
+  rss: null # For example https://github.com/PyO3/maturin/releases.atom
+# No known CPE, checked 2024-04-24
+security:
+  cpe: ~
+```
+
+You must, at minimum, fill out `id` and check if the package has a CPE name. `rss` should be deleted if no feed is available.
+
 ## systemd as an example
 
 Let's look at the `monitoring.yml` file for `systemd` as an example.
