@@ -13,7 +13,9 @@
   --ifm-color-primary-light: #3280dd;
   --ifm-color-primary-lighter: #3c87df;
   --ifm-color-primary-lightest: #5c9ae4;
+  --ifm-code-border-radius: 0.25rem;
   --ifm-code-font-size: 95%;
+  --ifm-code-padding-horizontal: 0.15rem;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
