@@ -50,7 +50,7 @@ To create a skeleton `package.yml` file, use the `go-task new` command.
 
 This command takes two arguments, in the following order:
 
-1. package name
+1. Package name
 2. Source URL
 
 ```bash
@@ -168,7 +168,7 @@ git commit
 
 There should be a summary line (with the package name), a blank line, and then the rest of the commit message.
 
-- There should at the minimum be a summary and Test Plan.
+- There should at the minimum be a Summary and Test Plan.
 - Bullet point lists should start with a dash.
 
 Here is an example in our standard format (make sure to check the box in the checklist):

@@ -15,7 +15,7 @@ Please refrain from submitting a pull request for the following instances:
 
 - For a package that is yet to be accepted for inclusion by a member of the Solus Staff team. Search [open package requests](https://github.com/getsolus/packages/issues?q=label%3A%22Package+Request%22) to see if there is an open request for the package.
   We welcome you to politely reach out via the package request issue or our Support room on [Matrix](/docs/user/contributing/getting-involved#matrix-chat) if you deem the review of the request to be time-sensitive in nature.
-- If your pull request is a Work In Progress / WIP. Pull requests that are completed or are marked as _request for comments_ (RFC) are accepted. For RFC request please ensure your patch title contains `[RFC]` and is marked as 'draft'. WIP patches clutter the issue tracker and make patch review by Solus Staff more time consuming and introduces unnecessary work.
+- If your pull request is a Work In Progress / WIP. Pull requests that are completed or are marked as _request for comments_ (RFC) are accepted. For RFC request please ensure your patch title contains `[RFC]` and is marked as 'draft'. WIP patches clutter the issue tracker, make patch review by Solus Staff more time consuming, and introduce unnecessary work.
 
 ## Final Branch Review
 
@@ -27,6 +27,7 @@ At minimum, your pull request will include changes for the following files:
 It may also include these files:
 
 - `MAINTAINERS.md`
+- `monitoring.yml`
 
 Double check the `package.yml` to make sure the builddeps are in the right order, and that it otherwise adheres to the [standards](package.yml.md) Solus has set.
 
@@ -66,7 +67,7 @@ There are multiple ways to create a Pull Request with GitHub, either from the we
     3. Link any relevant issues:
        - If you want to link this pull request to an existing issue, simply mention it in the PR summary: `The inclusion of <somepackage> fixes #123`.
        - If you need a change to depend on another change, mention it in the PR summary too: `Depends on #234`.
-    4. Double check everything
+    4. Double-check everything.
     5. Create the pull request!
     </p>
 

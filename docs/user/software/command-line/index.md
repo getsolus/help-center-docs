@@ -11,13 +11,13 @@ When using a terminal session to perform command-line activities, a Unix shell i
 
 Solus makes available other shells via our repository, with a full list available in `/usr/share/defaults/etc/shells`. Common shells, aside from Bash, are:
 
-- [Dash](https://gondor.apana.org.au/~herbert/dash/)
-- [Fish](https://fishshell.com/)
-- [Zsh](https://zsh.sourceforge.io/)
+- [DASH](http://gondor.apana.org.au/~herbert/dash/)
+- [fish](https://fishshell.com/)
+- [zsh](https://zsh.sourceforge.io/)
 
 ### Installation
 
-In order to use a shell different from Bash, you may need to install the respective package for the shell to be able to work. You will find those packages in the Software-Center within the _System utilities_ category, or via the command-line with `sudo eopkg install <Name of the Shell>`.
+In order to use a shell different from Bash, you may need to install the respective package for the shell to be able to work. You will find those packages in the Software Center within the _System utilities_ category, or via the command-line with `sudo eopkg install <Name of the Shell>`.
 
 Example:
 
@@ -31,9 +31,9 @@ To switch to another shell, first install the appropriate package, followed by t
 
 Example:
 
-- For Zsh: `chsh -s /bin/zsh`
+- For zsh: `chsh -s /bin/zsh`
 
-- For Fish: `chsh -s /usr/bin/fish`
+- For fish: `chsh -s /usr/bin/fish`
 
 ### Troubleshooting
 
@@ -41,9 +41,9 @@ If the default shell is not changed, you must add the shell to `/etc/shells` via
 
 Example:
 
-- For Zsh: `echo "/bin/zsh" | sudo tee -a /etc/shells`
+- For zsh: `echo "/bin/zsh" | sudo tee -a /etc/shells`
 
-- For Fish: `echo "/usr/bin/fish" | sudo tee -a /etc/shells`
+- For fish: `echo "/usr/bin/fish" | sudo tee -a /etc/shells`
 
 ## fzf
 

@@ -8,7 +8,7 @@ sidebar_position: 2
 
 Always make sure your development environment and system are up to date before beginning work on a package
 
-1. Update your fork of the getsolus/packages Repository.
+1. Update your fork of the [getsolus/packages](https://github.com/getsolus/packages) repository.
 2. Update your local clone of your fork.
 3. Update the solbuild base image `sudo solbuild update`
 4. Update the system.

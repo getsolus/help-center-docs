@@ -19,7 +19,7 @@ Checking for security advisories ([CVEs](https://en.wikipedia.org/wiki/Common_Vu
 
 ## Adding monitoring.yml to an existing package
 
-To add a monitoring.yml file to an existing package you can use the following `go-task` command to add a template file, starting from within the directory containing the `package.yml` for a given package:
+To add a `monitoring.yml` file to an existing package you can use the following `go-task` command to add a template file, starting from within the directory containing the `package.yml` for a given package:
 
 ```bash
 go-task add-monitoring
@@ -36,7 +36,7 @@ security:
   cpe: ~
 ```
 
-You must, at minimum, fill out `id` and check if the package has a CPE name. `rss` should be deleted if no feed is available.
+You must, at minimum, fill out `id` and check if the package has a [CPE name](#what-is-a-cpe-name). `rss` should be deleted if no feed is available.
 
 ## systemd as an example
 
@@ -80,7 +80,7 @@ Fields used to monitor for new versions.
 | -------- | --------------------------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `id`     | integer                     | Yes                     | Anitya ID from [release-monitoring.org](https://release-monitoring.org/)                                                                                                                                                                                 |
 | `ignore` | list of regular expressions | No                      | List of regular expressions enclosed in quotes matching versions to ignore. Include a comment explaining the ignored versions.                                                                                                                           |
-| `rss`    | URL                         | No, strongly encouraged | URL for a releases RSS feed. If the only RSS feed you can find for a project is a general "news" feed, don't include the field. For GitHub projects, You can use the "tags" or "releases" feed: `https://github.com/USER/REPOSITORY/tagsORreleases.atom` |
+| `rss`    | URL                         | No, strongly encouraged | URL for a releases RSS feed. If the only RSS feed you can find for a project is a general "news" feed, don't include the field. For GitHub projects, you can use the "tags" or "releases" feed: `https://github.com/USER/REPOSITORY/tagsORreleases.atom` |
 
 ### Finding the Anitya ID
 

@@ -6,9 +6,9 @@ sidebar_position: 5
 
 # Testing a Package
 
-After building a package, it must be tested against the unstable repo before a pull request can be submitted. Each pull request requires you to explain how you tested the package to make sure things work as expected.
+After building a package, it must be tested against the unstable repository before a pull request can be submitted. Each pull request requires you to explain how you tested the package to make sure things work as expected.
 
-You will use the .eopkg file(s) created by the build process for testing.
+You will use the `.eopkg` file(s) created by the build process for testing.
 
 ## Install the `.eopkg` Files
 
@@ -24,7 +24,7 @@ For example, if you were updating a text editor, you would want to make sure you
 
 ## For Updated Packages: Return to the Repository Version
 
-It is a good idea to uninstall the package you built, and return to the repository version, once you are done testing. To do this, run the following command on the main application. For example, if you just built `tree`:
+It is a good idea to uninstall the package you built, and return to the repository version, once you are done testing. To do this, run the following command on the main application. For example, if you just built and tested `tree`:
 
 ```bash
 sudo eopkg it --reinstall tree
