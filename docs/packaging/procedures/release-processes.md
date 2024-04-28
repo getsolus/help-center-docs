@@ -36,8 +36,8 @@ Follow these steps to submit a package for deprecation:
 1. Fork and clone the `solus-sc` repo [on GitHub](https://github.com/getsolus/solus-sc), and/or create a new branch
 2. Edit `repo_data/distribution.xml.in`
 3. Add the package you wish to deprecate at the end of the `<Obsoletes>` section
-4. Change directory `cd merged_repos.sh` and from there run the `merged_repos.sh` script
-5. Commit and push your changes to your repo/branch
+4. Run the `merged_repos.sh` script
+5. Commit and push your changes to your repository/branch
 6. Open a Pull Request on GitHub
 
 If a deprecation depends on a packaging change landing before it can be properly deprecated without undesirable side effects on user systems, the GitHub deprecation Pull Request MUST link to the packaging change and declare it as a dependency for deprecation.

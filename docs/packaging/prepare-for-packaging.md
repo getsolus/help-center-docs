@@ -8,7 +8,7 @@ sidebar_position: 1
 
 ## Switch to the Unstable repository
 
-Packages need to be built and tested against the "unstable" repository. If you don't want to switch your primary system to unstable, you can do your packaging work in a VM. We have Virtual Machine Manager in the repos.
+Packages need to be built and tested against the "unstable" repository. If you don't want to switch your primary system to unstable, you can do your packaging work in a VM. We have Virtual Machine Manager and other similar tools in the Solus repository.
 
 Refer to [Repository Management](/docs/user/package-management/repo-management) to see how to add and switch to unstable.
 
@@ -35,7 +35,7 @@ We need to install a few things in order to get started with packaging:
 - `git` is used for version control of the Solus sources
 - `github-cli` is used to make working with GitHub easier
 - `go-task` is used by our build tools for scripting
-- `jq` is used by our optional Helper Functions
+- `jq` is used by our optional [Helper Functions](#set-up-repository-helper-functions-optional)
 - `solbuild` is a lightweight container environment for building packages repeatably
 - `solbuild-config-unstable` sets up solbuild for working with the `unstable` repository
 - `ypkg` is the program that actually builds packages
@@ -47,11 +47,11 @@ sudo eopkg it git github-cli go-task jq solbuild solbuild-config-unstable ypkg y
 
 ## Setting up a GitHub account and Git
 
-The Solus source repositories for the package repository currently reside on [github.com/getsolus/packages](https://github.com/getsolus/packages). You will need a GitHub account to submit patches and file issues. You can create a GitHub account [here](https://github.com/signup). Note that you will also need to set up [2FA](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa) (two factor authentication) for your account.
+The Solus source repositories for the package repository currently reside on [github.com/getsolus/packages](https://github.com/getsolus/packages). You will need a GitHub account to submit patches and file issues. You can create a GitHub account [here](https://github.com/signup). Note that you will also need to set up [2FA](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa) (two-factor authentication) for your account.
 
 ### Configure `github-cli`.
 
-Once you have a GitHub account, you need to configure `github-cli` to work with it. At minimum, you need to run `gh auth login`. Have your GitHub credentials and 2FA (two factor authentication) mechanism at hand.
+Once you have a GitHub account, you need to configure `github-cli` to work with it. At minimum, you need to run `gh auth login`. Have your GitHub credentials and 2FA (two-factor authentication) mechanism at hand.
 
 See the [GitHub CLI quickstart](https://docs.github.com/en/github-cli/github-cli/quickstart) for some common uses of the tool.
 
@@ -150,10 +150,10 @@ You should now have the following available from your shell:
 | Function          | Description                                                                                                                                   | Usage                          |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
 | **cpesearch**     | Search for CPE Names for packages. For use when writing the [`monitoring.yml`](/docs/packaging/monitoring.yml.md) file for a package          | `cpesearch search-term`        |
-| **goroot**        | When in the solus monorepo, change directory to the root directory of the git repository.                                                     | `goroot`                       |
-| **gotopkg**       | Change directory to any solus package. You can type part of the package name then double press `Tab` to get autocompletion for this function. | `gotopkg firefox`              |
-| **gotosoluspkgs** | Change directory to the solus monorepo from anywhere on the filesystem.                                                                       | `gotosoluspkgs`                |
-| **whatprovides**  | Find out what package provides a library by reading the `abi_libs` files.                                                                     | `whatprovides libfoobar.so.1.` |
+| **goroot**        | When in the Solus packages repository, change directory to the root directory.                                                     | `goroot`                       |
+| **gotopkg**       | Change directory to any Solus package. You can type part of the package name then double press `Tab` to get autocompletion for this function. | `gotopkg firefox`              |
+| **gotosoluspkgs** | Change directory to the Solus packages repository from anywhere on the filesystem.                                                                       | `gotosoluspkgs`                |
+| **whatprovides**  | Find out what package provides a library by reading the `abi_libs` files.                                                                     | `whatprovides libfoobar.so.1` |
 | **whatuses**      | Find out what packages use a library by reading the `abi_used_libs` files.                                                                    | `whatuses libfoobar.so.1`      |
 
 ## Building packages
