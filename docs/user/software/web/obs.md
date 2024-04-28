@@ -15,7 +15,7 @@ To install OBS Studio, either open up the Software Center and type `obs-studio` 
 sudo eopkg install obs-studio
 ```
 
-## Virtual Camera
+## Virtual camera
 
 OBS includes a virtual webcam device which can be used to send your OBS stream to video conferencing programs. In order to use this on Solus, you must first install from our repository a separate kernel module that is responsible for creating the necessary "loopback" device. There are two versions of this software available in the repository, you must choose the version that corresponds to the kernel you have installed.
 
@@ -55,7 +55,7 @@ Additionally, the plugin may come with additional files or folders, such as loca
 
 Most Linux-supporting plugins should provide pre-compiled tarballs or zip files that you can extract to get a pre-made / ready folder structure that you can simply copy / paste into `~/.config/obs-studio/plugins`
 
-### Known Working Plugins
+### Known working plugins
 
 #### Input Overlay
 

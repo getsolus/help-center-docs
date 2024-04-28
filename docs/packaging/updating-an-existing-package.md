@@ -19,7 +19,7 @@ This PR resolves software update request https://github.com/getsolus/packages/is
 
 :::
 
-### Update your clone of the packages Repository
+### Update your clone of the packages repository
 
 If you do not have a local clone set up yet, see [Prepare for Packaging](prepare-for-packaging.md#fork-the-getsoluspackages-repository)
 
@@ -31,7 +31,7 @@ git switch main
 git pull
 ```
 
-## Switch to a New Git Branch
+## Switch to a new git branch
 
 It's always a good idea to switch to a new git branch before beginning packaging work. This helps to separate your work from any new changes made to the package repository, which will allow you to more easily rebase any changes if needed. To do so run:
 
@@ -39,13 +39,13 @@ It's always a good idea to switch to a new git branch before beginning packaging
 git switch -c update_nano
 ```
 
-## Updating a Package
+## Updating a package
 
 There are two types of package updates: a package bump, and moving a package to a different version.
 
 Bumping a package is typically done when rebuilding against a changed dependency, such as `imagemagick` needing to be rebuilt if `libwebp` changes. It is also done if changes are being made to the package, such as adding new dependencies or other modifications which aren't a version update.
 
-### Bumping a Package
+### Bumping a package
 
 Bumping can be achieved by running the `bump` task, which increments the release number by 1.
 
@@ -63,7 +63,7 @@ git diff package.yml
 Certain packages with long descriptions might have their description messed up when this is run. Check if this happened, and fix it if necessary.
 :::
 
-### Using a Different Version
+### Using a different version
 
 To update the package to a newer version, use the `update` task.
 
@@ -80,7 +80,7 @@ Example:
 go-task update -- 1.0 https://example.com/example-1.0.tar.xz
 ```
 
-## The `MAINTAINERS.md` File
+## The `MAINTAINERS.md` file
 
 There must be a file called `MAINTAINERS.md` using the template in [Maintainership](procedures/maintainership.md). Add it if it does not already exist. It should name the current maintainer(s) of the package.
 
@@ -94,7 +94,7 @@ go-task
 
 Once your package has built successfully, you will need to [test it](testing-a-package).
 
-## Commit Your Changes
+## Commit your changes
 
 Check the [changes in your files](git-basics#check-the-changes-in-your-files).
 

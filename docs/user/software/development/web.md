@@ -72,7 +72,7 @@ If you modify the configuration files located in the `/usr/share/defaults/httpd/
 
 The document root is the directory where Apache serves files from. By default, the document root is `/var/www/`.
 
-#### Enabling PHP Support
+#### Enabling PHP support
 
 1. Install `php` from the Software Center or execute the following command: `sudo eopkg install php`.
 2. Create a new `/etc/httpd/conf.d/php.conf` file with the following contents:

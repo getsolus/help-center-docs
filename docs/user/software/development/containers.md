@@ -1,6 +1,6 @@
 # Containers
 
-Containers are a popular method to run and configure applications in a confined environment without directly installing the application and all it's dependencies. Solus provides the following container technologies:
+Containers are a popular method to run and configure applications in a confined environment without directly installing the application and all its dependencies. Solus provides the following container technologies:
 
 ## Docker
 

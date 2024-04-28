@@ -71,7 +71,7 @@ abi_used_symbols  nano-7.2-162-1-x86_64.eopkg  pspec_x86_64.xml
 
 Congratulations! You have successfully built your first package on Solus.
 
-## Installing Your New `nano` Package
+## Installing your new `nano` package
 
 To install your new `nano` package, run the following command. Your filename will probably be slightly different.
 
@@ -85,7 +85,7 @@ Testing `nano` is pretty easy. Testing other packages may be more complicated, d
 
 To test your newly built `nano` package, simply run it on command line, then make sure you can edit and save a file.
 
-## Returning to the Repository version (optional)
+## Returning to the repository version (optional)
 
 It is a good idea to remove the package you built, and return to the repository version, once you are done testing.
 

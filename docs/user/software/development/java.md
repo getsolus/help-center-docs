@@ -21,8 +21,9 @@ The following table lists the versions of Java available in the Solus repositori
 | ------- | ------------ | ----------------------- | ------------------- | ----- |
 | Java 11 | `openjdk-11` | `/usr/lib64/openjdk-11` | JRE, JDK, OpenJFX   |       |
 | Java 17 | `openjdk-17` | `/usr/lib64/openjdk-17` | JRE, JDK            |       |
+| Java 21 | `openjdk-21` | `/usr/lib64/openjdk-21` | JRE, JDK            |       |
 
-## Running Java Applications
+## Running Java applications
 
 :::caution Important
 
@@ -34,5 +35,5 @@ There are multiple ways to execute Java applications in Solus:
 
 - Create a .desktop file, then add `env JAVA_HOME=/path/to/jdk/bin` to Exec.
 - Create a script that sets `JAVA_HOME` before running the application.
-- Symlink the java executable from `/path/to/jdk/bin` to `/usr/bin`.
+- Symlink the `java` executable from `/path/to/jdk/bin` to `/usr/bin`.
 - Add `/path/to/jdk/bin` to your PATH environment variable.

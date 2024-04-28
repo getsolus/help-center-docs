@@ -5,7 +5,7 @@ summary: Guide to using and configuring input devices on Solus
 
 # Mice and Touchpads
 
-## Asus, Logitech, Roccat, SteelSeries
+## ASUS, Logitech, Roccat, SteelSeries
 
 TODO: Quick tutorial on installing `piper` with a screenshot. And point them at the official documentation.
 
@@ -49,7 +49,7 @@ cat /var/log/Xorg.0.log | grep "Using input driver 'synaptics' for"
 
 If it returns a result, then success! The synaptics driver is in use instead of libinput for your Touchpad.
 
-### Revert Configuration
+### Revert configuration
 
 If you wish to switch back to using libinput:
 

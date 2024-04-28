@@ -40,29 +40,29 @@ uname -r
 
 You will either have a `.current` or `.lts` suffix. Examples: `5.13.1-187.current` or `4.14.237-175.lts`
 
-## Solus as Host
+## Solus as host
 
 VirtualBox is available in the Software Center, select the package that matches your kernel.
 
 | virtualbox                                           | virtualbox-current                                       |
 | ---------------------------------------------------- | -------------------------------------------------------- |
-| VirtualBox Host modules for the **linux-lts** kernel | VirtualBox Host modules for the **linux-current** kernel |
+| VirtualBox host modules for the **linux-lts** kernel | VirtualBox host modules for the **linux-current** kernel |
 
 You **must** reboot your computer before running VirtualBox for the first time.
 
-## Solus as Guest
+## Solus as guest
 
 VirtualBox Guest Additions are available in the Software Center, select the package that matches kernel version on the Solus virtual machine.
 
 | virtualbox-guest                                      | virtualbox-guest-common                                      |
 | ----------------------------------------------------- | ------------------------------------------------------------ |
-| VirtualBox Guest modules for the **linux-lts** kernel | Install this package if the **linux-current** kernel is used |
+| VirtualBox guest modules for the **linux-lts** kernel | Install this package if the **linux-current** kernel is used |
 
 You **must** reboot your virtual machine to load the newly installed modules
 
 ## Extra configuration
 
-#### USB Controller
+#### USB controller
 
 If you want to use USB 2.0 or 3.0 in your virtual machine (and your hardware supports it), you have to install the [extension pack](https://www.virtualbox.org/manual/ch01.html#intro-installing).
 
@@ -72,7 +72,7 @@ Note: Access to USB is granted by the user group `vboxusers` on the **Host** ope
 sudo gpasswd -a $USER vboxusers
 ```
 
-#### Shared Folders
+#### Shared folders
 
 Share folders let you access files from the host system from within a guest machine.
 

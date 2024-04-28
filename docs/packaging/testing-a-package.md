@@ -10,7 +10,7 @@ After building a package, it must be tested against the unstable repository befo
 
 You will use the `.eopkg` file(s) created by the build process for testing.
 
-## Install the `.eopkg` Files
+## Install the `.eopkg` files
 
 To install your new package, run the following command in the directory where you built the package. Include **all** `.eopkg` files that were built.
 
@@ -22,7 +22,7 @@ Testing need not be very complicated. The goal is to ensure the package will rel
 
 For example, if you were updating a text editor, you would want to make sure you can open, create and save files. If you know of issues the package has had in the past, it's a good idea to test that as well to make sure there are no regressions. There are plenty of historical pull requests to review if you want more detail.
 
-## For Updated Packages: Return to the Repository Version
+## For updated packages: Return to the repository version
 
 It is a good idea to uninstall the package you built, and return to the repository version, once you are done testing. To do this, run the following command on the main application. For example, if you just built and tested `tree`:
 
@@ -30,7 +30,7 @@ It is a good idea to uninstall the package you built, and return to the reposito
 sudo eopkg it --reinstall tree
 ```
 
-## Remove the `.eopkg` Files
+## Remove the `.eopkg` files
 
 Before you can submit your pull request, you need to remove the `.eopkg` files. All repository packages are built by a dedicated build server from the source files provided in your pull request.
 

@@ -30,7 +30,7 @@ git switch main
 git pull
 ```
 
-## Create a New Branch
+## Create a new branch
 
 It's always a good idea to switch to a new git branch before beginning packaging work. This helps to separate your work from any new changes made to the package repository, which will allow you to more easily rebase any changes if needed. To do so run:
 
@@ -38,11 +38,11 @@ It's always a good idea to switch to a new git branch before beginning packaging
 git switch -c your-branch
 ```
 
-## Create The `MAINTAINERS.md` File
+## Create the `MAINTAINERS.md` file
 
 You must add a file called `MAINTAINERS.md` using the template in [Maintainership](procedures/maintainership.md). Solus uses this to track the primary maintainer(s) for each package.
 
-## Create the `package.yml` File
+## Create the `package.yml` file
 
 You will need a link to the most recent source tarball for this from the software's website.
 
@@ -124,7 +124,7 @@ To read more about finding and including dependencies and other parts of `packag
 
 Understanding how to translate source code into a good `package.yml` file is the heart of packaging. If you are stumped, or have questions, **ask for help in our Solus Packaging room on [Matrix](/docs/user/contributing/getting-involved#matrix-chat).**
 
-## Build the Package
+## Build the package
 
 Build the package using `go-task`. The default task will build the package against the Unstable repository, so you don't have to specify a task here.
 
@@ -146,7 +146,7 @@ All these files _except_ the `*eopkg` file(s) should be included in your pull re
 
 Once your package has built successfully, you will need to [test it](testing-a-package).
 
-## Commit your Changes
+## Commit your changes
 
 Check the [changes in your files](git-basics#check-the-changes-in-your-files).
 

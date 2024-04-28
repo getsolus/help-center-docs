@@ -7,13 +7,13 @@ summary: Getting involved with the Solus community
 
 Solus is a big undertaking, and as such there are many ways in which your involvement can help us. Naturally, that means there are also many ways in which you can help out.
 
-## Engaging with the Community
+## Engaging with the community
 
-### Community Guidelines
+### Community guidelines
 
 The Solus Project enforces a set of community guidelines to maintain respect and professionalism, as well as a family-friendly environment. Please view our community guidelines [here](/docs/user/contributing/community-guidelines).
 
-### Community Forums
+### Community forums
 
 With so many new users joining, there are always more people needing help. A great way to help us out, would be to help out our users on the [Solus Project Forums](https://discuss.getsol.us).
 
@@ -41,9 +41,9 @@ Alongside the forums, you can communicate with developers or others in the commu
 
 ## Funding
 
-Solus is funded through our [Open Collective](https://opencollective.com/getsolus), with our fiscal host being the non-profit 501(c)(3) organization [Open Source Collective](https://www.oscollective.org/). To read more about what this funding enables us to do take a look at the ["About" section of our Open Collective page](https://opencollective.com/getsolus#category-ABOUT).
+Solus is funded through our [Open Collective](https://opencollective.com/getsolus), with our fiscal host being the non-profit 501(c)(3) organization [Open Source Collective](https://oscollective.org/). To read more about what this funding enables us to do take a look at the ["About" section of our Open Collective page](https://opencollective.com/getsolus#category-ABOUT).
 
-## Improving Documentation
+## Improving documentation
 
 Our Help Center improves when the documentation improves. If there are docs that you think would be valuable to add, get involved by submitting pull requests to our [Help Center Docs](https://github.com/getsolus/help-center-docs) repository!
 
@@ -52,7 +52,7 @@ Our Help Center improves when the documentation improves. If there are docs that
 There may be software you wish to have on your system that is currently not available in the repository. While you are more than welcome to submit a bug and wait for someone else to package the software you want, you can also improve
 and contribute to the community by packaging software. If you're interested in learning to package software, feel free to visit our documentation [here](/docs/packaging/).
 
-## Report Bugs
+## Report bugs
 
 We're always looking to improve our systems, especially when they're not functioning as expected. By reporting bugs, you improve the system not only for you, but for all Solus Project users.
 
@@ -67,4 +67,4 @@ We're always looking to improve our systems, especially when they're not functio
 
 ## Translations
 
-Assistance is always welcome in translating our projects [to other languages](https://translate.getsol.us)!
+Assistance is always welcome in translating our projects [to other languages](/docs/packaging/translation-instructions)!

@@ -15,7 +15,7 @@ You can open the system settings in Solus Plasma using any of the following meth
 | KRunner          | Press `Alt + F2` or `Alt + Space`, type `systemsettings`, and press Enter |
 | Terminal         | Open a terminal window and execute `systemsettings`                       |
 
-## Date and Time
+## Date and time
 
 1. In the [**System Settings**](#opening-system-settings) screen, go to **Personalization** > **Regional Settings** > **Date and Time**.
 2. Configure the date and time of your system.
@@ -33,13 +33,13 @@ You can open the system settings in Solus Plasma using any of the following meth
 
 ## Default Applications
 
-### Configuring Default Applications from System Settings
+### Configuring default applications from System Settings
 
 In the [**System Settings**](#opening-system-settings) screen, go to **Personalization** > **Applications** > **Default Applications**, then use the menus to select your preferred default applications.
 
 ![Default applications](configuration/default-apps-screen.png)
 
-### Configuring Default Applications from the File Manager
+### Configuring default applications from the file manager
 
 1. Open Dolphin.
 2. Navigate to the folder that contains the file you want to open.
@@ -71,9 +71,9 @@ Press `Super + P` to access the screen layout settings.
    ![Screen settings available in Solus Plasma](configuration/screen-configuration.png)
 4. Click **Apply**.
 
-## Keyboard Layout
+## Keyboard layout
 
-### Configuring Keyboard Layouts
+### Configuring keyboard layouts
 
 :::caution Important
 
@@ -131,7 +131,7 @@ Some keyboard layouts require [installing additional packages](../../software/lo
 
 :::
 
-## Mouse and Touchpad
+## Mouse and touchpad
 
 1. In the [**System Settings**](#opening-system-settings) screen, go to the appropriate configuration screen:
    - To configure the mouse, go to **Input Devices** > **Mouse**.
@@ -141,13 +141,13 @@ Some keyboard layouts require [installing additional packages](../../software/lo
 2. Configure the available settings as needed.
 3. Click **Apply**.
 
-## Network Settings
+## Network settings
 
 The **Networks** widget on the bottom panel allows you to perform frequent networking tasks, such as connecting to a Wi-Fi network or enabling airplane mode.
 
 ![Networks widget](configuration/networks-widget.png)
 
-### Connecting to a Hidden Wi-Fi Network
+### Connecting to a hidden Wi-Fi network
 
 1. In the **System Settings** screen, go to **Network** > **Connections**.
 2. Click the **Add new connection** icon (+).
@@ -162,7 +162,7 @@ The **Networks** widget on the bottom panel allows you to perform frequent netwo
 7. Use the **IPv4**, **IPv6** and **General configuration** tabs to configure additional settings, such as DNS servers.
 8. Click **Save**.
 
-## Sound and Sound Devices
+## Sound and sound devices
 
 ![Audio Volume widget](configuration/audio-widget.png)
 
@@ -178,7 +178,7 @@ The **Audio Volume** widget on the bottom panel allows you to perform the follow
 
 ## Users
 
-### Adding User Accounts
+### Adding user accounts
 
 1. In the [**System Settings**](#opening-system-settings) screen, go to **Personalization** > **Users**.
 2. Click **Add New User**.
@@ -192,7 +192,7 @@ The **Audio Volume** widget on the bottom panel allows you to perform the follow
 
 5. Specify your user password and click **OK**.
 
-### Removing User Accounts
+### Removing user accounts
 
 1. In the [**System Settings**](#opening-system-settings) screen, go to **Personalization** > **Users**.
 2. Select an account from the user list.
@@ -201,9 +201,9 @@ The **Audio Volume** widget on the bottom panel allows you to perform the follow
 
    ![Keep or delete user files](configuration/keep-delete-files.png)
 
-# User Interface
+## User interface
 
-## Customizing the Desktop
+### Customizing the desktop
 
 The **Desktop Settings** screen allows you to customize various aspects of your desktop, such as the wallpaper and the desktop icons. To open **Desktop Settings** screen, right-click anywhere on the desktop and select **Configure Desktop and Wallpaper...**.
 
@@ -226,7 +226,7 @@ The following table describes how to customize the desktop using the **Desktop F
 
 :::
 
-## Virtual Desktops
+## Virtual desktops
 
 Plasma allows you to have multiple desktops on your computer.
 
@@ -240,7 +240,7 @@ Solus Plasma has one virtual desktop and one row by default.
 
 :::
 
-### Creating Virtual Desktops
+### Creating virtual desktops
 
 1. In the [**System Settings**](#opening-system-settings) screen, go to **Workspace** > **Workspace Behavior** > **Virtual Desktops**.
 2. Define the number of rows in the grid.
@@ -269,7 +269,7 @@ Plasma displays the virtual desktop grid next to the application launcher button
 
 :::
 
-### Switching Between Virtual Desktops
+### Switching between virtual desktops
 
 The following table outlines the methods to change between desktops in Solus Plasma.
 

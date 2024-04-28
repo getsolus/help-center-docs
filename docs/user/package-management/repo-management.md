@@ -7,7 +7,7 @@ summary: Repository Management
 
 While Solus currently only provides two repositories, stable (shannon) and unstable, our package manager does support actively using multiple repositories on your system. This is useful if you are using a vendor-provided repository.
 
-## Official Solus Repositories
+## Official Solus repositories
 
 The official Solus repositories are:
 
@@ -22,12 +22,12 @@ It is not always safe to perform a system update when using the **unstable** rep
 
 :::
 
-## Adding a Repository
+## Adding a repository
 
 You can add a repository by using:
 
 ```bash
-sudo eopkg add-repo Name Url
+sudo eopkg add-repo Name URL
 ```
 
 For example:
@@ -38,7 +38,7 @@ sudo eopkg add-repo Example https://example.com/repo/eopkg-index.xml.xz
 
 **Note:** This does not enable the repository.
 
-## Removing a Repository
+## Removing a repository
 
 You can remove a repository by using:
 
@@ -52,7 +52,7 @@ For example:
 sudo eopkg remove-repo Example
 ```
 
-## Enabling a Repository
+## Enabling a repository
 
 You can enable a repository for usage, by using:
 
@@ -66,7 +66,7 @@ For example:
 sudo eopkg enable-repo Example
 ```
 
-## Disabling a Repository
+## Disabling a repository
 
 You can disable a repository by using:
 
@@ -80,7 +80,7 @@ For example:
 sudo eopkg disable-repo Example
 ```
 
-## Updating a Repository
+## Updating a repository
 
 You can update the index of a repository by using:
 

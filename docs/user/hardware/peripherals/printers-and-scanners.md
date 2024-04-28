@@ -66,9 +66,9 @@ Should your printer not be on this list, and the generic `brlaser` driver does n
 
 You can connect your Brother scanner via USB or LAN to be able to scan. To get newer Brother scanners to work you will have to install the package `brscan4`
 
-### Network Scanner
+### Network scanner
 
-If your scanner is networks, you need to tell `saned` the IP of your printer. It's advised to give your printer always the same IP inside your Network (ie. Static IP Address). Run the following command to accomplish this:
+If your scanner is networked, you need to tell `saned` the IP of your printer. It's advised to always give your printer the same IP inside your network (that is, a static IP address). Run the following command to accomplish this:
 
 ```bash
 brsaneconfig4 -a name=SCANNER model=$MODEL ip=$IPOFYOURSCANNER

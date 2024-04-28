@@ -66,7 +66,7 @@ sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-par
 sudo eopkg it bitwig-studio*.eopkg;sudo rm bitwig-studio*.eopkg
 ```
 
-### OcenAudio
+### Ocenaudio
 
 ```bash
 sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/multimedia/music/ocenaudio/pspec.xml
@@ -88,7 +88,7 @@ sudo systemctl start plexmediaserver.service
 sudo systemctl enable plexmediaserver.service
 ```
 
-### Sunvox
+### SunVox
 
 ```bash
 sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/multimedia/music/sunvox/pspec.xml
@@ -193,14 +193,14 @@ sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-par
 sudo eopkg it clion*.eopkg;sudo rm clion*.eopkg
 ```
 
-### Datagrip
+### DataGrip
 
 ```bash
 sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/programming/datagrip/pspec.xml
 sudo eopkg it datagrip*.eopkg;sudo rm datagrip*.eopkg
 ```
 
-### Git Kraken
+### GitKraken
 
 ```bash
 sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/programming/gitkraken/pspec.xml
@@ -214,14 +214,14 @@ sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-par
 sudo eopkg it idea*.eopkg;sudo rm idea*.eopkg
 ```
 
-### PHPStorm
+### PhpStorm
 
 ```bash
 sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/programming/phpstorm/pspec.xml
 sudo eopkg it phpstorm*.eopkg;sudo rm phpstorm*.eopkg
 ```
 
-### Pycharm
+### PyCharm
 
 ```bash
 sudo eopkg bi --ignore-safety https://raw.githubusercontent.com/getsolus/3rd-party/master/programming/pycharm/pspec.xml

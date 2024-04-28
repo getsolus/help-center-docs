@@ -5,9 +5,9 @@ summary: Help for configuring GNOME Shell on Solus
 
 # Configuration
 
-# System
+## System
 
-## Date and Time
+### Date and time
 
 To change the date and time settings in GNOME, you can open the Overlay using the `Super` button on your keyboard or by clicking the applications icon in the dock and then finding and clicking on "Date & Time".
 
@@ -19,7 +19,7 @@ If you wish to change how the time is displayed in the top panel, go back to the
 
 ![GNOME Tweak Tool: Top Bar](configuration/gnome-tweak-tool-top-bar.jpg)
 
-## Default Applications
+### Default applications
 
 With GNOME, you will need to open the Overlay using the `Super` button on your keyboard or by clicking the applications icon in the dock and then finding and clicking on "Details".
 
@@ -61,7 +61,7 @@ Click "Apply" once you are happy with your changes. You will be shown a message 
 
 ![GNOME Confirm Display Settings](configuration/gnome-display-confirm.jpg)
 
-## Keyboard Layout
+## Keyboard layout
 
 With GNOME, open the Overlay using the `Super` button on your keyboard or by clicking the applications icon in the dock and then find and click on "Region and Language".
 
@@ -109,7 +109,7 @@ If your language does not appear in the list, click the ⋮ button at the bottom
 
 Once you have selected the language you wish to use, click "Done". You _may_ need to logout and login to your computer for it to take affect.
 
-## Mouse and Touchpad
+## Mouse and touchpad
 
 With GNOME, open the Overlay using the `Super` button on your keyboard or by clicking the applications icon in the dock and then find and click on "Mouse and Touchpad". You will see either settings for your mouse or trackpad, depending on the device.
 
@@ -147,7 +147,7 @@ Easily change network settings with GNOME by left or right clicking on the syste
 
 Alternatively, you can open the Overlay using the `Super` button on your keyboard or by clicking the applications icon in the dock and then finding and clicking on "Network".
 
-### Non-Hidden Network
+### Non-hidden network
 
 Once you have opened the "WiFi Not Connected" menu, click on "Select Network". Click on the network you wish to join and then on "Connect".
 
@@ -159,7 +159,7 @@ You may now be prompted to authenticate with the network. Type in your password 
 
 If your password is correct, you will now be authenticated with the network.
 
-### Hidden Network
+### Hidden network
 
 To join a hidden network, open the "WiFi Not Connected" menu and click on "WiFi Settings".
 
@@ -171,7 +171,7 @@ Next, click on “Connect to Hidden Network...”. It will show the following di
 
 If the network is found and has a password, you will be prompted to authenticate with the network.
 
-## Sound and Sound Devices
+## Sound and sound devices
 
 With GNOME, the volume can be changed by left or right clicking the system tray in the top panel and then simply dragging the volume slider with your mouse.
 
@@ -197,7 +197,7 @@ To manage your own or other accounts, you first need to authenticate. Click the 
 
 In the event the password provided is correct, the "Unlock" button will change to "Add User..."
 
-### Adding a User
+### Adding a user
 
 To add a user, click the "Add User..." button in the top right corner of the Users window.
 
@@ -209,7 +209,7 @@ This will open the Add User window (shown below).
 
 Fill in the required items and then finish adding the new user by clicking "Add" in the top right corner.
 
-### Removing a User
+### Removing a user
 
 To remove a user, open the Users window and then click on the user you wish to remove. Now click on the red "Remove User..." button in the bottom right corner.
 
@@ -219,9 +219,9 @@ Upon clicking to remove the user, you will be given the option to keep their fil
 
 ![GNOME Keep Files Prompt](configuration/gnome-keep-files-prompt.jpg)
 
-# User Interface
+## User interface
 
-## Desktop Background
+### Desktop background
 
 The GNOME desktop background can be changed by simply right clicking anywhere on the desktop and selecting "Change background".
 
@@ -237,7 +237,7 @@ In this section, you can choose between Solus wallpapers, pictures in your Pictu
 
 ![GNOME Background Selection](configuration/gnome-background-selection.jpg)
 
-## Desktop Icons
+### Desktop icons
 
 In GNOME, you can enable desktop items by opening the Overlay using the `Super` button on your keyboard or by clicking the Applications icon in the dock and then search for and open "Tweak Tool". You can then toggle them on and off by clicking "Icons on Desktop" under the Desktop section.
 
@@ -250,8 +250,6 @@ You may now add things to your Desktop. This can be done by dragging an item ont
 ## Workspaces
 
 GNOME enables the switching of workspaces via the Workspace Switcher on the right side of the Activities Overview screen. Application windows can be dragged from the Activities Overview to a workspace, whether it is empty / new, or one that already has windows in it.
-
-<video src="/help/vids/GNOME-Workspace-Switch.mp4" autoplay="autoplay" loop="loop" width="740" height="416"></video>
 
 ### Keyboard Shortcuts
 

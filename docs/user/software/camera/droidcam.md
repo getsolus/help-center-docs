@@ -7,7 +7,7 @@ summary: Quick Start guide to DroidCam on Solus
 
 [DroidCam](https://www.dev47apps.com/) turns your phone or tablet into a webcam for your computer. You can use it with video conferencing programs like Zoom, MS Teams, and Skype.
 
-## Before Installation
+## Before installation
 
 DroidCam relies on the v4l2loopback kernel module. So you need to install `v4l2loopback` or `v4l2loopback-current` depending of which kernel is installed on your computer. To find out which kernel is installed, run:
 

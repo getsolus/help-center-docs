@@ -9,7 +9,7 @@ Since Solus 4.4 secure boot is now supported. When you first boot the ISO, and, 
 
 <em>Note that this only applies to machines with UEFI firmware, if your machine uses the older BIOS firmware you can safely ignore this article. If you wish to avoid having to do this step then you may disable secure boot in your machine's UEFI firmware interface.</em>
 
-## Enrolling the Solus Certificate
+## Enrolling the Solus certificate
 
 After [booting](/docs/user/quick-start/installation/#boot-the-media) the ISO from USB/DVD and, if Secure Boot is enabled in your device's UEFI firmware. A warning will appear concerning a secure boot violation, press `Enter` on your keyboard to continue.
 
@@ -35,7 +35,7 @@ Now, with the Solus certificate enrolled, press `Enter` to reboot the machine, b
 
 <em>Once Solus is installed you will not have to enroll the certificate again as it will stay enrolled.</em>
 
-## Enabling Secure Boot on an Existing Install
+## Enabling Secure Boot on an existing install
 
 If you already have Solus installed and wish to enable secure boot then there is one extra step you must perform BEFORE continuing with [Enrolling the Solus Certificate](#enrolling-the-solus-certificate) as normal.
 
@@ -58,7 +58,7 @@ Once you've found and enabled the Secure Boot setting then reboot once again fro
 
 <em> Remember to save settings after enabling Secure Boot! (usually `F10`)</em>
 
-### Final Tips
+### Final tips
 
 Once you've successfully enabled and booted your Solus install with Secure Boot enabled. Go back into your machine's UEFI firmware interface and change the default boot device to `Solus Linux Bootloader`.
 
@@ -66,7 +66,7 @@ You can run `bootctl status | grep "Secure Boot"` in a terminal to verify Secure
 
 It is possible to delete the old Solus UEFI boot entry with `efibootmgr` once secure boot is enabled successfully, However, caution is required and as such, instructions to do so are not provided here.
 
-# Why is Enrolling the Solus Certificate Necessary?
+# Why is enrolling the Solus certificate necessary?
 
 In order to avoid the one time step of enrolling the Solus certificate, Solus would have to get it's own `shim` EFI executable signed by Microsoft. Currently, the following actions must be completed to do this:
 
@@ -85,7 +85,7 @@ However, it is also important to consider the following:
 
 As such, we are not currently looking to our get our own `shim` signed by Microsoft. However, thanks to our supporters on [OpenCollective](https://opencollective.com/getsolus), it is indeed within our budget to obtain an EV certificate in the future which would unblock the additional requirements.
 
-## Useful Links for Additional Reading
+## Useful links for additional reading
 
 - https://learn.microsoft.com/windows-hardware/drivers/dashboard/file-signing-reqs
 - https://github.com/rhboot/shim-review/

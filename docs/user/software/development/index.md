@@ -9,7 +9,7 @@ Solus provides a stable foundation for creating, testing, and deploying applicat
 
 You can install tools such as text editors, programming languages, compilers, and version control systems. Solus also supports containerization and virtualization technologies.
 
-## Getting Started
+## Getting started
 
 If you want to compile and develop software using Solus, we recommend installing the `system.devel` component.
 
@@ -33,9 +33,9 @@ Learn how to install, run, and manage Java on Solus.
 
 A quick guide to using PostgreSQL on Solus.
 
-[**R and R Studio**](r-and-rstudio)
+[**R and RStudio**](r-and-rstudio)
 
-Quick start guide for R and R Studio on Solus.
+Quick start guide for R and RStudio on Solus.
 
 [**Rust**](rust)
 

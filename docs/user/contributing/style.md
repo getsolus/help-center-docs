@@ -87,9 +87,9 @@ console.log("Hello, world!");
 
 ### Markdown formatting
 
-Write content using [markdown formatting](https://www.markdownguide.org/cheat-sheet/), use [Prettier](https://prettier.io/) to enforce consistent formatting.
+Write content using [Markdown formatting](https://www.markdownguide.org/cheat-sheet/), use [Prettier](https://prettier.io/) to enforce consistent formatting.
 
-## Package Names
+## Package names
 
 - The name of packages in the Solus repository must use inline code formatting.
 

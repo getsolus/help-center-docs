@@ -5,7 +5,7 @@ summary: Helpful tips and tricks for using Plasma on Solus.
 
 # Tips and Tricks
 
-## Keyboard Shortcuts
+## Keyboard shortcuts
 
 :::tip
 
@@ -15,7 +15,7 @@ To see the complete list of keyboard shortcuts available on your system, open th
 
 The following table shows some of the keyboard shortcuts available in Solus Plasma.
 
-| Keyboard Shortcut           | Action                                                                 |
+| Keyboard shortcut           | Action                                                                 |
 | --------------------------- | ---------------------------------------------------------------------- |
 | `Alt` + `F2`                | Opens KRunner                                                          |
 | `Alt` + `Space`             | Opens KRunner                                                          |
@@ -75,7 +75,7 @@ The following table describes some of the keyboard shortcuts you can use in Dolp
 | Show/hide the side panel                       | Press `F9` to show/hide the **Places** side panel.                                                                                                                    |
 | Switch between the view modes                  | Press `Ctrl` + `1` to display icons in _icons_ view, press `Ctrl` + `2` to display icons in _compact_ view, or press `Ctrl` + `3` to display icons in _details_ view; |
 
-## Context Menu
+## Context menu
 
 The _Plasma_ desktop provides a variety of context menus. Context menus display options, settings, and actions applicable to the current context or element you select.
 

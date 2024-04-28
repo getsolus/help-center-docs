@@ -5,7 +5,7 @@ summary: Quick guide to working with Apple devices on Solus
 
 # Apple
 
-Solus provides iOS support via [libimobiledevice](https://www.libimobiledevice.org/) and [libgpod](https://github.com/fadingred/libgpod/).
+Solus provides iOS support via [libimobiledevice](https://libimobiledevice.org/) and [libgpod](https://github.com/fadingred/libgpod/).
 
 Please note that the below mentioned installation instructions do not guarantee functional iOS features such as content synchronization (music) or file copying.
 
@@ -21,6 +21,6 @@ sudo eopkg install libideviceactivation
 
 **NOTE:** It is recommended that you reboot your system after this installation.
 
-## File Management
+## File management
 
 TODO: Tutorial on file access and syncing

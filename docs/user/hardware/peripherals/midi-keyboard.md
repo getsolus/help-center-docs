@@ -5,15 +5,15 @@ summary: Guide for installing and configuring MIDI keyboards on Solus
 
 # MIDI Keyboards
 
-These instructions will guide you through how to set up and use a USB-connected MIDI Keyboard on Solus. This will easily let you use the keyboard to play music with a wide set of instruments.
+These instructions will guide you through how to set up and use a USB-connected MIDI keyboard on Solus. This will easily let you use the keyboard to play music with a wide set of instruments.
 
 ## Installing required software
 
 We will need to install three packages in order to use the keyboard:
 
-1. `qsynth` - A frontend for fluidsynth
+1. `qsynth` - A frontend for `fluidsynth`
 2. `qjackctl` - A controller for the JACK audio server
-3. `fluid-soundfont` - An open source soundfont to use with fluidsynth
+3. `fluid-soundfont` - An open source soundfont to use with `fluidsynth`
 
 ```bash
 sudo eopkg it qsynth qjackctl fluid-soundfont

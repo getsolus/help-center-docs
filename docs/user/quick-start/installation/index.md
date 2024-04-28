@@ -48,7 +48,7 @@ sha256sum -c Solus-4.5-Budgie.iso.sha256sum | grep OK
 
 #### Verifying signed SHA256SUM file
 
-On Windows, first install [gpg4win](https://www.gpg4win.org/).
+On Windows, first install [Gpg4win](https://www.gpg4win.org/).
 
 Now you can run the same `gpg` commands from the the [_Verifyng the SHA256SUMS file signature_](/docs/user/quick-start/installation/index.md#verifying-the-sha256sums-file-signature) section above.
 
@@ -61,7 +61,7 @@ Get-FileHash C:\path\to\Solus-4.5-Budgie.iso
 cat C:\path\to\Solus-4.5-Budgie.iso.sha256sum
 ```
 
-Alternatively, you can use a graphical program that can calculate SHA256 hashes like _Rufus_ or _7zip_.
+Alternatively, you can use a graphical program that can calculate SHA256 hashes like _Rufus_ or _7-Zip_.
 
 ## Creating bootable media
 
@@ -69,7 +69,7 @@ To make boot media, you will need:
 
 1. Either a blank DVD or a USB drive larger than 2 GB.
 2. If using a USB, the ability to boot from the USB.
-3. ISO file from the _Getting the ISO_ section.
+3. ISO file from the [Getting the ISO](#getting-the-iso) section.
 
 There are many tools which can write our ISO image to DVDs or USB thumb drives. Chose from an option below.
 
@@ -89,7 +89,7 @@ We recommend using [Brasero](https://wiki.gnome.org/Apps/Brasero) for writing th
 
 #### USB
 
-We recommend using [GNOME MultiWriter](https://wiki.gnome.org/Apps/MultiWriter) or [ISO Image Writer](https://apps.kde.org/isoimagewriter/) for KDE. Please note that unetbootin will **not** work.
+We recommend using [GNOME MultiWriter](https://wiki.gnome.org/Apps/MultiWriter) or [ISO Image Writer](https://apps.kde.org/isoimagewriter/) for KDE. Please note that UNetbootin will **not** work.
 
 ##### GNOME MultiWriter
 
@@ -178,7 +178,7 @@ This will write the contents of the ISO to the thumb drive so you can boot it an
 
 You can easily burn an ISO image to a DVD, on Windows 7 and newer, by using Window's built-in file manager (Explorer).
 
-1. Open Window's built-in file manager (Explorer).
+1. Open Windows' built-in file manager (Explorer).
 2. Right click on the ISO image file and click "Burn disk image".
 3. Select the correct disc burner.
 4. Click "Burn".
