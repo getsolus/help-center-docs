@@ -8,7 +8,7 @@ summary: Basics to Package Management
 Solus uses the eopkg package management system to deliver software to the end-user.  
 Below are some basic commands for using eopkg.
 
-## Installing Software
+## Installing software
 
 You can install one or more packages by using:
 
@@ -22,7 +22,7 @@ For example:
 sudo eopkg install gnome-documents gnome-music
 ```
 
-## Reinstalling Software
+## Reinstalling software
 
 You can reinstall one or more packages by using:
 
@@ -36,7 +36,7 @@ For example:
 sudo eopkg install --reinstall gnome-documents gnome-music
 ```
 
-## Uninstalling Software
+## Uninstalling software
 
 You can uninstall one or more packages by using:
 
@@ -50,7 +50,7 @@ For example:
 sudo eopkg remove gnome-documents gnome-music
 ```
 
-## Get Information on Software
+## Get information on software
 
 You can get information on software, such as its description, version, installation size, and more, by using
 
@@ -94,12 +94,12 @@ eopkg search documents
 
 Notice that you don't need to search for a specific software name, although you can do that. We search summaries and software names by default.
 
-## Base Development Tools
+## Base development tools
 
-If you are wanting to compile software under Solus, we recommend installing our system.devel component by running the following:
+If you are wanting to compile software under Solus, we recommend installing our `system.devel` component by running the following:
 
 ```bash
 sudo eopkg install -c system.devel
 ```
 
-This will provide items such as clang, gcc, make, a multitude of devel sub-packages, and more. Our system.devel is similar to packages on other operating systems, such as Debian's build-essentials.
+This will provide items such as `clang`, `gcc`, `make`, a multitude of devel sub-packages, and more. Our `system.devel` is similar to packages on other operating systems, such as Debian's build-essentials.

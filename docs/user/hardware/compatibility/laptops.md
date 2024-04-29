@@ -38,7 +38,7 @@ This list should not suggest that _only_ such devices listed below are compatibl
 - Apple Macbook (late 2008)
 - Apple MacBookPro8,3
 
-## Asus
+## ASUS
 
 - Asus EEE-PC 1001PX
 - Asus EEE-PC 1011PX
@@ -101,9 +101,9 @@ This list should not suggest that _only_ such devices listed below are compatibl
 - Fujitsu Lifebook A531
 - Fujitsu Lifebook T900
 
-## Gigabyte
+## GIGABYTE
 
-- Gigabyte Aero 14K
+- GIGABYTE Aero 14K
 
 ## Google
 

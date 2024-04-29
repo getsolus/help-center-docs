@@ -9,20 +9,20 @@ This policy sets forth the criteria for a package to be accepted for inclusion i
 
 ## Criteria
 
-### Explicitly Redistributable
+### Explicitly redistributable
 
 - Software under a free software or open source software license, or license text which explicitly states that it is **permissible** to redistribute the software. We use the [SPDX License List](https://spdx.org/licenses/).
 - For anything that cannot be redistributed by Solus, there is the possibility for them to be provided as a Flatpak, for Third Party repository inclusion, however the Solus project is not responsible for flatpak or snap implementation of these items. These items should then fetch only at installation time, and not contain non distributable components.
 - Solus supports both VCS (currently only git, this will expand) and traditional software sources (such as tarballs) for packages, equally.
 - Unless **absolutely unavoidable**, the sources for a package should be source, and not **binary, prebuilt** sources. Exceptions may be made in rare cases, such as stage1 bootstrap for a compiler, or requires custom components otherwise impossible to provide in Solus (patched libraries, etc.)
 
-### Server Software
+### Server software
 
 - Mail servers such as Postfix, Dovecot, etc, are **not** eligible for inclusion. Solus does not provide a server operating system.
 - Web servers and database daemons **are** eligible for inclusion, as they facilitate web developers to work locally.
 - Anything outside of these may be catered to by the usage of Docker, or other container technology. Thus, container technology must be supported by Solus to support access to ancillary cases.
 
-### Software Age
+### Software age
 
 - DOA (dead-on-arrival) packages are generally rejected from Solus. However, they may be included at the discretion of the project, if they provide unique functionality.
 - Projects with no tags/tarballs which lack traction, may be frozen until a suitable release is made. Tagging releases is an indicator for good release engineering practices.
@@ -30,12 +30,12 @@ This policy sets forth the criteria for a package to be accepted for inclusion i
   - The software has significant traction (i.e. prerelease)
   - A bug fix only exists beyond the latest stable release for a git source
 
-### Stack Complexity
+### Stack complexity
 
 - Certain requests may tick all the boxes, but introduce a level of complexity or require a level of engagement not possible to balance for Solus Staff. Under certain situations, a request will be frozen until it has a dedicated maintainer.
 - This extends to requests for full desktop environments. However, this does not extend to minor components like drop-in window managers or panels separate of a dependent stack (i.e. Awesome WM, tint2, etc.)
 
-### Value Add
+### Value-add
 
 - A web wrapper which **adds value**, such as Discord, with the global push-to-talk shortcut, is eligible for inclusion.
 - A web page wrapper, that adds **no further value** other than “convenient desktop shortcut” or “tray icon”, are **not** eligible for inclusion. Web browsers already support desktop notifications.

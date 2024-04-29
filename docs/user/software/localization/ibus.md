@@ -7,7 +7,7 @@ summary: Configuration of additional languages via IBUS
 
 ## Configuration
 
-Find the IME (Input Method Editor) you require from the [IBus IME Package List](#ibus-ime-package-list) and then search for it in the Software Center. Click "Install" to add the IME.
+Find the IME (Input Method Editor) you require from the [IBus IME package list](#ibus-ime-package-list) and then search for it in the Software Center. Click "Install" to add the IME.
 
 ![IBus IME Install](./ibus/ibus-ime-install.jpg)
 
@@ -23,17 +23,17 @@ Additionally, once you have added the IME and have it selected in the Region & L
 
 ![IBus IME Settings Example: Hangul](./ibus/ibus-ime-settings-hangul.jpg)
 
-## IBus IME Package List
+## IBus IME package list
 
 A list of IBus IME packages available in the Solus software repository.
 
-| Package      | Input Method                                        |
-| ------------ | --------------------------------------------------- |
-| Anthy        | Japanese                                            |
-| ibus-chewing | Phonetic Chinese input method for Zhuyin (Bopomofo) |
-| ibus-hangul  | Korean                                              |
-| ibus-m17n    | Multiple Languages                                  |
-| ibus-unikey  | Vietnamese                                          |
-| Pinyin       | Chinese Pinyin and Bopomofo                         |
-| Zhuyin       | Chinese Zhuyin                                      |
-| Quick        | Simplified Cangjie                                  |
+| Package        | Input Method                                        |
+| -------------- | --------------------------------------------------- |
+| ibus-anthy     | Japanese                                            |
+| ibus-chewing   | Phonetic Chinese input method for Zhuyin (Bopomofo) |
+| ibus-hangul    | Korean                                              |
+| ibus-m17n      | Multiple Languages                                  |
+| ibus-unikey    | Vietnamese                                          |
+| ibus-libpinyin | Chinese Pinyin and Bopomofo                         |
+| ibus-libzhuyin | Chinese Zhuyin                                      |
+| ibus-cangjie   | Simplified Cangjie                                  |

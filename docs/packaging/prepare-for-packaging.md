@@ -88,11 +88,11 @@ To update solbuild, run:
 sudo solbuild update
 ```
 
-## Fork the getsolus/packages Repository
+## Fork the getsolus/packages repository
 
 Create your own fork of [getsolus/packages](https://github.com/getsolus/packages) using the GitHub web UI or [`gh` cli tool](https://cli.github.com/manual/gh_repo_fork) from the `github-cli` package. It will be forked to `github.com/yourgithubaccount/packages`.
 
-## Clone Your forked package repository
+## Clone your forked package repository
 
 Create a local clone of the package repository you just forked. Here we are using the name `solus-packages` and cloning it into our home directoy. The rest of the documentation will presume this structure. You can choose a different name and path but will have to make sure to replace it in every command that refers to the `solus-packages` directory.
 
@@ -114,7 +114,7 @@ go-task -d ~/solus-packages init
 
 This makes it easy to create commits in the correct format, and will warn you about issues with changes you commit.
 
-## Set up repository helper functions (Optional)
+## Set up repository helper functions (optional)
 
 The helper functions are a collection of shell scripts that help you navigate the packages repository more quickly, and perform some specialized searches.
 
@@ -147,14 +147,14 @@ ln -s ~/solus-packages/common/Scripts/helpers.zsh ~/.zshrc.d/solus-monorepo-help
 
 You should now have the following available from your shell:
 
-| Function          | Description                                                                                                                                   | Usage                          |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| **cpesearch**     | Search for CPE Names for packages. For use when writing the [`monitoring.yml`](/docs/packaging/monitoring.yml.md) file for a package          | `cpesearch search-term`        |
-| **goroot**        | When in the Solus packages repository, change directory to the root directory.                                                     | `goroot`                       |
-| **gotopkg**       | Change directory to any Solus package. You can type part of the package name then double press `Tab` to get autocompletion for this function. | `gotopkg firefox`              |
-| **gotosoluspkgs** | Change directory to the Solus packages repository from anywhere on the filesystem.                                                                       | `gotosoluspkgs`                |
+| Function          | Description                                                                                                                                   | Usage                         |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
+| **cpesearch**     | Search for CPE Names for packages. For use when writing the [`monitoring.yml`](/docs/packaging/monitoring.yml.md) file for a package          | `cpesearch search-term`       |
+| **goroot**        | When in the Solus packages repository, change directory to the root directory.                                                                | `goroot`                      |
+| **gotopkg**       | Change directory to any Solus package. You can type part of the package name then double press `Tab` to get autocompletion for this function. | `gotopkg firefox`             |
+| **gotosoluspkgs** | Change directory to the Solus packages repository from anywhere on the filesystem.                                                            | `gotosoluspkgs`               |
 | **whatprovides**  | Find out what package provides a library by reading the `abi_libs` files.                                                                     | `whatprovides libfoobar.so.1` |
-| **whatuses**      | Find out what packages use a library by reading the `abi_used_libs` files.                                                                    | `whatuses libfoobar.so.1`      |
+| **whatuses**      | Find out what packages use a library by reading the `abi_used_libs` files.                                                                    | `whatuses libfoobar.so.1`     |
 
 ## Building packages
 

@@ -5,4 +5,4 @@ summary: Configuration of sound systems on Solus
 
 # Sound
 
-Solus comes with Pipewire configured by default.
+Solus comes with PipeWire configured by default.

@@ -33,7 +33,7 @@ To run database recovery, run `sudo eopkg rdb` in the terminal and then updates 
 
 ### Broken UI with Chromium applications
 
-There is an [upstream bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1442633) with Chromium that causes it to try to use an invalid shader cache instead of rebuilding it, crashing the GPU process. The issue is now fixed in Chromium, but it may take some time for applications to update their Chromium version.
+There is an [upstream bug](https://issues.chromium.org/issues/40267041) with Chromium that causes it to try to use an invalid shader cache instead of rebuilding it, crashing the GPU process. The issue is now fixed in Chromium, but it may take some time for applications to update their Chromium version.
 
 To fix applications exhibiting this problem, run these commands to remove the shader cache:
 
@@ -52,7 +52,7 @@ And restart the application.
 
 If booting into the previous kernel doesn't solve the issue, there may be an issue with the package updates. It is possible to [revert the updates](/docs/user/package-management/history-and-rollback) (this would also confirm that the issue is in the selected updates).
 
-## Boot Failure
+## Boot failure
 
 If Solus partially boots, you can generally get to a TTY using `Ctrl+Alt+F2` to login and be able to run commands just like using a terminal. This enables you to run some commands to identify or resolve the issue.
 

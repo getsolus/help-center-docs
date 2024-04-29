@@ -13,8 +13,8 @@ Our guidelines apply to all services offered or used by the project, in addition
 
 The guidelines laid out in this section apply to all services offered or used by the project, such as (but not limited to):
 
-- Our Development Tracker
-- Any and all forums or organized communities, e.g. our Forums or sub-reddit
+- Our package issue tracker
+- Any and all forums or organized communities, e.g. our Flarum forums or subreddit
 - Matrix, IRC, or any other officially supported means of communicating with the project and community members in real-time
 - Postings to social media pages / properties owned or used by the project.
 

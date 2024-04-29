@@ -5,13 +5,13 @@ summary: History and Software Rollback
 
 # History and Software Rollback
 
-Solus provides a history and rollback feature via its package manager, eopkg. This feature allows you to see when your repository was last updated, actions such as installation, removal, and upgrading of software.
+Solus provides a history and rollback feature via its package manager, `eopkg`. This feature allows you to see when your repository was last updated, actions such as installation, removal, and upgrading of software.
 
 Our rollback feature allows you to essentially rewind your system's software back to a previous state, assuming you or our repository has the versions in question.
 
 ## History
 
-You can see the history from eopkg by using:
+You can see the history from `eopkg` by using:
 
 ```bash
 eopkg history

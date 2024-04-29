@@ -5,9 +5,9 @@ summary: Help for configuring MATE Desktop on Solus
 
 # Configuration
 
-# System
+## System
 
-## Date and Time
+### Date and time
 
 Using MATE, there are a couple of different ways to change the date and time. You can right click on the time in the bottom panel and click on "Preferences".
 
@@ -27,7 +27,7 @@ Alternatively, if you wish to change your timezone, open the Brisk Menu and then
 
 ![MATE Timezone Settings](configuration/mate-time-and-date-settings.jpg)
 
-## Default Applications
+### Default applications
 
 Using MATE, open the Brisk Menu and click on "Preferences" and then on "Preferred Applications".
 
@@ -59,7 +59,7 @@ Click "Apply" once you are happy with your changes. If you would like to apply t
 
 ![MATE Confirm Monitor Preferences](configuration/mate-monitor-preferences-confirm.jpg)
 
-## Keyboard Layout
+## Keyboard layout
 
 To change your keyboard layout in MATE, open the Brisk Menu and click on "Preferences" and then on "Keyboard". This will open the Keyboard Preferences window, now click on the "Layouts" tab.
 
@@ -103,7 +103,7 @@ Or by left clicking on the keyboard layout icon shown in the system tray and sel
 
 ![MATE Bottom Panel IBus](configuration/mate-bottom-panel-ibus-left-click.jpg)
 
-## Mouse and Touchpad
+## Mouse and touchpad
 
 With MATE, open the Brisk Menu and click on "Preferences" and then on "Mouse". You can toggle between the mouse and touchpad settings using the tabs at the top of the Mouse Preferences window. Click "Close" once you have finished making changes.
 
@@ -137,7 +137,7 @@ For touchpads, you can set:
 
 With MATE, you can manage your network settings by left or right clicking on the network icon in the bottom panel system tray. A left click will bring up any wireless or wired connections currently available whilst a right click allows you to disable networking, view your current connection information and to create new connections and networks by clicking "Edit Connections...".
 
-### Non-Hidden Network
+### Non-hidden network
 
 To connect to a network, left click on the network icon in the system tray. This will show you a selection of the networks currently available and you may need to click on "More networks" to find the one you want.
 
@@ -153,7 +153,7 @@ Should you wish to disconnect from a network, left click on the network icon aga
 
 ![MATE Disconnect from Network](configuration/mate-network-disconnect.jpg)
 
-### Hidden Network
+### Hidden network
 
 To connect to a hidden network, left click on the network icon in the system tray and then on "Connect to Hidden Wi-Fi Network...". You will now be asked for the network name and type of security (if any).
 
@@ -161,7 +161,7 @@ To connect to a hidden network, left click on the network icon in the system tra
 
 If the network is found and has a password, you will be prompted to authenticate with the network.
 
-## Sound and Sound Devices
+## Sound and sound devices
 
 To alter the volume in MATE, left click on the speaker icon in the bottom panel system tray and then drag the volume slider with your mouse.
 
@@ -183,7 +183,7 @@ To add and remove users with MATE, open the Brisk Menu and click on "Administrat
 
 ![MATE Users and Groups](configuration/mate-single-user-settings.jpg)
 
-### Adding a User
+### Adding a user
 
 To add a user, click the "+ Add" button underneath the list of users. You will be asked to input your password before you can make changes.
 
@@ -191,7 +191,7 @@ To add a user, click the "+ Add" button underneath the list of users. You will b
 
 Fill in the required items and then finish adding the new user by clicking "OK" in the bottom right corner.
 
-### Removing a User
+### Removing a user
 
 To remove a user, open the User Settings window and then click on the user you wish to remove. Now click on the "- Delete" button underneath the list of users.
 
@@ -201,9 +201,9 @@ Upon clicking to remove the user, you will be given the option to keep their fil
 
 ![MATE Keep Files Prompt](configuration/mate-keep-files-prompt.jpg)
 
-# User Interface
+## User interface
 
-## Desktop Background
+### Desktop background
 
 If you wish to change the MATE desktop background, simply right click anywhere on the desktop and select "Change Desktop Background".
 
@@ -215,7 +215,7 @@ In this section, you can choose between Solus wallpapers, solid colors, gradient
 
 ![MATE Desktop Background Selection](configuration/mate-background-selection.jpg)
 
-## Desktop Icons
+### Desktop icons
 
 MATE has desktop icons enabled by default. If you wish to disable or re-enable them, open the Brisk Menu, click on "Preferences" and then on "MATE Tweak". You can then toggle them on and off by clicking "Show Desktop Icons" under the Desktop section.
 
@@ -249,7 +249,7 @@ You should now be able to see 4 slightly darker boxes to the left of your MATE s
 
 In addition to using keyboard shortcuts, you will now be able to switch workspaces by clicking on them in the bottom panel. You can also drag one workspace onto another in the bottom panel which will move the current active application to the new workspace.
 
-### Keyboard Shortcuts
+### Keyboard shortcuts
 
 MATE provides a variety of keyboard shortcuts for workspaces. By default, the keyboard shortcuts for switching directly to a certain workspace are disabled.
 
@@ -257,7 +257,7 @@ To enable these and to also view all other available shortcuts open the Brisk Me
 
 ![MATE Workspace Keyboard Shortcuts](configuration/mate-workspace-keyboard-shortcuts.jpg)
 
-### Workspaces Configuration
+### Workspaces configuration
 
 By default, MATE provides you with 4 workspaces. If you would like to have more, less or change their names you must first add the Workspace Switcher to your bottom panel, as detailed above. You'll then be able to right click on the Workspace Switcher and select "Preferences".
 

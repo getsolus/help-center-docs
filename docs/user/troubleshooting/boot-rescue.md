@@ -15,7 +15,7 @@ The inability to boot Solus can be attributed to various issues, such as:
 
 NOTE: Most examples below use sdX as the drive name. If your system has nvme drives, substitute the appropriate name, for example "nvme0n1".
 
-## Multi-Booting
+## Multi-booting
 
 Multi-booting is when you have multiple operating systems on the same device. Also referred to as "dual-booting" when only having two operating systems on the same device.
 
@@ -29,7 +29,7 @@ If you get to an emergency prompt when the system tries to boot, check /etc/fsta
 UUID=XXXXXX  /mnt/mydisk  exfat noauto,uid=1000,gid=1000,umask=0022  0  0
 ```
 
-## Incorrectly Applied Updates / Disk Changes
+## Incorrectly applied updates / disk changes
 
 In the case that updates have not been applied correctly by the system, the updates were interrupted, or the disks have changed, it may be possible to boot rescue the Solus system. To do so, you will need:
 
@@ -46,7 +46,7 @@ Whether you're using GRUB or UEFI, you will need to mount your Solus root (`/`) 
    Note: If you see "lvm" as the type, the system has LVM partitions. See the next section for how to mount them.
 4. If your root partition is of type sdX / nvme0n1x, replace the "sdX#" in the following command with the partition and mount to the target directory we created: `mount /dev/sdX# /target`
 
-#### Encrypted Systems / LVM Systems
+#### Encrypted systems / LVM systems
 
 If you use LVM volumes on your system, the process for mounting the system is a little different.
 If you use LUKS-based encryption, the process will involve decrypting your LUKS partition before mounting it to the correct location. To do this, note the sda / sdb device from the prior steps and follow the steps below:
@@ -158,7 +158,7 @@ ln -s ../run/systemd/resolve/stub-resolv.conf /target/etc/resolv.conf
 3. Chroot back into `/target` by running `chroot /target` again.
 4. Retry networking.
 
-### Repairing Packages
+### Repairing packages
 
 In the event you had an incomplete upgrade, try the following commands:
 
@@ -175,7 +175,7 @@ In the event that disk changes had caused the system to fail to boot, try the fo
 1. Get the UUIDs of your partitions the system expects from `/etc/fstab`.
 2. Compare this to the output of `ls -lah /dev/disk/by-uuid`
 
-### Re-run System-Wide Configuration Triggers
+### Re-run system-wide configuration triggers
 
 In the chroot environment, run the following command which will perform various configuration triggers to update your icon cache, update GRUB and EFI configuration, re-compile settings, and more.
 
@@ -183,7 +183,7 @@ In the chroot environment, run the following command which will perform various 
 sudo usysconf run -f
 ```
 
-### Regenerate UEFI Boot Entries
+### Regenerate UEFI boot entries
 
 Run the following command, which will update the boot entries for your EFI menu:
 

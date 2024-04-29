@@ -13,11 +13,11 @@ Always make sure your development environment and system are up to date before b
 3. Update the solbuild base image `sudo solbuild update`
 4. Update the system.
 
-## Update Your Fork of the getsolus/packages Repository
+## Update your fork of the getsolus/packages repository
 
 If you already have a fork of [getsolus/packages](https://github.com/getsolus/packages) in GitHub, log into GitHub. Make sure you're looking at the `main` branch. Check to see that your fork is up to date with the main repository it was forked from. If your fork indicates it is behind, use the "Sync fork" button to bring it up to date.
 
-## Update Your Local Clone of Your Fork
+## Update your local clone of your fork
 
 If you already have a local clone, you need to bring it up to date. To do so run:
 
@@ -27,7 +27,7 @@ git switch main
 git pull
 ```
 
-## Update `solbuild` and the System
+## Update `solbuild` and the system
 
 ```bash
 sudo solbuild update

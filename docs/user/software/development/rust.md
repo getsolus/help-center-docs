@@ -20,4 +20,4 @@ The `rust` package, in fact, is present in the Solus repository for building pac
 
 Either way, it is also recommended to install our `system.devel` component, which is typically required for compiling. See our documentation for it [here](/docs/user/software/development).
 
-As a final note, it is possible to [configure](https://rust-lang.github.io/rustup/installation/package-managers.html) `rustup` to use the system toolchain. This setup is **discouraged** unless aimed at developing applications targeting Solus itself.
+As a final note, it is possible to [configure](https://rust-lang.github.io/rustup/installation/already-installed-rust.html) `rustup` to use the system toolchain. This setup is **discouraged** unless aimed at developing applications targeting Solus itself.
