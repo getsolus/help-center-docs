@@ -53,7 +53,7 @@ If it returns a result, then success! The synaptics driver is in use instead of 
 
 If you wish to switch back to using libinput:
 
-```
+```bash
 sudo rm /etc/X11/xorg.conf.d/90-synaptics.conf
 sudo eopkg rm xorg-driver-input-synaptics
 ```

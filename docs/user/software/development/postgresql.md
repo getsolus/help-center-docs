@@ -11,13 +11,13 @@ summary: A quick guide to using Postgres on Solus
 
 PostgreSQL can be installed either from the Software Center or via terminal:
 
-```
+```bash
 sudo eopkg install postgresql
 ```
 
 Management of the server can be done using Systemd:
 
-```
+```bash
 sudo systemctl enable postgresql # Start the server on boot
 sudo systemctl start postgresql  # Start the server now
 sudo systemctl stop postgresql   # Stop the server
@@ -25,7 +25,7 @@ sudo systemctl stop postgresql   # Stop the server
 
 It is possible to connect to the database using the PostgreSQL user:
 
-```
+```bash
 sudo -u postgres psql
 ```
 
@@ -37,20 +37,20 @@ Because PostgreSQL is included as a single package, the only way to perform a ma
 
 1.  If you have already updated PostgreSQL, downgrade PostgreSQL back to 15.4:
 
-```
+```bash
 sudo eopkg it https://cdn.getsol.us/repo/shannon/p/postgresql/postgresql-15.4-42-1-x86_64.eopkg \
               https://cdn.getsol.us/repo/shannon/p/postgresql/postgresql-libpq-15.4-42-1-x86_64.eopkg
 ```
 
 2.  (Re)start PostgreSQL:
 
-```
+```bash
 sudo systemctl restart postgresql
 ```
 
 3.  Create a backup of all current data:
 
-```
+```bash
 sudo -u postgres pg_dumpall -f /tmp/backup.sql
 ```
 
@@ -58,38 +58,38 @@ The location of the backup may be one of your choosing, but keep in mind that th
 
 4.  Stop PostgreSQL:
 
-```
+```bash
 sudo systemctl stop postgresql
 ```
 
 5.  Rename the old data directory. This directory contains the old configuration and the original database, but requires significant disk space.
 
-```
+```bash
 sudo mv /var/db/pgsql/data /var/db/pgsql/data.old
 ```
 
 6.  Create a new data directory:
 
-```
+```bash
 sudo mkdir /var/db/pgsql/data
 sudo chown postgres: /var/db/pgsql/data
 ```
 
 7.  Upgrade PostgreSQL:
 
-```
+```bash
 sudo eopkg upgrade
 ```
 
 8.  Start PostgreSQL:
 
-```
+```bash
 sudo systemctl start postgresql
 ```
 
 9.  Restore the data:
 
-```
+```bash
 sudo -u postgres psql < /tmp/backup.sql
 ```
 
@@ -99,6 +99,6 @@ sudo -u postgres psql < /tmp/backup.sql
 
 12. Remove the backup and data dump:
 
-```
+```bash
 sudo rm -r /var/db/pgsql/data.old /tmp/backup.sql
 ```

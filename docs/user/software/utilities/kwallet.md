@@ -31,7 +31,7 @@ The contents of `~/.config/autostart/ssh-add.desktop` should reflect the SSH key
 
 Below is an example of the contents of `~/.config/autostart/ssh-add.desktop`:
 
-```
+```ini
 [Desktop Entry]
 Exec=ssh-add -q
 Name=ssh-add
@@ -40,7 +40,7 @@ Type=Application
 
 Tip: The above ssh-add.desktop file will only add the default key `~/.ssh/id_rsa`. Assuming you have different keys named key1, key2 etc you need to change the above desktop file to
 
-```
+```ini
 [Desktop Entry]
 Exec=ssh-add -q ~/.ssh/key1 ~/.ssh/key2 ~/.ssh/key3
 Name=ssh-add
@@ -51,7 +51,7 @@ Type=Application
 
 After you created your file inside the autostart folder you have to give it the correct permissions
 
-```
+```bash
 chmod 700 ~/.config/autostart/ssh-add.desktop
 ```
 
@@ -71,6 +71,6 @@ For this to work, your KDE Wallet password needs to be identical to your login p
 
 ssh key doesn't get triggered, you can force this manually by running this command.
 
-```
+```bash
 SSH_ASKPASS=/usr/bin/ksshaskpass ssh-add < /dev/null
 ```
