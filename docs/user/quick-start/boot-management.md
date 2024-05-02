@@ -21,7 +21,7 @@ By default, EFI installs will not show the boot menu and boot directly into Solu
 
 The following command will set the timeout of the boot loader to five seconds so that it appears by default:
 
-```
+```bash
 sudo clr-boot-manager set-timeout 5 && sudo clr-boot-manager update
 ```
 
@@ -29,7 +29,7 @@ sudo clr-boot-manager set-timeout 5 && sudo clr-boot-manager update
 
 Kernel parameters can be appended to boot via creating a file for `clr-boot-manager` to use when updating kernels. For example, to add `nomodeset` to boot options, you would create a file in `/etc/kernel/cmdline.d` (as sudo):
 
-```
+```bash
 sudo mkdir -p /etc/kernel/cmdline.d
 echo 'nomodeset' | sudo tee /etc/kernel/cmdline.d/40_nomodeset.conf
 ```

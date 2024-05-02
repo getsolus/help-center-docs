@@ -46,7 +46,7 @@ sudo eopkg install -c desktop.mate
 
 Solus offers the XFCE desktop environment for users preferring a more lightweight experience. It is recommended for existing MATE users. You can install XFCE with the following command:
 
-```
+```bash
 # Do NOT attempt to do this if you are running the KDE Plasma Desktop version of Solus!
 sudo eopkg install -c desktop.xfce
 ```

@@ -257,7 +257,7 @@ In the _smbd_ manual page (`man 8 smbd`), it is shown how the compiled-in defaul
 
 To use the traditional `/etc/samba/smb.conf` configuration file exclusively (thus bypassing the Solus configuration), edit the `/etc/sysconfig/samba` file to look like so:
 
-```bash
+```ini
 ## Path:           Network/Samba
 ## Description:    Samba process options
 ## Type:           string
