@@ -157,7 +157,7 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 | **%patch**                    | Sane patch macro to run in batch mode and not contaminate source tree on failure.                                           |
 | **%apply_patches**            | Applies all patches listed in the `series` file in `./files` folder.                                                        |
 | **%reconfigure**              | Updates build scripts such as `./configure` and proceeds to run `%configure`.                                               |
-| **%symlink_check**            | Installed symlinks are checked; if a broken symlink is found the build will fail. Must run after install macros             |
+| **%symlink_check**            | Checks for broken symlinks in the install directory and aborts the build if any are found. Must run after install macros.             |
 
 ### Haskell actionable macros
 
