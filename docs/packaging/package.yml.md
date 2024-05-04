@@ -76,6 +76,12 @@ Not all fields in `package.yml` are mandatory, but a small selection are. Below 
   - If the file resulting from the source download needs to be renamed (often to avoid a name that would conflict with another source), add the preferred name to the URL as a URI fragment.
   - Example: `https://github.com/docker/cli/archive/refs/tags/v25.0.3.tar.gz#docker-cli.tar.gz : 04ad0cea992a65db20cb1b0dbf6d1ce32c705ce879de51b22095fe8d28030815`
   - This renames the downloaded file from `v25.0.3.tar.gz` to `docker-cli.tar.gz`.
+- SourceForge sources
+  - A proper SourceForge source looks like this, using `hplip` as an example: `https://sourceforge.net/projects/hplip/files/hplip/3.23.12/hplip-3.23.12.tar.gz`
+    - This URL begins with `https://sourceforge.net/`, not `https://downloads.sourceforge.net/`, or some other mirror.
+    - This URL has a path beginning with `/projects/$project_name/`
+    - This URL does *not* have a trailing `/download`, you may have to remove this by hand.
+  - The correct SourceForge tarball URLs are found under the "Files" tab, then often within a directory, when starting from a project homepage on SourceForge.
 
 ### Optional, supported keys
 
