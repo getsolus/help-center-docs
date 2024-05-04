@@ -151,17 +151,19 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 
 ### Actionable macros
 
-| Macro              | Description                                                                                                                 |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------- |
-| **%autogen**       | Runs autogen with our `%CONFOPTS%` to create a configure script then proceeds to run `%configure`.                          |
-| **%cmake**         | Configures a cmake project with the distribution specific options, such as prefix and release type.                         |
-| **%cmake_ninja**   | Configures a cmake project with ninja so it can be used with `%ninja_build`, `%ninja_install` and `%ninja_check` macros.    |
-| **%configure**     | Runs `./configure` with our `%CONFOPTS%` variable macro.                                                                    |
-| **%make**          | Runs the `make` command with the job count specified in `eopkg.conf`. ([More info](advanced-config/eopkg-configuration.md)) |
-| **%make_install**  | Performs a `make install`, using the `DESTDIR` variant. Should work for the vast majority of packages.                      |
-| **%patch**         | Sane patch macro to run in batch mode and not contaminate source tree on failure.                                           |
-| **%apply_patches** | Applies all patches listed in the `series` file in `./files` folder.                                                        |
-| **%reconfigure**   | Updates build scripts such as `./configure` and proceeds to run `%configure`.                                               |
+| Macro                         | Description                                                                                                                               |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| **%autogen**                  | Runs autogen with our `%CONFOPTS%` to create a configure script then proceeds to run `%configure`.                                        |
+| **%cmake**                    | Configures a CMake project with the distribution specific options, such as prefix and release type.                                       |
+| **%cmake_ninja**              | Configures a CMake project with ninja so it can be used with `%ninja_build`, `%ninja_install` and `%ninja_check` macros.                  |
+| **%configure**                | Runs `./configure` with our `%CONFOPTS%` variable macro.                                                                                  |
+| **%configure_no_runstatedir** | Runs `%configure` without the `--runstatedir` option. Use if you encounter `configure: error: unrecognized option: '--runstatedir=/run'`. |
+| **%make**                     | Runs the `make` command with the job count specified in `eopkg.conf` ([more info](advanced-config/eopkg-configuration.md)).               |
+| **%make_install**             | Performs a `make install`, using the `DESTDIR` variant. Should work for the vast majority of packages.                                    |
+| **%patch**                    | Sane patch macro to run in batch mode and not contaminate source tree on failure.                                                         |
+| **%apply_patches**            | Applies all patches listed in the `series` file in `./files` folder.                                                                      |
+| **%reconfigure**              | Updates build scripts such as `./configure` and proceeds to run `%configure`.                                                             |
+| **%symlink_check**            | Checks for broken symlinks in the install directory and aborts the build if any are found. Must run after install macros.                 |
 
 ### Haskell actionable macros
 
