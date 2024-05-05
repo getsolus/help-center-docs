@@ -48,7 +48,7 @@ Make Harvey do it instead
 If your build fails immediately this  message, and you are using a **git source**, you should clear the `solbuild` git sources cache:
 
 ```bash
-sudo rm -rf /var/lib/solbuild/sources
+sudo rm -rf /var/lib/solbuild/sources/git
 ```
 
 ### "mount: /var/lib/solbuild/roots/unstable-x86_64: WARNING: source write-protected, mounted read-only"
