@@ -25,7 +25,7 @@ Send the output of `solbuild` to a public Gist:
 go-task &| gh gist create --public
 ```
 
-*Note: the usual `solbuild`` output will not be shown when this command is running, and it will take at least a few seconds*
+*Note: the usual `solbuild` output will not be shown when this command is running, and it will take at least a few seconds*
 
 Send the output of `solbuild` to a new `output.txt` file:
 
