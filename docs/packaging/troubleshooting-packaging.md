@@ -61,7 +61,7 @@ sudo umount -f /var/lib/solbuild/roots/unstable-x86_64
 
 ### Solbuild is eating up all my disk space
 
-The `solbuild` cache at `/var/cache/solbuild` and can grow to tens of gigabytes easily. Recover that disk space by running the "delete cache (`dc`) command":
+The `solbuild` cache at `/var/cache/solbuild` can grow to tens of gigabytes easily. Recover that disk space by running the "delete cache (`dc`)" command:
 
 ```bash
 sudo solbuild dc
