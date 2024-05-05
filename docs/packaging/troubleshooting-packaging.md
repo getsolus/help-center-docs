@@ -45,7 +45,7 @@ Make Harvey do it instead
 
 ### "Failed to build packages err="Failed to fetch source https://github.com/project/blah.git#{commit ref here}, reason: exit status 1\n"
 
-If your build fails immediately this  message, and your are using a **git source**, you should clear the `solbuild` git sources cache:
+If your build fails immediately this  message, and you are using a **git source**, you should clear the `solbuild` git sources cache:
 
 ```bash
 sudo rm -rf /var/lib/solbuild/sources
