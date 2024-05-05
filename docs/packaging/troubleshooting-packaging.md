@@ -9,7 +9,7 @@ This page covers common packaging issues and how to fix them. We also show you h
 
 ## Asking for help
 
-When you run into a problem that you don't know how to fix you should ask for help in the [Solus Packaging matrix room](/user/contributing/getting-involved.md#matrix-chat). But first you should send the `package.yml` file and `solbuild` output to somewhere others can see it; we recommend you use [GitHub Gists](https://gist.github.com/). These commands assume you have set up `github-cli`.
+When you run into a problem that you don't know how to fix you should ask for help in the [Solus Packaging Matrix room](/user/contributing/getting-involved.md#matrix-chat). But first you should send the `package.yml` file and `solbuild` output to somewhere others can see it; we recommend you use [GitHub Gists](https://gist.github.com/). These commands assume you have set up `github-cli`.
 
 If you would rather not use Gists, use a pastebin site like [bpaste](https://bpa.st/)
 
