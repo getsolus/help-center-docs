@@ -25,7 +25,7 @@ Send the output of `solbuild` to a public Gist:
 go-task &| gh gist create --public
 ```
 
-*Note: the usual `solbuild` output will not be shown when this command is running, and it will take at least a few seconds*
+_Note: the usual `solbuild` output will not be shown when this command is running, and it will take at least a few seconds_
 
 Send the output of `solbuild` to a new `output.txt` file:
 
@@ -37,15 +37,11 @@ go-task &| tee output.txt
 
 ### "Error downloading https://github.com/project/blah/1.2.3.tar.gz: checksum mismatch"
 
-Your `source` tarball does not match the checksum next to it in `package.yml`. You should  use `go-task new` or `go-task update` to write the correct checksum automatically.
-
-###  ffmpeg-chromium won't compile
-
-Make Harvey do it instead
+Your `source` tarball does not match the checksum next to it in `package.yml`. You should use `go-task new` or `go-task update` to write the correct checksum automatically.
 
 ### "Failed to build packages err="Failed to fetch source https://github.com/project/blah.git#{commit ref here}, reason: exit status 1\n"
 
-If your build fails immediately this  message, and you are using a **git source**, you should clear the `solbuild` git sources cache:
+If your build fails immediately this message, and you are using a **git source**, you should clear the `solbuild` git sources cache:
 
 ```bash
 sudo rm -rf /var/lib/solbuild/sources/git
@@ -56,7 +52,7 @@ sudo rm -rf /var/lib/solbuild/sources/git
 If you interrupt a build sometimes `solbuild` does not unmount cleanly, and you will need to unmount manually:
 
 ```bash
-sudo umount -f /var/lib/solbuild/roots/unstable-x86_64 
+sudo umount -f /var/lib/solbuild/roots/unstable-x86_64
 ```
 
 ### Solbuild is eating up all my disk space
