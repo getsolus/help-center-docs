@@ -13,6 +13,13 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 ## 2024
 
+### May
+
+#### Add guidance for SourceForge sources in package.yml
+
+- We now require SourceForge sources used in `package.yml` files to follow a specific format.
+- See the [package.yml page](/docs/packaging/package.yml#source-key).
+
 ### February
 
 #### Begin adding `monitoring.yml` to packages
