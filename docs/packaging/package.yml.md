@@ -80,7 +80,7 @@ Not all fields in `package.yml` are mandatory, but a small selection are. Below 
   - A proper SourceForge source looks like this, using `hplip` as an example: `https://sourceforge.net/projects/hplip/files/hplip/3.23.12/hplip-3.23.12.tar.gz`
     - This URL begins with `https://sourceforge.net/`, not `https://downloads.sourceforge.net/`, or some other mirror.
     - This URL has a path beginning with `/projects/$project_name/`
-    - This URL does *not* have a trailing `/download`, you may have to remove this by hand.
+    - This URL does _not_ have a trailing `/download`, you may have to remove this by hand.
   - The correct SourceForge tarball URLs are found under the "Files" tab, then often within a directory, when starting from a project homepage on SourceForge.
 
 ### Optional, supported keys
