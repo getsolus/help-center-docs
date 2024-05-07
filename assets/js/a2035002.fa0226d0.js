@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksolus_help_center=self.webpackChunksolus_help_center||[]).push([[641],{74867:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/x-86-64-v-3","page":1,"postsPerPage":1,"totalPages":1,"totalCount":1,"blogDescription":"The Solus Development (b)log!","blogTitle":"Solus DevLog"}')}}]);

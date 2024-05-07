@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksolus_help_center=self.webpackChunksolus_help_center||[]).push([[8371],{32179:e=>{e.exports=JSON.parse('{"label":"MATE","permalink":"/blog/tags/mate","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);
