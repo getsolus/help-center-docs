@@ -27,6 +27,7 @@ bootloader
 bootup
 bopomofo
 bottlenecked
+bpaste
 brasero
 brlaser
 brsaneconfig
@@ -249,6 +250,7 @@ openrazer
 organised
 packagekit
 packagename
+pastebin
 persson
 perussanasto
 pfifo
@@ -313,6 +315,7 @@ rundeps
 runhaskell
 runpath
 runrecovery
+runstatedir
 rustup
 sambaoptions
 schedtool
