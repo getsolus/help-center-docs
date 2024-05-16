@@ -33,7 +33,7 @@ tasks:
 
 # Run cspell on all .md/mdx docs in the project. Should use project configuration with allow-word list
   spellcheck:
-    desc: Run cspsell on all .md* files
+    desc: Run cspell on all .md* files
     shopt: [globstar]
     cmds:
       - cmd: yarn cspell lint **/*.md*
