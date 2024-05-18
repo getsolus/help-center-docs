@@ -72,7 +72,7 @@ sudo solbuild dc
 
 Try running `go-task solbuild-reset`. This will delete the solbuild cache and profile, then download and initialize a fresh copy of the default unstable profile.
 
-###q Git commands fail and complain about package checks
+### Git commands fail and complain about package checks
 
 ```bash
 git commit --amend
