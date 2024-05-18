@@ -220,8 +220,8 @@ Existing Haskell packages may use the old `cabal_build`, `cabal_install`, `cabal
 | ------------------ | -------------------------------------------------------------------------------- |
 | **%cargo_fetch**   | Runs `cargo fetch --locked` to get dependencies.                                 |
 | **%cargo_build**   | Runs `cargo build` with some additional flags.                                   |
-| **%cargo_install** | Installs the built binary to `/usr/bin/PACKAGE-NAME`, OR to `/usr/bin/ARGUMENT ` |
-| **%cargo_test**    | Runs `cargo test` with some additional flags                                     |
+| **%cargo_install** | Installs the built binary to `/usr/bin/PACKAGE-NAME`, OR to `/usr/bin/ARGUMENT`. |
+| **%cargo_test**    | Runs `cargo test` with some additional flags.                                    |
 
 ### Qt actionable macros
 

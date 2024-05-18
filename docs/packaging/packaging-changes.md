@@ -15,6 +15,11 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 ### May
 
+#### Add Rust macros to package.yml
+
+- We now have macros for building Rust packages. Example: `%cargo_build`. Rust packages should be switched to use the new macros as they are updated.
+- See the "Rust (cargo) actionable macros" section on the [package.yml page](/docs/packaging/package.yml#rust-cargo-actionable-macros).
+
 #### Add guidance for SourceForge sources in package.yml
 
 - We now require SourceForge sources used in `package.yml` files to follow a specific format.
