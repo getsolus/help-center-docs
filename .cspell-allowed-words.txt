@@ -283,6 +283,7 @@ qlen
 qmake
 qmlc
 qosmio
+qqwing
 qsynth
 qtile
 quickstart

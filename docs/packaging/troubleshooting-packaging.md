@@ -63,11 +63,23 @@ The `solbuild` cache at `/var/cache/solbuild` can grow to tens of gigabytes easi
 sudo solbuild dc
 ```
 
-## An old package using `%configure` doesn't build
+### An old package using `%configure` doesn't build
 
 - Replace `%configure` with `%reconfigure` and try again.
 - If `%reconfigure` produces the error `configure: error: unrecognized option: '--runstatedir=/run'`, then use the new `%configure_no_runstatedir` macro
 
-## Something is wrong with my solbuild profile
+### Something is wrong with my solbuild profile
 
 Try running `go-task solbuild-reset`. This will delete the solbuild cache and profile, then download and initialize a fresh copy of the default unstable profile.
+
+###q Git commands fail and complain about package checks
+
+```bash
+git commit --amend
+WRN packages/q/qqwing/package.yml:1: Package release is not incremented by 1
+ERR packages/q/qqwing/pspec_x86_64.xml:1: Package release is not incremented by 1
+Package checks failed: /home/user/solus-packages/common/CI/package_checks.py packages/q/qqwing/package.yml packages/q/qqwing/pspec_x86_64.xml
+```
+
+- Solus uses pre-commit hooks to check for simple errors. Right now, certain `git` commands can fail, particularly `git commit --amend` and `git commit --fixup`
+- You can bypass the pre-commit hooks by adding the `no-verify` option, for example: `git commit --amend --no-verify`. Checks will still be run by GitHub after a Pull Request is created.
