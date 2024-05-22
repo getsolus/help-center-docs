@@ -45,8 +45,15 @@ Every time you run `go-task build-local`, all `eopkg` files in the local reposit
 
 There are some important things to know when working with local repositories, as they may lead to issues later on.
 
-- `solbuild` will use your version of a package from the local repository regardless of whether there's a higher release in the Solus repository. Therefore you should only use `go-task build-local` when required and also remove old packages from the local repository when they are no longer needed.
-- If the package is already installed in the `solbuild` image, the release must be higher for it to be installed.
+- `solbuild` will use your version of a package from the local repository regardless of whether there's a higher release in the Solus repository. Therefore:
+  -  Only use `go-task build-local` when required
+  -  Remove old packages from the local repository when they are no longer needed, and rebuild its index with the following commands
+  ```bash
+  cd /var/lib/solbuild/local
+  sudo rm *.eopkg
+  sudo eopkg index --skip-signing /var/lib/solbuild/local/ --output /var/lib/solbuild/local/eopkg-index.xml
+  ```
+- If a package is already installed in the `solbuild` image, the release must be higher for it to be installed.
 
 ## Installing packages from the local repository index
 
