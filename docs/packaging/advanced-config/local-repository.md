@@ -23,6 +23,8 @@ You will also need to ensure that your repository is fully up to date. See [Upda
 
 ## Using the local repository
 
+The local repository index and any local eopkg files are stored in `/var/lib/solbuild/local/`
+
 ### Copying `.eopkg` files to the local repository
 
 To use your locally built `.eopkg` files as a dependencies for another package, you must copy the regular package file, and any accompanying `-devel` packages to the local repository directory `/var/lib/solbuild/local`.
@@ -35,6 +37,14 @@ To copy all `.eopkg` files within a directory to the local repository, use the f
 sudo cp *.eopkg /var/lib/solbuild/local
 ```
 
+### Listing locally built eopkg files
+
+Use this to list all index and eopkg files in the local repo folder
+
+```bash
+go-task list-local
+```
+
 ### Using the local repository to build a package
 
 With the `.eopkg` files now present in the local repository, you can use them to build a package by running `go-task build-local`, rather than just `go-task`, and `solbuild` will prefer your packages over packages found in the Solus repository.
@@ -45,8 +55,14 @@ Every time you run `go-task build-local`, all `.eopkg` files in the local reposi
 
 There are some important things to know when working with local repositories, as they may lead to issues later on.
 
-- `solbuild` will use your version of a package from the local repository regardless of whether there's a higher release in the Solus repository. Therefore you should only use `go-task build-local` when required and also remove old packages from the local repository when they are no longer needed.
-- If the package is already installed in the `solbuild` image, the release must be higher for it to be installed.
+  - `solbuild` will use your version of a package from the local repository regardless of whether there's a higher release in the Solus repository. Therefore:
+  -  Only use `go-task build-local` when required
+  -  Remove old packages from the local repository when they are no longer needed, and rebuild its index with the following commands (this will remove all locally built eopkgs)
+  ```bash
+  go-task clean-local
+  go-task build-localindex
+  ```
+- If a package is already installed in the `solbuild` image, the release must be higher for it to be installed.
 
 ## Installing packages from the local repository index
 
@@ -59,7 +75,7 @@ This requires an existing local repository index. If you have used the command `
 To generate or refresh the `eopkg` index in `/var/lib/solbuild/local`, use the following command:
 
 ```bash
-sudo eopkg index --skip-signing /var/lib/solbuild/local/ --output /var/lib/solbuild/local/eopkg-index.xml
+go-task build-localindex
 ```
 
 Or, if you have our [helper functions](/docs/packaging/prepare-for-packaging#set-up-repository-helper-functions-optional) set up, you get the same result by running:
