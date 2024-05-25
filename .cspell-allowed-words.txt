@@ -188,6 +188,7 @@ libideviceactivation
 libimobiledevice
 libinput
 libjpeg
+libpinyin
 libsharpyuv
 libspeex
 libspeexdsp
@@ -203,6 +204,7 @@ libwebpdecoder
 libwebpdemux
 libwebpmux
 libz
+libzhuyin
 lifebook
 livingsilver
 localrepo

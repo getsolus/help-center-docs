@@ -31,7 +31,7 @@ tasks:
       - sort -o $TARGET $TARGET
       - awk -i inplace '!seen[$0]++' $TARGET
 
-# Run cspell on all .md/mdx docs in the project. Should use project configuration with allow-word list
+  # Run cspell on all .md/mdx docs in the project. Should use project configuration with allow-word list
   spellcheck:
     desc: Run cspell on all .md* files
     shopt: [globstar]
