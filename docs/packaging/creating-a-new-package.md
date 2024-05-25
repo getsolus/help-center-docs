@@ -173,6 +173,7 @@ There should be a summary line (with the package name), a blank line, and then t
 
 - There should at the minimum be a Summary.
 - Bullet point lists should start with a dash.
+- Link the package request using a `Resolves` line.
 
 Here is an example in our standard format:
 
@@ -182,11 +183,14 @@ tree: Add at v2.1.1
 **Summary**
 
 Add the tree package, which recursively lists directories in a tree like manner.
+
+Resolves getsolus/packages#issuenumber
 ```
+
+Where `issuenumber` is the issue number of the package request.
 
 For more information on suitable commit messages, please check the [tooling central documentation](https://github.com/solus-project/tooling-central/blob/master/README.rst#using-git).
 
-- If you want to link this pull request to an existing package request, simply mention it in your commit message (use the full URL): `The inclusion of <somepackage> resolves https://github.com/getsolus/packages/issues/123`
-- If you need a change to depend on another change, mention it in the commit message too (use the full URL): `Depends on https://github.com/getsolus/packages/issues/234`
+If you need a change to depend on another change, mention it in the commit message too (use the full URL): `Depends on https://github.com/getsolus/packages/issues/234`
 
 Next, you'll [submit a pull request for review](submitting-a-pull-request.mdx).
