@@ -166,12 +166,16 @@ git commit
 
 ### Commit message format for new packages
 
+`git commit` on [an initialized repository](prepare-for-packaging.md#initialize-git-hooks) will automatically open your editor with the correct template.
+Note that lines starting with a `#` will be ignored by Git and do not need to be removed.
+
 There should be a summary line (with the package name), a blank line, and then the rest of the commit message.
 
-- There should at the minimum be a Summary and Test Plan.
+- There should at the minimum be a Summary.
 - Bullet point lists should start with a dash.
+- Link the package request using a `Resolves` line.
 
-Here is an example in our standard format (make sure to check the box in the checklist):
+Here is an example in our standard format:
 
 ```
 tree: Add at v2.1.1
@@ -180,20 +184,13 @@ tree: Add at v2.1.1
 
 Add the tree package, which recursively lists directories in a tree like manner.
 
-**Test Plan**
-
-- Launched the application
-- Exercised the UI
-- Exercised some feature
-
-**Checklist**
-
-- [] Package was built and tested against unstable
+Resolves getsolus/packages#issuenumber
 ```
+
+Where `issuenumber` is the issue number of the package request.
 
 For more information on suitable commit messages, please check the [tooling central documentation](https://github.com/solus-project/tooling-central/blob/master/README.rst#using-git).
 
-- If you want to link this pull request to an existing package request, simply mention it in your commit message (use the full URL): `The inclusion of <somepackage> resolves https://github.com/getsolus/packages/issues/123`
-- If you need a change to depend on another change, mention it in the commit message too (use the full URL): `Depends on https://github.com/getsolus/packages/issues/234`
+If you need a change to depend on another change, mention it in the commit message too (use the full URL): `Depends on https://github.com/getsolus/packages/issues/234`
 
 Next, you'll [submit a pull request for review](submitting-a-pull-request.mdx).

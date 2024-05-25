@@ -15,6 +15,11 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 ### May
 
+#### Remove 'Test Plan' and 'Checklist' from commit messages
+
+- These are no longer needed in commit messages.
+- They must still be included in the pull request description.
+
 #### Add Rust macros to package.yml
 
 - We now have macros for building Rust packages. Example: `%cargo_build`. Rust packages should be switched to use the new macros as they are updated.
