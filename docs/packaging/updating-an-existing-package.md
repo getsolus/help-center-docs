@@ -128,7 +128,6 @@ The following guidelines apply to the commit message body:
 - Include a changelog with a brief list of updates from the upstream release notes, with no links or issue numbers.
 - There may also be a section for Solus specific work (e.g. rebuild against x / rework to remove dependency).
 - Optional: A link to the upstream release notes page.
-- Include your Test Plan.
 
 `git commit` on [an initialized repository](prepare-for-packaging.md#initialize-git-hooks) will automatically open your editor with the correct template.
 Note that lines starting with a `#` will be ignored by Git and do not need to be removed.
@@ -167,14 +166,6 @@ Enhancements:
 Full release notes:
 
 - [1.2.3](https://github.com/foo/foo/releases/tag/v1.2.3)
-
-**Test Plan**
-
-<!-- Short description of how the package was tested -->
-
-**Checklist**
-
-- [ ] Package was built and tested against unstable
 ```
 
 ### Other commit message format examples
