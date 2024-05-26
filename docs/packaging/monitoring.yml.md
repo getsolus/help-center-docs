@@ -170,7 +170,7 @@ If an established product hasn't had a security advisory in the past, it might n
 In that case, include an empty `security` and `cpe` field with a comment in the following format:
 
 ```yaml
-# No known CPE, checked 20240123
+# No known CPE, checked 2024-01-23
 security:
   cpe: ~
 ```
