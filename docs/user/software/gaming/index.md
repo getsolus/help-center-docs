@@ -62,6 +62,20 @@ Integrate the installed files into your system:
 sudo usysconf run -f
 ```
 
+### Prism Launcher
+
+[Prism Launcher](https://prismlauncher.org/) is an Open Source Minecraft launcher with the ability to manage multiple instances, accounts and mods. Focused on user freedom and free redistributability.
+
+
+Prism Launcher is currently available via the Solus repository, as the `prism-launcher` package.
+
+:::note
+
+The official Minecraft launcher is not required to use Prism Launcher
+
+:::
+
+
 ## RetroArch
 
 RetroArch is a frontend for emulators, game engines and media players. It has all you need to run classic games through its polished graphical interface.
