@@ -66,7 +66,6 @@ sudo usysconf run -f
 
 [Prism Launcher](https://prismlauncher.org/) is an Open Source Minecraft launcher with the ability to manage multiple instances, accounts and mods. Focused on user freedom and free redistributability.
 
-
 Prism Launcher is currently available via the Solus repository, as the `prism-launcher` package.
 
 :::note
@@ -74,7 +73,6 @@ Prism Launcher is currently available via the Solus repository, as the `prism-la
 The official Minecraft launcher is not required to use Prism Launcher
 
 :::
-
 
 ## RetroArch
 
