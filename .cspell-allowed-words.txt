@@ -65,6 +65,7 @@ cython
 datacenter
 datagrip
 dbus
+deprecate
 destdir
 devel
 devlog
@@ -369,6 +370,7 @@ touchpad
 touchpads
 trackpad
 transifex
+undeprecate
 uefi
 ufriilt
 unetbootin
