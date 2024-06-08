@@ -1,6 +1,6 @@
 ---
 title: Don't call me MATE, pal!
-slug: dont-call-me-mate-pal
+slug: don't-call-me-mate-pal
 authors:
   - name: David Harder
     title: Solus Staff

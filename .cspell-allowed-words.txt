@@ -108,6 +108,7 @@ flatpak
 flicky
 flto
 fluidsynth
+fontconfig
 fpath
 fprofile
 freedesktop
@@ -306,6 +307,7 @@ releng
 relocs
 relro
 replaceme
+repo
 resolv
 retroarch
 rhythmbox
@@ -370,9 +372,9 @@ touchpad
 touchpads
 trackpad
 transifex
-undeprecate
 uefi
 ufriilt
+undeprecate
 unetbootin
 unikey
 untick
