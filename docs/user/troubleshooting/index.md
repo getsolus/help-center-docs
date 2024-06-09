@@ -27,9 +27,9 @@ If eopkg is interrupted, the database may become corrupted. When updating you wi
 
 To run database recovery, run `sudo eopkg rdb` in the terminal and then updates should function correctly.
 
-### eopkg check shows broken packages
+### `eopkg check` shows broken packages
 
-`eopkg check` checks the sha256sums of files on disk versus what was originally installed by the original .eopkg file. In some cases (for example .pyc files), these files will be modified in the normal operation of Solus. If after reinstalling a package it remains broken, then it's likely nothing to worry about (there are no exceptions made in `eopkg check` for files that are expected to change from use). When reinstalling broken packages, (per above) it only needs to be run once.
+`eopkg check` checks the sha256 checksums of files on disk versus what was originally installed by the original `.eopkg` file. In some cases (for example `.pyc` files), these files will be modified in the normal operation of Solus. If after reinstalling a package it remains broken, then it's likely nothing to worry about (there are no exceptions made in `eopkg check` for files that are expected to change from use). When reinstalling broken packages, (per above) it only needs to be run once.
 
 ## Updated system and having issues
 
@@ -60,7 +60,7 @@ If Solus partially boots, you can generally get to a TTY using `Ctrl+Alt+F2` to 
 
 ### Display manager won't start
 
-A common cause of not being able to boot is due to installing the nvidia drivers, but not booting into the latest kernel (the only kernel which has the drivers installed). Also ensure you have the correct driver version installed for your kernel. You can check if you have booted into the latest kernel by comparing the installed package with the booted kernel (instructions for both kernels)
+A common cause of not being able to boot is due to installing the NVIDIA drivers, but not booting into the latest kernel (the only kernel which has the drivers installed). Also ensure you have the correct driver version installed for your kernel. You can check if you have booted into the latest kernel by comparing the installed package with the booted kernel (instructions for both kernels)
 
 ```bash
 eopkg info linux-lts | head -n2; uname -a
@@ -72,7 +72,7 @@ eopkg info linux-current | head -n2; uname -a
 
 If the kernel version and release don't match from lines 2 and 3 of the output, then you aren't booting into the latest kernel and this is the likely cause of X not loading (particularly if you just installed the drivers). A couple of common reasons are:
 
-- On a grub machine, a common cause for not booting the latest kernel is due to Solus not being the boot loader on the MBR. Make sure you are booting via the Solus boot loader (if possible), or update grub on the distro that own the boot loader, see [Legacy/BIOS installation](/docs/user/troubleshooting/installation#legacybios-installation).
+- On a GRUB machine, a common cause for not booting the latest kernel is due to Solus not being the boot loader on the MBR. Make sure you are booting via the Solus boot loader (if possible), or update GRUB on the distro that own the boot loader, see [Legacy/BIOS installation](/docs/user/troubleshooting/installation#legacybios-installation).
 
 - Another possibility is that the `ESP` has run out of space so the kernel cannot be copied over to it. You can debug why this isn't happening via `sudo CBM_DEBUG=1 clr-boot-manager update`. This will output all information on the process, where it may be failing, or that it is working correctly.
 
@@ -94,7 +94,7 @@ Notable commands to check the boot time are: `systemd-analyze` (note that the fi
 
 ### Timeout on partition mount (90s)
 
-If information about a device changes (UUID or mount path `/dev/sda`), this can cause systemd to time out for 90 seconds creating a long boot process. Most frequently this happens with the swap file which can be shared across distros. Most of the devices mounted on boot will appear in `/etc/fstab` or be a parameter in a file where configuring resume `cat /etc/kernel/cmdline.d/*`.
+If information about a device changes (UUID or mount path `/dev/sda`), this can cause `systemd` to time out for 90 seconds creating a long boot process. Most frequently this happens with the swap file which can be shared across distros. Most of the devices mounted on boot will appear in `/etc/fstab` or be a parameter in a file where configuring resume `cat /etc/kernel/cmdline.d/*`.
 
 `cat /proc/cmdline` will show what parameters the kernel has booted with.
 
