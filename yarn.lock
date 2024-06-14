@@ -3066,9 +3066,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cmfcmf/docusaurus-search-local@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@cmfcmf/docusaurus-search-local@npm:1.1.0"
+"@cmfcmf/docusaurus-search-local@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@cmfcmf/docusaurus-search-local@npm:1.2.0"
   dependencies:
     "@algolia/autocomplete-js": ^1.8.2
     "@algolia/autocomplete-theme-classic": ^1.8.2
@@ -3078,13 +3078,14 @@ __metadata:
     clsx: ^1.1.1
     lunr-languages: ^1.4.0
     mark.js: ^8.11.1
+    tslib: ^2.6.3
   peerDependencies:
     "@docusaurus/core": ^2.0.0
     nodejieba: ^2.5.0
   peerDependenciesMeta:
     nodejieba:
       optional: true
-  checksum: da719d70db835a61d0e99a2aaf64ef5a758e92c5f67698bfee3d196666cd6ecadec6eb495eaa44ca80b8682b2846bf698f9c0008535874eeed2968f5188c9ba8
+  checksum: 60aaa43720f6c4263ed8e09b0086ba48e62d668f6b8d7e8dbd9045186727727640e03ef6cb4352b2305390339e1850532232d5468e34332af6ebe6f3da1f055d
   languageName: node
   linkType: hard
 
@@ -14490,7 +14491,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "solus-help-center@workspace:."
   dependencies:
-    "@cmfcmf/docusaurus-search-local": ^1.1.0
+    "@cmfcmf/docusaurus-search-local": ^1.2.0
     "@docusaurus/core": 3.3.2
     "@docusaurus/eslint-plugin": ^3.3.2
     "@docusaurus/module-type-aliases": ^3.3.2
@@ -15104,6 +15105,13 @@ __metadata:
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
   checksum: 329ea56123005922f39642318e3d1f0f8265d1e7fcb92c633e0809521da75eeaca28d2cf96d7248229deb40e5c19adf408259f4b9640afd20d13aecc1430f3ad
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.6.3":
+  version: 2.6.3
+  resolution: "tslib@npm:2.6.3"
+  checksum: 74fce0e100f1ebd95b8995fbbd0e6c91bdd8f4c35c00d4da62e285a3363aaa534de40a80db30ecfd388ed7c313c42d930ee0eaf108e8114214b180eec3dbe6f5
   languageName: node
   linkType: hard
 

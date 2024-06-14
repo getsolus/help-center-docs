@@ -17,7 +17,7 @@
     "lint": "yarn run check-types && eslint --cache --fix"
   },
   "dependencies": {
-    "@cmfcmf/docusaurus-search-local": "^1.1.0",
+    "@cmfcmf/docusaurus-search-local": "^1.2.0",
     "@docusaurus/core": "3.3.2",
     "@docusaurus/plugin-ideal-image": "3.3.2",
     "@docusaurus/preset-classic": "3.3.2",
