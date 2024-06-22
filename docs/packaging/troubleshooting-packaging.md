@@ -22,7 +22,7 @@ cat package.yml | gh gist create --public
 Send the output of `solbuild` to a public Gist:
 
 ```bash
-go-task &| gh gist create --public
+go-task |& gh gist create --public
 ```
 
 _Note: the usual `solbuild` output will not be shown when this command is running, and it will take at least a few seconds_
@@ -30,7 +30,7 @@ _Note: the usual `solbuild` output will not be shown when this command is runnin
 Send the output of `solbuild` to a new `output.txt` file:
 
 ```bash
-go-task &| tee output.txt
+go-task |& tee output.txt
 ```
 
 ## Common Issues
