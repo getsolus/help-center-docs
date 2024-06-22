@@ -15,6 +15,6 @@ You will be asked in the form to provide the following information:
 
 - Title: `Update $packagename to $version` (Example: `Update nano to 2.9.7`)
 - Description: Explanation as to the value-add of updating this package.
-- Link to source tarball/zip file. Note: master.zip files **are not permitted**. We require versioned tarballs, for example: "1.2.3.tar.gz".
+- Link to source tarball/zip file. Note: `master.zip` files **are not permitted**. We require versioned tarballs, for example: "1.2.3.tar.gz".
 
 Please put this into a new [issue](https://github.com/getsolus/packages/issues/new?assignees=&labels=Package+Update+Request&projects=&template=request-package-update.yml).

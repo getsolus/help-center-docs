@@ -142,7 +142,7 @@ Once the build completes, your directory should now include the following files:
 └── tree-2.1.1-1-1-x86_64.eopkg
 ```
 
-All these files _except_ the `*eopkg` file(s) should be included in your pull request. You will remove the `.eopkg` files after testing the package.
+All these files _except_ the `.eopkg` file(s) should be included in your pull request. You will remove the `.eopkg` files after testing the package.
 
 Once your package has built successfully, you will need to [test it](testing-a-package).
 

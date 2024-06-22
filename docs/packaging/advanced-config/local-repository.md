@@ -8,7 +8,7 @@ summary: Packaging using a local repository
 This guide walks you through the steps necessary to tell `solbuild` how to use your locally built `.eopkg` files that are not yet in the Solus repository.
 
 :::note
-It is not necessary to use a local repository to test most package submissions. The easier and recommended way is to install the `eopkg` files created when a package is built. This procedure is intended for use with stack upgrades, rebuilds, or new packages that need new dependencies that are not yet in the repository.
+It is not necessary to use a local repository to test most package submissions. The easier and recommended way is to install the `.eopkg` files created when a package is built. This procedure is intended for use with stack upgrades, rebuilds, or new packages that need new dependencies that are not yet in the repository.
 :::
 
 We assume you have worked through the [packaging](/docs/packaging) material for creating a package with `solbuild`.
@@ -23,7 +23,7 @@ You will also need to ensure that your repository is fully up to date. See [Upda
 
 ## Using the local repository
 
-### Copying .eopkg files to the local repository
+### Copying `.eopkg` files to the local repository
 
 To use your locally built `.eopkg` files as a dependencies for another package, you must copy the regular package file, and any accompanying `-devel` packages to the local repository directory `/var/lib/solbuild/local`.
 
@@ -39,7 +39,7 @@ sudo cp *.eopkg /var/lib/solbuild/local
 
 With the `.eopkg` files now present in the local repository, you can use them to build a package by running `go-task build-local`, rather than just `go-task`, and `solbuild` will prefer your packages over packages found in the Solus repository.
 
-Every time you run `go-task build-local`, all `eopkg` files in the local repository will be re-indexed.
+Every time you run `go-task build-local`, all `.eopkg` files in the local repository will be re-indexed.
 
 ### Best practices when working with a solbuild local repository
 
