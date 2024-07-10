@@ -84,6 +84,9 @@ console.log("Hello, world!");
 - Dev Tracker
   - Avoid using the term _Dev Tracker_.
   - Example: "The packages issue tracker", instead of "The dev tracker"
+- eopkg
+  - If you're referring to the application or package, use "`eopkg`" with inline code formatting (see below)
+  - If you're referring to package files, use "`.eopkg`" with inline code formatting, including the period but no wildcard
 
 ### Markdown formatting
 

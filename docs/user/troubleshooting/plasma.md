@@ -17,10 +17,10 @@ This is often caused by a Firefox bug. It can be triggered by various things, li
 - Bringing up windows with keyboard shortcuts (ex: Super for the app menu, F9 for a drop down terminal) works, but they don't get focused. You can't interact with them.
 - Mouse cursor is stuck in move mode, it looks like a cross.
 
-You may not need to reboot to recover from this state. Killing all firefox processes may be all that's necessary. To do so:
+You may not need to reboot to recover from this state. Killing all `firefox` processes may be all that's necessary. To do so:
 
 1. Open a virtual terminal by pressing `Ctrl+Alt+F3`.
-1. Run the following to kill all firefox windows:
+1. Run the following to kill all `firefox` windows:
 
 ```bash
 killall firefox
