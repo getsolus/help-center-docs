@@ -4,6 +4,7 @@ summary: Working with snaps
 ---
 
 # Snap
+
 :::warning
 Note that snaps are going to be [removed from Solus in the future][2],
 and are not fully confined in Solus with Linux 6.9 and newer.
