@@ -27,12 +27,12 @@ Before updating, check the [#solus-packaging](https://matrix.to/#/#solus-packagi
 ## Repository management commands
 
 The following table lists the `eopkg` commands you can use to manage your software sources.
-
-| Action                                 | Command                        | Example                                                                   | Notes                                                    |
-| -------------------------------------- | ------------------------------ | ------------------------------------------------------------------------- | -------------------------------------------------------- |
-| Add a repository                       | `sudo eopkg add-repo Name URL` | `sudo eopkg add-repo Example https://example.com/repo/eopkg-index.xml.xz` | This doesn't enable the repository.                      |
-| Remove a repository                    | `sudo eopkg remove-repo Name`  | `sudo eopkg remove-repo Example`                                          | -                                                        |
-| Enable a repository                    | `sudo eopkg enable-repo Name`  | `sudo eopkg enable-repo Example`                                          | -                                                        |
-| Disable a repository                   | `sudo eopkg disable-repo Name` | `sudo eopkg disable-repo Example`                                         | -                                                        |
-| Update a repository                    | `sudo eopkg update-repo Name`  | `sudo eopkg update-repo Example`                                          | You can update all repositories by not providing a name. |
-| List repositories added to your system | `eopkg list-repo`              | `eopkg list-repo`                                                         | -                                                        |
+| Action                                 | Command                        | Example                                                                   |
+| -------------------------------------- | ------------------------------ | ------------------------------------------------------------------------- |
+| Add a repository                       | `sudo eopkg add-repo NAME URL` | `sudo eopkg add-repo Example https://example.com/repo/eopkg-index.xml.xz` |
+| Remove a repository                    | `sudo eopkg remove-repo NAME`  | `sudo eopkg remove-repo Example`                                          |
+| Enable a repository                    | `sudo eopkg enable-repo NAME`  | `sudo eopkg enable-repo Example`                                          |
+| Disable a repository                   | `sudo eopkg disable-repo NAME` | `sudo eopkg disable-repo Example`                                         |
+| Update a repository                    | `sudo eopkg update-repo NAME`  | `sudo eopkg update-repo Example`                                          |
+| Update all repositories                | `sudo eopkg update-repo`       | `sudo eopkg update-repo`                                                  |
+| List repositories added to your system | `eopkg list-repo`              | `eopkg list-repo`                                                         |
