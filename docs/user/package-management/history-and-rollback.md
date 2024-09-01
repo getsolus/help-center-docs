@@ -25,9 +25,9 @@ You can use this feature if you have issues after installing packages or system 
 
 :::warning[Important]
 
-Reverting software changes only works if:
+Reverting software changes works if either:
 
-- The Solus repository has the version of the package you need.
+- The Solus repository has the version of the package you need, or
 - You have a local copy of the package.
 
 :::
