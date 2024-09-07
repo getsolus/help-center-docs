@@ -3,34 +3,57 @@ title: History and Software Rollback
 summary: History and Software Rollback
 ---
 
-# History and Software Rollback
+# History and software rollback in Solus
 
-Solus provides a history and rollback feature via its package manager, `eopkg`. This feature allows you to see when your repository was last updated, actions such as installation, removal, and upgrading of software.
+Solus offers a feature to view your history of software changes and revert your system to previous versions. 
 
-Our rollback feature allows you to essentially rewind your system's software back to a previous state, assuming you or our repository has the versions in question.
+You can use this feature if you have issues after installing packages or system updates, and you need to return to a working state.
 
-## History
+## History of software changes
 
-You can see the history from `eopkg` by using:
+- To see your history of software changes, open a terminal and execute:
 
-```bash
-eopkg history
-```
+    ```bash
+    eopkg history
+    ```
+
+    The terminal displays a list of all the software changes in your system.
+
+    ![eopkg history output](./eopkg-history-output.png)
 
 ## Rollback
 
-:::info
+:::warning[Important]
 
-If you have a local repository set up, [disable it](https://help.getsol.us/docs/packaging/advanced-config/local-repository#disabling-the-local-solbuild-repository-in-eopkg) before doing rollbacks or you may get an error.
+Reverting software changes works if either:
 
-> Error parsing repository index information. Index file does not exist or is malformed.
+- The Solus repository has the version of the package you need, or
+- You have a local copy of the package.
 
 :::
 
-To rollback your system, first use the above history command to check what the transaction / operation number was. Then, we use the following command:
+1. Disable any [local repository](https://help.getsol.us/docs/packaging/advanced-config/local-repository#disabling-the-local-solbuild-repository-in-eopkg) you have.
 
-```bash
-sudo eopkg history -t number
-```
+    Local repositories can cause errors during rollbacks.
 
-The number, in this case, is the operation before the one you want to change. So if the number was `100`, then you would use `99`.
+1. Open a terminal.
+
+1. View the history of software changes:
+
+    ```bash
+    sudo eopkg history
+    ```
+
+1. Note the number of the most recent software change.
+
+1. Go back to the desired state:
+
+    ```bash
+    sudo eopkg history -t NUMBER
+    ```
+
+    Replace `NUMBER` with a number lower than the latest software change.
+
+    For example, if you want to revert operation 100, use 99 as the number.
+
+After reverting to the desired state, verify your system status. You might need to restart your system to see some of the changes.

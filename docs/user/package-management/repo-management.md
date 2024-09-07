@@ -3,103 +3,36 @@ title: Repository Management
 summary: Repository Management
 ---
 
-# Repository Management
+# Repository management
 
-While Solus currently only provides two repositories, stable (shannon) and unstable, our package manager does support actively using multiple repositories on your system. This is useful if you are using a vendor-provided repository.
+Solus offers two main software sources: stable (shannon) and unstable. The `eopkg` package manager can use multiple sources on your system, which is helpful if you use a source provided by another vendor.
 
-## Official Solus repositories
+## Official repositories
 
 The official Solus repositories are:
 
-| Repository           | URL                                                      | Notes                                                                                                                                                |
-| -------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Stable (shannon)** | `https://cdn.getsol.us/repo/shannon/eopkg-index.xml.xz`  | This is the default repository.                                                                                                                      |
-| **Unstable**         | `https://cdn.getsol.us/repo/unstable/eopkg-index.xml.xz` | This repository should only be used if you intend to build Solus packages or to test new packages before they are synced to the _stable_ repository. |
+| Repository       | URL                                                      | Notes                                                                                                       |
+| ---------------- | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Stable (shannon) | `https://cdn.getsol.us/repo/shannon/eopkg-index.xml.xz`  | Default software source.                                                                                    |
+| Unstable         | `https://cdn.getsol.us/repo/unstable/eopkg-index.xml.xz` | Only use this source if build Solus packages or you test new software before it moves to the stable source. |
 
 :::danger
 
-It is not always safe to perform a system update when using the **unstable** repository. Always check the topic of the [#solus-packaging](https://matrix.to/#/#solus-packaging:matrix.org) Matrix room before updating.
+Updating your system while using the **unstable** source might be risky.
+
+Before updating, check the [#solus-packaging](https://matrix.to/#/#solus-packaging:matrix.org) Matrix room.
 
 :::
 
-## Adding a repository
+## Repository management commands
 
-You can add a repository by using:
-
-```bash
-sudo eopkg add-repo Name URL
-```
-
-For example:
-
-```bash
-sudo eopkg add-repo Example https://example.com/repo/eopkg-index.xml.xz
-```
-
-**Note:** This does not enable the repository.
-
-## Removing a repository
-
-You can remove a repository by using:
-
-```bash
-sudo eopkg remove-repo Name
-```
-
-For example:
-
-```bash
-sudo eopkg remove-repo Example
-```
-
-## Enabling a repository
-
-You can enable a repository for usage, by using:
-
-```bash
-sudo eopkg enable-repo Name
-```
-
-For example:
-
-```bash
-sudo eopkg enable-repo Example
-```
-
-## Disabling a repository
-
-You can disable a repository by using:
-
-```bash
-sudo eopkg disable-repo Name
-```
-
-For example:
-
-```bash
-sudo eopkg disable-repo Example
-```
-
-## Updating a repository
-
-You can update the index of a repository by using:
-
-```bash
-sudo eopkg update-repo Name
-```
-
-For example:
-
-```bash
-sudo eopkg update-repo Example
-```
-
-**Note:** You can update all repositories by **not** providing a name.
-
-## List repositories
-
-You can list all the repositories added on your system by using:
-
-```bash
-eopkg list-repo
-```
+The following table lists the `eopkg` commands you can use to manage your software sources.
+| Action                                 | Command                        | Example                                                                   |
+| -------------------------------------- | ------------------------------ | ------------------------------------------------------------------------- |
+| Add a repository                       | `sudo eopkg add-repo NAME URL` | `sudo eopkg add-repo Example https://example.com/repo/eopkg-index.xml.xz` |
+| Remove a repository                    | `sudo eopkg remove-repo NAME`  | `sudo eopkg remove-repo Example`                                          |
+| Enable a repository                    | `sudo eopkg enable-repo NAME`  | `sudo eopkg enable-repo Example`                                          |
+| Disable a repository                   | `sudo eopkg disable-repo NAME` | `sudo eopkg disable-repo Example`                                         |
+| Update a repository                    | `sudo eopkg update-repo NAME`  | `sudo eopkg update-repo Example`                                          |
+| Update all repositories                | `sudo eopkg update-repo`       | `sudo eopkg update-repo`                                                  |
+| List repositories added to your system | `eopkg list-repo`              | `eopkg list-repo`                                                         |
