@@ -5,7 +5,7 @@ summary: Community Guidelines
 
 # Community guidelines
 
-The Solus Project enforces a set of community guidelines to maintain a family-friendly, respectful, and professional environment.
+Solus enforces a set of community guidelines to maintain a family-friendly, respectful, and professional environment.
 
 Our guidelines apply to all services offered or used by the project, in addition to any terms of service of third-party services used by the project. Solus Staff reserves the right to either ban or terminate access, on a temporary or permanent basis, to members of the community which are found to be violating our guidelines.
 
