@@ -1,11 +1,7 @@
 ---
 title: Don't call me MATE, pal!
 slug: don't-call-me-mate-pal
-authors:
-  - name: David Harder
-    title: Solus Staff
-    url: https://github.com/davidjharder
-    image_url: https://avatars.githubusercontent.com/u/23007135?v=4
+authors: david
 tags: [MATE, devlog, solus]
 hide_table_of_contents: false
 ---

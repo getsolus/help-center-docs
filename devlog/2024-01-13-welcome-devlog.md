@@ -2,11 +2,7 @@
 title: Welcome to the Solus Devlog
 description: Welcome to the Solus Development Log.
 slug: welcome-solus-devlog-v1
-authors:
-  - name: Joey Riches
-    title: Solus Staff
-    url: https://github.com/joebonrichie
-    image_url: https://avatars.githubusercontent.com/u/5338090?s=400&u=f77ed45c7e83814ce3e8bd199fc293bd5b53682b&v=4
+authors: joey
 tags: [hello, devlog, firstpost, solus]
 hide_table_of_contents: false
 ---
