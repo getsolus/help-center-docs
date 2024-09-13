@@ -27,6 +27,7 @@ Before updating, check the [#solus-packaging](https://matrix.to/#/#solus-packagi
 ## Repository management commands
 
 The following table lists the `eopkg` commands you can use to manage your software sources.
+
 | Action                                 | Command                        | Example                                                                   |
 | -------------------------------------- | ------------------------------ | ------------------------------------------------------------------------- |
 | Add a repository                       | `sudo eopkg add-repo NAME URL` | `sudo eopkg add-repo Example https://example.com/repo/eopkg-index.xml.xz` |

@@ -5,13 +5,13 @@ summary: Instructions for enrolling the Solus Certificate when Secure Boot is en
 
 # Booting with Secure Boot Enabled
 
-Since Solus 4.4 secure boot is now supported. When you first boot the ISO, and, if you have secure boot enabled in your UEFI firmware; you will have to perform the one-time-step of manually enrolling the Solus certificate. The following guide will walk you through this. If you already have Solus installed and wish to enable secure boot, skip ahead [here](#enabling-secure-boot-on-an-existing-install).
+Since Solus 4.4 Secure Boot is now supported. When you first boot the ISO, and, if you have Secure Boot enabled in your UEFI firmware; you will have to perform the one-time-step of manually enrolling the Solus certificate. The following guide will walk you through this. If you already have Solus installed and wish to enable Secure Boot, skip ahead [here](#enabling-secure-boot-on-an-existing-install).
 
-<em>Note that this only applies to machines with UEFI firmware, if your machine uses the older BIOS firmware you can safely ignore this article. If you wish to avoid having to do this step then you may disable secure boot in your machine's UEFI firmware interface.</em>
+<em>Note that this only applies to machines with UEFI firmware, if your machine uses the older BIOS firmware you can safely ignore this article. If you wish to avoid having to do this step then you may disable Secure Boot in your machine's UEFI firmware interface.</em>
 
 ## Enrolling the Solus certificate
 
-After [booting](/docs/user/quick-start/installation/#boot-the-media) the ISO from USB/DVD and, if Secure Boot is enabled in your device's UEFI firmware. A warning will appear concerning a secure boot violation, press `Enter` on your keyboard to continue.
+After [booting](/docs/user/quick-start/installation/#boot-the-media) the ISO from USB/DVD and, if Secure Boot is enabled in your device's UEFI firmware. A warning will appear concerning a Secure Boot violation, press `Enter` on your keyboard to continue.
 
 ![Secure Boot violation](1-secure-boot-violation.png)
 
@@ -37,7 +37,7 @@ Now, with the Solus certificate enrolled, press `Enter` to reboot the machine, b
 
 ## Enabling Secure Boot on an existing install
 
-If you already have Solus installed and wish to enable secure boot then there is one extra step you must perform BEFORE continuing with [Enrolling the Solus Certificate](#enrolling-the-solus-certificate) as normal.
+If you already have Solus installed and wish to enable Secure Boot then there is one extra step you must perform BEFORE continuing with [Enrolling the Solus Certificate](#enrolling-the-solus-certificate) as normal.
 
 Firstly, you must confirm you have `clr-boot-manager, version: 3.2.12, release: 29` (or later) installed, run `eopkg info clr-boot-manager` to confirm this. This version of `clr-boot-manager` will have created a new UEFI boot entry on your machine called `Solus Linux Bootloader` that can be booted from with Secure Boot enabled.
 
@@ -50,7 +50,7 @@ Reboot your machine and select the appropriate keyboard button during startup to
 
 ![UEFI Choose Boot Device](uefi-choosing-boot-device.png)
 
-After successfully booting from the new `Solus Linux Bootloader` UEFI entry, open a terminal, input `systemctl reboot --firmware-setup` and press `Enter`. This will reboot you into your machine's UEFI firmware interface. Once there, you will have to find and enable the secure boot setting. Where this is located varies from machine to machine. Some common places it can be located under are `Windows OS Configuration`, `Security` or `Device Manager`.
+After successfully booting from the new `Solus Linux Bootloader` UEFI entry, open a terminal, input `systemctl reboot --firmware-setup` and press `Enter`. This will reboot you into your machine's UEFI firmware interface. Once there, you will have to find and enable the Secure Boot setting. Where this is located varies from machine to machine. Some common places it can be located under are `Windows OS Configuration`, `Security` or `Device Manager`.
 
 ![UEFI Secure Boot Configuration](uefi-secure-boot-configuration.png)
 
@@ -64,7 +64,7 @@ Once you've successfully enabled and booted your Solus install with Secure Boot 
 
 You can run `bootctl status | grep "Secure Boot"` in a terminal to verify Secure Boot is enabled.
 
-It is possible to delete the old Solus UEFI boot entry with `efibootmgr` once secure boot is enabled successfully, However, caution is required and as such, instructions to do so are not provided here.
+It is possible to delete the old Solus UEFI boot entry with `efibootmgr` once Secure Boot is enabled successfully, However, caution is required and as such, instructions to do so are not provided here.
 
 # Why is enrolling the Solus certificate necessary?
 
@@ -81,7 +81,7 @@ We appreciate that having the enroll the certificate may be confusing to users a
 However, it is also important to consider the following:
 
 - Obtaining an EV certificate is an expensive investment.
-- Enrolling the Solus certificate is only required once, and, only if secure boot is enabled.
+- Enrolling the Solus certificate is only required once, and, only if Secure Boot is enabled.
 
 As such, we are not currently looking to our get our own `shim` signed by Microsoft. However, thanks to our supporters on [OpenCollective](https://opencollective.com/getsolus), it is indeed within our budget to obtain an EV certificate in the future which would unblock the additional requirements.
 
