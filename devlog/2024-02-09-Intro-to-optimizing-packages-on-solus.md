@@ -2,11 +2,7 @@
 title: Intro to Optimizing Packages on Solus
 description: Explore how to employ advanced compiler techniques such as PGO, BOLT & Glibc HWCaps to squeeze extra performance from packages using libwebp as a test vehicle
 slug: solus-optimizing-packages
-authors:
-  - name: Joey Riches
-    title: Solus Staff
-    url: https://github.com/joebonrichie
-    image_url: https://avatars.githubusercontent.com/u/5338090?s=400&u=f77ed45c7e83814ce3e8bd199fc293bd5b53682b&v=4
+authors: joey
 tags: [pgo, lto, solus, packaging, optimization, 03, clang, gnu, llvm, glibc, hwcaps, x86_64-v3]
 hide_table_of_contents: false
 ---

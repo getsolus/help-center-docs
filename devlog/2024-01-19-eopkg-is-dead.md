@@ -1,11 +1,7 @@
 ---
 title: eopkg is dead, long live eopkg
 slug: eopkg-is-dead-long-live-eopkg
-authors:
-  - name: David Harder
-    title: Solus Staff
-    url: https://github.com/davidjharder
-    image_url: https://avatars.githubusercontent.com/u/23007135?v=4
+authors: david
 tags: [eopkg, devlog, moss, solus]
 hide_table_of_contents: false
 ---
