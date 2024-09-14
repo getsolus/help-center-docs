@@ -83,7 +83,7 @@ You should see the files you would usually see in your home directory when logge
 
 :::caution Important
 
-The KDE project cautions users to not delete these directories: `~/.kde, ~/.kde4, ~/.local or ~/.config`.
+Avoid deleting the following directories: `~/.kde`, `~/.kde4`, `~/.local`, and `~/.config`
 
 :::
 
