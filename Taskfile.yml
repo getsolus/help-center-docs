@@ -3,6 +3,9 @@ version: "3"
 set: [pipefail]
 
 tasks:
+  default:
+    cmds:
+      - yarn start --host 0.0.0.0
   # Ensure people new to go-task and used to 'make help' have an easier time
   help:
     desc: Show how to list available tasks
