@@ -81,11 +81,16 @@ ls -laH
 
 You should see the files you would usually see in your home directory when logged into Solus normally.
 
+:::caution Important
+
+Avoid deleting the following directories: `~/.kde`, `~/.kde4`, `~/.local`, and `~/.config`
+
+:::
+
 1. Remove the various caches that Plasma uses.
    Execute the following commands:
 
 ```bash
-rm -rf .kde
 rm -rf .cache/plasmashell*
 rm -rf .cache/org.kde.dirmodel-qml.kcache
 rm -rf .cache/kioexec/ .cache/krunner/ .cache/ksycoca5*
