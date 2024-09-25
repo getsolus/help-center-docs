@@ -52,9 +52,11 @@ By default, Solus utilizes our linux-current kernel. The separate kernel branche
 | nvidia-developer-driver | nvidia-developer-driver-current |
 | nvidia-glx-driver       | nvidia-glx-driver-current       |
 | openrazer               | openrazer-current               |
+| rtl8852bu               | rtl8852bu-current               |
 | v4l2loopback            | v4l2loopback-current            |
 | vhba-module             | vhba-module-current             |
 | virtualbox              | virtualbox-current              |
+| xone                    | xone-current                    |
 
 ### Change the default kernel branch to boot
 
