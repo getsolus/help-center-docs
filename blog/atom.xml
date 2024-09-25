@@ -190,7 +190,6 @@
 <p>Regardless, I hope the story of how <code>libwebp</code> was optimized for was entertaining and some things were learnt for anyone looking to optimize packages in Solus for the future.</p>]]></content>
         <author>
             <name>Joey Riches</name>
-            <uri>https://github.com/joebonrichie</uri>
         </author>
         <category label="pgo" term="pgo"/>
         <category label="lto" term="lto"/>
@@ -235,7 +234,6 @@
 <p>Joey has been doing the dirty work of bolting <code>packagekit</code> support onto <code>eopkg</code>, and saw an opportunity: If <code>eopkg</code> could be upgraded to understand some of <code>packagekit</code>, then he could write a special-purpose application to move users off MATE without asking them to run scary bash scripts (sorry ermo). We're rather pleased with this solution. MATE users get a simple transition and Solus gets closer to checking <code>solus-sc</code> off <a href="https://github.com/getsolus/packages/issues/270" target="_blank" rel="noopener noreferrer">the list.</a></p>]]></content>
         <author>
             <name>David Harder</name>
-            <uri>https://github.com/davidjharder</uri>
         </author>
         <category label="MATE" term="MATE"/>
         <category label="devlog" term="devlog"/>
@@ -264,7 +262,6 @@
 <p>But what about Python2? Well, now that Evan and Joey have seen off a <a href="https://getsol.us/2024/01/08/solus-4-5-released/" target="_blank" rel="noopener noreferrer">successful ISO release</a> with a <code>calamares</code> based installer, we can cross <code>os-installer</code> <a href="https://github.com/getsolus/packages/issues/270" target="_blank" rel="noopener noreferrer">off the list</a>. And <code>eopkg4-bin</code> will let us cross off a whole bunch more. The rest of that list is a story for another day.</p>]]></content>
         <author>
             <name>David Harder</name>
-            <uri>https://github.com/davidjharder</uri>
         </author>
         <category label="eopkg" term="eopkg"/>
         <category label="devlog" term="devlog"/>
@@ -286,7 +283,6 @@
 <p>Hope to see you back at this space soon with more content!</p>]]></content>
         <author>
             <name>Joey Riches</name>
-            <uri>https://github.com/joebonrichie</uri>
         </author>
         <category label="hello" term="hello"/>
         <category label="devlog" term="devlog"/>
