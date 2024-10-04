@@ -39,7 +39,7 @@ Because PostgreSQL is included as a single package, the only way to perform a ma
 
 ```bash
 sudo eopkg it https://cdn.getsol.us/repo/shannon/p/postgresql/postgresql-16.4-51-1-x86_64.eopkg \
-              https://cdn.getsol.us/repo/shannon/p/postgresql/postgresql-libpq-16.4-51-1-x86_64.eopkg 
+              https://cdn.getsol.us/repo/shannon/p/postgresql/postgresql-libpq-16.4-51-1-x86_64.eopkg
 ```
 
 2.  (Re)start PostgreSQL:
