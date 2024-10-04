@@ -104,6 +104,7 @@ ferryd
 filesharing
 firstpost
 flarum
+flathub
 flatpak
 flicky
 flto
@@ -220,6 +221,7 @@ maintainership
 markus
 mendeleydesktop
 metacity
+metainfo
 mojang
 moneydance
 mountpoint
