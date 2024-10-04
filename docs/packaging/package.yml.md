@@ -77,7 +77,7 @@ Not all fields in `package.yml` are mandatory, but a small selection are. Below 
   - Example: `https://github.com/docker/cli/archive/refs/tags/v25.0.3.tar.gz#docker-cli.tar.gz : 04ad0cea992a65db20cb1b0dbf6d1ce32c705ce879de51b22095fe8d28030815`
   - This renames the downloaded file from `v25.0.3.tar.gz` to `docker-cli.tar.gz`.
 - SourceForge sources
-  - A proper SourceForge source looks like this, using `hplip` as an example: `https://sourceforge.net/projects/hplip/files/hplip/3.23.12/hplip-3.23.12.tar.gz`
+  - A proper SourceForge source looks like this, using `hplip` as an example: `https://sourceforge.net/projects/hplip/files/hplip/3.24.4/hplip-3.24.4.tar.gz`
     - This URL begins with `https://sourceforge.net/`, not `https://downloads.sourceforge.net/`, or some other mirror.
     - This URL has a path beginning with `/projects/$project_name/`
     - This URL does _not_ have a trailing `/download`, you may have to remove this by hand.
@@ -257,7 +257,7 @@ BOLT is a post-link optimizer developed to speed up large applications. You will
 | **%ARCH%**                   | Indicates the current build architecture.                                                                                                         |
 | **%CC%**                     | C compiler.                                                                                                                                       |
 | **%CFLAGS%**                 | cflags as set in `eopkg.conf`.                                                                                                                    |
-| **%CONFOPTS%**               | Flags / options for configuration, such as `--prefix=%PREFIX%`. [Full List.](https://github.com/getsolus/ypkg/blob/master/ypkg2/rc.yml#L431-L443) |
+| **%CONFOPTS%**               | Flags / options for configuration, such as `--prefix=%PREFIX%`. [Full List.](https://github.com/getsolus/ypkg/blob/master/ypkg2/rc.yml#L444-L456) |
 | **%CXX%**                    | C++ compiler.                                                                                                                                     |
 | **%CXXFLAGS%**               | cxxflags as set in `eopkg.conf`.                                                                                                                  |
 | **%JOBS%**                   | jobs, as set in `eopkg.conf`.                                                                                                                     |

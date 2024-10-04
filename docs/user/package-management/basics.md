@@ -3,103 +3,18 @@ title: Basics to Package Management
 summary: Basics to Package Management
 ---
 
-# Basics to Package Management
+# Basics of package management in Solus
 
-Solus uses the eopkg package management system to deliver software to the end-user.  
-Below are some basic commands for using eopkg.
+Solus uses the eopkg package manager. You can use `eopkg` to install, update, and remove software packages on your Solus system.
 
-## Installing software
+The following table lists the most common `eopkg` commands:
 
-You can install one or more packages by using:
-
-```bash
-sudo eopkg install packagename
-```
-
-For example:
-
-```bash
-sudo eopkg install gnome-documents gnome-music
-```
-
-## Reinstalling software
-
-You can reinstall one or more packages by using:
-
-```bash
-sudo eopkg install --reinstall packagename
-```
-
-For example:
-
-```bash
-sudo eopkg install --reinstall gnome-documents gnome-music
-```
-
-## Uninstalling software
-
-You can uninstall one or more packages by using:
-
-```bash
-sudo eopkg remove packagename
-```
-
-For example:
-
-```bash
-sudo eopkg remove gnome-documents gnome-music
-```
-
-## Get information on software
-
-You can get information on software, such as its description, version, installation size, and more, by using
-
-```bash
-eopkg info packagename
-```
-
-For example:
-
-```bash
-eopkg info gnome-documents
-```
-
-## Updating
-
-You can update your system by using:
-
-```bash
-sudo eopkg upgrade
-```
-
-If you want to **only** update a specific piece of software on your system, you can specify is like below:
-
-```bash
-sudo eopkg upgrade firefox
-```
-
-## Searching
-
-You can search the software selection Solus provides by using:
-
-```bash
-eopkg search term
-```
-
-For example:
-
-```bash
-eopkg search documents
-```
-
-Notice that you don't need to search for a specific software name, although you can do that. We search summaries and software names by default.
-
-## Base development tools
-
-If you are wanting to compile software under Solus, we recommend installing our `system.devel` component by running the following:
-
-```bash
-sudo eopkg install -c system.devel
-```
-
-This will provide items such as `clang`, `gcc`, `make`, a multitude of devel sub-packages, and more. Our `system.devel` is similar to packages on other operating systems, such as Debian's build-essentials.
+| Action                                                      | Command                                       | Example                                                      |
+| ----------------------------------------------------------- | --------------------------------------------- | ------------------------------------------------------------ |
+| Install software                                            | `sudo eopkg install PACKAGE_NAME`             | `sudo eopkg install gnome-documents gnome-music`             |
+| Reinstall software                                          | `sudo eopkg install --reinstall PACKAGE_NAME` | `sudo eopkg install --reinstall gnome-documents gnome-music` |
+| Uninstall software                                          | `sudo eopkg remove PACKAGE_NAME`              | `sudo eopkg remove gnome-documents gnome-music`              |
+| Update your system                                          | `sudo eopkg upgrade`                          | -                                                            |
+| Update specific software                                    | `sudo eopkg upgrade PACKAGE_NAME`             | `sudo eopkg upgrade firefox`                                 |
+| Search for software                                         | `eopkg search KEYWORD`                        | `eopkg search documents`                                     |
+| Get information on software, such as description or version | `eopkg info PACKAGE_NAME`                     | `eopkg info gnome-documents`                                 |

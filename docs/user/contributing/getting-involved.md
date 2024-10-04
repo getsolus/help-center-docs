@@ -11,11 +11,11 @@ Solus is a big undertaking, and as such there are many ways in which your involv
 
 ### Community guidelines
 
-The Solus Project enforces a set of community guidelines to maintain respect and professionalism, as well as a family-friendly environment. Please view our community guidelines [here](/docs/user/contributing/community-guidelines).
+Solus enforces a set of community guidelines to maintain respect and professionalism, as well as a family-friendly environment. Please view our community guidelines [here](/docs/user/contributing/community-guidelines).
 
 ### Community forums
 
-With so many new users joining, there are always more people needing help. A great way to help us out, would be to help out our users on the [Solus Project Forums](https://discuss.getsol.us).
+With so many new users joining, there are always more people needing help. A great way to help us out, would be to help out our users on the [Solus Forums](https://discuss.getsol.us).
 
 ### Matrix (chat)
 
@@ -54,7 +54,7 @@ and contribute to the community by packaging software. If you're interested in l
 
 ## Report bugs
 
-We're always looking to improve our systems, especially when they're not functioning as expected. By reporting bugs, you improve the system not only for you, but for all Solus Project users.
+We're always looking to improve our systems, especially when they're not functioning as expected. By reporting bugs, you improve the system not only for you, but for all Solus users.
 
 - [Main Solus GitHub Issue Tracker](https://issues.getsol.us)
   Most bug reports about Solus itself, and its packages, should be filed here.
