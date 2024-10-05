@@ -144,6 +144,10 @@ const config = {
                 label: "Issue Tracker",
                 href: "https://issues.getsol.us/",
               },
+              {
+                label: "Security",
+                href: "https://github.com/getsolus/packages/blob/main/SECURITY.md",
+              },
             ],
             type: "dropdown",
             position: "left",
@@ -216,6 +220,10 @@ const config = {
               {
                 label: "Issue Tracker",
                 href: "https://issues.getsol.us",
+              },
+              {
+                label: "Security",
+                href: "https://github.com/getsolus/packages/blob/main/SECURITY.md",
               },
             ],
           },
