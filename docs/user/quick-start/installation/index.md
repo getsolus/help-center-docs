@@ -33,7 +33,7 @@ gpg --import solus-releng-pub.gpg
 Verify the signed checksum file:
 
 ```bash
-gpg --verify Solus-4.5-Budgie.iso.sha256sum.sign Solus-4.5-Budgie.iso.sha256sum
+gpg --verify Solus-Budgie-Release-2024-10-14.iso.sha256sum.sign Solus-Budgie-Release-2024-10-14.iso.sha256sum
 ```
 
 #### Verifying the ISO checksum
@@ -41,7 +41,7 @@ gpg --verify Solus-4.5-Budgie.iso.sha256sum.sign Solus-4.5-Budgie.iso.sha256sum
 Check that the computed hash of the downloaded ISO file matches the hash supplied by Solus:
 
 ```bash
-sha256sum -c Solus-4.5-Budgie.iso.sha256sum | grep OK
+sha256sum -c Solus-Budgie-Release-2024-10-14.iso.sha256sum | grep OK
 ```
 
 ### Windows
@@ -57,8 +57,8 @@ Now you can run the same `gpg` commands from the the [_Verifyng the SHA256SUMS f
 Launch powershell and compute the hash of the ISO file you just downloaded. You will have to manually compare the result to the hash in the SHA256SUMS file.
 
 ```powershell
-Get-FileHash C:\path\to\Solus-4.5-Budgie.iso
-cat C:\path\to\Solus-4.5-Budgie.iso.sha256sum
+Get-FileHash C:\path\to\Solus-Budgie-Release-2024-10-14.iso
+cat C:\path\to\Solus-Budgie-Release-2024-10-14.iso.sha256sum
 ```
 
 Alternatively, you can use a graphical program that can calculate SHA256 hashes like _Rufus_ or _7-Zip_.
@@ -167,7 +167,7 @@ This is where we overwrite the contents of your USB drive so please ensure you i
 :::
 
 ```bash
-sudo dd if=Solus-4.5-Budgie.iso of=/dev/sdb bs=4M status=progress oflag=sync && sudo eject /dev/sdb
+sudo dd if=Solus-Budgie-Release-2024-10-14.iso of=/dev/sdb bs=4M status=progress oflag=sync && sudo eject /dev/sdb
 ```
 
 This will write the contents of the ISO to the thumb drive so you can boot it and also make sure the data is synchronized so you can eject the USB safely.
@@ -203,7 +203,7 @@ Since OS X El Capitan (10.11), the easiest way to burn a DVD is:
 
 1. Insert your DVD and open Finder.
 2. Right click on the ISO image.
-3. Click on “Burn Disk Image ‘Solus-4.5-Budgie.iso’ to Disc…”
+3. Click on “Burn Disk Image ‘Solus-Budgie-Release-2024-10-14.iso’ to Disc…”
 4. Then click “Burn”.
 
 ![macOS Burn DVD](mac-burn-dvd.jpg)
@@ -277,7 +277,7 @@ cd ~/Downloads
 We will use the `dd` command to write the contents of the ISO to the thumb drive. Replace `IDENTIFIER` in the command below with your drive identifier. Note the extra `r` before the identifier (i.e `rdisk1`). This is for raw mode, which along with bs=1m, makes the transfer faster.
 
 ```bash
-sudo dd if=Solus-4.5-Budgie.iso of=/dev/rIDENTIFIER bs=1m
+sudo dd if=Solus-Budgie-Release-2024-10-14.iso of=/dev/rIDENTIFIER bs=1m
 ```
 
 Be patient! After a few minutes you’ll receive a message saying how much data was transferred. You can now safely eject the usb drive.
