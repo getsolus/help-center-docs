@@ -257,7 +257,7 @@ BOLT is a post-link optimizer developed to speed up large applications. You will
 | **%ARCH%**                   | Indicates the current build architecture.                                                                                                         |
 | **%CC%**                     | C compiler.                                                                                                                                       |
 | **%CFLAGS%**                 | cflags as set in `eopkg.conf`.                                                                                                                    |
-| **%CONFOPTS%**               | Flags / options for configuration, such as `--prefix=%PREFIX%`. [Full List.](https://github.com/getsolus/ypkg/blob/master/ypkg2/rc.yml#L444-L456) |
+| **%CONFOPTS%**               | Flags / options for configuration, such as `--prefix=%PREFIX%`. [Full List.](https://github.com/getsolus/ypkg/blob/v33/ypkg2/rc.yml#L446-L458)    |
 | **%CXX%**                    | C++ compiler.                                                                                                                                     |
 | **%CXXFLAGS%**               | cxxflags as set in `eopkg.conf`.                                                                                                                  |
 | **%JOBS%**                   | jobs, as set in `eopkg.conf`.                                                                                                                     |
