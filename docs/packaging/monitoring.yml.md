@@ -7,7 +7,7 @@ summary: The purpose and format of monitoring.yml
 
 :::important
 
-A `monitoring.yml` file is not yet required for Solus packages.
+A `monitoring.yml` file is strongly suggested, but not yet required for Solus packages.
 
 :::
 
