@@ -10,14 +10,14 @@ export const People: Record<string, Person> = {
     matrix: "@flabb:matrix.org",
     names: {
       first: "Alexander",
-      last: "Vorobyev"
+      last: "Vorobyev",
     },
     websites: [
       {
         icon: GitHubIcon,
         to: "https://github.com/aleksvor",
         type: WebsiteType.GITHUB,
-      }
+      },
     ],
   },
   AlgentAlbrahimi: {
@@ -56,7 +56,8 @@ export const People: Record<string, Person> = {
     ],
   },
   EvanMaddock: {
-    description: "Sci-fi and tech nerd who enjoys programming, woodworking, cooking, and other miscellaneous stuff. Not necessarily in that order.",
+    description:
+      "Sci-fi and tech nerd who enjoys programming, woodworking, cooking, and other miscellaneous stuff. Not necessarily in that order.",
     matrix: "@ebonjaeger:matrix.org",
     names: {
       first: "Evan",
@@ -140,31 +141,6 @@ export const People: Record<string, Person> = {
       },
     ],
   },
-  JoshuaStrobl: {
-    description: "🛠️ Founder / Lead of Buddies of Budgie. 🐧 Fedora Budgie Spin maintainer. Enjoyer of MMOs and whiskey.",
-    matrix: "@joshuastrobl:matrix.org",
-    names: {
-      first: "Joshua",
-      last: "Strobl",
-    },
-    websites: [
-      {
-        icon: GitHubIcon,
-        to: "https://github.com/JoshStrobl",
-        type: WebsiteType.GITHUB,
-      },
-      {
-        icon: MastodonIcon,
-        to: "https://joshuastrobl.social/@me",
-        type: WebsiteType.MASTODON,
-      },
-      {
-        icon: LanguageIcon,
-        to: "https://joshuastrobl.com/",
-        type: WebsiteType.WEBSITE,
-      },
-    ],
-  },
   JustinZobel: {
     description: "I am.",
     matrix: "@justin.zobel:kde.org",
@@ -235,26 +211,6 @@ export const People: Record<string, Person> = {
       },
     ],
   },
-  ThomasStaudinger: {
-    description: "",
-    matrix: "@Staudey:matrix.org",
-    names: {
-      first: "Thomas",
-      last: "Staudinger",
-    },
-    websites: [
-      {
-        icon: GitHubIcon,
-        to: "https://github.com/Staudey",
-        type: WebsiteType.GITHUB,
-      },
-      {
-        icon: MastodonIcon,
-        to: "https://fosstodon.org/@staudey",
-        type: WebsiteType.MASTODON,
-      },
-    ],
-  },
   TraceyClark: {
     description: "",
     matrix: "@traceyc:matrix.org",
@@ -295,28 +251,23 @@ export const People: Record<string, Person> = {
       },
     ],
   },
-  ZachBacon: {
+  Malfisya: {
     description: "",
-    matrix: "@ZachBacon:matrix.org",
+    matrix: "@alfisya:matrix.org",
     names: {
-      first: "Zach",
-      last: "Bacon",
+      first: "Muhammad",
+      last: "Syahrin",
     },
     websites: [
       {
         icon: GitHubIcon,
-        to: "https://github.com/ZachBacon",
+        to: "https://github.com/malfisya",
         type: WebsiteType.GITHUB,
       },
       {
         icon: MastodonIcon,
-        to: "https://mastodon.social/@thecanadianbacon",
+        to: "https://masto.ai/@alfisya",
         type: WebsiteType.MASTODON,
-      },
-      {
-        icon: LanguageIcon,
-        to: "https://casualgamer.ca",
-        type: WebsiteType.WEBSITE,
       },
     ],
   },
