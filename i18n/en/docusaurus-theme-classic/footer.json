@@ -59,7 +59,7 @@
     "message": "Issue Tracker",
     "description": "The label of footer link with label=Issue Tracker linking to https://issues.getsol.us"
   },
-    "link.item.label.Security": {
+  "link.item.label.Security": {
     "message": "Security",
     "description": "The label of footer link with label=Security linking to https://github.com/getsolus/packages/blob/main/SECURITY.md"
   },

@@ -252,27 +252,27 @@ BOLT is a post-link optimizer developed to speed up large applications. You will
 
 ### Variable macros
 
-| Macro                        | Description                                                                                                                                       |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **%ARCH%**                   | Indicates the current build architecture.                                                                                                         |
-| **%CC%**                     | C compiler.                                                                                                                                       |
-| **%CFLAGS%**                 | cflags as set in `eopkg.conf`.                                                                                                                    |
-| **%CONFOPTS%**               | Flags / options for configuration, such as `--prefix=%PREFIX%`. [Full List.](https://github.com/getsolus/ypkg/blob/v33/ypkg2/rc.yml#L446-L458)    |
-| **%CXX%**                    | C++ compiler.                                                                                                                                     |
-| **%CXXFLAGS%**               | cxxflags as set in `eopkg.conf`.                                                                                                                  |
-| **%JOBS%**                   | jobs, as set in `eopkg.conf`.                                                                                                                     |
-| **%LDFLAGS%**                | ldflags as set in `eopkg.conf`.                                                                                                                   |
-| **%LIBSUFFIX%**              | Library suffix (either 32 for 32-bit or 64 for 64-bit).                                                                                           |
-| **%PREFIX%**                 | Hard-coded prefix `/usr`.                                                                                                                         |
-| **%YJOBS%**                  | Job count without `-j` as set in `eopkg.conf`.                                                                                                    |
-| **%installroot%**            | Hard-coded install directory.                                                                                                                     |
-| **%libdir%**                 | The distribution’s default library directory, i.e. `/usr/lib64` (Alters for `emul32`).                                                            |
-| **%version%**                | Version of the package, as specified in the `version` key.                                                                                        |
-| **%workdir%**                | Hard-coded work directory (source tree).                                                                                                          |
-| **%kernel_version_lts%**     | Version of the `linux-lts` kernel.                                                                                                                |
-| **%kernel_version_current%** | Version of the `linux-current` kernel.                                                                                                            |
-| **%python2_version%**        | Version of the `python` (Python 2) distribution.                                                                                                  |
-| **%python3_version%**        | Version of the `python3` distribution.                                                                                                            |
+| Macro                        | Description                                                                                                                                    |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| **%ARCH%**                   | Indicates the current build architecture.                                                                                                      |
+| **%CC%**                     | C compiler.                                                                                                                                    |
+| **%CFLAGS%**                 | cflags as set in `eopkg.conf`.                                                                                                                 |
+| **%CONFOPTS%**               | Flags / options for configuration, such as `--prefix=%PREFIX%`. [Full List.](https://github.com/getsolus/ypkg/blob/v33/ypkg2/rc.yml#L446-L458) |
+| **%CXX%**                    | C++ compiler.                                                                                                                                  |
+| **%CXXFLAGS%**               | cxxflags as set in `eopkg.conf`.                                                                                                               |
+| **%JOBS%**                   | jobs, as set in `eopkg.conf`.                                                                                                                  |
+| **%LDFLAGS%**                | ldflags as set in `eopkg.conf`.                                                                                                                |
+| **%LIBSUFFIX%**              | Library suffix (either 32 for 32-bit or 64 for 64-bit).                                                                                        |
+| **%PREFIX%**                 | Hard-coded prefix `/usr`.                                                                                                                      |
+| **%YJOBS%**                  | Job count without `-j` as set in `eopkg.conf`.                                                                                                 |
+| **%installroot%**            | Hard-coded install directory.                                                                                                                  |
+| **%libdir%**                 | The distribution’s default library directory, i.e. `/usr/lib64` (Alters for `emul32`).                                                         |
+| **%version%**                | Version of the package, as specified in the `version` key.                                                                                     |
+| **%workdir%**                | Hard-coded work directory (source tree).                                                                                                       |
+| **%kernel_version_lts%**     | Version of the `linux-lts` kernel.                                                                                                             |
+| **%kernel_version_current%** | Version of the `linux-current` kernel.                                                                                                         |
+| **%python2_version%**        | Version of the `python` (Python 2) distribution.                                                                                               |
+| **%python3_version%**        | Version of the `python3` distribution.                                                                                                         |
 
 ## Variables
 
