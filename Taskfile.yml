@@ -41,3 +41,9 @@ tasks:
     cmds:
       - cmd: yarn cspell lint **/*.md*
         ignore_error: true
+
+    # Run prettier on all md/mdx files, note prettier behaviour is set in .prettier* files
+  lint:
+    desc: Run prettier on all .md* files
+    cmds:
+      - cmd: yarn prettier

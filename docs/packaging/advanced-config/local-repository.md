@@ -60,6 +60,7 @@ go-task build-localcp
 ```
 
 The `build-localcp` task will:
+
 - Build the current package against any existing packages in your local repository.
 - Copy the newly built package files to your local repository.
 - Re-index your local repository.
