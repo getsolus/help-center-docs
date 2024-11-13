@@ -27,7 +27,7 @@ Please lint and spellcheck your contributions before creating a pull request. We
 - This project includes `prettier` for markdown and code formatting
   - Command: `yarn prettier`
 - This project includes Cspell for spell-checking, and has a custom wordlist `.cspell-allowed-wordlist.txt`
-  - Command: `yarn cspell`
+  - Command: `go-task spellcheck`
   - Note that we use American spelling
   - If you use vscode with the Code Spell Checker extension, the custom dictionary will be used
   - You can tidy the allowed-wordlist with `go-task tidy-words`

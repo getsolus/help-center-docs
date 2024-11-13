@@ -27,19 +27,19 @@ The local repository index and any local eopkg files are stored in `/var/lib/sol
 
 ### Copying `.eopkg` files to the local repository
 
-To use your locally built `.eopkg` files as a dependencies for another package, you must copy the regular package file, and any accompanying `-devel` packages to the local repository directory `/var/lib/solbuild/local`.
+To use your locally built `.eopkg` package files as dependencies for another package, you must copy the regular package files, and any accompanying `-devel` package files to the `/var/lib/solbuild/local` local repository directory.
 
-For example, building the package `libcmis` produces the packages `libcmis` and `libcmis-devel`. Both should be copied to the local repository to build other packages against `libcmis`
+For example, building the package `libcmis` produces the packages `libcmis` and `libcmis-devel`. Both should be copied to the local repository to build other packages against `libcmis`.
 
 To copy all `.eopkg` files within a directory to the local repository, use the following command:
 
 ```bash
-sudo cp *.eopkg /var/lib/solbuild/local
+sudo cp -v *.eopkg /var/lib/solbuild/local
 ```
 
 ### Listing locally built eopkg files
 
-Use this to list all index and eopkg files in the local repo folder
+Use this to list all index and eopkg files in the local repository:
 
 ```bash
 go-task list-local
@@ -51,18 +51,33 @@ With the `.eopkg` files now present in the local repository, you can use them to
 
 Every time you run `go-task build-local`, all `.eopkg` files in the local repository will be re-indexed.
 
+### A streamlined local repository workflow for stack updates
+
+If you know ahead of time that you are going to need to put the package files from the current build into the local repository as dependencies for subsequent builds, you can use:
+
+```bash
+go-task build-localcp
+```
+
+The `build-localcp` task will:
+- Build the current package against any existing packages in your local repository.
+- Copy the newly built package files to your local repository.
+- Re-index your local repository.
+
+The `build-localcp` workflow can be very convenient when you are doing stack updates.
+
 ### Best practices when working with a solbuild local repository
 
 There are some important things to know when working with local repositories, as they may lead to issues later on.
 
-  - `solbuild` will use your version of a package from the local repository regardless of whether there's a higher release in the Solus repository. Therefore:
-  -  Only use `go-task build-local` when required
-  -  Remove old packages from the local repository when they are no longer needed, and rebuild its index with the following commands (this will remove all locally built eopkgs)
-  ```bash
-  go-task clean-local
-  go-task build-localindex
-  ```
-- If a package is already installed in the `solbuild` image, the release must be higher for it to be installed.
+- `solbuild` will use your version of a package from the local repository regardless of whether there's a higher release in the Solus repository. Therefore:
+  - Only use the `build-local` or `build-localcp` tasks when required.
+  - Old packages in the local repository can be removed with the `clean-local` task:
+    ```bash
+    go-task clean-local
+    ```
+    Note that the `clean-local` task will automatically re-index the (now empty) local repository.
+  - If a package is already installed in the `solbuild` image, the release number of the updated version must be higher for it to be installed and used as a dependency at build time.
 
 ## Installing packages from the local repository index
 
