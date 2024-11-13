@@ -25,7 +25,7 @@ Please lint and spellcheck your contributions before creating a pull request. We
 
 - Writing style should follow our [style guide](https://help.getsol.us/docs/user/contributing/style)
 - This project includes `prettier` for markdown and code formatting
-  - Command: `yarn prettier`
+  - Command: `go-task lint`
 - This project includes Cspell for spell-checking, and has a custom wordlist `.cspell-allowed-wordlist.txt`
   - Command: `go-task spellcheck`
   - Note that we use American spelling
