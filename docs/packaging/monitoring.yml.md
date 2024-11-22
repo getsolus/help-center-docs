@@ -28,15 +28,16 @@ go-task add-monitoring
 Which will create a file with the following contents:
 
 ```yaml
+# Remove all comments before submitting, except CPE check date if none found
 releases:
-  id: null # Check https://release-monitoring.org/
-  rss: null # For example https://github.com/PyO3/maturin/releases.atom
+  id: ~ # Check https://release-monitoring.org/
+  rss: ~ # For example https://github.com/PyO3/maturin/releases.atom
 # No known CPE, checked 2024-04-24
 security:
   cpe: ~
 ```
 
-You must, at minimum, fill out `id` and check if the package has a [CPE name](#what-is-a-cpe-name). `rss` should be deleted if no feed is available.
+You must, at minimum, fill out `id` and check if the package has an RSS feed and [CPE name](#what-is-a-cpe-name). If you can find no data for either of these fields, it must be set to `~`.
 
 ## systemd as an example
 
@@ -76,11 +77,11 @@ security:
 
 Fields used to monitor for new versions.
 
-| Field    | Type                        | Required ?              | Description                                                                                                                                                                                                                                              |
-| -------- | --------------------------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id`     | integer                     | Yes                     | Anitya ID from [release-monitoring.org](https://release-monitoring.org/)                                                                                                                                                                                 |
-| `ignore` | list of regular expressions | No                      | List of regular expressions enclosed in quotes matching versions to ignore. Include a comment explaining the ignored versions.                                                                                                                           |
-| `rss`    | URL                         | No, strongly encouraged | URL for a releases RSS feed. If the only RSS feed you can find for a project is a general "news" feed, don't include the field. For GitHub projects, you can use the "tags" or "releases" feed: `https://github.com/USER/REPOSITORY/tagsORreleases.atom` |
+| Field    | Type                        | Required ? | Description                                                                                                                                                                                                                                    |
+| -------- | --------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`     | integer                     | Yes        | Anitya ID from [release-monitoring.org](https://release-monitoring.org/)                                                                                                                                                                       |
+| `ignore` | list of regular expressions | No         | List of regular expressions enclosed in quotes matching versions to ignore. Include a comment explaining the ignored versions.                                                                                                                 |
+| `rss`    | URL                         | Yes        | URL for a releases RSS feed. If the only RSS feed you can find for a project is a general "news" feed, set it to `~`. For GitHub projects, you can use the "tags" or "releases" feed: `https://github.com/USER/REPOSITORY/tagsORreleases.atom` |
 
 ### Finding the Anitya ID
 
