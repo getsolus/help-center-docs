@@ -32,6 +32,7 @@ Matrix=@username:matrix.org
 
 We need to install a few things in order to get started with packaging:
 
+- `ent` is used by the `go-task updatecheck` command to check for updated versions of packaged software
 - `git` is used for version control of the Solus sources
 - `github-cli` is used to make working with GitHub easier
 - `go-task` is used by our build tools for scripting
@@ -42,7 +43,7 @@ We need to install a few things in order to get started with packaging:
 - `yq` is used by the `go-task add-monitoring` command to create new [`monitoring.yml`](/docs/packaging/monitoring.yml.md) files
 
 ```bash
-sudo eopkg it git github-cli go-task jq solbuild solbuild-config-unstable ypkg yq
+sudo eopkg it ent git github-cli go-task jq solbuild solbuild-config-unstable ypkg yq
 ```
 
 ## Setting up a GitHub account and Git
