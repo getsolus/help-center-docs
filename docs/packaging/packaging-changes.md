@@ -13,7 +13,69 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 ## 2024
 
+### December
+
+#### New go-task functionality to check for package updates
+
+- To use it, run `go-task updatecheck`
+- Makes use of the `ent` tool. See https://github.com/serpent-os/ent
+- Only checks packages with `monitoring.yml` files
+- `ent` has been added to the packaging requirements in [Prepare for Packaging](docs/packaging/prepare-for-packaging.md)
+
+#### Mandatory rss field in monitoring.yml
+
+- The `rss` field is now mandatory in monitoring.yml files. See the updated [monitoring.yml page](docs/packaging/monitoring.yml.md)
+
+### November
+
+#### AppStream metainfo is required for all graphical applications in the Solus repository
+
+- All packages providing a graphical application must include AppStream metainfo. For details see [AppStream metainfo page](/docs/packaging/appstream-metainfo.md)
+
+#### Add Sync Notes checkbox to PR template
+
+- The PR template now contains a checkbox used to recommend its inclusion into the next Sync Notes post
+
+#### Update solbuild images for eopkg/solbuild changes
+
+- The solbuild images have been refreshed due to extensive changes to both `solbuild` itself and `eopkg` (see [here](https://github.com/getsolus/packages/pull/4063) and [here](https://github.com/getsolus/packages/pull/3850) for details)
+- Packagers should re-initialize their solbuild images using `go-task solbuild-reset`
+
+### October
+
+#### Add check for monitoring.yml
+
+- Commits are now checked for `monitoring.yml` files and their inclusion is strongly recommended. See [monitoring.yml page](docs/packaging/monitoring.yml.md)
+
+#### Add check for included static libraries
+
+- Commits are now checked for included static libraries
+- Packages with necessary static libraries have to be added to the allow-list in `common/CI/config.yaml` in the `packages` repository
+
+#### Pre-filled commit titles for package inclusions and "No functional change"
+
+- Commit titles for package inclusion are now created with pre-filled version information (for example, "nano: Add at v1.2.3")
+- For "No functional change" commits with no changes to the `pspec_x86_64.xml` "[NFC]" is automatically added to the commit title
+
+### August
+
+#### Pre-filled commit titles for package updates
+
+- Commit titles for package updates are now created with pre-filled version information (for example, "nano: Update to 1.2.3")
+
+### June
+
+#### New go-task functionality to list packages without AppStream metadata
+
+- To use it, run `go-task check-appstream-progress`
+- Packages that should be ignored can be added to the list in `common/Scripts/appstream_ignored_packages.txt` in the `packages` repository
+
 ### May
+
+#### New go-task functionality to clean local repository
+
+- Removes all `.eopkg` files in the `solbuild` local repository and refreshes the index
+- To use it, run `go-task clean-local`
 
 #### Remove 'Test Plan' and 'Checklist' from commit messages
 

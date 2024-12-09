@@ -381,6 +381,7 @@ undeprecate
 unetbootin
 unikey
 untick
+updatecheck
 updaterc
 usermod
 usershare
