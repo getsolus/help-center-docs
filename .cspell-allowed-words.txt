@@ -1,7 +1,10 @@
 abcm
+absl
 ahci
 akonadi
+alfi
 alienware
+androidnisse
 anitya
 anthy
 anydesk
@@ -120,6 +123,7 @@ gconf
 geoclue
 getsol
 getsolus
+gezelius
 giflib
 gobject
 goroot
@@ -193,6 +197,7 @@ libimobiledevice
 libinput
 libjpeg
 libpinyin
+libpoppler
 libsharpyuv
 libspeex
 libspeexdsp
@@ -211,6 +216,7 @@ libz
 libzhuyin
 lifebook
 livingsilver
+localcp
 localrepo
 lpng
 luks
@@ -277,6 +283,7 @@ pngtopng
 poettering
 pomo
 pomodoneapp
+poppler
 portege
 posix
 powerline
@@ -355,6 +362,7 @@ spideroak
 squashfs
 ssim
 statuslines
+subpackaged
 subpackages
 sunvox
 synaptics
@@ -430,4 +438,5 @@ ypkg
 zcat
 zeroconf
 zhuyin
+zobel
 zram

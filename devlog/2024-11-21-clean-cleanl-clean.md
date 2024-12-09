@@ -60,4 +60,8 @@ We are always eager for people to join and spend their time contributing to Solu
 
 ## Closing thoughts
 
-I want to thank all the contributors that made all of this possible. It was such a wonderful effort from everyone and we will strive to keep that up. Let me know if you are interested in a follow-up blog about the detail of doing packaging for Solus. _Terima kasih dan sampai jumpa_!
+I want to thank all the contributors that made all of this possible. It was such a wonderful effort from everyone and we will strive to keep that up. Let me know if you are interested in a follow-up blog about the detail of doing packaging for Solus.
+
+<!-- cspell:disable-next-line -->
+
+_Terima kasih dan sampai jumpa_!
