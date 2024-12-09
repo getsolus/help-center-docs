@@ -47,21 +47,15 @@ There are multiple ways to create a pull request with GitHub, either from the we
 
 <Tabs groupId="opening-prs">
   <TabItem value="website" label="Website">
-    <p>
-    In the package folder, push your local changes to a remote branch:
-
+    <p>In the package folder, push your local changes to a remote branch:</p>
     <CodeBlock language="bash">
       git push
     </CodeBlock>
-    </p>
     <Admonition type="info">
       If you've created your own branch, as recommended, the CLI tool will show you a new command to create and push to a remote branch matching the local one. Run this.
     </Admonition>
-    <p>
-    Once the commit is successfully pushed, you'll notice that a URL will be provided that will immediately allow you to create a pull request with your changes.
-
-    Run `git status` one last time to make sure your branch is clean. If it is:
-
+    <p>Once the commit is successfully pushed, you'll notice that a URL will be provided that will immediately allow you to create a pull request with your changes.</p>
+    <p>Run `git status` one last time to make sure your branch is clean. If it is:</p>
     1. Open the link.
     2. Fill in a summary of your changes (usually the same as the commit message).
     3. Link any relevant issues:
@@ -69,21 +63,15 @@ There are multiple ways to create a pull request with GitHub, either from the we
        - If you need a change to depend on another change, mention it in the PR summary too: `Depends on #234`.
     4. Double-check everything.
     5. Create the pull request!
-    </p>
 
   </TabItem>
   <TabItem value="github-cli" label="GitHub CLI">
-    <p>
-    In the package folder, run the `gh` command:
-    </p>
+    <p>In the package folder, run the `gh` command:</p>
     <CodeBlock language="bash">
       gh pr create
     </CodeBlock>
-    <p>
-    This will start an interactive session to create your pull request step-by-step.
-
-    When the current branch isn't fully pushed to a git remote, a prompt will ask where to push the branch and offer an option to fork the base repository. For community packagers, you should use your fork of the packages repository. If you are a member of the Solus Staff, you should use `getsolus/packages`.
-    </p>
+    <p>This will start an interactive session to create your pull request step-by-step.</p>
+    <p>When the current branch isn't fully pushed to a git remote, a prompt will ask where to push the branch and offer an option to fork the base repository. For community packagers, you should use your fork of the packages repository. If you are a member of the Solus Staff, you should use `getsolus/packages`.</p>
     <Admonition type="info">
       The text editor used by `github-cli` may not the same one that `git` uses. To change this, consult the [`gh config set` command](https://cli.github.com/manual/gh_config_set).
     </Admonition>
