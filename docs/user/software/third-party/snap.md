@@ -6,8 +6,8 @@ summary: Working with snaps
 # Snap
 
 :::warning
-Note that snaps are going to be [removed from Solus in the future][2],
-and are not fully confined in Solus with Linux 6.9 and newer.
+Snaps will be [**removed from Solus in early January 2025**][2],
+and are not fully confined in Solus with Linux kernel 6.9 and newer.
 See the section on confinement below.
 :::
 
