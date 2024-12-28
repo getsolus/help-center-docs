@@ -3,7 +3,6 @@ title: Prepare for Packaging
 summary: Quick guide on getting your system set up for packaging on Solus
 sidebar_position: 1
 ---
-
 # Prepare for packaging
 
 ## Switch to the Unstable repository
@@ -120,8 +119,16 @@ After cloning your repository, create a symlink to source the helper functions f
 
 ```bash
 mkdir -p ~/.bashrc.d
+chmod 700 ~/.bashrc.d
 ln -s ~/solus-packages/common/Scripts/helpers.sh ~/.bashrc.d/solus-monorepo-helpers.sh
+source ~/.bashrc
 ```
+
+:::note
+
+By default, the system will load all files in `~/.bashrc.d` through code in `.bashrc`
+
+:::
 
 ### fish
 
@@ -132,25 +139,52 @@ ln -s ~/solus-packages/common/Scripts/helpers.fish ~/.config/fish/conf.d/solus.f
 
 ### zsh
 
+:::note
+
+If you already have a customized `.zshrc` or config for `zsh`, you'll need to adapt these commands or edit your config by hand
+
+:::
+
 ```bash
 mkdir -p ~/.zshrc.d
+chmod 700 ~/.zshrc.d
 printf "\nfpath=(~/.zshrc.d \$fpath)" >> ~/.zshrc
-source ~/.zshrc
 ln -s ~/solus-packages/common/Scripts/helpers.zsh ~/.zshrc.d/solus-monorepo-helpers.zsh
+source ~/.zshrc
+```
+
+This is what you need in your `.zshrc` (or another file loaded by `zsh`)
+
+:::note
+
+You may have more than what is shown here if you have customized things
+
+:::
+
+```bash
+fpath=($HOME/.zshrc.d $fpath)
+autoload -U $HOME/.zshrc.d/*
+```
+
+Verify that `$fpath` contains the needed directory with:
+
+```bash
+echo $fpath | grep .zshrc.d
 ```
 
 ---
 
 You should now have the following available from your shell:
 
-| Function          | Description                                                                                                                                   | Usage                         |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
-| **cpesearch**     | Search for CPE Names for packages. For use when writing the [`monitoring.yml`](/docs/packaging/monitoring.yml.md) file for a package          | `cpesearch search-term`       |
-| **goroot**        | When in the Solus packages repository, change directory to the root directory.                                                                | `goroot`                      |
-| **gotopkg**       | Change directory to any Solus package. You can type part of the package name then double press `Tab` to get autocompletion for this function. | `gotopkg firefox`             |
-| **gotosoluspkgs** | Change directory to the Solus packages repository from anywhere on the filesystem.                                                            | `gotosoluspkgs`               |
-| **whatprovides**  | Find out what package provides a library by reading the `abi_libs` files.                                                                     | `whatprovides libfoobar.so.1` |
-| **whatuses**      | Find out what packages use a library by reading the `abi_used_libs` files.                                                                    | `whatuses libfoobar.so.1`     |
+
+| Function          | Description                                                                                                                                  | Usage                         |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| **cpesearch**     | Search for CPE Names for packages. For use when writing the[`monitoring.yml`](/docs/packaging/monitoring.yml.md) file for a package          | `cpesearch search-term`       |
+| **goroot**        | When in the Solus packages repository, change directory to the root directory.                                                               | `goroot`                      |
+| **gotopkg**       | Change directory to any Solus package. You can type part of the package name then double press`Tab` to get autocompletion for this function. | `gotopkg firefox`             |
+| **gotosoluspkgs** | Change directory to the Solus packages repository from anywhere on the filesystem.                                                           | `gotosoluspkgs`               |
+| **whatprovides**  | Find out what package provides a library by reading the`abi_libs` files.                                                                     | `whatprovides libfoobar.so.1` |
+| **whatuses**      | Find out what packages use a library by reading the`abi_used_libs` files.                                                                    | `whatuses libfoobar.so.1`     |
 
 ## Building packages
 
