@@ -141,15 +141,20 @@ ln -s ~/solus-packages/common/Scripts/helpers.fish ~/.config/fish/conf.d/solus.f
 
 :::note
 
-If you already have a customized `.zshrc` or config for `zsh`, you'll need to adapt these commands or edit your config by hand
+If you already have a customized `.zshrc` or config for `zsh`, you'll need to adapt these commands or edit your config by hand (e.g. instead of using the `cat` command)
 
 :::
 
 ```bash
 mkdir -p ~/.zshrc.d
 chmod 700 ~/.zshrc.d
-printf "\nfpath=(~/.zshrc.d \$fpath)" >> ~/.zshrc
-ln -s ~/solus-packages/common/Scripts/helpers.zsh ~/.zshrc.d/solus-monorepo-helpers.zsh
+cat <<eos >>! ~/.testrc
+fpath=(\$HOME/.zshrc.d \$fpath)
+autoload -U \$HOME/.zshrc.d/*
+source \$HOME/.zshrc.d/solus-monorepo-helpers.zsh
+
+eos
+
 source ~/.zshrc
 ```
 
@@ -164,6 +169,7 @@ You may have more than what is shown here if you have customized things
 ```bash
 fpath=($HOME/.zshrc.d $fpath)
 autoload -U $HOME/.zshrc.d/*
+source $HOME/.zshrc.d/solus-monorepo-helpers.zsh
 ```
 
 Verify that `$fpath` contains the needed directory with:
