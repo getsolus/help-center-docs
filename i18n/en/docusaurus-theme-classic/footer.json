@@ -64,7 +64,7 @@
     "description": "The label of footer link with label=Security linking to https://github.com/getsolus/packages/blob/main/SECURITY.md"
   },
   "copyright": {
-    "message": "Copyright © 2024 Solus Project. Built with Docusaurus.",
+    "message": "Copyright © 2025 Solus Project. Built with Docusaurus.",
     "description": "The footer copyright"
   }
 }
