@@ -148,9 +148,8 @@ If you already have a customized `.zshrc` or config for `zsh`, you'll need to ad
 ```bash
 mkdir -p ~/.zshrc.d
 chmod 700 ~/.zshrc.d
-cat <<eos >>! ~/.testrc
+cat <<eos >>! ~/.zshrc
 fpath=(\$HOME/.zshrc.d \$fpath)
-autoload -U \$HOME/.zshrc.d/*
 source \$HOME/.zshrc.d/solus-monorepo-helpers.zsh
 
 eos
