@@ -3,6 +3,7 @@ title: Prepare for Packaging
 summary: Quick guide on getting your system set up for packaging on Solus
 sidebar_position: 1
 ---
+
 # Prepare for packaging
 
 ## Switch to the Unstable repository
@@ -182,9 +183,8 @@ echo $fpath | grep .zshrc.d
 
 You should now have the following available from your shell:
 
-
 | Function          | Description                                                                                                                                  | Usage                         |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
 | **cpesearch**     | Search for CPE Names for packages. For use when writing the[`monitoring.yml`](/docs/packaging/monitoring.yml.md) file for a package          | `cpesearch search-term`       |
 | **goroot**        | When in the Solus packages repository, change directory to the root directory.                                                               | `goroot`                      |
 | **gotopkg**       | Change directory to any Solus package. You can type part of the package name then double press`Tab` to get autocompletion for this function. | `gotopkg firefox`             |

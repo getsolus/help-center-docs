@@ -17,6 +17,7 @@ asus
 atheros
 autodep
 autogen
+autoload
 autoplay
 avahi
 ayatana
@@ -152,6 +153,7 @@ installroot
 insync
 ipofyourscanner
 issuenumber
+jakob
 journalctl
 kactivitymanagerd
 katemetainfos
@@ -217,6 +219,7 @@ libzhuyin
 lifebook
 livingsilver
 localcp
+localindex
 localrepo
 lpng
 luks
