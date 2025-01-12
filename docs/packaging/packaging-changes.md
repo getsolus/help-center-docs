@@ -11,6 +11,15 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 - This list is not exhaustive
 - This list is in _reverse chronological order_ (newest first)
 
+## 2025
+
+### January
+
+#### `monitoring.yml` changed to `monitoring.yaml`
+
+- The file extension used by `monitoring.yml` was changed to `monitoring.yaml`
+- This allows us to use some Serpent OS tooling and share the `monitoring.yaml` files
+
 ## 2024
 
 ### December
@@ -19,12 +28,12 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 - To use it, run `go-task updatecheck`
 - Makes use of the `ent` tool. See https://github.com/serpent-os/ent
-- Only checks packages with `monitoring.yml` files
+- Only checks packages with `monitoring.yaml` files
 - `ent` has been added to the packaging requirements in [Prepare for Packaging](docs/packaging/prepare-for-packaging.md)
 
-#### Mandatory rss field in monitoring.yml
+#### Mandatory rss field in monitoring.yaml
 
-- The `rss` field is now mandatory in monitoring.yml files. See the updated [monitoring.yml page](docs/packaging/monitoring.yml.md)
+- The `rss` field is now mandatory in monitoring.yaml files. See the updated [monitoring.yaml page](docs/packaging/monitoring.yaml.md)
 
 ### November
 
@@ -43,9 +52,9 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 ### October
 
-#### Add check for monitoring.yml
+#### Add check for monitoring.yaml
 
-- Commits are now checked for `monitoring.yml` files and their inclusion is strongly recommended. See [monitoring.yml page](docs/packaging/monitoring.yml.md)
+- Commits are now checked for `monitoring.yaml` files and their inclusion is strongly recommended. See [monitoring.yaml page](docs/packaging/monitoring.yaml.md)
 
 #### Add check for included static libraries
 
@@ -94,9 +103,9 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 ### February
 
-#### Begin adding `monitoring.yml` to packages
+#### Begin adding `monitoring.yaml` to packages
 
-- A new per-package file was introduced: `monitoring.yml`. Used to monitor packages for releases and security advisories; see [monitoring.yml](docs/packaging/monitoring.yml.md).
+- A new per-package file was introduced: `monitoring.yaml`. Used to monitor packages for releases and security advisories; see [monitoring.yaml](docs/packaging/monitoring.yaml.md).
 - This is not enforced by automatic checks yet, but we may ask that it be added.
 
 ## 2023

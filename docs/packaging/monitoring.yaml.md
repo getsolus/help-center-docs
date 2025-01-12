@@ -1,25 +1,25 @@
 ---
 title: Monitoring YAML
-summary: The purpose and format of monitoring.yml
+summary: The purpose and format of monitoring.yaml
 ---
 
-# `monitoring.yml`
+# `monitoring.yaml`
 
 :::important
 
-A `monitoring.yml` file is strongly suggested, but not yet required for Solus packages.
+A `monitoring.yaml` file is strongly suggested, but not yet required for Solus packages.
 
 :::
 
-A `monitoring.yml` file is included in the Packages repository directory for every Solus package to enable automatic scanning for new releases and security advisories.
+A `monitoring.yaml` file is included in the Packages repository directory for every Solus package to enable automatic scanning for new releases and security advisories.
 
 Checking for new releases is done by mapping the Solus package to an [Anitya](https://github.com/fedora-infra/anitya) ID. _Anitya_ is a Red Hat project, part of [release-monitoring.org](https://release-monitoring.org/)
 
 Checking for security advisories ([CVEs](https://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures)), is done by mapping the Solus package to a _Common Platform Enumeration Name_ ([CPE](https://nvd.nist.gov/products/cpe)) from the National Vulnerability Database.
 
-## Adding monitoring.yml to an existing package
+## Adding monitoring.yaml to an existing package
 
-To add a `monitoring.yml` file to an existing package you can use the following `go-task` command to add a template file, starting from within the directory containing the `package.yml` for a given package:
+To add a `monitoring.yaml` file to an existing package you can use the following `go-task` command to add a template file, starting from within the directory containing the `package.yml` for a given package:
 
 ```bash
 go-task add-monitoring
@@ -41,19 +41,19 @@ You must, at minimum, fill out `id` and check if the package has an RSS feed and
 
 ## systemd as an example
 
-Let's look at the `monitoring.yml` file for `systemd` as an example.
+Let's look at the `monitoring.yaml` file for `systemd` as an example.
 
 The `systemd` directory in the Packages repository looks like this:
 
 ```text
 systemd
-├── monitoring.yml
+├── monitoring.yaml
 ├── package.yml
 ├── pspec_x86_64.xml
 └── *lots of other files we can ignore*
 ```
 
-The `monitoring.yml` looks like this:
+The `monitoring.yaml` looks like this:
 
 ```yaml
 releases:
