@@ -176,8 +176,8 @@ In the cases where you are not updating a package to a new version, but simply a
   - `package: Add homepage`
 - Fix a packaging issue (including adding a patch to fix the package)
   - `package: Fix (...)`
-- Updating a README, [monitoring.yml file](monitoring.yml.md) or other stuff that does not directly _change_ the package, meaning the package release number didn't need a bump:
-  - `package: [NFC] Add README.md and monitoring.yml`
+- Updating a README, [monitoring.yaml file](monitoring.yaml.md) or other stuff that does not directly _change_ the package, meaning the package release number didn't need a bump:
+  - `package: [NFC] Add README.md and monitoring.yaml`
 
 As stated previously, `[NFC]` is an abbreviation of "No Functional Change".
 
