@@ -185,7 +185,7 @@ You should now have the following available from your shell:
 
 | Function          | Description                                                                                                                                  | Usage                         |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
-| **cpesearch**     | Search for CPE Names for packages. For use when writing the[`monitoring.yaml`](/docs/packaging/monitoring.yaml.md) file for a package          | `cpesearch search-term`       |
+| **cpesearch**     | Search for CPE Names for packages. For use when writing the[`monitoring.yaml`](/docs/packaging/monitoring.yaml.md) file for a package        | `cpesearch search-term`       |
 | **goroot**        | When in the Solus packages repository, change directory to the root directory.                                                               | `goroot`                      |
 | **gotopkg**       | Change directory to any Solus package. You can type part of the package name then double press`Tab` to get autocompletion for this function. | `gotopkg firefox`             |
 | **gotosoluspkgs** | Change directory to the Solus packages repository from anywhere on the filesystem.                                                           | `gotosoluspkgs`               |
