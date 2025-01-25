@@ -5,6 +5,8 @@ summary: A quick introduction to the XFCE Edition of Solus
 
 # XFCE Desktop
 
+![Solus XFCE](/img/XFCE.jpg)
+
 XFCE is provided by the XFCE Edition of Solus. It is described as:
 
 > Xfce is a lightweight desktop environment for UNIX-like operating systems. It aims to be fast and low on system resources, while still being visually appealing and user friendly.

@@ -5,7 +5,7 @@ summary: A quick introduction to the Plasma edition of Solus
 
 # Plasma
 
-![Solus Plasma](plasma.jpg)
+![Solus Plasma](/img/Plasma.jpg)
 
 The _Plasma_ desktop is a graphical user interface for Linux distributions that aims to offer users an intuitive and customizable user interface to interact with their devices. The Plasma desktop is developed by KDE.
 

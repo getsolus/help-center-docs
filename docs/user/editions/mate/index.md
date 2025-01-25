@@ -5,6 +5,8 @@ summary: A quick introduction to the MATE Edition of Solus
 
 # MATE Desktop
 
+![Solus MATE](/img/MATE.jpg)
+
 :::caution
 
 The MATE Edition is deprecated. XFCE has been included to replace it. See the Solus 4.4 blog post [here](https://getsol.us/2023/07/08/solus-4-4-released/)
