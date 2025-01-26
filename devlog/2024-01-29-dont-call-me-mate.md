@@ -6,13 +6,13 @@ tags: [MATE, devlog, solus]
 hide_table_of_contents: false
 ---
 
-Back in our [4.4 release post](https://getsol.us/2023/07/08/solus-4-4-released/) we announced that Solus would stop shipping a MATE ISO, mostly because MATE showed no signs of moving away from X11 and towards wayland. At the beginning of this year, we shipped our new XFCE ISO as a beta. And now we're getting ready to ship the _Solus MATE Transition Tool_ to move existing users off of MATE.
+Back in our [4.4 release post](https://getsol.us/2023/07/08/solus-4-4-released/) we announced that Solus would stop shipping a MATE ISO, mostly because MATE showed no signs of moving away from X11 and towards wayland. At the beginning of this year, we shipped our new Xfce ISO as a beta. And now we're getting ready to ship the _Solus MATE Transition Tool_ to move existing users off of MATE.
 
 <!-- truncate -->
 
 ## The problem
 
-MATE and XFCE are similar enough that eager Solusians can, and have, installed XCFE on their MATE machines with nothing more than a couple of `eopkg` commands. We're pretty sure our resident `bash` script enthusiast (ermo) could hammer out a working transition script in an evening. But we want a more polished experience. We know _you_ follow Solus news; after all, you're reading this. However, we assume there are users who dutifully update their systems, but have no interest in keeping up with our blog posts. How do we get their attention and prompt them to move away from MATE?
+MATE and Xfce are similar enough that eager Solusians can, and have, installed XCFE on their MATE machines with nothing more than a couple of `eopkg` commands. We're pretty sure our resident `bash` script enthusiast (ermo) could hammer out a working transition script in an evening. But we want a more polished experience. We know _you_ follow Solus news; after all, you're reading this. However, we assume there are users who dutifully update their systems, but have no interest in keeping up with our blog posts. How do we get their attention and prompt them to move away from MATE?
 
 ## Introducing the Solus MATE Transition Tool
 
@@ -32,7 +32,7 @@ These screenshots are current as of the publishing of this post, we may change t
 
 ![MATE Transition Tool Launch](img/2024-01-29-dont-call-me-mate/MTT-launch.png)
 
-3. Users select either Solus Budgie or Solus XFCE. The tool installs the selected edition, removes MATE, and prompts for a reboot
+3. Users select either Solus Budgie or Solus Xfce. The tool installs the selected edition, removes MATE, and prompts for a reboot
 4. The tool removes itself after a successful transition.
 
 Simple. At least, that's what we want users to think.

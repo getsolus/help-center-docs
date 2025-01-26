@@ -1,8 +1,8 @@
 ---
 title: Configuration
-summary: Help for configuring XFCE on Solus
+summary: Help for configuring Xfce on Solus
 ---
 
 # Configuration
 
-TODO: Add configuration snippets for XFCE
+TODO: Add configuration snippets for Xfce

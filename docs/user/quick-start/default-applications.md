@@ -28,7 +28,7 @@ Each Linux desktop environment has its own graphical application for managing fi
 | Budgie  | Nemo                            |
 | GNOME   | GNOME Files (formerly Nautilus) |
 | Plasma  | Dolphin                         |
-| XFCE    | Nemo                            |
+| Xfce    | Nemo                            |
 
 ### Nemo
 
@@ -107,7 +107,7 @@ Finnish language support is provided by installing `libreoffice-voikko`. After i
 | Budgie  | Rhythmbox   |
 | GNOME   | Rhythmbox   |
 | Plasma  | Elisa       |
-| XFCE    | Rhythmbox   |
+| Xfce    | Rhythmbox   |
 
 ### Rhythmbox
 
@@ -124,7 +124,7 @@ Finnish language support is provided by installing `libreoffice-voikko`. After i
 | Budgie  | Celluloid (formerly GNOME MPV) |
 | GNOME   | Celluloid (formerly GNOME MPV) |
 | Plasma  | Haruna                         |
-| XFCE    | Parole                         |
+| Xfce    | Parole                         |
 
 ### Celluloid
 

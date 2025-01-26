@@ -124,7 +124,7 @@ In order to support user-managed (as opposed to system-managed) shares, Samba pr
 
 ### GUI - configuring shares via file manager plugins
 
-The default Solus configuration was written with the `nemo-share` (Budgie and XFCE), `nautilus-share` (GNOME), and `kdenetwork-filesharing` (Plasma) file manager plugins in mind. These plugins allow the user to share folders in an easy and convenient way.
+The default Solus configuration was written with the `nemo-share` (Budgie and Xfce), `nautilus-share` (GNOME), and `kdenetwork-filesharing` (Plasma) file manager plugins in mind. These plugins allow the user to share folders in an easy and convenient way.
 
 All you need to do is to install either the `caja-extensions` package (which includes the `caja-share` plugin), the `kdenetwork-filesharing` package, the `nautilus-share` package or the `nemo-share` package from the Software Center and enable the relevant Samba services.
 
@@ -138,7 +138,7 @@ sudo eopkg install nautilus-share
 # Plasma
 sudo eopkg install kdenetwork-filesharing
 
-# XFCE
+# Xfce
 sudo eopkg install nemo-share
 ```
 
