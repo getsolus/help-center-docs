@@ -77,7 +77,7 @@ console.log("Hello, world!");
     - Solus Budgie
     - Solus GNOME
     - Solus Plasma
-    - Solus XFCE
+    - Solus Xfce
 - Repositories
   - Avoid using terms such as _repo_, or _monorepo_, use the specific repository name instead.
   - Example: "The packages repository", instead of "The monorepo".

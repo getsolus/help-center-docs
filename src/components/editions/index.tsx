@@ -53,7 +53,7 @@ const Editions = [
     ),
   },
   {
-    name: "XFCE",
+    name: "Xfce",
     url: "xfce",
     urlConfig: "xfce/configuration",
     urlTips: "xfce/tips-and-tricks",
