@@ -10,7 +10,7 @@ This article will go over updating a package that is already in the Solus packag
 
 :::note
 
-**Please [look to see if an issue has been filed](https://github.com/getsolus/packages/issues?q=label%3A%22Package+Request%22) for the software update**.
+**Please [look to see if an issue has been filed](https://github.com/getsolus/packages/labels/Package%3A%20Update%20Request) for the software update**.
 If there is an existing request, please add a link to it in your pull request. Ex:
 
 ```

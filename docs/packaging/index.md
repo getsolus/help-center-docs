@@ -18,7 +18,7 @@ This is the overall workflow for creating or updating a package.
 
 Please check the following:
 
-- Search [open package requests](https://github.com/getsolus/packages/issues?q=label%3A%22Package+Request%22) to see if there is one for the package. If there isn't an existing issue, go ahead and submit your pull request. If there is already a pull request, please check its status to avoid duplicating work.
+- Search [open package requests](https://github.com/getsolus/packages/issues?q=sort%3Aupdated-desc+is%3Aopen+label%3A%22Package%3A+Addition+Request%22) to see if there is one for the package. If there isn't an existing issue, go ahead and submit your pull request. If there is already a pull request, please check its status to avoid duplicating work.
 - If you are submitting a pull request for the inclusion of software in the repo, the package has a corresponding package request that is **accepted for inclusion** or is a dependency of a package that has been accepted into the repository.
 
 ## Building packages
