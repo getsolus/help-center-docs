@@ -56,7 +56,7 @@ If booting into the previous kernel doesn't solve the issue, there may be an iss
 
 ## Boot failure
 
-If Solus partially boots, you can generally get to a TTY using `Ctrl+Alt+F2` to login and be able to run commands just like using a terminal. This enables you to run some commands to identify or resolve the issue.
+If Solus partially boots, you can generally get to a TTY using `Ctrl+Alt+F3` to login and be able to run commands just like using a terminal. This enables you to run some commands to identify or resolve the issue.
 
 ### Display manager won't start
 
