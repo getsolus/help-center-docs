@@ -101,15 +101,19 @@ Create a local clone of the package repository you just forked. Here we are usin
 gh repo clone packages ~/solus-packages
 ```
 
-## Initialize git hooks
+## Initialize git hooks for linting
 
-Initialize Git hooks for working with the repository by running:
+The process of checking whether package recipes have issues is sometimes referred to as _linting_.
+
+Initialize Git hooks that call the linting scripts for working with the repository by running:
 
 ```
 go-task -d ~/solus-packages init
 ```
 
-This makes it easy to create commits in the correct format, and will warn you about issues with changes you commit.
+Using git hooks means that linting happens automatically whenever you try to commit changes.
+
+Thus, this makes it easy to create commits in the correct format, and will warn you about issues with changes you commit.
 
 ## Set up repository helper functions (optional)
 
