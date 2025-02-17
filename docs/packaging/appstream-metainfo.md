@@ -7,13 +7,13 @@ summary: The purpose and format of Appstream Metainfo
 
 :::important
 
-AppStream metainfo is required for all graphical application in Solus repository.
+AppStream metainfo is required for all graphical applications in the Solus repository.
 
 :::
 
 AppStream allows upstream projects to define metadata about the components they provide using small XML files, metainfo files, which get installed into locations on the client system and are used by distributors to enhance their metadata.
 
-AppStream metainfo become a requirement for all graphical application in Solus repository because software centers such as GNOME software and KDE Discover rely on it to display applications that are available in repository. AppStream metainfo should be shipped by the upstream project, bundled in with its source, but sometimes upstream projects don't do so. In which case, packagers are required to add AppStream metainfo themselves.
+AppStream metainfo has become a requirement for all graphical application in Solus repository because software centers such as GNOME Software and KDE Discover rely on it to display applications that are available in the repository. AppStream metainfo should be shipped by the upstream project, bundled in with its source, but sometimes it isn't. In this case, packagers are required to add AppStream metainfo themselves.
 
 ## Adding appstream metainfo to an existing package
 
@@ -29,7 +29,7 @@ There are a few scenarios that Packagers might encounter:
 
 AppStream metainfo is to be installed in the `/usr/share/metainfo/` directory. It must be placed in the package which should be installed in order to get the software described by the respective metadata. This means that you might need to move the _.metainfo.xml or _.appdata.xml to the right (sub)package.
 
-In case your AppStream metainfo is describing a desktop-application (you can tell by the XML root-node having a type="desktop-application" or type="desktop" attribute), the .appdata.xml file must be placed in the same package as the .desktop file already is, which (as above) must be the package containing the application itself.
+In case your AppStream metainfo is describing a desktop application (you can tell by the XML root-node having a type="desktop-application" or type="desktop" attribute), the .appdata.xml file must be placed in the same package as the .desktop file already is, which (as above) must be the package containing the application itself.
 
 ## Testing appstream metainfo
 
