@@ -7,7 +7,7 @@ import Grid2 from "@mui/material/Unstable_Grid2";
 const Doc = ({ title, img, description, link }: DocSection) => {
   return (
     <Grid2 key={`Doc-Grid-${title}`} xs={6}>
-      <Box className="card shadow--lw" sx={{ p: 6 }}>
+      <Box className="shadow--lw" sx={{ p: 6 }}>
         <Stack alignItems="center" gap={2} textAlign="center">
           {img}
           <Link to={link}>

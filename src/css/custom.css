@@ -6,6 +6,10 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  --marble: #f1f1f1;
+  --dark: #1f1f1f;
+
+  --ifm-card-background-color: var(--marble);
   --ifm-color-primary: #2374d3;
   --ifm-color-primary-dark: #2068be;
   --ifm-color-primary-darker: #1e63b3;
@@ -21,6 +25,7 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
+  --ifm-card-background-color: var(--dark);
   --ifm-color-primary: #5294e2;
   --ifm-color-primary-dark: #3884de;
   --ifm-color-primary-darker: #2a7cdb;
@@ -29,4 +34,9 @@
   --ifm-color-primary-lighter: #7aace9;
   --ifm-color-primary-lightest: #a1c5ef;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.card--bg {
+  background-color: var(--ifm-card-background-color);
+  border-radius: var(--ifm-card-border-radius);
 }
