@@ -5,21 +5,6 @@ import LanguageIcon from "@mui/icons-material/Language";
 import MastodonIcon from "@site/static/img/icons/mastodon.svg";
 
 export const People: Record<string, Person> = {
-  AlexanderVorobyev: {
-    description: "",
-    matrix: "@flabb:matrix.org",
-    names: {
-      first: "Alexander",
-      last: "Vorobyev",
-    },
-    websites: [
-      {
-        icon: GitHubIcon,
-        to: "https://github.com/aleksvor",
-        type: WebsiteType.GITHUB,
-      },
-    ],
-  },
   AlgentAlbrahimi: {
     description: "",
     matrix: "@algent:matrix.org",
@@ -106,26 +91,6 @@ export const People: Record<string, Person> = {
       },
     ],
   },
-  IkeyDoherty: {
-    description: "",
-    matrix: "@ikeydoherty:matrix.org",
-    names: {
-      first: "Ikey",
-      last: "Doherty",
-    },
-    websites: [
-      {
-        icon: GitHubIcon,
-        to: "https://github.com/ikeycode",
-        type: WebsiteType.GITHUB,
-      },
-      {
-        icon: MastodonIcon,
-        to: "https://fosstodon.org/@ikey",
-        type: WebsiteType.MASTODON,
-      },
-    ],
-  },
   JoeyRiches: {
     description: "",
     matrix: "@joebonrichie:matrix.org",
@@ -168,26 +133,6 @@ export const People: Record<string, Person> = {
         icon: GitHubIcon,
         to: "https://github.com/ReillyBrogan",
         type: WebsiteType.GITHUB,
-      },
-    ],
-  },
-  RuneMorling: {
-    description: "",
-    matrix: "@ermo:matrix.org",
-    names: {
-      first: "Rune",
-      last: "Morling",
-    },
-    websites: [
-      {
-        icon: GitHubIcon,
-        to: "https://github.com/ermo",
-        type: WebsiteType.GITHUB,
-      },
-      {
-        icon: MastodonIcon,
-        to: "https://fosstodon.org/@ermo",
-        type: WebsiteType.MASTODON,
       },
     ],
   },
