@@ -23,9 +23,10 @@ Users want to use a stable operating system, and so do we. It's never a good exp
 
 There are a few ways we accomplish this:
 
-- Not updating packages to new versions just for the sake of having the latest version.
-- Testing all package updates before pushing them to all users.
-- Being responsive about addressing new issues.
+- Use a "stable-rolling" model: Install once and update forever.
+- Don't update packages to new versions just for the sake of having the latest version.
+- Test all package updates before pushing them to all users.
+- Be responsive about addressing new issues.
 
 All software has bugs, and inevitably, some will slip through the cracks. However, we believe that our approach and methodology strike the best balance between having the latest software and having the greatest stability.
 
