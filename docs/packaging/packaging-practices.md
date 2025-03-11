@@ -296,26 +296,86 @@ install -m 0644 $pkgfiles/profile $installdir/etc/profile
 
 ## Patterns
 
-In most instances, `ypkg` will assign the correct location for files, whether it be in the main `name` package, or a subpackage. However there may be instances where the default does not match the intended behaviour.
+In most instances, `ypkg` will assign the correct location for files, whether it be in the main `name` package, or a subpackage. However, there may be instances where the default does not match the intended behaviour.
 
-In these instances it is possible to override the default assignment by way of patterns. These are simply a list of paths or globs to ensure a particular file, or set of files, end up in the desired location.
+In these instances, it is possible to override the default assignment by way of patterns. These are simply a list of paths or globs to ensure a particular file, or set of files, end up in the desired package.
 
 The `patterns` key expects a `dict(s)` argument. The default key for each pattern is assumed to be the `name` of the package, so omitting the name would place files into the main package. The value should be a path or pattern you wish to match, ensuring files go to a specific location.
 
+### Naming
+
+There are two ways to name a pattern. Say you have a package named `foo`, and you want to create a subpackage `foo-bar`. You can do this by creating a pattern with the key `bar`. The name of the key will be appended to the name of the package.
+
+```yaml
+name       : foo
+patterns   :
+    - bar :
+        - [ ... ]
+```
+
+If you don't want the name of the subpackage to start with the name of the main package, you can do that, too. Keys starting with a `^` character will not prepend the base package name to the name of the subpackage. If you want to create a package named `bar` from the `foo` package, it would look like this:
+
+```yaml
+name       : foo
+patterns   :
+    - ^bar :
+        - [ ... ]
+```
+
+### Customizing subpackages
+
+Often with subpackages, you will want a different component, summary, description, license, or runtime dependencies than the base package. This can be accomplished by turning the keys keys you want to change into lists of `dict(s)`. The key for each entry follows the same rules as the `patterns` key outlined above.
+
+If you have package `foo` and subpackage `foo-bar`, changing the properties would look like this:
+
+```yaml
+name       : foo
+license    :
+    - bar : MIT
+    - Apache-2.0
+component  :
+    - bar : desktop
+    - desktop.library
+summary    :
+    - bar : This summary applies to the bar subpackage
+    - This summary applies to the foo package
+rundeps    :
+    - bar :
+        - foo
+patterns   :
+    - bar :
+        - [ ... ]
+```
+
+:::note
+
+Usually, packages will automatically depend on created subpackages by default. Consider making the subpackages depend on the base package instead by adding it as a runtime dependency.
+
+:::
+
+### Examples
+
 In this example from `libjpeg-turbo`, we move all documentation into the `docs` subpackage:
 
-```
-patterns:
-    - docs: [/usr/share/man]
+```yaml
+patterns   :
+    - docs : [/usr/share/man]
 ```
 
 This example, taken from the `wayland` package, ensures the binaries from `/usr/bin` and the directory `/usr/share/wayland` are located in the `devel` subpackage:
 
-```
-patterns:
-    - devel:
+```yaml
+patterns   :
+    - devel :
         - /usr/bin
         - /usr/share/wayland
+```
+
+To create a header-only package, like `spirv-headers`, create a pattern that matches all files. This can also be used in cases where you don't want any automatically-generated subpackages.
+
+```yaml
+patterns   :
+    - /*
 ```
 
 ## Replace / rename
