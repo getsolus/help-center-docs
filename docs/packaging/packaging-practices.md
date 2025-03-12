@@ -306,6 +306,7 @@ The `patterns` key expects a `dict(s)` argument. The default key for each patter
 
 There are two ways to name a pattern. Say you have a package named `foo`, and you want to create a subpackage `foo-bar`. You can do this by creating a pattern with the key `bar`. The name of the key will be appended to the name of the package.
 
+<!-- prettier-ignore -->
 ```yaml
 name       : foo
 patterns   :
@@ -315,6 +316,7 @@ patterns   :
 
 If you don't want the name of the subpackage to start with the name of the main package, you can do that, too. Keys starting with a `^` character will not prepend the base package name to the name of the subpackage. If you want to create a package named `bar` from the `foo` package, it would look like this:
 
+<!-- prettier-ignore -->
 ```yaml
 name       : foo
 patterns   :
@@ -328,6 +330,7 @@ Often with subpackages, you will want a different component, summary, descriptio
 
 If you have package `foo` and subpackage `foo-bar`, changing the properties would look like this:
 
+<!-- prettier-ignore -->
 ```yaml
 name       : foo
 license    :
@@ -357,6 +360,7 @@ Usually, packages will automatically depend on created subpackages by default. C
 
 In this example from `libjpeg-turbo`, we move all documentation into the `docs` subpackage:
 
+<!-- prettier-ignore -->
 ```yaml
 patterns   :
     - docs : [/usr/share/man]
@@ -364,6 +368,7 @@ patterns   :
 
 This example, taken from the `wayland` package, ensures the binaries from `/usr/bin` and the directory `/usr/share/wayland` are located in the `devel` subpackage:
 
+<!-- prettier-ignore -->
 ```yaml
 patterns   :
     - devel :
@@ -373,6 +378,7 @@ patterns   :
 
 To create a header-only package, like `spirv-headers`, create a pattern that matches all files. This can also be used in cases where you don't want any automatically-generated subpackages.
 
+<!-- prettier-ignore -->
 ```yaml
 patterns   :
     - /*
@@ -388,7 +394,8 @@ The `replaces` ypkg key uses the `dict(s)` type, and the default key is assumed 
 
 In this example, we rename the `libgeoclue*` packages to use the correct names, and ensure a working upgrade path.
 
-```
+<!-- prettier-ignore -->
+```yaml
 replaces:
     - devel: libgeoclue-devel
     - libgeoclue
