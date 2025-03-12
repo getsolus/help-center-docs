@@ -362,6 +362,7 @@ somevalue
 soundfont
 soundfonts
 spideroak
+spirv
 squashfs
 ssim
 statuslines
