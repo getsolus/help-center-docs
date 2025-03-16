@@ -43,6 +43,8 @@ This is invariably created for packages that provide libraries and development h
 /usr/share/vala
 ```
 
+For the full list of rules see [here](https://github.com/getsolus/ypkg/blob/v34/ypkg2/packages.py#L166-L254).
+
 Note that for some packages, `/usr/$lib/lib*.so` files are not symlinks. In this instance, the main package will be broken with no library files present. This can quickly be determined by looking at the resulting `pspec_*.xml` file generated after running the build.
 If this happens, simply override with `patterns` or set `libsplit` to “no”.
 
@@ -91,20 +93,21 @@ All new packages or updates to packages should abide by the [SPDX 3.x](https://s
 ## Build dependencies
 
 :::note
-Build dependencies should be ordered according to the following rules in `package.yml`:
+Build dependencies in a `package.yml` should be ordered according to the following rules:
 
-1. `pkgconfig` dependencies before explicitly named dependencies
-2. Each of these two groups in so-called ASCIIbetical order (that is, alphabetical order with all uppercase letters before lowercase letters, and digits/punctuation before letters, [see here](https://en.wikipedia.org/wiki/ASCII#Character_order))
+1. `pkgconfig32` dependencies before `pkgconfig` dependencies
+2. `pkgconfig` dependencies before explicitly named dependencies
+3. Each of these groups in so-called ASCIIbetical order (that is, alphabetical order with all uppercase letters before lowercase letters, and digits/punctuation before letters, [see here](https://en.wikipedia.org/wiki/ASCII#Character_order))
 
 Example:
 
 <!-- prettier-ignore -->
 ```yaml
 builddeps  :
+    - pkgconfig32(dri)
     - pkgconfig(MYGUI)
     - pkgconfig(Qt5Core)
     - pkgconfig(ayatana-appindicator-0.1)
-    - pkgconfig(dri)
     - pkgconfig(gtk+-3.0)
     - The-Powder-Toy
     - abcMIDI
@@ -240,17 +243,15 @@ When a package is part of an automatic build sequence, these dependencies will *
 
 The package `cbindgen` includes `cython` in `checkdeps` to run tests in the `check` phase.
 
-[cbindgen package.yml file](https://github.com/getsolus/packages/blob/main/packages/c/cbindgen/package.yml)
+See the [cbindgen package.yml file](https://github.com/getsolus/packages/blob/main/packages/c/cbindgen/package.yml).
 
 ## Patching / extra files
 
-Files that may be required during the build can be accessed via the `$pkgfiles` variable. Note that you must store your files in the `./files` directory relative to your `package.yml`
+Files that may be required during the build can be accessed via the `$pkgfiles` variable. Note that you must store your files in the `./files` directory relative to your `package.yml`.
 
-Both patches and extra files (such as systemd units) are stored in this directory. Note that if your patch is to address a **CVE**, you must use the following naming scheme: `./files/security/cve-xxxx-xxxx.patch`
+Both patches and extra files (such as systemd units) are stored in this directory. Note that if your patch is to address a **CVE**, you must use the following naming scheme: `./files/security/cve-xxxx-xxxx.patch`, where `xxxx-xxxx` is replaced with the full CVE ID. Complying with this simple rule ensures that we can know at any time the security status of packages when using tools such as `cve-check-tool`.
 
-Where `xxxx-xxxx` is replaced with the full CVE ID. Complying with this simple rule ensures that we can know at any time the security status of packages when using tools such as `cve-check-tool`
-kept
-Solus tooling allows the use of `./files/security/cve-xxxx-xxxx.nopatch` (which isn't applied in the build) to indicate that a CVE has been validated as not applicable to the Solus package. This can be because another patch resolves this CVE, or there is a false positive via `cve-check-tool`. The contents of the file can describe why it doesn't apply without requiring a patch (i.e. Resolved by cve-xxxx-xxxx.patch).
+Solus tooling allows the use of `./files/security/cve-xxxx-xxxx.nopatch` (which isn't applied in the build) to indicate that a CVE has been validated as not applicable to the Solus package. This can be because another patch resolves this CVE, or there is a false positive via `cve-check-tool`. The contents of the file can describe why it doesn't apply without requiring a patch (for example, "Resolved by cve-xxxx-xxxx.patch").
 
 ### Applying a patch
 
