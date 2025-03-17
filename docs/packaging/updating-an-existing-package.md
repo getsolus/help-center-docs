@@ -129,7 +129,7 @@ The following guidelines apply to the commit message body:
 - There may also be a section for Solus specific work (e.g. rebuild against x / rework to remove dependency).
 - Optional: A link to the upstream release notes page.
 
-`git commit` on [an initialized repository](prepare-for-packaging.md#initialize-git-hooks) will automatically open your editor with the correct template.
+`git commit` on [an initialized repository](prepare-for-packaging.md#initialize-git-hooks-for-linting) will automatically open your editor with the correct template.
 Note that lines starting with a `#` will be ignored by Git and do not need to be removed.
 
 _Important_: Do not include issue numbers in changelogs. This will incorrectly link your issue to another one in our repository.

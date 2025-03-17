@@ -166,7 +166,7 @@ git commit
 
 ### Commit message format for new packages
 
-`git commit` on [an initialized repository](prepare-for-packaging.md#initialize-git-hooks) will automatically open your editor with the correct template.
+`git commit` on [an initialized repository](prepare-for-packaging.md#initialize-git-hooks-for-linting) will automatically open your editor with the correct template.
 Note that lines starting with a `#` will be ignored by Git and do not need to be removed.
 
 There should be a summary line (with the package name), a blank line, and then the rest of the commit message.
