@@ -1,3 +1,4 @@
+Firewalld
 abcm
 absl
 acpi
@@ -111,6 +112,7 @@ fdisk
 ferryctl
 ferryd
 filesharing
+firewalld
 firstpost
 flarum
 flathub
@@ -259,6 +261,7 @@ neovim
 netgear
 newerth
 nfpath
+nftables
 nghttp
 nheko
 nightlies
