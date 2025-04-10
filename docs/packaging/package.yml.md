@@ -293,6 +293,7 @@ A set of variables are exported in our build stages. These are used to provide c
 | **$pkgfiles**      | Refers to the `./files` directory relative to the `package.yml` file.                            |
 | **$sources**       | Refers to the directory where your source files are stored, for example, `$sources/nano.tar.gz`. |
 | **$workdir**       | The work, or source, directory of the package build.                                             |
+| **$version**       | The version number of the package build as specified in the `version` field.                     |
 
 ## Types
 
