@@ -38,4 +38,4 @@ When our users feel valued and supported, they are more likely to stick with us,
 
 Lastly, a supportive community leads to faster problem-solving. Users can provide assistance to other users quickly. This improves the overall user experience and can prevent problems from escalating.
 
-The biggest way that we accomplish our value of Community is through Kindness. Being kind makes people feel welcome, and more likely to stick around, thus strengthening our community.
+The most important aspect of our community is Kindness. Being kind makes people feel welcome, and more likely to stick around, thus strengthening our community.
