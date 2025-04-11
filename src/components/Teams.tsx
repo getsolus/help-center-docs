@@ -64,8 +64,9 @@ export const TeamsList = () => {
   return (
     <Stack gap={4}>
       <h1 style={{ margin: 0 }}>Teams</h1>
-      The Solus project is made up of several teams. Each team has its own responsibilities and focuses. Because of the
-      size of the overall Solus organization, members are often on multiple teams.
+      The Solus project is developed and maintained by the Solus Staff group. That body is made up of smaller teams of
+      people, each with its own responsibilities and focuses. Because of the size of the overall Solus organization,
+      members are often a part of multiple teams.
       {Teams.filter((t) => t.name !== "Admin Team").map((team) => (
         <Team key={`TeamsList-Team-${team.name}`} team={team} />
       ))}

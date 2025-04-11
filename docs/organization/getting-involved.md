@@ -21,17 +21,17 @@ Getting started with packaging is generally pretty easy. If you are looking to h
 
 ## Filing issues
 
-A great way to help out the project is by filing issues for problems that you are experiencing. Filed issues makes it much easier to track problems that people are having. They help ensure that nothing gets forgotten, and lets both you and us know when they've been resolved. Issues should be opened against our [packages repository](https://github.com/getsolus/packages/issues).
+A great way to help out the project is by filing issues for problems that you are experiencing. This makes it much easier to track problems that people are having. They help ensure that nothing gets forgotten, and lets both you and us know when they've been resolved. Issues should be opened against our [packages repository](https://github.com/getsolus/packages/issues).
 
 :::note
 When filing an issue, please be as detailed as possible. The more details there are, the easier it is to understand the problem.
 :::
 
-Issues are also a great way to let us know that a piece of software in the repository is out-of-date. Package update requests help the team prioritize updating particular pieces of software. They let us know what software is out-of-date, how far out-of-date it is, and that there is demand for that particular software.
+Issues are also a great way to let us know that a piece of software in the repository is out-of-date. These help the team know and track what packages need to be updated, how out-of-date they are, and how to prioritize those updates. They also let us know there is demand for particular software.
 
 ## Documentation
 
-Good and up-to-date documentation is a very valuable resource. Contributing to our Help Center documentation not only helps us, it helps the entire community. It's also easier than packaging. If writing help articles is something you are interested in, head on over to our [Help Center repository](https://github.com/getsolus/help-center-docs) on GitHub. The project Readme has all the information you need to get started.
+Good and up-to-date documentation is a very valuable resource. Contributing to our Help Center documentation not only helps us, it helps the entire community. It's also easier than packaging. If writing help articles is something you are interested in, head on over to our [Help Center repository](https://github.com/getsolus/help-center-docs) on GitHub. The project README has all the information you need to get started.
 
 ## Financial
 

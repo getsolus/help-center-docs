@@ -27,7 +27,7 @@ const DocList: DocSection[] = [
   },
   {
     title: "Organization",
-    description: <>Learn about how the Solus Project organization, and how to contribute.</>,
+    description: <>Learn about the Solus Project organization, and how to contribute.</>,
     link: "docs/organization/intro",
     img: <Groups2OutlinedIcon sx={{ fontSize: 96 }} />,
   },

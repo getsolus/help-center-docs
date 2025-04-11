@@ -17,12 +17,11 @@ export const Teams: Team[] = [
     description:
       "This team handles the building of packages in the Solus repository. Some team members help maintain one or more of our included desktop environments.",
     members: [
-      ["JustinZobel", "Plasma"],
       ["ReillyBrogan", "Plasma"],
-      ["EvanMaddock", "Budgie/XFCE"],
+      ["EvanMaddock", "Budgie/Xfce"],
       ["JoeyRiches", "GNOME"],
       ["SilkeHofstra", null],
-      ["TraceyClark", "Plasma"],
+      ["TraceyClark", null],
       ["DavidHarder", null],
       ["TroyHarvey", null],
       ["AlgentAlbrahimi", null],
@@ -33,7 +32,7 @@ export const Teams: Team[] = [
     name: "Packaging Team",
   },
   {
-    description: "This team writes and maintains software for Solus.",
+    description: "This team writes and maintains software for Solus, such as eopkg, ypkg, and solbuild.",
     members: [
       ["ReillyBrogan", null],
       ["SilkeHofstra", null],

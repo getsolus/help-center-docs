@@ -106,21 +106,6 @@ export const People: Record<string, Person> = {
       },
     ],
   },
-  JustinZobel: {
-    description: "I am.",
-    matrix: "@justin.zobel:kde.org",
-    names: {
-      first: "Justin",
-      last: "Zobel",
-    },
-    websites: [
-      {
-        icon: GitHubIcon,
-        to: "https://github.com/Justinzobel",
-        type: WebsiteType.GITHUB,
-      },
-    ],
-  },
   ReillyBrogan: {
     description: "",
     matrix: "@reillybrogan:matrix.org",
