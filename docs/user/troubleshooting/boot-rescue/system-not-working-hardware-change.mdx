@@ -1,0 +1,49 @@
+---
+title: I changed hardware and now my system doesn't start
+summary: Troubleshooting the boot process for Solus
+---
+
+import BootAndChroot from "./snippets/_mount_partitions.mdx";
+import WhatToDoNext from "./snippets/_contact_team.mdx";
+import UnmountAll from "./snippets/_unmount_partitions.mdx";
+
+## Before your start
+
+For this procedure, you need:
+
+- [A Solus Live USB](../../quick-start/installation/#creating-bootable-media)
+- Your disk encryption password, if your system is encrypted
+
+## Procedure
+
+1. Shut down your system.
+1. Boot from a Solus live USB.
+1.  Mount the partitions of your Solus system.
+
+    <details>
+      <BootAndChroot />
+    </details>
+
+1. Update the system configuration to address the hardware changes.
+    <details>
+      1. Re-run system-wide configuration triggers
+    
+         ```bash
+         sudo usysconf run -f
+         ```
+    
+      2. If you use an UEFI system, update the boot entries for your EFI menu: 
+         ```bash
+    	 sudo clr-boot-manager update
+         ```
+    </details>
+
+1. Unmount all the Solus partitions.
+
+   <details>
+     <UnmountAll />
+   </details>
+
+## What to do next
+
+<WhatToDoNext />

@@ -1,0 +1,16 @@
+1. Exit the chroot environment by pressing <kbd>CTRL + D</kbd>
+2. Unmount the Solus partitions:
+   ```bash
+   umount -R /target
+   ```
+3. If your drive is encrypted:
+	1. Deactivate your logical volumes and volume groups:
+	   ```bash
+	   lvchange -a n /dev/SolusSystem/Swap
+	   lvchange -a n /dev/SolusSystem/Root
+	   vgchange -a n SolusSystem
+	   ```
+	2. Close the LUKS partition:
+	   ```bash
+	   cryptsetup luksClose decrypted
+	   ```
