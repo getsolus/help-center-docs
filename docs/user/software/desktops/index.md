@@ -24,7 +24,7 @@ Solus offers a GNOME Shell experience that ships out-of-the-box with a variety o
 
 ```bash
 # Do NOT attempt to do this if you are running the KDE Plasma Desktop version of Solus!
-sudo eopkg install gdm gnome-shell gnome-desktop-branding
+sudo eopkg install gdm gnome-shell gnome-desktop-branding gnome-control-center
 ```
 
 ## MATE
