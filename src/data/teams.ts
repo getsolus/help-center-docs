@@ -15,6 +15,24 @@ export const Teams: Team[] = [
   },
   {
     description:
+      "This team has push access to all Solus repositories, and makes general decisions about the project.",
+    members: [
+      ["ReillyBrogan", null],
+      ["EvanMaddock", null],
+      ["JoeyRiches", null],
+      ["SilkeHofstra", null],
+      ["TraceyClark", null],
+      ["DavidHarder", null],
+      ["TroyHarvey", null],
+      ["AlgentAlbrahimi", null],
+      ["GavinZhao", null],
+      ["HansKelson", null],
+      ["Malfisya", null],
+    ],
+    name: "Solus Staff",
+  },
+  {
+    description:
       "This team handles the building of packages in the Solus repository. Some team members help maintain one or more of our included desktop environments.",
     members: [
       ["ReillyBrogan", "Plasma"],
@@ -45,6 +63,7 @@ export const Teams: Team[] = [
     description:
       "This team is responsible for ensuring that the Solus infrastructure and services are kept up to date and running smoothly.",
     members: [
+      ["TroyHarvey", null],
       ["ReillyBrogan", null],
       ["SilkeHofstra", null],
     ],
@@ -56,6 +75,7 @@ export const Teams: Team[] = [
     members: [
       ["DavidHarder", null],
       ["EvanMaddock", null],
+      ["SilkeHofstra", null],
       ["TraceyClark", null],
       ["TroyHarvey", null],
     ],
