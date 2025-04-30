@@ -135,7 +135,7 @@ const config = {
               },
               {
                 label: "Mastodon",
-                href: "https://fosstodon.org/@Solus",
+                href: "https://floss.social/@getsolus",
               },
               {
                 label: "Github",
@@ -201,7 +201,7 @@ const config = {
               },
               {
                 label: "Mastodon",
-                href: "https://fosstodon.org/@Solus",
+                href: "https://floss.social/@getsolus",
                 rel: "me",
               },
             ],

@@ -41,7 +41,7 @@
   },
   "link.item.label.Mastodon": {
     "message": "Mastodon",
-    "description": "The label of footer link with label=Mastodon linking to https://fosstodon.org/@Solus"
+    "description": "The label of footer link with label=Mastodon linking to https://floss.social/@getsolus"
   },
   "link.item.label.SolusHomepage": {
     "message": "Solus Homepage",

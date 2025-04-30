@@ -36,7 +36,7 @@ You will find the following Solus rooms on the `matrix.org` homeserver:
 Alongside the forums, you can communicate with developers or others in the community by using one of the following websites:
 
 - [Facebook](https://www.facebook.com/get.solus)
-- [Mastodon](https://fosstodon.org/@Solus)
+- [Mastodon](https://floss.social/@getsolus)
 - [Reddit](https://www.reddit.com/r/SolusProject/)
 
 ## Funding
