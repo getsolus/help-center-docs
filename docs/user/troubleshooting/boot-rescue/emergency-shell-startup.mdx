@@ -1,0 +1,59 @@
+---
+title: I see an emergency shell or error message during startup
+summary: Troubleshooting the boot process for Solus
+---
+
+import BootAndChroot from "./snippets/_mount_partitions.mdx";
+import UnmountAll from "./snippets/_unmount_partitions.mdx";
+import WhatToDoNext from "./snippets/_contact_team.mdx";
+
+## Cause
+
+This issue might happen when the `/etc/fstab` file contains an entry for a storage device that isn't available during system startup, for example, disconnected USB drives or unavailable network file system (NFS) mounts.
+
+When trying to mount the device, the system fails and displays an emergency shell or error message.
+
+## Before your start
+
+For this procedure, you need:
+
+- [A Solus live USB](../../quick-start/installation/#creating-bootable-media)
+- Your disk encryption password, if your system is encrypted
+
+## Procedure
+
+1. Shut down your system.
+1. Boot from a Solus live USB.
+1.  Mount the partitions of your Solus system.
+
+    <details>
+      <BootAndChroot />
+    </details>
+
+1.  Prevent the system from trying to mount unavailable devices.
+
+    <details>
+    1. Edit `/etc/fstab` using `nano`:
+    	```bash
+    	nano /etc/fstab
+    	```
+    2. Find all the unavailable devices.
+    3. Add the `noauto` option to the line corresponding to the unavailable device.
+
+       For example:
+
+       ```bash
+       UUID=XXXXXX  /mnt/mydisk  exfat  noauto,uid=1000,gid=1000,umask=0022  0  0
+       ```
+    4. Save the file and restart your system.
+
+    </details>
+
+1.  Unmount all the Solus partitions.
+    <details>
+      <UnmountAll />
+    </details>
+
+## What to do next
+
+<WhatToDoNext />
