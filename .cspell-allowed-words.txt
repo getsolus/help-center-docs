@@ -70,6 +70,7 @@ cython
 datacenter
 datagrip
 dbus
+debundled
 deprecate
 destdir
 devel
@@ -294,6 +295,7 @@ presario
 probook
 pspec
 psql
+pyproject
 qdisc
 qjackctl
 qlen
@@ -343,6 +345,7 @@ schenker
 sdkman
 servername
 setcap
+setuptools
 sharename
 smbclient
 smbd

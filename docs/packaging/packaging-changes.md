@@ -13,6 +13,25 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 ## 2025
 
+### April
+
+#### `pip3` and setuptools debundled from `python3`
+
+- pip3 and the python module setuptools are no longer provided by `python3`
+- `python-setuptools` now provides the py3 version of setuptools instead of the py2 version
+- `pip` now provides the py3 version of pip instead of the py2 version
+- A temporary package `python2-setuptools` provides the py2 version of setuptools pending full python2 deprecation
+- A temporary package `pip2` provides the py2 version of pip pending full python2 deprecation
+
+#### PEP517 is now the preferred method to build python modules
+
+- The `%python3_setup` macro now attempts to build python modules with PEP517 if a pyproject.toml file is found, it will fallback to setuptools otherwise
+- The `%python3_install` macro now attempts to install python modules with PEP517 if a pyproject.toml file is found, it will fallback to setuptools otherwise
+- If a python module contains a pyproject.toml file and now fails to build it'll minimally need `python-build` and `python-installer`. Then, it'll need the python build system,
+  in ~90% of cases it'll be `python-setuptools`, and, `python-wheel` may also be required. Note, however, there are several valid python build systems such as `python-flit-core`, `python-poetry`,
+  `meson-python` as well as others that may be used in place of `python-setuptools`. However, in the majority of cases only `python-build`, `python-installer` and `python-setuptools` are required
+- If a python module doesn't contain a pyproject.toml file and instead contains a setup.py file it'll need `python-setuptools` as a build dependency
+
 ### January
 
 #### `monitoring.yml` changed to `monitoring.yaml`
