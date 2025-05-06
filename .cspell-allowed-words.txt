@@ -112,6 +112,7 @@ firstpost
 flarum
 flathub
 flatpak
+flatpaks
 flicky
 flto
 fluidsynth
@@ -245,11 +246,13 @@ mygui
 nanorc
 necromancing
 nemo
+neochat
 neovim
 netgear
 newerth
 nfpath
 nghttp
+nheko
 nightlies
 nmbdoptions
 noauto
