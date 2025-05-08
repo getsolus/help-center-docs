@@ -160,7 +160,8 @@ Solus [active]
 
 #### Disabling the local solbuild repository in eopkg
 
-To reset the system to use only packages from the official Solus repository, disable the "Local" `eopkg` repository using the command `sudo eopkg disable-repo Local`.
+To reset the system to use only packages from the official Solus repository, disable the "Local" `eopkg` repository using the command  
+`sudo eopkg disable-repo Local`.
 
 The output should look similar to:
 
