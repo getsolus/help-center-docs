@@ -6,7 +6,7 @@ summary: Working with snaps
 # Snap
 
 :::warning
-Snaps will be [**removed from Solus in early January 2025**][2],
+Snaps may be [**removed from Solus in 2025**][2],
 and are not fully confined in Solus with Linux kernel 6.9 and newer.
 See the section on confinement below.
 :::
@@ -21,7 +21,7 @@ ensuring that snaps can't access more of your system than needed.
 The `snap` command provided by Solus shows a warning when strict confinement is not available.
 For example:
 
-> WARNING: snap is running with partial confinement. See https://help.getsol.us/docs/user/software/third-party/snap for details
+> WARNING: snap is running with partial confinement. Snaps may stop working in 2025. See https://help.getsol.us/docs/user/software/third-party/snap for details
 
 We recommend [migrating to Flatpak](#migrating-to-flatpak) when possible.
 The warning can be silenced by running `sudo snap hide-confinement-warning`.
