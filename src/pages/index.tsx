@@ -5,6 +5,7 @@ import Container from "@mui/material/Container";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import { DocSection } from "../types";
 
+import Groups2OutlinedIcon from "@mui/icons-material/Groups2Outlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import Inventory2OutlinedIcon from "@mui/icons-material/Inventory2Outlined";
 import EngineeringOutlinedIcon from "@mui/icons-material/EngineeringOutlined";
@@ -23,6 +24,12 @@ const DocList: DocSection[] = [
     description: <>Get to grips with our advanced packaging features using easy to follow guides.</>,
     link: "docs/packaging",
     img: <Inventory2OutlinedIcon sx={{ fontSize: 96 }} />,
+  },
+  {
+    title: "Organization",
+    description: <>Learn about the Solus Project organization, and how to contribute.</>,
+    link: "docs/organization/intro",
+    img: <Groups2OutlinedIcon sx={{ fontSize: 96 }} />,
   },
   {
     title: "Dev Log",
