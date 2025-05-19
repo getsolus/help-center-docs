@@ -56,7 +56,7 @@ export const People: Record<string, Person> = {
       },
       {
         icon: MastodonIcon,
-        to: "https://fosstodon.org/@EbonJaeger",
+        to: "https://floss.social/@EbonJaeger",
         type: WebsiteType.MASTODON,
       },
     ],

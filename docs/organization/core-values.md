@@ -14,7 +14,7 @@ A part of transparency is accountability. By being open about our work, the team
 To be transparent, we:
 
 - Are proactive with our communication with the community via our forum and social media.
-- Encourage discussion on our [public forum](https://discuss.getsol.us), [Matrix space](https://matrix.to/#/#solus:matrix.org), and [Mastodon](https://fosstodon.org/@solus).
+- Encourage discussion on our [public forum](https://discuss.getsol.us), [Matrix space](https://matrix.to/#/#solus:matrix.org), and [Mastodon](https://floss.social/@solus).
 - Make all financial transactions visible via our [OpenCollective page](https://opencollective.com/getsolus#category-BUDGET).
 
 ## Stability
