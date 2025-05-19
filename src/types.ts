@@ -24,6 +24,7 @@ export type Person = {
 
 export type PersonName = {
   first: string;
+  middle?: string;
   last: string;
 };
 
