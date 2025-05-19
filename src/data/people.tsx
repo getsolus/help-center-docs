@@ -186,6 +186,7 @@ export const People: Record<string, Person> = {
     matrix: "@alfisya:matrix.org",
     names: {
       first: "Muhammad",
+      middle: "Alfi",
       last: "Syahrin",
     },
     websites: [
