@@ -10,8 +10,8 @@ anthy
 anydesk
 aosp
 apcupsd
-appdata
 appindicator
+appstreamcli
 askpass
 asus
 atheros
@@ -182,6 +182,7 @@ ksysguard
 kwalletd
 kxmlgui
 labwc
+launchable
 ldflags
 lennart
 libc
@@ -396,6 +397,7 @@ transifex
 uefi
 ufriilt
 undeprecate
+uneopkg
 unetbootin
 unikey
 untick
