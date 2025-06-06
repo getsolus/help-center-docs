@@ -17,7 +17,7 @@ You can access Matrix spaces with dedicated clients. Solus has packaged [Element
 
 One of the most visible ways of helping the project is by updating and maintaining packages. The Solus repository contains thousands of packages, which is a lot for a small team to handle. We are always welcoming and appreciative of assistance in maintaining software in the repository.
 
-Getting started with packaging is generally pretty easy. If you are looking to help with packaging, check out our [packaging documentation](/packaging).
+Getting started with packaging is generally pretty easy. If you are looking to help with packaging, check out our [packaging documentation](/docs/packaging).
 
 ## Filing issues
 
