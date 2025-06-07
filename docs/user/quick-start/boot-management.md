@@ -1,63 +1,65 @@
 ---
-title: Boot Management
+title: Boot management
 summary: Guide to customizing the Solus boot process
 ---
 
-# Boot Management
+Solus uses `clr-boot-manager` from the Clear Linux project to handle all boot configuration. This tool automatically configures the appropriate boot loader based on your system type:
 
-## clr-boot-manager
+- Legacy BIOS systems: GRUB2
+- Modern UEFI systems: `systemd-boot`
 
-Solus leverages `clr-boot-manager` from the Clear Linux\* project to manage its boot process.
-On legacy BIOS systems, `clr-boot-manager` will configure `GRUB2` to properly boot your system.  
-On modern UEFI systems, `clr-boot-manager` will configure `systemd-boot` instead.  
-This means that any time we want to modify the boot process, `clr-boot-manager` will be involved.  
-Trying to modify the configurations manually may work temporarily, but will be overwritten eventually.
+Because `clr-boot-manager` manages these configurations, any boot customizations must go through this tool rather than manual edits. If you try to modify the configurations manually, `clr-boot-manager` will overwrite your changes during the next system update.
 
-### Open the boot menu
+## Access the boot menu
 
-By default, EFI installs will not show the boot menu and boot directly into Solus. By hitting space bar (repeatedly) during boot, the boot menu will appear (it may take a couple of goes to get the timing right).
+On systems with UEFI installations, the boot menu doesn't appear by default. To display the boot menu:
 
-### Displaying the boot menu by default every boot
+- Press the <kbd>Spacebar</kbd> key repeatedly as your computer starts. You may need several attempts to get the timing right.
 
-The following command will set the timeout of the boot loader to five seconds so that it appears by default:
+## Display the boot menu by default
 
-```bash
-sudo clr-boot-manager set-timeout 5 && sudo clr-boot-manager update
-```
+To make the boot menu appear automatically with a five-second timeout:
 
-### Adding kernel parameters
+- Run the following command:
 
-Kernel parameters can be appended to boot via creating a file for `clr-boot-manager` to use when updating kernels. For example, to add `nomodeset` to boot options, you would create a file in `/etc/kernel/cmdline.d` (as sudo):
+  ```bash
+  sudo clr-boot-manager set-timeout 5 && sudo clr-boot-manager update
+  ```
 
-```bash
-sudo mkdir -p /etc/kernel/cmdline.d
-echo 'nomodeset' | sudo tee /etc/kernel/cmdline.d/40_nomodeset.conf
-```
+## Add kernel parameters
 
-The settings should be on one line with a space between them. You will need to run `sudo clr-boot-manager update` for the options to be appended to boot.
+You can add kernel parameters by creating configuration files that `clr-boot-manager` uses when updating kernels. 
 
-## Kernels
+To add kernel parameters, do the following:
 
-### Installing a different kernel branch
+1. Create the configuration directory:
 
-By default, Solus utilizes our linux-current kernel. The separate kernel branches can be added by installing the `linux-lts` or `linux-current` packages. Note that each kernel has separate module packages, so if you use these kernel modules, you'll need to install the one related to the kernel you are adding.
+   ```bash
+   sudo mkdir -p /etc/kernel/cmdline.d
+   ```
 
-| linux-lts               | linux-current                   |
-| ----------------------- | ------------------------------- |
-| bbswitch                | bbswitch-current                |
-| broadcom-sta            | broadcom-sta-current            |
-| linux-lts-headers       | linux-current-headers           |
-| nvidia-470-glx-driver   | nvidia-470-glx-driver-current   |
-| nvidia-beta-driver      | nvidia-beta-driver-current      |
-| nvidia-developer-driver | nvidia-developer-driver-current |
-| nvidia-glx-driver       | nvidia-glx-driver-current       |
-| openrazer               | openrazer-current               |
-| rtl8852bu               | rtl8852bu-current               |
-| v4l2loopback            | v4l2loopback-current            |
-| vhba-module             | vhba-module-current             |
-| virtualbox              | virtualbox-current              |
-| xone                    | xone-current                    |
+1. Create a configuration file with your kernel parameter:
 
-### Change the default kernel branch to boot
+   ```bash
+   echo 'parameter-name' | sudo tee /etc/kernel/cmdline.d/40_[description].conf
+   ```
 
-After successfully booting into a kernel from the `current` or `lts` branches running `sudo clr-boot-manager update` will make the booted kernel branch the default boot option going forward.
+   For example, to add the `nomodeset` parameter:
+
+   ```bash
+   echo 'nomodeset' | sudo tee /etc/kernel/cmdline.d/40_nomodeset.conf
+   ```
+
+1. If you want to add multiple parameters, put them on one line with spaces between them in the configuration file. 
+
+   For example:
+
+   ```bash
+   echo 'nomodeset quiet splash acpi=off' | sudo tee /etc/kernel/cmdline.d/40_multiple_params.conf
+   ```
+
+1. Apply the new kernel parameters:
+
+   ```bash
+   sudo clr-boot-manager update
+   ```
