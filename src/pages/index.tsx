@@ -1,64 +1,96 @@
 import React from "react";
-import Layout from "@theme/Layout";
 
-import Container from "@mui/material/Container";
-import Grid2 from "@mui/material/Unstable_Grid2";
+import Heading from "@theme/Heading";
+import Layout from "@theme/Layout";
+import Link from "@docusaurus/Link";
+
 import { DocSection } from "../types";
 
+import { Container, Stack } from "@mui/material";
 import Groups2OutlinedIcon from "@mui/icons-material/Groups2Outlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import Inventory2OutlinedIcon from "@mui/icons-material/Inventory2Outlined";
 import EngineeringOutlinedIcon from "@mui/icons-material/EngineeringOutlined";
-import Doc from "../components/home/Doc";
-import Header from "../components/home/Header";
 
-const DocList: DocSection[] = [
+import clsx from "clsx";
+
+import styles from "./styles.module.css";
+
+const sections: DocSection[] = [
   {
-    title: "Users",
-    description: <>Installing, software, boot management, troubleshooting and more.</>,
-    link: "docs/user/intro",
-    img: <PersonOutlineOutlinedIcon sx={{ fontSize: 96 }} />,
+    type: "link",
+    label: "Users",
+    description: "Installing, software, boot management, troubleshooting and more.",
+    href: "docs/user/intro",
+    icon: PersonOutlineOutlinedIcon,
   },
   {
-    title: "Packaging",
-    description: <>Get to grips with our advanced packaging features using easy to follow guides.</>,
-    link: "docs/packaging",
-    img: <Inventory2OutlinedIcon sx={{ fontSize: 96 }} />,
+    type: "link",
+    label: "Packaging",
+    description: "Get to grips with our advanced packaging features using easy to follow guides.",
+    href: "docs/packaging",
+    icon: Inventory2OutlinedIcon,
   },
   {
-    title: "Organization",
-    description: <>Learn about the Solus Project organization, and how to contribute.</>,
-    link: "docs/organization/intro",
-    img: <Groups2OutlinedIcon sx={{ fontSize: 96 }} />,
+    type: "link",
+    label: "Organization",
+    description: "Learn about the Solus Project organization, and how to contribute.",
+    href: "docs/organization/intro",
+    icon: Groups2OutlinedIcon,
   },
   {
-    title: "Dev Log",
-    description: <>Learn what our developers have been up to, and preview upcoming changes.</>,
-    link: "blog",
-    img: <EngineeringOutlinedIcon sx={{ fontSize: 96 }} />,
+    type: "link",
+    label: "Dev Log",
+    description: "Learn what our developers have been up to, and preview upcoming changes.",
+    href: "blog",
+    icon: EngineeringOutlinedIcon,
   },
 ];
+
+const Card = (item: DocSection) => {
+  return (
+    <Link to={item.href} className={clsx("card padding--lg", styles.cardContainer)}>
+      <Heading as="h2" className={clsx("text--truncate", styles.cardTitle)} title={item.label}>
+        <item.icon fontSize="large" sx={{ marginRight: 1 }} /> {item.label}
+      </Heading>
+      {item.description && (
+        <p className={clsx("text--truncate", styles.cardDescription)} title={item.description}>
+          {item.description}
+        </p>
+      )}
+    </Link>
+  );
+};
 
 const Docs = () => {
   return (
     <Layout title="Documentation" description="Solus">
-      <Header />
-      <Container sx={{ marginBlock: "4vh", maxWidth: 1920 }}>
-        <Grid2
-          columns={{
-            xs: 6,
-            sm: 18,
-            md: 18,
-          }}
-          container
-          margin={0}
-          spacing={4}
-          width={1}
+      <Container sx={{ marginBlock: "4vh" }}>
+        <Stack
+          className="hero hero--secondary"
+          alignItems="center"
+          justifyContent="center"
+          padding="5vh 10vw"
+          spacing={2}
         >
-          {DocList.map((d) => (
-            <Doc {...d} key={`Doc-${d.title}`} />
+          <Heading as="h1" className="hero__title">
+            Solus Help Center
+          </Heading>
+          <p className="hero__subtitle">Documentation for Solus</p>
+        </Stack>
+        <section className="row">
+          {sections.map((section, index) => (
+            <article key={index} className="col col--6 margin-bottom--lg">
+              <Card
+                type="link"
+                href={section.href}
+                label={section.label}
+                description={section.description}
+                icon={section.icon}
+              />
+            </article>
           ))}
-        </Grid2>
+        </section>
       </Container>
     </Layout>
   );
