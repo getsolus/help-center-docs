@@ -48,7 +48,7 @@ In case your AppStream metainfo is describing a desktop application (you can tel
 - Ensure `appstreamcli compose` is available, and install it if it's not.
 
   ```bash
-  sudo eopkg it appstream
+  sudo eopkg it appstream-compose
   ```
 
 - Run a report against the extracted install directory.
@@ -127,7 +127,7 @@ Here is a example configuration file for running against local repositories.
 
 A local repository should contain a `eopkg-index.xml` file as well as `.eopkg` files. Remember to run, `eopkg index --skip-signing` in the root of the local repository before starting to ensure the index is up to date. For the sample provided above, the eopkg index file should reside in `/var/lib/solbuild/local/eopkg-index.xml`.
 
-To generate the catalog run `appstream-generator process local --verbose`. Depending on the size of the repository, this may take a long time; subsequent runs will take far less time.
+To generate the catalog run `appstream-generator run local --verbose`. Depending on the size of the repository, this may take a long time; subsequent runs will take far less time.
 
 To view the HTML report, you can start a http server with `python3 -m http.server 8000`, enter `http://localhost:8000/` in your web browser, then navigate to `export/html/`.
 
@@ -156,6 +156,6 @@ It can also be ran against a remote repository, here is a sample configuration.
 
 In this example, `appstream-generator` will run against two suites which correspond to the "gwendraeth" and "gwendraeth-updates" repositories, where the index URL for "gwendraeth" would correspond to `https://fastly.getsol.us/repo/gwendraeth/eopkg-index.xml.xz`.
 
-To generate a catalog for just gwendraeth, run `appstream-generator process gwendraeth --verbose`. To generate a catalog against gwendraeth _as well as_ any differences in the gwendraeth-updates repository, run `appstream-generator process gwendraeth-updates --verbose`. Appstream generator is smart enough to only process `.eopkg` files that are different in the "gwendraeth-updates" repository.
+To generate a catalog for just gwendraeth, run `appstream-generator run gwendraeth --verbose`. To generate a catalog against gwendraeth _as well as_ any differences in the gwendraeth-updates repository, run `appstream-generator run gwendraeth-updates --verbose`. Appstream generator is smart enough to only process `.eopkg` files that are different in the "gwendraeth-updates" repository.
 
 For more documentation, consult [upstream documentation](https://github.com/ximion/appstream-generator/tree/master/docs).
