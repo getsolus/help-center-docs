@@ -31,4 +31,19 @@ budgie-panel --reset --replace &
 
 After this you can press CTRL + D to close the terminal without closing the Budgie Panel process.
 
+## Enable Numlock at Login
+
+At the login screen on boot, numlock might not be enabled even if set in your BIOS / UEFI.
+
+To change this, you will need the `numlockx` and `lightdm-settings` packages:
+
+```
+sudo eopkg it numlockx lightdm-settings && sudo lightdm-settings
+```
+
+Numlock can then be enabled or disabled via a toggle switch on the _Settings_ tab:
+
+![image](https://github.com/user-attachments/assets/d613d863-9e83-47d2-830f-38d3cacba9b7)
+
+
 > TODO: There's got to be more that we can add here
