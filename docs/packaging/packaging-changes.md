@@ -13,6 +13,13 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 ## 2025
 
+### June
+
+#### gui and private headers have been split out from `qt6-base`
+
+- `Qt::CorePrivate` is now provided by `qt6-base-private-devel`
+- `Qt::Gui` is now provided by `qt6-base-gui`
+
 ### April
 
 #### `pip3` and setuptools debundled from `python3`
