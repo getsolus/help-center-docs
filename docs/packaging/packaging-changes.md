@@ -15,7 +15,7 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 ### June
 
-#### gui and private headers are splitted out from `qt6-base`
+#### gui and private headers have been split out from `qt6-base`
 
 - `Qt::CorePrivate` is now provided by `qt6-base-private-devel`
 - `Qt::Gui` is now provided by `qt6-base-gui`
