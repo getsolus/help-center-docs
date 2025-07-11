@@ -34,6 +34,18 @@ Sway is a Wayland-only tiling window manager. To install Sway on Solus:
 
 2. Configure Sway. For more information, see the [Sway wiki](https://github.com/swaywm/sway/wiki).
 
+### Hyprland
+
+Hyprland is a Wayland-only tiling window manager. To install Hyprland on Solus:
+
+1. Run the following command:
+
+   ```bash
+   sudo eopkg it -c desktop.hyprland
+   ```
+
+2. Configure Hyprland. For more information, see the [Hyprland wiki](https://wiki.hyprland.org/).
+
 ## Stacking window manager
 
 Stacking window managers allow windows to overlap like papers on a desk, giving you full control over their position and size.
