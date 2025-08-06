@@ -20,7 +20,11 @@ Checking for security advisories ([CVEs](https://en.wikipedia.org/wiki/Common_Vu
 ## Adding monitoring.yaml to an existing package
 
 To add a `monitoring.yaml` file to an existing package you can use the following `go-task` command to add a template file, starting from within the directory containing the `package.yml` for a given package:
+:::tip
 
+`go-task add-monitoring` will automatically fill all the fields if a match is found on [release-monitoring.org](https://release-monitoring.org) and [cpe-guesser.cve-search.org](https://cpe-guesser.cve-search.org).
+
+:::
 ```bash
 go-task add-monitoring
 ```

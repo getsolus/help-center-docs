@@ -13,6 +13,13 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 ## 2025
 
+### July
+
+#### Changed behaviour on several `go-task` taskfile commands
+
+- `go-task new` will generate `monitoring.yaml` file and try filling it automatically
+- `go-task add-monitoring` will fetch data from [release-monitoring.org](https://release-monitoring.org) and [cpe-guesser.cve-search.org](https://cpe-guesser.cve-search.org) and filling the `monitoring.yaml` file automatically
+
 ### June
 
 #### gui and private headers have been split out from `qt6-base`
