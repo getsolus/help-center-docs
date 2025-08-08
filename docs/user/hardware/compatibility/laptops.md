@@ -1,221 +1,175 @@
 ---
 title: Laptops
-summary: List of known-working laptop hardware from various vendors
+summary: List of known-working laptops from various vendors
+hide_table_of_contents: true
 ---
 
 # Laptops
 
-The following laptops have been tested and/or suggested to function correctly by our users.
+:::info
 
-This list should not suggest that _only_ such devices listed below are compatible with Solus, as there may be devices not listed below that are in fact compatible.
+This list is not exhaustive. Other devices are also compatible with Solus, even if they are not listed here.
 
-## Acer
+:::
 
-- Acer Aspire 1825PTZ
-- Acer Aspire 4830T
-- Acer Aspire 5750G
-- Acer Aspire 7551
-- Acer Aspire E5-473-370Z
-- Acer Aspire E5-573G
-- Acer Aspire E5-575G
-- Acer Aspire ES 15 (ES1-572-5025)
-- Acer Aspire ES 17 (ES1-731G-P1MC)
-- Acer Aspire V3-112P
-- Acer Aspire V3-571G
-- Acer Aspire V5-121
-- Acer C710 Chromebook
-- Acer C720-2848 Chromebook
-- Acer TravelMate X349-G2-M
+The following laptops have been reported by users to work properly with Solus:
 
-## Alienware
-
-- Alienware 14
-- Alienware 17 R3
-- Alienware 17 R4
-
-## Apple
-
-- Apple Macbook (late 2008)
-- Apple MacBookPro8,3
-
-## ASUS
-
-- Asus EEE-PC 1001PX
-- Asus EEE-PC 1011PX
-- Asus K401UQK
-- Asus K53U
-- Asus K55VM
-- Asus K401UQK
-- Asus M50VM
-- Asus N501JW
-- Asus Pro50SR
-- Asus ROG G750JZA
-- Asus VivoBook 15 K505ZA
-  - Must use BIOS revision 306 for functional touchpad.
-- Asus VivoBook 15 X505ZA
-  - Must use BIOS revision 306 for functional touchpad.
-- Asus VivoBook 15 X505ZA-BQ171T
-  - Must use BIOS revision 306 for functional touchpad.
-- Asus VivoBook Pro N61JA
-- Asus VivoBook Pro N61Jv
-- Asus X200MA
-- Asus X201EV
-- Asus X540L
-- Asus X55
-- Asus X550LD
-- Asus X551CAP
-- Asus ZenBook UX31A
-- Asus ZenBook UX305FA
-
-## Dell
-
-- Dell Inspiron 14 3442
-- Dell Inspiron 14 3452
-- Dell Inspiron 15 7579
-- Dell Inspiron 15R N5010
-- Dell Inspiron 15R N5110
-- Dell Inspiron 1110
-- Dell Inspiron 5050
-- Dell Inspiron 7548
-- Dell Latitude D830
-- Dell Latitude E4310
-- Dell Latitude E5440
-- Dell Latitude E5510
-- Dell Latitude E6230
-- Dell Latitude E6320
-- Dell Latitude E6410
-- Dell Latitude E6420
-- Dell Latitude E6430
-- Dell Latitude E6530
-- Dell Precision 7520
-- Dell Precision M6500
-- Dell Vostro 1700
-- Dell XPS 15 9560
-
-## eMachines
-
-- eMachines E728
-
-## Fujitsu
-
-- Fujitsu Lifebook A531
-- Fujitsu Lifebook T900
-
-## GIGABYTE
-
-- GIGABYTE Aero 14K
-
-## Google
-
-- Google Chromebook CR48
-
-## HP
-
-- HP 240 G3
-- HP Compaq 6730B
-- HP Compaq NC6400
-- HP Compaq Presario CQ61
-- HP EliteBook 8440P
-- HP EliteBook 8460p
-- HP EliteBook 8740w
-- HP EliteBook 8760w
-- HP Envy TS M6
-- HP Pavilion 15-E042SO
-- HP Pavilion DV6
-- HP Pavilion DV6Z-6c00
-- HP Pavilion DV6Z-6100
-- HP Pavilion DV7
-- HP Pavilion DV2700
-- HP Pavilion x360 Convertible
-- HP Presario V6000
-- HP Probook 6360b
-- HP ProBook 6450b
-
-## Lenovo
-
-- Lenovo 3000 V200
-- Lenovo B41-80
-- Lenovo B50-50
-- Lenovo G50-80
-- Lenovo G510
-- Lenovo IdeaPad S145-15API
-- Lenovo IdeaPad S400U
-- Lenovo IdeaPad U310 Touch
-- Lenovo IdeaPad Z370
-- Lenovo IdeaPad Z585
-- Lenovo ThinkPad 13
-- Lenovo ThinkPad A485 (with latest BIOS update)
-- Lenovo ThinkPad E450
-- Lenovo ThinkPad E550
-- Lenovo ThinkPad Edge E545
-- Lenovo Thinkpad L412
-- Lenovo ThinkPad L440
-- Lenovo ThinkPad L512
-- Lenovo ThinkPad R60e
-- Lenovo ThinkPad S5-S540
-- Lenovo ThinkPad SL510
-- Lenovo Thinkpad T400 (2767V2W)
-- Lenovo ThinkPad T410i
-- Lenovo ThinkPad T420
-- Lenovo ThinkPad T430
-- Lenovo ThinkPad T440
-- Lenovo ThinkPad T440s
-- Lenovo ThinkPad T470
-- Lenovo ThinkPad T470s
-- Lenovo ThinkPad T490s
-- Lenovo ThinkPad T560
-- Lenovo ThinkPad T570
-- Lenovo ThinkPad W520 4270CTO
-- Lenovo ThinkPad X1 Carbon 3rd Edition
-- Lenovo ThinkPad X1 Carbon 4th Edition
-- Lenovo ThinkPad X61
-- Lenovo ThinkPad X200T
-- Lenovo ThinkPad X201
-- Lenovo ThinkPad X220
-- Lenovo ThinkPad X230
-- Lenovo ThinkPad X280
-- Lenovo Yoga 2 11
-- Lenovo Z50-70
-
-## MSI
-
-- MSI GE70
-
-## Samsung
-
-- Samsung NP270E5E-X02PL
-- Samsung NP300E4C-AD5BR
-- Samsung NP355E5C
-- Samsung NP365E5C-S04US
-- Samsung NP900X3G
-- Samsung NP900X4C-AU05
-
-## Schenker
-
-- Schenker XMG A506-VE
-
-## Sony
-
-- Sony VAIO Pro 13
-- Sony VAIO S Series 13
-- Sony VAIO VPCEC3M1E
-
-## System76
-
-- System76 Gazelle Professional
-
-## Toshiba
-
-- Toshiba Portege R930
-- Toshiba Qosmio X305
-- Toshiba Qosmio X875
-- Toshiba Satellite A660
-- Toshiba Satellite C50D-A-125
-- Toshiba Satellite C55D
-- Toshiba Satellite C640
-- Toshiba Satellite C665D
-- Toshiba Satellite L300D
-- Toshiba Satellite L455D
-- Toshiba Satellite L850-B218
-- Toshiba Satellite L855D
-- Toshiba Tecra A11
+| Brand     | Model                        | Notes                                               |
+| :-------- | :--------------------------- | :-------------------------------------------------- |
+| Acer      | Aspire 1825PTZ               | -                                                   |
+|           | Aspire 4830T                 | -                                                   |
+|           | Aspire 5750G                 | -                                                   |
+|           | Aspire 7551                  | -                                                   |
+|           | Aspire E5-473-370Z           | -                                                   |
+|           | Aspire E5-573G               | -                                                   |
+|           | Aspire E5-575G               | -                                                   |
+|           | Aspire ES 15 (ES1-572-5025)  | -                                                   |
+|           | Aspire ES 17 (ES1-731G-P1MC) | -                                                   |
+|           | Aspire V3-112P               | -                                                   |
+|           | Aspire V3-571G               | -                                                   |
+|           | Aspire V5-121                | -                                                   |
+|           | C710 Chromebook              | -                                                   |
+|           | C720-2848 Chromebook         | -                                                   |
+|           | TravelMate X349-G2-M         | -                                                   |
+| Alienware | 14                           | -                                                   |
+|           | 17 R3                        | -                                                   |
+|           | 17 R4                        | -                                                   |
+| Apple     | Macbook (late 2008)          | -                                                   |
+|           | MacBookPro8,3                | -                                                   |
+| ASUS      | EEE-PC 1001PX                | -                                                   |
+|           | EEE-PC 1011PX                | -                                                   |
+|           | K401UQK                      | -                                                   |
+|           | K53U                         | -                                                   |
+|           | K55VM                        | -                                                   |
+|           | M50VM                        | -                                                   |
+|           | N501JW                       | -                                                   |
+|           | Pro50SR                      | -                                                   |
+|           | ROG G750JZA                  | -                                                   |
+|           | VivoBook 15 K505ZA           | Must use BIOS revision 306 for functional touchpad. |
+|           | VivoBook 15 X505ZA           | Must use BIOS revision 306 for functional touchpad. |
+|           | VivoBook 15 X505ZA-BQ171T    | Must use BIOS revision 306 for functional touchpad. |
+|           | VivoBook Pro N61JA           | -                                                   |
+|           | VivoBook Pro N61Jv           | -                                                   |
+|           | X200MA                       | -                                                   |
+|           | X201EV                       | -                                                   |
+|           | X540L                        | -                                                   |
+|           | X55                          | -                                                   |
+|           | X550LD                       | -                                                   |
+|           | X551CAP                      | -                                                   |
+|           | ZenBook UX31A                | -                                                   |
+|           | ZenBook UX305FA              | -                                                   |
+| Dell      | Inspiron 14 3442             | -                                                   |
+|           | Inspiron 14 3452             | -                                                   |
+|           | Inspiron 15 7579             | -                                                   |
+|           | Inspiron 15R N5010           | -                                                   |
+|           | Inspiron 15R N5110           | -                                                   |
+|           | Inspiron 1110                | -                                                   |
+|           | Inspiron 5050                | -                                                   |
+|           | Inspiron 7548                | -                                                   |
+|           | Latitude D830                | -                                                   |
+|           | Latitude E4310               | -                                                   |
+|           | Latitude E5440               | -                                                   |
+|           | Latitude E5510               | -                                                   |
+|           | Latitude E6230               | -                                                   |
+|           | Latitude E6320               | -                                                   |
+|           | Latitude E6410               | -                                                   |
+|           | Latitude E6420               | -                                                   |
+|           | Latitude E6430               | -                                                   |
+|           | Latitude E6530               | -                                                   |
+|           | Precision 7520               | -                                                   |
+|           | Precision M6500              | -                                                   |
+|           | Vostro 1700                  | -                                                   |
+|           | XPS 15 9560                  | -                                                   |
+| eMachines | E728                         | -                                                   |
+| Fujitsu   | Lifebook A531                | -                                                   |
+|           | Lifebook T900                | -                                                   |
+| GIGABYTE  | Aero 14K                     | -                                                   |
+| Google    | Chromebook CR48              | -                                                   |
+| HP        | 240 G3                       | -                                                   |
+|           | Compaq 6730B                 | -                                                   |
+|           | Compaq NC6400                | -                                                   |
+|           | Compaq Presario CQ61         | -                                                   |
+|           | EliteBook 8440P              | -                                                   |
+|           | EliteBook 8460p              | -                                                   |
+|           | EliteBook 8740w              | -                                                   |
+|           | EliteBook 8760w              | -                                                   |
+|           | Envy TS M6                   | -                                                   |
+|           | Pavilion 15-E042SO           | -                                                   |
+|           | Pavilion DV6                 | -                                                   |
+|           | Pavilion DV6Z-6c00           | -                                                   |
+|           | Pavilion DV6Z-6100           | -                                                   |
+|           | Pavilion DV7                 | -                                                   |
+|           | Pavilion DV2700              | -                                                   |
+|           | Pavilion x360 Convertible    | -                                                   |
+|           | Presario V6000               | -                                                   |
+|           | Probook 6360b                | -                                                   |
+|           | ProBook 6450b                | -                                                   |
+| Lenovo    | 3000 V200                    | -                                                   |
+|           | B41-80                       | -                                                   |
+|           | B50-50                       | -                                                   |
+|           | G50-80                       | -                                                   |
+|           | G510                         | -                                                   |
+|           | IdeaPad S145-15API           | -                                                   |
+|           | IdeaPad S400U                | -                                                   |
+|           | IdeaPad U310 Touch           | -                                                   |
+|           | IdeaPad Z370                 | -                                                   |
+|           | IdeaPad Z585                 | -                                                   |
+|           | ThinkPad 13                  | -                                                   |
+|           | ThinkPad A485                | Requires latest BIOS update.                        |
+|           | ThinkPad E14 Gen 2           | -                                                   |
+|           | ThinkPad E450                | -                                                   |
+|           | ThinkPad E550                | -                                                   |
+|           | ThinkPad Edge E545           | -                                                   |
+|           | Thinkpad L412                | -                                                   |
+|           | ThinkPad L440                | -                                                   |
+|           | ThinkPad L512                | -                                                   |
+|           | ThinkPad R60e                | -                                                   |
+|           | ThinkPad S5-S540             | -                                                   |
+|           | ThinkPad SL510               | -                                                   |
+|           | Thinkpad T400 (2767V2W)      | -                                                   |
+|           | ThinkPad T410i               | -                                                   |
+|           | ThinkPad T420                | -                                                   |
+|           | ThinkPad T430                | -                                                   |
+|           | ThinkPad T440                | -                                                   |
+|           | ThinkPad T440s               | -                                                   |
+|           | ThinkPad T470                | -                                                   |
+|           | ThinkPad T470s               | -                                                   |
+|           | ThinkPad T490s               | -                                                   |
+|           | ThinkPad T560                | -                                                   |
+|           | ThinkPad T570                | -                                                   |
+|           | ThinkPad W520 4270CTO        | -                                                   |
+|           | ThinkPad X1 Carbon Gen 3     | -                                                   |
+|           | ThinkPad X1 Carbon Gen 4     | -                                                   |
+|           | ThinkPad X61                 | -                                                   |
+|           | ThinkPad X200T               | -                                                   |
+|           | ThinkPad X201                | -                                                   |
+|           | ThinkPad X220                | -                                                   |
+|           | ThinkPad X230                | -                                                   |
+|           | ThinkPad X280                | -                                                   |
+|           | Yoga 2 11                    | -                                                   |
+|           | Z50-70                       | -                                                   |
+| MSI       | GE70                         | -                                                   |
+| Samsung   | NP270E5E-X02PL               | -                                                   |
+|           | NP300E4C-AD5BR               | -                                                   |
+|           | NP355E5C                     | -                                                   |
+|           | NP365E5C-S04US               | -                                                   |
+|           | NP900X3G                     | -                                                   |
+|           | NP900X4C-AU05                | -                                                   |
+| Schenker  | XMG A506-VE                  | -                                                   |
+| Sony      | VAIO Pro 13                  | -                                                   |
+|           | VAIO S Series 13             | -                                                   |
+|           | VAIO VPCEC3M1E               | -                                                   |
+| System76  | Gazelle Professional         | -                                                   |
+| Toshiba   | Portege R930                 | -                                                   |
+|           | Qosmio X305                  | -                                                   |
+|           | Qosmio X875                  | -                                                   |
+|           | Satellite A660               | -                                                   |
+|           | Satellite C50D-A-125         | -                                                   |
+|           | Satellite C55D               | -                                                   |
+|           | Satellite C640               | -                                                   |
+|           | Satellite C665D              | -                                                   |
+|           | Satellite L300D              | -                                                   |
+|           | Satellite L455D              | -                                                   |
+|           | Satellite L850-B218          | -                                                   |
+|           | Satellite L855D              | -                                                   |
+|           | Tecra A11                    | -                                                   |
