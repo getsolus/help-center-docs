@@ -1,6 +1,6 @@
 ---
 title: Wi-Fi chipsets
-summary: List of known-working Wi-Fi chipsets from various vendors
+summary: List of known-working Wi-Fi chipsets on Solus
 hide_table_of_contents: true
 ---
 
@@ -10,7 +10,7 @@ This list is not exhaustive. Other devices are also compatible with Solus, even 
 
 :::
 
-The following wireless chipsets have been reported by users to work properly with Solus.
+Users have reported that the following wireless chipsets work properly with Solus.
 
 | Brand     | Chipset                         | Notes |
 | :-------- | :------------------------------ | :---- |

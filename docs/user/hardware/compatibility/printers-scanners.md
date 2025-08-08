@@ -1,6 +1,6 @@
 ---
 title: Printers and scanners
-summary: List of known-working printers and scanners from various vendors
+summary: List of known-working printers and scanners on Solus
 hide_table_of_contents: true
 ---
 
@@ -10,7 +10,7 @@ This list is not exhaustive. Other devices are also compatible with Solus, even 
 
 :::
 
-The following printers and scanners have been reported by users to work properly with Solus.
+Users have reported that the following printers and scanners work properly with Solus.
 
 | Brand   | Device      | Notes |
 | :------ | :---------- | :---- |

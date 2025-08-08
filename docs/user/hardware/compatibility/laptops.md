@@ -1,6 +1,6 @@
 ---
 title: Laptops
-summary: List of known-working laptops from various vendors
+summary: List of known-working laptops on Solus
 hide_table_of_contents: true
 ---
 
@@ -12,7 +12,7 @@ This list is not exhaustive. Other devices are also compatible with Solus, even 
 
 :::
 
-The following laptops have been reported by users to work properly with Solus:
+Users have reported that the following laptops work properly with Solus:
 
 | Brand     | Model                        | Notes                                               |
 | :-------- | :--------------------------- | :-------------------------------------------------- |
