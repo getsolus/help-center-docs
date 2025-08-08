@@ -3,42 +3,49 @@ title: MIDI Keyboards
 summary: Guide for installing and configuring MIDI keyboards on Solus
 ---
 
-# MIDI Keyboards
+Solus is compatible with a wide variety of USB MIDI keyboards. To configure your MIDI keyboard in Solus, do the following:
 
-These instructions will guide you through how to set up and use a USB-connected MIDI keyboard on Solus. This will easily let you use the keyboard to play music with a wide set of instruments.
+1. Install the following packages:
 
-## Installing required software
+   | Package           | Description                                       |
+   | ----------------- | ------------------------------------------------- |
+   | `qsynth`          | A frontend for `fluidsynth`                       |
+   | `qjackctl`        | A controller for the JACK audio server            |
+   | `fluid-soundfont` | An open source soundfont to use with `fluidsynth` |
 
-We will need to install three packages in order to use the keyboard:
+   You can install the packages with Gnome Software, Discover, or the following command:
 
-1. `qsynth` - A frontend for `fluidsynth`
-2. `qjackctl` - A controller for the JACK audio server
-3. `fluid-soundfont` - An open source soundfont to use with `fluidsynth`
+   ```bash
+   sudo eopkg it qsynth qjackctl fluid-soundfont
+   ```
+2. Set up a soundfont in Qsynth.
 
-```bash
-sudo eopkg it qsynth qjackctl fluid-soundfont
-```
+   Qsynth needs soundfonts to produce audio when it receives MIDI input.
 
-## Setting up the soundfont in qsynth
+   1. Open Qsynth.
+   2. Go to **Setup...** > **Soundfonts** > **Open...**.
+   3. Select the soundfont you want to set up.
+   4. Click **OK**
 
-In order to use the soundfont, we need to open up `qsynth` and set the soundfont. For the purposes of this article, it would be `FluidR3.sf2`, however any other soundfont should work fine too. You set the soundfont by clicking on `Setup...` and navigating to `Soundfonts`. There you just need click `Open...` and navigate to the soundfont of your liking. The soundfont that we will be using will be placed in `/usr/share/sounds/sf2/` by default.
+   ![QSynth SoundFont](qsynth-soundfont.jpg)
 
-![QSynth SoundFont](qsynth-soundfont.jpg)
+3. Connect the keyboard into your computer.
 
-## Connecting the keyboard
+   Make sure the keyboard is on.
 
-At this stage you need to first verify that the keyboard is plugged in and turned on. Now we just need to open up `qjackctl` to connect the keyboard on a software level. In `qjackctl` you press on `Graph` and drag the keyboard's output to the input called `FLUID Synth` (Your keyboard name will probably differ from the on in the image below). This step will need to be done every time you disconnect or turn off you keyboard.
+4. Enable the keyboard using QjackCtl.
 
-![QJackCtl Connect](qjackctl-connect.jpg)
+   :::warning[Important]
+   
+   You need to do this step every time you disconnect or turn off your keyboard.
+   
+   :::
 
-You should now be ready to play on the keyboard using `qsynth`.
+   1. Open QjackCtl.
+   2. Click **Graph**.
+   3. Drag the output of your keyboard to the input called **FLUID Synth**.
 
-## Keyboard compatibility
+   ![QJackCtl Connect](qjackctl-connect.jpg)
 
-The following keyboards have been tested and/or suggested to function correctly by our users.
 
-This list should not suggest that _only_ such devices listed below are compatible with Solus, as there may be devices not listed below that are in fact compatible.
-
-### M-audio
-
-- KeyRig 49
+You can now use Qsynth to play on your keyboard.
