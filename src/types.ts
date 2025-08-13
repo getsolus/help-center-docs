@@ -1,6 +1,6 @@
 import { SvgIconTypeMap } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
-import { ComponentType, JSXElementConstructor, SVGProps } from "react";
+import { ComponentType, ReactNode, SVGProps } from "react";
 import { PropSidebarItemLink } from "@docusaurus/plugin-content-docs";
 
 export enum WebsiteType {
@@ -14,6 +14,14 @@ type DocImg = {
 };
 
 export type DocSection = PropSidebarItemLink & DocImg;
+
+export type Edition = {
+  name: string;
+  url: string;
+  urlConfig: string;
+  urlTips: string;
+  description: ReactNode;
+};
 
 export type Person = {
   description: string;
