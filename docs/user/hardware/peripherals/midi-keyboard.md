@@ -1,6 +1,6 @@
 ---
 title: MIDI Keyboards
-summary: Guide for installing and configuring MIDI keyboards on Solus
+summary: Install and configure MIDI keyboards on Solus.
 ---
 
 Solus is compatible with a wide variety of USB MIDI keyboards. To configure your MIDI keyboard in Solus, do the following:
@@ -13,7 +13,7 @@ Solus is compatible with a wide variety of USB MIDI keyboards. To configure your
    | `qjackctl`        | A controller for the JACK audio server            |
    | `fluid-soundfont` | An open source soundfont to use with `fluidsynth` |
 
-   You can install the packages with Gnome Software, Discover, or the following command:
+   You can install the packages through Discover (Solus Plasma), GNOME Software, or by running the following command:
 
    ```bash
    sudo eopkg it qsynth qjackctl fluid-soundfont

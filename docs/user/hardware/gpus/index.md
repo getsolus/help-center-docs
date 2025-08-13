@@ -1,6 +1,6 @@
 ---
 title: Graphics cards
-summary: Guide to using printers and scanners on Solus
+summary: Guide to using graphics cards on Solus.
 ---
 
 Most AMD and Intel graphics cards work automatically on Solus. If your system displays correctly and applications run well, you usually do not need to install anything else.

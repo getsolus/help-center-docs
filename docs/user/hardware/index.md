@@ -1,6 +1,6 @@
 ---
 title: Hardware
-summary: Guide to using additional hardware on Solus
+summary: Guide to using additional hardware on Solus.
 ---
 
 Solus is compatible with most hardware, such as CPUs, networking cards, and storage drives, right out of the box.

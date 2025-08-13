@@ -10,7 +10,7 @@ Solus has an open-source driver for NVIDIA cards (Nouveau) which is appropriate 
 To install the correct driver, check:
 
 - Which NVIDIA graphics card you have.
-- Which kernel you are running (current or LTS) by running `uname -r`.
+- Which kernel you are running (current or LTS) by running the command `uname -r`.
 
 ## Procedure
 

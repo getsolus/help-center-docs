@@ -1,6 +1,6 @@
 ---
 title: Synaptics touchpads (X.Org)
-summary: Configure synaptics touchpads on systems that use X.Org
+summary: Configure synaptics touchpads on systems that use X.Org.
 ---
 
 :::warning[Important]
@@ -22,7 +22,7 @@ You can install `xorg-driver-input-synaptics` (legacy Synaptics driver) to fix t
 
 Configure the legacy Synaptics driver:
 
-1. Install `xorg-driver-input-synaptics` using Discovery, GNOME Software, or running the following command:
+1. Install `xorg-driver-input-synaptics` through Discover (Solus Plasma), GNOME Software, or by running the following command:
 
    ```bash
    sudo eopkg it xorg-driver-input-synaptics
