@@ -18,7 +18,7 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 #### Added `autoupdate` as a `go-task` taskfile commands
 
 - Like the `go-task update` command, but automatic
-- If a package has a completed `monitoring.yaml` file, and a new verision is available, the `go-task autoupdate` command tries to guess the new tarball link and update the `package.yml` file
+- If a package has a completed `monitoring.yaml` file, and a new version is available, the `go-task autoupdate` command tries to guess the new tarball link and update the `package.yml` file
 
 ### July
 
