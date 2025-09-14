@@ -1,5 +1,6 @@
 abcm
 absl
+acpi
 ahci
 akonadi
 alfi
@@ -10,6 +11,7 @@ anthy
 anydesk
 aosp
 apcupsd
+appdata
 appindicator
 appstreamcli
 askpass
@@ -120,9 +122,11 @@ fluidsynth
 fontconfig
 fpath
 fprofile
+freeciv
 freedesktop
 funroll
 gamepad
+gamepads
 gconf
 geoclue
 getsol
@@ -140,6 +144,7 @@ gwenview
 gwenviewrc
 haruna
 headerbar
+hicolor
 homeserver
 hostnames
 hplip
@@ -422,6 +427,7 @@ vostro
 vpcec
 vulkan
 vwebp
+warzone
 webp
 webpinfo
 webpmux

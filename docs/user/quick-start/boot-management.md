@@ -14,7 +14,7 @@ Because `clr-boot-manager` manages these configurations, any boot customizations
 
 On systems with UEFI installations, the boot menu doesn't appear by default. To display the boot menu:
 
-- Press the <kbd>Spacebar</kbd> key repeatedly as your computer starts. You may need several attempts to get the timing right.
+- Press the <kbd>Space bar</kbd> key repeatedly as your computer starts. You may need several attempts to get the timing right.
 
 ## Display the boot menu by default
 

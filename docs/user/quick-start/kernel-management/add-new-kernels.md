@@ -53,7 +53,7 @@ To install and switch to a different kernel branch, follow these steps:
 
    On systems with UEFI installations, the boot menu doesn't appear by default.
    
-   To display the boot menu, press the <kbd>Spacebar</kbd> key repeatedly as your computer starts.
+   To display the boot menu, press the <kbd>Space bar</kbd> key repeatedly as your computer starts.
 
    :::
 
