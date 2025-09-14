@@ -19,7 +19,7 @@ To be transparent, we:
 
 ## Stability
 
-Users want to use a stable operating system, and so do we. It's never a good experience when something breaks after downloading and installing updates, and even moreso when you have to get things done. Thus, we believe it is important to provide a stable system for people to use.
+Users want to use a stable operating system, and so do we. It's never a good experience when something breaks after downloading and installing updates, and even more so when you have to get things done. Thus, we believe it is important to provide a stable system for people to use.
 
 There are a few ways we accomplish this:
 
