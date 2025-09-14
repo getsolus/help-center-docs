@@ -28,7 +28,7 @@ To make the boot menu appear automatically with a five-second timeout:
 
 ## Add kernel parameters
 
-You can add kernel parameters by creating configuration files that `clr-boot-manager` uses when updating kernels. 
+You can add kernel parameters by creating configuration files that `clr-boot-manager` uses when updating kernels.
 
 To add kernel parameters, do the following:
 
@@ -50,7 +50,7 @@ To add kernel parameters, do the following:
    echo 'nomodeset' | sudo tee /etc/kernel/cmdline.d/40_nomodeset.conf
    ```
 
-1. If you want to add multiple parameters, put them on one line with spaces between them in the configuration file. 
+1. If you want to add multiple parameters, put them on one line with spaces between them in the configuration file.
 
    For example:
 

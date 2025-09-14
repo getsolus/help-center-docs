@@ -14,14 +14,14 @@ To install and switch to a different kernel branch, follow these steps:
    - Current kernel
 
      ```
-	  sudo eopkg install linux-current
-	  ```
+     sudo eopkg install linux-current
+     ```
 
    - LTS kernel
-	 
-	  ```
-	  sudo eopkg install linux-lts
-	  ```
+
+     ```
+     sudo eopkg install linux-lts
+     ```
 
 1. Install the necessary kernel modules of the kernel branch you want to try.
 
@@ -52,7 +52,7 @@ To install and switch to a different kernel branch, follow these steps:
    :::warning Important
 
    On systems with UEFI installations, the boot menu doesn't appear by default.
-   
+
    To display the boot menu, press the <kbd>Space bar</kbd> key repeatedly as your computer starts.
 
    :::

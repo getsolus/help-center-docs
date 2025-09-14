@@ -16,33 +16,34 @@ For this procedure, you need:
 
 ## Procedure
 
-1. Shut down your system.
-1. Boot from a Solus live USB.
+1.  Shut down your system.
+1.  Boot from a Solus live USB.
 1.  Mount the partitions of your Solus system.
 
     <details>
       <BootAndChroot />
     </details>
 
-1. Update the system configuration to address the hardware changes.
+1.  Update the system configuration to address the hardware changes.
+
     <details>
-      1. Re-run system-wide configuration triggers
-    
+  1. Re-run system-wide configuration triggers
+
          ```bash
          sudo usysconf run -f
          ```
-    
-      2. If you use an UEFI system, update the boot entries for your EFI menu: 
-         ```bash
-    	 sudo clr-boot-manager update
-         ```
+
+    2. If you use an UEFI system, update the boot entries for your EFI menu:
+       `bash
+	 sudo clr-boot-manager update
+     `
+       </details>
+
+1.  Unmount all the Solus partitions.
+
+    <details>
+      <UnmountAll />
     </details>
-
-1. Unmount all the Solus partitions.
-
-   <details>
-     <UnmountAll />
-   </details>
 
 ## What to do next
 

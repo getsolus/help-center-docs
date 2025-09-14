@@ -36,7 +36,9 @@ export const TeamMember = ({ haveSupplementalInfo, teamName, person, supplementa
         person={person}
         sx={{ minWidth: 240 }}
       />
-      {haveSupplementalInfo && <Box sx={{ fontWeight: "bold", lineHeight: "40px", marginInlineStart: "6px" }}>{supplementalInfo}</Box>}
+      {haveSupplementalInfo && (
+        <Box sx={{ fontWeight: "bold", lineHeight: "40px", marginInlineStart: "6px" }}>{supplementalInfo}</Box>
+      )}
     </Stack>
   );
 };

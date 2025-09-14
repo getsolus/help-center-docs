@@ -89,7 +89,7 @@ To recover your system, you need to mount the Solus root (`/`) partition and all
          cryptsetup luksOpen /dev/sdb2 decrypted
          ```
 
-   1. Mount the Solus root partition:
+   5. Mount the Solus root partition:
 
       - If your drive's type is _lvm_
         ```bash
@@ -111,19 +111,19 @@ To recover your system, you need to mount the Solus root (`/`) partition and all
         fdisk -o Device,Size,Type -l /dev/sdX
         ```
       - If you have an NVMe drive:
-      
+
         ```bash
         fdisk -o Device,Size,Type -l /dev/nvme0nX
         ```
-      
+
         The system displays something similar to this:
-      
+
         ```bash
         Device       Size Type
         /dev/sda1    512M EFI System
         /dev/sda2  111.3G Linux filesystem
         ```
-      
+
         In this case, the EFI system partition is `/dev/sda1`
 
 1. Mount the EFI system partition:

@@ -50,7 +50,6 @@ You should not be logged into your Plasma session while deleting the cache files
 
 1. While still logged into your Plasma session, go to your home directory:
 
-
    ```bash
    cd
    ```
@@ -71,7 +70,7 @@ The commands create a copy of the folders. Each copy has the `.bak` extension (E
 1. Mount the partitions of your Solus system.
 
    <details>
-      <BootAndChroot />
+     <BootAndChroot />
    </details>
 
 1. Change to your user's directory in the chrooted environment:
@@ -99,7 +98,7 @@ The commands create a copy of the folders. Each copy has the `.bak` extension (E
    :::
 
 1. Remove the various caches that Plasma uses.
-   
+
    Execute the following commands:
 
    ```bash
@@ -107,13 +106,13 @@ The commands create a copy of the folders. Each copy has the `.bak` extension (E
    rm -rf .cache/org.kde.dirmodel-qml.kcache
    rm -rf .cache/kioexec/ .cache/krunner/ .cache/ksycoca5*
    rm -rf .cache/krunnerbookmarkrunnerfirefoxdbfile.sqlite
-   
+
    cd ../.local/
    rm -rf kate/ kded5/ klipper/ knewstuff3/ kscreen/ konsole/ kwalletd/ ksysguard/ kmail2/ kcookiejar/ kactivitymanagerd/
-   
+
    cd ../share/
    rm -rf dolphin kate kcookiejar kded5 keyrings klipper kmail2 knewstuff3 konsole kscreen ksysguard kwalletd kxmlgui5 plasma_engine_comic plasma plasma_notes org.kde.gwenview
-   
+
    cd ../.config/
    rm -f plasma*
    rm -rf kde* akonadi* KDE kconf_updaterc baloo* dolphinrc drkonqirc gwenviewrc kmail2rc k*rc katemetainfos
@@ -124,7 +123,7 @@ The commands create a copy of the folders. Each copy has the `.bak` extension (E
 1. If you experience system instability, restore the previously backed up folders.
 
    To restore an entire directory:
-   
+
    ```bash
    cp -rav .kde.bak/share/config/ .kde/share/config
    ```

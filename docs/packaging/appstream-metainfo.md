@@ -32,8 +32,8 @@ There are a few scenarios that Packagers might encounter:
 | 1   | An application already provides appstream metainfo                                               | Nothing to do                                                                                                                                                                                                                |
 | 2   | An application contains appstream metainfo in the source package but we do not install it        | Install the appstream metainfo to `/usr/share/metainfo`. _Example_: [here](https://github.com/getsolus/packages/commit/0a726a53454e7c8a6b0e66de69d59bcc66f0fc19)                                                             |
 | 3   | An application doesn't contain appstream metainfo in the source package but it exists on Flathub | Borrow and tweak the appstream metainfo from the Flathub repo. Encourage upstream project to add it to their source. _Example_: [here](https://github.com/getsolus/packages/commit/da2f65b93f412da43d1db9edbcb08bb90517a0eb) |
-| 4   | An application doesn't provide appstream metainfo and it doesn't exist on flathub                | See [here](#writing-appstream-metainfo). _Example_: [here](https://github.com/getsolus/packages/commit/414219d8b2ceeabe85178d3a467f81b9131016f4)                                                         |
-| 5   | Appstream metainfo is provided but composition of it is failing                                   | See [here](#testing-appstream-metainfo). _Example_: [here](https://github.com/getsolus/packages/commit/583b7c742caf50e2f66a70e9b62e9b91566c03f5).                                    |
+| 4   | An application doesn't provide appstream metainfo and it doesn't exist on flathub                | See [here](#writing-appstream-metainfo). _Example_: [here](https://github.com/getsolus/packages/commit/414219d8b2ceeabe85178d3a467f81b9131016f4)                                                                             |
+| 5   | Appstream metainfo is provided but composition of it is failing                                  | See [here](#testing-appstream-metainfo). _Example_: [here](https://github.com/getsolus/packages/commit/583b7c742caf50e2f66a70e9b62e9b91566c03f5).                                                                            |
 
 AppStream metainfo is to be installed in the `/usr/share/metainfo/` directory. It must be placed in the package which should be installed in order to get the software described by the respective metadata. This means that you might need to move the _.metainfo.xml or _.appdata.xml to the right (sub)package.
 
@@ -55,7 +55,6 @@ In case your AppStream metainfo is describing a desktop application (you can tel
 
 - Run a report against the extracted install directory.
 
-
   For general testing, the following command should be sufficient:
 
   ```bash
@@ -63,7 +62,7 @@ In case your AppStream metainfo is describing a desktop application (you can tel
   ```
 
   For more advanced testing, such as media generation, e.g. to test font screenshots get auto-generated, run:
-  
+
   ```bash
   appstreamcli compose install/ --hints-dir=hints --media-dir=media --media-baseurl=localhost:8000 --verbose
   ```
@@ -80,7 +79,7 @@ The `appstreamcli compose` tool will normally give good hints about failures but
 
 - A `.desktop` file cannot be matched to the metainfo file.
   - By default, the `.desktop` file name must match the `<id>` provided in `.xml` file in `/usr/share/metainfo/`. For example, the if you have `<id>org.foobar.my_package</id>` the `.desktop` file should be called `org.foobar.my_package.desktop`. However, there is an exception to this if the metainfo provides a launchable tag. For example, if the metainfo contains `<launchable type="desktop-id">my_package.desktop</launchable>` then the `.desktop` file can be just called `my_package.desktop`. For more information view the upstream documentation [here](https://www.freedesktop.org/software/appstream/docs/sect-Metadata-Application.html#spec-appdata-introduction).
-- No metainfo file is provided. 
+- No metainfo file is provided.
   - No appstream metainfo was found in `/usr/share/metainfo/`.
   - Appstream metainfo may exist in `/usr/share/appdata/` but that path is now obsolete and is no longer read from.
 - No icon found.
@@ -111,19 +110,20 @@ It is not necessary to pass all pedantic warnings, but all errors must be rectif
 To generate a catalog with appstream generator, a `asgen-config.json` file must be provided.
 
 Here is a example configuration file for running against local repositories.
+
 ```json
 {
-    "ProjectName": "Solus",
-    "ArchiveRoot": "/var/lib/solbuild",
-    "MediaBaseUrl": "http://localhost:8000/export/media",
-    "HtmlBaseUrl": "http://localhost:8000/export/html",
-    "Backend": "solus",
-    "Suites": {
-        "local": {
-            "sections": ["main"],
-            "architectures": ["x86_64"]
-        }
+  "ProjectName": "Solus",
+  "ArchiveRoot": "/var/lib/solbuild",
+  "MediaBaseUrl": "http://localhost:8000/export/media",
+  "HtmlBaseUrl": "http://localhost:8000/export/html",
+  "Backend": "solus",
+  "Suites": {
+    "local": {
+      "sections": ["main"],
+      "architectures": ["x86_64"]
     }
+  }
 }
 ```
 
@@ -134,25 +134,26 @@ To generate the catalog run `appstream-generator run local --verbose`. Depending
 To view the HTML report, you can start a http server with `python3 -m http.server 8000`, enter `http://localhost:8000/` in your web browser, then navigate to `export/html/`.
 
 It can also be ran against a remote repository, here is a sample configuration.
+
 ```json
 {
-    "ProjectName": "Solus",
-    "ArchiveRoot": "https://fastly.getsol.us/repo",
-    "MediaBaseUrl": "https://appstream.getsol.us/media",
-    "HtmlBaseUrl": "https://appstream.getsol.us",
-    "Backend": "solus",
-    "Suites": {
-        "gwendraeth": {
-            "sections": ["main"],
-            "architectures": ["x86_64"]
-        },
-        "gwendraeth-updates": {
-            "sections": ["main"],
-            "architectures": ["x86_64"],
-            "dataPriority": 10,
-            "baseSuite": "gwendraeth"
-        }
+  "ProjectName": "Solus",
+  "ArchiveRoot": "https://fastly.getsol.us/repo",
+  "MediaBaseUrl": "https://appstream.getsol.us/media",
+  "HtmlBaseUrl": "https://appstream.getsol.us",
+  "Backend": "solus",
+  "Suites": {
+    "gwendraeth": {
+      "sections": ["main"],
+      "architectures": ["x86_64"]
+    },
+    "gwendraeth-updates": {
+      "sections": ["main"],
+      "architectures": ["x86_64"],
+      "dataPriority": 10,
+      "baseSuite": "gwendraeth"
     }
+  }
 }
 ```
 

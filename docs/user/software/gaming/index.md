@@ -5,7 +5,7 @@ summary: Learn about the gaming possibilities on Solus, including Linux, Windows
 
 # Gaming
 
-You can play a wide variety of games on Solus: 
+You can play a wide variety of games on Solus:
 
 - Native Linux Games: Run games developed specifically for the Linux platform.
 - Windows Games: Play many Windows games using compatibility layers like Steam (Proton) and Lutris.

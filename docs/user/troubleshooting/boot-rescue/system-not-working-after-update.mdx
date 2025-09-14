@@ -19,21 +19,22 @@ For this procedure, you need:
 
 ## Procedure
 
-1. Shut down your system.
-1. Boot from a Solus live USB.
+1.  Shut down your system.
+1.  Boot from a Solus live USB.
 1.  Mount the partitions of your Solus system.
 
     <details>
       <BootAndChroot />
     </details>
 
-1. Check the chroot environment has internet connection.
+1.  Check the chroot environment has internet connection.
+
     <details>
-    	1. Connect your computer to the internet.
-    	2. Run `ping -c 4 google.com` in the chroot environment.
-    
+	1. Connect your computer to the internet.
+	2. Run `ping -c 4 google.com` in the chroot environment.
+
            If the chroot environment has internet connection, the system displays the following:
-    
+
            ```bash
            PING google.com (142.250.196.206) 56(84) bytes of data.
            64 bytes from nctsaa-ac-in-f14.1e100.net (142.250.196.206): icmp_seq=1 ttl=115 time=4.26 ms
@@ -46,68 +47,70 @@ For this procedure, you need:
            ```
         3. If the chroot environment *does not* have an internet connection:
         	1. Exit the chroot environment:
-    
+
         	   ```bash
         	   exit
         	   ```
-    
+
         	2. Run the following commands:
-    
+
         	   ```bash
         	   cp /run/systemd/resolve/stub-resolv.conf /target/run/systemd/resolve/
         	   cd /target/etc
                ln -s ../run/systemd/resolve/stub-resolv.conf /target/etc/resolv.conf
         	   ```
-    
+
         	3. Go back to the chroot environment:
 
         	   ```bash
         	   chroot /target
         	   ```
-    
+
         	4. Test the internet connection again.
-    
+
     </details>
 
-1. Repair your Solus installation.
+1.  Repair your Solus installation.
+
     <details>	
-    	Follow the appropriate steps depending on your situation:
-    
+	Follow the appropriate steps depending on your situation:
+
         <details>
         	<summary>My system stopped working after a *failed* update.</summary>
         	1. Rebuild the package database:
-    
+
         	   ```bash
         	   sudo eopkg rebuild-db
         	   ```
-    
+
         	2. Update your system:
-    
+
         	   ```bash
         	   sudo eopkg up
         	   ```
-    
+
         	3. Check if your system still has broken packages:
-    
+
         	   ```bash
         	   sudo eopkg check | grep Broken | awk '{print $4}' | xargs sudo eopkg it --reinstall
         	   ```
-    
+
         	   If you see output that starts with "Usage", the system has no broken packages.
         </details>
-    
+
         <details>
         	<summary>My system stopped working after a *successful* update</summary>
-    
+
             See [Rollback](/docs/user/package-management/history-and-rollback#rollback).
         </details>
+
     </details>
 
-1. Unmount all the Solus partitions.
+1.  Unmount all the Solus partitions.
 
-   <details>
-     <UnmountAll />
-   </details>
+    <details>
+      <UnmountAll />
+    </details>
 
 ## What to do next
 

@@ -24,35 +24,36 @@ For this procedure, you need:
 
 1. Shut down your system.
 1. Boot from a Solus live USB.
-1.  Mount the partitions of your Solus system.
+1. Mount the partitions of your Solus system.
 
-    <details>
-      <BootAndChroot />
-    </details>
+   <details>
+     <BootAndChroot />
+   </details>
 
-1.  Prevent the system from trying to mount unavailable devices.
+1. Prevent the system from trying to mount unavailable devices.
 
-    <details>
-    1. Edit `/etc/fstab` using `nano`:
-    	```bash
-    	nano /etc/fstab
-    	```
-    2. Find all the unavailable devices.
-    3. Add the `noauto` option to the line corresponding to the unavailable device.
+   <details>
+1. Edit `/etc/fstab` using `nano`:
+	```bash
+	nano /etc/fstab
+	```
+2. Find all the unavailable devices.
+3. Add the `noauto` option to the line corresponding to the unavailable device.
 
-       For example:
+   For example:
 
-       ```bash
-       UUID=XXXXXX  /mnt/mydisk  exfat  noauto,uid=1000,gid=1000,umask=0022  0  0
-       ```
-    4. Save the file and restart your system.
+   ```bash
+   UUID=XXXXXX  /mnt/mydisk  exfat  noauto,uid=1000,gid=1000,umask=0022  0  0
+   ```
 
-    </details>
+   4. Save the file and restart your system.
 
-1.  Unmount all the Solus partitions.
-    <details>
-      <UnmountAll />
-    </details>
+   </details>
+
+1. Unmount all the Solus partitions.
+   <details>
+     <UnmountAll />
+   </details>
 
 ## What to do next
 

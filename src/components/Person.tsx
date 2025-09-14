@@ -60,9 +60,7 @@ export const Person = ({ embeddedIn, isBadge = false, onAvatarClick, person, sx 
         </Stack>
         {!isBadge && (
           <>
-            <Box textAlign={!usePersonRow ? "center" : undefined}>
-              {person.description}
-            </Box>
+            <Box textAlign={!usePersonRow ? "center" : undefined}>{person.description}</Box>
             {person.matrix && <small>Matrix: {person.matrix}</small>}
           </>
         )}

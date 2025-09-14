@@ -14,8 +14,7 @@ export const Teams: Team[] = [
     name: "Admin Team",
   },
   {
-    description:
-      "This team has push access to all Solus repositories, and makes general decisions about the project.",
+    description: "This team has push access to all Solus repositories, and makes general decisions about the project.",
     members: [
       ["ReillyBrogan", null],
       ["EvanMaddock", null],
