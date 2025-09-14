@@ -4451,7 +4451,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/eslint-plugin@npm:^3.8.0":
+"@docusaurus/eslint-plugin@npm:^3.8.1":
   version: 3.8.1
   resolution: "@docusaurus/eslint-plugin@npm:3.8.1"
   dependencies:
@@ -4463,7 +4463,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/faster@npm:^3.8.0":
+"@docusaurus/faster@npm:^3.8.1":
   version: 3.8.1
   resolution: "@docusaurus/faster@npm:3.8.1"
   dependencies:
@@ -4540,7 +4540,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/module-type-aliases@npm:3.8.1, @docusaurus/module-type-aliases@npm:^3.8.0":
+"@docusaurus/module-type-aliases@npm:3.8.1, @docusaurus/module-type-aliases@npm:^3.8.1":
   version: 3.8.1
   resolution: "@docusaurus/module-type-aliases@npm:3.8.1"
   dependencies:
@@ -4712,7 +4712,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/plugin-ideal-image@npm:^3.8.0":
+"@docusaurus/plugin-ideal-image@npm:^3.8.1":
   version: 3.8.1
   resolution: "@docusaurus/plugin-ideal-image@npm:3.8.1"
   dependencies:
@@ -4775,7 +4775,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/preset-classic@npm:^3.8.0":
+"@docusaurus/preset-classic@npm:^3.8.1":
   version: 3.8.1
   resolution: "@docusaurus/preset-classic@npm:3.8.1"
   dependencies:
@@ -16297,11 +16297,11 @@ __metadata:
   dependencies:
     "@cmfcmf/docusaurus-search-local": ^1.2.0
     "@docusaurus/core": ^3.8.0
-    "@docusaurus/eslint-plugin": ^3.8.0
-    "@docusaurus/faster": ^3.8.0
-    "@docusaurus/module-type-aliases": ^3.8.0
-    "@docusaurus/plugin-ideal-image": ^3.8.0
-    "@docusaurus/preset-classic": ^3.8.0
+    "@docusaurus/eslint-plugin": ^3.8.1
+    "@docusaurus/faster": ^3.8.1
+    "@docusaurus/module-type-aliases": ^3.8.1
+    "@docusaurus/plugin-ideal-image": ^3.8.1
+    "@docusaurus/preset-classic": ^3.8.1
     "@emotion/react": ^11.11.1
     "@emotion/styled": ^11.11.0
     "@mdx-js/react": ^3.0.0
