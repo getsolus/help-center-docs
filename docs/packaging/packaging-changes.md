@@ -20,6 +20,11 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 - Like the `go-task update` command, but automatic
 - If a package has a completed `monitoring.yaml` file, and a new version is available, the `go-task autoupdate` command tries to guess the new tarball link and update the `package.yml` file
 
+#### Disallowed other Boolean values than `true` or `false` in `package.yml`
+
+- To enable JSON schema work for package.yml files and increased compatibility with YAML 1.2 Booleans must now only be set to `true` or `false`.
+- `yes`, `no`, `on`, `off` and all other variations are no longer allowed
+
 ### July
 
 #### Changed behaviour on several `go-task` taskfile commands
