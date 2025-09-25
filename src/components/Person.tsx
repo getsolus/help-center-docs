@@ -80,7 +80,7 @@ export const Administration = () => {
       <Grid columns={useGrid ? 12 : 6} container margin={0} spacing={4} width={1}>
         {administration &&
           administration.map((person) => (
-            <Grid key={`AdministrationGridItem-${person.names.first}`} xs={6}>
+            <Grid key={`AdministrationGridItem-${person.names.first}`} size={{ xs: 6 }}>
               <Person embeddedIn="Administration" person={person} sx={{ alignItems: "center", height: "100%", p: 2 }} />
             </Grid>
           ))}
