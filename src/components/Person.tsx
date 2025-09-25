@@ -1,4 +1,4 @@
-import { Avatar, Box, Stack, SxProps, useMediaQuery } from "@mui/material";
+import { Avatar, Box, Grid, Stack, SxProps, useMediaQuery } from "@mui/material";
 import React from "react";
 import { Person as PersonType, WebsiteType } from "../types";
 import { SiteTheme } from "../theme";
@@ -6,7 +6,6 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import Link from "@docusaurus/Link";
 import { Teams } from "../data/teams";
 import { People } from "../data/people";
-import Grid2 from "@mui/material/Unstable_Grid2";
 
 type PersonProps = {
   embeddedIn: string;
@@ -60,9 +59,7 @@ export const Person = ({ embeddedIn, isBadge = false, onAvatarClick, person, sx 
         </Stack>
         {!isBadge && (
           <>
-            <Box textAlign={!usePersonRow ? "center" : undefined}>
-              {person.description}
-            </Box>
+            <Box textAlign={!usePersonRow ? "center" : undefined}>{person.description}</Box>
             {person.matrix && <small>Matrix: {person.matrix}</small>}
           </>
         )}
@@ -80,14 +77,14 @@ export const Administration = () => {
     <Stack gap={4} sx={{ marginBlockEnd: 4 }}>
       <h1 style={{ margin: 0 }}>Administration</h1>
       {adminTeam && adminTeam.description}
-      <Grid2 columns={useGrid ? 12 : 6} container margin={0} spacing={4} width={1}>
+      <Grid columns={useGrid ? 12 : 6} container margin={0} spacing={4} width={1}>
         {administration &&
           administration.map((person) => (
-            <Grid2 key={`AdministrationGridItem-${person.names.first}`} xs={6}>
+            <Grid key={`AdministrationGridItem-${person.names.first}`} xs={6}>
               <Person embeddedIn="Administration" person={person} sx={{ alignItems: "center", height: "100%", p: 2 }} />
-            </Grid2>
+            </Grid>
           ))}
-      </Grid2>
+      </Grid>
     </Stack>
   );
 };
