@@ -16,7 +16,7 @@ If there is an existing request, please add a link to it in your pull request. E
 ```
 This PR resolves software update request https://github.com/getsolus/packages/issues/123
 ```
-
+Don't forget to check if there is a MAINTAINERS file as well for the package you want to update.
 :::
 
 ### Update your clone of the packages repository
