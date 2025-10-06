@@ -4,8 +4,7 @@ import Translate, { translate } from "@docusaurus/Translate";
 import Link from "@docusaurus/Link";
 import Image from "@theme/IdealImage";
 import Heading from "@theme/Heading";
-import { Button, ButtonGroup, Stack, useMediaQuery, useTheme } from "@mui/material";
-import Grid2 from "@mui/material/Unstable_Grid2";
+import { Button, ButtonGroup, Grid, Stack, useMediaQuery, useTheme } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
 
@@ -79,7 +78,7 @@ const EditionCard = ({ name, url, urlConfig, urlTips, description }: EditionCard
   const image = useBaseUrl(`/img/${name}.jpg`);
 
   return (
-    <Grid2 xs={6}>
+    <Grid xs={6}>
       <Stack className={clsx("card")} height={1}>
         <Stack className={clsx("card__image")}>
           <Link to={url}>
@@ -123,16 +122,16 @@ const EditionCard = ({ name, url, urlConfig, urlTips, description }: EditionCard
           </ButtonGroup>
         </Stack>
       </Stack>
-    </Grid2>
+    </Grid>
   );
 };
 
 export const EditionCardsRow = () => {
   return (
-    <Grid2 container columns={{ xs: 6, sm: 6, md: 6, lg: 12 }} spacing={2}>
+    <Grid container columns={{ xs: 6, sm: 6, md: 6, lg: 12 }} spacing={2}>
       {Editions.map((edition) => (
         <EditionCard key={edition.name} {...edition} />
       ))}
-    </Grid2>
+    </Grid>
   );
 };
