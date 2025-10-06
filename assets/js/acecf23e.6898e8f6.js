@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksolus_help_center=self.webpackChunksolus_help_center||[]).push([["7627"],{47548:function(e){e.exports=JSON.parse('{"blogBasePath":"/blog","blogTitle":"Solus DevLog","authorsListPath":"/blog/authors"}')}}]);
