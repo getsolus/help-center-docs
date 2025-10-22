@@ -36,10 +36,11 @@ Follow these steps to submit a package for deprecation:
 1. Create a new branch in the Solus `packages` repository [on GitHub](https://github.com/getsolus/packages) (forking it first if necessary) with a suitable name such as "deprecate-foobar"
 2. Edit `repo_data/distribution.xml.in`
 3. Add the package you wish to deprecate at the end of the `<Obsoletes>` section
-4. Change directory to repo_data (`cd repo_data`), then run the `merged_repos.sh` script
-5. Remove the package from the Solus `packages` repository, for example `rm -fr packages/f/foobar`
-6. Commit and push your changes to your repository/branch
-7. Open a Pull Request on GitHub
+4. Ensure you have `intltool` installed
+5. Change directory to repo_data (`cd repo_data`), then run the `merged_repos.sh` script
+6. Remove the package from the Solus `packages` repository, for example `rm -fr packages/f/foobar`
+7. Commit and push your changes to your repository/branch
+8. Open a Pull Request on GitHub
 
 ### Un-deprecating a package
 
