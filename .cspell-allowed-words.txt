@@ -159,6 +159,7 @@ inspiron
 installdir
 installroot
 insync
+intltool
 ipofyourscanner
 issuenumber
 jakob
