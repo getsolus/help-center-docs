@@ -50,6 +50,10 @@ If this happens, simply override with `patterns` or set `libsplit` to “no”.
 
 **A note on static archives**: Unless it is absolutely unavoidable, you should disable static libraries within your build. This is usually fixed by adding `--disable-static` to your configure routine. If `*.a` files are shown in your packaging request, it will be questioned, as they can pose a greater security risk if packages link against these static archives.
 
+#### Development modules should be normal packages without a -devel subpackage
+
+In the cases where modules like `perl` or `python` would be split by the default `ypkg` policy (for instance because they contain category 3 `man` pages), the current best practice is to add a `patterns   : /*` stanza to keep everything in the main package for convenience.
+
 ### The docs subpackage
 
 Currently there is only one pattern which is forced into a `docs` subpackage:
