@@ -7,6 +7,12 @@ summary: What's needed to include packages into the repository
 
 This policy sets forth the criteria for a package to be accepted for inclusion into the Solus repositories or rejected.
 
+:::note
+
+If a package we have accepted for inclusion requires a dependency that is also not currently in the repository, said dependency is automatically and implicitly accepted for inclusion without requiring a separate package inclusion request. They should be submitted together in the same pull request.
+
+:::
+
 ## Criteria
 
 ### Explicitly redistributable
