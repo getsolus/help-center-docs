@@ -5,7 +5,7 @@ summary: Repository Management
 
 # Repository management
 
-Solus offers two main software sources: stable (shannon) and unstable. The `eopkg` package manager can use multiple sources on your system, which is helpful if you use a source provided by another vendor.
+Solus offers two main software sources: Polaris (stable) and Unstable. The `eopkg` package manager can use multiple sources on your system, which is helpful if you use a source provided by another vendor.
 
 ## Official repositories
 
@@ -13,7 +13,7 @@ The official Solus repositories are:
 
 | Repository       | URL                                                      | Notes                                                                                                       |
 | ---------------- | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Stable (shannon) | `https://cdn.getsol.us/repo/shannon/eopkg-index.xml.xz`  | Default software source.                                                                                    |
+| Polaris (Stable) | `https://cdn.getsol.us/repo/polaris/eopkg-index.xml.xz`  | Default software source.                                                                                    |
 | Unstable         | `https://cdn.getsol.us/repo/unstable/eopkg-index.xml.xz` | Only use this source if build Solus packages or you test new software before it moves to the stable source. |
 
 :::danger
