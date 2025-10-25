@@ -5,7 +5,7 @@ summary: Manage and remove old kernels to free up space on the boot partition.
 You might need to remove old kernels for various reasons:
 
 - The boot partition is too small for multiple kernel versions
-- [`clr-boot-manager`](https://github.com/clearlinux/clr-boot-manager) not automatically cleaning up old entries
+- [`clr-boot-manager`](https://github.com/getsolus/clr-boot-manager) not automatically cleaning up old entries
 - Custom or testing kernels installed that won't be automatically removed
 
 If the boot partition of your system is full, updates might fail and you might not be able to install new kernels.
