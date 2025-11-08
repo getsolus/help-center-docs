@@ -12,7 +12,7 @@ First, perform a full system update on command line with `sudo eopkg up` (or usi
 Next, validate that packages are installed correctly and aren't missing files. Run this once, it will take some time. If there are no broken packages on your system, there will be no output. Otherwise, you will see packages be reinstalled.
 
 ```bash
-sudo eopkg check | grep Broken | awk '{print $4}' | xargs -r sudo eopkg it --reinstall
+sudo eopkg -y
 ```
 
 Reboot the system and see if the issue is resolved.
