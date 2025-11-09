@@ -31,15 +31,15 @@ sudo -u postgres psql
 
 Note that all local connections are trusted and can access all databases by default. This can be changed in `/var/db/pgsql/data/pg_hba.conf`, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html) for more details.
 
-## Updating to 17
+## Updating to 18
 
-Because PostgreSQL is included as a single package, the only way to perform a major upgrade of PostgreSQL is via a backup/restore. The procedure below describes the upgrade process as it applies to Solus. See the [PostgreSQL documentation](https://www.postgresql.org/docs/17/upgrading.html#UPGRADING-VIA-PGDUMPALL) for more details.
+Because PostgreSQL is included as a single package, the only way to perform a major upgrade of PostgreSQL is via a backup/restore. The procedure below describes the upgrade process as it applies to Solus. See the [PostgreSQL documentation](https://www.postgresql.org/docs/18/upgrading.html#UPGRADING-VIA-PGDUMPALL) for more details.
 
-1.  If you have already updated PostgreSQL, downgrade PostgreSQL back to 16.4:
+1.  If you have already updated PostgreSQL, downgrade PostgreSQL back to 17.6:
 
 ```bash
-sudo eopkg it https://cdn.getsol.us/repo/polaris/p/postgresql/postgresql-16.4-51-1-x86_64.eopkg \
-              https://cdn.getsol.us/repo/polaris/p/postgresql/postgresql-libpq-16.4-51-1-x86_64.eopkg
+sudo eopkg it https://cdn.getsol.us/repo/polaris/p/postgresql/postgresql-17.6-59-1-x86_64.eopkg \
+              https://cdn.getsol.us/repo/polaris/p/postgresql/postgresql-libpq-17.6-59-1-x86_64.eopkg
 ```
 
 2.  (Re)start PostgreSQL:
