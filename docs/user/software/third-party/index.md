@@ -11,7 +11,7 @@ If these instructions fail to work please [file an issue](https://github.com/get
 
 ## Prerequisites
 
-To run any of these commands you must first install the `python-eopkg` package
+To run any of these commands, you must first install the `python-eopkg` package
 
 ```bash
 sudo eopkg it python-eopkg
