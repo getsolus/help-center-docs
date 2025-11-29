@@ -46,7 +46,7 @@ This is invariably created for packages that provide libraries and development h
 For the full list of rules see [here](https://github.com/getsolus/ypkg/blob/v34/ypkg2/packages.py#L166-L254).
 
 Note that for some packages, `/usr/$lib/lib*.so` files are not symlinks. In this instance, the main package will be broken with no library files present. This can quickly be determined by looking at the resulting `pspec_*.xml` file generated after running the build.
-If this happens, simply override with `patterns` or set `libsplit` to “no”.
+If this happens, simply override with `patterns` or set `libsplit` to “false”.
 
 **A note on static archives**: Unless it is absolutely unavoidable, you should disable static libraries within your build. This is usually fixed by adding `--disable-static` to your configure routine. If `*.a` files are shown in your packaging request, it will be questioned, as they can pose a greater security risk if packages link against these static archives.
 
