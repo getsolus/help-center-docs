@@ -15,7 +15,7 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 ### November
 
-#### Initial lanuage server integration for `package.yml` files
+#### Initial language server integration for `package.yml` files
 
 - All `package.yml` files now specify a YAML schema on the first line.
 - Install `yaml-language-server`, and use an editor with language server support to see hints on valid `package.yml` field values.
