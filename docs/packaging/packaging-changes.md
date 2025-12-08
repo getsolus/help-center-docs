@@ -13,6 +13,19 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 ## 2025
 
+### December
+
+#### Mandate installation of license files
+
+- Packages must now have license files installed so we are compliant.
+- License files can be easily installed with the new `%install_license` macro.
+  ```yaml
+  install    : |
+      %ninja_install
+      %install_license LICENSE
+      %install_license LICENSES/*
+  ```
+
 ### November
 
 #### Initial language server integration for `package.yml` files
