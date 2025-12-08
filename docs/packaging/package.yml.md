@@ -165,6 +165,7 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 | **%apply_patches**            | Applies all patches listed in the `series` file in `./files` folder.                                                                      |
 | **%reconfigure**              | Updates build scripts such as `./configure` and proceeds to run `%configure`.                                                             |
 | **%symlink_check**            | Checks for broken symlinks in the install directory and aborts the build if any are found. Must run after install macros.                 |
+| **%install_license**          | Installs any files after the macro to `$installdir/usr/share/licenses/$package/`. |
 
 ### Haskell actionable macros
 
