@@ -92,6 +92,7 @@ All new packages or updates to packages should abide by the [SPDX 3.x](https://s
 
 License files that are present in an upstream project must also be installed with the package. This can be easily done with the `%install_license` macro. The macro will install any files passed to it to the system licenses directory, `$installdir/usr/share/licenses/$package/`. The files passed to the macro are expected to be relative to the project's source root.
 
+<!-- prettier-ignore -->
 ```yaml
 install    : |
     %ninja_install
