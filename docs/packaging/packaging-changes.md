@@ -19,6 +19,7 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 - Packages must now have license files installed so we are compliant.
 - License files can be easily installed with the new `%install_license` macro.
+  <!-- prettier-ignore -->
   ```yaml
   install    : |
       %ninja_install
