@@ -3,7 +3,7 @@ title: Desktop environments
 summary: Quick guides on switching between or installing additional desktop environments on Solus
 ---
 
-Solus offers multiple [desktop environments](https://getsol.us/solus/experiences/): From the feature-rich and modern Budgie to the traditional Xfce experience.
+Solus offers multiple [desktop environments](https://getsol.us/download/): From the feature-rich and modern Budgie to the traditional Xfce experience.
 
 For the best experience, use the Solus ISO of your preferred desktop environment. You can install additional desktop environments later if you want to experiment with different options.
 
