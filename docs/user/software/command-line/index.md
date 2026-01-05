@@ -17,7 +17,7 @@ Solus makes available other shells via our repository, with a full list availabl
 
 ### Installation
 
-In order to use a shell different from Bash, you may need to install the respective package for the shell to be able to work. You will find those packages in the Software Center within the _System utilities_ category, or via the command-line with `sudo eopkg install <Name of the Shell>`.
+In order to use a shell different from Bash, you may need to install the respective package for the shell to be able to work. You can install those packages via the command-line with `sudo eopkg install <Name of the Shell>`.
 
 Example:
 
@@ -51,7 +51,7 @@ Example:
 
 ### Installation
 
-The fzf project consists of the following components: an `fzf` executable, an `fzf-tmux` script for launching fzf in a tmux pane, shell extensions (including key bindings and command-line fuzzy auto-completion), and a vim/Neovim plugin file. They are all available in the `fzf` package in the Software Center or via eopkg in a terminal:
+The fzf project consists of the following components: an `fzf` executable, an `fzf-tmux` script for launching fzf in a tmux pane, shell extensions (including key bindings and command-line fuzzy auto-completion), and a vim/Neovim plugin file. They are all available in the `fzf` package. Install that package via eopkg in a terminal:
 
 ```bash
 sudo eopkg it fzf
