@@ -31,7 +31,7 @@ Some common configuration files:
 | cups                                                | `/etc/cups/`                                            |
 | [samba](/docs/user/software/networking/samba)       | `/etc/samba/smb.conf`<br />`/usr/share/defaults/samba/` |
 | pam                                                 | `/etc/pam.d/`<br />`/usr/share/defaults/etc/pam.d/`     |
-| ssh                                                 | `$HOME/.ssh/`<br />`/usr/share/defaults/etc/ssh/`       |
+| ssh                                                 | `$HOME/.ssh/`<br />`/usr/share/defaults/ssh/`       |
 | ssl                                                 | `/etc/ssl/`<br />`/usr/share/defaults/etc/ssl/`         |
 | [tigervnc](/docs/user/software/networking/tigervnc) | `$HOME/.vnc/xstartup`                                   |
 | [xrdp](/docs/user/software/networking/xrdp)         | `/etc/X11/Xwrapper.config`                              |
