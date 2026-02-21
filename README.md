@@ -1,8 +1,4 @@
-<p align="center">
-  <a href="https://getsol.us">
-    <img src="https://getsol.us/imgs/logo.png" alt="Solus logo"/>
-  </a>
-</p>
+<img src="https://getsol.us/imgs/Solus_With_Text.svg" alt="Solus logo with text" width="250px">
 
 # Help Center documentation
 
