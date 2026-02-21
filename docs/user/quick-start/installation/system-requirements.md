@@ -6,7 +6,7 @@ summary: Hardware Requirements Guide
 # System requirements
 
 - A blank DVD or a USB drive that is at least 3&nbsp;GB
-- On UEFI systems, an EFI partition of 1&nbsp;GB minimum
+- On [UEFI](disks.md/#uefi) systems, an EFI partition of 1&nbsp;GiB minimum
 - An internet connection
 - System connected to AC power
 
