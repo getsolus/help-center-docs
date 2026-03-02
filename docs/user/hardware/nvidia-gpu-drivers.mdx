@@ -1,0 +1,49 @@
+---
+title: NVIDIA GPU Drivers
+summary: How to choose and install a driver for an NVIDIA GPU
+---
+
+:::note
+
+To use the drivers published by NVIDIA, you will need to know:
+- The family your GPU belong's to, which you can find on [the nouveau wiki's code names page](https://nouveau.freedesktop.org/CodeNames.html)
+- The kernel running on your system, which you can determine by running
+
+  ```
+  uname -r
+  ```
+
+:::
+
+Linux has three types of drivers for NVIDIA GPUs
+
+- **Nouveau**
+  This is the open-source driver, and is loaded if the drivers NVIDIA distributes are not installed. It consists of a DRM driver provided by the Linux kernel, OpenGL drivers (nvc0, nv50) from Mesa, and an Xorg driver (xorg-driver-video-nouveau).
+  Device support has historically lagged behind the drivers provided by NVIDIA, will likely not support newer hardware and does not include Vulkan support.
+  Performance of this driver also typically lags behind the drivers NVIDIA provides.
+- **NVIDIA open GPU kernel module drivers**
+ These are open driver modules, provided by NVIDIA, that are loaded with the kernel.
+- **NVIDIA proprietary drivers**
+  These are closed-source drivers provided by NVIDIA.
+
+
+Choose the recommended driver for your GPU:
+
+- If your device is in the [Compatible GPUs list for the open kernel modules](https://github.com/NVIDIA/open-gpu-kernel-modules), we recommend using this driver.
+- If it isn't in that list, check the [NVIDIA manual driver search page](https://www.nvidia.com/en-us/geforce/drivers/) to find the recommended driver branch for your GPU.
+- The 580 proprietary drivers are needed for Maxwell, Pascal, and Volta GPUs. This is the final release to offer official updates for these cards.
+- The 470 proprietary drivers are *only* needed for older cards which are not supported by the other drivers NVIDIA publishes. This is the last driver that supports Kepler generation GPUs such as GeForce GTX 7xx, some GeForce GTX 6xx, Quadro Kxx, and Tesla Kxx series. This is only packaged for the LTS kernel, so you will need to use that kernel.
+
+  :::warning
+
+  The `nvidia-470*` driver has not been supported by NVIDIA for over a year and a half. It will be removed from the Solus repository in the not-so-distant future. When it is deprecated, your system will be forced back to the `nouveau` driver. This will result in significant performance drops compared to what you are used to.
+
+  :::
+
+You'll need to open the package details in your software center to determine which "NVIDIA Graphics Driver" package is the proprietary one vs. the open one. The one that doesn't say "proprietary" is the open kernel module driver.
+
+Install the version of the driver you want that matches the running kernel, e.g.  
+  "NVIDIA Graphics Driver" for the "current" kernel  
+  "NVIDIA Graphics Driver (LTS Kernel)" for the "LTS" kernel
+
+You'll also want to install the 32-bit driver, if you wish to use Steam or Wine.
