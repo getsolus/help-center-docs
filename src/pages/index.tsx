@@ -35,13 +35,6 @@ const sections: DocSection[] = [
   },
   {
     type: "link",
-    label: "Organization",
-    description: "Learn about the Solus Project organization, and how to contribute.",
-    href: "docs/organization/intro",
-    icon: Groups2OutlinedIcon,
-  },
-  {
-    type: "link",
     label: "Dev Log",
     description: "Learn what our developers have been up to, and preview upcoming changes.",
     href: "blog",
