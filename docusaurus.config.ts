@@ -52,18 +52,6 @@ const config: Config = {
           editUrl: "https://github.com/getsolus/help-center-docs/tree/master/",
           showLastUpdateTime: true,
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          //editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          blogTitle: "Solus DevLog",
-          blogDescription: "The Solus Development (b)log!",
-          postsPerPage: "ALL",
-          blogSidebarTitle: "All posts",
-          blogSidebarCount: "ALL",
-          path: "devlog",
-        },
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -123,11 +111,6 @@ const config: Config = {
           sidebarId: "packagingSidebar",
           position: "left",
           label: "Packaging",
-        },
-        {
-          to: "blog",
-          label: "Dev Log",
-          position: "left",
         },
         {
           label: "More",
@@ -192,10 +175,6 @@ const config: Config = {
             {
               label: "Solus Blog",
               to: "https://getsol.us/blog",
-            },
-            {
-              label: "Solus Devlog",
-              to: "blog",
             },
           ],
         },

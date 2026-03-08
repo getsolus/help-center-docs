@@ -33,13 +33,6 @@ const sections: DocSection[] = [
     href: "docs/packaging",
     icon: Inventory2OutlinedIcon,
   },
-  {
-    type: "link",
-    label: "Dev Log",
-    description: "Learn what our developers have been up to, and preview upcoming changes.",
-    href: "blog",
-    icon: EngineeringOutlinedIcon,
-  },
 ];
 
 const Card = (item: DocSection) => {
