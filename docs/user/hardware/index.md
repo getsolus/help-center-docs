@@ -58,9 +58,11 @@ For AMD and Intel GPUs, you won't need to install anything extra.
 - **Xorg driver**
   In order to expose certain features to the Xorg Server, AMD and Intel have additional drivers which may be needed for things like variable refresh rate or multiple display support.
 
-For NVIDIA GPUs, all drivers provided by NVIDIA consist of a DRM driver module for the kernel, OpenGL and Vulkan drivers for rendering, and additional drivers for extended features of the hardware.
-  Device support for these drivers is very good for newer hardware, but older devices will eventually become unsupported and require the Nouveau drivers instead.
-  Performance of this driver is typically the best available and is therefore highly desirable to gamers and content creators.
+For NVIDIA GPUs: 
+- **Nouveau**
+ This consists of a DRM driver provided by the Linux kernel, OpenGL drivers (nvc0, nv50) from Mesa, and an Xorg driver (xorg-driver-video-nouveau).
+- **Open and Proprietary NVIDIA drivers**
+  All drivers provided by NVIDIA consist of a DRM driver module for the kernel, OpenGL and Vulkan drivers for rendering, and additional drivers for extended features of the hardware.
 
 </details>
   

@@ -15,10 +15,12 @@ To use the drivers published by NVIDIA, you will need to know:
 
 :::
 
+## Types of NVIDIA drivers
+
 Linux has three types of drivers for NVIDIA GPUs
 
 - **Nouveau**
-  This is the open-source driver, and is loaded if the drivers NVIDIA distributes are not installed. It consists of a DRM driver provided by the Linux kernel, OpenGL drivers (nvc0, nv50) from Mesa, and an Xorg driver (xorg-driver-video-nouveau).
+  This is the open-source driver, and is loaded automatically if the drivers NVIDIA distributes are not installed.
   Device support has historically lagged behind the drivers provided by NVIDIA, will likely not support newer hardware and does not include Vulkan support.
   Performance of this driver also typically lags behind the drivers NVIDIA provides.
 - **NVIDIA open GPU kernel module drivers**
@@ -26,8 +28,10 @@ Linux has three types of drivers for NVIDIA GPUs
 - **NVIDIA proprietary drivers**
   These are closed-source drivers provided by NVIDIA.
 
+  Device support from both the open and proprietary drivers from NVIDIA is very good for newer hardware, but older devices will eventually become unsupported and require the Nouveau drivers instead. Performance of these drivers is typically the best available and is therefore highly desirable to gamers and content creators.
 
-Choose the recommended driver for your GPU:
+
+## Choose the recommended driver for your GPU
 
 - If your device is in the [Compatible GPUs list for the open kernel modules](https://github.com/NVIDIA/open-gpu-kernel-modules), we recommend using this driver.
 - If it isn't in that list, check the [NVIDIA manual driver search page](https://www.nvidia.com/en-us/geforce/drivers/) to find the recommended driver branch for your GPU.
@@ -36,14 +40,47 @@ Choose the recommended driver for your GPU:
 
   :::warning
 
-  The `nvidia-470*` driver has not been supported by NVIDIA for over a year and a half. It will be removed from the Solus repository in the not-so-distant future. When it is deprecated, your system will be forced back to the `nouveau` driver. This will result in significant performance drops compared to what you are used to.
+  The `nvidia-470*` driver has not been supported by NVIDIA [since January 31, 2023](https://nvidia.custhelp.com/app/answers/detail/a_id/5210/~/end-of-driver-support-for-kepler-series-quadro-desktop-gpu-products). It will be removed from the Solus repository in the not-so-distant future. When it is deprecated, your system will be forced back to the `nouveau` driver. This will result in significant performance drops compared to what you are used to.
 
   :::
 
+## Install the driver
+
 You'll need to open the package details in your software center to determine which "NVIDIA Graphics Driver" package is the proprietary one vs. the open one. The one that doesn't say "proprietary" is the open kernel module driver.
 
-Install the version of the driver you want that matches the running kernel, e.g.  
-  "NVIDIA Graphics Driver" for the "current" kernel  
-  "NVIDIA Graphics Driver (LTS Kernel)" for the "LTS" kernel
+Install the version of the driver you want that matches the running kernel:  
+- "NVIDIA Graphics Driver" for the "current" kernel
+- "NVIDIA Graphics Driver (LTS Kernel)" for the "LTS" kernel
 
-You'll also want to install the 32-bit driver, if you wish to use Steam or Wine.
+You'll also want to install the 32-bit driver, if you wish to use Steam or Wine, see how in the details below
+
+## Installation workflow with screenshots
+
+### GNOME Software
+
+    <details>
+    1. Open GNOME Software and click on the Hardware category  
+       
+       [![GNOME Software Hardware Page Screenshot](GNOME-Software-HW-Drivers_Details-thumb.png)](GNOME-Software-HW-Drivers_Details.png)
+    1. Choose the driver you want
+    1. If you want to also install the 32-bit driver, click "Install" under Add-ons  
+       
+       [![GNOME Software Driver Add-on Screenshot](GNOME-Software-32bit-addon-thumb.png)](GNOME-Software-32bit-addon.png)
+    1. Restart your system
+
+    </details>
+
+### KDE Discover
+
+    <details>
+    1. Open KDE Discover and click on the Hardware category  
+       
+       [![Discover Hardware Section Screenshot](KDE-Discover-HW-Drivers-thumb.png)](KDE-Discover-HW-Drivers.png)
+    1. Choose the driver you want
+    1. If you want to also install the 32-bit driver, click "Add-ons" in the top bar  
+       
+       [![Discover Hardware Section Screenshot](KDE-Discover-32bit-addon-thumb.png)](KDE-Discover-32bit-addon.png)
+    1. Check the box and Apply Changes
+    1. Restart your system
+
+    </details>
