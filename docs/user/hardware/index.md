@@ -37,7 +37,7 @@ These can be found in the "Hardware" category in Discover and GNOME Software. Wh
 
 **GNOME Software**
 
-[![GNOME Software Hardware Section Screenshot](GNOME-Software-HW-Drivers_Section-thumb.png)](GNOME-Software-HW-Drivers_Section.png#floatleft)      [![GNOME Software Hardware Page Screenshot](Software-HW-Drivers_Details-thumb.png)](Software-HW-Drivers_Details.png#floatright)
+[![GNOME Software Hardware Section Screenshot](GNOME-Software-HW-Drivers_Section-thumb.png)](GNOME-Software-HW-Drivers_Section.png#floatleft)      [![GNOME Software Hardware Page Screenshot](GNOME-Software-HW-Drivers_Details-thumb.png)](GNOME-Software-HW-Drivers_Details.png#floatright)
 
 ### GPUs
 
