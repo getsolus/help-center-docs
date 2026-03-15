@@ -32,12 +32,12 @@ These can be found in the "Hardware" category in Discover and GNOME Software. Wh
 
 **Discover**
 
-[![Discover Hardware Section Screenshot](Discover-HW-Drivers-thumb.png)](Discover-HW-Drivers.png)
+[![Discover Hardware Section Screenshot](KDE-Discover-HW-Drivers-thumb.png)](KDE-Discover-HW-Drivers.png)
 
 
 **GNOME Software**
 
-[![GNOME Software Hardware Section Screenshot](Software-HW-Drivers_Section-thumb.png)](Software-HW-Drivers_Section.png#floatleft)      [![GNOME Software Hardware Page Screenshot](Software-HW-Drivers_Details-thumb.png)](Software-HW-Drivers_Details.png#floatright)
+[![GNOME Software Hardware Section Screenshot](GNOME-Software-HW-Drivers_Section-thumb.png)](GNOME-Software-HW-Drivers_Section.png#floatleft)      [![GNOME Software Hardware Page Screenshot](Software-HW-Drivers_Details-thumb.png)](Software-HW-Drivers_Details.png#floatright)
 
 ### GPUs
 
@@ -64,7 +64,7 @@ For NVIDIA GPUs, all drivers provided by NVIDIA consist of a DRM driver module f
 
 </details>
   
-For NVIDIA GPUs, we have a guide for [choosing a driver ](./nvidia-gpu-drivers.mdx)
+For NVIDIA GPUs, we have a guide for [choosing and installing a driver ](./nvidia-gpu-drivers.mdx)
 
 ### Other  hardware
  
