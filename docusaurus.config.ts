@@ -132,10 +132,6 @@ const config: Config = {
               href: "https://floss.social/@getsolus",
             },
             {
-              label: "Github",
-              href: "https://github.com/getsolus",
-            },
-            {
               label: "Packages",
               href: "https://dev.getsol.us/",
             },
@@ -150,6 +146,16 @@ const config: Config = {
           ],
           type: "dropdown",
           position: "left",
+        },
+        {
+          type: "search",
+          position: "right",
+        },
+        {
+          href: "https://github.com/getsolus",
+          position: "right",
+          className: "header-github-link",
+          "aria-label": "GitHub repository",
         },
       ],
     },
