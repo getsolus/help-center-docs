@@ -55,3 +55,37 @@ git switch main
 git branch -D my-branch
 git push -d origin my-branch
 ```
+# Tips and Tricks
+
+## Use worktrees to make switching between branches easier
+
+It's possible to create a worktree to make working with things like stack updates easier.
+If you need to switch focus, you can switch to a different folder with a different worktree (like main).
+When you're ready to return to previous work, like the stack update, change to its folder.
+
+The [official docs from git](https://git-scm.com/docs/git-worktree) have details on how to do this.
+
+## Splitting a commit during `rebase -i`
+
+There may be times when you're in the middle of an interactive rebase where you want to split a commit. To do this, start by running
+
+```bash
+git rebase -i origin/HEAD --autostash
+```
+
+Then, find the needed commit and change pick to e (short for edit), save and exit.
+Then run
+
+```bash
+git reset HEAD~
+```
+
+If you run `git status` you can see the changes are unstaged.
+Then `gotopkg your-package` and run `git add` and `git commit` as normal.
+Do the same for the second split.
+Then run
+
+```bash
+git rebase --continue
+git push --force-with-lease
+```
