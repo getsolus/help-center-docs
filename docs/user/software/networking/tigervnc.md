@@ -66,18 +66,6 @@ metacity &
 nautilus &
 ```
 
-### MATE
-
-```bash
-#!/bin/bash
-
-unset SESSION_MANAGER
-unset DBUS_SESSION_BUS_ADDRESS
-
-mate-session &
-mate-panel &
-```
-
 ### Plasma
 
 Plasma desktop is not supported at the moment. Please use the software `x11vnc` for vncserver support on Plasma.
