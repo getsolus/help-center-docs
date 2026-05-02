@@ -13,8 +13,8 @@ Solus has an xrdp integration package for each Desktop Environment that will ins
 
 - `xrdp-budgie-integration`
 - `xrdp-gnome-integration`
-- `xrdp-mate-integration`
 - `xrdp-plasma-integration`
+- `xrdp-xfce4-integration`
 
 This package will also install the `xrdp` and `xorgxrdp` packages.
 

@@ -8,9 +8,6 @@
   "edition.gnome.description": {
     "message": "A simple, streamlined desktop for more modern hardware."
   },
-  "edition.mate.description": {
-    "message": "A traditional desktop for advanced users and older hardware."
-  },
   "edition.xfce.description": {
     "message": "A lightweight desktop that aims to be fast while still being friendly."
   },

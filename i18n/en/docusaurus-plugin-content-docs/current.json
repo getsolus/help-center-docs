@@ -31,9 +31,9 @@
     "message": "GNOME",
     "description": "The label for category GNOME in sidebar userSidebar"
   },
-  "sidebar.userSidebar.category.MATE": {
-    "message": "MATE",
-    "description": "The label for category MATE in sidebar userSidebar"
+  "sidebar.userSidebar.category.Xfce": {
+    "message": "Xfce",
+    "description": "The label for category Xfce in sidebar userSidebar"
   },
   "sidebar.userSidebar.category.Plasma": {
     "message": "Plasma",
