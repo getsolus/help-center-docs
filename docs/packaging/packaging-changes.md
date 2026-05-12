@@ -11,6 +11,22 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 - This list is not exhaustive
 - This list is in _reverse chronological order_ (newest first)
 
+## 2026
+
+### May
+
+#### Added `go-task info` as a helper utility
+
+- This little helper returns `eopkg info` for the current directory.
+- For example, when you are in `~/solus-packages/packages/n/nano`, `go-task info` will output the same as `eopkg info nano`
+
+### April
+
+#### Began re-licensing packages repository with MPL-2.0
+
+- Require a checkbox on package PRs so contributors acknowledge explicit licensing
+- See blog post for more detail [here](https://getsol.us/2026/05/clearing-up-the-fog/)
+
 ## 2025
 
 ### December
