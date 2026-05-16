@@ -67,7 +67,7 @@ The [official docs from git](https://git-scm.com/docs/git-worktree) have details
 
 ## Splitting a commit during `rebase -i`
 
-There may be times when you're in the middle of an interactive rebase where you want to split a commit. To do this, start by running
+There may be times when you're in the middle of an interactive rebase and you want to split a commit. To do this, start by running:
 
 ```bash
 git rebase -i origin/HEAD --autostash
