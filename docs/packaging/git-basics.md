@@ -85,7 +85,7 @@ If you run `git status`, you will see the changes are unstaged.
 Then, change to the package directory you want with `gotopkg your-package`, and run `git add` and `git commit` as normal.
 Do the same for the second split.
 
-Then run:
+When you are finished, complete the rebase and push the branch by running:
 
 ```bash
 git rebase --continue
