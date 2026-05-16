@@ -73,7 +73,7 @@ There may be times when you're in the middle of an interactive rebase and you wa
 git rebase -i origin/HEAD --autostash
 ```
 
-Then, find the needed commit and change pick to e (short for edit), save and exit.
+Then, find the needed commit and change "pick" to "e" (short for edit), save and exit.
 Then run
 
 ```bash
