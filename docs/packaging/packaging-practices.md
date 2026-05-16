@@ -52,7 +52,7 @@ If this happens, simply override with `patterns` or set `libsplit` to “no”.
 
 #### Development modules should be normal packages without a -devel subpackage
 
-In the cases where modules like `perl` or `python` would be split by the default `ypkg` policy (for instance because they contain category 3 `man` pages), the current best practice is to add a `patterns   : /*` stanza to keep everything in the main package for convenience.
+In the cases where modules like `perl` or `python` would be split by the default `ypkg` policy (for instance because they contain category 3 `man` pages), the best practice is to add a `patterns   : /*` stanza to keep everything in the main package for convenience.
 
 ### The docs subpackage
 
