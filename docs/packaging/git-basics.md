@@ -60,7 +60,7 @@ git push -d origin my-branch
 ## Use worktrees to make switching between branches easier
 
 It's possible to create a worktree to make working with things like stack updates easier.
-If you need to switch focus, you can switch to a different folder with a different worktree (like main).
+If you need to switch focus, you can switch to a different folder with a different worktree (like `main`).
 When you're ready to return to previous work, like the stack update, change to its folder.
 
 The [official docs from git](https://git-scm.com/docs/git-worktree) have details on how to do this.
