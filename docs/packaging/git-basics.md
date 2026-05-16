@@ -74,6 +74,7 @@ git rebase -i origin/HEAD --autostash
 ```
 
 Then, find the needed commit and change "pick" to "e" (short for edit), save and exit.
+
 Then run:
 
 ```bash
@@ -83,7 +84,8 @@ git reset HEAD~
 If you run `git status`, you will see the changes are unstaged.
 Then, change to the package directory you want with `gotopkg your-package`, and run `git add` and `git commit` as normal.
 Do the same for the second split.
-Then run
+
+Then run:
 
 ```bash
 git rebase --continue
