@@ -11,16 +11,14 @@ This article will go over updating a package that is already in the Solus packag
 :::note
 
 **Please [look to see if an issue has been filed](https://github.com/getsolus/packages/labels/Package%3A%20Update%20Request) for the software update**.
-If there is an existing request, please add a link to it in your pull request. Ex:
+If there is an existing request, please add a link to it in your pull request. This will automatically close the related issue. You just need to use `#123`, GitHub will automatically link to the issue. Ex:
 
 ```
-This PR resolves software update request https://github.com/getsolus/packages/issues/123
+This PR fixes #123
 ```
 
 **Also check to see if there's already an active maintainer**
-If there's a MAINTAINER.md file, see [this](https://help.getsol.us/docs/packaging/procedures/maintainership).
-Please contact the maintainer listed in that file, or [create a package update request](https://github.com/getsolus/packages/labels/Package%3A%20Update%20Request) before attempting to update the package.
-
+If there's a MAINTAINER.md file, stop and read over [Maintainership - Updating a maintained package](https://help.getsol.us/docs/packaging/procedures/maintainership/#updating-a-maintained-package) to see how to handle this.
 :::
 
 ### Update your clone of the packages repository
