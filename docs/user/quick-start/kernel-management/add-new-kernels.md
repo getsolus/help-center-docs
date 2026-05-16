@@ -54,6 +54,8 @@ To install and switch to a different kernel branch, follow these steps:
 
    To display the boot menu, press the <kbd>Space bar</kbd> key repeatedly as your computer starts.
 
+   You can also set the system to [display the boot menu on every boot](https://help.getsol.us/docs/user/quick-start/boot-management#access-the-boot-menu)
+
    :::
 
 1. After you successfully boot with the new kernel, set it as the default to ensure Solus uses it for future startups:
