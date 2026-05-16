@@ -80,7 +80,7 @@ Then run:
 git reset HEAD~
 ```
 
-If you run `git status` you can see the changes are unstaged.
+If you run `git status`, you will see the changes are unstaged.
 Then `gotopkg your-package` and run `git add` and `git commit` as normal.
 Do the same for the second split.
 Then run
