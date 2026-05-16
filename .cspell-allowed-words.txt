@@ -270,6 +270,8 @@ nopatch
 noprefixroute
 nproc
 nuitka
+numlock
+numlockx
 nvme
 ocen
 ocenaudio

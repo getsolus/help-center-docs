@@ -12,6 +12,8 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import Inventory2OutlinedIcon from "@mui/icons-material/Inventory2Outlined";
 import EngineeringOutlinedIcon from "@mui/icons-material/EngineeringOutlined";
 
+import { Header } from "../components/home/Header";
+
 import clsx from "clsx";
 
 import styles from "./styles.module.css";
@@ -31,20 +33,6 @@ const sections: DocSection[] = [
     href: "docs/packaging",
     icon: Inventory2OutlinedIcon,
   },
-  {
-    type: "link",
-    label: "Organization",
-    description: "Learn about the Solus Project organization, and how to contribute.",
-    href: "docs/organization/intro",
-    icon: Groups2OutlinedIcon,
-  },
-  {
-    type: "link",
-    label: "Dev Log",
-    description: "Learn what our developers have been up to, and preview upcoming changes.",
-    href: "blog",
-    icon: EngineeringOutlinedIcon,
-  },
 ];
 
 const Card = (item: DocSection) => {
@@ -62,22 +50,12 @@ const Card = (item: DocSection) => {
   );
 };
 
-const Docs = () => {
+const Home = (): JSX.Element => {
   return (
     <Layout title="Documentation" description="Solus">
+      <Header />
+
       <Container sx={{ marginBlock: "4vh" }}>
-        <Stack
-          className="hero hero--secondary"
-          alignItems="center"
-          justifyContent="center"
-          padding="5vh 10vw"
-          spacing={2}
-        >
-          <Heading as="h1" className="hero__title">
-            Solus Help Center
-          </Heading>
-          <p className="hero__subtitle">Documentation for Solus</p>
-        </Stack>
         <section className="row">
           {sections.map((section, index) => (
             <article key={index} className="col col--6 margin-bottom--lg">
@@ -96,4 +74,4 @@ const Docs = () => {
   );
 };
 
-export default Docs;
+export default Home;

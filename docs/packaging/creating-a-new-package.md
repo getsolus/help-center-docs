@@ -189,8 +189,6 @@ Resolves getsolus/packages#issuenumber
 
 Where `issuenumber` is the issue number of the package request.
 
-For more information on suitable commit messages, please check the [tooling central documentation](https://github.com/solus-project/tooling-central/blob/master/README.rst#using-git).
-
 If you need a change to depend on another change, mention it in the commit message too (use the full URL): `Depends on https://github.com/getsolus/packages/issues/234`
 
 Next, you'll [submit a pull request for review](submitting-a-pull-request.mdx).

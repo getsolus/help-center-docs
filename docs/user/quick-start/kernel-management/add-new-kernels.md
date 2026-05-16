@@ -10,18 +10,17 @@ By default, Solus uses the `linux-current` kernel. You can switch between kernel
 To install and switch to a different kernel branch, follow these steps:
 
 1. Install the desired kernel branch:
-
    - Current kernel
 
      ```
-	  sudo eopkg install linux-current
-	  ```
+     sudo eopkg install linux-current
+     ```
 
    - LTS kernel
-	 
-	  ```
-	  sudo eopkg install linux-lts
-	  ```
+
+     ```
+     sudo eopkg install linux-lts
+     ```
 
 1. Install the necessary kernel modules of the kernel branch you want to try.
 
@@ -52,8 +51,10 @@ To install and switch to a different kernel branch, follow these steps:
    :::warning Important
 
    On systems with UEFI installations, the boot menu doesn't appear by default.
-   
+
    To display the boot menu, press the <kbd>Space bar</kbd> key repeatedly as your computer starts.
+
+   You can also set the system to [display the boot menu on every boot](https://help.getsol.us/docs/user/quick-start/boot-management#access-the-boot-menu)
 
    :::
 
