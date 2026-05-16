@@ -47,6 +47,6 @@ Numlock can then be enabled or disabled via a toggle switch on the _Settings_ ta
 
 **Note:** in the Budgie Menu, you can find `lightdm-settings` as System Tools > Login Window.
 
-----------
+---
 
 > TODO: There's got to be more that we can add here

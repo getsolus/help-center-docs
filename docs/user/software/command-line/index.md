@@ -17,7 +17,7 @@ Solus makes available other shells via our repository, with a full list availabl
 
 ### Installation
 
-In order to use a shell different from Bash, you may need to install the respective package for the shell to be able to work. You will find those packages in the Software Center within the _System utilities_ category, or via the command-line with `sudo eopkg install <Name of the Shell>`.
+In order to use a shell different from Bash, you may need to install the respective package for the shell to be able to work. You can install those packages via the command-line with `sudo eopkg install <Name of the Shell>`.
 
 Example:
 
@@ -51,7 +51,7 @@ Example:
 
 ### Installation
 
-The fzf project consists of the following components: an `fzf` executable, an `fzf-tmux` script for launching fzf in a tmux pane, shell extensions (including key bindings and command-line fuzzy auto-completion), and a vim/Neovim plugin file. They are all available in the `fzf` package in the Software Center or via eopkg in a terminal:
+The fzf project consists of the following components: an `fzf` executable, an `fzf-tmux` script for launching fzf in a tmux pane, shell extensions (including key bindings and command-line fuzzy auto-completion), and a vim/Neovim plugin file. They are all available in the `fzf` package. Install that package via eopkg in a terminal:
 
 ```bash
 sudo eopkg it fzf
@@ -128,24 +128,16 @@ FZF_KEYBINDING_FILE=/usr/share/fzf/key-bindings.zsh
 ### Installation
 
 Powerline has two components, the plugin system itself `powerline` and the
-fonts `powerline-fonts`. Both are available in the Software Center or via `eopkg` in a terminal:
+fonts `powerline-fonts`. Both are available via `eopkg` in a terminal:
 
 ```bash
 sudo eopkg it powerline powerline-fonts
 ```
 
-To get powerline working inside your terminal, you need to add the following commands to the `.bashrc` inside your `$HOME` directory.
-
-### Shell Prompts
-
-The Powerline daemon is not running automatically by any of the bindings. It is advised to add the following before any other powerline-related code in the shell configuration file
-
-```bash
-powerline-daemon -q
-```
+To get powerline working inside your terminal, you need to follow setup instructions for your preferred shell:  
 
 #### Bash
-
+Add the following to `$HOME/.bashrc`:
 ```bash
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
@@ -153,22 +145,17 @@ POWERLINE_BASH_SELECT=1
 source /usr/lib/python3.12/site-packages/powerline/bindings/bash/powerline.sh
 ```
 
-#### Busybox and dash
-
-```bash
-source /usr/lib/python3.12/site-packages/powerline/bindings/shell/powerline.sh
-```
-
 #### Fish
-
+Add the following to `$HOME/.config/fish/config.fish` below the comment "`# Commands to run in interactive sessions can go here`":
 ```bash
+powerline-daemon -q
 set fish_function_path $fish_function_path "/usr/lib/python3.12/site-packages/powerline/bindings/fish/"
+powerline-setup
 ```
 
 #### Zsh
-
+Add the following to `$HOME/.zshrc`:
 ```bash
 source /usr/lib/python3.12/site-packages/powerline/bindings/zsh/powerline.zsh
 ```
 
-Read more about powerline on its [docs website](https://powerline.readthedocs.io/en/master/usage.html#shell-prompts-requirements)

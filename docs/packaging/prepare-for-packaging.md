@@ -36,6 +36,7 @@ We need to install a few things in order to get started with packaging:
 - `git` is used for version control of the Solus sources
 - `github-cli` is used to make working with GitHub easier
 - `go-task` is used by our build tools for scripting
+- `intltool` is used by the script `merged_repos.sh` script (part of the deprecation/un-deprecation process)
 - `jq` is used by our optional [Helper Functions](#set-up-repository-helper-functions-optional)
 - `solbuild` is a lightweight container environment for building packages repeatably
 - `solbuild-config-unstable` sets up solbuild for working with the `unstable` repository
@@ -43,7 +44,7 @@ We need to install a few things in order to get started with packaging:
 - `yq` is used by the `go-task add-monitoring` command to create new [`monitoring.yaml`](/docs/packaging/monitoring.yaml.md) files
 
 ```bash
-sudo eopkg it ent git github-cli go-task jq solbuild solbuild-config-unstable ypkg yq
+sudo eopkg it ent git github-cli go-task intltool jq solbuild solbuild-config-unstable ypkg yq
 ```
 
 ## Setting up a GitHub account and Git

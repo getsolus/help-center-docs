@@ -159,6 +159,7 @@ inspiron
 installdir
 installroot
 insync
+intltool
 ipofyourscanner
 issuenumber
 jakob
@@ -268,6 +269,8 @@ nopatch
 noprefixroute
 nproc
 nuitka
+numlock
+numlockx
 nvme
 ocen
 ocenaudio

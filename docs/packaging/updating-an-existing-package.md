@@ -17,6 +17,10 @@ If there is an existing request, please add a link to it in your pull request. E
 This PR resolves software update request https://github.com/getsolus/packages/issues/123
 ```
 
+**Also check to see if there's already an active maintainer**
+If there's a MAINTAINER.md file, see [this](https://help.getsol.us/docs/packaging/procedures/maintainership).
+Please contact the maintainer listed in that file, or [create a package update request](https://github.com/getsolus/packages/labels/Package%3A%20Update%20Request) before attempting to update the package.
+
 :::
 
 ### Update your clone of the packages repository
@@ -180,7 +184,5 @@ In the cases where you are not updating a package to a new version, but simply a
   - `package: [NFC] Add README.md and monitoring.yaml`
 
 As stated previously, `[NFC]` is an abbreviation of "No Functional Change".
-
-For more information on suitable commit messages, please check the [tooling central documentation](https://github.com/solus-project/tooling-central/blob/master/README.rst#using-git).
 
 Next, you'll [submit a pull request for review](submitting-a-pull-request.mdx).

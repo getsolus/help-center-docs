@@ -25,6 +25,7 @@ To add a `monitoring.yaml` file to an existing package you can use the following
 `go-task add-monitoring` will automatically fill all the fields if a match is found on [release-monitoring.org](https://release-monitoring.org) and [cpe-guesser.cve-search.org](https://cpe-guesser.cve-search.org).
 
 :::
+
 ```bash
 go-task add-monitoring
 ```

@@ -2,6 +2,7 @@
 title: Remove old kernels
 summary: Manage and remove old kernels to free up space on the boot partition.
 ---
+
 You might need to remove old kernels for various reasons:
 
 - The boot partition is too small for multiple kernel versions
@@ -25,11 +26,11 @@ To remove old kernels, do the following:
    ```
 
    This command displays the version of the currently running kernel. For example:
-   
+
    ```
    6.6.8-290.current
    ```
-   
+
    Make note of this version.
 
 1. Mount the boot partition.
@@ -64,9 +65,9 @@ To remove old kernels, do the following:
 1. Remove the kernels you don't need.
 
    :::danger Warning
-   
+
    Never remove the kernel your system is using. This is the version you noted in step 1.
-   
+
    :::
 
    ```bash

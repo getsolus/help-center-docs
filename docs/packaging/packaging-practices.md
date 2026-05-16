@@ -46,7 +46,7 @@ This is invariably created for packages that provide libraries and development h
 For the full list of rules see [here](https://github.com/getsolus/ypkg/blob/v34/ypkg2/packages.py#L166-L254).
 
 Note that for some packages, `/usr/$lib/lib*.so` files are not symlinks. In this instance, the main package will be broken with no library files present. This can quickly be determined by looking at the resulting `pspec_*.xml` file generated after running the build.
-If this happens, simply override with `patterns` or set `libsplit` to “no”.
+If this happens, simply override with `patterns` or set `libsplit` to “false”.
 
 **A note on static archives**: Unless it is absolutely unavoidable, you should disable static libraries within your build. This is usually fixed by adding `--disable-static` to your configure routine. If `*.a` files are shown in your packaging request, it will be questioned, as they can pose a greater security risk if packages link against these static archives.
 
@@ -93,6 +93,16 @@ Never submit a package without having first tested it, and ensuring it builds wi
 All new packages or updates to packages should abide by the [SPDX 3.x](https://spdx.org/licenses/) definitions, with the following policy:
 
 - `-only` licenses, such as `GPL-2.0-only`, should **only be declared** as such when the upstream explicitly states "only", otherwise it should always be `-or-later`.
+
+License files that are present in an upstream project must also be installed with the package. This can be easily done with the `%install_license` macro. The macro will install any files passed to it to the system licenses directory, `$installdir/usr/share/licenses/$package/`. The files passed to the macro are expected to be relative to the project's source root.
+
+<!-- prettier-ignore -->
+```yaml
+install    : |
+    %ninja_install
+    %install_license LICENSE
+    %install_license LICENSES/*
+```
 
 ## Build dependencies
 

@@ -96,6 +96,10 @@ This list should not suggest that _only_ such devices listed below are compatibl
 
 - eMachines E728
 
+## Framework
+
+- Framework Laptop 12 (13th Gen Intel Core)
+
 ## Fujitsu
 
 - Fujitsu Lifebook A531

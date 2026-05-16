@@ -11,7 +11,44 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 - This list is not exhaustive
 - This list is in _reverse chronological order_ (newest first)
 
+## 2026
+
+### May
+
+#### Added `go-task info` as a helper utility
+
+- This little helper returns `eopkg info` for the current directory.
+- For example, when you are in `~/solus-packages/packages/n/nano`, `go-task info` will output the same as `eopkg info nano`
+
+### April
+
+#### Began re-licensing packages repository with MPL-2.0
+
+- Require a checkbox on package PRs so contributors acknowledge explicit licensing
+- See blog post for more detail [here](https://getsol.us/2026/05/clearing-up-the-fog/)
+
 ## 2025
+
+### December
+
+#### Mandate installation of license files
+
+- Packages must now have license files installed so we are compliant.
+- License files can be easily installed with the new `%install_license` macro.
+  <!-- prettier-ignore -->
+  ```yaml
+  install    : |
+      %ninja_install
+      %install_license LICENSE
+      %install_license LICENSES/*
+  ```
+
+### November
+
+#### Initial language server integration for `package.yml` files
+
+- All `package.yml` files now specify a YAML schema on the first line.
+- Install `yaml-language-server`, and use an editor with language server support to see hints on valid `package.yml` field values.
 
 ### September
 
