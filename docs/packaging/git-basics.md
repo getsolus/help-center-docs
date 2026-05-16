@@ -74,7 +74,7 @@ git rebase -i origin/HEAD --autostash
 ```
 
 Then, find the needed commit and change "pick" to "e" (short for edit), save and exit.
-Then run
+Then run:
 
 ```bash
 git reset HEAD~
