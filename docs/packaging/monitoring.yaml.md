@@ -162,7 +162,7 @@ Ignore the numerical ids, let's walk through the CPEs by vendor:
 - `ubuntu_developers` is for `systemd` patched by Ubuntu; we can ignore it
 - `systemd_project` is a good candidate, so we add it
 
-If you see something like `"cpe:2.3:a:lennart_poettering:systemd"`, that means it's for a branch owned by Lennart Poettering. These kinds of branches shouldn't be used, because they are development branches, rather than production branches.
+If you see something like `"cpe:2.3:a:lennart_poettering:systemd"`, the vendor is Lennart Poettering and this shouldn't be used. This is a bleeding edge / development vendor, rather than production.
 
 ### No known CPE
 
