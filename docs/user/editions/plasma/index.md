@@ -17,10 +17,10 @@ To learn more about the Plasma desktop and KDE, refer to the following pages:
 
 ---
 
-[Configuration](configuration)
+[Configuration](configuration.md)
 
 Learn how to customize and configure the Plasma Desktop on Solus.
 
-[Tips and Tricks](tips-and-tricks)
+[Tips and Tricks](tips-and-tricks.md)
 
 Helpful tips and tricks for using Plasma on Solus.

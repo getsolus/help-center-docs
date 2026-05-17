@@ -17,6 +17,6 @@ Here are some links related to this project that you may find helpful:
 - [News](https://blog.buddiesofbudgie.org/)
 - [Support](https://github.com/BuddiesOfBudgie/budgie-desktop/issues)
 
-[Go to Budgie Configuration](configuration)
+[Go to Budgie Configuration](configuration.md)
 
-[Go to Budgie Tips and Tricks](tips-and-tricks)
+[Go to Budgie Tips and Tricks](tips-and-tricks.md)
