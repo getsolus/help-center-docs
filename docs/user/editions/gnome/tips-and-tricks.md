@@ -10,7 +10,7 @@ summary: Useful tips and tricks for GNOME users
 GNOME has built-in keyboard shortcuts for various tasks, but can be changed to your preferences in
 the Settings > Keyboard > View and Customize Keyboard Shortcuts.
 
-<img width="1090" height="694" alt="Screenshot From 2026-05-06 08-47-41" src="https://github.com/user-attachments/assets/046fc1bf-43ce-4b3a-bea8-904e437c4d5e" />
+![](configuration/gnome-keyboard-shortcut.png)
 
 
 
@@ -40,7 +40,7 @@ the Settings > Keyboard > View and Customize Keyboard Shortcuts.
 GNOME Hot Corner is a feature that instantly opens the Activities Overview when you flick your 
 mouse in the very top left corner of the screen. Can be found in Settings under Multitasking.
 
-<img width="1090" height="694" alt="image" src="https://github.com/user-attachments/assets/dc5ca2dc-f4a5-41cd-968d-00becb49a395" />
+![](configuration/gnome-hotcorners.png)
 
 
 
@@ -49,7 +49,7 @@ mouse in the very top left corner of the screen. Can be found in Settings under 
 
 _Hit the Super Key any time to get an overview, switch or launch apps, and search for anything on your computer. It's magic._
 
-<img width="624" height="345" alt="image" src="https://github.com/user-attachments/assets/3615c4bd-7b71-4054-a51b-930ee7065b6b" />
+![](configuration/super-key.png)
 
 
 
@@ -60,9 +60,9 @@ _Hit the Super Key any time to get an overview, switch or launch apps, and searc
 Swipe Up with three fingers to open the Activities Overview or swipe left or right with three fingers to 
 switch workspaces.
 
-<img width="620" height="318" alt="image" src="https://github.com/user-attachments/assets/5e85f949-54a0-495c-869a-f1ff642afc5b" />
+![Three Finger Swipe Up](configuration/gnome-three-finger-swipe-1.png)
 
-<img width="620" height="318" alt="image" src="https://github.com/user-attachments/assets/df379353-6b68-4e1d-b553-6a5ae3054580" />
+![Three Finger Swipe Up](configuration/gnome-three-finger-swipe-2.png)
 
 
 
@@ -72,11 +72,10 @@ switch workspaces.
 An application that lets you access more settings such as font rendering, startup applications, 
 and customizations like cursor styles.
 
-<img width="1030" height="690" alt="image" src="https://github.com/user-attachments/assets/85e7cbd5-1faf-481c-89cc-4598415a3cd7" />
-
+![](configuration/gnome-tweaks.png)
 
 ## Extension Manager
 
 Available on the Software store, it is a utility for browsing, installing, and managing GNOME Shell Extensions. This tool allows you to search and install extensions from extensions.gnome.org without needing a web browser or the GNOME Shell browser connector.
 
-<img width="850" height="650" alt="image" src="https://github.com/user-attachments/assets/b2a04868-e403-430f-846e-25612994415d" />
+![](configuration/gnome-shell-extension-manager.png)
