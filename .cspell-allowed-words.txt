@@ -21,6 +21,7 @@ autodep
 autogen
 autoload
 autoplay
+autostash
 autoupdate
 avahi
 ayatana
@@ -443,6 +444,8 @@ wireshark
 wmissing
 wordlist
 workdir
+worktree
+worktrees
 wsdd
 wxwidgets
 xcfe
