@@ -17,6 +17,6 @@ Here are some links related to this project that you may find helpful:
 - [News](https://thisweek.gnome.org/)
 - [Support](https://help.gnome.org/users/gnome-help/stable/)
 
-[Go to GNOME Configuration](configuration)
+[Go to GNOME Configuration](configuration.md)
 
-[Go to GNOME Tips and Tricks](tips-and-tricks)
+[Go to GNOME Tips and Tricks](tips-and-tricks.md)

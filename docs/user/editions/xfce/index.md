@@ -17,6 +17,6 @@ Here are some links related to this project that you may find helpful:
 - [Blog](https://blog.xfce.org)
 - [Support](https://gitlab.xfce.org)
 
-[Go to Xfce Configuration](configuration)
+[Go to Xfce Configuration](configuration.md)
 
-[Go to Xfce Tips and Tricks](tips-and-tricks)
+[Go to Xfce Tips and Tricks](tips-and-tricks.md)
