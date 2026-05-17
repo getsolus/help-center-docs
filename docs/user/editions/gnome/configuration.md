@@ -60,7 +60,7 @@ Click "Apply" once you are happy with your changes. You will be shown a message 
 
 ## Keyboard layout
 
-With GNOME, open the Overlay using the `Super` button on your keyboard and search for "Keyboar Layout" or open the settings app and find "Keyboard" on the sidebar.
+With GNOME, open the Overlay using the `Super` button on your keyboard and search for "Keyboard Layout" or open the settings app and find "Keyboard" on the sidebar.
 
 You will now be shown the following dialog.
 
@@ -90,7 +90,7 @@ You can now switch between your layouts by using the keyboard shortcut `Super + 
 
 ## Language
 
-With GNOME, open the Overlay using the `Super` button on your keyboard and searh for "Region & Language"
+With GNOME, open the Overlay using the `Super` button on your keyboard and search for "Region & Language"
 
 You will now be shown the following window. This window allows you to change your language, formatting for dates and times and the language of your keyboard.
 
@@ -230,12 +230,12 @@ The GNOME desktop background can be changed by simply right clicking anywhere on
 
 ![GNOME Background Right Click Menu](configuration/gnome-change-background.png)
 
-Alternatively, you can open Settings and fing "Appearance" in the sidebar.
+Alternatively, you can open Settings and find "Appearance" in the sidebar.
 
 ![GNOME Settings Background Section](configuration/gnome-appearance.png)
 
 In this section, you can choose between Solus wallpapers, your own imported wallpaper by clicking add wallpaper or solid colors. 
 
 > [!NOTE]
-> Information in navigationg GNOME such as Workspaces, Keyboard Shortcuts, as well Customization can be found
+> Information in navigating GNOME such as Workspaces, Keyboard Shortcuts, as well Customization can be found
 in [Tips and Tricks](tips-and-tricks.md)
