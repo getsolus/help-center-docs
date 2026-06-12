@@ -19,9 +19,8 @@ The following table lists the versions of Java available in the Solus repositori
 
 | Version | Package name | Installation directory  | Included components | Notes |
 | ------- | ------------ | ----------------------- | ------------------- | ----- |
-| Java 11 | `openjdk-11` | `/usr/lib64/openjdk-11` | JRE, JDK, OpenJFX   |       |
-| Java 17 | `openjdk-17` | `/usr/lib64/openjdk-17` | JRE, JDK            |       |
 | Java 21 | `openjdk-21` | `/usr/lib64/openjdk-21` | JRE, JDK            |       |
+| Java 25 | `openjdk-25` | `/usr/lib64/openjdk-25` | JRE, JDK            |       |
 
 ## Running Java applications
 
