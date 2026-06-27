@@ -5,6 +5,14 @@ summary: Quick Installation guide for all of the Third Party applications Solus 
 
 # Third Party
 
+:::warning
+
+Installing third-party applications in this manner will be deprecated in the near future! Users are encouraged to check if the application they need has an alternative method of distribution.
+
+[Flatpak](https://flatpak.org/) is preferred, but [Snap](https://snapcraft.io/) and [AppImage](https://appimage.org/) will work, too.
+
+:::
+
 The following applications are provided via our 3rd Party Repository to facilitate the installation and usage of them. These applications cannot be included in the primary repository due to licensing issues.
 
 If these instructions fail to work please [file an issue](https://github.com/getsolus/3rd-party/issues). To upgrade once installed simply run the commands again. If there is a new version it will be installed.
