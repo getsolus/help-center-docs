@@ -33,10 +33,6 @@ Learn how to install, run, and manage Java on Solus.
 
 A quick guide to using PostgreSQL on Solus.
 
-[**R and RStudio**](r-and-rstudio)
-
-Quick start guide for R and RStudio on Solus.
-
 [**Rust**](rust)
 
 A quick guide to getting set up for Rust development on Solus.
