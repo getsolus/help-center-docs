@@ -49,6 +49,7 @@ calamares
 callgraph
 cangjie
 cbindgen
+cbuild
 centrino
 cflags
 changeme
@@ -58,6 +59,7 @@ chrooted
 chrooting
 chsh
 cifs
+cinstall
 clion
 cmdline
 compat
@@ -309,6 +311,7 @@ probook
 pspec
 psql
 pyproject
+pytest
 qdisc
 qjackctl
 qlen
@@ -360,6 +363,7 @@ servername
 setcap
 setuptools
 sharename
+sitepackages
 smbclient
 smbd
 smbdoptions
@@ -388,6 +392,7 @@ sunvox
 synaptics
 sysconfig
 systemsettings
+sysusers
 taskfile
 teamviewer
 teamviewerd

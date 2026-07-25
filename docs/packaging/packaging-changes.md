@@ -13,6 +13,25 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 ## 2026
 
+### July
+
+#### Added additional macros
+
+- `%install_bin`
+- `%install_dir`
+- `%install_exe`
+- `%install_file`
+- `%pyproject_build`
+- `%pyproject_install`
+- `%pytest`
+- `%python3_sitepackages%`
+- `%sysusers`
+- `%tmpfiles`
+
+#### Removed Python 2 macros
+
+Old macros for Python 2 packages have been removed, since Solus does not support Python 2 since [Solus 4.8](https://getsol.us/2025/11/29/solus-4-8-released/#removal-of-python-2).
+
 ### May
 
 #### Added `go-task info` as a helper utility

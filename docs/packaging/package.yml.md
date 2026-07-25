@@ -17,30 +17,53 @@ An example file follows:
 
 <!-- prettier-ignore -->
 ```yaml
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : nano
-version    : 2.9.5
-release    : 96
+version    : '9.1'
+release    : 214
 source     :
-    - https://www.nano-editor.org/dist/v2.9/nano-2.9.5.tar.xz: 7b8d181cb57f42fa86a380bb9ad46abab859b60383607f731b65a9077f4b4e19
+    - https://www.nano-editor.org/dist/v9/nano-9.1.tar.xz : 5f47764274cb7532349ce0aa20ec10f1e8e851a6e9fa3eb66812c43d196db042
 homepage   : https://www.nano-editor.org
 license    : GPL-3.0-or-later
-summary    : Small, friendly text editor inspired by Pico
 component  : system.devel
+summary    : Small, friendly text editor inspired by Pico
 description: |
     GNU nano is an easy-to-use text editor originally designed as a replacement for Pico, the ncurses-based editor from the non-free mailer package Pine (itself now available under the Apache License as Alpine).
+mancompress: true
+builddeps  :
+    - nano-syntax-highlighting
+rundeps    :
+    - nano-syntax-highlighting
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-Use-a-stateless-configuration.patch
-    %reconfigure --enable-utf8 --docdir=/usr/share/doc/nano
+    %patch -p1 -i ${pkgfiles}/nano-9.0-stateless-configuration.patch
+
+    %configure \
+        --docdir=/usr/share/doc/nano \
+        --enable-utf8
 build      : |
     %make
 install    : |
     %make_install
-    install -D -m 00644 $pkgfiles/nanorc $installdir/usr/share/defaults/nano/nanorc
-    install -D -m 00644 $pkgfiles/git.nanorc $installdir/usr/share/nano/git.nanorc
-    # https://github.com/scopatz/nanorc
-    for rcFile in $pkgfiles/nanorc-extras/*.nanorc; do
-        install -m 00644 $rcFile $installdir/usr/share/nano
+    %install_license COPYING
+
+    # Include syntax definitions
+    for rcfile in $installdir/usr/share/nano/*.nanorc; do
+        echo include /usr/share/nano/${rcfile##*nano/} >> $pkgfiles/nanorc
     done
+
+    # Include missing definitions from scopatz's files
+    for rcfile in /usr/share/nanorc/*.nanorc; do
+        if ! grep -Fq ${rcfile#*highlighting/} $pkgfiles/nanorc
+        then
+            echo include "$rcfile" >> $pkgfiles/nanorc
+        fi
+    done
+
+    %install_file $pkgfiles/nanorc $installdir/usr/share/defaults/nano/nanorc
+
+    # Ensure that nano is set up as default EDITOR and VISUAL
+    %install_file $pkgfiles/81-nano-is-default-EDITOR-and-VISUAL.sh $installdir/usr/share/defaults/etc/profile.d/81-nano-is-default-EDITOR-and-VISUAL.sh
+    %install_file $pkgfiles/81-nano-is-default-EDITOR-and-VISUAL.fish $installdir/usr/share/defaults/etc/profile.d/81-nano-is-default-EDITOR-and-VISUAL.fish
 ```
 
 ## Keys
@@ -165,7 +188,13 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 | **%apply_patches**            | Applies all patches listed in the `series` file in `./files` folder.                                                                      |
 | **%reconfigure**              | Updates build scripts such as `./configure` and proceeds to run `%configure`.                                                             |
 | **%symlink_check**            | Checks for broken symlinks in the install directory and aborts the build if any are found. Must run after install macros.                 |
-| **%install_license**          | Installs any files after the macro to `$installdir/usr/share/licenses/$package/`.                                                         |
+| **%install_bin**              | Installs a file to `${installdir}/usr/bin`.                                                                                               |
+| **%install_dir**              | Installs a directory at the given path.                                                                                                   |
+| **%install_exe**              | Installs an executable file to the given path.                                                                                            |
+| **%install_file**             | Installs a regular file to the given path.                                                                                                |
+| **%install_license**          | Installs any files after the macro to `${installdir}/usr/share/licenses/${package}/`.                                                         |
+| **%tmpfiles**                 | Appends the text after it to `${installdir}/%libdir%/tmpfiles.d/${package}.conf`. This can be used in place of installing a file by hand. |
+| **%sysusers**                 | Appends the text after it to `${installdir}/%libdir%/sysusers.d/${package}.conf`. This can be used in place of installing a file by hand. |
 
 ### Haskell actionable macros
 
@@ -198,16 +227,15 @@ Existing Haskell packages may use the old `cabal_build`, `cabal_install`, `cabal
 
 ### Python actionable macros
 
-| Macro                | Description                                                                                                                                                                                                           |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **%python_setup**    | Runs the build portion of a setup.py using python2.                                                                                                                                                                   |
-| **%python_install**  | Runs the install portion of a setup.py, to the appropriate root, using python2.                                                                                                                                       |
-| **%python_test**     | Without argument, runs the test portion of setup.py. With a `.py` script, execute the script with python2. With something else execute the command "as it is". ([More info](https://github.com/getsolus/ypkg/pull/1)) |
-| **%python_compile**  | Compiles `*.py` files using python2. This is only useful where the build doesn't compile them already (indicated by availability of `*.pyc` files).                                                                   |
-| **%python3_setup**   | Runs the build portion of a setup.py using python3.                                                                                                                                                                   |
-| **%python3_install** | Runs the install portion of a setup.py, to the appropriate root, using python3.                                                                                                                                       |
-| **%python3_test**    | Without argument, runs the test portion of setup.py. With a `.py` script, execute the script with python3. With something else execute the command "as it is". ([More info](https://github.com/getsolus/ypkg/pull/1)) |
-| **%python3_compile** | Compiles `*.py` files using python3. This is only useful where the build doesn't compile them already (indicated by availability of `*.pyc` files).                                                                   |
+| Macro                  | Description                                                                                                                                                                                                           |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **%pyproject_build**   | Runs the build portion of a PEP517 Python 3 project.                                                                                                                                                                  |
+| **%pyproject_install** | Runs the install portion of a PEP517 Python 3 project.                                                                                                                                                                |
+| **%pytest**            | Runs the test suite of a Python 3 project using `pytest`.                                                                                                                                                             |
+| **%python3_setup**     | Runs the build portion of a setup.py using python3.                                                                                                                                                                   |
+| **%python3_install**   | Runs the install portion of a setup.py, to the appropriate root, using python3.                                                                                                                                       |
+| **%python3_test**      | Without argument, runs the test portion of setup.py. With a `.py` script, execute the script with python3. With something else execute the command "as it is". ([More info](https://github.com/getsolus/ypkg/pull/1)) |
+| **%python3_compile**   | Compiles `*.py` files using python3. This is only useful where the build doesn't compile them already (indicated by availability of `*.pyc` files).                                                                   |
 
 ### Ruby actionable macros
 
@@ -218,12 +246,14 @@ Existing Haskell packages may use the old `cabal_build`, `cabal_install`, `cabal
 
 ### Rust (cargo) actionable macros
 
-| Macro              | Description                                                                      |
-| ------------------ | -------------------------------------------------------------------------------- |
-| **%cargo_fetch**   | Runs `cargo fetch --locked` to get dependencies.                                 |
-| **%cargo_build**   | Runs `cargo build` with some additional flags.                                   |
-| **%cargo_install** | Installs the built binary to `/usr/bin/PACKAGE-NAME`, OR to `/usr/bin/ARGUMENT`. |
-| **%cargo_test**    | Runs `cargo test` with some additional flags.                                    |
+| Macro               | Description                                                                      |
+| ------------------- | -------------------------------------------------------------------------------- |
+| **%cargo_fetch**    | Runs `cargo fetch --locked` to get dependencies.                                 |
+| **%cargo_build**    | Runs `cargo build` with some additional flags.                                   |
+| **%cargo_cbuild**   | Runs `cargo cbuild` with some additional flags.                                  |
+| **%cargo_install**  | Installs the built binary to `/usr/bin/PACKAGE-NAME`, OR to `/usr/bin/ARGUMENT`. |
+| **%cargo_cinstall** | Runs `cargo cinstall` with some additional flags                                 |
+| **%cargo_test**     | Runs `cargo test` with some additional flags.                                    |
 
 ### Qt actionable macros
 
@@ -273,8 +303,8 @@ BOLT is a post-link optimizer developed to speed up large applications. You will
 | **%workdir%**                | Hard-coded work directory (source tree).                                                                                                       |
 | **%kernel_version_lts%**     | Version of the `linux-lts` kernel.                                                                                                             |
 | **%kernel_version_current%** | Version of the `linux-current` kernel.                                                                                                         |
-| **%python2_version%**        | Version of the `python` (Python 2) distribution.                                                                                               |
 | **%python3_version%**        | Version of the `python3` distribution.                                                                                                         |
+| **%python3_sitepackages%**   | Path to the site-packages directory for the current Python 3 version.                                                                          |
 
 ## Variables
 
