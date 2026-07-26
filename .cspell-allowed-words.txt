@@ -240,6 +240,7 @@ lvchange
 lzop
 macbook
 maintainership
+mancompress
 markus
 mendeleydesktop
 metacity
@@ -321,10 +322,12 @@ qosmio
 qqwing
 qsynth
 qtile
+quadro
 quickstart
 radeon
 ralink
 rbind
+rcfile
 rdesktop
 rdisk
 readline
@@ -358,6 +361,7 @@ rustup
 sambaoptions
 schedtool
 schenker
+scopatz's
 sdkman
 servername
 setcap
