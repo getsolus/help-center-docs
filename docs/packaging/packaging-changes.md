@@ -13,6 +13,13 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 ## 2026
 
+### August
+
+#### Added chroot aliases to Taskfile
+
+- Added aliases to the packaging Taskfile to make chrooting into solbuild simpler.
+- Added section to "Packaging practices" explaining chrooting into solbuild.
+
 ### July
 
 #### Added additional macros

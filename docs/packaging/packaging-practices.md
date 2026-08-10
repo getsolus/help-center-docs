@@ -424,3 +424,68 @@ The `name` of this package is `geoclue`, and the new package names are now:
 Given the `replaces` values above, `geoclue` now replaces `libgeoclue`, and `geoclue-devel` replaces `libgeoclue-devel`. This is entirely transparent to the user, with a seamless update replacing the old packages with the new renamed packages.
 
 The repository maintainer marked the old names as **Obsolete** in the index.
+
+## Inspecting the build environment
+
+Solus packages are built within a chroot environment created by `solbuild`. You may want to inspect this environment to understand why a package is not building like you expect.
+
+To enter this environment, build the package (a partial or failing build is OK), and run the following command:
+
+```bash
+go-task chroot
+
+# Use chroot-local and chroot-stable for the other solbuild profiles
+```
+
+This will drop you into a new shell with the following structure, the `nano` package is used as an example:
+
+- The `work` directory holds the results of the build and `work/files` corresponds to the `$pkgfiles` items in `package.yml`.
+- The `YPKG/root/{packagename}/build/{packagename-version}` directory holds the uncompressed files from the `sources` directory.
+- The `YPKG/root/{packagename}/install` directory is the install root, corresponding to the `$installdir` in `package.yml`.
+
+:::tip
+
+Type `exit` to leave the chroot environment.
+
+:::
+
+<!-- prettier-ignore -->
+```bash
+├── work
+│   ├── abi_used_libs
+│   ├── abi_used_symbols
+│   ├── files
+│   │   ├── 81-nano-is-default-EDITOR-and-VISUAL.fish
+│   │   ├── 81-nano-is-default-EDITOR-and-VISUAL.sh
+│   │   ├── nano-9.0-stateless-configuration.patch
+│   │   └── nanorc
+│   ├── nano-9.2-218-1-x86_64.eopkg
+│   ├── package.yml
+│   └── pspec_x86_64.xml
+└── YPKG
+    ├── root
+    │   └── nano
+    │       ├── build
+    │       │   └── nano-9.2
+    │       │       ├── ABOUT-NLS
+    │       │       ├── aclocal.m4
+    │       │       ├── AUTHORS
+    │       │       ├── ChangeLog
+    │       │       ├── compile
+    │       │       ├── config.guess
+    │       │       ├── config.h
+    │       │       ├── config.h.in
+    │       │       ├── config.log
+    │       │       ├── config.rpath
+    │       │       ├── {A bunch more un-compressed files}
+    │       │       
+    │       └── install
+    │           └── usr
+    │               ├── bin
+    │               │   ├── nano
+    │               │   └── rnano -> nano
+    │               ├── {A bunch more installed files}
+    │
+    └── sources
+        └── nano-9.2.tar.xz
+```
