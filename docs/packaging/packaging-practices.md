@@ -437,7 +437,7 @@ go-task chroot
 # Use chroot-local and chroot-stable for the other solbuild profiles
 ```
 
-This will drop you into a new shell with the following structure, the `nano` package is used as an example:
+This will drop you into a new shell with the structure given below. The `nano` package is used here as an example.
 
 - The `work` directory holds the results of the build and `work/files` corresponds to the `$pkgfiles` items in `package.yml`.
 - The `YPKG/root/{packagename}/build/{packagename-version}` directory holds the uncompressed files from the `sources` directory.
