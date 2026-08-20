@@ -31,6 +31,10 @@ Deprecated packages will remove themselves from the users systems as the first o
 
 ### Deprecating a package
 
+:::important
+Run `eopkg info` on the package and view its reverse dependencies in order to find what needs to be included in the `<Obsoletes>` section. This is the only location that `dbginfo` packages will show up in, which also need to be handled.
+:::
+
 Follow these steps to submit a package for deprecation:
 
 1. Create a new branch in the Solus `packages` repository [on GitHub](https://github.com/getsolus/packages) (forking it first if necessary) with a suitable name such as "deprecate-foobar"
