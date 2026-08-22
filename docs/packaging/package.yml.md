@@ -15,7 +15,7 @@ The file is organised into a key→value hierarchy. The `ypkg` tool parses a `pa
 
 An example file follows:
 
-<!-- prettier-ignore -->
+{/* prettier-ignore */}
 ```yaml
 # yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : nano
