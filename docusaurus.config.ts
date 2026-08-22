@@ -37,7 +37,7 @@ const config: Config = {
 
   // Enable Docusaurus Faster
   future: {
-    experimental_faster: true,
+    faster: true,
     v4: true,
   },
 
