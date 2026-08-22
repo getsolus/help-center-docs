@@ -3,7 +3,7 @@ title: Appstream Metainfo
 summary: The purpose and format of Appstream Metainfo
 ---
 
-<!-- cspell:ignore asgen, gwendraeth -->
+{/* cspell:ignore asgen, gwendraeth */}
 
 # AppStream Metainfo
 

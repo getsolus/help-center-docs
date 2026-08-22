@@ -96,7 +96,7 @@ All new packages or updates to packages should abide by the [SPDX 3.x](https://s
 
 License files that are present in an upstream project must also be installed with the package. This can be easily done with the `%install_license` macro. The macro will install any files passed to it to the system licenses directory, `$installdir/usr/share/licenses/$package/`. The files passed to the macro are expected to be relative to the project's source root.
 
-<!-- prettier-ignore -->
+{/* prettier-ignore */}
 ```yaml
 install    : |
     %ninja_install
@@ -115,7 +115,7 @@ Build dependencies in a `package.yml` should be ordered according to the followi
 
 Example:
 
-<!-- prettier-ignore -->
+{/* prettier-ignore */}
 ```yaml
 builddeps  :
     - pkgconfig32(dri)
@@ -183,7 +183,7 @@ pkgconfig(gtk+-wayland-3.0) pkgconfig(gtk+-x11-3.0)
 
 In the `builddeps` list, use the `pkgconfig(name)` syntax. For example, to add `gtk+-3.0` to the build dependencies, you would do the following:
 
-<!-- prettier-ignore -->
+{/* prettier-ignore */}
 ```yaml
 builddeps:
     - pkgconfig(gtk+-3.0)
@@ -202,7 +202,7 @@ When a `pkgconfig` dependency is available you will be asked to use that instead
 
 Example:
 
-<!-- prettier-ignore -->
+{/* prettier-ignore */}
 ```yaml
 builddeps:
     - stk-devel
@@ -222,7 +222,7 @@ This key uses the `dict(s)` type, and the default key is the current package `na
 
 This would add the “python-gobject” runtime dependency to the main package:
 
-<!-- prettier-ignore -->
+{/* prettier-ignore */}
 ```yaml
 rundeps:
     - python-gobject
@@ -230,7 +230,7 @@ rundeps:
 
 This would add the same dependency, as well as adding it to the `devel` subpackage:
 
-<!-- prettier-ignore -->
+{/* prettier-ignore */}
 ```yaml
 rundeps:
     - python-gobject
@@ -239,7 +239,7 @@ rundeps:
 
 Remember this uses the `dict(s)` type, which is very flexible. You can equally express this as follows (adding more deps as an example):
 
-<!-- prettier-ignore -->
+{/* prettier-ignore */}
 ```yaml
 rundeps:
     - python-gobject
@@ -321,7 +321,7 @@ The `patterns` key expects a `dict(s)` argument. The default key for each patter
 
 There are two ways to name a pattern. Say you have a package named `foo`, and you want to create a subpackage `foo-bar`. You can do this by creating a pattern with the key `bar`. The name of the key will be appended to the name of the package.
 
-<!-- prettier-ignore -->
+{/* prettier-ignore */}
 ```yaml
 name       : foo
 patterns   :
@@ -331,7 +331,7 @@ patterns   :
 
 If you don't want the name of the subpackage to start with the name of the main package, you can do that, too. Keys starting with a `^` character will not prepend the base package name to the name of the subpackage. If you want to create a package named `bar` from the `foo` package, it would look like this:
 
-<!-- prettier-ignore -->
+{/* prettier-ignore */}
 ```yaml
 name       : foo
 patterns   :
@@ -345,7 +345,7 @@ Often with subpackages, you will want a different component, summary, descriptio
 
 If you have package `foo` and subpackage `foo-bar`, changing the properties would look like this:
 
-<!-- prettier-ignore -->
+{/* prettier-ignore */}
 ```yaml
 name       : foo
 license    :
@@ -375,7 +375,7 @@ Usually, packages will automatically depend on created subpackages by default. C
 
 In this example from `libjpeg-turbo`, we move all documentation into the `docs` subpackage:
 
-<!-- prettier-ignore -->
+{/* prettier-ignore */}
 ```yaml
 patterns   :
     - docs : [/usr/share/man]
@@ -383,7 +383,7 @@ patterns   :
 
 This example, taken from the `wayland` package, ensures the binaries from `/usr/bin` and the directory `/usr/share/wayland` are located in the `devel` subpackage:
 
-<!-- prettier-ignore -->
+{/* prettier-ignore */}
 ```yaml
 patterns   :
     - devel :
@@ -393,7 +393,7 @@ patterns   :
 
 To create a header-only package, like `spirv-headers`, create a pattern that matches all files. This can also be used in cases where you don't want any automatically-generated subpackages.
 
-<!-- prettier-ignore -->
+{/* prettier-ignore */}
 ```yaml
 patterns   :
     - /*
@@ -409,7 +409,7 @@ The `replaces` ypkg key uses the `dict(s)` type, and the default key is assumed 
 
 In this example, we rename the `libgeoclue*` packages to use the correct names, and ensure a working upgrade path.
 
-<!-- prettier-ignore -->
+{/* prettier-ignore */}
 ```yaml
 replaces:
     - devel: libgeoclue-devel
@@ -449,7 +449,7 @@ Type `exit` to leave the chroot environment.
 
 :::
 
-<!-- prettier-ignore -->
+{/* prettier-ignore */}
 ```bash
 ├── work
 │   ├── abi_used_libs

@@ -65,7 +65,7 @@ You can, of course, create your `package.yml` file entirely from scratch, but `g
 
 Now you should have a `package.yml` file that looks something like this:
 
-<!-- prettier-ignore -->
+{/* prettier-ignore */}
 ```yaml
 name       : unix-tree
 version    : 2.1.1
@@ -100,7 +100,7 @@ For this example, we need to fix the following:
 
 After updating the file, it will now look like:
 
-<!-- prettier-ignore -->
+{/* prettier-ignore */}
 ```yaml
 name       : tree
 version    : 2.1.1

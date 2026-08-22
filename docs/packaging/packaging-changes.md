@@ -61,7 +61,7 @@ Old macros for Python 2 packages have been removed, since Solus does not support
 
 - Packages must now have license files installed so we are compliant.
 - License files can be easily installed with the new `%install_license` macro.
-  <!-- prettier-ignore -->
+  {/* prettier-ignore */}
   ```yaml
   install    : |
       %ninja_install

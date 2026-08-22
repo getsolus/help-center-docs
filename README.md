@@ -68,6 +68,12 @@ Then, when you're ready to deploy, run the following:
 
 This obviously assumes that you have ssh push access to the `help-center-docs` repository and are using `remote.origin.url=git@github.com:getsolus/help-center-docs.git` (as listed by `git config -l`).
 
+## Updating Docusaurus
+
+- Change versions in `package.json`
+- Run `npm install`
+- Test locally and commit
+
 ## Contributing
 
 ### Multi-lingual documents
