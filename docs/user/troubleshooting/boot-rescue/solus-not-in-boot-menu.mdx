@@ -1,0 +1,49 @@
+---
+title: Solus does not appear in the startup menu
+summary: Restoring the Solus entry in the startup menu
+---
+
+import BootAndChroot from "./snippets/_mount_partitions.mdx";
+import UnmountAll from "./snippets/_unmount_partitions.mdx";
+import WhatToDoNext from "./snippets/_contact_team.mdx";
+
+This is usually caused by a conflict with another OS on a dual-boot system.
+
+## Cause
+
+There are two common causes:
+1. After a software update within Solus on systems using a legacy startup method (non-UEFI systems, like GRUB) where another Linux distribution owns the startup manager.
+1. After Windows updates, Windows may overwrite the MBR (Master Boot Record). This leaves only the Windows Boot Loader in the startup menu.
+
+## Procedures to restore access to Solus
+
+### If another Linux distribution owns the startup manager on a dual-boot system
+
+Boot into the other operating system and update the startup manager. 
+
+ For more information, check the documentation of your distribution.
+
+### If this is a Windows dual-boot system
+
+1. Shut down your system.
+1. Boot from a Solus live USB.
+1.  Mount the partitions of your Solus system.
+
+    <details>
+      <BootAndChroot />
+    </details>
+
+1. Run this to update the boot menu.
+
+    ```
+    clr-boot-manager update
+    ```
+
+1.  Unmount all the Solus partitions.
+    <details>
+      <UnmountAll />
+    </details>
+
+## What to do next
+
+<WhatToDoNext />
