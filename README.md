@@ -62,9 +62,11 @@ To start the live reloading Docusaurus, run: `yarn start`
 
 Ensure that you can successfully generate a static site as above.
 
-Then, when you're ready to deploy, run the following:
+When ready to deploy:
 
-`go-task deploy`
+- Create a new tag. Tags have the form "v[version number]", where version number goes up by 1 each new tag.
+- Push the tag to the repository. This triggers the GitHub Pages deployment.
+- OR use `go-task deploy` to do these steps automatically.
 
 This obviously assumes that you have ssh push access to the `help-center-docs` repository and are using `remote.origin.url=git@github.com:getsolus/help-center-docs.git` (as listed by `git config -l`).
 
