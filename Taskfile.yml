@@ -15,14 +15,16 @@ tasks:
 
   deploy:
     desc: Trigger a GH Pages deployment by pushing a new tag for the lastest commit in master. Don't repeatedly tag the same commit with this task, start the deploy Action if needed.
+    preconditions:
+      - sh: git switch master
+      - sh: git pull origin master
     vars:
       NEW_VERSION_NUMBER:
-        sh: git describe --tags  | cut --delimiter "v" --fields 2- | xargs -n 1 expr 1 + # get the latest tag | trim off "v" | increment the result by 1
+        sh: git describe --abbrev=0  | cut --delimiter "v" --fields 2- | xargs -n 1 expr 1 + # get the latest tag | trim off "v" | increment the result by 1
     cmds:
-      - git switch master
-      - git pull origin master
       - git tag -a v{{.NEW_VERSION_NUMBER}} -m ""
-      - git push tags
+      - git push --tags
+
 
 
   # Tidy up the allowed-words list
