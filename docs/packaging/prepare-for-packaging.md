@@ -96,7 +96,7 @@ Create your own fork of [getsolus/packages](https://github.com/getsolus/packages
 
 ## Clone your forked package repository
 
-Create a local clone of the package repository you just forked. Here we are using the name `solus-packages` and cloning it into our home directoy. The rest of the documentation will presume this structure. You can choose a different name and path but will have to make sure to replace it in every command that refers to the `solus-packages` directory.
+Create a local clone of the package repository you just forked. Here we are using the name `solus-packages` and cloning it into our home directory. The rest of the documentation will presume this structure. You can choose a different name and path but will have to make sure to replace it in every command that refers to the `solus-packages` directory.
 
 ```bash
 gh repo clone packages ~/solus-packages
