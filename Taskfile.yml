@@ -13,16 +13,17 @@ tasks:
       - |
         echo "Use 'go-task -l/--list' to list available tasks."
 
-  # Merge "master" into "deploy" branch for GitHub pages deployment
   deploy:
-    desc: Merge the "master" branch into "deploy" to start GitHub Pages build
+    desc: Trigger a GH Pages deployment by pushing a new tag for the lastest commit in master. Don't repeatedly tag the same commit with this task, start the deploy Action if needed.
+    vars:
+      NEW_VERSION_NUMBER:
+        sh: git describe --tags  | cut --delimiter "v" --fields 2- | xargs -n 1 expr 1 + # get the latest tag | trim off "v" | increment the result by 1
     cmds:
       - git switch master
       - git pull origin master
-      - git switch deploy
-      - git merge master
-      - git push origin deploy
-      - git switch master
+      - git tag -a v{{.NEW_VERSION_NUMBER}} -m ""
+      - git push tags
+
 
   # Tidy up the allowed-words list
   tidy-words:
