@@ -5,72 +5,33 @@ summary: A quick introduction to using KWallet on Solus
 
 # KDE Wallet and SSH keys
 
-In KDE Plasma, the KDE Wallet is responsible for securely storing and supplying user credentials to the various KDE applications that request them.
+In KDE Plasma, the KDE Wallet is responsible for securely storing and supplying user credentials to the various KDE applications that request them. It is unlocked when you log in.
 
-Out of the box, the Solus KDE Plasma Desktop is already configured to use the KDE Wallet PAM module, which unlocks the KDE Wallet on session login.
-
-However, additional configuration is needed to make the KDE Wallet manage SSH key passphrases.
-
-## Prerequisites
-
-This document assumes that you are familiar with utilising SSH key passphrases.
-
-For more information, see [working with SSH key passphrases](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases)
-
-## The `SSH_ASKPASS` environment variable
-
-The `SSH_ASKPASS` environment variable tells the SSH subsystem which application to use when prompting the user for SSH key passphrases.
-
-On the Solus KDE Plasma Desktop spin, `ksshaskpass` is installed out of the box and `SSH_ASKPASS` is set to `ksshaskpass` in the file `/usr/share/xdg/plasma-workspace/env/50-solus-defaults.sh` by default.
-
-## Create `~/.config/autostart/ssh-add.desktop`
-
-The contents of `~/.config/autostart/ssh-add.desktop` should reflect the SSH keys you want to manage using the KDE Wallet.
-
-### Example
-
-Below is an example of the contents of `~/.config/autostart/ssh-add.desktop`:
-
-```ini
-[Desktop Entry]
-Exec=ssh-add -q
-Name=ssh-add
-Type=Application
-```
-
-Tip: The above ssh-add.desktop file will only add the default key `~/.ssh/id_rsa`. Assuming you have different keys named key1, key2 etc you need to change the above desktop file to
-
-```ini
-[Desktop Entry]
-Exec=ssh-add -q ~/.ssh/key1 ~/.ssh/key2 ~/.ssh/key3
-Name=ssh-add
-Type=Application
-```
-
-### Set correct permissions
-
-After you created your file inside the autostart folder you have to give it the correct permissions
-
-```bash
-chmod 700 ~/.config/autostart/ssh-add.desktop
-```
-
-with this the file should appear inside the autostart settings
-
-## Re-log to test your changes
-
-After logging out and back in, you should now be prompted by the KDE Wallet to input your SSH key passphrases.
-
-## Unlock SSH key passphrases automatically on login
-
-KDE Wallet supports automatically unlocking your SSH key passphrases on login.
-
-For this to work, your KDE Wallet password needs to be identical to your login password.
+When using SSH keys with passphrases (see [working with SSH key passphrases][1]) they can be unlocked automatically when the passwords are stored in KWallet. To do so, click the checkbox to remember the password when you are prompted to unlock the key.
 
 ## Troubleshooting
 
-ssh key doesn't get triggered, you can force this manually by running this command.
+If you do not see the password prompt, it is possible that something is either wrong with the SSH agent and/or the password prompt utility. To see if they are configured correctly, check the output of the following command:
+
+```console
+echo $SSH_AUTH_SOCK $SSH_ASKPASS $SSH_ASKPASS_REQUIRE
+```
+
+It should show:
+
+```
+/run/user/1000/ssh-agent.socket /usr/bin/ksshaskpass prefer
+```
+
+You can try manually forcing the password prompt with:
 
 ```bash
-SSH_ASKPASS=/usr/bin/ksshaskpass ssh-add < /dev/null
+env SSH_ASKPASS=/usr/bin/ksshaskpass \
+    SSH_ASKPASS_REQUIRE=force \
+    ssh-add
 ```
+
+Please file an issue on [our issue tracker][2] if the problem persists.
+
+[1]: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases
+[2]: https://issues.getsol.us
