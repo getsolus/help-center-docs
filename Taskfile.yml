@@ -20,7 +20,7 @@ tasks:
       - sh: git pull origin master
     vars:
       NEW_VERSION_NUMBER:
-        sh: git describe --abbrev=0  | cut --delimiter "v" --fields 2- | xargs -n 1 expr 1 + # get the latest tag | trim off "v" | increment the result by 1
+        sh: git describe --tags --abbrev=0  | cut --delimiter "v" --fields 2- | xargs -n 1 expr 1 + # get the latest tag | trim off "v" | increment the result by 1
     cmds:
       - git tag -a v{{.NEW_VERSION_NUMBER}} -m ""
       - git push --tags
