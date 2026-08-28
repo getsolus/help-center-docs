@@ -301,12 +301,12 @@ fix-silliness.patch
 
 ## Installing extra files
 
-We recommend using patches where possible first, as they ensure correct maintenance and will be updated across package versions. If you must install extra files into the directory, please use the `install` command, ensuring you set the correct permissions. Again, files are accessible from the `./files` directory, relative to `package.yml`.
+We recommend using patches where possible first, as they ensure correct maintenance and will be updated across package versions. If you must install extra files into the directory, please use the `%install_file` macro. Again, files are accessible from the `./files` directory, relative to `package.yml`.
 
 This is an example of installing a custom profile file, seen in the `bash` package:
 
 ```bash
-install -m 0644 $pkgfiles/profile $installdir/etc/profile
+%install_file $pkgfiles/profile $installdir/etc/profile
 ```
 
 ## Patterns

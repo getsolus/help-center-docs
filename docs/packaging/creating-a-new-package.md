@@ -97,6 +97,8 @@ For this example, we need to fix the following:
 - Remove `builddeps`. This package has no build dependencies beyond the ones already available for every package (the `system.devel` packages).
 - The `setup` step is not required, remove it.
 - In the `install` key, we can't use the `%make_install` macro for this package. The files are installed in their correct locations individually.
+    - The `%install_file` macro installs a file to a target location with the correct permissions.
+    - The `%install_bin` macro installs the binary to the binary directory with the correct permissions.
 
 After updating the file, it will now look like:
 
@@ -116,8 +118,8 @@ description: |
 build      : |
     %make
 install    : |
-    install -Dm00664 $workdir/doc/tree.1 $installdir/usr/share/man/man1/tree.1
-    install -Dm00755 $workdir/tree $installdir/usr/bin/tree
+    %install_file $workdir/doc/tree.1 $installdir/usr/share/man/man1/tree.1
+    %install_bin $workdir/tree
 ```
 
 To read more about finding and including dependencies and other parts of `package.yml` please see [Packaging Practices](packaging-practices.md).
