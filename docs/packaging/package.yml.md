@@ -178,8 +178,6 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 | Macro                         | Description                                                                                                                               |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | **%autogen**                  | Runs autogen with our `%CONFOPTS%` to create a configure script then proceeds to run `%configure`.                                        |
-| **%cmake**                    | Configures a CMake project with the distribution specific options, such as prefix and release type.                                       |
-| **%cmake_ninja**              | Configures a CMake project with ninja so it can be used with `%ninja_build`, `%ninja_install` and `%ninja_check` macros.                  |
 | **%configure**                | Runs `./configure` with our `%CONFOPTS%` variable macro.                                                                                  |
 | **%configure_no_runstatedir** | Runs `%configure` without the `--runstatedir` option. Use if you encounter `configure: error: unrecognized option: '--runstatedir=/run'`. |
 | **%make**                     | Runs the `make` command with the job count specified in `eopkg.conf` ([more info](advanced-config/eopkg-configuration.md)).               |
@@ -192,11 +190,43 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 | **%install_dir**              | Installs a directory at the given path.                                                                                                   |
 | **%install_exe**              | Installs an executable file to the given path.                                                                                            |
 | **%install_file**             | Installs a regular file to the given path.                                                                                                |
-| **%install_license**          | Installs any files after the macro to `${installdir}/usr/share/licenses/${package}/`.                                                         |
+| **%install_license**          | Installs any files after the macro to `${installdir}/usr/share/licenses/${package}/`.                                                     |
 | **%tmpfiles**                 | Appends the text after it to `${installdir}/%libdir%/tmpfiles.d/${package}.conf`. This can be used in place of installing a file by hand. |
 | **%sysusers**                 | Appends the text after it to `${installdir}/%libdir%/sysusers.d/${package}.conf`. This can be used in place of installing a file by hand. |
 
+### CMake actionable macros
+
+The default build directory for CMake projects is `solusBuildDir`. This can be overridden by using the macros like so:
+
+```bash
+# Setup:
+%cmake_ninja -B customBuildDir
+
+# Build:
+BUILDDIR="customBuildDir"
+%cmake_build
+
+# Install:
+BUILDDIR="customBuildDir"
+%cmake_install
+```
+
+| Macro                  | Description                                                                                                                                                |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **%cmake**             | Configures a CMake project with our distribution-specific options.                                                                                         |
+| **%cmake_ninja**       | Configures a CMake project with our distribution-specific options, using the Ninja build and install tools.                                                |
+| **%cmake_unity**       | Configures a CMake project with our distribution-specific options, built with [unity-mode](https://cmake.org/cmake/help/latest/prop_tgt/UNITY_BUILD.html). |
+| **%cmake_build**       | Builds a CMake project using the set build generator (Ninja or Unix Makefile).                                                                             |
+| **%cmake_install**     | Installs a CMake project using the set build generator (Ninja or Unix Makefile).                                                                           |
+| **%cmake_test**        | Runs unit tests for a CMake project.                                                                                                                       |
+
 ### Haskell actionable macros
+
+:::info
+
+Existing Haskell packages may use the old `cabal_build`, `cabal_install`, `cabal_register` macros. Please use the new `haskell_*` macros instead.
+
+:::
 
 | Macro                  | Description                                                                                                                       |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -206,16 +236,31 @@ Macros are prefixed with `%`, and are substituted before your script is executed
 | **%haskell_install**   | Runs `runhaskell copy` to `$installdir`.                                                                                          |
 | **%haskell_register**  | Runs `runhaskell register` to generate a pkg-config for package and version, then installs the conf file.                         |
 
-Existing Haskell packages may use the old `cabal_build`, `cabal_install`, `cabal_register` macros. Please use the new `haskell_*` macros instead.
+### Meson actionable macros
 
-### Ninja actionable macros
+The default build directory for Meson projects is `solusBuildDir`.
 
 | Macro                | Description                                                                                                             |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | **%meson_configure** | Runs `meson` with our CFLAGS and appropriate flags such as `libdir`.                                                    |
-| **%ninja_build**     | Runs `ninja` and passes our `%JOBS%` variable. This macro obsoletes _%meson_build_.                                     |
-| **%ninja_install**   | Runs `ninja install` and passes the appropriate `DESTDIR` and `%JOBS%` variable. This macro obsoletes _%meson_install_. |
-| **%ninja_check**     | Runs `ninja test` and passes our `%JOBS%` variable. This macro obsoletes _%meson_check_.                                |
+| **%meson_unity**     | Runs `meson` with our distribution-specific options, built with [unity-mode](https://mesonbuild.com/Unity-builds.html). |
+| **%meson_build**     | Builds a `meson` project using Ninja.                                                                                   |
+| **%meson_install**   | Installs a `meson` project using Ninja.                                                                                 |
+| **%meson_test**      | Runs unit tests for a `meson` project.                                                                                  |
+
+### Ninja actionable macros
+
+:::warning
+
+Note that in most cases, either the CMake or Meson macros should be used instead.
+
+:::
+
+| Macro                |                                                                                  |
+| -------------------- | -------------------------------------------------------------------------------- |
+| **%ninja_build**     | Runs `ninja` and passes our `%JOBS%` variable.                                   |
+| **%ninja_install**   | Runs `ninja install` and passes the appropriate `DESTDIR` and `%JOBS%` variable. |
+| **%ninja_check**     | Runs `ninja test` and passes our `%JOBS%` variable.                              |
 
 ### Perl actionable macros
 
