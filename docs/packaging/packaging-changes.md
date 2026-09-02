@@ -13,6 +13,19 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 ## 2026
 
+### September
+
+#### Added additional macros
+
+- `%cmake_unity`
+- `%cmake_build`
+- `%cmake_install`
+- `%cmake_test`
+- `%meson_unity`
+- `%meson_build`
+- `%meson_install`
+- `%meson_test`
+
 ### August
 
 #### Added chroot aliases to Taskfile
