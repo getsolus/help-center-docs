@@ -144,30 +144,25 @@ The command returns the following:
 ```text
 [
   [
-    49192,
-    "cpe:2.3:a:ubuntu_developers:systemd"
-  ],
-  [
-    116392,
-    "cpe:2.3:a:lennart_poettering:systemd"
-  ],
-  [
-    120506,
-    "cpe:2.3:a:freedesktop:systemd"
-  ],
-  [
-    120627,
+    916.0,
     "cpe:2.3:a:systemd_project:systemd"
+  ],
+  [
+    1.0,
+    "cpe:2.3:a:ubuntu_developers:systemd"
   ]
 ]
+Verify successful hits by visiting https://cve.circl.lu/search/$VENDOR/$PRODUCT
+- CPE entries for software applications have the form 'cpe:2.3:a:$VENDOR:$PRODUCT'
+
 ```
 
 Ignore the numerical ids, let's walk through the CPEs by vendor:
 
 - `ubuntu_developers` is for `systemd` patched by Ubuntu; we can ignore it
-- `lennart_poettering` is for the main `systemd` developer and is probably a bleeding edge vendor; ignore it
-- `freedesktop` is from freedesktop.org and is a good candidate, so we add it
 - `systemd_project` is a good candidate, so we add it
+
+If you see something like `"cpe:2.3:a:lennart_poettering:systemd"`, the vendor is Lennart Poettering and this shouldn't be used. This is a bleeding edge / development vendor, rather than production.
 
 ### No known CPE
 
