@@ -15,6 +15,13 @@ This page is meant to serve as a changelog of sorts for the Solus packaging envi
 
 ### September
 
+#### Added `tidy` command to packaging Taskfile
+
+- When in a package directory within the packages repository, you can now run `go-task tidy` to do some basic find-and-replace cleanups of a `package.yml` file.
+- The command will try to replace old-style `install` commands with the new-style macros (see July 2026 changes)
+- The command will also add curly braces around path variables. For example, `$pkgfiles/example.patch` becomes `${pkgfiles}/example.patch`
+- This command cannot fix existing packaging errors, and the changes it generates should be reviewed carefully.
+
 #### Added additional macros
 
 - `%cmake_unity`
