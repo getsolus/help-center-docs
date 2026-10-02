@@ -5,15 +5,15 @@ export const Header = () => {
     <Stack
       alignItems="center"
       justicyContent="center"
-      paddingY={{ sm: '2.5rem', md: '3rem', lg: '3.5rem' }}
-      spacing='1.25rem'
+      paddingY={{ sm: "2.5rem", md: "3rem", lg: "3.5rem" }}
+      spacing="1.25rem"
     >
       <Typography
         style={{
-          fontSize: '3rem',
+          fontSize: "3rem",
           fontWeight: 600,
           lineHeight: 1.25,
-          textAlign: 'center',
+          textAlign: "center",
         }}
         variant="h1"
       >
@@ -21,8 +21,8 @@ export const Header = () => {
       </Typography>
       <Typography
         style={{
-          fontSize: '1.25rem',
-          fontStyle: 'italic',
+          fontSize: "1.25rem",
+          fontStyle: "italic",
         }}
       >
         Documentation for Solus

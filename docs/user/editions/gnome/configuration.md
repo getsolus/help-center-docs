@@ -15,7 +15,6 @@ You will be presented with the following window. This window provides you with t
 
 ![GNOME Date and Time](configuration/gnome-date-and-time.png)
 
-
 ### Default applications
 
 With GNOME, you will need to open the Overlay using the `Super` button on your keyboard or by clicking the applications icon in the dock and then finding and clicking on "Details".
@@ -139,7 +138,6 @@ If you use a Lenovo ThinkPad, another section will appear where in you can chang
 
 ![GNOME TrackPoint Settings](configuration/gnome-pointing-stick.png)
 
-
 ### Testing
 
 You can test your settings by clicking the "Test Your Settings" button in the top right of the window.
@@ -193,7 +191,7 @@ You can access sound settings, including individual application volume controls,
 ## Users
 
 To add and remove users with GNOME, Open Settings > System > Users.
-Alternatively, you can open the Overlay using the `Super` button on your keyboard and searching for "Users".  
+Alternatively, you can open the Overlay using the `Super` button on your keyboard and searching for "Users".
 
 ![GNOME User Indicator](configuration/gnome-user-settings.png)
 
@@ -234,8 +232,8 @@ Alternatively, you can open Settings and find "Appearance" in the sidebar.
 
 ![GNOME Settings Background Section](configuration/gnome-appearance.png)
 
-In this section, you can choose between Solus wallpapers, your own imported wallpaper by clicking add wallpaper or solid colors. 
+In this section, you can choose between Solus wallpapers, your own imported wallpaper by clicking add wallpaper or solid colors.
 
 > [!NOTE]
 > Information in navigating GNOME such as Workspaces, Keyboard Shortcuts, as well Customization can be found
-in [Tips and Tricks](tips-and-tricks.md)
+> in [Tips and Tricks](tips-and-tricks.md)

@@ -28,16 +28,15 @@ A reboot will be required to use any newly installed driver.
 
 ## Proprietary drivers
 
-These can be found in the "Hardware" category in Discover and GNOME Software. What you see in this section will depend on your hardware and what's available for it. If you don't see a Hardware category, it's because there are no additional drivers available for your system. 
+These can be found in the "Hardware" category in Discover and GNOME Software. What you see in this section will depend on your hardware and what's available for it. If you don't see a Hardware category, it's because there are no additional drivers available for your system.
 
 **Discover**
 
 [![Discover Hardware Section Screenshot](KDE-Discover-HW-Drivers-thumb.png)](KDE-Discover-HW-Drivers.png)
 
-
 **GNOME Software**
 
-[![GNOME Software Hardware Section Screenshot](GNOME-Software-HW-Drivers_Section-thumb.png)](GNOME-Software-HW-Drivers_Section.png#floatleft)      [![GNOME Software Hardware Page Screenshot](GNOME-Software-HW-Drivers_Details-thumb.png)](GNOME-Software-HW-Drivers_Details.png#floatright)
+[![GNOME Software Hardware Section Screenshot](GNOME-Software-HW-Drivers_Section-thumb.png)](GNOME-Software-HW-Drivers_Section.png#floatleft) [![GNOME Software Hardware Page Screenshot](GNOME-Software-HW-Drivers_Details-thumb.png)](GNOME-Software-HW-Drivers_Details.png#floatright)
 
 ### GPUs
 
@@ -58,29 +57,30 @@ For AMD and Intel GPUs, you won't need to install anything extra.
 - **Xorg driver**
   In order to expose certain features to the Xorg Server, AMD and Intel have additional drivers which may be needed for things like variable refresh rate or multiple display support.
 
-For NVIDIA GPUs: 
+For NVIDIA GPUs:
+
 - **Nouveau**
- This consists of a DRM driver provided by the Linux kernel, OpenGL drivers (nvc0, nv50) from Mesa, and an Xorg driver (xorg-driver-video-nouveau).
+  This consists of a DRM driver provided by the Linux kernel, OpenGL drivers (nvc0, nv50) from Mesa, and an Xorg driver (xorg-driver-video-nouveau).
 - **Open and Proprietary NVIDIA drivers**
   All drivers provided by NVIDIA consist of a DRM driver module for the kernel, OpenGL and Vulkan drivers for rendering, and additional drivers for extended features of the hardware.
 
 </details>
-  
+
 For NVIDIA GPUs, we have a guide for [choosing and installing a driver ](./nvidia-gpu-drivers.mdx)
 
-### Other  hardware
- 
+### Other hardware
+
 Installing additional drivers may improve performance or provide additional features, however they are usually not necessary for normal daily usage.
 
-These drivers for common vendors are available through the software centers, Discover / GNOME Software, or through `eopkg`.  Some can only be installed via command line, as noted below. This is not an exhaustive list, feel free to search the software centers for software that may enhance your hardware.
+These drivers for common vendors are available through the software centers, Discover / GNOME Software, or through `eopkg`. Some can only be installed via command line, as noted below. This is not an exhaustive list, feel free to search the software centers for software that may enhance your hardware.
 
-| Vendor      | Drivers          | Install from |
-| ----------- | ---------------- |  ---------------- |
-| ASUS        | piper            | SC or `eopkg`  |
-| Broadcom    | broadcom-sta     | SC or `eopkg` - must match running kernel |
-| Logitech    | piper            | SC or `eopkg`  |
-| Razer       | openrazer        | `eopkg` only  |
-| Roccat      | piper            | SC or `eopkg`  |
-| SteelSeries | piper            | SC or `eopkg`  |
-| VMware      | open-vm-tools    | `eopkg`  only |
-| Xbox        | xone             | `eopkg`  only |
+| Vendor      | Drivers       | Install from                              |
+| ----------- | ------------- | ----------------------------------------- |
+| ASUS        | piper         | SC or `eopkg`                             |
+| Broadcom    | broadcom-sta  | SC or `eopkg` - must match running kernel |
+| Logitech    | piper         | SC or `eopkg`                             |
+| Razer       | openrazer     | `eopkg` only                              |
+| Roccat      | piper         | SC or `eopkg`                             |
+| SteelSeries | piper         | SC or `eopkg`                             |
+| VMware      | open-vm-tools | `eopkg` only                              |
+| Xbox        | xone          | `eopkg` only                              |

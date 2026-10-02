@@ -181,7 +181,8 @@ This list should not suggest that _only_ such devices listed below are compatibl
 - Lenovo Yoga 2 11
 - Lenovo Z50-70
 
-## Microsoft 
+## Microsoft
+
 - Microsoft Surface Laptop Go 3
 
 ## MSI
