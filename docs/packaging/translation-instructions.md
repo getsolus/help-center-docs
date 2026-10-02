@@ -22,7 +22,7 @@ Please join our [Matrix rooms](/docs/user/contributing/getting-involved.md#matri
   - `{DE} Instalado exitosamente, reinicie para continuar.`
   - `Successfully Installed {}` translates to:
   - `Instalado exitosamente {}`
-  {/* spellchecker:enable */}
+    {/* spellchecker:enable */}
 - Do not translate the following strings; leave them untouched:
   - `Packagekit`
   - `XDG_SESSION_DESKTOP`

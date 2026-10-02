@@ -134,10 +134,12 @@ fonts `powerline-fonts`. Both are available via `eopkg` in a terminal:
 sudo eopkg it powerline powerline-fonts
 ```
 
-To get powerline working inside your terminal, you need to follow setup instructions for your preferred shell:  
+To get powerline working inside your terminal, you need to follow setup instructions for your preferred shell:
 
 #### Bash
+
 Add the following to `$HOME/.bashrc`:
+
 ```bash
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
@@ -146,7 +148,9 @@ source /usr/lib/python3.12/site-packages/powerline/bindings/bash/powerline.sh
 ```
 
 #### Fish
+
 Add the following to `$HOME/.config/fish/config.fish` below the comment "`# Commands to run in interactive sessions can go here`":
+
 ```bash
 powerline-daemon -q
 set fish_function_path $fish_function_path "/usr/lib/python3.12/site-packages/powerline/bindings/fish/"
@@ -154,8 +158,9 @@ powerline-setup
 ```
 
 #### Zsh
+
 Add the following to `$HOME/.zshrc`:
+
 ```bash
 source /usr/lib/python3.12/site-packages/powerline/bindings/zsh/powerline.zsh
 ```
-
