@@ -13,7 +13,7 @@ This section applies to new installations for both **Host** and **Guest**.
 
 ### Remove prior installation
 
-It is important to uninstall any version of VirtualBox (or VirtualBox Guest Additions) that **was not** installed from the Software Center or there will be conflicts that will prevent the application to work.
+It is important to uninstall any version of VirtualBox (or VirtualBox Guest Additions) that **was not** installed from your software center or there will be conflicts that will prevent the application to work.
 This can usually be done by executing the following command from a terminal:
 
 ```bash
@@ -42,7 +42,7 @@ You will either have a `.current` or `.lts` suffix. Examples: `5.13.1-187.curren
 
 ## Solus as host
 
-VirtualBox is available in the Software Center, select the package that matches your kernel.
+VirtualBox is available in your software center, select the package that matches your kernel.
 
 | virtualbox                                           | virtualbox-current                                       |
 | ---------------------------------------------------- | -------------------------------------------------------- |
@@ -52,7 +52,7 @@ You **must** reboot your computer before running VirtualBox for the first time.
 
 ## Solus as guest
 
-VirtualBox Guest Additions are available in the Software Center, select the package that matches kernel version on the Solus virtual machine.
+VirtualBox Guest Additions are available in your software center, select the package that matches kernel version on the Solus virtual machine.
 
 | virtualbox-guest                                      | virtualbox-guest-common                                      |
 | ----------------------------------------------------- | ------------------------------------------------------------ |
@@ -93,6 +93,6 @@ sudo gpasswd -a $USER vboxsf
 The Error `Kernel driver not installed (rc=-1908)` may occur if
 
 - The computer was not restarted before launching VirtualBox for the first time
-- The computer is not booted on the latest kernel. Make sure to apply the updates from the Software Center and restart your machine.
+- The computer is not booted on the latest kernel. Make sure to apply the updates from your software center and restart your machine.
 - The wrong VirtualBox package was installed. Please check the instructions just above to install the correct package for your kernel.
 - VirtualBox was manually installed and it conflicts with the version installed from the Solus Repository.

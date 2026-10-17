@@ -9,7 +9,7 @@ summary: A quick start guide to Wireshark on Solus
 
 ## Installation
 
-Wireshark can be installed either from the Software Center or via terminal:
+Install Wireshark from your software center, or by executing the following command:
 
 ```bash
 sudo eopkg it wireshark

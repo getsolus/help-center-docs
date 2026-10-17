@@ -29,7 +29,7 @@ If you want to set a custom date & time format, the ["conversion specifications"
 
 You can configure default applications in Budgie by opening the Budgie Control Center, and scrolling the left-hand sidebar down to "Default Applications".
 
-The drop-down boxes here enable choosing the default application for each category of file. For most categories, you will need to have already installed alternative applications before you can change the default settings. For instance, if you wish to change the default video player from Celluloid to VLC, then you must first install VLC (available in the Software Center).
+The drop-down boxes here enable choosing the default application for each category of file. For most categories, you will need to have already installed alternative applications before you can change the default settings. For instance, if you wish to change the default video player from Celluloid to VLC, then you must first install VLC (available in your software center).
 
 ![Budgie Default Applications](configuration/budgie-control-center-default-applications.jpg)
 

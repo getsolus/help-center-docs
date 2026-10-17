@@ -60,7 +60,7 @@ We're always looking to improve our systems, especially when they're not functio
   Most bug reports about Solus itself, and its packages, should be filed here.
 
 - [Other Solus GitHub Repositories](https://github.com/getsolus)
-  Certain parts of Solus, such as the Software Center, have repositories in the `getsolus` organization on GitHub. Check here to see if the system in question is listed. If so, file the bug in the appropriate repository.
+  Certain parts of Solus, like our package manager `eopkg`, have repositories in the `getsolus` organization on GitHub. Check here to see if the system in question is listed. If so, file the bug in the appropriate repository.
 
 - [Budgie Desktop](https://github.com/BuddiesOfBudgie/budgie-desktop/issues)
   Budgie Desktop issues are filed in the `BuddiesOfBudgie/budgie-desktop` repository on GitHub.

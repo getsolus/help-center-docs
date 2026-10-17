@@ -9,7 +9,7 @@ summary: A quick guide to using Postgres on Solus
 
 ## Usage
 
-PostgreSQL can be installed either from the Software Center or via terminal:
+Install PostgreSQL by executing the following command:
 
 ```bash
 sudo eopkg install postgresql

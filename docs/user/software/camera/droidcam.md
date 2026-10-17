@@ -33,7 +33,7 @@ After the kernel module is installed, continue to installation steps.
 
 ## Installation
 
-DroidCam can be installed from Software Center or via terminal :
+Install DroidCam from your software center, or execute the following command:
 
 ```bash
 sudo eopkg it droidcam

@@ -70,7 +70,7 @@ The below mentioned guidelines apply to individual services provided or used by 
 
 Solus utilizes a number of repositories and issue trackers to facilitate the development of various items in our project and to address issues raised by our community through tasks / issue reports. These include, but are not limited to:
 
-- Our [Documentation, Package, Software Center, and various tooling repositories](https://github.com/getsolus/)
+- Our [Documentation, Package, and various tooling repositories](https://github.com/getsolus/)
 - Our package [issue tracker](https://github.com/getsolus/packages/issues)
 - All other issue trackers utilized by the project across repositories hosted in our GitHub organizations
 
