@@ -7,13 +7,23 @@ summary: Configuration of additional languages via IBUS
 
 ## Configuration
 
-Find the IME (Input Method Editor) you require from the [IBus IME package list](#ibus-ime-package-list) and then search for it in the Software Center. Click "Install" to add the IME.
+- Find the IME (Input Method Editor) you require from the [IBus IME package list](#ibus-ime-package-list) and then search for it in your software center. Click "Install" to add the IME.
+- You may have to agree to install some additional dependencies and will need to type in your user password as authentication is required.
+- If the IME you require is not listed in the software center, you can istall it by running the following command:
 
-![IBus IME Install](./ibus/ibus-ime-install.jpg)
+  ```bash
+  sudo eopkg install ibus-libpinyin
+  ````
 
-You may have to agree to install some additional dependencies and will need to type in your user password as authentication is required.
+---
 
-![IBus IME Dependencies](./ibus/ibus-ime-dependencies.jpg)
+![IBus IME software center search](./ibus/ibus-ime-software-center-search.png)
+
+---
+
+![IBus IME sofware center install](./ibus/ibus-ime-software-center-install.png)
+
+---
 
 Once it has finished installing, logout of your computer and then login again. Now you'll be able to select the newly installed IME by following the same steps as detailed above for changing keyboard layouts in Budgie. For instance, in this example we have installed the `ibus-hangul` package for the Korean language. By following the steps above and then searching for Korean keyboard layouts, we are now able to select Korean (Hangul) as an input source.
 

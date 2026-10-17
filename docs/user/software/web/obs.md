@@ -9,7 +9,7 @@ This article covers the installation of OBS Studio as well as the use of third-p
 
 ## Installation
 
-To install OBS Studio, either open up the Software Center and type `obs-studio` into the Search section or run the following command:
+To install OBS Studio, either open up your software center and type `obs-studio` into the Search section or run the following command:
 
 ```bash
 sudo eopkg install obs-studio

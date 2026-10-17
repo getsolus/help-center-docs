@@ -5,13 +5,13 @@ summary: Install and configure Steam on Solus
 
 # Steam
 
-- To install `steam`, use the Software Center or execute the following command:
+Install `steam` from your software center, or execute the following command:
 
-  ```bash
-  sudo eopkg install steam
-  ```
+```bash
+sudo eopkg install steam
+```
 
-  Steam is also available on Flathub.
+Steam is also available on Flathub.
 
 ## Running steam games with Nvidia graphics cards
 

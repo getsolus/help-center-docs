@@ -9,7 +9,7 @@ summary: Quick Start guide to Plasma System Monitor on Solus
 
 ## Installation
 
-Plasma System Monitor is usually installed as part of the KDE Plasma Desktop environment, but can be installed from the Software Center or via terminal:
+Plasma System Monitor is usually installed as part of the KDE Plasma Desktop environment, but can be installed from your software center, or by running the following command:
 
 ```bash
 sudo eopkg it plasma-systemmonitor

@@ -46,7 +46,7 @@ Each Linux desktop environment has its own graphical application for managing fi
 
 Solus comes pre-installed with [LibreOffice](https://www.libreoffice.org), an office suite that is capable of replacing Microsoft<sup>TM</sup> Office for the most common tasks.
 
-By default, Solus provides Writer (document editor), Calc (spreadsheet editor), and Impress (presentation editor). Other applications such as Math or Draw can be installed from the Software Center.
+By default, Solus provides Writer (document editor), Calc (spreadsheet editor), and Impress (presentation editor). Other applications such as Math or Draw can be installed from your software center.
 
 | LibreOffice | Microsoft Office Equivalent | Apple Equivalent |
 | ----------- | --------------------------- | ---------------- |
@@ -66,7 +66,7 @@ Calc is a spreadsheet editor. You can view, create, and edit spreadsheets as wel
 
 ![LibreOffice Draw Screenshot](default-applications/libreoffice-draw.jpg)
 
-Draw is a graphical editor that allows you to sketch diagrams, workflows and any kind of other simple to complex drawing you can imagine. You can install Draw from the Software Center by searching for the package `libreoffice-draw`.
+Draw is a graphical editor that allows you to sketch diagrams, workflows and any kind of other simple to complex drawing you can imagine. You can install Draw from your software center by searching for the package `libreoffice-draw`.
 
 ### Impress
 
@@ -78,7 +78,7 @@ Impress is a presentation viewer and editor. You can view, create, edit, and exp
 
 ![LibreOffice Math Screenshot](default-applications/libreoffice-math.jpg)
 
-Math is a formula editor. Create your mathematical and scientific expressions and insert them with the correct formatting into your text documents, spreadsheets, presentations, or drawings. Math can be installed from the Software Center by searching for the package `libreoffice-math`.
+Math is a formula editor. Create your mathematical and scientific expressions and insert them with the correct formatting into your text documents, spreadsheets, presentations, or drawings. Math can be installed from your software center by searching for the package `libreoffice-math`.
 
 ### Writer
 
@@ -88,7 +88,7 @@ Writer is a document editor. You can view, create, edit, and export documents in
 
 ### Spell-checking
 
-LibreOffice Writer users may want to install the package `libreoffice-common-dictionaries` from Software Center to automatically enable spell-checking support.
+LibreOffice Writer users may want to install the package `libreoffice-common-dictionaries` from your software center to automatically enable spell-checking support.
 
 #### Finnish
 

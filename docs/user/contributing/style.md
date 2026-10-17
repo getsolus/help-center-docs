@@ -97,7 +97,7 @@ Write content using [Markdown formatting](https://www.markdownguide.org/cheat-sh
 - The name of packages in the Solus repository must use inline code formatting.
 
 ```md
-To install `caddy`, use the Software Center or execute the following command:
+To install `caddy` execute the following command:
 ```
 
 - When referring to the name of a product or project, use the name the authors use.

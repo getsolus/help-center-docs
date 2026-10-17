@@ -13,7 +13,7 @@ This support can be exposed via your file manager (such as Nautilus) upon connec
 
 ## Installation
 
-To ensure you have the required software for iOS support, install `libideviceactivation` via the Software Center or terminal:
+Install `libideviceactivation` from your software center, or by executing the following command:
 
 ```bash
 sudo eopkg install libideviceactivation

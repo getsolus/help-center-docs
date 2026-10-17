@@ -9,7 +9,7 @@ TigerVNC is a high-performance implementation of the VNC protocol, which allows 
 
 ## Installation
 
-TigerVNC can be installed either from the Software Center or via terminal. The terminal command to run it is:
+TigerVNC can be installed either from your software center or via terminal. The terminal command to run it is:
 
 ```bash
 sudo eopkg install tigervnc
