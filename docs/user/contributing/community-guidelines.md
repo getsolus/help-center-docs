@@ -60,7 +60,7 @@ The below guidelines do not fall into any specific category but should be observ
 - Continual repetition and/or advertisement of any products, services, or projects is not allowed.
 - Using bots or other automated ways of interaction, unless explicitly permitted by the project, is not allowed.
 - No spamming or flooding. This may result in temporary removals (for example: kicks in Matrix) or warnings, to prevent the continued spamming or flooding.
-- Promotion of unofficial Solus communities or communication channels without prior permission is not allowed.
+- Promotion of unofficial Solus communities, communication channels, or repositories without prior permission is not allowed.
 
 ## Service-specific guidelines
 
