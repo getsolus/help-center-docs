@@ -3,7 +3,7 @@ title: Boot management
 summary: Guide to customizing the Solus boot process
 ---
 
-Solus uses `clr-boot-manager` from the Clear Linux project to handle all boot configuration. This tool automatically configures the appropriate boot loader based on your system type:
+Solus uses `clr-boot-manager` to handle all boot configuration. This tool automatically configures the appropriate boot loader based on your system type:
 
 - Legacy BIOS systems: GRUB2
 - Modern UEFI systems: `systemd-boot`
