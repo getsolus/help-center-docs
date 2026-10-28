@@ -26,6 +26,14 @@ Other Brother drivers are distributed by Brother for a single printer only. Beca
 
 For example, `brother-mfc1910w` provides drivers for the MFC-1910w.
 
+### HP
+
+You must install the proprietary HP plugin for your device after installing `hplip`. From command line run this and follow the prompts:
+
+```
+hp-plugin
+```
+
 ## Compatibility
 
 The following printers have been tested and/or suggested to function correctly by our users.
@@ -73,3 +81,7 @@ If your scanner is networked, you need to tell `saned` the IP of your printer. I
 ```bash
 brsaneconfig4 -a name=SCANNER model=$MODEL ip=$IPOFYOURSCANNER
 ```
+
+## HP
+
+Scanning functions should work as expected after `hp-plugin` has installed the plugin for your device.
