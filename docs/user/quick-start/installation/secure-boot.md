@@ -13,25 +13,25 @@ Since Solus 4.4 Secure Boot is now supported. When you first boot the ISO, and, 
 
 After [booting](/docs/user/quick-start/installation/#boot-the-media) the ISO from USB/DVD and, if Secure Boot is enabled in your device's UEFI firmware. A warning will appear concerning a Secure Boot violation, press `Enter` on your keyboard to continue.
 
-![Secure Boot violation](1-secure-boot-violation.png)
+![Secure Boot violation](1-secure-boot-violation.webp)
 
 Now, it will provide 10 seconds in order to continue to MOK (Machine Owner Key) Management, press `Enter` again within the timeframe to do so.
 
-![Continue to MOK Management](2-perform-mok-management.png)
+![Continue to MOK Management](2-perform-mok-management.webp)
 
 Use the down `↓` arrow key on your keyboard to select `Enroll Key from Disk` and press `Enter` to continue.
 
-![Enroll Key from Disk](3-enroll-key-from-disk.png)
+![Enroll Key from Disk](3-enroll-key-from-disk.webp)
 
 Here you'll need to find the `solus-enroll-me.cer` certificate, it should normally be located in the `SOLUSESP` directory. Use the arrow keys to select a directory, `Enter` to enter it and `Esc` to go back.
 
-![Enroll the Solus Certificate](4-enrolling-the-solus-certificate.png)
+![Enroll the Solus Certificate](4-enrolling-the-solus-certificate.webp)
 
 Once you found the `solus-enroll-me.cer` certificate, press `Enter` to enroll it, and press the `↓` and `Enter` key to continue. Finally, when confirming you wish to Enroll the key(s) press the `↓` key to select "Yes" and `Enter` again.
 
 Now, with the Solus certificate enrolled, press `Enter` to reboot the machine, boot the ISO from USB/DVD again and it should continue booting to the installer.
 
-![Confirm Key Enrollment](5-confirm-key-enrollment.png)
+![Confirm Key Enrollment](5-confirm-key-enrollment.webp)
 
 <em>Once Solus is installed you will not have to enroll the certificate again as it will stay enrolled.</em>
 
@@ -48,11 +48,11 @@ Reboot your machine and select the appropriate keyboard button during startup to
 
 <em>If there is no entry called `Solus Linux Bootloader`, reboot, log back in, open a terminal and run `sudo clr-boot-manager update`.</em>
 
-![UEFI Choose Boot Device](uefi-choosing-boot-device.png)
+![UEFI Choose Boot Device](uefi-choosing-boot-device.webp)
 
 After successfully booting from the new `Solus Linux Bootloader` UEFI entry, open a terminal, input `systemctl reboot --firmware-setup` and press `Enter`. This will reboot you into your machine's UEFI firmware interface. Once there, you will have to find and enable the Secure Boot setting. Where this is located varies from machine to machine. Some common places it can be located under are `Windows OS Configuration`, `Security` or `Device Manager`.
 
-![UEFI Secure Boot Configuration](uefi-secure-boot-configuration.png)
+![UEFI Secure Boot Configuration](uefi-secure-boot-configuration.webp)
 
 Once you've found and enabled the Secure Boot setting then reboot once again from the `Solus Linux Bootloader` UEFI entry. From there you can continue with the instructions: [Enrolling the Solus Certificate](#enrolling-the-solus-certificate), bearing in mind you are booting from a disk rather than from a USB/DVD.
 

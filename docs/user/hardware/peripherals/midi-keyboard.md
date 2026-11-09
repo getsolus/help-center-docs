@@ -23,13 +23,13 @@ sudo eopkg it qsynth qjackctl fluid-soundfont
 
 In order to use the soundfont, we need to open up `qsynth` and set the soundfont. For the purposes of this article, it would be `FluidR3.sf2`, however any other soundfont should work fine too. You set the soundfont by clicking on `Setup...` and navigating to `Soundfonts`. There you just need click `Open...` and navigate to the soundfont of your liking. The soundfont that we will be using will be placed in `/usr/share/sounds/sf2/` by default.
 
-![QSynth SoundFont](qsynth-soundfont.jpg)
+![QSynth SoundFont](qsynth-soundfont.webp)
 
 ## Connecting the keyboard
 
 At this stage you need to first verify that the keyboard is plugged in and turned on. Now we just need to open up `qjackctl` to connect the keyboard on a software level. In `qjackctl` you press on `Graph` and drag the keyboard's output to the input called `FLUID Synth` (Your keyboard name will probably differ from the on in the image below). This step will need to be done every time you disconnect or turn off you keyboard.
 
-![QJackCtl Connect](qjackctl-connect.jpg)
+![QJackCtl Connect](qjackctl-connect.webp)
 
 You should now be ready to play on the keyboard using `qsynth`.
 

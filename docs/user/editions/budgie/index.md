@@ -5,7 +5,7 @@ summary: A quick introduction to the Budgie Edition of Solus
 
 # Budgie Desktop
 
-![Solus Budgie](/img/Budgie.jpg)
+![Solus Budgie](/img/Budgie.webp)
 
 Budgie is the flagship Edition of Solus. It was originally started by Solus and has now been spun off into its own distro-agnostic project. They describe it as:
 

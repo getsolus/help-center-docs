@@ -19,7 +19,7 @@ You can use this feature if you have issues after installing packages or system 
 
   The terminal displays a list of all the software changes in your system.
 
-  ![eopkg history output](./eopkg-history-output.png)
+  ![eopkg history output](./eopkg-history-output.webp)
 
 ## Rollback
 

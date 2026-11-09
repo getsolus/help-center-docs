@@ -10,7 +10,7 @@ summary: Useful tips and tricks for GNOME users
 GNOME has built-in keyboard shortcuts for various tasks, but can be changed to your preferences in
 the Settings > Keyboard > View and Customize Keyboard Shortcuts.
 
-![](configuration/gnome-keyboard-shortcut.png)
+![](configuration/gnome-keyboard-shortcut.webp)
 
 | Keyboard Shortcut          | Action                            |
 | -------------------------- | --------------------------------- |
@@ -36,32 +36,32 @@ the Settings > Keyboard > View and Customize Keyboard Shortcuts.
 GNOME Hot Corner is a feature that instantly opens the Activities Overview when you flick your
 mouse in the very top left corner of the screen. Can be found in Settings under Multitasking.
 
-![](configuration/gnome-hotcorners.png)
+![](configuration/gnome-hotcorners.webp)
 
 ## Super Key (_or the Windows Key_)
 
 _Hit the Super Key any time to get an overview, switch or launch apps, and search for anything on your computer. It's magic._
 
-![](configuration/super-key.png)
+![](configuration/super-key.webp)
 
 ## Touchpad Gestures
 
 Swipe Up with three fingers to open the Activities Overview or swipe left or right with three fingers to
 switch workspaces.
 
-![Three Finger Swipe Up](configuration/gnome-three-finger-swipe-1.png)
+![Three Finger Swipe Up](configuration/gnome-three-finger-swipe-1.webp)
 
-![Three Finger Swipe Up](configuration/gnome-three-finger-swipe-2.png)
+![Three Finger Swipe Up](configuration/gnome-three-finger-swipe-2.webp)
 
 ## GNOME Tweaks
 
 An application that lets you access more settings such as font rendering, startup applications,
 and customizations like cursor styles.
 
-![](configuration/gnome-tweaks.png)
+![](configuration/gnome-tweaks.webp)
 
 ## Extension Manager
 
 Available on the Software store, it is a utility for browsing, installing, and managing GNOME Shell Extensions. This tool allows you to search and install extensions from extensions.gnome.org without needing a web browser or the GNOME Shell browser connector.
 
-![](configuration/gnome-shell-extension-manager.png)
+![](configuration/gnome-shell-extension-manager.webp)

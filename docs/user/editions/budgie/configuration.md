@@ -11,17 +11,17 @@ summary: Help for configuring the Budgie desktop on Solus
 
 In Budgie, the easiest way to access the date and time settings is by left clicking on the time in the bottom panel and clicking on "System time and date settings".
 
-![Budgie Date and Time Right-Click](configuration/budgie-system-time-and-date-popup.jpg)
+![Budgie Date and Time Right-Click](configuration/budgie-system-time-and-date-popup.webp)
 
 Alternatively, you can open the Budgie Control Center, and scroll the left-hand sidebar down to the bottom to find "Date & Time".
 
 You will be presented with the following window. From here, you can enable / disable automatic date & time, automatic time zone changing, and change between AM/PM and 24-hour time formats. Note that changing the system date & time and time zone information requires clicking the "Unlock" button at the top of the window, and entering your password.
 
-![Budgie Date and Time](configuration/budgie-control-center-date-time.jpg)
+![Budgie Date and Time](configuration/budgie-control-center-date-time.webp)
 
 If you wish to change how the time is displayed in the bottom panel, open Budgie Desktop Settings from the Budgie Menu, choose the Bottom Panel from the left-hand sidebar, choose "Clock" from the list of applets in the middle, then adjust your desired settings on the right-hand side.
 
-![Budgie Clock Applet](configuration/budgie-desktop-settings-bottom-panel-clock.jpg)
+![Budgie Clock Applet](configuration/budgie-desktop-settings-bottom-panel-clock.webp)
 
 If you want to set a custom date & time format, the ["conversion specifications" referenced by the POSIX standards](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/date.html) list the options that can be entered.
 
@@ -31,15 +31,15 @@ You can configure default applications in Budgie by opening the Budgie Control C
 
 The drop-down boxes here enable choosing the default application for each category of file. For most categories, you will need to have already installed alternative applications before you can change the default settings. For instance, if you wish to change the default video player from Celluloid to VLC, then you must first install VLC (available in your software center).
 
-![Budgie Default Applications](configuration/budgie-control-center-default-applications.jpg)
+![Budgie Default Applications](configuration/budgie-control-center-default-applications.webp)
 
 You can specify default applications for individual file types by right-clicking on a file and clicking on "Open With" from the popup menu, then choosing "Other Application".
 
-![Budgie Context Menu](configuration/budgie-open-with.jpg)
+![Budgie Context Menu](configuration/budgie-open-with.webp)
 
 Next, select the application you wish to use from the list, then click "Set as default" below the list. Finish by clicking "OK". In the future, all files with the same file type will open with the chosen application.
 
-![Budgie Application Selection](configuration/budgie-open-with-other.jpg)
+![Budgie Application Selection](configuration/budgie-open-with-other.webp)
 
 ## Displays
 
@@ -47,35 +47,35 @@ You can configure your display(s) in Budgie by opening the Budgie Menu and then 
 
 You will then be shown the following window.
 
-![Budgie Displays Overview](configuration/budgie-displays-overview.jpg)
+![Budgie Displays Overview](configuration/budgie-displays-overview.webp)
 
 Click on the individual display you wish to configure. You will now be able to select if you wish to use this monitor as the primary or secondary display, mirror it with another display, or turn it off. This window also gives you the size and aspect ratio, ability to rotate the display, and ability to change the resolution.
 
-![Budgie Individual Display Settings](configuration/budgie-individual-display-settings.jpg)
+![Budgie Individual Display Settings](configuration/budgie-individual-display-settings.webp)
 
 Going back to the Displays section, you also have the option to arrange your displays. Click the “Arrange Combined Displays” button and then drag your displays so they are arranged to your liking.
 
-![Budgie Arrange Displays](configuration/budgie-arrange-displays.png)
+![Budgie Arrange Displays](configuration/budgie-arrange-displays.webp)
 
 Click "Apply" once you are happy with your changes. You will be shown a message asking if the display looks OK, if it does, click on "Keep This Configuration".
 
-![Budgie Confirm Display Settings](configuration/budgie-display-confirm.jpg)
+![Budgie Confirm Display Settings](configuration/budgie-display-confirm.webp)
 
 ## Keyboard Layout
 
 Using Budgie, you can change your keyboard layout in the Budgie Control Center. Click on the Budgie Menu, click the System Settings icon at the bottom or "Budgie Control Center" in the application list, and then click on "Keyboard" in the System Settings category.
 
-![Budgie Keyboard Settings](configuration/budgie-control-center-keyboard.jpg)
+![Budgie Keyboard Settings](configuration/budgie-control-center-keyboard.webp)
 
 Click the "+" button to add an input source (keyboard layout). You will be shown the following dialog.
 
-![Budgie Add Input Source](configuration/budgie-control-center-add-input-method.jpg)
+![Budgie Add Input Source](configuration/budgie-control-center-add-input-method.webp)
 
 Here you can select the language and then keyboard layout within each language section. If it does not appear in this list, click the "⋮" button (three vertical dots). This will enable you to search for the keyboard layout you wish to use.
 
 After choosing the keyboard layout, click the "Add" button at the top of the window. You will be brought back to the following dialog with your new keyboard layout. In the image below, we are now using English (US) and English (UK) layouts.
 
-![Budgie New Layout Added](configuration/budgie-input-sources-multiple.jpg)
+![Budgie New Layout Added](configuration/budgie-input-sources-multiple.webp)
 
 You can remove a keyboard layout by clicking on one of the items, for instance English (UK), then clicking the "⋮" button, then choosing "Remove".
 
@@ -85,13 +85,13 @@ If you wish to use multiple keyboard layouts, you can switch between them by usi
 
 To add the Keyboard Layout Indicator to your panel, open the Budgie Desktop Settings app from the Budgie Menu, then click "Bottom Panel" on the left-hand sidebar.
 
-![Budgie Bottom Panel Settings](configuration/budgie-desktop-settings-bottom-panel-clock.jpg)
+![Budgie Bottom Panel Settings](configuration/budgie-desktop-settings-bottom-panel-clock.webp)
 
 On the right side of the window, click the "+" button next to "Add applet".
 
 Find the Keyboard Layout Indicator entry and select it, then click "Add" at the top of the window. This will add the Keyboard Layout Indicator (to the center section by default), as shown below.
 
-![Budgie Keyboard Layout Applet](configuration/budgie-keyboard-layout-switcher.jpg)
+![Budgie Keyboard Layout Applet](configuration/budgie-keyboard-layout-switcher.webp)
 
 ### IBus
 
@@ -99,7 +99,7 @@ Budgie comes with IBus ready to go straight out of the box. If you need an addit
 
 You will now be able to switch between your keyboard layouts by using the keyboard shortcut `Super + Shift + Space` or by using the Keyboard Layout Indicator applet.
 
-![Budgie Keyboard Layout Applet: IBus](configuration/budgie-keyboard-layout-applet-ibus.jpg)
+![Budgie Keyboard Layout Applet: IBus](configuration/budgie-keyboard-layout-applet-ibus.webp)
 
 ## Language
 
@@ -107,15 +107,15 @@ You can change your language in Budgie by opening the Budgie Menu and then click
 
 You will now be shown the following window. This window allows you to change your language, formatting for dates and times and the language of your keyboard.
 
-![Budgie Region and Languages](configuration/budgie-region-and-languages.jpg)
+![Budgie Region and Languages](configuration/budgie-region-and-languages.webp)
 
 Start by clicking "Language". This brings up a selection of languages to chose from.
 
-![Budgie Selecting Language](configuration/budgie-selecting-language.png)
+![Budgie Selecting Language](configuration/budgie-selecting-language.webp)
 
 If your language does not appear in the list, click the ⋮ button at the bottom (three vertical dots) to show all the available languages. You can use the search box to go directly to your choice or scroll down the list.
 
-![Budgie Language Search](configuration/budgie-selecting-language-search.png)
+![Budgie Language Search](configuration/budgie-selecting-language-search.webp)
 
 Once you have selected the language you wish to use, click "Done". You _may_ need to logout and login to your computer for it to take affect.
 
@@ -125,7 +125,7 @@ You can configure the settings of your mouse and / or touchpad by opening the Bu
 
 ### Mouse
 
-![Budgie Mouse Settings](configuration/budgie-mouse-settings.jpg)
+![Budgie Mouse Settings](configuration/budgie-mouse-settings.webp)
 
 For mice, you can set:
 
@@ -135,7 +135,7 @@ For mice, you can set:
 
 ### Touchpad
 
-![Budgie Touchpad Settings](configuration/budgie-touchpad-settings.jpg)
+![Budgie Touchpad Settings](configuration/budgie-touchpad-settings.webp)
 
 For touchpads, you can set:
 
@@ -153,7 +153,7 @@ You can test your settings by clicking the "Test Your Settings" button in the to
 
 To configure your network settings in Budgie, start by opening the Budgie Menu and then click on "Network" in the System Settings category.
 
-![Budgie Network Overview](configuration/budgie-network-overview.jpg)
+![Budgie Network Overview](configuration/budgie-network-overview.webp)
 
 To configure wireless, go to the Wi-Fi section. If your wireless is currently turned off, click the toggle button, leave the Network section, and go back in.
 
@@ -163,7 +163,7 @@ In the WiFi section of the Network settings window, click the access point you w
 
 You may now be prompted to authenticate with the network. Type in your password and then click "Connect".
 
-![Budgie Network Authentication](configuration/budgie-network-authentication.jpg)
+![Budgie Network Authentication](configuration/budgie-network-authentication.webp)
 
 If your password is correct, you will now be authenticated with the network.
 
@@ -171,7 +171,7 @@ If your password is correct, you will now be authenticated with the network.
 
 If you wish to connect to a hidden network, click “Connect to Hidden Network...” in the WiFi section of the Network settings window. It will show the following dialog, where you type the network name and type of security (if any).
 
-![Budgie Hidden Network](configuration/budgie-network-hidden.jpg)
+![Budgie Hidden Network](configuration/budgie-network-hidden.webp)
 
 If the network is found and has a password, you will be prompted to authenticate with the network.
 
@@ -179,23 +179,23 @@ If the network is found and has a password, you will be prompted to authenticate
 
 To change the volume in Budgie, simply left click on the speaker icon in the system tray and drag the slider or use the plus and minus icons to reach your desired level.
 
-![Budgie Volume Control](configuration/budgie-volume-control.jpg)
+![Budgie Volume Control](configuration/budgie-volume-control.webp)
 
 ### Settings
 
 You can access sound settings via the Sound applet in Raven, the Notification and Widget Center. Open Raven, either by clicking on its icon in the far right of the system tray or using the keyboard shortcut `Super + A`. The Sound applet allows you to enable, disable and alter input and output methods as well as providing a simple volume slider.
 
-![Raven Sound Applet](configuration/raven-sound-applet.jpg)
+![Raven Sound Applet](configuration/raven-sound-applet.webp)
 
 You can access further sound settings, including individual application volume controls, and a simple speaker test by opening the Budgie Menu and then clicking on "Sound" in the System Settings category.
 
-![Budgie Sound Settings](configuration/budgie-sound-settings.jpg)
+![Budgie Sound Settings](configuration/budgie-sound-settings.webp)
 
 ## Users
 
 To add and remove users with Budgie, start by opening the Budgie Menu and then click on "Users" in the System Settings category.
 
-![Budgie User Settings](configuration/budgie-single-user-settings.jpg)
+![Budgie User Settings](configuration/budgie-single-user-settings.webp)
 
 To manage your own or other accounts, you first need to authenticate. Click the "Unlock" button in the top right corner and type your password. Note that you are required to be an administrator. If you're the only user on the system, then your account is an administrator by default.
 
@@ -205,11 +205,11 @@ In the event the password provided is correct, the "Unlock" button will change t
 
 To add a user, click the "Add User..." button in the top right corner of the Users window.
 
-![Budgie Add User Button](configuration/budgie-add-user-button.jpg)
+![Budgie Add User Button](configuration/budgie-add-user-button.webp)
 
 This will open the Add User window (shown below).
 
-![Budgie Add User Dialog](configuration/budgie-add-user-dialog.jpg)
+![Budgie Add User Dialog](configuration/budgie-add-user-dialog.webp)
 
 Fill in the required items and then finish adding the new user by clicking "Add" in the top right corner.
 
@@ -217,11 +217,11 @@ Fill in the required items and then finish adding the new user by clicking "Add"
 
 To remove a user, open the Users window and then click on the user you wish to remove. Now click on the red "Remove User..." button in the bottom right corner.
 
-![Budgie User List](configuration/budgie-multiple-user-settings.jpg)
+![Budgie User List](configuration/budgie-multiple-user-settings.webp)
 
 Upon clicking to remove the user, you will be given the option to keep their files, delete their files, or cancel the removal of the user’s account.
 
-![Budgie Keep Files Prompt](configuration/budgie-keep-files-prompt.jpg)
+![Budgie Keep Files Prompt](configuration/budgie-keep-files-prompt.webp)
 
 # User Interface
 
@@ -229,13 +229,13 @@ Upon clicking to remove the user, you will be given the option to keep their fil
 
 To change the desktop background in Budgie, open the Budgie Control Center by selecting "System Settings" from either the Budgie Menu, or by right-clicking on a blank spot on the desktop.
 
-![Budgie Desktop Right-Click Menu](configuration/budgie-desktop-blank-space-right-click.jpg)
+![Budgie Desktop Right-Click Menu](configuration/budgie-desktop-blank-space-right-click.webp)
 
 Once the Budgie Control Center is open, click "Background" on the left-hand sidebar.
 
 Click one of the images displayed on the right to choose a pre-installed background image, or click "Add Picture..." in the headerbar to add one of your own image files to the available options.
 
-![Budgie Control Center Background Section](configuration/budgie-control-center-background.jpg)
+![Budgie Control Center Background Section](configuration/budgie-control-center-background.webp)
 
 ## Desktop Icons
 
@@ -243,11 +243,11 @@ Desktop Icons are enabled by default. To disable them, open the Budgie Desktop S
 
 In the Budgie Desktop Settings app, click "Desktop" in the left-hand sidebar - Desktop Icons is the first toggle switch on that screen.
 
-![Budgie Desktop Icons](configuration/budgie-desktop-settings-desktop-section.jpg)
+![Budgie Desktop Icons](configuration/budgie-desktop-settings-desktop-section.webp)
 
 To place files on your desktop, you can either drag them directly onto the Desktop, or move the files you want to the Desktop folder within the Nemo file manager app (as shown in the image below).
 
-![Budgie Desktop Folder](configuration/budgie-nemo-desktop-folder.jpg)
+![Budgie Desktop Folder](configuration/budgie-nemo-desktop-folder.webp)
 
 ## Workspaces
 
@@ -255,15 +255,15 @@ Budgie enables the switching of workspaces with the Workspace Switcher. You can 
 
 To add this applet, open the Budgie Control Center by selecting "System Settings" from either the Budgie Menu, or by right-clicking on a blank spot on the desktop. Once in the Budgie Control Center, in the left-hand sidebar, select the panel to which you want to add the Workspace Switcher (choose the default Bottom Panel if you don't want to add more panels at this time).
 
-![Budgie Desktop Settings Panel Section](configuration/budgie-desktop-settings-bottom-panel.jpg)
+![Budgie Desktop Settings Panel Section](configuration/budgie-desktop-settings-bottom-panel.webp)
 
 Click the + button next to "Add applet" on the right side of the window. This will open the list of available applets - scroll down until you find "Workspace Switcher", select it, and then click the 'Add' button in the top-right of the window.
 
-![Adding Budgie Workspaces Applet](configuration/budgie-control-center-panel-add-workspace-switcher.jpg)
+![Adding Budgie Workspaces Applet](configuration/budgie-control-center-panel-add-workspace-switcher.webp)
 
 You should now see your workspaces available in the main Budgie panel. Applications can be moved between workspaces by dragging and dropping their icons within the Workspace Switcher.
 
-![Budgie Workspaces](configuration/budgie-panel-with-workspace-switcher.jpg)
+![Budgie Workspaces](configuration/budgie-panel-with-workspace-switcher.webp)
 
 ### Keyboard Shortcuts
 
@@ -271,11 +271,11 @@ Budgie provides a variety of keyboard shortcuts for workspaces.
 
 To view these shortcuts, open the Budgie Control Center app, choose the "Keyboard" section in the left-hand sidebar, then scroll down in the right part of the window to choose "Keyboard Shortcuts".
 
-![Budgie Control Center Keyboard Shortcuts](configuration/budgie-control-center-keyboard-shortcuts-location.jpg)
+![Budgie Control Center Keyboard Shortcuts](configuration/budgie-control-center-keyboard-shortcuts-location.webp)
 
 Workspace shortcuts are contained in the "Navigation" section of the Keyboard Shortcuts window.
 
-![Budgie Control Center Keyboard Shortcuts Sections](configuration/budgie-control-center-keyboard-shortcuts-popup.jpg)
+![Budgie Control Center Keyboard Shortcuts Sections](configuration/budgie-control-center-keyboard-shortcuts-popup.webp)
 
 ### Workspaces Configuration
 
@@ -283,4 +283,4 @@ There are 4 workspaces available in Budgie by default. To add a new workspace, c
 
 If you wish to remove or rename your workspace, right click on the desired workspace and select rename or remove.
 
-![Budgie Remove or Rename Workspaces](configuration/budgie-workspace-context-menu.jpg)
+![Budgie Remove or Rename Workspaces](configuration/budgie-workspace-context-menu.webp)

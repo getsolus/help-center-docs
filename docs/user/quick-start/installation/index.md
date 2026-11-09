@@ -101,17 +101,17 @@ The ISO image will be written to _all mounted USB drives_. Ensure that the only 
 
 :::
 
-![MultiWriter Start](gmw_start.jpg)
+![MultiWriter Start](gmw_start.webp)
 
 If your USB drive is not mounted, you will be prompted with an image indicating to plug it in.
 
 Next, click the "Start Copying" button, and you will be prompted to select the ISO. Choose the ISO you downloaded in the "Getting the ISO" section. The USB will automatically be written to.
 
-![MultiWriter Writing](gmw_writing.jpg)
+![MultiWriter Writing](gmw_writing.webp)
 
 Upon completion, you will be prompted with the following dialog and your USB is now ready for use.
 
-![MultiWriter Done](gmw_done.jpg)
+![MultiWriter Done](gmw_done.webp)
 
 #### KDE ISO Image Writer
 
@@ -123,7 +123,7 @@ You will need both the ISO and sha256sums file for it saved in the same director
 
 When you open ISO Image Writer, you will see a window similar to the one below, if your USB drive is already plugged in and mounted.
 
-![ImageWriter Start](iiw_1_start.png)
+![ImageWriter Start](iiw_1_start.webp)
 
 If there is no USB drive mounted, the USB drive field will be greyed out. Simply plug in the USB drive you want to use for the ISO, it will be auto-detected.
 
@@ -131,11 +131,11 @@ Click on the top field "Write this ISO image:". Select the ISO image you downloa
 
 You may see "Downloading ISO image". When this is done, click the Create button.
 
-![ImageWriter Writing](iiw_2_writing.png)
+![ImageWriter Writing](iiw_2_writing.webp)
 
 When the operation is finished, you will see the confirmation dialog. Your USB is now ready for use.
 
-![ImageWriter Done](iiw_3_done.png)
+![ImageWriter Done](iiw_3_done.webp)
 
 ##### Command-line
 
@@ -193,7 +193,7 @@ You can easily burn an ISO image to a USB by using graphical tool [Rufus](https:
 4. Untick all options except "Create a bootable disk using" and use the dropdown to select "DD Image".
 5. Click "Start".
 
-![Rufus](rufus.jpg)
+![Rufus](rufus.webp)
 
 ### macOS
 
@@ -206,7 +206,7 @@ Since OS X El Capitan (10.11), the easiest way to burn a DVD is:
 3. Click on “Burn Disk Image ‘Solus-Budgie-Release-2026-04-18.iso’ to Disc…”
 4. Then click “Burn”.
 
-![macOS Burn DVD](mac-burn-dvd.jpg)
+![macOS Burn DVD](mac-burn-dvd.webp)
 
 #### USB
 
@@ -223,7 +223,7 @@ One of the easiest ways to burn an ISO image to a USB thumb drive is by using a 
 
 You may see a message stating “The disk you inserted was not readable by this computer.” once Etcher finishes. This can be ignored.
 
-![macOS Etcher](mac-etcher.jpg)
+![macOS Etcher](mac-etcher.webp)
 
 ##### Command-line
 

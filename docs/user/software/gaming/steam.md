@@ -20,7 +20,7 @@ If your system has an Nvidia graphics card, install the 32-bit version of the dr
 1. Open **Hardware Drivers** (DoFlicky).
 2. Select **Also install 32-bit driver**:
 
-   ![DoFlicky UI](./do-flicky-32-bits.png)
+   ![DoFlicky UI](./do-flicky-32-bits.webp)
 
 3. Select the driver of your Nvidia graphics card.
 4. Click **Install**.

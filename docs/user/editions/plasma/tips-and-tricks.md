@@ -35,7 +35,7 @@ KRunner is a system-wide desktop search and launcher app available on Solus Plas
 
 Open KRunner by pressing `Alt` + `F2` or `Alt` + `Space`.
 
-![KRunner interface](configuration/krunner.png)
+![KRunner interface](configuration/krunner.webp)
 
 The following table outlines the actions you can perform using KRunner.
 
