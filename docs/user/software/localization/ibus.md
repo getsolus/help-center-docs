@@ -9,7 +9,7 @@ summary: Configuration of additional languages via IBUS
 
 - Find the IME (Input Method Editor) you require from the [IBus IME package list](#ibus-ime-package-list) and then search for it in your software center. Click "Install" to add the IME.
 - You may have to agree to install some additional dependencies and will need to type in your user password as authentication is required.
-- If the IME you require is not listed in the software center, you can istall it by running the following command:
+- If the IME you require is not listed in the software center, you can install it by running the following command:
 
   ```bash
   sudo eopkg install ibus-libpinyin
@@ -21,7 +21,7 @@ summary: Configuration of additional languages via IBUS
 
 ---
 
-![IBus IME sofware center install](./ibus/ibus-ime-software-center-install.png)
+![IBus IME software center install](./ibus/ibus-ime-software-center-install.png)
 
 ---
 
