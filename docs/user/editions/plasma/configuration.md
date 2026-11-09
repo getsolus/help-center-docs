@@ -21,7 +21,7 @@ You can open the system settings in Solus Plasma using any of the following meth
 2. Configure the date and time of your system.
    - If you want Solus to set the date and time automatically, select **Set date and time automatically**.
    - If you want to set the date and time manually, clear the **Set date and time automatically** checkbox, then use the available controls.
-     ![Plasma date and time settings](configuration/date-time.png)
+     ![Plasma date and time settings](configuration/date-time.webp)
 3. (Optional) Configure the time zone of your system.
    1. Go to the **Time Zone** tab.
    2. Select a time zone from the list.
@@ -37,7 +37,7 @@ You can open the system settings in Solus Plasma using any of the following meth
 
 In the [**System Settings**](#opening-system-settings) screen, go to **Personalization** > **Applications** > **Default Applications**, then use the menus to select your preferred default applications.
 
-![Default applications](configuration/default-apps-screen.png)
+![Default applications](configuration/default-apps-screen.webp)
 
 ### Configuring default applications from the file manager
 
@@ -45,7 +45,7 @@ In the [**System Settings**](#opening-system-settings) screen, go to **Personali
 2. Navigate to the folder that contains the file you want to open.
 3. Right-click the file.
 
-   ![Context menu](configuration/file-context-menu-default-app.png)
+   ![Context menu](configuration/file-context-menu-default-app.webp)
 
 4. Go to **Open With** > **Other Application**.
 
@@ -55,7 +55,7 @@ In the [**System Settings**](#opening-system-settings) screen, go to **Personali
 6. Select **Remember application association for all files of type [file type]**.
 7. Click **OK**.
 
-   ![Choose application dialog](configuration/choose-application.png)
+   ![Choose application dialog](configuration/choose-application.webp)
 
 ## Displays
 
@@ -68,7 +68,7 @@ Press `Super + P` to access the screen layout settings.
 1. In the [**System Settings**](#opening-system-settings) screen, go to **Hardware** > **Display and Monitor** > **Display Configuration**.
 2. Select the display you want to configure.
 3. Configure the available settings as needed.
-   ![Screen settings available in Solus Plasma](configuration/screen-configuration.png)
+   ![Screen settings available in Solus Plasma](configuration/screen-configuration.webp)
 4. Click **Apply**.
 
 ## Keyboard layout
@@ -84,7 +84,7 @@ If you need to input languages that do not use Latin characters (for example, Ch
 1. In the [**System Settings**](#opening-system-settings) screen, go to **Input Devices** > **Keyboard** > **Layouts**.
 
    The layouts screen appears.
-   ![Keyboard layouts](configuration/keyboard-layouts.png)
+   ![Keyboard layouts](configuration/keyboard-layouts.webp)
 
 2. Select **Configure layouts**.
 3. Configure keyboard layouts as you need.
@@ -135,9 +135,9 @@ Some keyboard layouts require [installing additional packages](../../software/lo
 
 1. In the [**System Settings**](#opening-system-settings) screen, go to the appropriate configuration screen:
    - To configure the mouse, go to **Input Devices** > **Mouse**.
-     ![Mouse settings](configuration/mouse-settings.png)
+     ![Mouse settings](configuration/mouse-settings.webp)
    - To configure the touchpad, go to **Input Devices** > **Touchpad**.
-     ![Touchpad settings](configuration/touchpad-settings.png)
+     ![Touchpad settings](configuration/touchpad-settings.webp)
 2. Configure the available settings as needed.
 3. Click **Apply**.
 
@@ -145,7 +145,7 @@ Some keyboard layouts require [installing additional packages](../../software/lo
 
 The **Networks** widget on the bottom panel allows you to perform frequent networking tasks, such as connecting to a Wi-Fi network or enabling airplane mode.
 
-![Networks widget](configuration/networks-widget.png)
+![Networks widget](configuration/networks-widget.webp)
 
 ### Connecting to a hidden Wi-Fi network
 
@@ -155,7 +155,7 @@ The **Networks** widget on the bottom panel allows you to perform frequent netwo
 4. Click **Create**.
 
    The **New Connection** window appears.
-   ![New connection settings](configuration/new-wifi-network.png)
+   ![New connection settings](configuration/new-wifi-network.webp)
 
 5. In the **Wi-Fi** tab, specify the name (SSID) and basic network settings.
 6. In the **Wi-Fi Security** tab, configure the password or other authentication settings.
@@ -164,7 +164,7 @@ The **Networks** widget on the bottom panel allows you to perform frequent netwo
 
 ## Sound and sound devices
 
-![Audio Volume widget](configuration/audio-widget.png)
+![Audio Volume widget](configuration/audio-widget.webp)
 
 The **Audio Volume** widget on the bottom panel allows you to perform the following tasks:
 
@@ -184,7 +184,7 @@ The **Audio Volume** widget on the bottom panel allows you to perform the follow
 2. Click **Add New User**.
 3. Configure the necessary settings.
 
-   ![Add user account](configuration/add-user-account.png)
+   ![Add user account](configuration/add-user-account.webp)
 
 4. Click **Create**
 
@@ -199,7 +199,7 @@ The **Audio Volume** widget on the bottom panel allows you to perform the follow
 3. Click **Delete User**.
 4. To delete the the user account files, select **Delete files**; to keep the files for posterior use, select **Keep files**.
 
-   ![Keep or delete user files](configuration/keep-delete-files.png)
+   ![Keep or delete user files](configuration/keep-delete-files.webp)
 
 ## User interface
 
@@ -207,7 +207,7 @@ The **Audio Volume** widget on the bottom panel allows you to perform the follow
 
 The **Desktop Settings** screen allows you to customize various aspects of your desktop, such as the wallpaper and the desktop icons. To open **Desktop Settings** screen, right-click anywhere on the desktop and select **Configure Desktop and Wallpaper...**.
 
-![Desktop context menu](configuration/desktop-context-menu.png)
+![Desktop context menu](configuration/desktop-context-menu.webp)
 
 The following table describes how to customize the desktop using the **Desktop Folder Settings** screen.
 
@@ -265,7 +265,7 @@ Solus Plasma has one virtual desktop and one row by default.
 :::tip
 
 Plasma displays the virtual desktop grid next to the application launcher button.
-![Virtual desktop grid](configuration/vd-grid.png)
+![Virtual desktop grid](configuration/vd-grid.webp)
 
 :::
 
@@ -279,7 +279,7 @@ The following table outlines the methods to change between desktops in Solus Pla
 | Using mouse gestures                 | Move the mouse pointer anywhere in the desktop, then move the mouse wheel to change between your virtual desktops.                                                         |
 | Using keyboard shortcuts             | Open System Settings, go to **Workspace** > **Shortcuts** > **KWin**, then search for `desktop` to see the available keyboard shortcuts to switch between virtual desktops |
 
-![Keyboard shortcuts to switch between desktops](configuration/switch-desktop-shortcut-list.png)
+![Keyboard shortcuts to switch between desktops](configuration/switch-desktop-shortcut-list.webp)
 
 :::note
 

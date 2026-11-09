@@ -32,11 +32,11 @@ These can be found in the "Hardware" category in Discover and GNOME Software. Wh
 
 **Discover**
 
-[![Discover Hardware Section Screenshot](KDE-Discover-HW-Drivers-thumb.png)](KDE-Discover-HW-Drivers.png)
+[![Discover Hardware Section Screenshot](KDE-Discover-HW-Drivers-thumb.webp)](KDE-Discover-HW-Drivers.webp)
 
 **GNOME Software**
 
-[![GNOME Software Hardware Section Screenshot](GNOME-Software-HW-Drivers_Section-thumb.png)](GNOME-Software-HW-Drivers_Section.png#floatleft) [![GNOME Software Hardware Page Screenshot](GNOME-Software-HW-Drivers_Details-thumb.webp)](GNOME-Software-HW-Drivers_Details.webp#floatright)
+[![GNOME Software Hardware Section Screenshot](GNOME-Software-HW-Drivers_Section-thumb.webp)](GNOME-Software-HW-Drivers_Section.webp#floatleft) [![GNOME Software Hardware Page Screenshot](GNOME-Software-HW-Drivers_Details-thumb.webp)](GNOME-Software-HW-Drivers_Details.webp#floatright)
 
 ### GPUs
 

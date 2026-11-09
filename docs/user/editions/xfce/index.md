@@ -5,7 +5,7 @@ summary: A quick introduction to the Xfce Edition of Solus
 
 # Xfce Desktop
 
-![Solus Xfce](/img/Xfce.jpg)
+![Solus Xfce](/img/Xfce.webp)
 
 Xfce is provided by the Xfce Edition of Solus. It is described as:
 

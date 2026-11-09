@@ -88,7 +88,7 @@ sudo gpasswd -a $USER vboxsf
 
 ## Troubleshooting
 
-![VBOX Kernel](./vbox-kernel.png)
+![VBOX Kernel](./vbox-kernel.webp)
 
 The Error `Kernel driver not installed (rc=-1908)` may occur if
 

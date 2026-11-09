@@ -71,7 +71,7 @@ sudo eopkg install libuiohook unzip
 
 Next, click on the zip file in your File Manager to open up the Extract tool (such as File Roller). You will be presented with contents like the following.
 
-![Input Overlay Zip](obs/input-overlay-zip.jpg)
+![Input Overlay Zip](obs/input-overlay-zip.webp)
 
 Let's extract this to our Downloads folder to make the process of copying the contents we need more easily. Click the Extract button in the image indicated above. This will present you with a file dialog. Navigate to the Downloads folder and click Extract. This will create a folder, likely called something similar to `input-overlay.v4.4`.
 
@@ -96,15 +96,15 @@ cp -R ~/Downloads/input-overlay/presets ~/.config/obs-studio/plugins/input-overl
 
 Now the Input Overlay source is available to us as a source (if you have OBS Studio already open, restart it), as shown in the below screenshot.
 
-![Input Overlay: Source Menu](obs/input-overlay-source-menu.jpg)
+![Input Overlay: Source Menu](obs/input-overlay-source-menu.webp)
 
 Upon clicking on this source, we'll be presented with the usual add / use existing source dialog.
 
-![Input Overlay: Add Existing Source](obs/input-overlay-source-add-existing.jpg)
+![Input Overlay: Add Existing Source](obs/input-overlay-source-add-existing.webp)
 
 After naming a source, such as "Mouse", click OK and you'll be presented with a dialog that looks similar to below. Do note that yours will be empty by default, as you've not yet selected an Overlay image file and Layout config file yet.
 
-![Input Overlay: Main Source](obs/input-overlay-source-main.jpg)
+![Input Overlay: Main Source](obs/input-overlay-source-main.webp)
 
 This is where the presets come in handy. Click the Browse button for Overlay image file and navigate to `.config/obs-studio/plugins/presets` and then the respective preset you want, such as mouse, and then the PNG within it. **You will need to enable hidden files** in the file dialog by using the keyboard combination `Ctrl+H` to see `.config`
 

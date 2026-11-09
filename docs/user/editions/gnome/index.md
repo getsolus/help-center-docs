@@ -5,7 +5,7 @@ summary: A quick introduction to the GNOME Edition of Solus
 
 # GNOME Shell
 
-![Solus GNOME](/img/GNOME.jpg)
+![Solus GNOME](/img/GNOME.webp)
 
 GNOME Shell is provided by default with the GNOME Edition of Solus. They describe it as:
 

@@ -11,13 +11,13 @@ Each version of Solus comes with a pre-installed collection of desktop applicati
 
 Solus comes pre-installed with Firefox, a secure and trustworthy web browser provided by the non-profit organization [Mozilla](https://www.mozilla.org/).
 
-![Firefox Screenshot](default-applications/firefox.jpg)
+![Firefox Screenshot](default-applications/firefox.webp)
 
 ## Email client
 
 Solus comes pre-installed with the powerful [Thunderbird](https://www.thunderbird.net/) email, newsgroup, and feeds client.
 
-![Thunderbird Screenshot](default-applications/thunderbird.jpg)
+![Thunderbird Screenshot](default-applications/thunderbird.webp)
 
 ## Managing your files
 
@@ -32,15 +32,15 @@ Each Linux desktop environment has its own graphical application for managing fi
 
 ### Nemo
 
-![Nemo Screenshot](default-applications/nemo.jpg)
+![Nemo Screenshot](default-applications/nemo.webp)
 
 ### GNOME Files
 
-![GNOME Files Screenshot](default-applications/nautilus.jpg)
+![GNOME Files Screenshot](default-applications/nautilus.webp)
 
 ### Dolphin
 
-![Dolphin Screenshot](default-applications/dolphin.jpg)
+![Dolphin Screenshot](default-applications/dolphin.webp)
 
 ## Office suite
 
@@ -58,31 +58,31 @@ By default, Solus provides Writer (document editor), Calc (spreadsheet editor), 
 
 ### Calc
 
-![LibreOffice Calc Screenshot](default-applications/libreoffice-calc.jpg)
+![LibreOffice Calc Screenshot](default-applications/libreoffice-calc.webp)
 
 Calc is a spreadsheet editor. You can view, create, and edit spreadsheets as well as leverage a comprehensive range of advanced functions. Calc supports a variety of common open formats and Microsoft<sup>TM</sup> Office compatible document formats such as (but not limited to): `xls`, `xlsx`, and `ods`.
 
 ### Draw
 
-![LibreOffice Draw Screenshot](default-applications/libreoffice-draw.jpg)
+![LibreOffice Draw Screenshot](default-applications/libreoffice-draw.webp)
 
 Draw is a graphical editor that allows you to sketch diagrams, workflows and any kind of other simple to complex drawing you can imagine. You can install Draw from your software center by searching for the package `libreoffice-draw`.
 
 ### Impress
 
-![LibreOffice Impress Screenshot](default-applications/libreoffice-impress.jpg)
+![LibreOffice Impress Screenshot](default-applications/libreoffice-impress.webp)
 
 Impress is a presentation viewer and editor. You can view, create, edit, and export presentations in common open formats or Microsoft<sup>TM</sup> Office compatible document formats such as (but not limited to): `ppt`, `pptx`, and `odp`.
 
 ### Math
 
-![LibreOffice Math Screenshot](default-applications/libreoffice-math.jpg)
+![LibreOffice Math Screenshot](default-applications/libreoffice-math.webp)
 
 Math is a formula editor. Create your mathematical and scientific expressions and insert them with the correct formatting into your text documents, spreadsheets, presentations, or drawings. Math can be installed from your software center by searching for the package `libreoffice-math`.
 
 ### Writer
 
-![LibreOffice Writer Screenshot](default-applications/libreoffice-writer.jpg)
+![LibreOffice Writer Screenshot](default-applications/libreoffice-writer.webp)
 
 Writer is a document editor. You can view, create, edit, and export documents in common open formats or Microsoft<sup>TM</sup> Office compatible document formats such as (but not limited to): `doc`, `docx`, and `odt`.
 
@@ -111,11 +111,11 @@ Finnish language support is provided by installing `libreoffice-voikko`. After i
 
 ### Rhythmbox
 
-![Rhythmbox Screenshot](default-applications/rhythmbox.jpg)
+![Rhythmbox Screenshot](default-applications/rhythmbox.webp)
 
 ### Elisa
 
-![Elisa Screenshot](default-applications/elisa.jpg)
+![Elisa Screenshot](default-applications/elisa.webp)
 
 ## Video
 
@@ -132,8 +132,8 @@ Finnish language support is provided by installing `libreoffice-voikko`. After i
 
 ### Haruna
 
-![Haruna Screenshot](default-applications/haruna.jpg)
+![Haruna Screenshot](default-applications/haruna.webp)
 
 ### Parole
 
-![Parole Screenshot](default-applications/parole.png)
+![Parole Screenshot](default-applications/parole.webp)

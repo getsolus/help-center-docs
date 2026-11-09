@@ -13,7 +13,7 @@ To change the date and time settings in GNOME, you can open the Overlay using th
 
 You will be presented with the following window. This window provides you with the ability to enable / disable automatic date & time, automatic time zone changing, and the time format.
 
-![GNOME Date and Time](configuration/gnome-date-and-time.png)
+![GNOME Date and Time](configuration/gnome-date-and-time.webp)
 
 ### Default applications
 
@@ -21,41 +21,41 @@ With GNOME, you will need to open the Overlay using the `Super` button on your k
 
 Upon entering the Details section, click on "Default Applications" and then use the drop down boxes to select a different default application for each category. For most categories, you will need to have installed alternative applications before you can change the default settings. For instance, if you wish to change the default video player from GNOME MPV to VLC then you must first install VLC (available in your software center).
 
-![GNOME Default Applications](configuration/gnome-default-apps.png)
+![GNOME Default Applications](configuration/gnome-default-apps.webp)
 
 _Note: In the image above, we've changed the Web browser and Photo viewer._
 
 You can specify default applications for individual file types by right clicking on a file and then clicking on "Open With...".
 
-![GNOME Context Menu ](configuration/open-with-other.png)
+![GNOME Context Menu ](configuration/open-with-other.webp)
 
 Next, select the application you wish to use from the list. You may need to click "View All Applications" if you can't see the one you would like to use. Finish by clicking "Select". In the future, all files with the same file type will open with the same application.
 
-![GNOME Application Selection](configuration/open-with-selection.png)
+![GNOME Application Selection](configuration/open-with-selection.webp)
 
 ## Displays
 
 In GNOME, You can configure your display(s) simply by right clicking anywhere on the desktop and clicking "Display Settings".
 
-![GNOME Desktop Context Menu](configuration/right-click-desktop.png)
+![GNOME Desktop Context Menu](configuration/right-click-desktop.webp)
 
 Alternatively, you can open the Overlay using the `Super` button on your keyboard
 
 You will then be shown the following window.
 
-![GNOME Displays Overview](configuration/gnome-display-settings.png)
+![GNOME Displays Overview](configuration/gnome-display-settings.webp)
 
 Click on the individual display you wish to configure. You will now be able to select if you wish to use this monitor as the primary or secondary display, mirror it with another display, or turn it off. This window also gives you the size and aspect ratio, ability to rotate the display, and ability to change the resolution.
 
-![GNOME Individual Display Settings](configuration/gnome-individual-display.png)
+![GNOME Individual Display Settings](configuration/gnome-individual-display.webp)
 
 Going back to the Displays section, you also have the option to arrange your displays. Click the “Arrange Combined Displays” button and then drag your displays so they are arranged to your liking.
 
-![GNOME Arrange Displays](configuration/gnome-move-display.png)
+![GNOME Arrange Displays](configuration/gnome-move-display.webp)
 
 Click "Apply" once you are happy with your changes. You will be shown a message asking if the display looks OK, if it does, click on "Keep Changes" within 20 seconds.
 
-![GNOME Confirm Display Settings](configuration/gnome-display-confirmation.png)
+![GNOME Confirm Display Settings](configuration/gnome-display-confirmation.webp)
 
 ## Keyboard layout
 
@@ -63,23 +63,23 @@ With GNOME, open the Overlay using the `Super` button on your keyboard and searc
 
 You will now be shown the following dialog.
 
-![GNOME Region and Languages](configuration/gnome-keyboard-layout.png)
+![GNOME Region and Languages](configuration/gnome-keyboard-layout.webp)
 
 Click the `+ Add Input Source` button to add an input source (keyboard layout). You will be shown the following dialog.
 
-![GNOME Add Input Source](configuration/gnome-select-input-source.png)
+![GNOME Add Input Source](configuration/gnome-select-input-source.webp)
 
 Here you can select the language and then keyboard layout within each language section. If it does not appear in this list, click the `⋮` button (three vertical dots). This will enable you to search for the keyboard layout you wish to use.
 
 After choosing the keyboard layout, click "Done". You will be brought back to the following dialog with your new keyboard layout. In the image below, we are now using English (US), Finnish, and Swedish layout.
 
-![GNOME Add Input Source](configuration/gnome-selected-input-source.png)
+![GNOME Add Input Source](configuration/gnome-selected-input-source.webp)
 
 You can remove a keyboard layout by clicking on `⋮` button (three vertical dots), for instance Swedish, then clicking the `Remove` button. You can also rearrange them via click and holding the `⋮⋮` on the left side.
 
 If you wish to use multiple keyboard layouts, you can switch between them by using the keyboard shortcut `Super + Space` or by clicking on the keyboard layout icon shown in the system tray. The icon will automatically appear when you have 2 or more keyboard layouts selected.
 
-![GNOME Keyboard Indicator](configuration/gnome-select-lang-tray.png)
+![GNOME Keyboard Indicator](configuration/gnome-select-lang-tray.webp)
 
 ### IBus
 
@@ -93,15 +93,15 @@ With GNOME, open the Overlay using the `Super` button on your keyboard and searc
 
 You will now be shown the following window. This window allows you to change your language, formatting for dates and times and the language of your keyboard.
 
-![GNOME Region and Languages](configuration/gnome-region-and-language.png)
+![GNOME Region and Languages](configuration/gnome-region-and-language.webp)
 
 Start by clicking "Language". This brings up a selection of languages to chose from.
 
-![GNOME Selecting Language](configuration/gnome-select-lang-popup.png)
+![GNOME Selecting Language](configuration/gnome-select-lang-popup.webp)
 
 If your language does not appear in the list, click the ⋮ button at the bottom (three vertical dots) to show all the available languages. You can use the search box to go directly to your choice or scroll down the list.
 
-![GNOME Language Search](configuration/gnome-search-lang.png)
+![GNOME Language Search](configuration/gnome-search-lang.webp)
 
 Once you have selected the language you wish to use, click "Done". You _may_ need to logout and login to your computer for it to take affect.
 
@@ -111,7 +111,7 @@ With GNOME, open the Overlay using the `Super` button on your keyboard and searc
 
 ### Mouse
 
-![GNOME Mouse Settings](configuration/gnome-mouse-and-touchpad.png)
+![GNOME Mouse Settings](configuration/gnome-mouse-and-touchpad.webp)
 
 For mice, you can set:
 
@@ -122,7 +122,7 @@ For mice, you can set:
 
 ### Touchpad
 
-![GNOME Touchpad Settings](configuration/gnome-touchpad-settings.png)
+![GNOME Touchpad Settings](configuration/gnome-touchpad-settings.webp)
 
 For touchpads, you can set:
 
@@ -136,7 +136,7 @@ For touchpads, you can set:
 
 If you use a Lenovo ThinkPad, another section will appear where in you can change the settings of the TrackPoint (_often called a red nub_)
 
-![GNOME TrackPoint Settings](configuration/gnome-pointing-stick.png)
+![GNOME TrackPoint Settings](configuration/gnome-pointing-stick.webp)
 
 ### Testing
 
@@ -146,7 +146,7 @@ You can test your settings by clicking the "Test Your Settings" button in the to
 
 Easily change network settings with GNOME by left or right clicking on the Quick Settings in the top panel and then clicking on the arrow or "All Settings" in the bottom.
 
-![GNOME Network Indicator](configuration/gnome-wifi-top-panel.png)
+![GNOME Network Indicator](configuration/gnome-wifi-top-panel.webp)
 
 Alternatively, you can open the Overlay using the `Super` button on your keyboard and searching for either "Wifi" or "Network"
 
@@ -154,9 +154,9 @@ Alternatively, you can open the Overlay using the `Super` button on your keyboar
 
 Once you have opened the "WiFi" menu, you will now see all non-hidden wifi networks in your area. Click on the network you wish to join and it will automatically ask for a password if it is protected.
 
-![GNOME Network Selection](configuration/gnome-visible-wifi.png)
+![GNOME Network Selection](configuration/gnome-visible-wifi.webp)
 
-![GNOME Network Authentication](configuration/gnome-promt-wifi-pass.png)
+![GNOME Network Authentication](configuration/gnome-promt-wifi-pass.webp)
 
 If your password is correct, you will now be authenticated with the network.
 
@@ -164,11 +164,11 @@ If your password is correct, you will now be authenticated with the network.
 
 To join a hidden network, click the "Connect to Hidden Network".
 
-![GNOME Network Overview](configuration/gnome-hidden-network.png)
+![GNOME Network Overview](configuration/gnome-hidden-network.webp)
 
 It will show the following dialog, where you type the network name and type of security (if any).
 
-![GNOME Hidden Network](configuration/gnome-connect-to-hidden.png)
+![GNOME Hidden Network](configuration/gnome-connect-to-hidden.webp)
 
 If the network is found and you entered the right credentials, you will automatically connect to it.
 
@@ -176,24 +176,24 @@ If the network is found and you entered the right credentials, you will automati
 
 With GNOME, the volume can be changed by left or right clicking the system tray in the top panel and then simply dragging the volume slider with your mouse.
 
-![GNOME Volume Control](configuration/gnome-change-sound.png)
+![GNOME Volume Control](configuration/gnome-change-sound.webp)
 
 Alternatively, you achieve the same result by scrolling in sound icon in the Quick Settings.
 
-![GNOME Scroll Volume](configuration/gnome-scroll-sound.png)
+![GNOME Scroll Volume](configuration/gnome-scroll-sound.webp)
 
 ### Settings
 
 You can access sound settings, including individual application volume controls, and a simple speaker test by opening the Overlay using the `Super` button on your keyboard and searching for "Sound".
 
-![GNOME Sound Settings](configuration/gnome-sound-settings.png)
+![GNOME Sound Settings](configuration/gnome-sound-settings.webp)
 
 ## Users
 
 To add and remove users with GNOME, Open Settings > System > Users.
 Alternatively, you can open the Overlay using the `Super` button on your keyboard and searching for "Users".
 
-![GNOME User Indicator](configuration/gnome-user-settings.png)
+![GNOME User Indicator](configuration/gnome-user-settings.webp)
 
 To manage your own or other accounts, you first need to authenticate. Click the "Unlock" button in the top right corner and type your password. Note that you are required to be an administrator. If you're the only user on the system, then your account is an administrator by default.
 
@@ -204,7 +204,7 @@ In the event the password provided is correct, the "Unlock" button will disappea
 To add a user, click the "Add User..." button in the bottom.
 This will open the Add User window (shown below).
 
-![GNOME Add User Dialog](configuration/gnome-add-user-dialog.png)
+![GNOME Add User Dialog](configuration/gnome-add-user-dialog.webp)
 
 Fill in the required items and then finish adding the new user by clicking "Add" in the top right corner.
 
@@ -212,13 +212,13 @@ Fill in the required items and then finish adding the new user by clicking "Add"
 
 To remove a user, click on the user you wish to remove. Now click on the red "Remove User..." button in the bottom right corner.
 
-![GNOME User List](configuration/gnome-remove-user-1.png)
+![GNOME User List](configuration/gnome-remove-user-1.webp)
 
-![GNOME User List](configuration/gnome-remove-user-2.png)
+![GNOME User List](configuration/gnome-remove-user-2.webp)
 
 Upon clicking to remove the user, you will be given the option to keep their files, delete their files, or cancel the removal of the user’s account.
 
-![GNOME Keep Files Prompt](configuration/gnome-keep-file-dialog.png)
+![GNOME Keep Files Prompt](configuration/gnome-keep-file-dialog.webp)
 
 ## User interface
 
@@ -226,11 +226,11 @@ Upon clicking to remove the user, you will be given the option to keep their fil
 
 The GNOME desktop background can be changed by simply right clicking anywhere on the desktop and selecting "Change background".
 
-![GNOME Background Right Click Menu](configuration/gnome-change-background.png)
+![GNOME Background Right Click Menu](configuration/gnome-change-background.webp)
 
 Alternatively, you can open Settings and find "Appearance" in the sidebar.
 
-![GNOME Settings Background Section](configuration/gnome-appearance.png)
+![GNOME Settings Background Section](configuration/gnome-appearance.webp)
 
 In this section, you can choose between Solus wallpapers, your own imported wallpaper by clicking add wallpaper or solid colors.
 
