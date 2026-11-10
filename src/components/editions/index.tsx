@@ -22,7 +22,7 @@ type EditionCardProps = Edition;
 const EditionCard = ({ name, url, urlConfig, urlTips, description }: EditionCardProps) => {
   const theme = useTheme();
   const hideIcons = useMediaQuery(theme.breakpoints.down("xl"));
-  const image = useBaseUrl(`/img/${name}.jpg`);
+  const image = useBaseUrl(`/img/${name}.webp`);
 
   return (
     <Grid size={{ xs: 6 }}>
