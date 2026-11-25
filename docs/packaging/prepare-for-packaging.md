@@ -18,8 +18,10 @@ In order to utilize the build system, you must first set up a configuration file
 
 This file lives in the `.config/solus` folder of your home directory. You will need to create the `.config/solus` folder as well as the inner `packager` file. Inside the packager file, you need two keys, `Name` and `Email`. This is used when generating the machine file so that the packager details are stored within the resulting binary package.
 
-Name and email address are mandatory. You must use your real first and last name(s) for accountability purposes.
-A [Matrix](/docs/user/contributing/getting-involved#matrix-chat) contact is optional but recommended.
+- Name and email address are mandatory.
+- You should use your real name. Or something that looks like a name, like a long-standing alias.
+- Remember, your git commits will also include the name and email address you set in your git config file.
+- A [Matrix](/docs/user/contributing/getting-involved#matrix-chat) contact is optional but recommended.
 
 ```ini
 [Packager]
